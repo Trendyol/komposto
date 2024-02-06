@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "design"
 include(":app")
 include(":core")
+include(":theme")

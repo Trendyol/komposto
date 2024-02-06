@@ -3,41 +3,45 @@ package com.trendyol.design
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.trendyol.design.ui.theme.DesignTheme
+import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.button.Button
+import com.trendyol.design.core.button.TrendyolButtonSize
+import com.trendyol.design.core.button.TrendyolButtonStyle
+import com.trendyol.design.core.text.Text
+import com.trendyol.design.ui.theme.TrendyolTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DesignTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                }
+            TrendyolTheme {
+                Greeting()
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun Greeting() = Column {
+    Button(
+        onClick = { /*TODO*/ },
+        modifier =  Modifier.padding(16.dp),
+        style = TrendyolButtonStyle.Primary,
+        size = TrendyolButtonSize.Small
+    ) {
+        Text(text = "CTA Label")
+    }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    DesignTheme {
-        Greeting("Android")
+    TrendyolTheme {
+        Greeting()
     }
 }

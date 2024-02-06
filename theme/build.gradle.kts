@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.trendyol.design.core"
+    namespace = "com.trendyol.theme"
     compileSdk = 34
 
     defaultConfig {
@@ -36,8 +36,6 @@ android {
 }
 
 dependencies {
-
-    api(project(":theme"))
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.compose.material:material:1.5.1")
