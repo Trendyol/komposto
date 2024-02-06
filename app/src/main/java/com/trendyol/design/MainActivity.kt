@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
 fun Greeting() = Column {
     Button(
         onClick = { /*TODO*/ },
-        modifier =  Modifier.padding(16.dp),
+        modifier = Modifier.padding(16.dp),
         style = TrendyolButtonStyle.Primary,
         size = TrendyolButtonSize.Small
     ) {

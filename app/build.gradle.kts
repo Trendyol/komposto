@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("io.gitlab.arturbosch.detekt")
 }
 
 android {
@@ -59,4 +60,6 @@ dependencies {
     implementation("androidx.compose.material:material:1.5.1")
     implementation("androidx.compose.ui:ui-tooling:1.5.1")
     implementation("androidx.compose.ui:ui-text-google-fonts:1.5.1")
+
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0")
 }

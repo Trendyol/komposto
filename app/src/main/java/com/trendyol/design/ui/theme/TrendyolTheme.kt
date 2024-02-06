@@ -9,7 +9,7 @@ import com.trendyol.theme.TrendyolDesignTheme
 import com.trendyol.theme.TrendyolDesignTypography
 
 private val trendyolDesignTheme = TrendyolDesignTheme(
-    colors =  TrendyolColor.themeColor,
+    colors = TrendyolColor.themeColor,
     typography = TrendyolDesignTypography(),
     fontFamily = TrendyolDesignFontFamily(
         regular = Fonts.RobotoRegular,
