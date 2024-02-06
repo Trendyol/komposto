@@ -1,3 +1,5 @@
+import io.gitlab.arturbosch.detekt.extensions.DetektExtension
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -47,6 +49,12 @@ android {
     }
 }
 
+configure<DetektExtension> {
+    buildUponDefaultConfig = true
+    config.from.add("$rootDir/config/detekt/detekt.yml")
+    config.from.add("$rootDir/config/detekt/detekt-compose.yml")
+}
+
 dependencies {
 
     implementation(project(":core"))
@@ -62,4 +70,5 @@ dependencies {
     implementation("androidx.compose.ui:ui-text-google-fonts:1.5.1")
 
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0")
+    detektPlugins("io.nlopez.compose.rules:detekt:0.1.13")
 }

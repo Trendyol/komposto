@@ -10,7 +10,6 @@ import androidx.compose.material.ButtonElevation
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.ProvideTextStyle
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
@@ -21,8 +20,8 @@ import com.trendyol.design.core.text.TrendyolTextDefaults
 fun Button(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    style: ButtonStyle = LocalButtonStyle.current,
-    size: ButtonSize = LocalButtonSize.current,
+    style: ButtonStyle = ButtonStyle.Default,
+    size: ButtonSize = ButtonSize.Default,
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     elevation: ButtonElevation? = TrendyolButtonDefaults.elevation(),
@@ -57,6 +56,3 @@ fun Button(
         }
     }
 }
-
-val LocalButtonStyle = compositionLocalOf { ButtonStyle.Default }
-val LocalButtonSize = compositionLocalOf { ButtonSize.Default }
