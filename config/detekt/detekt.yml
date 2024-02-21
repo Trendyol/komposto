@@ -1,0 +1,317 @@
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+  weights:
+    # complexity: 2
+    # LongParameterList: 1
+    # style: 1
+    # comments: 1
+
+config:
+  validation: true
+  warningsAsErrors: false
+  checkExhaustiveness: false
+
+processors:
+  active: true
+  exclude:
+    - 'DetektProgressListener'
+  # - 'KtFileCountProcessor'
+  # - 'PackageCountProcessor'
+  # - 'ClassCountProcessor'
+  # - 'FunctionCountProcessor'
+  # - 'PropertyCountProcessor'
+  # - 'ProjectComplexityProcessor'
+  # - 'ProjectCognitiveComplexityProcessor'
+  # - 'ProjectLLOCProcessor'
+  # - 'ProjectCLOCProcessor'
+  # - 'ProjectLOCProcessor'
+  # - 'ProjectSLOCProcessor'
+  # - 'LicenseHeaderLoaderExtension'
+
+console-reports:
+  active: true
+  exclude:
+     - 'ProjectStatisticsReport'
+     - 'ComplexityReport'
+     - 'NotificationReport'
+  #  - 'FindingsReport'
+     - 'FileBasedFindingsReport'
+     - 'LiteFindingsReport'
+
+output-reports:
+  active: true
+  exclude:
+  # - 'TxtOutputReport'
+  # - 'XmlOutputReport'
+  # - 'HtmlOutputReport'
+
+complexity:
+  active: true
+  LargeClass:
+    active: false
+    threshold: 600
+  LongMethod:
+    active: false
+    threshold: 60
+  LongParameterList:
+    active: true
+    functionThreshold: 6
+    # disable constructorThreshold
+    constructorThreshold: 99
+    ignoreDefaultParameters: true
+    ignoreDataClasses: true
+    ignoreAnnotatedParameter: []
+  TooManyFunctions:
+    active: false
+
+coroutines:
+  active: true
+  InjectDispatcher:
+    active: false
+  RedundantSuspendModifier:
+    active: false
+  SuspendFunWithFlowReturnType:
+    active: false
+
+empty-blocks:
+  active: true
+  EmptyDefaultConstructor:
+    active: false
+
+exceptions:
+  active: true
+  InstanceOfCheckForException:
+    active: false
+  TooGenericExceptionCaught:
+    active: false
+
+formatting:
+  active: true
+  android: false
+  autoCorrect: true
+  AnnotationOnSeparateLine:
+    active: false
+    autoCorrect: true
+  AnnotationSpacing:
+    active: false
+    autoCorrect: true
+  ArgumentListWrapping:
+    active: false
+    autoCorrect: true
+    indentSize: 4
+    maxLineLength: 120
+  ChainWrapping:
+    active: true
+    autoCorrect: true
+  CommentSpacing:
+    active: true
+    autoCorrect: true
+  EnumEntryNameCase:
+    active: false
+    autoCorrect: true
+  Filename:
+    active: false
+  FinalNewline:
+    active: true
+    autoCorrect: true
+    insertFinalNewLine: true
+  ImportOrdering:
+    active: false
+    autoCorrect: true
+    layout: '*'
+  Indentation:
+    active: true
+    autoCorrect: true
+    indentSize: 4
+  MaximumLineLength:
+    active: true
+    maxLineLength: 120
+    ignoreBackTickedIdentifier: true
+    excludePackageStatements: true
+    excludeImportStatements: true
+    excludeCommentStatements: true
+    excludeRawStrings: true
+    ignoreAnnotated: [ 'org.junit.Test' ]
+  ModifierOrdering:
+    active: true
+    autoCorrect: true
+  MultiLineIfElse:
+    active: false
+    autoCorrect: true
+  NoBlankLineBeforeRbrace:
+    active: true
+    autoCorrect: true
+  NoConsecutiveBlankLines:
+    active: true
+    autoCorrect: true
+  NoEmptyClassBody:
+    active: true
+    autoCorrect: true
+  NoEmptyFirstLineInMethodBlock:
+    active: false
+    autoCorrect: true
+  NoLineBreakAfterElse:
+    active: true
+    autoCorrect: true
+  NoLineBreakBeforeAssignment:
+    active: true
+    autoCorrect: true
+  NoMultipleSpaces:
+    active: true
+    autoCorrect: true
+  NoSemicolons:
+    active: true
+    autoCorrect: true
+  NoTrailingSpaces:
+    active: true
+    autoCorrect: true
+  NoUnitReturn:
+    active: true
+    autoCorrect: true
+  NoUnusedImports:
+    active: true
+    autoCorrect: true
+  NoWildcardImports:
+    active: true
+  PackageName:
+    active: false
+    autoCorrect: true
+  ParameterListWrapping:
+    active: true
+    autoCorrect: true
+    maxLineLength: 120
+  SpacingAroundAngleBrackets:
+    active: false
+    autoCorrect: true
+  SpacingAroundColon:
+    active: true
+    autoCorrect: true
+  SpacingAroundComma:
+    active: true
+    autoCorrect: true
+  SpacingAroundCurly:
+    active: true
+    autoCorrect: true
+  SpacingAroundDot:
+    active: true
+    autoCorrect: true
+  SpacingAroundDoubleColon:
+    active: false
+    autoCorrect: true
+  SpacingAroundKeyword:
+    active: true
+    autoCorrect: true
+  SpacingAroundOperators:
+    active: true
+    autoCorrect: true
+  SpacingAroundParens:
+    active: true
+    autoCorrect: true
+  SpacingAroundRangeOperator:
+    active: true
+    autoCorrect: true
+  SpacingAroundUnaryOperator:
+    active: false
+    autoCorrect: true
+  SpacingBetweenDeclarationsWithAnnotations:
+    active: false
+    autoCorrect: true
+  SpacingBetweenDeclarationsWithComments:
+    active: false
+    autoCorrect: true
+  StringTemplate:
+    active: true
+    autoCorrect: true
+
+naming:
+  active: true
+  FunctionNaming:
+    active: true
+    ignoreAnnotated: ['Composable']
+  InvalidPackageDeclaration:
+    active: false
+  NoNameShadowing:
+    active: false
+
+performance:
+  active: true
+  SpreadOperator:
+    active: false
+
+potential-bugs:
+  active: true
+  AvoidReferentialEquality:
+    active: false
+  Deprecation:
+    active: true
+  DoubleMutabilityForCollection:
+    active: false
+  HasPlatformType:
+    active: false
+  IgnoredReturnValue:
+    active: false
+  MapGetWithNotNullAssertionOperator:
+    active: false
+  UnreachableCatchBlock:
+    active: false
+  UnsafeCallOnNullableType:
+    active: false
+  UnusedUnaryOperator:
+    active: false
+  UselessPostfixExpression:
+    active: false
+
+style:
+  active: true
+  DestructuringDeclarationWithTooManyEntries:
+    active: false
+  ExplicitItLambdaParameter:
+    active: false
+  ForbiddenVoid:
+    active: false
+  MagicNumber:
+    active: true
+    ignoreEnums: true
+  MaxLineLength:
+    active: false
+    excludeCommentStatements: true
+    ignoreAnnotated: ['org.junit.Test']
+  ObjectLiteralToLambda:
+    active: false
+  RedundantHigherOrderMapUsage:
+    active: false
+  ReturnCount:
+    active: false
+  ThrowsCount:
+    active: false
+  UnnecessaryAbstractClass:
+    active: true
+    ignoreAnnotated: ['dagger.Module']
+  UnnecessaryApply:
+    active: false
+  UnnecessaryFilter:
+    active: false
+  UnusedPrivateMember:
+    active: true
+    allowedNames: '(_|ignored|expected|serialVersionUID)'
+    ignoreAnnotated: ['Preview', 'SerializedName']
+  UnusedPrivateProperty:
+    active: true
+    ignoreAnnotated: ['SerializedName']
+  UseAnyOrNoneInsteadOfFind:
+    active: false
+  UseArrayLiteralsInAnnotations:
+    active: false
+  UseCheckNotNull:
+    active: false
+  UseCheckOrError:
+    active: false
+  UseIsNullOrEmpty:
+    active: false
+  UseOrEmpty:
+    active: false
+  UseRequire:
+    active: false
+  UtilityClassWithPublicConstructor:
+    active: false
