@@ -15,7 +15,7 @@ object Fonts {
         GoogleFont.Provider(
             providerAuthority = PROVIDER_AUTHORITY,
             providerPackage = PROVIDER_PACKAGE,
-            certificates = R.array.com_google_android_gms_fonts_certs
+            certificates = -1,
         )
 
     val RobotoRegular = GoogleFontProvider.getGoogleFontFamily("Roboto", FontWeight.Normal, fontProvider)
