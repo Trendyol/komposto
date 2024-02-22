@@ -5,8 +5,15 @@ include:
       - "template.gitlab-ci.yml"
 
 stages:
+  - analysis
   - build
   - publish
+
+detekt:
+  stage: analysis
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.4.0-jdk17-34.0.0-25.1.8937393-34-0db92d1b
+  script:
+    - gradle detekt
 
 build:
   stage: build
