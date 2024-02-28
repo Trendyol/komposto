@@ -15,8 +15,8 @@ internal object DefaultColors {
     internal val colorWarningVariant1 = Color(color = 0xFFFBF0F2)
     internal val colorWarningVariant2 = Color(color = 0xFFF6DDE1)
     internal val colorGreen = Color(color = 0xFF0BC15C)
-    internal val colorGreenVariant1 = Color(color = 0xFFC4F0D8)
-    internal val colorGreenVariant2 = Color(color = 0xFFE7F9EF)
+    internal val colorGreenVariant1 = Color(color = 0xFFE7F9EF)
+    internal val colorGreenVariant2 = Color(color = 0xFFC4F0D8)
     internal val colorBlue = Color(color = 0xFF4A90E2)
     internal val colorBlueVariant1 = Color(color = 0xFFEDF4FC)
     internal val colorBlueVariant2 = Color(color = 0xFFD4E4F8)
@@ -29,5 +29,5 @@ internal object DefaultColors {
     internal val colorPinkVariant2 = Color(color = 0xFFFFD3E2)
     internal val colorStar = Color(color = 0xFFFFC000)
     internal val colorStarVariant1 = Color(color = 0xFFFFF9E5)
-    internal val colorStarVariant2 = Color(color = 0xFFFFC0C2)
+    internal val colorStarVariant2 = Color(color = 0xFFFFF0C2)
 }
