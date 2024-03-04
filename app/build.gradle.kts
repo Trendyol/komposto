@@ -4,6 +4,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("io.gitlab.arturbosch.detekt")
+    id("shot")
 }
 
 android {
@@ -17,7 +18,8 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testApplicationId = "com.trendyol.design.screenshot.test"
+        testInstrumentationRunner = "com.karumi.shot.ShotTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -49,6 +51,11 @@ android {
     }
 }
 
+shot {
+    applicationId = "com.trendyol.design.screenshot.test"
+    showOnlyFailingTestsInReports = true
+}
+
 configure<DetektExtension> {
     buildUponDefaultConfig = true
     config.from.add("$rootDir/config/detekt/detekt.yml")
@@ -71,4 +78,8 @@ dependencies {
 
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0")
     detektPlugins("io.nlopez.compose.rules:detekt:0.1.13")
+
+    androidTestImplementation(libs.compose.ui.test.junit4)
+    androidTestImplementation(libs.test.rules)
+    debugImplementation(libs.compose.ui.test.manifest)
 }

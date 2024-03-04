@@ -5,3 +5,9 @@ plugins {
     id("com.android.library") version "8.2.0" apply false
     id("io.gitlab.arturbosch.detekt") version("1.23.5")
 }
+
+buildscript {
+    dependencies {
+        classpath(libs.shot)
+    }
+}
