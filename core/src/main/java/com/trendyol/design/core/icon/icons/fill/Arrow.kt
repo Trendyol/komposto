@@ -14,7 +14,6 @@ import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 
-
 @Preview
 @Composable
 private fun ArrowPreview() {
@@ -61,4 +60,3 @@ public val Icons.Fill.Arrow: ImageVector
         }.build()
         return _Arrow!!
     }
-

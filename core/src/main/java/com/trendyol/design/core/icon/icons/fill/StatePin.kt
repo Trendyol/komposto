@@ -15,7 +15,6 @@ import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 
-
 @Preview
 @Composable
 private fun StatePinPreview() {
@@ -82,4 +81,3 @@ public val Icons.Fill.StatePin: ImageVector
         }.build()
         return _StatePin!!
     }
-

@@ -273,6 +273,7 @@ style:
   MagicNumber:
     active: true
     ignoreEnums: true
+    excludes: ['**/core/src/main/java/com/trendyol/design/core/icon/icons/**']
   MaxLineLength:
     active: false
     excludeCommentStatements: true

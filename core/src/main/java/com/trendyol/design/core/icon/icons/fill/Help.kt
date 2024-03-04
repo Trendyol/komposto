@@ -14,7 +14,6 @@ import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 
-
 @Preview
 @Composable
 private fun HelpPreview() {
@@ -48,7 +47,15 @@ public val Icons.Fill.Help: ImageVector
             ) {
                 moveTo(28.8f, 16f)
                 arcTo(12.8f, 12.8f, 0f, isMoreThanHalf = false, isPositiveArc = true, 16f, 28.8f)
-                arcTo(12.8f, 12.8f, 0f, isMoreThanHalf = false, isPositiveArc = true, 3.1999999999999993f, 16f)
+                arcTo(
+                    12.8f,
+                    12.8f,
+                    0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    3.1999999999999993f,
+                    16f
+                )
                 arcTo(12.8f, 12.8f, 0f, isMoreThanHalf = false, isPositiveArc = true, 28.8f, 16f)
                 close()
             }
@@ -88,4 +95,3 @@ public val Icons.Fill.Help: ImageVector
         }.build()
         return _Help!!
     }
-

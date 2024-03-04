@@ -15,7 +15,6 @@ import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 
-
 @Preview
 @Composable
 private fun StateOrderPreview() {
@@ -88,4 +87,3 @@ public val Icons.Fill.StateOrder: ImageVector
         }.build()
         return _StateOrder!!
     }
-
