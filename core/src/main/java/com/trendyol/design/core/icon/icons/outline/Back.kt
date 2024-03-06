@@ -28,7 +28,7 @@ public val Icons.Outline.Back: ImageVector
             return _Back!!
         }
         _Back = ImageVector.Builder(
-            name = "Arrow",
+            name = "Back",
             defaultWidth = 32.dp,
             defaultHeight = 32.dp,
             viewportWidth = 32f,
