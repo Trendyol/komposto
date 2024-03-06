@@ -1,4 +1,4 @@
-package com.trendyol.design.core.icon.icons.fill
+package com.trendyol.design.core.icon.icons.outline
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.SolidColor
@@ -16,19 +16,19 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun CancelPreview() {
-    Icon(imageVector = Icons.Fill.Cancel, size = TrendyolIconSize.XXSmall)
+private fun BackPreview() {
+    Icon(imageVector = Icons.Outline.Back, size = TrendyolIconSize.XLarge)
 }
 
-private var _Cancel: ImageVector? = null
+private var _Back: ImageVector? = null
 
-public val Icons.Fill.Cancel: ImageVector
+public val Icons.Outline.Back: ImageVector
     get() {
-        if (_Cancel != null) {
-            return _Cancel!!
+        if (_Back != null) {
+            return _Back!!
         }
-        _Cancel = ImageVector.Builder(
-            name = "Cancel",
+        _Back = ImageVector.Builder(
+            name = "Arrow",
             defaultWidth = 32.dp,
             defaultHeight = 32.dp,
             viewportWidth = 32f,
@@ -45,21 +45,18 @@ public val Icons.Fill.Cancel: ImageVector
                 strokeLineMiter = 1.0f,
                 pathFillType = PathFillType.EvenOdd
             ) {
-                moveTo(29.3334f, 5.33332f)
-                lineTo(26.6667f, 2.66666f)
-                lineTo(16f, 13.3333f)
-                lineTo(5.33335f, 2.66666f)
-                lineTo(2.66669f, 5.33332f)
-                lineTo(13.3334f, 16f)
-                lineTo(2.66669f, 26.6667f)
-                lineTo(5.33335f, 29.3333f)
-                lineTo(16f, 18.6667f)
-                lineTo(26.6667f, 29.3333f)
-                lineTo(29.3334f, 26.6667f)
-                lineTo(18.6667f, 16f)
-                lineTo(29.3334f, 5.33332f)
+                moveTo(9.3248f, 14.4f)
+                lineTo(18.2624f, 5.46235f)
+                lineTo(16f, 3.19995f)
+                lineTo(3.2f, 16f)
+                lineTo(16f, 28.8f)
+                lineTo(18.2624f, 26.5376f)
+                lineTo(9.3248f, 17.6f)
+                horizontalLineTo(28.8f)
+                verticalLineTo(14.4f)
+                horizontalLineTo(9.3248f)
                 close()
             }
         }.build()
-        return _Cancel!!
+        return _Back!!
     }
