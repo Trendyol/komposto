@@ -1,4 +1,4 @@
-package com.trendyol.design.core.icon.icons.fill
+package com.trendyol.design.core.icon.icons.outline
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.SolidColor
@@ -17,12 +17,12 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 @Preview
 @Composable
 private fun CancelPreview() {
-    Icon(imageVector = Icons.Fill.Cancel, size = TrendyolIconSize.XXSmall)
+    Icon(imageVector = Icons.Outline.Cancel, size = TrendyolIconSize.XXSmall)
 }
 
 private var _Cancel: ImageVector? = null
 
-public val Icons.Fill.Cancel: ImageVector
+public val Icons.Outline.Cancel: ImageVector
     get() {
         if (_Cancel != null) {
             return _Cancel!!

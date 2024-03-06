@@ -42,6 +42,6 @@ sealed interface TrendyolIconSize {
 
     data object XXXLarge : IconSize {
         override val dp: Dp
-            get() = 56.dp
+            get() = 64.dp
     }
 }

@@ -1,4 +1,4 @@
-package com.trendyol.design.core.icon.icons.fill
+package com.trendyol.design.core.icon.icons.outline
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.SolidColor
@@ -16,19 +16,19 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun ArrowPreview() {
-    Icon(imageVector = Icons.Fill.Arrow, size = TrendyolIconSize.XLarge)
+private fun BackPreview() {
+    Icon(imageVector = Icons.Outline.Back, size = TrendyolIconSize.XLarge)
 }
 
-private var _Arrow: ImageVector? = null
+private var _Back: ImageVector? = null
 
-public val Icons.Fill.Arrow: ImageVector
+public val Icons.Outline.Back: ImageVector
     get() {
-        if (_Arrow != null) {
-            return _Arrow!!
+        if (_Back != null) {
+            return _Back!!
         }
-        _Arrow = ImageVector.Builder(
-            name = "Arrow",
+        _Back = ImageVector.Builder(
+            name = "Back",
             defaultWidth = 32.dp,
             defaultHeight = 32.dp,
             viewportWidth = 32f,
@@ -58,5 +58,5 @@ public val Icons.Fill.Arrow: ImageVector
                 close()
             }
         }.build()
-        return _Arrow!!
+        return _Back!!
     }
