@@ -5,12 +5,16 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Scaffold
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.button.Button
 import com.trendyol.design.core.button.TrendyolButtonSize
 import com.trendyol.design.core.button.TrendyolButtonStyle
+import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.toolbar.Toolbar
+import com.trendyol.design.core.toolbar.ToolbarStyle
 import com.trendyol.design.ui.theme.TrendyolTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,14 +22,26 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TrendyolTheme {
-                Column {
-                    Button(
-                        onClick = { /*TODO*/ },
-                        modifier = Modifier.padding(16.dp),
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Small
-                    ) {
-                        Text(text = "CTA Label")
+                Scaffold(
+                    topBar = {
+                        Toolbar(
+                            title = "Title",
+                            style = ToolbarStyle.Icon.TextButton(
+                                icon = { Icon(imageVector = Icons.Fill.Help) },
+                                textButton = { Text(text = "ActionText") }
+                            )
+                        )
+                    }
+                ) { paddingValues ->
+                    Column {
+                        Button(
+                            onClick = { /*TODO*/ },
+                            modifier = Modifier.padding(paddingValues),
+                            style = TrendyolButtonStyle.Primary,
+                            size = TrendyolButtonSize.Small
+                        ) {
+                            Text(text = "CTA Label")
+                        }
                     }
                 }
             }
