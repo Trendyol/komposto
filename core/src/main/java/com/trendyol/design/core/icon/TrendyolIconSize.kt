@@ -44,4 +44,14 @@ sealed interface TrendyolIconSize {
         override val dp: Dp
             get() = 64.dp
     }
+
+    data object WarningInfoStateLayoutSmallIcon : IconSize {
+        override val dp: Dp
+            get() = 68.dp
+    }
+
+    data object WarningInfoStateLayoutMediumIcon : IconSize {
+        override val dp: Dp
+            get() = 104.dp
+    }
 }
