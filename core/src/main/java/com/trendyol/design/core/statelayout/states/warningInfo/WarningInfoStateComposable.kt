@@ -106,11 +106,9 @@ private fun getIconSize(layoutStyle: LayoutStyle): IconSize {
     }
 }
 
-
 private fun getIcon(icon: ImageVector?): ImageVector {
     return icon ?: WarningInfoStateDefaultIcon
 }
-
 
 @Preview(showBackground = true)
 @Composable

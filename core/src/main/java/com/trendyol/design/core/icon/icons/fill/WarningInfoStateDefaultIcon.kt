@@ -13,7 +13,6 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 
-
 @Preview
 @Composable
 private fun WarningInfoStateDefaultIconPreview() {
@@ -80,4 +79,3 @@ public val WarningInfoStateDefaultIcon: ImageVector
         }.build()
         return _WarningInfoStateDefaultIcon!!
     }
-

@@ -45,7 +45,7 @@ fun rememberContentState(
         LayoutStateImpl(initialState)
     }
 
-private fun provideInitialStateInfoModel() : InfoModel {
+private fun provideInitialStateInfoModel(): InfoModel {
     return InfoModel(
         layoutStyle = LayoutStyle.SMALL,
         title = null,

@@ -16,7 +16,6 @@ data class InfoModel(
     val buttonsInfoModel: ButtonsInfoModel
 ) : Parcelable
 
-
 @Stable
 @Parcelize
 data class ButtonsInfoModel(
