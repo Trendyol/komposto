@@ -5,6 +5,7 @@ import androidx.compose.material.LocalTextStyle
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.TextStyle
@@ -38,7 +39,7 @@ fun Text(
 ) {
     androidx.compose.material.Text(
         text = text,
-        modifier = modifier,
+        modifier = modifier.layoutId(TextLayoutId),
         color = color,
         fontSize = fontSize,
         fontStyle = fontStyle,
@@ -82,7 +83,7 @@ fun Text(
 ) {
     androidx.compose.material.Text(
         text = text,
-        modifier = modifier,
+        modifier = modifier.layoutId(TextLayoutId),
         color = color,
         fontSize = fontSize,
         fontStyle = fontStyle,
@@ -103,3 +104,5 @@ fun Text(
         ),
     )
 }
+
+internal object TextLayoutId
