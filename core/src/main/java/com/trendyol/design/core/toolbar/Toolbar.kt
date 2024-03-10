@@ -16,6 +16,20 @@ import com.trendyol.design.core.text.TextLayoutId
 import com.trendyol.theme.TrendyolDesign
 import androidx.compose.material.TopAppBar as MaterialTopAppBar
 
+/**
+ * Toolbar displays information and actions relating to the current screen. There are some various
+ * styles. You can reach the toolbar styles in ![figma](https://www.figma.com/file/YPxZC4FiiowYTBs8Txc4Xi/Design-App-Library?type=design&node-id=823%3A1083&mode=design&t=1whjmt1Zx10PDeyM-1).
+ *
+ * @param title This mandatory parameter defines the text that will be displayed in the center of the toolbar.
+ * @param modifier The [Modifier] to be applied to this Toolbar
+ * @param style This parameter controls the visual style of the toolbar. It can be set to one of the
+ * predefined [ToolbarStyle] enum values like [ToolbarStyle.Icon.EndIcon] or [ToolbarStyle.TextButton]
+ * to achieve different appearances. Defaults to [ToolbarStyle.None]
+ * @param titleTextStyle This parameter allows you to customize the text style for the toolbar title.
+ * @param backgroundColor The background color for the Toolbar.
+ * @param elevation the elevation of this Toolbar
+ * @param contentPadding the padding applied to the content of this Toolbar
+ */
 @Composable
 fun Toolbar(
     title: String,
@@ -41,7 +55,7 @@ fun Toolbar(
                 style.icon(ToolbarScope)
             }
             style.icon(ToolbarScope)
-            Spacer(modifier = modifier.width(16.dp))
+            Spacer(modifier = Modifier.width(16.dp))
         }
 
         Text(

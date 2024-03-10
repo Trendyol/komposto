@@ -13,15 +13,22 @@ import com.trendyol.design.core.icon.IconSize
 object ToolbarScope {
 
     /**
-     * Default icon used for TrendyolToolbar
+     * Default icon used for Toolbar
      *
-     * @param imageVector
-     * @param onClick
-     * @param size
+     * @param imageVector This mandatory parameter defines the vector graphic resource that will be
+     * displayed as the icon. You'll need to provide an ImageVector object representing the
+     * desired icon.
+     * @param modifier The [Modifier] to be applied to this Toolbar
+     * @param onClick This parameter allows you to specify an action to be performed when the user
+     * clicks on the icon.
+     * @param size  This parameter controls the size of the icon. It can be set to one of the
+     * predefined IconSize enum values, such as [IconSize.Small] or [IconSize.Medium].
+     * Defaults to the value from [ToolbarDefaults.IconSize].
      */
     @Composable
     fun Icon(
         imageVector: ImageVector,
+        modifier: Modifier = Modifier,
         onClick: () -> Unit = {},
         size: IconSize = ToolbarDefaults.IconSize,
         tint: Color = Color.Unspecified
@@ -29,7 +36,7 @@ object ToolbarScope {
         com.trendyol.design.core.icon.Icon(
             imageVector = imageVector,
             size = size,
-            modifier = Modifier
+            modifier = modifier
                 .layoutId(IconLayoutId)
                 .clickable { onClick.invoke() },
             tint = tint
