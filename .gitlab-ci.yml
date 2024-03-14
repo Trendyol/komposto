@@ -10,30 +10,7 @@ variables:
   EMULATOR_IMAGE: "24"
   SDK_TOOLS: "11076708" # from https://developer.android.com/studio/#command-tools
 
-stages:
-  - analysis
-  - build
-  - screenshotTests
-  - publish
-  - announcement
-
-detekt:
-  stage: analysis
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.4.0-jdk17-34.0.0-25.1.8937393-34-0db92d1b
-  script:
-    - gradle detekt
-
-build:
-  stage: build
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.4.0-jdk17-34.0.0-25.1.8937393-34-0db92d1b
-  script:
-    - gradle assemble
-
-executeScreenshotTests:
-  stage: screenshotTests
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.4.0-jdk17-34.0.0-25.1.8937393-34-0db92d1b
-  before_script:
-
+before_script:
     # install required packages
     - apt-get update --yes
     - apt-get install wget gnupg gnupg2 unzip --yes
@@ -71,6 +48,29 @@ executeScreenshotTests:
 
     - chmod +x ./gradlew
 
+stages:
+  - analysis
+  - build
+  - screenshotTests
+  - publish
+  - announcement
+
+detekt:
+  stage: analysis
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.4.0-jdk17-34.0.0-25.1.8937393-34-0db92d1b
+  script:
+    - gradle detekt
+
+build:
+  stage: build
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.4.0-jdk17-34.0.0-25.1.8937393-34-0db92d1b
+  script:
+    - gradle assemble
+
+executeScreenshotTests:
+  stage: screenshotTests
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.4.0-jdk17-34.0.0-25.1.8937393-34-0db92d1b
+  script:
     # install packages needed by emulator
     - apt-get install libx11-dev libpulse0 libgl1 libnss3 libxcomposite-dev libxcursor1 libasound2 --yes
 
@@ -82,11 +82,10 @@ executeScreenshotTests:
     - chmod +x android-wait-for-emulator
 
     # create virtual device named "test"
-    - echo no | avdmanager -v create avd -n test -k "system-images;android-${EMULATOR_IMAGE};default;armeabi-v7a"
+    - echo y | avdmanager -v create avd -n test -k "system-images;android-${EMULATOR_IMAGE};default;armeabi-v7a"
 
     # start adb server
     - adb start-server
-  script:
     - gradle executeScreenshotTests
   only:
     - tags
