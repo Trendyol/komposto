@@ -7,6 +7,7 @@ include:
 stages:
   - analysis
   - build
+  - screenshotTests
   - publish
   - announcement
 
@@ -22,6 +23,14 @@ build:
   script:
     - gradle assemble
 
+executeScreenshotTests:
+  stage: screenshotTests
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.4.0-jdk17-34.0.0-25.1.8937393-34-0db92d1b
+  script:
+    - gradle executeScreenshotTests
+  only:
+    - tags
+
 publish:
   stage: publish
   image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.4.0-jdk17-34.0.0-25.1.8937393-34-0db92d1b
@@ -35,7 +44,7 @@ publish:
 announcement:
   stage: announcement
   script:
-    - 'export PUBLISH_MSG="UI Kit new version deployed. :checkmark:\nDeployer: $GITLAB_USER_NAME\nImage Tag: $CI_COMMIT_REF_NAME\nDescription: $CI_COMMIT_TAG_MESSAGE"'
+    - 'export PUBLISH_MSG="UI Kit new version deployed. :checkmark:\nDeployer: $GITLAB_USER_NAME\nImage Tag: $CI_COMMIT_REF_NAME\nDescription: $CI_RELEASE_DESCRIPTION"'
     - 'curl -X POST "https://leylek.trendyol.com/slack/send-message" --header "Content-Type: application/json" --header "Authorization: 442c5be1-5fa8-4880-b304-619eebb61d65" --data-raw "{ \"channel\": \"android-ui-kit\", \"message\": \"$PUBLISH_MSG\" }"'
   only:
     - tags
