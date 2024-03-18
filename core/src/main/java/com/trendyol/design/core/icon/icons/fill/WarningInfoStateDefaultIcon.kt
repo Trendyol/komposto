@@ -12,7 +12,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.TrendyolIconSize
 
-
 @Preview
 @Composable
 private fun WarningInfoStateDefaultIconPreview() {
