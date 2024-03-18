@@ -3,24 +3,23 @@ package com.trendyol.design.core.statelayout
 import android.os.Parcelable
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.trendyol.design.core.icon.StateLayoutIconSize
 import kotlinx.parcelize.Parcelize
 import kotlinx.parcelize.RawValue
 
 @Stable
 @Parcelize
 data class InfoModel(
-    val layoutStyle: LayoutStyle,
     val title: String? = null,
     val description: String? = null,
     val image: @RawValue ImageVector? = null,
-    val buttonsInfoModel: ButtonsInfoModel
+    val iconSize: @RawValue StateLayoutIconSize,
+    val buttonsInfoModel: ButtonsInfoModel? = null,
 ) : Parcelable
 
 @Stable
 @Parcelize
 data class ButtonsInfoModel(
-    val showPrimaryButton: Boolean,
-    val showSecondaryButton: Boolean,
     val primaryButtonText: String? = null,
     val secondaryButtonText: String? = null,
     val primaryButtonClickListener: (() -> Unit)? = null,

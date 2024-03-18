@@ -1,5 +1,6 @@
 package com.trendyol.design.core.statelayout.states.warningInfo
 
+import WarningInfoStateDefaultIcon
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -8,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -18,91 +18,82 @@ import com.trendyol.design.core.button.Button
 import com.trendyol.design.core.button.TrendyolButtonSize
 import com.trendyol.design.core.button.TrendyolButtonStyle
 import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.IconSize
-import com.trendyol.design.core.icon.TrendyolIconSize
-import com.trendyol.design.core.icon.icons.fill.WarningInfoStateDefaultIcon
+import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.previewtheme.PreviewTheme
-import com.trendyol.design.core.statelayout.ButtonsInfoModel
-import com.trendyol.design.core.statelayout.InfoModel
-import com.trendyol.design.core.statelayout.LayoutStyle
+import com.trendyol.design.core.statelayout.StateLayoutStyle
+import com.trendyol.design.core.statelayout.TrendyolStateLayoutStyle
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
 @Composable
 fun WarningInfoStateComposable(
     modifier: Modifier = Modifier,
-    infoModel: InfoModel
+    stateLayoutStyle: StateLayoutStyle,
 ) {
-    val iconSize = remember { getIconSize(infoModel.layoutStyle) }
+    val infoModel = stateLayoutStyle.infoModel
+    val iconSize = infoModel.iconSize
 
     Box(
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        Column {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             Icon(
-                modifier = Modifier.align(Alignment.CenterHorizontally),
                 imageVector = getIcon(infoModel.image),
                 size = iconSize
             )
-            Spacer(modifier = Modifier.size(12.dp))
             infoModel.title?.let {
+                Spacer(modifier = Modifier.size(12.dp))
                 Text(
-                    modifier = Modifier.align(Alignment.CenterHorizontally),
-                    text = it,
+                    modifier = Modifier
+                        .padding(horizontal = 16.dp),
+                    text = infoModel.title,
                     style = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant2,
                 )
             }
             infoModel.description?.let {
                 Spacer(modifier = Modifier.size(8.dp))
                 Text(
-                    modifier = Modifier.align(Alignment.CenterHorizontally),
-                    text = it,
+                    modifier = Modifier
+                        .padding(horizontal = 16.dp),
+                    text = infoModel.description,
                     style = TrendyolDesign.typography.body1MediumColorOnSurfaceVariant1,
                 )
             }
-            Spacer(modifier = Modifier.size(32.dp))
-
-            if (infoModel.buttonsInfoModel.showPrimaryButton) {
+            if (infoModel.buttonsInfoModel?.primaryButtonText.isNullOrEmpty().not()) {
+                Spacer(modifier = Modifier.size(32.dp))
                 Button(
                     modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp),
-                    onClick = infoModel.buttonsInfoModel.primaryButtonClickListener ?: {},
+                    onClick = infoModel.buttonsInfoModel?.primaryButtonClickListener ?: {},
                     style = TrendyolButtonStyle.Primary,
                     size = TrendyolButtonSize.Large
                 ) {
-                    infoModel.buttonsInfoModel.primaryButtonText?.let {
+                    infoModel.buttonsInfoModel?.primaryButtonText?.let {
                         Text(text = it)
                     }
                 }
             }
 
-            if (infoModel.buttonsInfoModel.showSecondaryButton) {
+            if (infoModel.buttonsInfoModel?.secondaryButtonText.isNullOrEmpty().not()) {
                 Spacer(modifier = Modifier.size(16.dp))
                 Button(
                     modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp),
-                    onClick = infoModel.buttonsInfoModel.secondaryButtonClickListener ?: {},
+                    onClick = infoModel.buttonsInfoModel?.secondaryButtonClickListener ?: {},
                     style = TrendyolButtonStyle.Secondary,
                     size = TrendyolButtonSize.Large
                 ) {
-                    infoModel.buttonsInfoModel.secondaryButtonText?.let {
+                    infoModel.buttonsInfoModel?.secondaryButtonText?.let {
                         Text(text = it)
                     }
                 }
             }
         }
-    }
-}
-
-private fun getIconSize(layoutStyle: LayoutStyle): IconSize {
-    return when (layoutStyle) {
-        LayoutStyle.SMALL -> TrendyolIconSize.WarningInfoStateLayoutSmallIcon
-        LayoutStyle.MEDIUM -> TrendyolIconSize.WarningInfoStateLayoutMediumIcon
     }
 }
 
@@ -112,22 +103,16 @@ private fun getIcon(icon: ImageVector?): ImageVector {
 
 @Preview(showBackground = true)
 @Composable
-private fun DefaultSmallStylePreview() {
+private fun SingleButtonFullVersionStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            infoModel = InfoModel(
-                image = WarningInfoStateDefaultIcon,
-                layoutStyle = LayoutStyle.SMALL,
+            stateLayoutStyle = TrendyolStateLayoutStyle.SingleButtonFullVersion(
+                icon = WarningInfoStateDefaultIcon,
+                iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
                 title = "Empty State Title",
-                description = "Description will be here. Description can be for example; 2 ",
-                buttonsInfoModel = ButtonsInfoModel(
-                    showPrimaryButton = true,
-                    showSecondaryButton = false,
-                    primaryButtonClickListener = {},
-                    secondaryButtonClickListener = {},
-                    primaryButtonText = "primaryButton",
-                    secondaryButtonText = "secondaryButton",
-                )
+                description = "Description will be here. Description can be for example; 2",
+                primaryButtonText = "primaryButton",
+                primaryButtonClickListener = {}
             )
         )
     }
@@ -135,46 +120,50 @@ private fun DefaultSmallStylePreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun DefaultMediumStylePreview() {
+private fun SingleButtonNoTitleStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            infoModel = InfoModel(
-                image = WarningInfoStateDefaultIcon,
-                layoutStyle = LayoutStyle.MEDIUM,
+            stateLayoutStyle = TrendyolStateLayoutStyle.SingleButtonNoTitle(
+                icon = WarningInfoStateDefaultIcon,
+                iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
+                description = "Description will be here. Description can be for example; 2",
+                primaryButtonText = "primaryButton",
+                primaryButtonClickListener = {}
+            ),
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun SingleButtonNoDescriptionStylePreview() {
+    PreviewTheme {
+        WarningInfoStateComposable(
+            stateLayoutStyle = TrendyolStateLayoutStyle.SingleButtonNoDescription(
+                icon = WarningInfoStateDefaultIcon,
+                iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
                 title = "Empty State Title",
-                description = "Description will be here. Description can be for example; 2 ",
-                buttonsInfoModel = ButtonsInfoModel(
-                    showPrimaryButton = true,
-                    showSecondaryButton = false,
-                    primaryButtonClickListener = {},
-                    secondaryButtonClickListener = {},
-                    primaryButtonText = "primaryButton",
-                    secondaryButtonText = "secondaryButton",
-                )
+                primaryButtonText = "primaryButton",
+                primaryButtonClickListener = {}
             )
-
         )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-private fun TwoButtonSmallStylePreview() {
+private fun TwoButtonsFullVersionStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            infoModel = InfoModel(
-                image = WarningInfoStateDefaultIcon,
-                layoutStyle = LayoutStyle.SMALL,
+            stateLayoutStyle = TrendyolStateLayoutStyle.TwoButtonsFullVersion(
+                icon = WarningInfoStateDefaultIcon,
+                iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                 title = "Empty State Title",
-                description = "Description will be here. Description can be for example; 2 ",
-                buttonsInfoModel = ButtonsInfoModel(
-                    showPrimaryButton = true,
-                    showSecondaryButton = true,
-                    primaryButtonClickListener = {},
-                    secondaryButtonClickListener = {},
-                    primaryButtonText = "primaryButton",
-                    secondaryButtonText = "secondaryButton",
-                )
+                description = "Description will be here. Description can be for example; 2",
+                primaryButtonText = "primaryButton",
+                primaryButtonClickListener = {},
+                secondaryButtonText = "secondaryButton",
+                secondaryButtonClickListener = {}
             )
         )
     }
@@ -182,22 +171,35 @@ private fun TwoButtonSmallStylePreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun TwoButtonMediumStylePreview() {
+private fun TwoButtonsNoTitleStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            infoModel = InfoModel(
-                image = WarningInfoStateDefaultIcon,
-                layoutStyle = LayoutStyle.MEDIUM,
+            stateLayoutStyle = TrendyolStateLayoutStyle.TwoButtonsNoTitle(
+                icon = WarningInfoStateDefaultIcon,
+                iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
+                description = "Description will be here. Description can be for example; 2",
+                primaryButtonText = "primaryButton",
+                primaryButtonClickListener = {},
+                secondaryButtonText = "secondaryButton",
+                secondaryButtonClickListener = {}
+            )
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun TwoButtonsNoDescriptionStylePreview() {
+    PreviewTheme {
+        WarningInfoStateComposable(
+            stateLayoutStyle = TrendyolStateLayoutStyle.TwoButtonsNoDescription(
+                icon = WarningInfoStateDefaultIcon,
+                iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                 title = "Empty State Title",
-                description = "Description will be here. Description can be for example; 2 ",
-                buttonsInfoModel = ButtonsInfoModel(
-                    showPrimaryButton = true,
-                    showSecondaryButton = true,
-                    primaryButtonClickListener = {},
-                    secondaryButtonClickListener = {},
-                    primaryButtonText = "primaryButton",
-                    secondaryButtonText = "secondaryButton",
-                )
+                primaryButtonText = "primaryButton",
+                primaryButtonClickListener = {},
+                secondaryButtonText = "secondaryButton",
+                secondaryButtonClickListener = {}
             )
         )
     }
@@ -205,22 +207,14 @@ private fun TwoButtonMediumStylePreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun NoDescriptionSmallStylePreview() {
+private fun NoButtonFullVersionStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            infoModel = InfoModel(
-                image = WarningInfoStateDefaultIcon,
-                layoutStyle = LayoutStyle.SMALL,
+            stateLayoutStyle = TrendyolStateLayoutStyle.NoButtonFullVersion(
+                icon = WarningInfoStateDefaultIcon,
                 title = "Empty State Title",
-                description = null,
-                buttonsInfoModel = ButtonsInfoModel(
-                    showPrimaryButton = true,
-                    showSecondaryButton = false,
-                    primaryButtonClickListener = {},
-                    secondaryButtonClickListener = {},
-                    primaryButtonText = "primaryButton",
-                    secondaryButtonText = "secondaryButton",
-                )
+                description = "Description will be here. Description can be for example; 2",
+                iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
             )
         )
     }
@@ -228,114 +222,27 @@ private fun NoDescriptionSmallStylePreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun NoDescriptionMediumStylePreview() {
+private fun NoButtonNoTitleStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            infoModel = InfoModel(
-                image = WarningInfoStateDefaultIcon,
-                layoutStyle = LayoutStyle.MEDIUM,
+            stateLayoutStyle = TrendyolStateLayoutStyle.NoButtonNoTitle(
+                icon = WarningInfoStateDefaultIcon,
+                description = "Description will be here. Description can be for example; 2",
+                iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
+            )
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun NoButtonNoDescriptionStylePreview() {
+    PreviewTheme {
+        WarningInfoStateComposable(
+            stateLayoutStyle = TrendyolStateLayoutStyle.NoButtonNoDescription(
+                icon = WarningInfoStateDefaultIcon,
                 title = "Empty State Title",
-                description = null,
-                buttonsInfoModel = ButtonsInfoModel(
-                    showPrimaryButton = true,
-                    showSecondaryButton = false,
-                    primaryButtonClickListener = {},
-                    secondaryButtonClickListener = {},
-                    primaryButtonText = "primaryButton",
-                    secondaryButtonText = "secondaryButton",
-                )
-            )
-        )
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-private fun NoTitleSmallStylePreview() {
-    PreviewTheme {
-        WarningInfoStateComposable(
-            infoModel = InfoModel(
-                image = WarningInfoStateDefaultIcon,
-                layoutStyle = LayoutStyle.SMALL,
-                title = null,
-                description = "Description will be here. Description can be for example; 2 ",
-                buttonsInfoModel = ButtonsInfoModel(
-                    showPrimaryButton = true,
-                    showSecondaryButton = false,
-                    primaryButtonClickListener = {},
-                    secondaryButtonClickListener = {},
-                    primaryButtonText = "primaryButton",
-                    secondaryButtonText = "secondaryButton",
-                )
-            )
-        )
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-private fun NoTitleMediumStylePreview() {
-    PreviewTheme {
-        WarningInfoStateComposable(
-            infoModel = InfoModel(
-                image = WarningInfoStateDefaultIcon,
-                layoutStyle = LayoutStyle.MEDIUM,
-                title = null,
-                description = "Description will be here. Description can be for example; 2 ",
-                buttonsInfoModel = ButtonsInfoModel(
-                    showPrimaryButton = true,
-                    showSecondaryButton = false,
-                    primaryButtonClickListener = {},
-                    secondaryButtonClickListener = {},
-                    primaryButtonText = "primaryButton",
-                    secondaryButtonText = "secondaryButton",
-                )
-            )
-        )
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-private fun NoButtonSmallStylePreview() {
-    PreviewTheme {
-        WarningInfoStateComposable(
-            infoModel = InfoModel(
-                image = WarningInfoStateDefaultIcon,
-                layoutStyle = LayoutStyle.SMALL,
-                title = "Empty State Title",
-                description = "Description will be here. Description can be for example; 2 ",
-                buttonsInfoModel = ButtonsInfoModel(
-                    showPrimaryButton = false,
-                    showSecondaryButton = false,
-                    primaryButtonClickListener = {},
-                    secondaryButtonClickListener = {},
-                    primaryButtonText = "primaryButton",
-                    secondaryButtonText = "secondaryButton",
-                )
-            )
-        )
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-private fun NoButtonMediumStylePreview() {
-    PreviewTheme {
-        WarningInfoStateComposable(
-            infoModel = InfoModel(
-                image = WarningInfoStateDefaultIcon,
-                layoutStyle = LayoutStyle.MEDIUM,
-                title = "Empty State Title",
-                description = "Description will be here. Description can be for example; 2 ",
-                buttonsInfoModel = ButtonsInfoModel(
-                    showPrimaryButton = false,
-                    showSecondaryButton = false,
-                    primaryButtonClickListener = {},
-                    secondaryButtonClickListener = {},
-                    primaryButtonText = "primaryButton",
-                    secondaryButtonText = "secondaryButton",
-                )
+                iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
             )
         )
     }

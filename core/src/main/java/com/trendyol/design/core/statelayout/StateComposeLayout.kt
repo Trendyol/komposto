@@ -9,27 +9,34 @@ import com.trendyol.design.core.statelayout.states.warningInfo.WarningInfoStateC
 @Composable
 fun StateComposeLayout(
     modifier: Modifier = Modifier,
-    layoutState: LayoutState,
+    layoutState: State,
     contentStateLayout: @Composable () -> Unit = {},
-    warningInfoStateLayout: InfoModel,
+    warningInfoModel: @Composable (StateLayoutStyle) -> Unit = { trendyolStateLayoutStyle ->
+        WarningInfoStateComposable(
+            stateLayoutStyle = trendyolStateLayoutStyle,
+        )
+    },
     loadingStateLayout: @Composable (message: String) -> Unit = { /*todo loadingState*/ },
 ) {
 
     Box(modifier = modifier) {
-        when (layoutState.content) {
-            is State.Content ->
-                ContentState(layoutState.content as State.Content, contentStateLayout)
+        when (layoutState) {
+            is State.ContentWithLoading ->
+                ContentState(layoutState, contentStateLayout)
 
-            is State.WarningInfo -> WarningInfoStateComposable(infoModel = warningInfoStateLayout)
+            is State.WarningInfo -> warningInfoModel(
+                layoutState.trendyolStateLayoutStyle,
+            )
+
             is State.Loading ->
-                loadingStateLayout((layoutState.content as State.Loading).message.orEmpty())
+                loadingStateLayout(layoutState.message.orEmpty())
         }
     }
 }
 
 @Composable
 fun ContentState(
-    content: State.Content,
+    content: State.ContentWithLoading,
     contentLayout: @Composable () -> Unit,
 ) {
     if (content.type != null) {

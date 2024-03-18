@@ -1,7 +1,4 @@
-package com.trendyol.design.core.icon.icons.fill
-
 import androidx.compose.runtime.Composable
-import androidx.compose.foundation.Image
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
@@ -12,11 +9,14 @@ import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import com.trendyol.design.core.icon.Icon
+import com.trendyol.design.core.icon.TrendyolIconSize
+
 
 @Preview
 @Composable
 private fun WarningInfoStateDefaultIconPreview() {
-    Image(WarningInfoStateDefaultIcon, null)
+    Icon(WarningInfoStateDefaultIcon, size = TrendyolIconSize.Medium)
 }
 
 private var _WarningInfoStateDefaultIcon: ImageVector? = null
@@ -27,7 +27,7 @@ public val WarningInfoStateDefaultIcon: ImageVector
             return _WarningInfoStateDefaultIcon!!
         }
         _WarningInfoStateDefaultIcon = ImageVector.Builder(
-            name = "Icon",
+            name = "WarningInfoDefaultIcon",
             defaultWidth = 104.dp,
             defaultHeight = 104.dp,
             viewportWidth = 104f,
@@ -45,10 +45,34 @@ public val WarningInfoStateDefaultIcon: ImageVector
                     strokeLineMiter = 1.0f,
                     pathFillType = PathFillType.NonZero
                 ) {
-                    moveTo(100f, 52f)
-                    arcTo(48f, 48f, 0f, isMoreThanHalf = false, isPositiveArc = true, 52f, 100f)
-                    arcTo(48f, 48f, 0f, isMoreThanHalf = false, isPositiveArc = true, 4f, 52f)
-                    arcTo(48f, 48f, 0f, isMoreThanHalf = false, isPositiveArc = true, 100f, 52f)
+                    moveTo(100.75f, 52f)
+                    arcTo(
+                        48.75f,
+                        48.75f,
+                        0f,
+                        isMoreThanHalf = false,
+                        isPositiveArc = true,
+                        52f,
+                        100.75f
+                    )
+                    arcTo(
+                        48.75f,
+                        48.75f,
+                        0f,
+                        isMoreThanHalf = false,
+                        isPositiveArc = true,
+                        3.25f,
+                        52f
+                    )
+                    arcTo(
+                        48.75f,
+                        48.75f,
+                        0f,
+                        isMoreThanHalf = false,
+                        isPositiveArc = true,
+                        100.75f,
+                        52f
+                    )
                     close()
                 }
             }
@@ -63,17 +87,23 @@ public val WarningInfoStateDefaultIcon: ImageVector
                 strokeLineMiter = 1.0f,
                 pathFillType = PathFillType.EvenOdd
             ) {
-                moveTo(51.9517f, 26f)
-                curveTo(60.6509f, 26f, 67.7017f, 33.0377f, 67.7017f, 41.7191f)
-                curveTo(67.7017f, 50.401f, 51.9517f, 78f, 51.9517f, 78f)
-                curveTo(51.9517f, 78f, 36.2017f, 50.401f, 36.2017f, 41.7191f)
-                curveTo(36.2017f, 33.0377f, 43.2535f, 26f, 51.9517f, 26f)
+                moveTo(51.9999f, 30.7878f)
+                lineTo(32.4624f, 38.7737f)
+                lineTo(51.9999f, 46.7596f)
+                lineTo(71.5374f, 38.7737f)
+                lineTo(51.9999f, 30.7878f)
                 close()
-                moveTo(51.9489f, 32.3685f)
-                curveTo(46.7743f, 32.3685f, 42.5802f, 36.555f, 42.5802f, 41.7191f)
-                curveTo(42.5802f, 46.8848f, 46.7743f, 51.0703f, 51.9489f, 51.0697f)
-                curveTo(57.1235f, 51.0697f, 61.3187f, 46.8848f, 61.3187f, 41.7191f)
-                curveTo(61.3187f, 36.555f, 57.1241f, 32.3685f, 51.9489f, 32.3685f)
+                moveTo(31.0347f, 40.5149f)
+                verticalLineTo(65.0753f)
+                lineTo(50.9249f, 73.2119f)
+                verticalLineTo(48.6515f)
+                lineTo(31.0347f, 40.5149f)
+                close()
+                moveTo(53.0752f, 48.6515f)
+                lineTo(72.9654f, 40.5149f)
+                verticalLineTo(65.0753f)
+                lineTo(53.0752f, 73.2119f)
+                verticalLineTo(48.6515f)
                 close()
             }
         }.build()

@@ -3,14 +3,10 @@ package com.trendyol.design
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.button.Button
-import com.trendyol.design.core.button.TrendyolButtonSize
-import com.trendyol.design.core.button.TrendyolButtonStyle
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.icon.StateLayoutIconSize
+import com.trendyol.design.core.statelayout.State
+import com.trendyol.design.core.statelayout.StateComposeLayout
+import com.trendyol.design.core.statelayout.TrendyolStateLayoutStyle
 import com.trendyol.design.ui.theme.TrendyolTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,16 +14,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TrendyolTheme {
-                Column {
-                    Button(
-                        onClick = { /*TODO*/ },
-                        modifier = Modifier.padding(16.dp),
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Small
-                    ) {
-                        Text(text = "CTA Label")
-                    }
-                }
+                StateComposeLayout(
+                    layoutState = State.WarningInfo(
+                        trendyolStateLayoutStyle = TrendyolStateLayoutStyle.SingleButtonNoDescription(
+                            iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
+                        )
+                    )
+                )
             }
         }
     }
