@@ -4,7 +4,7 @@ import WarningInfoStateDefaultIcon
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.trendyol.design.core.icon.StateLayoutIconSize
 
-sealed interface TrendyolStateLayoutStyle {
+sealed interface TrendyolWarningInfoStateLayoutStyle {
 
     data class SingleButtonFullVersion(
         val icon: ImageVector = WarningInfoStateDefaultIcon,
@@ -12,8 +12,8 @@ sealed interface TrendyolStateLayoutStyle {
         val title: String = DEFAULT_TITLE,
         val description: String = DEFAULT_DESCRIPTION,
         val primaryButtonText: String = DEFAULT_PRIMARY_BUTTON_TEXT,
-        val primaryButtonClickListener: (() -> Unit)? = null,
-    ) : StateLayoutStyle {
+        val primaryButtonClickListener: (() -> Unit),
+    ) : WarningInfoStateLayoutStyle {
         override val infoModel: InfoModel
             get() = InfoModel(
                 title = title,
@@ -32,8 +32,8 @@ sealed interface TrendyolStateLayoutStyle {
         val iconSize: StateLayoutIconSize,
         val description: String = DEFAULT_DESCRIPTION,
         val primaryButtonText: String = DEFAULT_PRIMARY_BUTTON_TEXT,
-        val primaryButtonClickListener: (() -> Unit)? = null,
-    ) : StateLayoutStyle {
+        val primaryButtonClickListener: (() -> Unit),
+    ) : WarningInfoStateLayoutStyle {
         override val infoModel: InfoModel
             get() = InfoModel(
                 description = description,
@@ -51,8 +51,8 @@ sealed interface TrendyolStateLayoutStyle {
         val iconSize: StateLayoutIconSize,
         val title: String = DEFAULT_TITLE,
         val primaryButtonText: String = DEFAULT_PRIMARY_BUTTON_TEXT,
-        val primaryButtonClickListener: (() -> Unit)? = null,
-    ) : StateLayoutStyle {
+        val primaryButtonClickListener: (() -> Unit),
+    ) : WarningInfoStateLayoutStyle {
         override val infoModel: InfoModel
             get() = InfoModel(
                 title = title,
@@ -72,9 +72,9 @@ sealed interface TrendyolStateLayoutStyle {
         val description: String,
         val primaryButtonText: String,
         val secondaryButtonText: String,
-        val primaryButtonClickListener: (() -> Unit)? = null,
-        val secondaryButtonClickListener: (() -> Unit)? = null,
-    ) : StateLayoutStyle {
+        val primaryButtonClickListener: (() -> Unit),
+        val secondaryButtonClickListener: (() -> Unit),
+    ) : WarningInfoStateLayoutStyle {
         override val infoModel: InfoModel
             get() = InfoModel(
                 title = title,
@@ -96,9 +96,9 @@ sealed interface TrendyolStateLayoutStyle {
         val description: String,
         val primaryButtonText: String,
         val secondaryButtonText: String,
-        val primaryButtonClickListener: (() -> Unit)? = null,
-        val secondaryButtonClickListener: (() -> Unit)? = null,
-    ) : StateLayoutStyle {
+        val primaryButtonClickListener: (() -> Unit),
+        val secondaryButtonClickListener: (() -> Unit),
+    ) : WarningInfoStateLayoutStyle {
         override val infoModel: InfoModel
             get() = InfoModel(
                 description = description,
@@ -119,9 +119,9 @@ sealed interface TrendyolStateLayoutStyle {
         val title: String,
         val primaryButtonText: String,
         val secondaryButtonText: String,
-        val primaryButtonClickListener: (() -> Unit)? = null,
-        val secondaryButtonClickListener: (() -> Unit)? = null,
-    ) : StateLayoutStyle {
+        val primaryButtonClickListener: (() -> Unit),
+        val secondaryButtonClickListener: (() -> Unit),
+    ) : WarningInfoStateLayoutStyle {
         override val infoModel: InfoModel
             get() = InfoModel(
                 title = title,
@@ -141,7 +141,7 @@ sealed interface TrendyolStateLayoutStyle {
         val iconSize: StateLayoutIconSize,
         val title: String,
         val description: String,
-    ) : StateLayoutStyle {
+    ) : WarningInfoStateLayoutStyle {
         override val infoModel: InfoModel
             get() = InfoModel(
                 title = title,
@@ -155,7 +155,7 @@ sealed interface TrendyolStateLayoutStyle {
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val description: String,
-    ) : StateLayoutStyle {
+    ) : WarningInfoStateLayoutStyle {
         override val infoModel: InfoModel
             get() = InfoModel(
                 description = description,
@@ -168,7 +168,7 @@ sealed interface TrendyolStateLayoutStyle {
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val title: String,
-    ) : StateLayoutStyle {
+    ) : WarningInfoStateLayoutStyle {
         override val infoModel: InfoModel
             get() = InfoModel(
                 title = title,

@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.statelayout.State
 import com.trendyol.design.core.statelayout.StateComposeLayout
-import com.trendyol.design.core.statelayout.TrendyolStateLayoutStyle
+import com.trendyol.design.core.statelayout.TrendyolWarningInfoStateLayoutStyle
 import com.trendyol.design.ui.theme.TrendyolTheme
 
 class MainActivity : ComponentActivity() {
@@ -16,8 +16,9 @@ class MainActivity : ComponentActivity() {
             TrendyolTheme {
                 StateComposeLayout(
                     layoutState = State.WarningInfo(
-                        trendyolStateLayoutStyle = TrendyolStateLayoutStyle.SingleButtonNoDescription(
+                        warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonNoDescription(
                             iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
+                            primaryButtonClickListener = {}
                         )
                     )
                 )

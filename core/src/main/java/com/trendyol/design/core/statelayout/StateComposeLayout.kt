@@ -11,11 +11,12 @@ fun StateComposeLayout(
     modifier: Modifier = Modifier,
     layoutState: State,
     contentStateLayout: @Composable () -> Unit = {},
-    warningInfoModel: @Composable (StateLayoutStyle) -> Unit = { trendyolStateLayoutStyle ->
-        WarningInfoStateComposable(
-            stateLayoutStyle = trendyolStateLayoutStyle,
-        )
-    },
+    warningInfoStateLayout: @Composable (WarningInfoStateLayoutStyle) -> Unit =
+        { warningInfoStateLayoutStyle ->
+            WarningInfoStateComposable(
+                warningInfoStateLayoutStyle = warningInfoStateLayoutStyle,
+            )
+        },
     loadingStateLayout: @Composable (message: String) -> Unit = { /*todo loadingState*/ },
 ) {
 
@@ -24,8 +25,8 @@ fun StateComposeLayout(
             is State.ContentWithLoading ->
                 ContentState(layoutState, contentStateLayout)
 
-            is State.WarningInfo -> warningInfoModel(
-                layoutState.trendyolStateLayoutStyle,
+            is State.WarningInfo -> warningInfoStateLayout(
+                layoutState.warningInfoStateLayoutStyle,
             )
 
             is State.Loading ->

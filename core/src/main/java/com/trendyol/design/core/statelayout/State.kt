@@ -10,7 +10,7 @@ import kotlinx.parcelize.RawValue
 @Parcelize
 sealed class State : Parcelable {
     data class ContentWithLoading(val type: LoadingType?) : State()
-    data class WarningInfo(val trendyolStateLayoutStyle: @RawValue StateLayoutStyle) : State()
+    data class WarningInfo(val warningInfoStateLayoutStyle: @RawValue WarningInfoStateLayoutStyle) : State()
     data class Loading(val message: String? = null) : State()
 
     /**

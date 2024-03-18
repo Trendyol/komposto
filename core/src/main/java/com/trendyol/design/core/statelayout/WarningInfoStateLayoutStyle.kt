@@ -1,5 +1,5 @@
 package com.trendyol.design.core.statelayout
 
-interface StateLayoutStyle {
+interface WarningInfoStateLayoutStyle {
     val infoModel: InfoModel
 }

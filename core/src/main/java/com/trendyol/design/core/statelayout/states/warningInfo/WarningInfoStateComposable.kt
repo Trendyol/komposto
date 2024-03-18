@@ -20,17 +20,17 @@ import com.trendyol.design.core.button.TrendyolButtonStyle
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.previewtheme.PreviewTheme
-import com.trendyol.design.core.statelayout.StateLayoutStyle
-import com.trendyol.design.core.statelayout.TrendyolStateLayoutStyle
+import com.trendyol.design.core.statelayout.WarningInfoStateLayoutStyle
+import com.trendyol.design.core.statelayout.TrendyolWarningInfoStateLayoutStyle
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
 @Composable
 fun WarningInfoStateComposable(
     modifier: Modifier = Modifier,
-    stateLayoutStyle: StateLayoutStyle,
+    warningInfoStateLayoutStyle: WarningInfoStateLayoutStyle,
 ) {
-    val infoModel = stateLayoutStyle.infoModel
+    val infoModel = warningInfoStateLayoutStyle.infoModel
     val iconSize = infoModel.iconSize
 
     Box(
@@ -106,7 +106,7 @@ private fun getIcon(icon: ImageVector?): ImageVector {
 private fun SingleButtonFullVersionStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            stateLayoutStyle = TrendyolStateLayoutStyle.SingleButtonFullVersion(
+            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonFullVersion(
                 icon = WarningInfoStateDefaultIcon,
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
                 title = "Empty State Title",
@@ -123,7 +123,7 @@ private fun SingleButtonFullVersionStylePreview() {
 private fun SingleButtonNoTitleStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            stateLayoutStyle = TrendyolStateLayoutStyle.SingleButtonNoTitle(
+            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonNoTitle(
                 icon = WarningInfoStateDefaultIcon,
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                 description = "Description will be here. Description can be for example; 2",
@@ -139,7 +139,7 @@ private fun SingleButtonNoTitleStylePreview() {
 private fun SingleButtonNoDescriptionStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            stateLayoutStyle = TrendyolStateLayoutStyle.SingleButtonNoDescription(
+            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonNoDescription(
                 icon = WarningInfoStateDefaultIcon,
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
                 title = "Empty State Title",
@@ -155,7 +155,7 @@ private fun SingleButtonNoDescriptionStylePreview() {
 private fun TwoButtonsFullVersionStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            stateLayoutStyle = TrendyolStateLayoutStyle.TwoButtonsFullVersion(
+            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.TwoButtonsFullVersion(
                 icon = WarningInfoStateDefaultIcon,
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                 title = "Empty State Title",
@@ -174,7 +174,7 @@ private fun TwoButtonsFullVersionStylePreview() {
 private fun TwoButtonsNoTitleStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            stateLayoutStyle = TrendyolStateLayoutStyle.TwoButtonsNoTitle(
+            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.TwoButtonsNoTitle(
                 icon = WarningInfoStateDefaultIcon,
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                 description = "Description will be here. Description can be for example; 2",
@@ -192,7 +192,7 @@ private fun TwoButtonsNoTitleStylePreview() {
 private fun TwoButtonsNoDescriptionStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            stateLayoutStyle = TrendyolStateLayoutStyle.TwoButtonsNoDescription(
+            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.TwoButtonsNoDescription(
                 icon = WarningInfoStateDefaultIcon,
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                 title = "Empty State Title",
@@ -210,7 +210,7 @@ private fun TwoButtonsNoDescriptionStylePreview() {
 private fun NoButtonFullVersionStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            stateLayoutStyle = TrendyolStateLayoutStyle.NoButtonFullVersion(
+            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.NoButtonFullVersion(
                 icon = WarningInfoStateDefaultIcon,
                 title = "Empty State Title",
                 description = "Description will be here. Description can be for example; 2",
@@ -225,7 +225,7 @@ private fun NoButtonFullVersionStylePreview() {
 private fun NoButtonNoTitleStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            stateLayoutStyle = TrendyolStateLayoutStyle.NoButtonNoTitle(
+            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.NoButtonNoTitle(
                 icon = WarningInfoStateDefaultIcon,
                 description = "Description will be here. Description can be for example; 2",
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
@@ -239,7 +239,7 @@ private fun NoButtonNoTitleStylePreview() {
 private fun NoButtonNoDescriptionStylePreview() {
     PreviewTheme {
         WarningInfoStateComposable(
-            stateLayoutStyle = TrendyolStateLayoutStyle.NoButtonNoDescription(
+            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.NoButtonNoDescription(
                 icon = WarningInfoStateDefaultIcon,
                 title = "Empty State Title",
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
