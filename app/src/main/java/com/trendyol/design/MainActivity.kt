@@ -26,14 +26,6 @@ class MainActivity : ComponentActivity() {
                     topBar = {
                         Toolbar(
                             title = "Title",
-                            style = TrendyolToolbarStyle.Icon.TextButton(
-                                icon = {
-                                    Icon(
-                                        imageVector = Icons.Outline.Back,
-                                        onClick = { /*TODO*/ })
-                                },
-                                textButton = { Text(text = "actionText", onClick = { /*TODO*/ }) }
-                            )
                         )
                     }
                 ) { paddingValues ->
