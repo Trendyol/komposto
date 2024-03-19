@@ -2,7 +2,7 @@
 <SmellBaseline>
   <ManuallySuppressedIssues></ManuallySuppressedIssues>
   <CurrentIssues>
-    <ID>ModifierMissing:RequireLayoutId.kt$CheckToolbarLayoutIds</ID>
     <ID>UnstableCollections:Text.kt$Map&lt;String, InlineTextContent&gt;</ID>
+    <ID>UnusedParameter:RequireLayoutId.kt$modifier: Modifier = Modifier</ID>
   </CurrentIssues>
 </SmellBaseline>
