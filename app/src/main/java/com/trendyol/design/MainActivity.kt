@@ -10,11 +10,8 @@ import androidx.compose.ui.Modifier
 import com.trendyol.design.core.button.Button
 import com.trendyol.design.core.button.TrendyolButtonSize
 import com.trendyol.design.core.button.TrendyolButtonStyle
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.icons.outline.Back
 import com.trendyol.design.core.text.Text
 import com.trendyol.design.core.toolbar.Toolbar
-import com.trendyol.design.core.toolbar.TrendyolToolbarStyle
 import com.trendyol.design.ui.theme.TrendyolTheme
 
 class MainActivity : ComponentActivity() {
