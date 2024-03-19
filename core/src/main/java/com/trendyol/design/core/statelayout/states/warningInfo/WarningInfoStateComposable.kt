@@ -1,6 +1,7 @@
 package com.trendyol.design.core.statelayout.states.warningInfo
 
 import WarningInfoStateDefaultIcon
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -20,6 +21,7 @@ import com.trendyol.design.core.button.TrendyolButtonStyle
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.previewtheme.PreviewTheme
+import com.trendyol.design.core.previewtheme.TrendyolColor
 import com.trendyol.design.core.statelayout.WarningInfoStateLayoutStyle
 import com.trendyol.design.core.statelayout.TrendyolWarningInfoStateLayoutStyle
 import com.trendyol.design.core.text.Text
@@ -34,8 +36,10 @@ fun WarningInfoStateComposable(
     val iconSize = infoModel.iconSize
 
     Box(
-        modifier = modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
+        modifier = modifier
+            .fillMaxSize()
+            .background(TrendyolColor.themeColor.colorBackground),
+        contentAlignment = Alignment.Center,
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally

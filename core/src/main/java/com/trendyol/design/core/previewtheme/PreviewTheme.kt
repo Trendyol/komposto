@@ -40,7 +40,7 @@ internal object TrendyolColor {
 private val colorPrimary = Color(color = 0xFFF27A1A)
 
 private val trendyolDesignTheme = TrendyolDesignTheme(
-    colors = TrendyolColor.themeColor,
+    colors = TrendyolDesignColors(),
     typography = TrendyolDesignTypography(),
     fontFamily = TrendyolDesignFontFamily(),
 )
