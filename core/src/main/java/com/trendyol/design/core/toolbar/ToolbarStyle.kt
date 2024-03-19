@@ -49,7 +49,7 @@ interface ToolbarStyleIcon {
 }
 
 interface ToolbarStyleTextButton {
-    val textButton: @Composable ToolbarScope. () -> Unit
+    val textButton: @Composable ToolbarScope.() -> Unit
 }
 
 interface ToolbarStyleEndIcon {
