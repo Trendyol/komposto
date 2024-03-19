@@ -2,59 +2,61 @@ package com.trendyol.design.core.toolbar
 
 import androidx.compose.runtime.Composable
 
-interface ToolbarStyle {
+interface TrendyolToolbarStyle {
 
-    object None : ToolbarStyle
+    object None : TrendyolToolbarStyle
 
     data class TextButton(
-        override val textButton: @Composable () -> Unit
-    ) : ToolbarStyle, ITextButton
+        override val textButton: @Composable ToolbarScope.() -> Unit
+    ) : TrendyolToolbarStyle, ToolbarStyleTextButton
 
     data class EndIcon(
         override val endIcon: @Composable ToolbarScope.() -> Unit,
-    ) : ToolbarStyle, IEndIcon
+    ) : TrendyolToolbarStyle, ToolbarStyleEndIcon
 
     data class EndTwoIcons(
-        override val firstIcon: @Composable() ToolbarScope.() -> Unit,
-        override val secondIcon: @Composable() ToolbarScope.() -> Unit
-    ) : ToolbarStyle, IEndTwoIcons
+        override val firstIcon: @Composable ToolbarScope.() -> Unit,
+        override val secondIcon: @Composable ToolbarScope.() -> Unit
+    ) : TrendyolToolbarStyle, ToolbarStyleEndTwoIcons
 
     // region Icon Style
-    sealed interface Icon : ToolbarStyle {
-        val icon: @Composable ToolbarScope.() -> Unit
-
+    sealed interface Icon {
         data class None(
             override val icon: @Composable ToolbarScope.() -> Unit,
-        ) : Icon
+        ) : ToolbarStyleIcon, TrendyolToolbarStyle
 
         data class TextButton(
             override val icon: @Composable ToolbarScope.() -> Unit,
-            override val textButton: @Composable () -> Unit
-        ) : Icon, ITextButton
+            override val textButton: @Composable ToolbarScope.() -> Unit
+        ) : ToolbarStyleIcon, ToolbarStyleTextButton, TrendyolToolbarStyle
 
         data class EndIcon(
             override val icon: @Composable ToolbarScope.() -> Unit,
             override val endIcon: @Composable ToolbarScope.() -> Unit,
-        ) : Icon, IEndIcon
+        ) : ToolbarStyleIcon, ToolbarStyleEndIcon, TrendyolToolbarStyle
 
         data class EndTwoIcons(
             override val icon: @Composable ToolbarScope.() -> Unit,
             override val firstIcon: @Composable ToolbarScope.() -> Unit,
             override val secondIcon: @Composable ToolbarScope.() -> Unit,
-        ) : Icon, IEndTwoIcons
+        ) : ToolbarStyleIcon, ToolbarStyleEndTwoIcons, TrendyolToolbarStyle
     }
     //endregion
 }
 
-interface ITextButton {
-    val textButton: @Composable () -> Unit
+interface ToolbarStyleIcon {
+    val icon: @Composable ToolbarScope.() -> Unit
 }
 
-interface IEndIcon {
+interface ToolbarStyleTextButton {
+    val textButton: @Composable ToolbarScope. () -> Unit
+}
+
+interface ToolbarStyleEndIcon {
     val endIcon: @Composable ToolbarScope.() -> Unit
 }
 
-interface IEndTwoIcons {
+interface ToolbarStyleEndTwoIcons {
     val firstIcon: @Composable ToolbarScope.() -> Unit
     val secondIcon: @Composable ToolbarScope.() -> Unit
 }

@@ -11,10 +11,10 @@ import com.trendyol.design.core.button.Button
 import com.trendyol.design.core.button.TrendyolButtonSize
 import com.trendyol.design.core.button.TrendyolButtonStyle
 import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.icons.fill.Help
+import com.trendyol.design.core.icon.icons.outline.Back
 import com.trendyol.design.core.text.Text
 import com.trendyol.design.core.toolbar.Toolbar
-import com.trendyol.design.core.toolbar.ToolbarStyle
+import com.trendyol.design.core.toolbar.TrendyolToolbarStyle
 import com.trendyol.design.ui.theme.TrendyolTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,9 +26,13 @@ class MainActivity : ComponentActivity() {
                     topBar = {
                         Toolbar(
                             title = "Title",
-                            style = ToolbarStyle.Icon.TextButton(
-                                icon = { Icon(imageVector = Icons.Fill.Help) },
-                                textButton = { Text(text = "ActionText") }
+                            style = TrendyolToolbarStyle.Icon.TextButton(
+                                icon = {
+                                    Icon(
+                                        imageVector = Icons.Outline.Back,
+                                        onClick = { /*TODO*/ })
+                                },
+                                textButton = { Text(text = "actionText", onClick = { /*TODO*/ }) }
                             )
                         )
                     }

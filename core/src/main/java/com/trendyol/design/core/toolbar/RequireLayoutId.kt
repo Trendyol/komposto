@@ -5,16 +5,21 @@ import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.layoutId
 
 @Composable
-fun RequireLayoutId(
+fun CheckToolbarLayoutIds(
     layoutId: Any?,
+    isSingleChildRequired: Boolean = false,
     errorMessage: String = "Failed requirement.",
     content: @Composable () -> Unit,
-) = Layout(content) { measurables, constraints ->
+) = Layout(content) { measurables, _ ->
 
-    val child = measurables.singleOrNull()
-        ?: error("Only a single child is allowed, was: ${measurables.size}")
+    if (isSingleChildRequired) {
+        val child = measurables.singleOrNull()
+            ?: error("Only a single child is allowed, was: ${measurables.size}")
 
-    require(child.layoutId == layoutId) { errorMessage }
+        require(child.layoutId == layoutId) { errorMessage }
+    } else {
+        require(measurables.all { child -> child.layoutId == layoutId }) { errorMessage }
+    }
 
     layout(0, 0) {}
 }

@@ -3,7 +3,6 @@ package com.trendyol.design.core.toolbar
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.ProvideTextStyle
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -23,8 +22,8 @@ import androidx.compose.material.TopAppBar as MaterialTopAppBar
  * @param title This mandatory parameter defines the text that will be displayed in the center of the toolbar.
  * @param modifier The [Modifier] to be applied to this Toolbar
  * @param style This parameter controls the visual style of the toolbar. It can be set to one of the
- * predefined [ToolbarStyle] enum values like [ToolbarStyle.Icon.EndIcon] or [ToolbarStyle.TextButton]
- * to achieve different appearances. Defaults to [ToolbarStyle.None]
+ * predefined [TrendyolToolbarStyle] enum values like [TrendyolToolbarStyle.Icon.EndIcon] or [TrendyolToolbarStyle.TextButton]
+ * to achieve different appearances. Defaults to [TrendyolToolbarStyle.None]
  * @param titleTextStyle This parameter allows you to customize the text style for the toolbar title.
  * @param backgroundColor The background color for the Toolbar.
  * @param elevation the elevation of this Toolbar
@@ -34,9 +33,9 @@ import androidx.compose.material.TopAppBar as MaterialTopAppBar
 fun Toolbar(
     title: String,
     modifier: Modifier = Modifier,
-    style: ToolbarStyle = ToolbarStyle.None,
+    style: TrendyolToolbarStyle = TrendyolToolbarStyle.None,
     titleTextStyle: TextStyle = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant3,
-    backgroundColor: Color = MaterialTheme.colors.surface,
+    backgroundColor: Color = TrendyolDesign.colors.colorSurface,
     elevation: Dp = ToolbarDefaults.Elevation,
     contentPadding: PaddingValues = ToolbarDefaults.ContentPadding,
 ) {
@@ -47,9 +46,10 @@ fun Toolbar(
         elevation = elevation,
         contentPadding = contentPadding,
     ) {
-        if (style is ToolbarStyle.Icon) {
-            RequireLayoutId(
+        if (style is ToolbarStyleIcon) {
+            CheckToolbarLayoutIds(
                 layoutId = IconLayoutId,
+                isSingleChildRequired = true,
                 errorMessage = "Composable should be instance of Icon"
             ) {
                 style.icon(ToolbarScope)
@@ -64,20 +64,23 @@ fun Toolbar(
             style = titleTextStyle
         )
 
-        if (style is ITextButton) {
-            RequireLayoutId(
+        if (style is ToolbarStyleTextButton) {
+            CheckToolbarLayoutIds(
                 layoutId = TextLayoutId,
+                isSingleChildRequired = true,
                 errorMessage = "Composable should be instance of Text",
-                content = style.textButton
-            )
+            ) {
+                style.textButton(ToolbarScope)
+            }
             ProvideTextStyle(value = TrendyolDesign.typography.titleMediumColorPrimary) {
-                style.textButton()
+                style.textButton(ToolbarScope)
             }
         }
 
-        if (style is IEndIcon) {
-            RequireLayoutId(
+        if (style is ToolbarStyleEndIcon) {
+            CheckToolbarLayoutIds(
                 layoutId = IconLayoutId,
+                isSingleChildRequired = true,
                 errorMessage = "Composable should be instance of Icon"
             ) {
                 style.endIcon(ToolbarScope)
@@ -85,7 +88,7 @@ fun Toolbar(
             style.endIcon(ToolbarScope)
         }
 
-        if (style is IEndTwoIcons) {
+        if (style is ToolbarStyleEndTwoIcons) {
             style.firstIcon(ToolbarScope)
             Spacer(modifier = Modifier.width(12.dp))
             style.secondIcon(ToolbarScope)
