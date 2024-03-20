@@ -16,6 +16,15 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 
+/**
+ * Text wrapper around [androidx.compose.material.Text] which changes some default values of [letterSpacing]
+ * and [style].
+ *
+ * @param text The text content to be displayed with given `String`.
+ * @param letterSpacing The amount of space to add between each letter. Default is `0.sp`
+ * @param style Style configuration for the text such as color, font, line height etc. It overrides `platformStyle` in
+ * order to remove default font padding value.
+ */
 @Composable
 fun Text(
     text: String,
@@ -59,6 +68,15 @@ fun Text(
     )
 }
 
+/**
+ * Text wrapper around [androidx.compose.material.Text] which changes some default values of [letterSpacing]
+ * and [style].
+ *
+ * @param text The text content to be displayed with given `AnnotatedString`.
+ * @param letterSpacing The amount of space to add between each letter. Default is `0.sp`
+ * @param style Style configuration for the text such as color, font, line height etc. It overrides `platformStyle` in
+ * order to remove default font padding value.
+ */
 @Composable
 fun Text(
     text: AnnotatedString,
