@@ -32,7 +32,7 @@ import androidx.compose.material.TopAppBar as MaterialTopAppBar
 fun Toolbar(
     title: String,
     modifier: Modifier = Modifier,
-    style: TrendyolToolbarStyle = TrendyolToolbarStyle.None,
+    style: ToolbarStyle = TrendyolToolbarStyle.None,
     titleTextStyle: TextStyle = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant3,
     backgroundColor: Color = TrendyolDesign.colors.colorSurface,
     elevation: Dp = ToolbarDefaults.Elevation,
