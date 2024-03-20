@@ -103,5 +103,3 @@ fun Text(
         ),
     )
 }
-
-internal object TextLayoutId

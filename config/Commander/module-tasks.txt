@@ -8,3 +8,4 @@ checkUiTests connectedCheck
 buildRerunTask build --rerun-tasks
 
 clean clean
+detektBaseline detektBaseline

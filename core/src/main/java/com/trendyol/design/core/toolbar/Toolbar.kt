@@ -11,7 +11,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.text.Text
-import com.trendyol.design.core.text.TextLayoutId
 import com.trendyol.theme.TrendyolDesign
 import androidx.compose.material.TopAppBar as MaterialTopAppBar
 
@@ -89,6 +88,13 @@ fun Toolbar(
         }
 
         if (style is ToolbarStyleEndTwoIcons) {
+            CheckToolbarLayoutIds(
+                layoutId = IconLayoutId,
+                errorMessage = "Composable should be instance of Icon"
+            ) {
+                style.firstIcon(ToolbarScope)
+                style.secondIcon(ToolbarScope)
+            }
             style.firstIcon(ToolbarScope)
             Spacer(modifier = Modifier.width(12.dp))
             style.secondIcon(ToolbarScope)

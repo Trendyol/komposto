@@ -1,14 +1,12 @@
 package com.trendyol.design.core.toolbar
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.layoutId
 
 @Composable
 fun CheckToolbarLayoutIds(
     layoutId: Any?,
-    modifier: Modifier = Modifier,
     isSingleChildRequired: Boolean = false,
     errorMessage: String = "Failed requirement.",
     content: @Composable () -> Unit,

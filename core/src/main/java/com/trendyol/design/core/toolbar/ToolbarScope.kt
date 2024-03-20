@@ -9,7 +9,6 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.text.TextStyle
 import com.trendyol.design.core.icon.IconSize
-import com.trendyol.design.core.text.TextLayoutId
 import com.trendyol.theme.TrendyolDesign
 
 @Stable
@@ -71,4 +70,6 @@ object ToolbarScope {
         )
     }
 }
+
 internal object IconLayoutId
+internal object TextLayoutId
