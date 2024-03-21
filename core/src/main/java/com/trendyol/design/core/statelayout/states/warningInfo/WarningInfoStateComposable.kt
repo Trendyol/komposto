@@ -45,29 +45,26 @@ fun WarningInfoStateComposable(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Icon(
+                modifier = Modifier.padding(bottom= 8.dp),
                 imageVector = getIcon(infoModel.image),
                 size = iconSize
             )
             infoModel.title?.let {
-                Spacer(modifier = Modifier.size(12.dp))
                 Text(
-                    modifier = Modifier
-                        .padding(horizontal = 16.dp),
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
                     text = infoModel.title,
                     style = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant2,
                 )
             }
             infoModel.description?.let {
-                Spacer(modifier = Modifier.size(8.dp))
                 Text(
-                    modifier = Modifier
-                        .padding(horizontal = 16.dp),
+                    modifier = Modifier.padding(horizontal = 16.dp,vertical = 4.dp),
                     text = infoModel.description,
                     style = TrendyolDesign.typography.body1MediumColorOnSurfaceVariant1,
                 )
             }
             if (infoModel.buttonsInfoModel?.primaryButtonText.isNullOrEmpty().not()) {
-                Spacer(modifier = Modifier.size(32.dp))
+                Spacer(modifier = Modifier.size(28.dp))
                 Button(
                     modifier = Modifier
                         .fillMaxWidth()
