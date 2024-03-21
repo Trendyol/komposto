@@ -45,7 +45,7 @@ fun WarningInfoStateComposable(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Icon(
-                modifier = Modifier.padding(bottom= 8.dp),
+                modifier = Modifier.padding(bottom = 8.dp),
                 imageVector = getIcon(infoModel.image),
                 size = iconSize
             )
@@ -58,7 +58,7 @@ fun WarningInfoStateComposable(
             }
             infoModel.description?.let {
                 Text(
-                    modifier = Modifier.padding(horizontal = 16.dp,vertical = 4.dp),
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
                     text = infoModel.description,
                     style = TrendyolDesign.typography.body1MediumColorOnSurfaceVariant1,
                 )
