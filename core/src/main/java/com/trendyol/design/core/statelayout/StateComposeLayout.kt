@@ -9,7 +9,7 @@ import com.trendyol.design.core.statelayout.states.warningInfo.WarningInfoStateC
 @Composable
 fun StateComposeLayout(
     modifier: Modifier = Modifier,
-    layoutState: State,
+    state: State,
     contentStateLayout: @Composable () -> Unit = {},
     warningInfoStateLayout: @Composable (WarningInfoStateLayoutStyle) -> Unit =
         { warningInfoStateLayoutStyle ->
@@ -21,16 +21,16 @@ fun StateComposeLayout(
 ) {
 
     Box(modifier = modifier) {
-        when (layoutState) {
+        when (state) {
             is State.ContentWithLoading ->
-                ContentState(layoutState, contentStateLayout)
+                ContentState(state, contentStateLayout)
 
             is State.WarningInfo -> warningInfoStateLayout(
-                layoutState.warningInfoStateLayoutStyle,
+                state.warningInfoStateLayoutStyle,
             )
 
             is State.Loading ->
-                loadingStateLayout(layoutState.message.orEmpty())
+                loadingStateLayout(state.message.orEmpty())
         }
     }
 }
