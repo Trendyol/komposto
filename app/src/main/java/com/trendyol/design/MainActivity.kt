@@ -15,7 +15,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             TrendyolTheme {
                 StateComposeLayout(
-                    layoutState = State.WarningInfo(
+                    state = State.WarningInfo(
                         warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonNoDescription(
                             iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                             primaryButtonClickListener = {}
