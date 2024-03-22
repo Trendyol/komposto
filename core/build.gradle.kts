@@ -5,6 +5,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("io.gitlab.arturbosch.detekt")
     id("maven-publish")
+    id("kotlin-parcelize")
 }
 
 android {
