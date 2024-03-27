@@ -2,6 +2,7 @@ package com.trendyol.design.core.toolbar
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.ProvideTextStyle
 import androidx.compose.runtime.Composable
@@ -54,12 +55,14 @@ fun Toolbar(
                 style.icon(ToolbarScope)
             }
             style.icon(ToolbarScope)
-            Spacer(modifier = Modifier.width(16.dp))
+            Spacer(modifier = Modifier.width(32.dp))
         }
 
         Text(
             text = title,
-            modifier = Modifier.weight(1f),
+            modifier = Modifier
+                .weight(1f)
+                .padding(end = 8.dp),
             style = titleTextStyle
         )
 

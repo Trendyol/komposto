@@ -11,7 +11,7 @@ object ToolbarDefaults {
     /**
      * Default elevation used for TrendyolToolbar
      */
-    val Elevation = 1.dp
+    val Elevation = 2.dp
 
     /**
      * Default padding used for TrendyolToolbar

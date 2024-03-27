@@ -1,15 +1,23 @@
 package com.trendyol.design.core.toolbar
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.IconSize
 import com.trendyol.theme.TrendyolDesign
+import com.trendyol.design.core.icon.Icon
+import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.text.Text
 
 @Stable
 object ToolbarScope {
@@ -35,14 +43,21 @@ object ToolbarScope {
         size: IconSize = ToolbarDefaults.IconSize,
         tint: Color = Color.Unspecified
     ) {
-        com.trendyol.design.core.icon.Icon(
-            imageVector = imageVector,
-            size = size,
-            modifier = modifier
+        Box(
+            modifier
                 .layoutId(IconLayoutId)
+                .size(size = size.dp)
                 .clickable { onClick.invoke() },
-            tint = tint
-        )
+        ) {
+            Icon(
+                imageVector = imageVector,
+                size = TrendyolIconSize.Medium,
+                modifier = Modifier
+                    .align(alignment = Alignment.Center)
+                    .padding(all = 2.dp),
+                tint = tint
+            )
+        }
     }
 
     /**
@@ -52,16 +67,16 @@ object ToolbarScope {
      * @param modifier modifier The [Modifier] to be applied to this Toolbar
      * @param onClick A lambda function that will be called when the user clicks on the text.
      * @param style A TextStyle object that defines the text style. The default
-     * value is [TrendyolDesign.typography.titleMediumColorPrimary]
+     * value is [TrendyolDesign.typography.subtitleMediumColorPrimary]
      */
     @Composable
     fun Text(
         text: String,
         modifier: Modifier = Modifier,
         onClick: () -> Unit,
-        style: TextStyle = TrendyolDesign.typography.titleMediumColorPrimary,
+        style: TextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
     ) {
-        com.trendyol.design.core.text.Text(
+        Text(
             text = text,
             modifier = modifier
                 .layoutId(TextLayoutId)
