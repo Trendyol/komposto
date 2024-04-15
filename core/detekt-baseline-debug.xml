@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <SmellBaseline>
   <CurrentIssues>
-    <ID>ModifierMissing:CheckToolbarLayoutIds.kt$CheckToolbarLayoutIds</ID>
     <ID>UnstableCollections:Text.kt$Map&lt;String, InlineTextContent&gt;</ID>
+    <ID>ModifierMissing:CheckToolbarLayoutIds.kt$CheckToolbarLayoutIds</ID>
   </CurrentIssues>
 </SmellBaseline>
