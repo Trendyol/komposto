@@ -9,6 +9,5 @@ object Fonts {
 
     val RobotoRegular = FontFamily(Font(R.font.roboto_regular, FontWeight.Normal))
     val RobotoMedium = FontFamily(Font(R.font.roboto_medium, FontWeight.Medium))
-    val RobotoSemiBold = FontFamily(Font(R.font.roboto_bold, FontWeight.SemiBold))
     val RobotoBold = FontFamily(Font(R.font.roboto_bold, FontWeight.Bold))
 }
