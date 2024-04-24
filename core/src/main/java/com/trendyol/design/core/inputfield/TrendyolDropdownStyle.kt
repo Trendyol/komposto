@@ -5,9 +5,9 @@ import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import com.trendyol.theme.TrendyolDesign
 
-sealed interface TrendyolOutlinedTextFieldStyle {
+sealed interface TrendyolDropdownStyle {
 
-    data object FloatingLabelOutlined : OutlinedTextFieldStyle {
+    data object FloatingLabelOutlined : DropdownStyle {
         override val shouldShowLabel: Boolean
             get() = true
         override val outlinedTextFieldColors: TextFieldColors
@@ -20,21 +20,19 @@ sealed interface TrendyolOutlinedTextFieldStyle {
                 unfocusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 unfocusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
-                focusedLabelColor = TrendyolDesign.colors.colorPrimary,
-                focusedBorderColor = TrendyolDesign.colors.colorPrimary,
-                cursorColor = TrendyolDesign.colors.colorPrimary,
+                focusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant3,
+                focusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
                 disabledBorderColor = TrendyolDesign.colors.colorBorder,
-                disabledLabelColor = TrendyolDesign.colors.colorBorder,
+                disabledLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 disabledTextColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
-                errorCursorColor = TrendyolDesign.colors.colorWarning,
                 errorBorderColor = TrendyolDesign.colors.colorWarning,
                 errorLabelColor = TrendyolDesign.colors.colorWarning,
             )
     }
 
-    data object Outlined : OutlinedTextFieldStyle {
+    data object Outlined : DropdownStyle {
         override val shouldShowLabel: Boolean
             get() = false
         override val outlinedTextFieldColors: TextFieldColors
@@ -47,21 +45,19 @@ sealed interface TrendyolOutlinedTextFieldStyle {
                 unfocusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 unfocusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
-                focusedLabelColor = TrendyolDesign.colors.colorPrimary,
-                focusedBorderColor = TrendyolDesign.colors.colorPrimary,
-                cursorColor = TrendyolDesign.colors.colorPrimary,
+                focusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant3,
+                focusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
                 disabledBorderColor = TrendyolDesign.colors.colorBorder,
-                disabledLabelColor = TrendyolDesign.colors.colorBorder,
+                disabledLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 disabledTextColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
-                errorCursorColor = TrendyolDesign.colors.colorWarning,
                 errorBorderColor = TrendyolDesign.colors.colorWarning,
                 errorLabelColor = TrendyolDesign.colors.colorWarning,
             )
     }
 
-    data object Filled : OutlinedTextFieldStyle {
+    data object Filled : DropdownStyle {
         override val shouldShowLabel: Boolean
             get() = false
         override val outlinedTextFieldColors: TextFieldColors
@@ -74,14 +70,13 @@ sealed interface TrendyolOutlinedTextFieldStyle {
                 unfocusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 unfocusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
-                focusedLabelColor = TrendyolDesign.colors.colorPrimary,
-                focusedBorderColor = TrendyolDesign.colors.colorBorder,
-                cursorColor = TrendyolDesign.colors.colorPrimary,
+                focusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant3,
+                focusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
-                disabledLabelColor = TrendyolDesign.colors.colorBorder,
+                disabledBorderColor = TrendyolDesign.colors.colorBorder,
+                disabledLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 disabledTextColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
-                errorCursorColor = TrendyolDesign.colors.colorWarning,
                 errorBorderColor = TrendyolDesign.colors.colorWarning,
                 errorLabelColor = TrendyolDesign.colors.colorWarning,
             )
