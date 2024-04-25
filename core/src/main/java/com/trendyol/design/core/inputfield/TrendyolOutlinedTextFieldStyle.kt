@@ -8,8 +8,6 @@ import com.trendyol.theme.TrendyolDesign
 sealed interface TrendyolOutlinedTextFieldStyle {
 
     data object FloatingLabelOutlined : OutlinedTextFieldStyle {
-        override val shouldShowLabel: Boolean
-            get() = true
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
@@ -35,8 +33,6 @@ sealed interface TrendyolOutlinedTextFieldStyle {
     }
 
     data object Outlined : OutlinedTextFieldStyle {
-        override val shouldShowLabel: Boolean
-            get() = false
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
@@ -62,8 +58,6 @@ sealed interface TrendyolOutlinedTextFieldStyle {
     }
 
     data object Filled : OutlinedTextFieldStyle {
-        override val shouldShowLabel: Boolean
-            get() = false
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
