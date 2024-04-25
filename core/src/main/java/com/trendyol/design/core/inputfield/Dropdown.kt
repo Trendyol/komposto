@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
@@ -28,7 +29,6 @@ import com.trendyol.theme.TrendyolDesign
  *              the visibility of the label, and other style properties. For example, the styles defined within
  *              TrendyolDropdownStyle represent the customized dropdown styles.
  * @param value The currently selected value in the dropdown.
- * @param shouldShowLabel Determines whether the label should be displayed above the dropdown.
  * @param label The label text to display above the dropdown.
  * @param errorLabel The error message to display below the dropdown when an error occurs.
  * @param isError Indicates whether the dropdown is in an error state.
@@ -45,10 +45,9 @@ fun Dropdown(
     modifier: Modifier = Modifier,
     style: DropdownStyle,
     value: String,
-    shouldShowLabel: Boolean = style.shouldShowLabel,
     label: String? = null,
     errorLabel: String? = null,
-    isError: Boolean,
+    isError: Boolean = false,
     enabled: Boolean = true,
     colors: TextFieldColors = style.outlinedTextFieldColors,
     onClicked: () -> Unit,
@@ -59,17 +58,19 @@ fun Dropdown(
     Column {
         TrendyolOutlinedTextField(
             modifier = modifier
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally)
                 .clickable(
                     enabled = enabled,
                     onClick = onClicked,
                 ),
             value = text,
             textStyle = TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3,
-            label = if (shouldShowLabel && !label.isNullOrBlank()) {
+            label = if (!label.isNullOrBlank()) {
                 {
                     Text(
                         text = label,
-                        style = TrendyolDesign.typography.body2MediumColorPrimary,
+                        style = TrendyolDesign.typography.body2MediumColorOnSurfaceVariant1,
                     )
                 }
             } else null,
@@ -86,12 +87,12 @@ fun Dropdown(
             trailingIcon = {
                 Icon(
                     imageVector = Icons.Fill.ArrowDown,
-                    size = TrendyolIconSize.Large,
+                    size = TrendyolIconSize.XXSmall,
                 )
             }
         )
 
-        if (isError && !errorLabel.isNullOrBlank()) {
+        if (enabled && isError && !errorLabel.isNullOrBlank()) {
             Text(
                 modifier = Modifier
                     .padding(

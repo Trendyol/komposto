@@ -10,6 +10,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.trendyol.theme.TrendyolDesign
@@ -21,7 +22,6 @@ import com.trendyol.theme.TrendyolDesign
  * @param style Style configuration for the TextField. This should be an object implementing the
  *              OutlinedTextFieldStyle interface.
  * @param value The initial value for the TextField.
- * @param shouldShowLabel Determines whether the label should be displayed above the TextField.
  * @param label The label text to display above the TextField.
  * @param errorLabel The error message to display below the TextField when there is an error.
  * @param isError Indicates whether the TextField is in an error state.
@@ -36,10 +36,10 @@ fun SingleLineOutlinedTextField(
     modifier: Modifier = Modifier,
     style: OutlinedTextFieldStyle,
     value: String,
-    shouldShowLabel: Boolean = style.shouldShowLabel,
     label: String? = null,
+    placeholder: String? = null,
     errorLabel: String? = null,
-    isError: Boolean,
+    isError: Boolean = false,
     enabled: Boolean = true,
     colors: TextFieldColors = style.outlinedTextFieldColors,
     onValueChange: (String) -> Unit,
@@ -48,16 +48,19 @@ fun SingleLineOutlinedTextField(
 
     Column {
         TrendyolOutlinedTextField(
-            modifier = modifier,
+            modifier = modifier.fillMaxWidth().align(Alignment.CenterHorizontally),
             value = text,
             textStyle = TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3,
-            label = if (shouldShowLabel && !label.isNullOrBlank()) {
+            label = if (!label.isNullOrBlank()) {
                 {
                     Text(
                         text = label,
                         style = TrendyolDesign.typography.body2MediumColorPrimary,
                     )
                 }
+            } else null,
+            placeholder = if (!placeholder.isNullOrBlank()) {
+                { Text(text = placeholder) }
             } else null,
             onValueChange = { changedValue ->
                 text = changedValue
@@ -70,7 +73,7 @@ fun SingleLineOutlinedTextField(
             singleLine = true,
         )
 
-        if (isError && !errorLabel.isNullOrBlank()) {
+        if (enabled && isError && !errorLabel.isNullOrBlank()) {
             Text(
                 modifier = Modifier
                     .padding(
