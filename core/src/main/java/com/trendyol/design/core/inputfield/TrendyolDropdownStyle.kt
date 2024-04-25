@@ -8,8 +8,6 @@ import com.trendyol.theme.TrendyolDesign
 sealed interface TrendyolDropdownStyle {
 
     data object FloatingLabelOutlined : DropdownStyle {
-        override val shouldShowLabel: Boolean
-            get() = true
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
@@ -33,8 +31,6 @@ sealed interface TrendyolDropdownStyle {
     }
 
     data object Outlined : DropdownStyle {
-        override val shouldShowLabel: Boolean
-            get() = false
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
@@ -58,8 +54,6 @@ sealed interface TrendyolDropdownStyle {
     }
 
     data object Filled : DropdownStyle {
-        override val shouldShowLabel: Boolean
-            get() = false
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
