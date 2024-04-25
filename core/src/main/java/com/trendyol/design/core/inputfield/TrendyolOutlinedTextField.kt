@@ -168,7 +168,9 @@ fun TrendyolOutlinedTextField(
                     },
                     contentPadding = TextFieldDefaults.outlinedTextFieldPadding(
                         top = 10.dp,
-                        bottom = 10.dp
+                        bottom = 10.dp,
+                        start = 12.dp,
+                        end = 12.dp
                     )
                 )
             }

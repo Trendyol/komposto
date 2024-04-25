@@ -23,7 +23,6 @@ import com.trendyol.theme.TrendyolDesign
  * @param style Style configuration for the TextField. This should be an object implementing the
  *              OutlinedTextFieldStyle interface.
  * @param value The initial value for the TextField.
- * @param shouldShowLabel Determines whether the label should be displayed above the TextField.
  * @param maxChar Maximum number of characters allowed in the TextField.
  * @param label The label text to display above the TextField.
  * @param errorLabel The error message to display below the TextField when there is an error.
@@ -39,11 +38,10 @@ fun MultiLineOutlineTextField(
     modifier: Modifier = Modifier,
     style: OutlinedTextFieldStyle,
     value: String,
-    shouldShowLabel: Boolean = style.shouldShowLabel,
     maxChar: Int,
     label: String? = null,
     errorLabel: String? = null,
-    isError: Boolean,
+    isError: Boolean = false,
     enabled: Boolean = true,
     colors: TextFieldColors = style.outlinedTextFieldColors,
     onValueChange: (String) -> Unit,
@@ -52,10 +50,10 @@ fun MultiLineOutlineTextField(
 
     Column {
         TrendyolOutlinedTextField(
-            modifier = modifier,
+            modifier = modifier.fillMaxWidth(),
             value = text,
             textStyle = TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3,
-            label = if (shouldShowLabel && !label.isNullOrBlank()) {
+            label = if (!label.isNullOrBlank()) {
                 {
                     Text(
                         text = label,
@@ -86,7 +84,7 @@ fun MultiLineOutlineTextField(
                     bottom = 4.dp,
                 )
         ) {
-            if (isError && !errorLabel.isNullOrBlank()) {
+            if (enabled && isError && !errorLabel.isNullOrBlank()) {
                 Text(
                     modifier = Modifier.weight(1f),
                     text = errorLabel,
