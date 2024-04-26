@@ -83,7 +83,7 @@ fun TrendyolRadioButton(
         }
 
         when (style) {
-            is TrendyolRadioButtonStyle.WithText -> {
+            is RadioButtonStyle.Text -> {
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = style.text,
@@ -91,7 +91,7 @@ fun TrendyolRadioButton(
                 )
             }
 
-            is TrendyolRadioButtonStyle.WithContent -> {
+            is RadioButtonStyle.Content -> {
                 Spacer(modifier = Modifier.width(8.dp))
                 style.content()
             }
