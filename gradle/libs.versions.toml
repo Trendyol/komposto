@@ -2,9 +2,12 @@
 androidx-compose = '1.6.2'
 test-rules = '1.5.0'
 shot = '6.1.0'
+compose-ui = '1.6.6'
 
 [libraries]
 shot = { module = "com.karumi:shot", version.ref = "shot" }
+compose-ui-util = { module = "androidx.compose.ui:ui-util", version.ref = "compose-ui" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-ui" }
 compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "androidx-compose" }
 compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "androidx-compose" }
 test-rules = { module = "androidx.test:rules", version.ref = "test-rules" }
