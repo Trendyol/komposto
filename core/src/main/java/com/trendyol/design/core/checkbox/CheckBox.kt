@@ -153,16 +153,16 @@ private fun TrendyolCheckboxImpl(
     modifier: Modifier = Modifier,
     colors: TrendyolCheckboxColors
 ) {
-    val transition = updateTransition(targetState = value, label = TrendyolCheckboxLabel)
+    val transition = updateTransition(targetState = value, label = CHECKBOX_LABEL)
     val checkDrawFraction by transition.animateFloat(
         transitionSpec = {
             when {
-                initialState == ToggleableState.Off -> tween(CheckAnimationDuration)
-                targetState == ToggleableState.Off -> snap(BoxOutDuration)
+                initialState == ToggleableState.Off -> tween(CHECK_ANIM_DURATION)
+                targetState == ToggleableState.Off -> snap(BOX_OUT_DURATION)
                 else -> spring()
             }
         },
-        label = TrendyolCheckboxLabel,
+        label = CHECKBOX_LABEL,
     ) {
         when (it) {
             ToggleableState.On -> 1F
@@ -175,11 +175,11 @@ private fun TrendyolCheckboxImpl(
         transitionSpec = {
             when {
                 initialState == ToggleableState.Off -> snap()
-                targetState == ToggleableState.Off -> snap(BoxOutDuration)
-                else -> tween(durationMillis = CheckAnimationDuration)
+                targetState == ToggleableState.Off -> snap(BOX_OUT_DURATION)
+                else -> tween(durationMillis = CHECK_ANIM_DURATION)
             }
         },
-        label = TrendyolCheckboxLabel,
+        label = CHECKBOX_LABEL,
     ) {
         when (it) {
             ToggleableState.On, ToggleableState.Off -> 0F
@@ -250,6 +250,7 @@ private fun DrawScope.drawBox(
     }
 }
 
+@SuppressWarnings("MagicNumber", "LongParameterList")
 private fun DrawScope.drawCheck(
     checkColor: Color,
     checkFraction: Float,
@@ -298,9 +299,9 @@ private class CheckDrawingCache(
     val pathToDraw: Path = Path()
 )
 
-internal const val TrendyolCheckboxLabel = "TrendyolCheckbox"
-private const val BoxOutDuration = 100
-private const val CheckAnimationDuration = 100
+internal const val CHECKBOX_LABEL = "TrendyolCheckbox"
+private const val BOX_OUT_DURATION = 100
+private const val CHECK_ANIM_DURATION = 100
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
