@@ -43,7 +43,7 @@ fun TrendyolRadioButton(
     )
     val radioColor = colors.radioColor(enabled = enabled, selected = selected)
     val selectableModifier =
-        if (onClick != null && style == TrendyolRadioButtonStyle.Default) {
+        if (onClick != null) {
             Modifier.selectable(
                 selected = selected,
                 onClick = onClick,
