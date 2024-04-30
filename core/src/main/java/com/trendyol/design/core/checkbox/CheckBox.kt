@@ -49,16 +49,19 @@ import kotlin.math.max
 @Composable
 fun TrendyolCheckbox(
     style: CheckboxStyle,
-    size: CheckBoxSize,
+    size: CheckboxSize,
+    containerType: CheckboxContainerType,
     checked: Boolean,
     onCheckedChange: ((Boolean) -> Unit)?,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+    position: Alignment.Vertical = Alignment.CenterVertically,
 ) {
     TrendyolTriStateCheckbox(
         modifier = modifier,
         style = style,
+        containerType = containerType,
         size = size,
         state = ToggleableState(checked),
         onClick = if (onCheckedChange != null) {
@@ -67,19 +70,22 @@ fun TrendyolCheckbox(
         interactionSource = interactionSource,
         enabled = enabled,
         colors = style.colors,
+        position = position,
     )
 }
 
 @Composable
 private fun TrendyolTriStateCheckbox(
     style: CheckboxStyle,
-    size: CheckBoxSize,
+    size: CheckboxSize,
+    containerType: CheckboxContainerType,
     state: ToggleableState,
     onClick: (() -> Unit)?,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-    colors: TrendyolCheckboxColors = TrendyolCheckboxDefaults.colors()
+    colors: TrendyolCheckboxColors = TrendyolCheckboxDefaults.colors(),
+    position: Alignment.Vertical = Alignment.CenterVertically,
 ) {
     val toggleableModifier = if (onClick != null) {
         Modifier.triStateToggleable(
@@ -106,7 +112,11 @@ private fun TrendyolTriStateCheckbox(
         ),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Box(modifier = Modifier.size(size.containerSize)) {
+        Box(
+            modifier = Modifier
+                .size(size.containerSize)
+                .align(position)
+        ) {
             TrendyolCheckboxImpl(
                 style = style,
                 size = size,
@@ -126,20 +136,21 @@ private fun TrendyolTriStateCheckbox(
             )
         }
 
-        when (style) {
-            is CheckboxStyle.Text -> {
+        when (containerType) {
+            is CheckboxContainerType.Text -> {
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    text = style.text,
+                    text = containerType.text,
                     style = size.textStyle,
                     color = TrendyolDesign.colors.colorOnSurfaceVariant3
                 )
             }
 
-            is CheckboxStyle.Content -> {
+            is CheckboxContainerType.Content -> {
                 Spacer(modifier = Modifier.width(8.dp))
-                style.content()
+                containerType.content()
             }
+            else -> Unit
         }
     }
 }
@@ -147,7 +158,7 @@ private fun TrendyolTriStateCheckbox(
 @Composable
 private fun TrendyolCheckboxImpl(
     style: CheckboxStyle,
-    size: CheckBoxSize,
+    size: CheckboxSize,
     enabled: Boolean,
     value: ToggleableState,
     modifier: Modifier = Modifier,
@@ -196,8 +207,8 @@ private fun TrendyolCheckboxImpl(
             .wrapContentSize(Alignment.Center)
             .requiredSize(size.checkboxSize)
     ) {
-        val strokeWidthPx = floor(style.strokeWith.toPx())
-        val paddingPx = floor(style.padding.toPx())
+        val strokeWidthPx = floor(style.strokeWidth.toPx())
+        val paddingPx = floor(style.innerPadding.toPx())
 
         drawBox(
             boxColor = boxColor,
@@ -310,6 +321,7 @@ private fun TrendyolMediumCheckboxPreviewChecked() {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
             size = TrendyolCheckBoxSize.Medium,
+            containerType = CheckboxContainerType.Default,
             checked = true,
             onCheckedChange = { },
         )
@@ -323,6 +335,7 @@ private fun TrendyolMediumCheckboxPreview() {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
             size = TrendyolCheckBoxSize.Medium,
+            containerType = CheckboxContainerType.Default,
             checked = false,
             onCheckedChange = { },
         )
@@ -336,6 +349,7 @@ private fun TrendyolMediumCheckboxPreviewDisabled() {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
             size = TrendyolCheckBoxSize.Medium,
+            containerType = CheckboxContainerType.Default,
             checked = true,
             onCheckedChange = { },
             enabled = false
@@ -350,6 +364,7 @@ private fun TrendyolSmallCheckboxPreviewChecked() {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
             size = TrendyolCheckBoxSize.Small,
+            containerType = CheckboxContainerType.Default,
             checked = true,
             onCheckedChange = { },
         )
@@ -363,6 +378,7 @@ private fun TrendyolSmallCheckboxPreview() {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
             size = TrendyolCheckBoxSize.Small,
+            containerType = CheckboxContainerType.Default,
             checked = false,
             onCheckedChange = { },
         )
@@ -376,6 +392,7 @@ private fun TrendyolSmallCheckboxPreviewDisabled() {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
             size = TrendyolCheckBoxSize.Small,
+            containerType = CheckboxContainerType.Default,
             checked = true,
             onCheckedChange = { },
             enabled = false
@@ -390,6 +407,7 @@ private fun TrendyolXSmallCheckboxPreviewChecked() {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
             size = TrendyolCheckBoxSize.XSmall,
+            containerType = CheckboxContainerType.Default,
             checked = true,
             onCheckedChange = { },
         )
@@ -403,6 +421,7 @@ private fun TrendyolXSmallCheckboxPreview() {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
             size = TrendyolCheckBoxSize.XSmall,
+            containerType = CheckboxContainerType.Default,
             checked = false,
             onCheckedChange = { },
         )
@@ -416,6 +435,7 @@ private fun TrendyolXSmallCheckboxPreviewDisabled() {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
             size = TrendyolCheckBoxSize.XSmall,
+            containerType = CheckboxContainerType.Default,
             checked = true,
             onCheckedChange = { },
             enabled = false

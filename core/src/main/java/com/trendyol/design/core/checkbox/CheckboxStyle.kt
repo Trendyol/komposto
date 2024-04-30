@@ -21,29 +21,13 @@ interface CheckboxStyle {
         @Composable get
 
     /**
-     * Returns the padding around the checkbox.
-     * Padding determines the space between the checkbox and its
-     * surrounding elements.
+     * Returns the inner padding for the checkbox.
      */
-    val padding: Dp
+    val innerPadding: Dp
 
     /**
      * Returns the stroke width of the checkbox.
      * Stroke width determines the thickness of the checkbox border.
      */
-    val strokeWith: Dp
-
-    interface Text : CheckboxStyle {
-        /**
-         * The text label for checkbox.
-         */
-        val text: String
-    }
-
-    interface Content : CheckboxStyle {
-        /**
-         * The custom Composable content to be displayed within the checkbox.
-         */
-        val content: @Composable () -> Unit
-    }
+    val strokeWidth: Dp
 }

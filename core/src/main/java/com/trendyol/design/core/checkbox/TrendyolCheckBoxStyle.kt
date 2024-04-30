@@ -32,63 +32,10 @@ sealed interface TrendyolCheckBoxStyle {
                 )
             )
 
-        override val padding: Dp
+        override val innerPadding: Dp
             get() = 0.dp
 
-        override val strokeWith: Dp
-            get() = 2.dp
-    }
-
-    data class PrimaryWithText(override val text: String) : CheckboxStyle.Text {
-
-        override val colors: TrendyolCheckboxColors
-            @Composable get() = TrendyolCheckboxDefaults.colors(
-                checkedColor = TrendyolDesign.colors.colorPrimary,
-                uncheckedColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-
-                checkmarkColor = TrendyolDesign.colors.colorSurface,
-                disabledCheckmarkColor = TrendyolDesign.colors.colorSurface,
-
-                disabledColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-                checkBoxColor = TrendyolDesign.colors.colorPrimary,
-                disabledBoxColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-
-                disabledIndeterminateColor = TrendyolDesign.colors.colorPrimary.copy(
-                    alpha = ContentAlpha.disabled
-                )
-            )
-
-        override val padding: Dp
-            get() = 0.dp
-
-        override val strokeWith: Dp
-            get() = 2.dp
-    }
-
-    data class PrimaryWithContent(
-        override val content: @Composable () -> Unit
-    ) : CheckboxStyle.Content {
-        override val colors: TrendyolCheckboxColors
-            @Composable get() = TrendyolCheckboxDefaults.colors(
-                checkedColor = TrendyolDesign.colors.colorPrimary,
-                uncheckedColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-
-                checkmarkColor = TrendyolDesign.colors.colorSurface,
-                disabledCheckmarkColor = TrendyolDesign.colors.colorSurface,
-
-                disabledColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-                checkBoxColor = TrendyolDesign.colors.colorPrimary,
-                disabledBoxColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-
-                disabledIndeterminateColor = TrendyolDesign.colors.colorPrimary.copy(
-                    alpha = ContentAlpha.disabled
-                )
-            )
-
-        override val padding: Dp
-            get() = 0.dp
-
-        override val strokeWith: Dp
+        override val strokeWidth: Dp
             get() = 2.dp
     }
 
@@ -111,63 +58,10 @@ sealed interface TrendyolCheckBoxStyle {
                 )
             )
 
-        override val padding: Dp
+        override val innerPadding: Dp
             get() = 2.dp
 
-        override val strokeWith: Dp
-            get() = 1.dp
-    }
-
-    data class SecondaryWithText(override val text: String) : CheckboxStyle.Text {
-
-        override val colors: TrendyolCheckboxColors
-            @Composable get() = TrendyolCheckboxDefaults.colors(
-                checkedColor = TrendyolDesign.colors.colorPrimary,
-                uncheckedColor = TrendyolDesign.colors.colorBorder,
-
-                checkmarkColor = TrendyolDesign.colors.colorPrimary,
-                disabledCheckmarkColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-
-                disabledColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-                checkBoxColor = TrendyolDesign.colors.colorSurface,
-                disabledBoxColor = TrendyolDesign.colors.colorSurface,
-
-                disabledIndeterminateColor = TrendyolDesign.colors.colorPrimary.copy(
-                    alpha = ContentAlpha.disabled
-                )
-            )
-
-        override val padding: Dp
-            get() = 2.dp
-
-        override val strokeWith: Dp
-            get() = 1.dp
-    }
-
-    data class SecondaryWithContent(
-        override val content: @Composable () -> Unit
-    ) : CheckboxStyle.Content {
-        override val colors: TrendyolCheckboxColors
-            @Composable get() = TrendyolCheckboxDefaults.colors(
-                checkedColor = TrendyolDesign.colors.colorPrimary,
-                uncheckedColor = TrendyolDesign.colors.colorBorder,
-
-                checkmarkColor = TrendyolDesign.colors.colorPrimary,
-                disabledCheckmarkColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-
-                disabledColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-                checkBoxColor = TrendyolDesign.colors.colorSurface,
-                disabledBoxColor = TrendyolDesign.colors.colorSurface,
-
-                disabledIndeterminateColor = TrendyolDesign.colors.colorPrimary.copy(
-                    alpha = ContentAlpha.disabled
-                )
-            )
-
-        override val padding: Dp
-            get() = 2.dp
-
-        override val strokeWith: Dp
+        override val strokeWidth: Dp
             get() = 1.dp
     }
 }
