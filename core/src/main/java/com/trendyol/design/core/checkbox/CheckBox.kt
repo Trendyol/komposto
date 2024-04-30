@@ -150,7 +150,7 @@ private fun TrendyolCheckboxImpl(
     size: CheckBoxSize,
     enabled: Boolean,
     value: ToggleableState,
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     colors: TrendyolCheckboxColors
 ) {
     val transition = updateTransition(targetState = value, label = TrendyolCheckboxLabel)
@@ -304,7 +304,7 @@ private const val CheckAnimationDuration = 100
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun TrendyolMediumCheckboxPreviewChecked() {
+private fun TrendyolMediumCheckboxPreviewChecked() {
     PreviewTheme {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
@@ -317,7 +317,7 @@ fun TrendyolMediumCheckboxPreviewChecked() {
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun TrendyolMediumCheckboxPreview() {
+private fun TrendyolMediumCheckboxPreview() {
     PreviewTheme {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
@@ -330,7 +330,7 @@ fun TrendyolMediumCheckboxPreview() {
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun TrendyolMediumCheckboxPreviewDisabled() {
+private fun TrendyolMediumCheckboxPreviewDisabled() {
     PreviewTheme {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
@@ -344,7 +344,7 @@ fun TrendyolMediumCheckboxPreviewDisabled() {
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun TrendyolSmallCheckboxPreviewChecked() {
+private fun TrendyolSmallCheckboxPreviewChecked() {
     PreviewTheme {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
@@ -357,7 +357,7 @@ fun TrendyolSmallCheckboxPreviewChecked() {
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun TrendyolSmallCheckboxPreview() {
+private fun TrendyolSmallCheckboxPreview() {
     PreviewTheme {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
@@ -370,7 +370,7 @@ fun TrendyolSmallCheckboxPreview() {
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun TrendyolSmallCheckboxPreviewDisabled() {
+private fun TrendyolSmallCheckboxPreviewDisabled() {
     PreviewTheme {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
@@ -384,7 +384,7 @@ fun TrendyolSmallCheckboxPreviewDisabled() {
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun TrendyolXSmallCheckboxPreviewChecked() {
+private fun TrendyolXSmallCheckboxPreviewChecked() {
     PreviewTheme {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
@@ -397,7 +397,7 @@ fun TrendyolXSmallCheckboxPreviewChecked() {
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun TrendyolXSmallCheckboxPreview() {
+private fun TrendyolXSmallCheckboxPreview() {
     PreviewTheme {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
@@ -410,7 +410,7 @@ fun TrendyolXSmallCheckboxPreview() {
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun TrendyolXSmallCheckboxPreviewDisabled() {
+private fun TrendyolXSmallCheckboxPreviewDisabled() {
     PreviewTheme {
         TrendyolCheckbox(
             style = TrendyolCheckBoxStyle.Primary,
