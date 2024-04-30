@@ -77,7 +77,8 @@ dependencies {
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.compose.material:material:1.5.1")
-    implementation("androidx.compose.ui:ui-tooling:1.5.1")
+    implementation(libs.compose.ui.tooling)
+    implementation(libs.compose.ui.util)
 
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0")
     detektPlugins("io.nlopez.compose.rules:detekt:0.1.13")
