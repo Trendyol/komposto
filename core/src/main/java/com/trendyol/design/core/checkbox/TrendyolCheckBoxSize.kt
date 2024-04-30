@@ -12,7 +12,7 @@ import com.trendyol.theme.TrendyolDesign
  */
 sealed interface TrendyolCheckBoxSize {
 
-    data object Medium : CheckBoxSize {
+    data object Medium : CheckboxSize {
         override val containerSize: Dp
             get() = 24.dp
         override val checkboxSize: Dp
@@ -25,7 +25,7 @@ sealed interface TrendyolCheckBoxSize {
             @Composable get() = TrendyolDesign.typography.subtitle
     }
 
-    data object Small : CheckBoxSize {
+    data object Small : CheckboxSize {
         override val containerSize: Dp
             get() = 20.dp
         override val checkboxSize: Dp
@@ -38,7 +38,7 @@ sealed interface TrendyolCheckBoxSize {
             @Composable get() = TrendyolDesign.typography.subtitle
     }
 
-    data object XSmall : CheckBoxSize {
+    data object XSmall : CheckboxSize {
         override val containerSize: Dp
             get() = 16.dp
         override val checkboxSize: Dp

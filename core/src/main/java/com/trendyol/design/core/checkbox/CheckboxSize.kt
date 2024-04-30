@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.Dp
  * checkbox component.
  */
 @Immutable
-interface CheckBoxSize {
+interface CheckboxSize {
 
     /**
      * Represents the size of the container in which the checkbox component resides.
