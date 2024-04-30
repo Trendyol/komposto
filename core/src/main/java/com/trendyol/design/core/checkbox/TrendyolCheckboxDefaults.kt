@@ -82,12 +82,12 @@ private class TrendyolDefaultCheckboxColors(
             state == ToggleableState.Off -> uncheckedCheckmarkColor
             else -> checkedCheckmarkColor
         }
-        val duration = if (state == ToggleableState.Off) BoxOutDuration else BoxInDuration
+        val duration = if (state == ToggleableState.Off) BOX_OUT_DURATION else BOX_IN_DURATION
 
         return animateColorAsState(
             targetValue = target,
             animationSpec = tween(durationMillis = duration),
-            label = TrendyolCheckboxLabel
+            label = CHECKBOX_LABEL
         )
     }
 
@@ -109,11 +109,11 @@ private class TrendyolDefaultCheckboxColors(
         // If not enabled 'snap' to the disabled state, as there should be no animations between
         // enabled / disabled.
         return if (enabled) {
-            val duration = if (state == ToggleableState.Off) BoxOutDuration else BoxInDuration
+            val duration = if (state == ToggleableState.Off) BOX_OUT_DURATION else BOX_IN_DURATION
             animateColorAsState(
                 targetValue = target,
                 animationSpec = tween(durationMillis = duration),
-                label = TrendyolCheckboxLabel
+                label = CHECKBOX_LABEL
             )
         } else {
             rememberUpdatedState(target)
@@ -136,11 +136,11 @@ private class TrendyolDefaultCheckboxColors(
         }
 
         return if (enabled) {
-            val duration = if (state == ToggleableState.Off) BoxOutDuration else BoxInDuration
+            val duration = if (state == ToggleableState.Off) BOX_OUT_DURATION else BOX_IN_DURATION
             animateColorAsState(
                 targetValue = target,
                 animationSpec = tween(durationMillis = duration),
-                label = TrendyolCheckboxLabel
+                label = CHECKBOX_LABEL
             )
         } else {
             rememberUpdatedState(target)
@@ -148,5 +148,5 @@ private class TrendyolDefaultCheckboxColors(
     }
 }
 
-private const val BoxInDuration = 50
-private const val BoxOutDuration = 100
+private const val BOX_IN_DURATION = 50
+private const val BOX_OUT_DURATION = 100
