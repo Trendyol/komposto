@@ -9,10 +9,8 @@ interface RadioButtonSize {
     val rippleRadius: Dp
     val buttonSize: Dp
     val dotSize: Dp
+    val strokeWidth: Dp
 
     @get:Composable
     val textSize: TextStyle
-
-    val radius: Dp
-        get() = buttonSize / 2
 }

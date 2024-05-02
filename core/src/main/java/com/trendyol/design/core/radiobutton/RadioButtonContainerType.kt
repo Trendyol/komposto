@@ -4,7 +4,7 @@ import androidx.compose.material.RadioButtonColors
 import androidx.compose.runtime.Composable
 import com.trendyol.theme.TrendyolDesign
 
-interface RadioButtonStyle {
+interface RadioButtonContainerType {
 
     val colors: RadioButtonColors
         @Composable
@@ -15,11 +15,13 @@ interface RadioButtonStyle {
             disabledUnselectedColor = TrendyolDesign.colors.colorBorder,
         )
 
-    interface Text : RadioButtonStyle {
+    interface None : RadioButtonContainerType
+
+    interface Text : RadioButtonContainerType {
         val text: String
     }
 
-    interface Content : RadioButtonStyle {
+    interface Content : RadioButtonContainerType {
         val content: @Composable () -> Unit
     }
 }

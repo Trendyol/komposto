@@ -28,13 +28,13 @@ import com.trendyol.theme.TrendyolDesign
 @Composable
 fun TrendyolRadioButton(
     selected: Boolean,
-    style: RadioButtonStyle,
+    containerType: RadioButtonContainerType,
     size: RadioButtonSize,
     onClick: (() -> Unit)?,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-    colors: RadioButtonColors = style.colors,
+    colors: RadioButtonColors = containerType.colors,
     position: Alignment.Vertical = Alignment.CenterVertically,
 ) {
     val dotRadius = animateDpAsState(
@@ -71,29 +71,31 @@ fun TrendyolRadioButton(
                 .align(position)
         ) {
             // Draw the radio button
-            val strokeWidth = 2.dp.toPx()
+            val strokeWidth = size.strokeWidth.toPx()
             drawCircle(
                 radioColor.value,
-                size.radius.toPx() - strokeWidth / 2,
+                (size.buttonSize / 2).toPx() - strokeWidth / 2,
                 style = Stroke(strokeWidth)
             )
             if (dotRadius.value > 0.dp) {
-                drawCircle(radioColor.value, dotRadius.value.toPx() - strokeWidth / 2, style = Fill)
+                drawCircle(radioColor.value, dotRadius.value.toPx(), style = Fill)
             }
         }
 
-        when (style) {
-            is RadioButtonStyle.Text -> {
+        when (containerType) {
+            is RadioButtonContainerType.None -> {}
+
+            is RadioButtonContainerType.Text -> {
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    text = style.text,
+                    text = containerType.text,
                     style = size.textSize.copy(color = TrendyolDesign.colors.colorOnSurfaceVariant3)
                 )
             }
 
-            is RadioButtonStyle.Content -> {
+            is RadioButtonContainerType.Content -> {
                 Spacer(modifier = Modifier.width(8.dp))
-                style.content()
+                containerType.content()
             }
         }
     }
