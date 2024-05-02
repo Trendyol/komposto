@@ -14,7 +14,9 @@ sealed interface TrendyolRadioButtonSize : RadioButtonSize {
         override val buttonSize: Dp
             get() = 12.dp
         override val dotSize: Dp
-            get() = 7.dp
+            get() = 6.dp
+        override val strokeWidth: Dp
+            get() = (1.2).dp
         override val textSize: TextStyle
             @Composable
             get() = TrendyolDesign.typography.body1
@@ -26,7 +28,9 @@ sealed interface TrendyolRadioButtonSize : RadioButtonSize {
         override val buttonSize: Dp
             get() = 16.dp
         override val dotSize: Dp
-            get() = 10.dp
+            get() = 8.dp
+        override val strokeWidth: Dp
+            get() = (1.6).dp
         override val textSize: TextStyle
             @Composable
             get() = TrendyolDesign.typography.subtitle
@@ -38,7 +42,9 @@ sealed interface TrendyolRadioButtonSize : RadioButtonSize {
         override val buttonSize: Dp
             get() = 20.dp
         override val dotSize: Dp
-            get() = 12.dp
+            get() = 10.dp
+        override val strokeWidth: Dp
+            get() = 2.dp
         override val textSize: TextStyle
             @Composable
             get() = TrendyolDesign.typography.subtitle
