@@ -48,7 +48,7 @@ fun TrendyolRadioButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-    colors: RadioButtonColors = containerType.colors,
+    colors: RadioButtonColors = TrendyolRadioButtonDefaults.colors(),
     position: Alignment.Vertical = Alignment.CenterVertically,
 ) {
     val dotRadius = animateDpAsState(
