@@ -6,6 +6,12 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * Defining different sizes for RadioButton components specific to the [com.trendyol.theme.TrendyolDesign] theme.
+ *
+ * This interface provides sealed classes representing different sizes for [TrendyolRadioButton] components with customization options
+ * tailored to the Trendyol design guidelines.
+ */
 sealed interface TrendyolRadioButtonSize : RadioButtonSize {
 
     data object XSmall : TrendyolRadioButtonSize {

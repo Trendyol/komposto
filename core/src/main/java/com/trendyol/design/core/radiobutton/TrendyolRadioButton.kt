@@ -25,6 +25,20 @@ import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * Composable function representing a RadioButton with customizable appearance and behavior tailored for the
+ * [com.trendyol.theme.TrendyolDesign] theme.
+ *
+ * @param selected Indicates whether the RadioButton is selected or not.
+ * @param containerType The type of container for the RadioButton, which determines its appearance and content.
+ * @param size The size configuration for the RadioButton, defining dimensions such as button size, dot size, etc.
+ * @param onClick Callback invoked when the RadioButton is clicked. If null, the RadioButton is not clickable.
+ * @param modifier Optional [Modifier] that can be applied to the RadioButton.
+ * @param enabled Indicates whether the RadioButton is enabled for user interaction.
+ * @param interactionSource [MutableInteractionSource] representing the source of user interactions.
+ * @param colors [RadioButtonColors] defining the colors used for rendering the RadioButton.
+ * @param position Alignment representing the vertical alignment of the RadioButton within its container.
+ */
 @Composable
 fun TrendyolRadioButton(
     selected: Boolean,
