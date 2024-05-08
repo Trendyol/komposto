@@ -11,8 +11,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
@@ -23,12 +23,12 @@ import com.trendyol.theme.TrendyolDesign
 /**
  * A Composable function to render a dropdown UI component.
  *
- * @param modifier Modifier to apply to the Dropdown.
  * @param style Style configuration for the Dropdown. It should implement the DropdownStyle interface.
  *              This parameter determines the appearance of the dropdown, including the shape of the outer frame,
  *              the visibility of the label, and other style properties. For example, the styles defined within
  *              TrendyolDropdownStyle represent the customized dropdown styles.
  * @param value The currently selected value in the dropdown.
+ * @param modifier Modifier to apply to the Dropdown.
  * @param label The label text to display above the dropdown.
  * @param errorLabel The error message to display below the dropdown when an error occurs.
  * @param isError Indicates whether the dropdown is in an error state.
@@ -38,28 +38,24 @@ import com.trendyol.theme.TrendyolDesign
  *               (such as selected, focused, disabled, etc.). TextFieldColors provides the means to customize
  *               these colors according to the desired visual appearance.
  * @param onClicked Callback for when the dropdown is clicked.
- * @param onValueChange Callback for when the selected value changes.
  */
 @Composable
 fun Dropdown(
-    modifier: Modifier = Modifier,
     style: DropdownStyle,
     value: String,
+    modifier: Modifier = Modifier,
     label: String? = null,
     errorLabel: String? = null,
     isError: Boolean = false,
     enabled: Boolean = true,
     colors: TextFieldColors = style.outlinedTextFieldColors,
     onClicked: () -> Unit,
-    onValueChange: (String) -> Unit,
 ) {
     var text by rememberSaveable { mutableStateOf(value) }
 
-    Column {
+    Column(modifier = modifier) {
         TrendyolOutlinedTextField(
-            modifier = modifier
-                .fillMaxWidth()
-                .align(Alignment.CenterHorizontally)
+            modifier = Modifier
                 .clickable(
                     enabled = enabled,
                     onClick = onClicked,
@@ -70,13 +66,14 @@ fun Dropdown(
                 {
                     Text(
                         text = label,
-                        style = TrendyolDesign.typography.body2MediumColorOnSurfaceVariant1,
+                        style = TrendyolDesign.typography.subtitleMedium.copy(
+                            color = Color.Unspecified
+                        ),
                     )
                 }
             } else null,
             onValueChange = { selected ->
                 text = selected
-                onValueChange(selected)
             },
             colors = colors,
             isError = isError,
