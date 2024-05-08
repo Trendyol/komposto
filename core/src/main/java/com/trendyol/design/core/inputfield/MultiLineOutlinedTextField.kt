@@ -1,10 +1,12 @@
 package com.trendyol.design.core.inputfield
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.Text
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
@@ -13,17 +15,18 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.trendyol.theme.TrendyolDesign
 
 /**
  * Composable function to create a multi-line text input field with an outlined style.
  *
- * @param modifier Modifier used to shape the TextField.
  * @param style Style configuration for the TextField. This should be an object implementing the
  *              OutlinedTextFieldStyle interface.
  * @param value The initial value for the TextField.
  * @param maxChar Maximum number of characters allowed in the TextField.
+ * @param modifier Modifier used to shape the TextField.
  * @param label The label text to display above the TextField.
  * @param errorLabel The error message to display below the TextField when there is an error.
  * @param isError Indicates whether the TextField is in an error state.
@@ -35,10 +38,10 @@ import com.trendyol.theme.TrendyolDesign
  */
 @Composable
 fun MultiLineOutlineTextField(
-    modifier: Modifier = Modifier,
     style: OutlinedTextFieldStyle,
     value: String,
     maxChar: Int,
+    modifier: Modifier = Modifier,
     label: String? = null,
     errorLabel: String? = null,
     isError: Boolean = false,
@@ -48,16 +51,18 @@ fun MultiLineOutlineTextField(
 ) {
     var text by rememberSaveable { mutableStateOf(value) }
 
-    Column {
+    Column(modifier = modifier.width(IntrinsicSize.Max)) {
         TrendyolOutlinedTextField(
-            modifier = modifier.fillMaxWidth(),
+            modifier = Modifier,
             value = text,
             textStyle = TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3,
             label = if (!label.isNullOrBlank()) {
                 {
                     Text(
                         text = label,
-                        style = TrendyolDesign.typography.body2MediumColorPrimary,
+                        style = TrendyolDesign.typography.subtitleMedium.copy(
+                            color = Color.Unspecified
+                        ),
                     )
                 }
             } else null,
