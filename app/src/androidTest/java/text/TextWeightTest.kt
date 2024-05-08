@@ -20,10 +20,6 @@ internal class TextWeightTest : DesignScreenshotTest() {
                     )
                     Text(
                         text = "Text",
-                        style = TrendyolDesign.typography.titleSemiBoldColorOnSurfaceVariant3
-                    )
-                    Text(
-                        text = "Text",
                         style = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant3
                     )
                     Text(
@@ -39,10 +35,6 @@ internal class TextWeightTest : DesignScreenshotTest() {
                     Text(
                         text = "Text",
                         style = TrendyolDesign.typography.overLineBoldColorOnSurfaceVariant3
-                    )
-                    Text(
-                        text = "Text",
-                        style = TrendyolDesign.typography.overLineSemiBoldColorOnSurfaceVariant3
                     )
                     Text(
                         text = "Text",

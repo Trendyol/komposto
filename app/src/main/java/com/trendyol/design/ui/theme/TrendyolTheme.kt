@@ -14,7 +14,6 @@ private val trendyolDesignTheme = TrendyolDesignTheme(
     fontFamily = TrendyolDesignFontFamily(
         regular = Fonts.RobotoRegular,
         medium = Fonts.RobotoMedium,
-        semiBold = Fonts.RobotoSemiBold,
         bold = Fonts.RobotoBold,
     ),
 )

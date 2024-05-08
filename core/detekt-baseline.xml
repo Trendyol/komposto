@@ -1,6 +1,9 @@
 <?xml version="1.0" ?>
 <SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
   <CurrentIssues>
+    <ID>MagicNumber:TrendyolRadioButtonSize.kt$TrendyolRadioButtonSize.Small$1.6</ID>
+    <ID>MagicNumber:TrendyolRadioButtonSize.kt$TrendyolRadioButtonSize.XSmall$1.2</ID>
     <ID>ModifierMissing:CheckToolbarLayoutIds.kt$CheckToolbarLayoutIds</ID>
     <ID>UnstableCollections:Text.kt$Map&lt;String, InlineTextContent&gt;</ID>
   </CurrentIssues>
