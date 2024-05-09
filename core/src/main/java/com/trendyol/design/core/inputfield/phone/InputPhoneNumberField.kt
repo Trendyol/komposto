@@ -58,11 +58,10 @@ fun InputPhoneNumberField(
                 enabled = enabled,
                 onClicked = onCountryCodeClick,
                 modifier = Modifier.width(90.dp),
-            ) {}
+            )
             Spacer(modifier = Modifier.width(8.dp))
 
             val focusManager = LocalFocusManager.current
-            val textColor = TrendyolOutlinedTextFieldStyle.Outlined.outlinedTextFieldColors.textColor(enabled).value
             val actionsOfKeyboard = if (keyboardActions == KeyboardActions.Default) {
                 KeyboardActions(
                     onAny = { focusManager.clearFocus() }
@@ -76,7 +75,7 @@ fun InputPhoneNumberField(
                     }
                 },
                 enabled = enabled,
-                textStyle = TrendyolDesign.typography.subtitleMedium.copy(color = textColor),
+                textStyle = TrendyolDesign.typography.subtitleMedium,
                 label = if (numberLabel.isNotBlank()) {
                     {
                         Text(
