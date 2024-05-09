@@ -61,14 +61,14 @@ fun Dropdown(
                     onClick = onClicked,
                 ),
             value = text,
-            textStyle = TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3,
+            textStyle = TrendyolDesign.typography.subtitleMedium.copy(
+                color = style.outlinedTextFieldColors.textColor(enabled = enabled).value
+            ),
             label = if (!label.isNullOrBlank()) {
                 {
                     Text(
                         text = label,
-                        style = TrendyolDesign.typography.subtitleMedium.copy(
-                            color = Color.Unspecified
-                        ),
+                        style = TrendyolDesign.typography.subtitleMedium,
                     )
                 }
             } else null,
