@@ -60,7 +60,6 @@ fun InputEmailField(
             }
         }
 
-        val textColor = TrendyolOutlinedTextFieldStyle.Outlined.outlinedTextFieldColors.textColor(enabled).value
         val focusManager = LocalFocusManager.current
         val actionsOfKeyboard = if (keyboardActions == KeyboardActions.Default) {
             KeyboardActions(
@@ -83,7 +82,7 @@ fun InputEmailField(
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             readOnly = readOnly,
-            textStyle = TrendyolDesign.typography.subtitleMedium.copy(color = textColor),
+            textStyle = TrendyolDesign.typography.subtitleMedium,
             label = label,
             placeholder = placeholder,
             interactionSource = interactionSource,
