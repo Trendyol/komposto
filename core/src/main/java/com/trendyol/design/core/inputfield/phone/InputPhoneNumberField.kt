@@ -47,9 +47,11 @@ fun InputPhoneNumberField(
     maxPhoneNumberLength: Int = 10,
 ) {
     Column(
-        modifier = modifier.height(44.dp)
+        modifier = modifier,
     ) {
-        Row {
+        Row(
+            modifier = Modifier.height(44.dp)
+        ) {
             Dropdown(
                 style = TrendyolDropdownStyle.Outlined,
                 value = countryCode,
