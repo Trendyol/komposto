@@ -4,7 +4,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.defaultMinSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -122,7 +121,6 @@ internal fun TrendyolOutlinedTextField(
         modifier = if (label != null) {
             modifier
                 .semantics(mergeDescendants = true) {}
-                .padding(top = 8.dp)
         } else {
             modifier
         }
