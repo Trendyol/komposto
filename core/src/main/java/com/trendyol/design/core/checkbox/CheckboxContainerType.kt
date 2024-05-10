@@ -6,7 +6,7 @@ import androidx.compose.runtime.Immutable
 @Immutable
 sealed interface CheckboxContainerType {
 
-    data object Default : CheckboxContainerType
+    data object None : CheckboxContainerType
 
     /**
      * The text label for checkbox.
