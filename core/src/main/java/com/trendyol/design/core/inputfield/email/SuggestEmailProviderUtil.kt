@@ -11,7 +11,7 @@ import androidx.compose.ui.text.withStyle
  *
  * This object analyzes the input text and suggests email format suggestions based on predefined domain list.
  */
-internal object SuggestEmailProviderUtil {
+object SuggestEmailProviderUtil {
 
     private val DOMAIN_LIST = listOf(
         "@gmail.com",
