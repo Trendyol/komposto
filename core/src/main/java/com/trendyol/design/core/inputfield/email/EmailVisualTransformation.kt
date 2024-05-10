@@ -5,6 +5,11 @@ import androidx.compose.ui.text.input.OffsetMapping
 import androidx.compose.ui.text.input.TransformedText
 import androidx.compose.ui.text.input.VisualTransformation
 
+/**
+ * Visual transformation for transforming text input into email format.
+ *
+ * This transformation suggests email format based on the input text and applies the suggestion.
+ */
 internal class EmailVisualTransformation : VisualTransformation {
 
     override fun filter(text: AnnotatedString): TransformedText {
