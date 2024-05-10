@@ -3,7 +3,6 @@ package com.trendyol.design.core.inputfield
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Text
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -13,6 +12,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
 /**
@@ -64,9 +64,7 @@ fun SingleLineOutlinedTextField(
                 {
                     Text(
                         text = placeholder,
-                        style = TrendyolDesign.typography.subtitleMedium.copy(
-                            color = Color.Unspecified
-                        ),
+                        style = TrendyolDesign.typography.subtitleMedium,
                     )
                 }
             } else null,
