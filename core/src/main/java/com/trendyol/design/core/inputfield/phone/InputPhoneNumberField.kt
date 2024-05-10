@@ -28,6 +28,27 @@ import com.trendyol.design.core.inputfield.TrendyolOutlinedTextFieldStyle
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * Composable function representing a phone number input field with customizable appearance and behavior tailored for
+ * the Trendyol theme.
+ *
+ * @param countryCode The current value of the country code input field.
+ * @param number The current value of the phone number input field.
+ * @param onCountryCodeClick Callback invoked when the country code input field is clicked.
+ * @param onValueChange Callback invoked when the value of the phone number input field changes.
+ * @param modifier Optional [Modifier] that can be applied to the input field.
+ * @param enabled Indicates whether the input field is enabled for user interaction.
+ * @param countryCodeLabel Optional label for the country code input field.
+ * @param numberLabel Optional label for the phone number input field.
+ * @param error Optional error message displayed below the input fields if there is an error. If it's null no error
+ * will be displayed.
+ * @param visualTransformation [VisualTransformation] applied to the phone number input field.
+ * @param keyboardActions [KeyboardActions] defining keyboard actions for the phone number input field. If you don't
+ * provide one it will clear keyboard after any action.
+ * @param interactionSource [MutableInteractionSource] representing the source of user interactions.
+ * @param shape Shape of the only phone number input field.
+ * @param maxPhoneNumberLength Maximum length allowed for the phone number.
+ */
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun InputPhoneNumberField(
@@ -82,7 +103,7 @@ fun InputPhoneNumberField(
                     {
                         Text(
                             text = numberLabel,
-                            style = TrendyolDesign.typography.body2MediumColorPrimary,
+                            style = TrendyolDesign.typography.body2Medium,
                         )
                     }
                 } else null,

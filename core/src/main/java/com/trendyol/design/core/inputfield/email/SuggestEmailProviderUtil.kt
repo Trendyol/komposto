@@ -6,6 +6,11 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 
+/**
+ * Utility object providing email format suggestions based on input text.
+ *
+ * This object analyzes the input text and suggests email format suggestions based on predefined domain list.
+ */
 internal object SuggestEmailProviderUtil {
 
     private val DOMAIN_LIST = listOf(

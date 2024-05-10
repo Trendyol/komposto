@@ -29,6 +29,24 @@ import com.trendyol.design.core.inputfield.TrendyolOutlinedTextFieldStyle
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * Composable function representing an email input field with customizable appearance and behavior tailored for the
+ * Trendyol theme.
+ *
+ * @param email The current value of the email input field.
+ * @param onValueChange Callback invoked when the value of the email input field changes.
+ * @param modifier Optional [Modifier] that can be applied to the input field.
+ * @param enabled Indicates whether the input field is enabled for user interaction.
+ * @param readOnly Indicates whether the input field is read-only.
+ * @param label Optional label displayed above the input field.
+ * @param placeholder Optional placeholder text displayed when the input field is empty.
+ * @param error Optional error message displayed below the input field if there is an error. If it's null no error
+ * will be displayed.
+ * @param keyboardActions [KeyboardActions] defining keyboard actions for the input field. If you don't provide one
+ * it will auto complete the suggestion and clear the keyboard for any action.
+ * @param interactionSource [MutableInteractionSource] representing the source of user interactions.
+ * @param shape Shape of the input field.
+ */
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun InputEmailField(
