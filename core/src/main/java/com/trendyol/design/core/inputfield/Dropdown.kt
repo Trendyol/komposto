@@ -12,11 +12,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.fill.ArrowDown
+import com.trendyol.design.core.previewtheme.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 /**
@@ -60,9 +62,6 @@ fun Dropdown(
                     onClick = onClicked,
                 ),
             value = text,
-            textStyle = TrendyolDesign.typography.subtitleMedium.copy(
-                color = style.outlinedTextFieldColors.textColor(enabled = enabled).value
-            ),
             label = if (!label.isNullOrBlank()) {
                 {
                     Text(
@@ -101,5 +100,20 @@ fun Dropdown(
                 style = TrendyolDesign.typography.body1ColorWarning,
             )
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DropdownPreview() {
+    PreviewTheme {
+        Dropdown(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolDropdownStyle.Filled,
+            value = "Disabled",
+            isError = false,
+            enabled = false,
+            onClicked = {},
+        )
     }
 }

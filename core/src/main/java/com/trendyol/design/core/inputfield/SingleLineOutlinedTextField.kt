@@ -11,7 +11,9 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.previewtheme.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
@@ -49,7 +51,6 @@ fun SingleLineOutlinedTextField(
     Column(modifier = modifier) {
         TrendyolOutlinedTextField(
             value = text,
-            textStyle = TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3,
             label = if (!label.isNullOrBlank()) {
                 {
                     Text(
@@ -92,5 +93,20 @@ fun SingleLineOutlinedTextField(
                 style = TrendyolDesign.typography.body1ColorWarning,
             )
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun SingleLineOutlinedTextFieldPreview() {
+    PreviewTheme {
+        SingleLineOutlinedTextField(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolOutlinedTextFieldStyle.Filled,
+            value = "Disabled",
+            isError = false,
+            enabled = false,
+            onValueChange = {}
+        )
     }
 }
