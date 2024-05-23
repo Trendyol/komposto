@@ -43,7 +43,7 @@ publishing {
     repositories {
         maven {
             name = "Nexus"
-            url = uri("http://10.10.42.172:8082/repository/maven-releases")
+            url = uri("http://10.84.105.74/repository/maven-releases")
             isAllowInsecureProtocol = true
             credentials {
                 username = properties["NEXUS_USER"]?.toString() ?: System.getenv("NEXUS_USER")
