@@ -23,6 +23,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldDecorationBox
 import com.trendyol.theme.TrendyolDesign
 
 /**
@@ -131,7 +132,7 @@ internal fun TrendyolOutlinedTextField(
             )
             .defaultMinSize(
                 minWidth = TextFieldDefaults.MinWidth,
-                minHeight = 44.dp
+                minHeight = 43.dp
             ),
         onValueChange = onValueChange,
         enabled = enabled,
@@ -146,7 +147,7 @@ internal fun TrendyolOutlinedTextField(
         maxLines = maxLines,
         minLines = minLines,
         decorationBox = @Composable { innerTextField ->
-            TextFieldDefaults.OutlinedTextFieldDecorationBox(
+            TrendyolOutlinedTextFieldDecorationBox(
                 value = value,
                 visualTransformation = visualTransformation,
                 innerTextField = innerTextField,
@@ -161,11 +162,13 @@ internal fun TrendyolOutlinedTextField(
                 colors = colors,
                 border = {
                     TextFieldDefaults.BorderBox(
-                        enabled,
-                        isError,
-                        interactionSource,
-                        colors,
-                        shape
+                        enabled = enabled,
+                        isError = isError,
+                        interactionSource = interactionSource,
+                        colors = colors,
+                        shape = shape,
+                        focusedBorderThickness = 1.dp,
+                        unfocusedBorderThickness = 1.dp,
                     )
                 },
                 contentPadding = contentPadding

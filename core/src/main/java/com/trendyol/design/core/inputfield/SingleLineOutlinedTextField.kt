@@ -53,12 +53,7 @@ fun SingleLineOutlinedTextField(
             value = text,
             label = if (!label.isNullOrBlank()) {
                 {
-                    Text(
-                        text = label,
-                        style = TrendyolDesign.typography.subtitleMedium.copy(
-                            color = Color.Unspecified
-                        ),
-                    )
+                    Text(text = label)
                 }
             } else null,
             placeholder = if (!placeholder.isNullOrBlank()) {
