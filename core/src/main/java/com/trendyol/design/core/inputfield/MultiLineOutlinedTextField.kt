@@ -59,12 +59,7 @@ fun MultiLineOutlineTextField(
             value = text,
             label = if (!label.isNullOrBlank()) {
                 {
-                    Text(
-                        text = label,
-                        style = TrendyolDesign.typography.subtitleMedium.copy(
-                            color = Color.Unspecified
-                        ),
-                    )
+                    Text(text = label)
                 }
             } else null,
             onValueChange = { changedValue ->

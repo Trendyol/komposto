@@ -66,14 +66,15 @@ sealed interface TrendyolOutlinedTextFieldStyle {
 
                 placeholderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 unfocusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-                unfocusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
+                unfocusedBorderColor = TrendyolDesign.colors.colorBorder,
 
                 focusedLabelColor = TrendyolDesign.colors.colorPrimary,
                 focusedBorderColor = TrendyolDesign.colors.colorBorder,
                 cursorColor = TrendyolDesign.colors.colorPrimary,
 
-                disabledLabelColor = TrendyolDesign.colors.colorBorder,
-                disabledTextColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
+                disabledLabelColor = TrendyolDesign.colors.colorBorder.copy(alpha = 0.5f),
+                disabledBorderColor = TrendyolDesign.colors.colorBorder.copy(alpha = 0.5f),
+                disabledTextColor = TrendyolDesign.colors.colorOnSurfaceVariant1.copy(alpha = 0.5f),
 
                 errorCursorColor = TrendyolDesign.colors.colorWarning,
                 errorBorderColor = TrendyolDesign.colors.colorWarning,
