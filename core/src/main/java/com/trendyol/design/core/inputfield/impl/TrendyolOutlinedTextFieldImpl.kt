@@ -32,7 +32,6 @@ import com.trendyol.design.core.util.lerp
 import kotlin.math.max
 import kotlin.math.roundToInt
 
-
 /**
  * Layout of the leading and trailing icons and the text field, label and placeholder in
  * [OutlinedTextField].
