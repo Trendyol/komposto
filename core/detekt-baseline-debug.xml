@@ -1,47 +1,7 @@
 <?xml version="1.0" ?>
 <SmellBaseline>
-  <ManuallySuppressedIssues />
   <CurrentIssues>
-    <ID>CyclomaticComplexMethod:TrendyolTextFieldImpl.kt$@OptIn(ExperimentalMaterialApi::class) @Composable internal fun TrendyolCommonDecorationBox( type: TrendyolTextFieldType, value: String, innerTextField: @Composable () -&gt; Unit, visualTransformation: VisualTransformation, label: @Composable (() -&gt; Unit)?, placeholder: @Composable (() -&gt; Unit)? = null, leadingIcon: @Composable (() -&gt; Unit)? = null, trailingIcon: @Composable (() -&gt; Unit)? = null, singleLine: Boolean = false, enabled: Boolean = true, isError: Boolean = false, interactionSource: InteractionSource, contentPadding: PaddingValues, colors: TextFieldColors, labelInitialTextStyle: TextStyle = TrendyolDesign.typography.subtitleMedium, labelEndTextStyle: TextStyle = TrendyolDesign.typography.body2Medium, border: @Composable (() -&gt; Unit)? = null )</ID>
-    <ID>ForbiddenComment:TrendyolTextFieldImpl.kt$// TODO: DefaultErrorMessage</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:170</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:286</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:379</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:380</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:381</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:382</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:383</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:384</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolTextFieldImpl.kt:100</ID>
-    <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( height: Int, width: Int, leadingPlaceable: Placeable?, trailingPlaceable: Placeable?, textFieldPlaceable: Placeable, labelPlaceable: Placeable?, placeholderPlaceable: Placeable?, borderPlaceable: Placeable, animationProgress: Float, singleLine: Boolean, density: Float, layoutDirection: LayoutDirection, paddingValues: PaddingValues )</ID>
-    <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( leadingPlaceableHeight: Int, trailingPlaceableHeight: Int, textFieldPlaceableHeight: Int, labelPlaceableHeight: Int, placeholderPlaceableHeight: Int, animationProgress: Float, constraints: Constraints, density: Float, paddingValues: PaddingValues )</ID>
-    <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( leadingPlaceableWidth: Int, trailingPlaceableWidth: Int, textFieldPlaceableWidth: Int, labelPlaceableWidth: Int, placeholderPlaceableWidth: Int, animationProgress: Float, constraints: Constraints, density: Float, paddingValues: PaddingValues, )</ID>
-    <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( modifier: Modifier, textField: @Composable () -&gt; Unit, placeholder: @Composable ((Modifier) -&gt; Unit)?, label: @Composable (() -&gt; Unit)?, leading: @Composable (() -&gt; Unit)?, trailing: @Composable (() -&gt; Unit)?, singleLine: Boolean, animationProgress: Float, onLabelMeasured: (Size) -&gt; Unit, border: @Composable () -&gt; Unit, paddingValues: PaddingValues )</ID>
-    <ID>LongParameterList:TrendyolTextField.kt$( leadingWidth: Int, trailingWidth: Int, textFieldWidth: Int, labelWidth: Int, placeholderWidth: Int, constraints: Constraints )</ID>
-    <ID>LongParameterList:TrendyolTextField.kt$( modifier: Modifier, textField: @Composable () -&gt; Unit, label: @Composable (() -&gt; Unit)?, placeholder: @Composable ((Modifier) -&gt; Unit)?, leading: @Composable (() -&gt; Unit)?, trailing: @Composable (() -&gt; Unit)?, singleLine: Boolean, animationProgress: Float, paddingValues: PaddingValues )</ID>
-    <ID>LongParameterList:TrendyolTextField.kt$( textFieldHeight: Int, hasLabel: Boolean, labelBaseline: Int, leadingHeight: Int, trailingHeight: Int, placeholderHeight: Int, constraints: Constraints, density: Float, paddingValues: PaddingValues )</ID>
-    <ID>LongParameterList:TrendyolTextField.kt$( width: Int, height: Int, textPlaceable: Placeable, placeholderPlaceable: Placeable?, leadingPlaceable: Placeable?, trailingPlaceable: Placeable?, singleLine: Boolean, density: Float, paddingValues: PaddingValues )</ID>
-    <ID>LongParameterList:TrendyolTextField.kt$( width: Int, height: Int, textfieldPlaceable: Placeable, labelPlaceable: Placeable?, placeholderPlaceable: Placeable?, leadingPlaceable: Placeable?, trailingPlaceable: Placeable?, singleLine: Boolean, labelEndPosition: Int, textPosition: Int, animationProgress: Float, density: Float )</ID>
-    <ID>LongParameterList:TrendyolTextFieldDefaults.kt$( value: String, innerTextField: @Composable () -&gt; Unit, enabled: Boolean, singleLine: Boolean, visualTransformation: VisualTransformation, interactionSource: InteractionSource, isError: Boolean = false, label: @Composable (() -&gt; Unit)? = null, placeholder: @Composable (() -&gt; Unit)? = null, leadingIcon: @Composable (() -&gt; Unit)? = null, trailingIcon: @Composable (() -&gt; Unit)? = null, colors: TextFieldColors = TextFieldDefaults.outlinedTextFieldColors(), contentPadding: PaddingValues = TextFieldDefaults.outlinedTextFieldPadding(), border: @Composable () -&gt; Unit = { TextFieldDefaults.BorderBox(enabled, isError, interactionSource, colors) } )</ID>
-    <ID>LongParameterList:TrendyolTextFieldImpl.kt$( type: TrendyolTextFieldType, value: String, innerTextField: @Composable () -&gt; Unit, visualTransformation: VisualTransformation, label: @Composable (() -&gt; Unit)?, placeholder: @Composable (() -&gt; Unit)? = null, leadingIcon: @Composable (() -&gt; Unit)? = null, trailingIcon: @Composable (() -&gt; Unit)? = null, singleLine: Boolean = false, enabled: Boolean = true, isError: Boolean = false, interactionSource: InteractionSource, contentPadding: PaddingValues, colors: TextFieldColors, labelInitialTextStyle: TextStyle = TrendyolDesign.typography.subtitleMedium, labelEndTextStyle: TextStyle = TrendyolDesign.typography.body2Medium, border: @Composable (() -&gt; Unit)? = null )</ID>
-    <ID>LongParameterList:TrendyolTextFieldImpl.kt$TextFieldTransitionScope$( inputState: InputPhase, focusedTextStyleColor: Color, unfocusedTextStyleColor: Color, contentColor: @Composable (InputPhase) -&gt; Color, showLabel: Boolean, content: @Composable ( labelProgress: Float, labelTextStyleColor: Color, labelContentColor: Color, placeholderOpacity: Float ) -&gt; Unit )</ID>
-    <ID>MagicNumber:TrendyolRadioButtonSize.kt$TrendyolRadioButtonSize.Small$1.6</ID>
-    <ID>MagicNumber:TrendyolRadioButtonSize.kt$TrendyolRadioButtonSize.XSmall$1.2</ID>
-    <ID>MatchingDeclarationName:TrendyolTextFieldImpl.kt$TrendyolTextFieldType</ID>
-    <ID>ModifierMissing:CheckToolbarLayoutIds.kt$CheckToolbarLayoutIds</ID>
-    <ID>ModifierWithoutDefault:TrendyolOutlinedTextFieldImpl.kt$modifier</ID>
-    <ID>ModifierWithoutDefault:TrendyolTextField.kt$modifier</ID>
-    <ID>TopLevelPropertyNaming:TrendyolOutlinedTextFieldImpl.kt$internal const val BorderId = "border"</ID>
-    <ID>TopLevelPropertyNaming:TrendyolTextFieldImpl.kt$internal const val AnimationDuration = 150</ID>
-    <ID>TopLevelPropertyNaming:TrendyolTextFieldImpl.kt$internal const val LabelId = "Label"</ID>
-    <ID>TopLevelPropertyNaming:TrendyolTextFieldImpl.kt$internal const val LeadingId = "Leading"</ID>
-    <ID>TopLevelPropertyNaming:TrendyolTextFieldImpl.kt$internal const val PlaceholderId = "Hint"</ID>
-    <ID>TopLevelPropertyNaming:TrendyolTextFieldImpl.kt$internal const val TextFieldId = "TextField"</ID>
-    <ID>TopLevelPropertyNaming:TrendyolTextFieldImpl.kt$internal const val TrailingId = "Trailing"</ID>
-    <ID>TopLevelPropertyNaming:TrendyolTextFieldImpl.kt$private const val PlaceholderAnimationDelayOrDuration = 67</ID>
-    <ID>TopLevelPropertyNaming:TrendyolTextFieldImpl.kt$private const val PlaceholderAnimationDuration = 83</ID>
     <ID>UnstableCollections:Text.kt$Map&lt;String, InlineTextContent&gt;</ID>
-    <ID>Wrapping:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:285</ID>
-    <ID>Wrapping:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:286</ID>
+    <ID>ModifierMissing:CheckToolbarLayoutIds.kt$CheckToolbarLayoutIds</ID>
   </CurrentIssues>
 </SmellBaseline>
