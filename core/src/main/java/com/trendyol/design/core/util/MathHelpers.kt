@@ -1,7 +1,6 @@
 package com.trendyol.design.core.util
 
 import kotlin.math.roundToInt
-import kotlin.math.roundToLong
 
 /**
  * Linearly interpolate between [start] and [stop] with [fraction] fraction between them.
