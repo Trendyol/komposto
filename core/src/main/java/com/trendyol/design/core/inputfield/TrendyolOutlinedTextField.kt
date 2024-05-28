@@ -132,7 +132,7 @@ internal fun TrendyolOutlinedTextField(
             )
             .defaultMinSize(
                 minWidth = TextFieldDefaults.MinWidth,
-                minHeight = 43.dp
+                minHeight = 44.dp
             ),
         onValueChange = onValueChange,
         enabled = enabled,
