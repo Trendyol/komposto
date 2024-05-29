@@ -2,6 +2,7 @@ package com.trendyol.design.core.inputfield
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -72,6 +73,12 @@ fun MultiLineOutlineTextField(
             singleLine = false,
             maxLines = 4,
             minLines = 4,
+            contentPadding = PaddingValues(
+                top = 14.dp,
+                bottom = 14.dp,
+                start = 12.dp,
+                end = 12.dp
+            )
         )
 
         Row(

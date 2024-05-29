@@ -103,8 +103,8 @@ internal fun TrendyolOutlinedTextField(
     shape: Shape = MaterialTheme.shapes.small,
     colors: TextFieldColors = TextFieldDefaults.outlinedTextFieldColors(),
     contentPadding: PaddingValues = TextFieldDefaults.outlinedTextFieldPadding(
-        top = 14.dp,
-        bottom = 14.dp,
+        top = 0.dp,
+        bottom = 0.dp,
         start = 12.dp,
         end = 12.dp
     )
