@@ -101,7 +101,6 @@ fun InputEmailField(
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             readOnly = readOnly,
-            textStyle = TrendyolDesign.typography.subtitleMedium,
             label = label,
             placeholder = placeholder,
             interactionSource = interactionSource,
