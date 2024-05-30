@@ -97,9 +97,7 @@ internal fun TrendyolOutlinedTextFieldLayout(
             val endTextFieldPadding = paddingValues.calculateEndPadding(layoutDirection)
             val padding = Modifier.padding(
                 start = if (leading != null) {
-                    (startTextFieldPadding - HorizontalIconPadding).coerceAtLeast(
-                        0.dp
-                    )
+                    (startTextFieldPadding - HorizontalIconPadding).coerceAtLeast(0.dp)
                 } else {
                     startTextFieldPadding
                 },

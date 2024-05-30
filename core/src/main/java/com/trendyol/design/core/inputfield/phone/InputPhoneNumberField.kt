@@ -75,7 +75,7 @@ fun InputPhoneNumberField(
             modifier = Modifier.height(44.dp)
         ) {
             Dropdown(
-                style = TrendyolDropdownStyle.Outlined,
+                style = TrendyolDropdownStyle.FloatingLabelOutlined,
                 value = countryCode,
                 label = countryCodeLabel,
                 isError = error != null,
@@ -104,7 +104,6 @@ fun InputPhoneNumberField(
                     {
                         Text(
                             text = numberLabel,
-                            style = TrendyolDesign.typography.body2Medium,
                         )
                     }
                 } else null,
