@@ -45,6 +45,7 @@ fun MultiLineOutlineTextField(
     maxChar: Int,
     modifier: Modifier = Modifier,
     label: String? = null,
+    placeholder: String? = null,
     errorLabel: String? = null,
     isError: Boolean = false,
     enabled: Boolean = true,
@@ -60,6 +61,14 @@ fun MultiLineOutlineTextField(
             label = if (!label.isNullOrBlank()) {
                 {
                     Text(text = label)
+                }
+            } else null,
+            placeholder = if (!placeholder.isNullOrBlank()) {
+                {
+                    Text(
+                        text = placeholder,
+                        style = TrendyolDesign.typography.subtitleMedium,
+                    )
                 }
             } else null,
             onValueChange = { changedValue ->
