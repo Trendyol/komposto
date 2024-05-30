@@ -15,6 +15,7 @@ import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.takeOrElse
@@ -22,6 +23,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldDecorationBox
 import com.trendyol.theme.TrendyolDesign
 
 /**
@@ -84,7 +86,7 @@ internal fun TrendyolOutlinedTextField(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     readOnly: Boolean = false,
-    textStyle: TextStyle = LocalTextStyle.current,
+    textStyle: TextStyle = TrendyolDesign.typography.subtitleMedium.copy(color = Color.Unspecified),
     label: @Composable (() -> Unit)? = null,
     placeholder: @Composable (() -> Unit)? = null,
     leadingIcon: @Composable (() -> Unit)? = null,
@@ -101,8 +103,8 @@ internal fun TrendyolOutlinedTextField(
     shape: Shape = MaterialTheme.shapes.small,
     colors: TextFieldColors = TextFieldDefaults.outlinedTextFieldColors(),
     contentPadding: PaddingValues = TextFieldDefaults.outlinedTextFieldPadding(
-        top = 14.dp,
-        bottom = 14.dp,
+        top = 0.dp,
+        bottom = 0.dp,
         start = 12.dp,
         end = 12.dp
     )
@@ -145,7 +147,7 @@ internal fun TrendyolOutlinedTextField(
         maxLines = maxLines,
         minLines = minLines,
         decorationBox = @Composable { innerTextField ->
-            TextFieldDefaults.OutlinedTextFieldDecorationBox(
+            TrendyolOutlinedTextFieldDecorationBox(
                 value = value,
                 visualTransformation = visualTransformation,
                 innerTextField = innerTextField,
@@ -160,11 +162,13 @@ internal fun TrendyolOutlinedTextField(
                 colors = colors,
                 border = {
                     TextFieldDefaults.BorderBox(
-                        enabled,
-                        isError,
-                        interactionSource,
-                        colors,
-                        shape
+                        enabled = enabled,
+                        isError = isError,
+                        interactionSource = interactionSource,
+                        colors = colors,
+                        shape = shape,
+                        focusedBorderThickness = 1.dp,
+                        unfocusedBorderThickness = 1.dp,
                     )
                 },
                 contentPadding = contentPadding

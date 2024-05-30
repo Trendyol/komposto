@@ -4,7 +4,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Text
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -12,11 +11,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.fill.ArrowDown
+import com.trendyol.design.core.previewtheme.PreviewTheme
+import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
 /**
@@ -60,15 +62,9 @@ fun Dropdown(
                     onClick = onClicked,
                 ),
             value = text,
-            textStyle = TrendyolDesign.typography.subtitleMedium.copy(
-                color = style.outlinedTextFieldColors.textColor(enabled = enabled).value
-            ),
             label = if (!label.isNullOrBlank()) {
                 {
-                    Text(
-                        text = label,
-                        style = TrendyolDesign.typography.subtitleMedium,
-                    )
+                    Text(text = label)
                 }
             } else null,
             onValueChange = { selected ->
@@ -101,5 +97,20 @@ fun Dropdown(
                 style = TrendyolDesign.typography.body1ColorWarning,
             )
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DropdownPreview() {
+    PreviewTheme {
+        Dropdown(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolDropdownStyle.Filled,
+            value = "Disabled",
+            isError = false,
+            enabled = false,
+            onClicked = {},
+        )
     }
 }
