@@ -11,6 +11,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
@@ -80,6 +81,8 @@ fun Dropdown(
                 Icon(
                     imageVector = Icons.Fill.ArrowDown,
                     size = TrendyolIconSize.XXSmall,
+                    tint = if (!enabled && style is TrendyolDropdownStyle.Filled)
+                        TrendyolDesign.colors.colorBorder else Color.Unspecified
                 )
             }
         )
