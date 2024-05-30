@@ -10,9 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -47,7 +45,6 @@ import com.trendyol.theme.TrendyolDesign
  * @param interactionSource [MutableInteractionSource] representing the source of user interactions.
  * @param shape Shape of the input field.
  */
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun InputEmailField(
     email: String,
@@ -111,12 +108,6 @@ fun InputEmailField(
             singleLine = true,
             shape = shape,
             colors = TrendyolOutlinedTextFieldStyle.Outlined.outlinedTextFieldColors,
-            contentPadding = TextFieldDefaults.outlinedTextFieldPadding(
-                top = 14.dp,
-                bottom = 14.dp,
-                start = 12.dp,
-                end = 12.dp
-            ),
         )
 
         if (enabled && error != null) {
