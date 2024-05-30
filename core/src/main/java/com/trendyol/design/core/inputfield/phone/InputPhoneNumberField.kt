@@ -9,9 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -49,7 +47,6 @@ import com.trendyol.theme.TrendyolDesign
  * @param shape Shape of the only phone number input field.
  * @param maxPhoneNumberLength Maximum length allowed for the phone number.
  */
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun InputPhoneNumberField(
     countryCode: String,
@@ -99,12 +96,9 @@ fun InputPhoneNumberField(
                     }
                 },
                 enabled = enabled,
-                textStyle = TrendyolDesign.typography.subtitleMedium,
                 label = if (numberLabel.isNotBlank()) {
                     {
-                        Text(
-                            text = numberLabel,
-                        )
+                        Text(text = numberLabel)
                     }
                 } else null,
                 isError = error != null,
@@ -115,12 +109,6 @@ fun InputPhoneNumberField(
                 interactionSource = interactionSource,
                 shape = shape,
                 colors = TrendyolOutlinedTextFieldStyle.Outlined.outlinedTextFieldColors,
-                contentPadding = TextFieldDefaults.outlinedTextFieldPadding(
-                    top = 14.dp,
-                    bottom = 14.dp,
-                    start = 12.dp,
-                    end = 12.dp
-                ),
             )
         }
 
