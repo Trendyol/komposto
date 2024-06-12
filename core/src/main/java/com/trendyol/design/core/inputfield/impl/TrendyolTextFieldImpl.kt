@@ -369,4 +369,4 @@ internal val ZeroConstraints = Constraints(0, 0, 0, 0)
 internal val TextFieldPadding = 16.dp
 internal val HorizontalIconPadding = 12.dp
 
-internal val IconDefaultSizeModifier = Modifier.defaultMinSize(48.dp, 48.dp)
+internal val IconDefaultSizeModifier = Modifier.defaultMinSize(12.dp, 12.dp)

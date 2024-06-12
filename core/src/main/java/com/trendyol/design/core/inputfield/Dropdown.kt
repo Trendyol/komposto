@@ -79,6 +79,7 @@ fun Dropdown(
             readOnly = true,
             trailingIcon = {
                 Icon(
+                    modifier = Modifier.padding(vertical = 16.dp, horizontal = 12.dp),
                     imageVector = Icons.Fill.ArrowDown,
                     size = TrendyolIconSize.XXSmall,
                     tint = if (!enabled && style is TrendyolDropdownStyle.Filled)
@@ -110,9 +111,9 @@ private fun DropdownPreview() {
         Dropdown(
             modifier = Modifier.padding(16.dp),
             style = TrendyolDropdownStyle.Filled,
-            value = "Disabled",
+            value = "Filled",
             isError = false,
-            enabled = false,
+            enabled = true,
             onClicked = {},
         )
     }
