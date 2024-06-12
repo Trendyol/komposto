@@ -18,7 +18,7 @@ sealed interface TrendyolDropdownStyle {
                 unfocusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 unfocusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
-                focusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant3,
+                focusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 focusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
                 disabledBorderColor = TrendyolDesign.colors.colorBorder,
@@ -41,7 +41,7 @@ sealed interface TrendyolDropdownStyle {
                 unfocusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 unfocusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
-                focusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant3,
+                focusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 focusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
                 disabledBorderColor = TrendyolDesign.colors.colorBorder,
@@ -64,7 +64,7 @@ sealed interface TrendyolDropdownStyle {
                 unfocusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 unfocusedBorderColor = TrendyolDesign.colors.colorBorder,
 
-                focusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant3,
+                focusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 focusedBorderColor = TrendyolDesign.colors.colorBorder,
 
                 disabledBorderColor = TrendyolDesign.colors.colorBorder.copy(alpha = 0.5f),
