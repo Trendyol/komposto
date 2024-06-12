@@ -62,10 +62,10 @@ sealed interface TrendyolDropdownStyle {
 
                 placeholderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 unfocusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-                unfocusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
+                unfocusedBorderColor = TrendyolDesign.colors.colorBorder,
 
                 focusedLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
-                focusedBorderColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
+                focusedBorderColor = TrendyolDesign.colors.colorBorder,
 
                 disabledBorderColor = TrendyolDesign.colors.colorBorder.copy(alpha = 0.5f),
                 disabledLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1
