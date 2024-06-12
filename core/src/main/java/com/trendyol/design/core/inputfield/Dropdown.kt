@@ -12,6 +12,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
@@ -65,7 +66,11 @@ fun Dropdown(
             value = text,
             label = if (!label.isNullOrBlank()) {
                 {
-                    Text(text = label)
+                    Text(
+                        text = label,
+                        overflow = TextOverflow.Ellipsis,
+                        softWrap = false,
+                    )
                 }
             } else null,
             onValueChange = { selected ->
@@ -79,7 +84,12 @@ fun Dropdown(
             readOnly = true,
             trailingIcon = {
                 Icon(
-                    modifier = Modifier.padding(vertical = 16.dp, horizontal = 12.dp),
+                    modifier = Modifier.padding(
+                        top = 16.dp,
+                        bottom = 16.dp,
+                        start = 8.dp,
+                        end = 12.dp
+                    ),
                     imageVector = Icons.Fill.ArrowDown,
                     size = TrendyolIconSize.XXSmall,
                     tint = if (!enabled && style is TrendyolDropdownStyle.Filled)

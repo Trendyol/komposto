@@ -4,14 +4,14 @@
   <CurrentIssues>
     <ID>CyclomaticComplexMethod:TrendyolTextFieldImpl.kt$@OptIn(ExperimentalMaterialApi::class) @Composable internal fun TrendyolCommonDecorationBox( type: TrendyolTextFieldType, value: String, innerTextField: @Composable () -&gt; Unit, visualTransformation: VisualTransformation, label: @Composable (() -&gt; Unit)?, placeholder: @Composable (() -&gt; Unit)? = null, leadingIcon: @Composable (() -&gt; Unit)? = null, trailingIcon: @Composable (() -&gt; Unit)? = null, singleLine: Boolean = false, enabled: Boolean = true, isError: Boolean = false, interactionSource: InteractionSource, contentPadding: PaddingValues, colors: TextFieldColors, labelInitialTextStyle: TextStyle = TrendyolDesign.typography.subtitleMedium, labelEndTextStyle: TextStyle = TrendyolDesign.typography.body2Medium, border: @Composable (() -&gt; Unit)? = null )</ID>
     <ID>ForbiddenComment:TrendyolTextFieldImpl.kt$// TODO: DefaultErrorMessage</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:170</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:286</ID>
+    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:168</ID>
+    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:284</ID>
+    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:377</ID>
+    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:378</ID>
     <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:379</ID>
     <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:380</ID>
     <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:381</ID>
     <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:382</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:383</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:384</ID>
     <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolTextFieldImpl.kt:100</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( height: Int, width: Int, leadingPlaceable: Placeable?, trailingPlaceable: Placeable?, textFieldPlaceable: Placeable, labelPlaceable: Placeable?, placeholderPlaceable: Placeable?, borderPlaceable: Placeable, animationProgress: Float, singleLine: Boolean, density: Float, layoutDirection: LayoutDirection, paddingValues: PaddingValues )</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( leadingPlaceableHeight: Int, trailingPlaceableHeight: Int, textFieldPlaceableHeight: Int, labelPlaceableHeight: Int, placeholderPlaceableHeight: Int, animationProgress: Float, constraints: Constraints, density: Float, paddingValues: PaddingValues )</ID>
@@ -41,7 +41,7 @@
     <ID>TopLevelPropertyNaming:TrendyolTextFieldImpl.kt$private const val PlaceholderAnimationDelayOrDuration = 67</ID>
     <ID>TopLevelPropertyNaming:TrendyolTextFieldImpl.kt$private const val PlaceholderAnimationDuration = 83</ID>
     <ID>UnstableCollections:Text.kt$Map&lt;String, InlineTextContent&gt;</ID>
-    <ID>Wrapping:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:285</ID>
-    <ID>Wrapping:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:286</ID>
+    <ID>Wrapping:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:283</ID>
+    <ID>Wrapping:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:284</ID>
   </CurrentIssues>
 </SmellBaseline>
