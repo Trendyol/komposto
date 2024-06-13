@@ -3,8 +3,8 @@ package com.trendyol.design.core.price
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,7 +29,7 @@ fun PriceComposable(
     val model = style.priceModel
 
     Column(
-        modifier = modifier,
+        modifier = modifier.wrapContentSize(),
         verticalArrangement = Arrangement.Center
     ) {
         Row(
@@ -45,7 +45,6 @@ fun PriceComposable(
             }
             if (model.campaignText.isNullOrBlank().not() && model.campaignTextStyle != null) {
                 Text(
-                    modifier = Modifier.height(12.dp),
                     text = model.campaignText!!,
                     style = model.campaignTextStyle
                 )
@@ -62,8 +61,7 @@ fun PriceComposable(
         if (model.salePriceText.isNullOrBlank().not() && model.salePriceTextStyle != null) {
             Text(
                 modifier = Modifier
-                    .padding(top = 2.dp)
-                    .height(16.dp),
+                    .padding(top = 2.dp),
                 text = model.salePriceText!!,
                 style = model.salePriceTextStyle,
             )
