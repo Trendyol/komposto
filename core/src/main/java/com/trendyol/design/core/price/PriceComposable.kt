@@ -15,7 +15,7 @@ import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.fill.Basket
-import com.trendyol.design.core.icon.icons.fill.DownArrow
+import com.trendyol.design.core.icon.icons.fill.CampaignDownArrow
 import com.trendyol.design.core.previewtheme.PreviewTheme
 import com.trendyol.design.core.previewtheme.TrendyolColor
 import com.trendyol.design.core.text.Text
@@ -164,7 +164,7 @@ private fun SinglePriceWithCampaignStyleLowestPricePreview() {
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
                 campaignTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
                 campaignText = "Son 30 Günün En Düşük Fiyatı",
-                icon = Icons.Fill.DownArrow,
+                icon = Icons.Fill.CampaignDownArrow,
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorWarning
             )
@@ -202,7 +202,7 @@ private fun DualPriceWithCampaignStyleLowestPricePreview() {
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
                 campaignTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
                 campaignText = "Son 30 Günün En Düşük Fiyatı",
-                icon = Icons.Fill.DownArrow,
+                icon = Icons.Fill.CampaignDownArrow,
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorWarning,
                 marketPriceText = "999999.90 TL",
@@ -242,7 +242,7 @@ private fun SingleUnitPriceWithCampaignStyleLowestPricePreview() {
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
                 campaignTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
                 campaignText = "9999 TL’ye 999 TL İndirim",
-                icon = Icons.Fill.DownArrow,
+                icon = Icons.Fill.CampaignDownArrow,
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorWarning,
                 unitPriceText = "(99.90 TL / Kapsül)",

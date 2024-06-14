@@ -18,17 +18,17 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 @Preview
 @Composable
 private fun DownArrowPreview() {
-    Icon(imageVector = Icons.Fill.DownArrow, size = TrendyolIconSize.XXSmall)
+    Icon(imageVector = Icons.Fill.CampaignDownArrow, size = TrendyolIconSize.XXSmall)
 }
 
-private var _DownArrow: ImageVector? = null
+private var _CampaignDownArrow: ImageVector? = null
 
-public val Icons.Fill.DownArrow: ImageVector
+public val Icons.Fill.CampaignDownArrow: ImageVector
     get() {
-        if (_DownArrow != null) {
-            return _DownArrow!!
+        if (_CampaignDownArrow != null) {
+            return _CampaignDownArrow!!
         }
-        _DownArrow = ImageVector.Builder(
+        _CampaignDownArrow = ImageVector.Builder(
             name = "DownArrow",
             defaultWidth = 12.dp,
             defaultHeight = 12.dp,
@@ -69,5 +69,5 @@ public val Icons.Fill.DownArrow: ImageVector
                 }
             }
         }.build()
-        return _DownArrow!!
+        return _CampaignDownArrow!!
     }
