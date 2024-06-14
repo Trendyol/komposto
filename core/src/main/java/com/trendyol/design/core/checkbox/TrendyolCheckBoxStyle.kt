@@ -34,9 +34,6 @@ sealed interface TrendyolCheckBoxStyle {
 
         override val innerPadding: Dp
             get() = 0.dp
-
-        override val strokeWidth: Dp
-            get() = 2.dp
     }
 
     data object Secondary : CheckboxStyle {
@@ -60,8 +57,5 @@ sealed interface TrendyolCheckBoxStyle {
 
         override val innerPadding: Dp
             get() = 2.dp
-
-        override val strokeWidth: Dp
-            get() = 1.dp
     }
 }
