@@ -24,10 +24,4 @@ interface CheckboxStyle {
      * Returns the inner padding for the checkbox.
      */
     val innerPadding: Dp
-
-    /**
-     * Returns the stroke width of the checkbox.
-     * Stroke width determines the thickness of the checkbox border.
-     */
-    val strokeWidth: Dp
 }
