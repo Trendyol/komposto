@@ -56,7 +56,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.trendyol"
             artifactId = "design-core"
-            version = properties["VERSION"]?.toString() ?: System.getenv("VERSION")
+            version = publishedLibs.versions.design.get()
 
             afterEvaluate {
                 from(components["release"])
