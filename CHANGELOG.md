@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - This changelog file.
 - Contribution guide in the `CONTRIBUTING.md` file.
 
+### Fixed
+
+- Some compose dependencies were not using the the version from Compose Bill of Materials (BoM).
+
 ### Changed
 
 - Updated Gradle from 8.7 to 8.8.
