@@ -81,7 +81,7 @@ internal class ToolbarTests : DesignScreenshotTest() {
             DesignScreenshotTestContainer("ToolbarEndIcon") {
                 BoxWithHorizontalPadding {
                     Toolbar(
-                        title = "ToolbarIconTextButton",
+                        title = "ToolbarEndIcon",
                         style = TrendyolToolbarStyle.EndIcon(
                             endIcon = {
                                 Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ })
@@ -108,7 +108,7 @@ internal class ToolbarTests : DesignScreenshotTest() {
             DesignScreenshotTestContainer("ToolbarNone") {
                 BoxWithHorizontalPadding {
                     Toolbar(
-                        title = "ToolbarIconNone",
+                        title = "ToolbarNone",
                         style = TrendyolToolbarStyle.None
                     )
                 }
@@ -116,7 +116,7 @@ internal class ToolbarTests : DesignScreenshotTest() {
             DesignScreenshotTestContainer("ToolbarTextButton") {
                 BoxWithHorizontalPadding {
                     Toolbar(
-                        title = "ToolbarIconTextButton",
+                        title = "ToolbarTextButton",
                         style = TrendyolToolbarStyle.TextButton(
                             textButton = {
                                 Text(text = toolbarText, onClick = { /*TODO*/ })
