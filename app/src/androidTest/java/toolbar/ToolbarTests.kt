@@ -24,10 +24,10 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarIconEndIcon",
                         style = TrendyolToolbarStyle.Icon.EndIcon(
                             icon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ })
+                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             },
                             endIcon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ })
+                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             }
                         )
                     )
@@ -39,13 +39,13 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarIconEndTwoIcon",
                         style = TrendyolToolbarStyle.Icon.EndTwoIcons(
                             icon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ })
+                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             },
                             firstIcon = {
-                                Icon(imageVector = Icons.Fill.Help, onClick = { /*TODO*/ })
+                                Icon(imageVector = Icons.Fill.Help, onClick= { })
                             },
                             secondIcon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ })
+                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             }
                         )
                     )
@@ -57,7 +57,7 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarIconNone",
                         style = TrendyolToolbarStyle.Icon.None(
                             icon = {
-                                Icon(imageVector = Icons.Fill.Help, onClick = { /*TODO*/ })
+                                Icon(imageVector = Icons.Fill.Help, onClick = { })
                             }
                         )
                     )
@@ -69,10 +69,10 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarIconTextButton",
                         style = TrendyolToolbarStyle.Icon.TextButton(
                             icon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ })
+                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             },
                             textButton = {
-                                Text(text = toolbarText, onClick = { /*TODO*/ })
+                                Text(text = toolbarText, onClick = { })
                             }
                         )
                     )
@@ -84,7 +84,7 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarEndIcon",
                         style = TrendyolToolbarStyle.EndIcon(
                             endIcon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ })
+                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             }
                         )
                     )
@@ -96,10 +96,10 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarIconEndTwoIcon",
                         style = TrendyolToolbarStyle.EndTwoIcons(
                             firstIcon = {
-                                Icon(imageVector = Icons.Fill.Help, onClick = { /*TODO*/ })
+                                Icon(imageVector = Icons.Fill.Help, onClick = { })
                             },
                             secondIcon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ })
+                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             }
                         )
                     )
@@ -119,7 +119,7 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarTextButton",
                         style = TrendyolToolbarStyle.TextButton(
                             textButton = {
-                                Text(text = toolbarText, onClick = { /*TODO*/ })
+                                Text(text = toolbarText, onClick = { })
                             }
                         )
                     )
