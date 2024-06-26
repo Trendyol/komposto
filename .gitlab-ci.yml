@@ -35,6 +35,7 @@ check:
 
 publish-msg:
   stage: publish-msg
+  image: python:3.6
   variables:
     PUBLISH_MSG_DESCRIPTION: "default publish message"
   script:
