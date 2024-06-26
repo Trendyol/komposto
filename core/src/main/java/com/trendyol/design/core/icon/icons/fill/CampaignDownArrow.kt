@@ -17,7 +17,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun DownArrowPreview() {
+private fun CampaignDownArrowPreview() {
     Icon(imageVector = Icons.Fill.CampaignDownArrow, size = TrendyolIconSize.XXSmall)
 }
 
@@ -29,7 +29,7 @@ public val Icons.Fill.CampaignDownArrow: ImageVector
             return _CampaignDownArrow!!
         }
         _CampaignDownArrow = ImageVector.Builder(
-            name = "DownArrow",
+            name = "CampaignDownArrow",
             defaultWidth = 12.dp,
             defaultHeight = 12.dp,
             viewportWidth = 12f,

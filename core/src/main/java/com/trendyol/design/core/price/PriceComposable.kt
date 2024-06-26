@@ -21,6 +21,15 @@ import com.trendyol.design.core.previewtheme.TrendyolColor
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * Composable function for vertical price custom view
+ * This function includes sale price, market price, unit price and campaign text.
+ * It allows you to draw a custom price view by choosing the style that suits your design.
+ *
+ * @param modifier Optional parameter to specify the modifier for this composable.
+ * @param style PriceStyle configuration for the price view, specifying its appearance and behavior.
+ */
+
 @Composable
 fun PriceComposable(
     modifier: Modifier = Modifier,
