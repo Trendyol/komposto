@@ -23,4 +23,3 @@ latest_release_changelog = "\n\n".join(parsed_sections[0])
 os.environ['PUBLISH_MSG_DESCRIPTION'] = latest_release_changelog
 
 pub_msg = os.getenv('PUBLISH_MSG_DESCRIPTION')
-print(pub_msg)
