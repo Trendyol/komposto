@@ -34,7 +34,6 @@ for line in latest_release_changelog.split('\n'):
     else:
         modified_msg.append(line)
 
-
 publish_msg_description = '\n'.join(modified_msg)
 
 # Execute Leylek task
