@@ -7,9 +7,18 @@ include:
 stages:
   - build
   - check
+  - setup
   - publish-msg
   - deploy
   - announcement
+
+variables:
+  VIRTUAL_ENV: "venv"
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
 
 build:
   stage: build
@@ -33,14 +42,28 @@ check:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: always
 
+setup:
+  stage: setup
+  image: python:3.6
+  script:
+    - python3 -m venv $VIRTUAL_ENV
+    - source $VIRTUAL_ENV/bin/activate
+    - pip install --upgrade pip
+    - pip install -r ./scripts/requirements.txt
+  artifacts:
+    paths:
+      - venv/
+
 publish-msg:
   stage: publish-msg
   image: python:3.6
   variables:
     PUBLISH_MSG_DESCRIPTION: "default publish message"
   script:
+    - source venv/bin/activate
     - python3 ./scripts/publish_message_description.py
-    - 'curl -X POST "https://mobile-androidplatform-leylek-legacy-service.mars.trendyol.com/slack/send-message" --header "Content-Type: application/json" --header "Authorization: 442c5be1-5fa8-4880-b304-619eebb61d65" --data-raw "{ \"channel\": \"temp-leylek-commands-workflow\", \"message\": \"$PUBLISH_MSG_DESCRIPTION\" }"'
+  dependencies:
+    - setup
 
 publish:
   stage: deploy
