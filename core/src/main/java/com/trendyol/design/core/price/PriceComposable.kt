@@ -23,7 +23,7 @@ import com.trendyol.theme.TrendyolDesign
 
 /**
  * Composable function for vertical price custom view
- * This function includes sale price, market price, unit price and campaign text.
+ * This function includes sale price, market price, bottom info like unit price and upper info like campaign text.
  * It allows you to draw a custom price view by choosing the style that suits your design.
  *
  * @param modifier Optional parameter to specify the modifier for this composable.
@@ -52,10 +52,10 @@ fun PriceComposable(
                     tint = model.iconTint
                 )
             }
-            if (model.campaignText.isNullOrBlank().not() && model.campaignTextStyle != null) {
+            if (model.upperInfoText.isNullOrBlank().not() && model.upperInfoTextStyle != null) {
                 Text(
-                    text = model.campaignText!!,
-                    style = model.campaignTextStyle
+                    text = model.upperInfoText!!,
+                    style = model.upperInfoTextStyle
                 )
             }
         }
@@ -75,11 +75,11 @@ fun PriceComposable(
                 style = model.salePriceTextStyle,
             )
         }
-        if (model.unitPriceText.isNullOrBlank().not() && model.unitPriceTextStyle != null) {
+        if (model.bottomInfoText.isNullOrBlank().not() && model.bottomInfoTextStyle != null) {
             Text(
                 modifier = Modifier.padding(top = 2.dp),
-                text = model.unitPriceText!!,
-                style = model.unitPriceTextStyle
+                text = model.bottomInfoText!!,
+                style = model.bottomInfoTextStyle
             )
         }
     }
@@ -115,14 +115,14 @@ private fun DualPriceStylePreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun SingleUnitPriceStylePreview() {
+private fun SinglePriceWithBottomInfoStylePreview() {
     PreviewTheme {
         PriceComposable(
-            style = TrendyolPriceStyle.SingleUnitPrice(
+            style = TrendyolPriceStyle.SinglePriceWithBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                unitPriceText = "(99.90 TL / Kapsül)",
-                unitPriceTextStyle = TrendyolDesign.typography.body2ColorPrimary
+                bottomInfoText = "(99.90 TL / Kapsül)",
+                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorPrimary
             )
         )
     }
@@ -130,14 +130,14 @@ private fun SingleUnitPriceStylePreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun DualUnitPriceStylePreview() {
+private fun DualPriceWithBottomInfoStylePreview() {
     PreviewTheme {
         PriceComposable(
-            style = TrendyolPriceStyle.DualUnitPrice(
+            style = TrendyolPriceStyle.DualPriceWithBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                unitPriceText = "(99.90 TL / Kapsül)",
-                unitPriceTextStyle = TrendyolDesign.typography.body2ColorPrimary,
+                bottomInfoText = "(99.90 TL / Kapsül)",
+                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorPrimary,
                 marketPriceText = "999999.90 TL",
                 marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
             )
@@ -147,14 +147,14 @@ private fun DualUnitPriceStylePreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun SinglePriceWithCampaignStyleBasketPreview() {
+private fun SinglePriceWithUpperInfoStyleBasketPreview() {
     PreviewTheme {
         PriceComposable(
-            style = TrendyolPriceStyle.SinglePriceWithCampaign(
+            style = TrendyolPriceStyle.SinglePriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                campaignTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
-                campaignText = "9999 TL’ye 999 TL İndirim",
+                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
+                upperInfoText = "9999 TL’ye 999 TL İndirim",
                 icon = Icons.Fill.Basket,
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorPrimary
@@ -165,14 +165,14 @@ private fun SinglePriceWithCampaignStyleBasketPreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun SinglePriceWithCampaignStyleLowestPricePreview() {
+private fun SinglePriceWithUpperInfoStyleLowestPricePreview() {
     PreviewTheme {
         PriceComposable(
-            style = TrendyolPriceStyle.SinglePriceWithCampaign(
+            style = TrendyolPriceStyle.SinglePriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
-                campaignTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
-                campaignText = "Son 30 Günün En Düşük Fiyatı",
+                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
+                upperInfoText = "Son 30 Günün En Düşük Fiyatı",
                 icon = Icons.Fill.CampaignDownArrow,
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorWarning
@@ -183,14 +183,14 @@ private fun SinglePriceWithCampaignStyleLowestPricePreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun DualPriceWithCampaignStyleBasketPreview() {
+private fun DualPriceWithUpperInfoStyleBasketPreview() {
     PreviewTheme {
         PriceComposable(
-            style = TrendyolPriceStyle.DualPriceWithCampaign(
+            style = TrendyolPriceStyle.DualPriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                campaignTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
-                campaignText = "9999 TL’ye 999 TL İndirim",
+                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
+                upperInfoText = "9999 TL’ye 999 TL İndirim",
                 icon = Icons.Fill.Basket,
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorPrimary,
@@ -203,14 +203,14 @@ private fun DualPriceWithCampaignStyleBasketPreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun DualPriceWithCampaignStyleLowestPricePreview() {
+private fun DualPriceWithUpperInfoStyleLowestPricePreview() {
     PreviewTheme {
         PriceComposable(
-            style = TrendyolPriceStyle.DualPriceWithCampaign(
+            style = TrendyolPriceStyle.DualPriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
-                campaignTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
-                campaignText = "Son 30 Günün En Düşük Fiyatı",
+                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
+                upperInfoText = "Son 30 Günün En Düşük Fiyatı",
                 icon = Icons.Fill.CampaignDownArrow,
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorWarning,
@@ -223,19 +223,19 @@ private fun DualPriceWithCampaignStyleLowestPricePreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun SingleUnitPriceWithCampaignStyleBasketPreview() {
+private fun SinglePriceWithUpperAndBottomInfoStyleBasketPreview() {
     PreviewTheme {
         PriceComposable(
-            style = TrendyolPriceStyle.SingleUnitPriceWithCampaign(
+            style = TrendyolPriceStyle.SinglePriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                campaignTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
-                campaignText = "9999 TL’ye 999 TL İndirim",
+                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
+                upperInfoText = "9999 TL’ye 999 TL İndirim",
                 icon = Icons.Fill.Basket,
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorPrimary,
-                unitPriceText = "(99.90 TL / Kapsül)",
-                unitPriceTextStyle = TrendyolDesign.typography.body2ColorPrimary,
+                bottomInfoText = "(99.90 TL / Kapsül)",
+                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorPrimary,
             )
         )
     }
@@ -243,19 +243,19 @@ private fun SingleUnitPriceWithCampaignStyleBasketPreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun SingleUnitPriceWithCampaignStyleLowestPricePreview() {
+private fun SinglePriceWithUpperAndBottomInfoStyleLowestPricePreview() {
     PreviewTheme {
         PriceComposable(
-            style = TrendyolPriceStyle.SingleUnitPriceWithCampaign(
+            style = TrendyolPriceStyle.SinglePriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
-                campaignTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
-                campaignText = "9999 TL’ye 999 TL İndirim",
+                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
+                upperInfoText = "9999 TL’ye 999 TL İndirim",
                 icon = Icons.Fill.CampaignDownArrow,
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorWarning,
-                unitPriceText = "(99.90 TL / Kapsül)",
-                unitPriceTextStyle = TrendyolDesign.typography.body2ColorWarning,
+                bottomInfoText = "(99.90 TL / Kapsül)",
+                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorWarning,
             )
         )
     }
@@ -263,19 +263,19 @@ private fun SingleUnitPriceWithCampaignStyleLowestPricePreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun DualUnitPriceWithCampaignStyleBasketPreview() {
+private fun DualPriceWithUpperAndBottomInfoStyleBasketPreview() {
     PreviewTheme {
         PriceComposable(
-            style = TrendyolPriceStyle.DualUnitPriceWithCampaign(
+            style = TrendyolPriceStyle.DualPriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                campaignTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
-                campaignText = "9999 TL’ye 999 TL İndirim",
+                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
+                upperInfoText = "9999 TL’ye 999 TL İndirim",
                 icon = Icons.Fill.Basket,
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorPrimary,
-                unitPriceText = "(99.90 TL / Kapsül)",
-                unitPriceTextStyle = TrendyolDesign.typography.body2ColorPrimary,
+                bottomInfoText = "(99.90 TL / Kapsül)",
+                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorPrimary,
                 marketPriceText = "999999.90 TL",
                 marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
             )
@@ -285,18 +285,18 @@ private fun DualUnitPriceWithCampaignStyleBasketPreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun DualUnitPriceWithCampaignStyleLowestPricePreview() {
+private fun DualPriceWithUpperAndBottomInfoStyleLowestPricePreview() {
     PreviewTheme {
         PriceComposable(
-            style = TrendyolPriceStyle.DualUnitPriceWithCampaign(
+            style = TrendyolPriceStyle.DualPriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
-                campaignTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
-                campaignText = "9999 TL’ye 999 TL İndirim",
+                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
+                upperInfoText = "9999 TL’ye 999 TL İndirim",
                 iconSize = TrendyolIconSize.XXSmall,
                 iconTint = TrendyolColor.themeColor.colorWarning,
-                unitPriceText = "(99.90 TL / Kapsül)",
-                unitPriceTextStyle = TrendyolDesign.typography.body2ColorWarning,
+                bottomInfoText = "(99.90 TL / Kapsül)",
+                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorWarning,
                 marketPriceText = "999999.90 TL",
                 marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
             )

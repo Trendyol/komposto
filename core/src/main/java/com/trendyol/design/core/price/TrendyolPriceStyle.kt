@@ -33,46 +33,46 @@ sealed interface TrendyolPriceStyle {
             )
     }
 
-    data class SingleUnitPrice(
+    data class SinglePriceWithBottomInfo(
         val salePriceText: String,
         val salePriceTextStyle: TextStyle,
-        val unitPriceText: String,
-        val unitPriceTextStyle: TextStyle,
+        val bottomInfoText: String,
+        val bottomInfoTextStyle: TextStyle,
     ) : PriceStyle {
         override val priceModel: PriceModel
             get() = PriceModel(
                 salePriceText = salePriceText,
                 salePriceTextStyle = salePriceTextStyle,
-                unitPriceText = unitPriceText,
-                unitPriceTextStyle = unitPriceTextStyle
+                bottomInfoText = bottomInfoText,
+                bottomInfoTextStyle = bottomInfoTextStyle
             )
     }
 
-    data class DualUnitPrice(
+    data class DualPriceWithBottomInfo(
         val salePriceText: String,
         val salePriceTextStyle: TextStyle,
-        val unitPriceText: String,
-        val unitPriceTextStyle: TextStyle,
         val marketPriceText: String,
         val marketPriceTextStyle: TextStyle,
+        val bottomInfoText: String,
+        val bottomInfoTextStyle: TextStyle,
     ) : PriceStyle {
         override val priceModel: PriceModel
             get() = PriceModel(
                 salePriceText = salePriceText,
                 salePriceTextStyle = salePriceTextStyle,
-                unitPriceText = unitPriceText,
-                unitPriceTextStyle = unitPriceTextStyle,
                 marketPriceText = marketPriceText,
-                marketPriceTextStyle = marketPriceTextStyle
+                marketPriceTextStyle = marketPriceTextStyle,
+                bottomInfoText = bottomInfoText,
+                bottomInfoTextStyle = bottomInfoTextStyle,
             )
     }
 
-    data class SinglePriceWithCampaign(
+    data class SinglePriceWithUpperInfo(
         val icon: ImageVector? = null,
         val iconSize: IconSize = TrendyolIconSize.XXSmall,
         val iconTint: Color? = null,
-        val campaignText: String,
-        val campaignTextStyle: TextStyle,
+        val upperInfoText: String,
+        val upperInfoTextStyle: TextStyle,
         val salePriceText: String,
         val salePriceTextStyle: TextStyle
     ) : PriceStyle {
@@ -83,17 +83,17 @@ sealed interface TrendyolPriceStyle {
                 iconTint = iconTint,
                 salePriceText = salePriceText,
                 salePriceTextStyle = salePriceTextStyle,
-                campaignText = campaignText,
-                campaignTextStyle = campaignTextStyle
+                upperInfoText = upperInfoText,
+                upperInfoTextStyle = upperInfoTextStyle
             )
     }
 
-    data class DualPriceWithCampaign(
+    data class DualPriceWithUpperInfo(
         val icon: ImageVector? = null,
         val iconSize: IconSize,
         val iconTint: Color? = null,
-        val campaignText: String,
-        val campaignTextStyle: TextStyle,
+        val upperInfoText: String,
+        val upperInfoTextStyle: TextStyle,
         val salePriceText: String,
         val salePriceTextStyle: TextStyle,
         val marketPriceText: String,
@@ -106,23 +106,23 @@ sealed interface TrendyolPriceStyle {
                 iconTint = iconTint,
                 salePriceText = salePriceText,
                 salePriceTextStyle = salePriceTextStyle,
-                campaignText = campaignText,
-                campaignTextStyle = campaignTextStyle,
+                upperInfoText = upperInfoText,
+                upperInfoTextStyle = upperInfoTextStyle,
                 marketPriceText = marketPriceText,
                 marketPriceTextStyle = marketPriceTextStyle
             )
     }
 
-    data class SingleUnitPriceWithCampaign(
+    data class SinglePriceWithUpperAndBottomInfo(
         val icon: ImageVector? = null,
         val iconSize: IconSize,
         val iconTint: Color? = null,
-        val campaignText: String,
-        val campaignTextStyle: TextStyle,
+        val upperInfoText: String,
+        val upperInfoTextStyle: TextStyle,
         val salePriceText: String,
         val salePriceTextStyle: TextStyle,
-        val unitPriceText: String,
-        val unitPriceTextStyle: TextStyle,
+        val bottomInfoText: String,
+        val bottomInfoTextStyle: TextStyle,
     ) : PriceStyle {
         override val priceModel: PriceModel
             get() = PriceModel(
@@ -131,25 +131,25 @@ sealed interface TrendyolPriceStyle {
                 iconTint = iconTint,
                 salePriceText = salePriceText,
                 salePriceTextStyle = salePriceTextStyle,
-                campaignText = campaignText,
-                campaignTextStyle = campaignTextStyle,
-                unitPriceText = unitPriceText,
-                unitPriceTextStyle = unitPriceTextStyle
+                upperInfoText = upperInfoText,
+                upperInfoTextStyle = upperInfoTextStyle,
+                bottomInfoText = bottomInfoText,
+                bottomInfoTextStyle = bottomInfoTextStyle
             )
     }
 
-    data class DualUnitPriceWithCampaign(
+    data class DualPriceWithUpperAndBottomInfo(
         val icon: ImageVector? = null,
         val iconSize: IconSize,
         val iconTint: Color? = null,
-        val campaignText: String,
-        val campaignTextStyle: TextStyle,
+        val upperInfoText: String,
+        val upperInfoTextStyle: TextStyle,
         val salePriceText: String,
         val salePriceTextStyle: TextStyle,
         val marketPriceText: String,
         val marketPriceTextStyle: TextStyle,
-        val unitPriceText: String,
-        val unitPriceTextStyle: TextStyle,
+        val bottomInfoText: String,
+        val bottomInfoTextStyle: TextStyle,
     ) : PriceStyle {
         override val priceModel: PriceModel
             get() = PriceModel(
@@ -158,10 +158,10 @@ sealed interface TrendyolPriceStyle {
                 iconTint = iconTint,
                 salePriceText = salePriceText,
                 salePriceTextStyle = salePriceTextStyle,
-                campaignText = campaignText,
-                campaignTextStyle = campaignTextStyle,
-                unitPriceText = unitPriceText,
-                unitPriceTextStyle = unitPriceTextStyle,
+                upperInfoText = upperInfoText,
+                upperInfoTextStyle = upperInfoTextStyle,
+                bottomInfoText = bottomInfoText,
+                bottomInfoTextStyle = bottomInfoTextStyle,
                 marketPriceText = marketPriceText,
                 marketPriceTextStyle = marketPriceTextStyle
             )

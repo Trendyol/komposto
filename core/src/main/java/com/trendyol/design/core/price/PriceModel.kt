@@ -12,17 +12,17 @@ import kotlinx.parcelize.RawValue
 
 /**
  *
- * @param icon If you need an icon in your campaign texts, you can set it in this parameter.
- * @param iconSize If you need an icon size in your campaign texts, you can set it in this parameter.
- * @param iconTint If you need an iconTint in your campaign texts, you can set it in this parameter.
- * @param campaignText If you need a campaignText, you can set it in this parameter.
- * @param campaignTextStyle If you need a textStyle in your campaign texts, you can set it in this parameter.
+ * @param icon If you need an icon in your campaign text, you can set it in this parameter.
+ * @param iconSize If you need an icon size in your campaign text, you can set it in this parameter.
+ * @param iconTint If you need an iconTint in your campaign text, you can set it in this parameter.
+ * @param upperInfoText If you need a upperInfo like campaign text, you can set it in this parameter.
+ * @param upperInfoTextStyle If you need a textStyle in your upperInfo text, you can set it in this parameter.
  * @param salePriceText If you need a salePrice, you can set it in this parameter.
  * @param salePriceTextStyle If you need a textStyle in your salePriceText, you can set it in this parameter.
  * @param marketPriceText If you need a marketPrice, you can set it in this parameter.
  * @param marketPriceTextStyle If you need a textStyle in your marketPriceText, you can set it in this parameter.
- * @param unitPriceText If you need a unitPrice, you can set it in this parameter.
- * @param unitPriceTextStyle If you need a textStyle in your unitPrice, you can set it in this parameter.
+ * @param bottomInfoText If you need a bottomInfo like unit price, you can set it in this parameter.
+ * @param bottomInfoTextStyle If you need a textStyle in your bottomInfoText, you can set it in this parameter.
  */
 @Stable
 @Parcelize
@@ -30,12 +30,12 @@ data class PriceModel(
     val icon: @RawValue ImageVector? = null,
     val iconSize: @RawValue IconSize = TrendyolIconSize.XXSmall,
     val iconTint: @RawValue Color? = null,
-    val campaignText: String? = null,
-    val campaignTextStyle: @RawValue TextStyle? = null,
+    val upperInfoText: String? = null,
+    val upperInfoTextStyle: @RawValue TextStyle? = null,
     val salePriceText: String? = null,
     val salePriceTextStyle: @RawValue TextStyle? = null,
     val marketPriceText: String? = null,
     val marketPriceTextStyle: @RawValue TextStyle? = null,
-    val unitPriceText: String? = null,
-    val unitPriceTextStyle: @RawValue TextStyle? = null,
+    val bottomInfoText: String? = null,
+    val bottomInfoTextStyle: @RawValue TextStyle? = null,
 ) : Parcelable
