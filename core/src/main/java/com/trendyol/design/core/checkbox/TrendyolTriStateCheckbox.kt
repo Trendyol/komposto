@@ -176,7 +176,7 @@ private fun TrendyolCheckboxImpl(
     Canvas(
         modifier
             .wrapContentSize(Alignment.Center)
-            .requiredSize(size.containerSize)
+            .requiredSize(size.checkboxSize)
     ) {
         val strokeWidthPx = floor(size.strokeWidth(style).toPx())
         val paddingPx = floor(style.innerPadding.toPx())

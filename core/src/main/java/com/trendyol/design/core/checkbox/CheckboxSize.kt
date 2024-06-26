@@ -21,6 +21,12 @@ interface CheckboxSize {
     val containerSize: Dp
 
     /**
+     * Represents the size of the checkbox component.
+     * This value determines the width and height of the checkbox.
+     */
+    val checkboxSize: Dp
+
+    /**
      * Represents the border corner radius of the checkbox.
      * This value determines the degree of rounding of the checkbox corners.
      */
