@@ -15,6 +15,8 @@ sealed interface TrendyolCheckBoxSize {
     data object Medium : CheckboxSize {
         override val containerSize: Dp
             get() = 24.dp
+        override val checkboxSize: Dp
+            get() = 20.dp
         override val borderCornerRadius: Dp
             get() = 2.5.dp
         override val rippleRadius: Dp
@@ -29,6 +31,8 @@ sealed interface TrendyolCheckBoxSize {
     data object Small : CheckboxSize {
         override val containerSize: Dp
             get() = 20.dp
+        override val checkboxSize: Dp
+            get() = 16.dp
         override val borderCornerRadius: Dp
             get() = 2.5.dp
         override val rippleRadius: Dp
@@ -43,6 +47,8 @@ sealed interface TrendyolCheckBoxSize {
     data object XSmall : CheckboxSize {
         override val containerSize: Dp
             get() = 16.dp
+        override val checkboxSize: Dp
+            get() = 12.dp
         override val borderCornerRadius: Dp
             get() = 2.5.dp
         override val rippleRadius: Dp
