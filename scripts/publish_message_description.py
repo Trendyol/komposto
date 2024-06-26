@@ -21,10 +21,21 @@ for match in matches:
 
 latest_release_changelog = "\n\n".join(parsed_sections[0])
 
+modified_msg = []
+for line in latest_release_changelog.split('\n'):
+    if line.startswith('###'):
+        modified_msg.append('*'+ line.replace(" ", "")[3:] + '*')
+    elif line.startswith('##'):
+        modified_msg.append('*' + line.replace(" ", "")[2:] + '*')
+    else:
+        modified_msg.append(line)
+
+publish_msg_description = '\n'.join(modified_msg)
+
 # Execute Leylek task
 gitlab_user_name = os.getenv('GITLAB_USER_NAME')
 image_tag = os.getenv('CI_COMMIT_REF_NAME')
-publish_msg = f'UI Kit new version deployed. :checkmark:\nDeployer: {gitlab_user_name}\nImage Tag: {image_tag}\nDescription: {latest_release_changelog}'
+publish_msg = f'UI Kit new version deployed. :checkmark:\nDeployer: {gitlab_user_name}\nImage Tag: {image_tag}\nDescription:\n{publish_msg_description}'
 
 url = 'https://mobile-androidplatform-leylek-legacy-service.mars.trendyol.com/slack/send-message'
 headers = {
@@ -32,7 +43,7 @@ headers = {
     "Authorization": "442c5be1-5fa8-4880-b304-619eebb61d65"
 }
 data = {
-    "channel": "android-ui-kit",
+    "channel": "temp-leylek-commands-workflow",
     "message": publish_msg
 }
 requests.post(url=url, headers=headers, json=data)
