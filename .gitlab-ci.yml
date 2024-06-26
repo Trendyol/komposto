@@ -44,9 +44,11 @@ publish:
 
 announce:
   stage: deploy
+  variables:
+    PUBLISH_MSG: "default publish message"
   needs: [ "publish" ]
   script:
-    - 'export PUBLISH_MSG="UI Kit new version deployed. :checkmark:\nDeployer: $GITLAB_USER_NAME\nImage Tag: $CI_COMMIT_REF_NAME\nDescription: $CI_RELEASE_DESCRIPTION"'
+    - python3 ./scripts/publish_message.py
     - 'curl -X POST "https://leylek.trendyol.com/slack/send-message" --header "Content-Type: application/json" --header "Authorization: 442c5be1-5fa8-4880-b304-619eebb61d65" --data-raw "{ \"channel\": \"android-ui-kit\", \"message\": \"$PUBLISH_MSG\" }"'
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
