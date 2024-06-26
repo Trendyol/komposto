@@ -76,7 +76,7 @@ publish:
 announce:
   stage: deploy
   image: python:3.6
-  needs: [ "publish", "setup" ]
+  needs: [ "publish" ]
   script:
     - source venv/bin/activate
     - python3 ./scripts/publish_message_description.py

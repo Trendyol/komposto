@@ -24,13 +24,13 @@ latest_release_changelog = "\n\n".join(parsed_sections[0]).replace("#", "")
 modified_msg = []
 for line in latest_release_changelog.split('\n'):
     if line.replace(" ", "").startswith('Added'):
-        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :pepe-money-rain:')
+        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :white_check_mark:')
     elif line.replace(" ", "").startswith('Fixed'):
-        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :peepofly:')
+        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :bugnet:')
     elif line.replace(" ", "").startswith('Changed'):
         modified_msg.append('*' + line.replace(" ", "") + '*' + ' :peepo-noted:')
     elif line.replace(" ", "").startswith('Removed'):
-        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :peepo-money-burn:')
+        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :support-closed:')
     else:
         modified_msg.append(line)
 
