@@ -27,3 +27,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Used "check" task instead of "detekt" task in CI/CD pipeline to check if everything is OK. "check"
   task includes Detekt and other checks such as running unit tests and Android Lint.
 
+### Removed
+
+- Removed removed removed
