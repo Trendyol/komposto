@@ -1,8 +1,8 @@
 import re
 import os
+import requests
 
-print("Script Beginning")
-
+# Parse changelog.md
 script_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(script_dir, '..', 'CHANGELOG.md')
 
@@ -20,6 +20,19 @@ for match in matches:
     parsed_sections.append((section_title, section_content))
 
 latest_release_changelog = "\n\n".join(parsed_sections[0])
-os.environ['PUBLISH_MSG_DESCRIPTION'] = latest_release_changelog
 
-pub_msg = os.getenv('PUBLISH_MSG_DESCRIPTION')
+# Execute Leylek task
+gitlab_user_name = os.getenv('GITLAB_USER_NAME')
+image_tag = os.getenv('CI_COMMIT_REF_NAME')
+publish_msg = f'UI Kit new version deployed. :checkmark:\nDeployer: {gitlab_user_name}\nImage Tag: {image_tag}\nDescription: {latest_release_changelog}'
+
+url = 'https://mobile-androidplatform-leylek-legacy-service.mars.trendyol.com/slack/send-message'
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": "442c5be1-5fa8-4880-b304-619eebb61d65"
+}
+data = {
+    "channel": "android-ui-kit",
+    "message": publish_msg
+}
+requests.post(url=url, headers=headers, json=data)
