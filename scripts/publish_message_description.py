@@ -24,13 +24,13 @@ latest_release_changelog = "\n\n".join(parsed_sections[0]).replace("#", "")
 modified_msg = []
 for line in latest_release_changelog.split('\n'):
     if line.replace(" ", "").startswith('Added'):
-        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :pepe-money-rain')
+        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :pepe-money-rain:')
     elif line.replace(" ", "").startswith('Fixed'):
-        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :peepofly')
+        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :peepofly:')
     elif line.replace(" ", "").startswith('Changed'):
-        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :peepo-noted')
+        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :peepo-noted:')
     elif line.replace(" ", "").startswith('Removed'):
-        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :peepo-money-burn')
+        modified_msg.append('*' + line.replace(" ", "") + '*' + ' :peepo-money-burn:')
     else:
         modified_msg.append(line)
 
@@ -40,7 +40,7 @@ publish_msg_description = '\n'.join(modified_msg)
 # Execute Leylek task
 gitlab_user_name = os.getenv('GITLAB_USER_NAME')
 image_tag = os.getenv('CI_COMMIT_REF_NAME')
-publish_msg = f'UI Kit new version deployed. :checkmark:\nDeployer: {gitlab_user_name}\n {publish_msg_description}'
+publish_msg = f'UI Kit new version deployed. :checkmark:\nDeployer: {gitlab_user_name}\n{publish_msg_description}'
 
 url = 'https://mobile-androidplatform-leylek-legacy-service.mars.trendyol.com/slack/send-message'
 headers = {
