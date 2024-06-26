@@ -47,7 +47,7 @@ headers = {
     "Authorization": "442c5be1-5fa8-4880-b304-619eebb61d65"
 }
 data = {
-    "channel": "temp-leylek-commands-workflow",
+    "channel": "android-ui-kit-announcement",
     "message": publish_msg
 }
 requests.post(url=url, headers=headers, json=data)
