@@ -40,7 +40,7 @@ publish-msg:
     PUBLISH_MSG_DESCRIPTION: "default publish message"
   script:
     - python3 ./scripts/publish_message_description.py
-    - 'curl -X POST "https://leylek.trendyol.com/slack/send-message" --header "Content-Type: application/json" --header "Authorization: 442c5be1-5fa8-4880-b304-619eebb61d65" --data-raw "{ \"channel\": \"android-ui-kit\", \"message\": \"$PUBLISH_MSG_DESCRIPTION\" }"'
+    - 'curl -X POST "https://leylek.trendyol.com/slack/send-message" --header "Content-Type: application/json" --header "Authorization: 442c5be1-5fa8-4880-b304-619eebb61d65" --data-raw "{ \"channel\": \"temp-leylek-commands-workflow\", \"message\": \"$PUBLISH_MSG_DESCRIPTION\" }"'
 
 publish:
   stage: deploy
