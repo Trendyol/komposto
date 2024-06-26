@@ -3,7 +3,10 @@ import os
 
 print("Script Beginning")
 
-with open('../CHANGELOG.md', 'r', encoding='utf-8') as changelog:
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, '..', 'CHANGELOG.md')
+
+with open(file_path, 'r', encoding='utf-8') as changelog:
     content = changelog.read()
 
 pattern = r"(## \[\d+\.\d+\.\d+\] - \d{4}-\d{2}-\d{2})(.*?)(?=## \[\d+\.\d+\.\d+\] - \d{4}-\d{2}-\d{2}|\Z)"
