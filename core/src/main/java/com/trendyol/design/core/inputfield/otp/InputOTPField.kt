@@ -29,7 +29,9 @@ import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.previewtheme.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
@@ -162,6 +164,88 @@ fun InputOTPField(
                 style = TrendyolDesign.typography.body1ColorOnSurfaceVariant1,
             )
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun OutlinedInputOTPFieldPreview() {
+    PreviewTheme {
+        InputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolInputOTPFieldStyle.Outline,
+            otp = "123",
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DisabledOutlinedInputOTPFieldPreview() {
+    PreviewTheme {
+        InputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolInputOTPFieldStyle.Outline,
+            otp = "123",
+            enabled = false,
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ErrorOutlinedInputOTPFieldPreview() {
+    PreviewTheme {
+        InputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolInputOTPFieldStyle.Outline,
+            otp = "123",
+            errorText = "Unexpected error occurred.",
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun FilledInputOTPFieldPreview() {
+    PreviewTheme {
+        InputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolInputOTPFieldStyle.Filled,
+            otp = "123",
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun FilledOutlinedInputOTPFieldPreview() {
+    PreviewTheme {
+        InputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolInputOTPFieldStyle.Filled,
+            otp = "123",
+            enabled = false,
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ErrorFilledInputOTPFieldPreview() {
+    PreviewTheme {
+        InputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolInputOTPFieldStyle.Filled,
+            otp = "123",
+            errorText = "Unexpected error occurred.",
+            onValueChange = { }
+        )
     }
 }
 

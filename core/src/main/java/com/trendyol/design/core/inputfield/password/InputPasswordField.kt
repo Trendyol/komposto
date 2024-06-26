@@ -18,6 +18,7 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.R
 import com.trendyol.design.core.icon.Icon
@@ -25,6 +26,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.inputfield.OutlinedTextFieldStyle
 import com.trendyol.design.core.inputfield.TrendyolOutlinedTextField
 import com.trendyol.design.core.inputfield.TrendyolOutlinedTextFieldStyle
+import com.trendyol.design.core.previewtheme.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
@@ -102,6 +104,47 @@ fun InputPasswordField(
                 maxLines = 1
             )
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun InputPasswordFieldPreview() {
+    PreviewTheme {
+        InputPasswordField(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+            password = "1234567",
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DisabledInputPasswordFieldPreview() {
+    PreviewTheme {
+        InputPasswordField(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+            password = "1234567",
+            enabled = false,
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ErrorInputPasswordFieldPreview() {
+    PreviewTheme {
+        InputPasswordField(
+            modifier = Modifier.padding(16.dp),
+            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+            password = "1234567",
+            errorMessage = "Unexpected error occured.",
+            onValueChange = { }
+        )
     }
 }
 
