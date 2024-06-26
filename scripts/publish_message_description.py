@@ -15,4 +15,4 @@ for match in matches:
     parsed_sections.append((section_title, section_content))
 
 latest_release_changelog = "\n\n".join(parsed_sections[0])
-os.environ['PUBLISH_MSG'] = latest_release_changelog
+os.environ['PUBLISH_MSG_DESCRIPTION'] = latest_release_changelog
