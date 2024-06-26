@@ -7,6 +7,7 @@ include:
 stages:
   - build
   - check
+  - publish-msg
   - deploy
   - announcement
 
@@ -31,6 +32,13 @@ check:
       when: always
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: always
+
+publish-msg:
+  stage: publish-msg
+  variables:
+    PUBLISH_MSG_DESCRIPTION: "default publish message"
+  script:
+    - python3 ./scripts/publish_message_description.py
 
 publish:
   stage: deploy
