@@ -5,37 +5,50 @@ include:
       - "template.gitlab-ci.yml"
 
 stages:
-  - analysis
   - build
-  - publish
+  - check
+  - deploy
   - announcement
-
-detekt:
-  stage: analysis
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.7.0-jdk17-34.0.0-25.1.8937393-34-e5cdd5fe
-  script:
-    - gradle detekt
 
 build:
   stage: build
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.7.0-jdk17-34.0.0-25.1.8937393-34-e5cdd5fe
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
   script:
     - gradle assemble
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      when: always
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: always
+
+check:
+  stage: check
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
+  script:
+    - gradle check
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      when: always
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: always
 
 publish:
-  stage: publish
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.7.0-jdk17-34.0.0-25.1.8937393-34-e5cdd5fe
-  variables:
-    VERSION: ${CI_COMMIT_REF_NAME}
+  stage: deploy
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
   script:
     - gradle publishReleasePublicationToNexusRepository
-  only:
-    - tags
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes:
+        - gradle/published-libs.versions.toml
 
-announcement:
-  stage: announcement
+announce:
+  stage: deploy
+  needs: [ "publish" ]
   script:
     - 'export PUBLISH_MSG="UI Kit new version deployed. :checkmark:\nDeployer: $GITLAB_USER_NAME\nImage Tag: $CI_COMMIT_REF_NAME\nDescription: $CI_RELEASE_DESCRIPTION"'
     - 'curl -X POST "https://leylek.trendyol.com/slack/send-message" --header "Content-Type: application/json" --header "Authorization: 442c5be1-5fa8-4880-b304-619eebb61d65" --data-raw "{ \"channel\": \"android-ui-kit\", \"message\": \"$PUBLISH_MSG\" }"'
-  only:
-    - tags
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes:
+        - gradle/published-libs.versions.toml

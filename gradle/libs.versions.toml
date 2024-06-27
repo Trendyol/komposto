@@ -1,13 +1,25 @@
 [versions]
-androidx-compose = '1.6.2'
+androidx-compose-bom = '2024.02.01'
 test-rules = '1.5.0'
 shot = '6.1.0'
-compose-ui = '1.6.6'
 
 [libraries]
+androidx-core = "androidx.core:core-ktx:1.12.0"
+androidx-activity-compose = "androidx.activity:activity-compose:1.8.2"
+androidx-lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
+
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidx-compose-bom" }
+androidx-compose-material = { module = "androidx.compose.material:material" }
+androidx-compose-ui-googleFonts = { module = "androidx.compose.ui:ui-text-google-fonts" }
+androidx-compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-compose-ui-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-ui-util = { module = "androidx.compose.ui:ui-util" }
+androidx-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+
+detekt-formatting = "io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0"
+detekt-composeRules = "io.nlopez.compose.rules:detekt:0.1.13"
+
 shot = { module = "com.karumi:shot", version.ref = "shot" }
-compose-ui-util = { module = "androidx.compose.ui:ui-util", version.ref = "compose-ui" }
-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-ui" }
-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "androidx-compose" }
-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "androidx-compose" }
-test-rules = { module = "androidx.test:rules", version.ref = "test-rules" }
+androidx-test-rules = { module = "androidx.test:rules", version.ref = "test-rules" }
