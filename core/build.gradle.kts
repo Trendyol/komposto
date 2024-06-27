@@ -80,6 +80,7 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.compose.ui.util)
 
     detektPlugins(libs.detekt.formatting)
     detektPlugins(libs.detekt.composeRules)
