@@ -31,9 +31,9 @@ import com.trendyol.theme.TrendyolDesign
  */
 
 @Composable
-fun PriceComposable(
-    modifier: Modifier = Modifier,
-    style: PriceStyle
+fun Price(
+    style: PriceStyle,
+    modifier: Modifier = Modifier
 ) {
     val model = style.priceModel
 
@@ -89,7 +89,7 @@ fun PriceComposable(
 @Composable
 private fun SinglePriceStylePreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.SinglePrice(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary
@@ -102,7 +102,7 @@ private fun SinglePriceStylePreview() {
 @Composable
 private fun DualPriceStylePreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.DualPrice(
                 salePriceText = "999999.90 TL",
                 marketPriceText = "999999.90 TL",
@@ -117,7 +117,7 @@ private fun DualPriceStylePreview() {
 @Composable
 private fun SinglePriceWithBottomInfoStylePreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.SinglePriceWithBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
@@ -132,7 +132,7 @@ private fun SinglePriceWithBottomInfoStylePreview() {
 @Composable
 private fun DualPriceWithBottomInfoStylePreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.DualPriceWithBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
@@ -149,7 +149,7 @@ private fun DualPriceWithBottomInfoStylePreview() {
 @Composable
 private fun SinglePriceWithUpperInfoStyleBasketPreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.SinglePriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
@@ -167,7 +167,7 @@ private fun SinglePriceWithUpperInfoStyleBasketPreview() {
 @Composable
 private fun SinglePriceWithUpperInfoStyleLowestPricePreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.SinglePriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
@@ -185,7 +185,7 @@ private fun SinglePriceWithUpperInfoStyleLowestPricePreview() {
 @Composable
 private fun DualPriceWithUpperInfoStyleBasketPreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.DualPriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
@@ -205,7 +205,7 @@ private fun DualPriceWithUpperInfoStyleBasketPreview() {
 @Composable
 private fun DualPriceWithUpperInfoStyleLowestPricePreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.DualPriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
@@ -225,7 +225,7 @@ private fun DualPriceWithUpperInfoStyleLowestPricePreview() {
 @Composable
 private fun SinglePriceWithUpperAndBottomInfoStyleBasketPreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.SinglePriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
@@ -245,7 +245,7 @@ private fun SinglePriceWithUpperAndBottomInfoStyleBasketPreview() {
 @Composable
 private fun SinglePriceWithUpperAndBottomInfoStyleLowestPricePreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.SinglePriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
@@ -265,7 +265,7 @@ private fun SinglePriceWithUpperAndBottomInfoStyleLowestPricePreview() {
 @Composable
 private fun DualPriceWithUpperAndBottomInfoStyleBasketPreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.DualPriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
@@ -287,7 +287,7 @@ private fun DualPriceWithUpperAndBottomInfoStyleBasketPreview() {
 @Composable
 private fun DualPriceWithUpperAndBottomInfoStyleLowestPricePreview() {
     PreviewTheme {
-        PriceComposable(
+        Price(
             style = TrendyolPriceStyle.DualPriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
                 salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
