@@ -10,6 +10,14 @@ stages:
   - deploy
   - announcement
 
+variables:
+  VIRTUAL_ENV: "venv"
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+
 build:
   stage: build
   image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
@@ -42,12 +50,25 @@ publish:
       changes:
         - gradle/published-libs.versions.toml
 
+setup:
+  stage: deploy
+  image: python:3.6
+  script:
+    - python3 -m venv $VIRTUAL_ENV
+    - source $VIRTUAL_ENV/bin/activate
+    - pip install --upgrade pip
+    - pip install -r ./scripts/requirements.txt
+  artifacts:
+    paths:
+      - venv/
+
 announce:
   stage: deploy
-  needs: [ "publish" ]
+  image: python:3.6
+  needs: [ "publish", "setup" ]
   script:
-    - 'export PUBLISH_MSG="UI Kit new version deployed. :checkmark:\nDeployer: $GITLAB_USER_NAME\nImage Tag: $CI_COMMIT_REF_NAME\nDescription: $CI_RELEASE_DESCRIPTION"'
-    - 'curl -X POST "https://leylek.trendyol.com/slack/send-message" --header "Content-Type: application/json" --header "Authorization: 442c5be1-5fa8-4880-b304-619eebb61d65" --data-raw "{ \"channel\": \"android-ui-kit\", \"message\": \"$PUBLISH_MSG\" }"'
+    - source venv/bin/activate
+    - python3 ./scripts/publish_message_description.py
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       changes:
