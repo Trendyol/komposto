@@ -1,13 +1,11 @@
 package com.trendyol.design.core.price
 
-import android.os.Parcelable
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
 import com.trendyol.design.core.icon.IconSize
 import com.trendyol.design.core.icon.TrendyolIconSize
-import kotlinx.parcelize.Parcelize
 import kotlinx.parcelize.RawValue
 
 /**
@@ -25,7 +23,6 @@ import kotlinx.parcelize.RawValue
  * @param bottomInfoTextStyle If you need a textStyle in your bottomInfoText, you can set it in this parameter.
  */
 @Stable
-@Parcelize
 data class PriceModel(
     val icon: @RawValue ImageVector? = null,
     val iconSize: @RawValue IconSize = TrendyolIconSize.XXSmall,
@@ -38,4 +35,4 @@ data class PriceModel(
     val marketPriceTextStyle: @RawValue TextStyle? = null,
     val bottomInfoText: String? = null,
     val bottomInfoTextStyle: @RawValue TextStyle? = null,
-) : Parcelable
+)
