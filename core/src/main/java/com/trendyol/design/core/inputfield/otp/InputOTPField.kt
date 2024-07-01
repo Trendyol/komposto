@@ -250,5 +250,5 @@ private fun ErrorFilledInputOTPFieldPreview() {
 }
 
 private const val EMPTY = ""
-private const val DEFAULT_OTP_LENGTH = 7
+private const val DEFAULT_OTP_LENGTH = 6
 private val borderThickness = 1.dp
