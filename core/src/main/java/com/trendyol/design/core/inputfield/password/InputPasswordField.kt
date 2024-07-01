@@ -38,7 +38,7 @@ fun InputPasswordField(
     modifier: Modifier = Modifier,
     placeHolder: String? = null,
     label: String? = null,
-    errorMessage: String? = null,
+    errorText: String? = null,
     enabled: Boolean = true,
     mask: Char = PASSWORD_MASK_CHAR
 ) {
@@ -87,19 +87,19 @@ fun InputPasswordField(
                     )
                 }
             },
-            isError = !errorMessage.isNullOrBlank(),
+            isError = !errorText.isNullOrBlank(),
             colors = style.outlinedTextFieldColors,
             singleLine = true,
             enabled = enabled,
             textStyle = TrendyolDesign.typography.subtitleMedium
         )
 
-        if (enabled && !errorMessage.isNullOrBlank()) {
+        if (enabled && !errorText.isNullOrBlank()) {
             Text(
                 modifier = Modifier
                     .padding(top = 8.dp, start = 12.dp)
                     .fillMaxWidth(),
-                text = errorMessage,
+                text = errorText,
                 style = TrendyolDesign.typography.body1ColorWarning,
                 maxLines = 1
             )
@@ -142,7 +142,7 @@ private fun ErrorInputPasswordFieldPreview() {
             modifier = Modifier.padding(16.dp),
             style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
             password = "1234567",
-            errorMessage = "Unexpected error occured.",
+            errorText = "Unexpected error occured.",
             onValueChange = { }
         )
     }
