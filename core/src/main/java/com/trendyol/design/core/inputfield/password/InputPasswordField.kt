@@ -30,6 +30,31 @@ import com.trendyol.design.core.previewtheme.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * A Composable function for creating a password input field with various customization options.
+ * The field allows for toggling between hidden and visible password states.
+ *
+ * @param style The style to apply to the OutlinedTextField.
+ *              This includes properties like colors and label behavior.
+ *              Suggested styles: FloatingLabelOutlined, Outlined.
+ * @param password The initial password value to be displayed in the input field.
+ *                 This is also used to initialize the internal state of the component.
+ * @param onValueChange A callback invoked whenever the password value changes.
+ *                      This function receives the updated password as a parameter.
+ * @param modifier Modifier to apply to the root container of the input field.
+ *                 This is optional and defaults to an empty Modifier.
+ * @param placeHolder Optional placeholder text displayed when the input field is empty.
+ *                    If null or blank, no placeholder will be shown.
+ * @param label Optional label text displayed inside the input field.
+ *              This is used only when the style is FloatingLabelOutlined.
+ * @param errorText Optional error message displayed below the input field.
+ *                  This is shown only when the field is enabled and the errorText is not blank.
+ * @param enabled A boolean flag indicating whether the input field is enabled or disabled.
+ *                When disabled, the input field is not interactive.
+ *                This parameter defaults to true.
+ * @param mask The character used to mask the password. This defaults to PASSWORD_MASK_CHAR.
+ *             The mask is applied only when the password is hidden.
+ */
 @Composable
 fun InputPasswordField(
     style: OutlinedTextFieldStyle,
