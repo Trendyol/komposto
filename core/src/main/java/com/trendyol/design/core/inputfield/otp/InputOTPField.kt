@@ -35,6 +35,30 @@ import com.trendyol.design.core.previewtheme.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * A Composable function for creating an OTP (One-Time Password) input field with custom styling and behavior.
+ * This component handles the input of a fixed-length OTP and includes error display and interaction handling.
+ *
+ * @param style The styling to be applied to the OTP input field.
+ *              This includes properties like background color, border color, text color, etc.
+ * @param otp The initial OTP value to be displayed in the input field.
+ *            This value initializes the internal state of the component.
+ * @param onValueChange A callback function invoked whenever the OTP value changes.
+ *                      This function receives the updated OTP as a parameter.
+ * @param modifier Modifier to apply to the root container of the input field.
+ *                 This parameter is optional and defaults to an empty Modifier.
+ * @param otpLength The length of the OTP input. This parameter defaults to `DEFAULT_OTP_LENGTH`.
+ *                  The input field will only accept this many characters.
+ * @param enabled A boolean flag indicating whether the input field is enabled or disabled.
+ *                When disabled, the input field is not interactive.
+ *                This parameter defaults to true.
+ * @param hint Optional hint text displayed below the input field when there is no error.
+ *             This hint is shown only if it is not null.
+ * @param errorText Optional error message displayed below the input field.
+ *                  This message is shown only when the field is enabled and the errorText is not null.
+ * @param interactionSource The interaction source for tracking focus and other interaction states.
+ *                          This parameter is optional and defaults to a newly remembered instance of MutableInteractionSource.
+ */
 @Composable
 fun InputOTPField(
     style: InputOTPFieldStyle,

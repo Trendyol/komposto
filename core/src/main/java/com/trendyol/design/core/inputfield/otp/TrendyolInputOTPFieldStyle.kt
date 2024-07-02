@@ -7,8 +7,20 @@ import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.graphics.Color
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * A sealed interface defining styles for the OTP (One-Time Password) input field.
+ * This interface provides different implementations for various input field styles,
+ * such as Outline and Filled, each determining the appearance based on the component's state.
+ *
+ * Implementations of this interface use Composable functions to dynamically provide style attributes
+ * like border color, text color, background color, and tab indicator color.
+ */
 sealed interface TrendyolInputOTPFieldStyle {
 
+    /**
+     * An object defining the Outline style for the OTP input field.
+     * This style typically features a border that changes color based on the focus and error states.
+     */
     data object Outline : InputOTPFieldStyle {
 
         @Composable
