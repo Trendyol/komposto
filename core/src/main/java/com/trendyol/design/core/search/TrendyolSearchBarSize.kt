@@ -1,0 +1,43 @@
+package com.trendyol.design.core.search
+
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
+
+/**
+ * The [TrendyolSearchBarSize] sealed interface defines the possible sizes for the search bar.
+ * It includes two predefined sizes: [Small] and [Large].
+ */
+sealed interface TrendyolSearchBarSize {
+
+    data object Small : SearchBarSize {
+        override val barHeight: Dp
+            @Composable
+            get() = 32.dp
+        override val barRadius: Dp
+            @Composable
+            get() = 8.dp
+        override val leadingIconPadding: PaddingValues
+            @Composable
+            get() = PaddingValues(start = 16.dp, end = 8.dp)
+        override val trailingIconPadding: PaddingValues
+            @Composable
+            get() = PaddingValues(horizontal = 16.dp)
+    }
+
+    data object Large : SearchBarSize {
+        override val barHeight: Dp
+            @Composable
+            get() = 40.dp
+        override val barRadius: Dp
+            @Composable
+            get() = 12.dp
+        override val leadingIconPadding: PaddingValues
+            @Composable
+            get() = PaddingValues(start = 16.dp, end = 12.dp)
+        override val trailingIconPadding: PaddingValues
+            @Composable
+            get() = PaddingValues(horizontal = 16.dp)
+    }
+}
