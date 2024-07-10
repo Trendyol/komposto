@@ -72,7 +72,6 @@ sealed interface TrendyolInputOTPFieldStyle {
         }
     }
 
-
     data object Filled : InputOTPFieldStyle {
         @Composable
         override fun getBorderColor(
