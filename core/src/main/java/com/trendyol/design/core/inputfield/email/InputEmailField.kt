@@ -13,10 +13,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalFocusManager
@@ -63,13 +60,11 @@ fun InputEmailField(
     Column(
         modifier = modifier.width(IntrinsicSize.Max),
     ) {
-        var emailText by remember { mutableStateOf(email) }
-        LaunchedEffect(Unit) {
+        LaunchedEffect(email) {
             interactionSource.interactions.collect {
                 if (it is PressInteraction.Release || it is FocusInteraction.Unfocus) {
-                    val emailSuggestion = SuggestEmailProviderUtil.suggest(emailText)
-                    if (emailText != emailSuggestion.text) {
-                        emailText = emailSuggestion.text
+                    val emailSuggestion = SuggestEmailProviderUtil.suggest(email)
+                    if (email != emailSuggestion.text) {
                         onValueChange?.invoke(emailSuggestion.text)
                     }
                 }
@@ -80,9 +75,8 @@ fun InputEmailField(
         val actionsOfKeyboard = if (keyboardActions == KeyboardActions.Default) {
             KeyboardActions(
                 onAny = {
-                    val emailSuggestion = SuggestEmailProviderUtil.suggest(emailText)
-                    if (emailText != emailSuggestion.text) {
-                        emailText = emailSuggestion.text
+                    val emailSuggestion = SuggestEmailProviderUtil.suggest(email)
+                    if (email != emailSuggestion.text) {
                         onValueChange?.invoke(emailSuggestion.text)
                     }
                     focusManager.clearFocus()
@@ -90,9 +84,8 @@ fun InputEmailField(
             )
         } else keyboardActions
         TrendyolOutlinedTextField(
-            value = emailText,
+            value = email,
             onValueChange = { value ->
-                emailText = value
                 onValueChange?.invoke(value)
             },
             modifier = Modifier.fillMaxWidth(),
