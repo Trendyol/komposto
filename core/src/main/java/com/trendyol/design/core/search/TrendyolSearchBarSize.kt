@@ -7,7 +7,7 @@ import androidx.compose.ui.unit.dp
 
 /**
  * The [TrendyolSearchBarSize] sealed interface defines the possible sizes for the search bar.
- * It includes two predefined sizes: [Small] and [Large].
+ * It includes two predefined sizes: [Small] and [Medium].
  */
 sealed interface TrendyolSearchBarSize {
 
@@ -26,7 +26,7 @@ sealed interface TrendyolSearchBarSize {
             get() = PaddingValues(horizontal = 16.dp)
     }
 
-    data object Large : SearchBarSize {
+    data object Medium : SearchBarSize {
         override val barHeight: Dp
             @Composable
             get() = 40.dp

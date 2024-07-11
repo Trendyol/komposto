@@ -50,11 +50,9 @@ fun SearchBar(
     colors: TextFieldColors = style.searchBarColors,
     placeholder: String? = SEARCH_BAR_PLACEHOLDER,
 ) {
-    var text by rememberSaveable { mutableStateOf(value) }
-
     TrendyolOutlinedTextField(
         modifier = modifier,
-        value = text,
+        value = value,
         placeholder = if (!placeholder.isNullOrBlank()) {
             {
                 Text(
@@ -63,10 +61,7 @@ fun SearchBar(
                 )
             }
         } else null,
-        onValueChange = { changedValue ->
-            text = changedValue
-            onValueChange(changedValue)
-        },
+        onValueChange = onValueChange,
         leadingIcon = {
             Icon(
                 modifier = Modifier.padding(size.leadingIconPadding),
@@ -76,11 +71,11 @@ fun SearchBar(
             )
         },
         trailingIcon = {
-            if (text.isNotBlank()) {
+            if (value.isNotBlank()) {
                 Icon(
                     modifier = Modifier
                         .padding(size.trailingIconPadding)
-                        .clickable { text = "" },
+                        .clickable { onValueChange(EMPTY) },
                     imageVector = Icons.Fill.Cancel,
                     size = TrendyolIconSize.XSmall,
                     tint = Color.Unspecified
@@ -96,6 +91,7 @@ fun SearchBar(
 }
 
 private const val SEARCH_BAR_PLACEHOLDER = "Ürün Ara"
+private const val EMPTY = ""
 
 @Preview(showBackground = true)
 @Composable
@@ -119,7 +115,7 @@ private fun LargeOutlineSearchBarPreview() {
             modifier = Modifier.padding(8.dp),
             value = "",
             style = TrendyolSearchBarStyle.Outline,
-            size = TrendyolSearchBarSize.Large,
+            size = TrendyolSearchBarSize.Medium,
             onValueChange = {},
         )
     }
@@ -147,7 +143,7 @@ private fun LargeFilledSearchBarPreview() {
             modifier = Modifier.padding(8.dp),
             value = "",
             style = TrendyolSearchBarStyle.Filled,
-            size = TrendyolSearchBarSize.Large,
+            size = TrendyolSearchBarSize.Medium,
             onValueChange = {},
         )
     }
