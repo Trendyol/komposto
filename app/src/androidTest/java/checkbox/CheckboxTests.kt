@@ -19,7 +19,7 @@ internal class CheckboxTests : DesignScreenshotTest() {
     fun styleTest() = runScreenShotTest(
         testName = "styleTest",
         contents = listOf(
-            DesignScreenshotTestContainer("None") {
+            DesignScreenshotTestContainer("Primary None") {
                 BoxWithHorizontalPadding {
                     TrendyolCheckbox(
                         style = TrendyolCheckBoxStyle.Primary,
@@ -30,7 +30,7 @@ internal class CheckboxTests : DesignScreenshotTest() {
                     )
                 }
             },
-            DesignScreenshotTestContainer("Text") {
+            DesignScreenshotTestContainer("Primary Text") {
                 BoxWithHorizontalPadding {
                     TrendyolCheckbox(
                         style = TrendyolCheckBoxStyle.Primary,
@@ -41,10 +41,47 @@ internal class CheckboxTests : DesignScreenshotTest() {
                     )
                 }
             },
-            DesignScreenshotTestContainer("Content") {
+            DesignScreenshotTestContainer("Primary Content") {
                 BoxWithHorizontalPadding {
                     TrendyolCheckbox(
                         style = TrendyolCheckBoxStyle.Primary,
+                        size = TrendyolCheckBoxSize.Medium,
+                        containerType = CheckboxContainerType.Content {
+                            Column {
+                                Text(text)
+                            }
+                        },
+                        checked = true,
+                        onCheckedChange = {}
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Secondary None") {
+                BoxWithHorizontalPadding {
+                    TrendyolCheckbox(
+                        style = TrendyolCheckBoxStyle.Secondary,
+                        size = TrendyolCheckBoxSize.Medium,
+                        containerType = CheckboxContainerType.None,
+                        checked = true,
+                        onCheckedChange = {}
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Secondary Text") {
+                BoxWithHorizontalPadding {
+                    TrendyolCheckbox(
+                        style = TrendyolCheckBoxStyle.Secondary,
+                        size = TrendyolCheckBoxSize.Medium,
+                        containerType = CheckboxContainerType.Text(text),
+                        checked = true,
+                        onCheckedChange = {}
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Secondary Content") {
+                BoxWithHorizontalPadding {
+                    TrendyolCheckbox(
+                        style = TrendyolCheckBoxStyle.Secondary,
                         size = TrendyolCheckBoxSize.Medium,
                         containerType = CheckboxContainerType.Content {
                             Column {
