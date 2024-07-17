@@ -89,7 +89,7 @@ fun RatingBar(
         }
 
         Canvas(
-            modifier = modifier
+            modifier = Modifier
                 .size(width = totalWidth, height = itemSize)
                 .graphicsLayer(alpha = 0.99f)
         ) {
