@@ -4,12 +4,10 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("io.gitlab.arturbosch.detekt")
-    id("maven-publish")
-    id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.trendyol.design.bottomsheet"
+    namespace = "com.trendyol.design.previewtheme"
     compileSdk = 34
 
     defaultConfig {
@@ -40,31 +38,6 @@ android {
     }
 }
 
-publishing {
-    repositories {
-        maven {
-            name = "Nexus"
-            url = uri("http://10.84.105.74/repository/maven-releases")
-            isAllowInsecureProtocol = true
-            credentials {
-                username = properties["NEXUS_USER"]?.toString() ?: System.getenv("NEXUS_USER")
-                password = properties["NEXUS_PASS"]?.toString() ?: System.getenv("NEXUS_PASS")
-            }
-        }
-    }
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.trendyol"
-            artifactId = "design-bottomsheet"
-            version = publishedLibs.versions.design.get()
-
-            afterEvaluate {
-                from(components["release"])
-            }
-        }
-    }
-}
-
 configure<DetektExtension> {
     buildUponDefaultConfig = true
     config.from.add("$rootDir/config/detekt/detekt.yml")
@@ -72,20 +45,13 @@ configure<DetektExtension> {
 }
 
 dependencies {
-
     api(projects.theme)
-    api(projects.core)
-    implementation(projects.previewTheme)
 
     implementation(libs.androidx.core)
-    implementation(libs.android.material)
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.compose.ui.tooling)
-    implementation(libs.androidx.compose.ui.util)
-
-    implementation(libs.composeCoil)
 
     detektPlugins(libs.detekt.formatting)
     detektPlugins(libs.detekt.composeRules)
