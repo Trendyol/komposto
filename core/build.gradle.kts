@@ -74,6 +74,7 @@ configure<DetektExtension> {
 dependencies {
 
     api(projects.theme)
+    implementation(projects.previewTheme)
 
     implementation(libs.androidx.core)
 

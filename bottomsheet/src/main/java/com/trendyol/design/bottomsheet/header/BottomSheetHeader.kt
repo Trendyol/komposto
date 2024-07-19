@@ -3,7 +3,6 @@ package com.trendyol.design.bottomsheet.header
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,13 +13,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.bottomsheet.item.PreviewTheme
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.fill.Chevron
 import com.trendyol.design.core.icon.icons.outline.Cancel
 import com.trendyol.design.core.text.Text
+import com.trendyol.design.previewtheme.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 @Composable
