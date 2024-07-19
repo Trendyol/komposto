@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.4] - 2024-07-19
+
+### Added
+
+- Add new vertical price api
+
 ## [0.7.3] - 2024-06-20
 
 ### Added
