@@ -42,10 +42,10 @@ import kotlin.math.floor
  *
  * @param rating The current rating value to be displayed. It is a Float value representing
  * the rating.
- * @param itemCount The number of stars to be displayed in the rating bar.
- * @param style The style to be applied to the rating bar, defined by the `RatingBarStyle`
+ * @param size The size and style to be applied to the rating bar, defined by the `RatingBarStyle`
  * sealed interface.
  * @param modifier The modifier to apply to the rating bar for layout adjustments and styling.
+ * @param itemCount The number of stars to be displayed in the rating bar.
  * @param reviewCount An optional parameter to display the count of reviews as a String.
  * @param showRating A Boolean indicating whether to show the rating value text.
  * @param showCameraIcon A Boolean indicating whether to show a camera icon at the end of
@@ -59,17 +59,17 @@ import kotlin.math.floor
 @Composable
 fun RatingBar(
     rating: Float,
-    itemCount: Int,
-    style: RatingBarSize,
+    size: RatingBarSize,
     modifier: Modifier = Modifier,
+    itemCount: Int = 5,
     reviewCount: String? = null,
     showRating: Boolean = false,
     showCameraIcon: Boolean = false,
-    itemSize: Dp = style.starIconSize,
+    itemSize: Dp = size.starIconSize,
     spaceBetween: Dp = 2.dp,
     icon: ImageVector = Icons.Fill.Star,
     filledColor: Color = TrendyolDesign.colors.colorStar,
-    emptyColor: Color? = TrendyolDesign.colors.colorBorder,
+    emptyColor: Color = TrendyolDesign.colors.colorBorder,
 ) {
 
     val vectorPainter = rememberVectorPainter(image = icon)
@@ -84,7 +84,7 @@ fun RatingBar(
             Text(
                 modifier = Modifier.padding(end = 4.dp),
                 text = rating.toString(),
-                style = style.textSize,
+                style = size.textSize,
             )
         }
 
@@ -107,7 +107,7 @@ fun RatingBar(
             Text(
                 modifier = Modifier.padding(start = 4.dp),
                 text = "($reviews)",
-                style = style.textSize,
+                style = size.textSize,
             )
         }
 
@@ -115,7 +115,7 @@ fun RatingBar(
             Icon(
                 modifier = Modifier
                     .padding(start = 6.dp)
-                    .size(style.cameraIconSize),
+                    .size(size.cameraIconSize),
                 painter = painterResource(id = R.drawable.ic_camera),
                 contentDescription = "Camera",
                 tint = Color.Unspecified
@@ -129,7 +129,7 @@ private fun DrawScope.drawRating(
     painter: Painter,
     rating: Float,
     filledColor: Color,
-    emptyColor: Color?,
+    emptyColor: Color,
     space: Float,
 ) {
     val itemWidth = size.height
@@ -140,7 +140,7 @@ private fun DrawScope.drawRating(
             with(painter) {
                 draw(
                     size = Size(size.height, size.height),
-                    colorFilter = emptyColor?.let(ColorFilter::tint)
+                    colorFilter = ColorFilter.tint(emptyColor)
                 )
             }
         }
@@ -159,7 +159,7 @@ private fun DrawScope.drawRating(
 private fun RatingBarFullSmallPreview() {
     PreviewTheme {
         RatingBar(
-            style = TrendyolRatingBarSize.Small,
+            size = TrendyolRatingBarSize.Small,
             rating = 3.5f,
             showRating = true,
             reviewCount = "277",
@@ -178,7 +178,7 @@ private fun RatingBarFullSmallPreview() {
 private fun RatingBarFullMediumPreview() {
     PreviewTheme {
         RatingBar(
-            style = TrendyolRatingBarSize.Medium,
+            size = TrendyolRatingBarSize.Medium,
             rating = 3.5f,
             showRating = true,
             reviewCount = "277",
@@ -197,7 +197,7 @@ private fun RatingBarFullMediumPreview() {
 private fun RatingBarScoreSmallPreview() {
     PreviewTheme {
         RatingBar(
-            style = TrendyolRatingBarSize.Small,
+            size = TrendyolRatingBarSize.Small,
             rating = 3.5f,
             showRating = true,
             filledColor = TrendyolDesign.colors.colorStar,
@@ -214,7 +214,7 @@ private fun RatingBarScoreSmallPreview() {
 private fun RatingBarScoreMediumPreview() {
     PreviewTheme {
         RatingBar(
-            style = TrendyolRatingBarSize.Medium,
+            size = TrendyolRatingBarSize.Medium,
             rating = 3.5f,
             showRating = true,
             filledColor = TrendyolDesign.colors.colorStar,
@@ -231,7 +231,7 @@ private fun RatingBarScoreMediumPreview() {
 private fun RatingBarScoreReviewSmallPreview() {
     PreviewTheme {
         RatingBar(
-            style = TrendyolRatingBarSize.Small,
+            size = TrendyolRatingBarSize.Small,
             rating = 3.5f,
             showRating = true,
             reviewCount = "277",
@@ -249,7 +249,7 @@ private fun RatingBarScoreReviewSmallPreview() {
 private fun RatingBarScoreReviewMediumPreview() {
     PreviewTheme {
         RatingBar(
-            style = TrendyolRatingBarSize.Medium,
+            size = TrendyolRatingBarSize.Medium,
             rating = 3.5f,
             showRating = true,
             reviewCount = "277",
@@ -267,7 +267,7 @@ private fun RatingBarScoreReviewMediumPreview() {
 private fun RatingBarReviewWithCameraIconSmallPreview() {
     PreviewTheme {
         RatingBar(
-            style = TrendyolRatingBarSize.Small,
+            size = TrendyolRatingBarSize.Small,
             rating = 3.5f,
             showCameraIcon = true,
             reviewCount = "277",
@@ -285,7 +285,7 @@ private fun RatingBarReviewWithCameraIconSmallPreview() {
 private fun RatingBarReviewWithCameraIconMediumPreview() {
     PreviewTheme {
         RatingBar(
-            style = TrendyolRatingBarSize.Medium,
+            size = TrendyolRatingBarSize.Medium,
             rating = 3.5f,
             showCameraIcon = true,
             reviewCount = "277",
