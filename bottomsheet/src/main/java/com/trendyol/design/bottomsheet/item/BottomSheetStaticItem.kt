@@ -12,11 +12,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.icons.fill.Bullet
 import com.trendyol.design.core.icon.icons.outline.Union
 import com.trendyol.design.core.text.Text
 import com.trendyol.design.previewtheme.PreviewTheme
@@ -56,13 +58,19 @@ fun BottomSheetStaticItem(
             Spacer(modifier = Modifier.width(8.dp))
         }
         Column {
-            Text(text = text, style = textStyle, maxLines = 1)
+            Text(
+                text = text,
+                style = textStyle,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
             if (description.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
                     text = description,
                     style = descriptionTextStyle,
-                    maxLines = 1
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                 )
             }
         }
@@ -73,9 +81,43 @@ fun BottomSheetStaticItem(
 @Composable
 private fun Preview() = PreviewTheme {
     BottomSheetStaticItem(
-        text = "Title",
+        text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle",
         onClick = {},
         icon = Icons.Outline.Union,
-        description = "Description",
+        description = "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription",
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun Preview1() = PreviewTheme {
+    BottomSheetStaticItem(
+        text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle",
+        onClick = {},
+        icon = Icons.Fill.Bullet,
+        description = "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription",
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun Preview2() = PreviewTheme {
+    BottomSheetStaticItem(
+        text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle",
+        onClick = {},
+        icon = Icons.Fill.Bullet,
+        iconPosition = Alignment.Top,
+        description = "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription",
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun Preview3() = PreviewTheme {
+    BottomSheetStaticItem(
+        text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle",
+        onClick = {},
+        icon = null,
+        description = "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription",
     )
 }
