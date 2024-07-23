@@ -14,12 +14,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.bottomsheet.header.BottomSheetHeader
+import kotlinx.collections.immutable.PersistentList
 
 @Composable
 fun <Item> BottomSheetSliderContent(
     title: String,
     onCloseIconClick: () -> Unit,
-    itemList: List<Item>,
+    itemList: PersistentList<Item>,
     itemContent: @Composable (index: Int, item: Item) -> Unit,
     modifier: Modifier = Modifier,
     header: @Composable () -> Unit = {
@@ -39,7 +40,7 @@ fun <Item> BottomSheetSliderContent(
 
 @Composable
 fun <Item> SliderContent(
-    itemList: List<Item>,
+    itemList: PersistentList<Item>,
     itemContent: @Composable (index: Int, item: Item) -> Unit,
     modifier: Modifier = Modifier,
     outerPadding: PaddingValues = PaddingValues(horizontal = 16.dp, vertical = 12.dp),

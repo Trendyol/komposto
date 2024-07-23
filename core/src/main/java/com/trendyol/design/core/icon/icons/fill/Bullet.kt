@@ -1,7 +1,6 @@
 package com.trendyol.design.core.icon.icons.fill
 
 import androidx.compose.runtime.Composable
-import androidx.compose.foundation.Image
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
@@ -14,7 +13,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
-
 
 @Preview
 @Composable
@@ -56,4 +54,3 @@ val Icons.Fill.Bullet: ImageVector
         }.build()
         return _Bullet!!
     }
-

@@ -10,6 +10,7 @@ import com.trendyol.design.bottomsheet.item.BottomSheetStaticItem
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Bullet
 import com.trendyol.design.ui.theme.TrendyolTheme
+import kotlinx.collections.immutable.toPersistentList
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
@@ -21,8 +22,12 @@ class ListExampleBottomSheetFragment : TrendyolDesignBottomSheetFragment() {
             BottomSheetListContent(
                 title = "Some Title",
                 onCloseIconClick = { dismiss() },
-                itemList = MutableStateFlow(LoremIpsum().values.first().split(" ").subList(0, 30)).asStateFlow().collectAsState().value,
-                itemContent = { _, item->
+                itemList = MutableStateFlow(LoremIpsum().values.first().split(" ").subList(0, 30))
+                    .asStateFlow()
+                    .collectAsState()
+                    .value
+                    .toPersistentList(),
+                itemContent = { _, item ->
                     BottomSheetStaticItem(
                         text = item,
                         onClick = { },
@@ -32,11 +37,6 @@ class ListExampleBottomSheetFragment : TrendyolDesignBottomSheetFragment() {
                     )
                 },
             )
-//            BottomSheetImageContent(
-//                title = "Some Title",
-//                onCloseIconClick = { dismiss() },
-//                model = "https://fastly.picsum.photos/id/340/536/354.jpg?hmac=TEqJ_0Lnvw38Q0oP_A5i3KuSxW6HV1xiJ3U_W8LW7G4"
-//            )
         }
     }
 }
