@@ -22,6 +22,18 @@ import com.trendyol.design.core.text.Text
 import com.trendyol.design.previewtheme.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * A composable function that creates a static item with a text label, optional description, and optional icon for a bottom sheet.
+ *
+ * @param text The text label to be displayed for the item.
+ * @param onClick A lambda function to be invoked when the item is clicked.
+ * @param modifier A `Modifier` for styling and layout customization. Default is `Modifier`.
+ * @param icon An optional `ImageVector` for the icon to be displayed next to the text. Default is `null`.
+ * @param iconPosition An `Alignment.Vertical` value to position the icon vertically. Default is `Alignment.CenterVertically`.
+ * @param textStyle A `TextStyle` for customizing the appearance of the text label. Default is `TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3`.
+ * @param description An optional description text to be displayed below the label. Default is an empty string.
+ * @param descriptionTextStyle A `TextStyle` for customizing the appearance of the description text. Default is `TrendyolDesign.typography.body1ColorOnSurfaceVariant1`.
+ */
 @Composable
 fun BottomSheetStaticItem(
     text: String,

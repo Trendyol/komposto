@@ -10,12 +10,34 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.bottomsheet.header.BottomSheetHeader
+import com.trendyol.design.bottomsheet.item.BottomSheetStaticItem
+import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.icons.fill.Bullet
+import com.trendyol.design.previewtheme.PreviewTheme
 import kotlinx.collections.immutable.PersistentList
+import kotlinx.collections.immutable.toPersistentList
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
+/**
+ * A composable function that creates a bottom sheet content layout with a horizontal slider of items and a customizable header.
+ *
+ * @param Item The type of items in the list.
+ * @param title The title to be displayed in the header.
+ * @param onCloseIconClick A lambda function to be invoked when the close icon in the header is clicked.
+ * @param itemList A `PersistentList` of items to be displayed in the slider.
+ * @param itemContent A composable lambda to define the content for each item in the slider.
+ * @param modifier A `Modifier` for styling and layout customization. Default is `Modifier`.
+ * @param header A composable lambda for customizing the header content. Default is a `BottomSheetHeader` with the provided title and close icon click action.
+ */
 @Composable
 fun <Item> BottomSheetSliderContent(
     title: String,
@@ -38,6 +60,17 @@ fun <Item> BottomSheetSliderContent(
     }
 }
 
+/**
+ * A composable function that creates a lazy row with a slider of items and optional divider content.
+ *
+ * @param Item The type of items in the list.
+ * @param itemList A `PersistentList` of items to be displayed in the slider.
+ * @param itemContent A composable lambda to define the content for each item in the slider.
+ * @param modifier A `Modifier` for styling and layout customization. Default is `Modifier`.
+ * @param outerPadding A `PaddingValues` object to set the padding around the slider content.
+ * Start and End paddings will work as item padding in order to make items disappear when user scrolls to enhance UX. Default is `PaddingValues(horizontal = 16.dp, vertical = 12.dp)`.
+ * @param dividerContent A composable lambda to define the content for the divider between items. Default is a `Spacer` with a width of 12.dp.
+ */
 @Composable
 fun <Item> SliderContent(
     itemList: PersistentList<Item>,
@@ -69,4 +102,27 @@ fun <Item> SliderContent(
             Spacer(modifier = Modifier.width(outerPadding.calculateEndPadding(LocalLayoutDirection.current)))
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun Preview() = PreviewTheme {
+    BottomSheetSliderContent(
+        title = "Some Title",
+        onCloseIconClick = { },
+        itemList = MutableStateFlow(LoremIpsum().values.first().split(" ").subList(0, 30))
+            .asStateFlow()
+            .collectAsState()
+            .value
+            .toPersistentList(),
+        itemContent = { _, item ->
+            BottomSheetStaticItem(
+                text = item,
+                onClick = { },
+                icon = Icons.Fill.Bullet,
+                iconPosition = Alignment.CenterVertically,
+                description = "Description",
+            )
+        },
+    )
 }

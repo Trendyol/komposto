@@ -9,6 +9,7 @@ Add the following dependencies to your project's `build.gradle` file:
 ```kotlin
 implementation("com.trendyol:design-core:LATEST_VERSION")
 implementation("com.trendyol:design-theme:LATEST_VERSION")
+implementation("com.trendyol:bottom-sheet:LATEST_VERSION")
 ```
 
 This artifacts are published in the [internal nexus repository](http://10.84.105.74/).
