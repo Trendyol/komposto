@@ -11,7 +11,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
@@ -71,6 +73,7 @@ fun BottomSheetHeader(
             text = title,
             style = TrendyolDesign.typography.titleBoldColorOnSurfaceVariant3,
             maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
             modifier = Modifier
                 .weight(1f)
                 .padding(start = titleStartPadding, top = topPadding, bottom = bottomPadding),
@@ -94,5 +97,15 @@ private fun Preview() = PreviewTheme {
         title = "Title",
         onCloseIconClick = {},
         isBackIconVisible = true
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun Preview1() = PreviewTheme {
+    BottomSheetHeader(
+        title = LoremIpsum().values.joinToString(),
+        onCloseIconClick = {},
+        isBackIconVisible = false
     )
 }

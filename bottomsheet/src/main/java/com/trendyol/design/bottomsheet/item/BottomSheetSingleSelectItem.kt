@@ -1,6 +1,7 @@
 package com.trendyol.design.bottomsheet.item
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -11,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
@@ -54,40 +56,55 @@ fun BottomSheetSingleSelectItem(
             .fillMaxWidth()
             .clickable(onClick = onClick),
         verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween
     ) {
         if (isIconVisible) {
             Icon(imageVector = Icons.Outline.Info, size = TrendyolIconSize.Small)
             Spacer(modifier = Modifier.width(8.dp))
         }
-        Column {
-            val textColor = if (selected) {
-                TrendyolDesign.colors.colorPrimary
-            } else {
-                textStyle.color
-            }
-            Text(text = text, style = textStyle.copy(color = textColor), maxLines = 1)
-            if (description.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(4.dp))
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.weight(1f),
+        ) {
+            Column(
+                modifier = Modifier.weight(1f),
+            ) {
+                val textColor = if (selected) {
+                    TrendyolDesign.colors.colorPrimary
+                } else {
+                    textStyle.color
+                }
                 Text(
-                    text = description,
-                    style = descriptionTextStyle,
-                    maxLines = 1
+                    text = text,
+                    style = textStyle.copy(color = textColor),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                if (description.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = description,
+                        style = descriptionTextStyle,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+            }
+            if (helperText.isNotEmpty()) {
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = helperText,
+                    style = helperTextStyle,
+                    maxLines = 1,
                 )
             }
         }
-        if (helperText.isNotEmpty()) {
-            Spacer(modifier = Modifier.width(16.dp))
-            Text(
-                text = helperText,
-                style = helperTextStyle,
-                maxLines = 1,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1f)
-            )
-        }
         if (selected) {
-            Icon(imageVector = Icons.Fill.Tick, size = TrendyolIconSize.Small)
+            Spacer(modifier = Modifier.width(16.dp))
+            Icon(
+                imageVector = Icons.Fill.Tick,
+                size = TrendyolIconSize.Small,
+            )
         }
     }
 }
@@ -97,9 +114,45 @@ fun BottomSheetSingleSelectItem(
 private fun Preview() = PreviewTheme {
     BottomSheetSingleSelectItem(
         selected = true,
-        text = "Title",
+        text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle",
         onClick = { },
-        description = "Description",
+        description = "DescriptionDescriptionDescriptionDescriptionDescriptionDescription",
         helperText = "Helper Text"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun Preview1() = PreviewTheme {
+    BottomSheetSingleSelectItem(
+        selected = true,
+        text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle",
+        onClick = { },
+        description = "DescriptionDescriptionDescriptionDescriptionDescriptionDescription",
+        helperText = ""
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun Preview2() = PreviewTheme {
+    BottomSheetSingleSelectItem(
+        selected = true,
+        text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle",
+        onClick = { },
+        description = "DescriptionDescriptionDescriptionDescriptionDescriptionDescription",
+        helperText = ""
+    )
+}
+@Preview(showBackground = true)
+@Composable
+private fun Preview3() = PreviewTheme {
+    BottomSheetSingleSelectItem(
+        selected = true,
+        text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle",
+        isIconVisible = false,
+        onClick = { },
+        description = "DescriptionDescriptionDescriptionDescriptionDescriptionDescription",
+        helperText = ""
     )
 }
