@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.0] - 2024-07-23
+### Added
+
+- Added bottom sheet Composable APIs(`BottomSheetListContent`, `BottomSheetSliderContent`, etc...).
+- Added bottom sheet item Composable APIs(`BottomSheetCheckboxItem`, `BottomSheetSingleSelectionItem`).
+
 ## [0.7.3] - 2024-06-20
 
 ### Added

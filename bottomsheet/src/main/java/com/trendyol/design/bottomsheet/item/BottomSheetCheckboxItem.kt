@@ -25,6 +25,18 @@ import com.trendyol.design.core.text.Text
 import com.trendyol.design.previewtheme.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * A composable function that creates a checkbox item with a text label and optional description for a bottom sheet.
+ *
+ * @param checked A boolean value that determines whether the checkbox is checked.
+ * @param text The text label to be displayed next to the checkbox.
+ * @param onCheckedChange A lambda function to be invoked when the checked state changes.
+ * @param modifier A `Modifier` for styling and layout customization. Default is `Modifier`.
+ * @param textStyle A `TextStyle` for customizing the appearance of the text label. Default is `TrendyolDesign.typography.titleMediumColorOnSurfaceVariant3`.
+ * @param iconSize An `IconSize` for customizing the size of the info icon. Default is `TrendyolIconSize.XSmall`.
+ * @param description An optional description text to be displayed below the label. Default is an empty string.
+ * @param descriptionTextStyle A `TextStyle` for customizing the appearance of the description text. Default is `TrendyolDesign.typography.body1ColorOnSurfaceVariant1`.
+ */
 @Composable
 fun BottomSheetCheckboxItem(
     checked: Boolean,

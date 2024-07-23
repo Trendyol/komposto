@@ -22,6 +22,17 @@ import com.trendyol.design.core.text.Text
 import com.trendyol.design.previewtheme.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * A composable function that creates a customizable header for a bottom sheet.
+ *
+ * @param title The title to be displayed in the header.
+ * @param onCloseIconClick A lambda function to be invoked when the close icon is clicked.
+ * @param modifier A `Modifier` for styling and layout customization. Default is `Modifier`.
+ * @param onBackIconClick A lambda function to be invoked when the back icon is clicked. Default is an empty lambda.
+ * @param isCloseIconVisible A boolean to determine the visibility of the close icon. Default is `true`.
+ * @param isBackIconVisible A boolean to determine the visibility of the back icon. Default is `false`.
+ * @param verticalPadding A `PaddingValues` object to set the vertical padding of the header. Default is `PaddingValues(vertical = 12.dp)`.
+ */
 @Composable
 fun BottomSheetHeader(
     title: String,
