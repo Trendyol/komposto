@@ -65,10 +65,13 @@ configure<DetektExtension> {
 dependencies {
 
     implementation(projects.core)
+    implementation(projects.bottomsheet)
 
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle.runtime)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.appCompat)
+    implementation(libs.android.material)
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui.ui)

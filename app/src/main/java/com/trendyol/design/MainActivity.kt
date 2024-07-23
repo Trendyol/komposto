@@ -1,53 +1,37 @@
 package com.trendyol.design
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Scaffold
 import androidx.compose.ui.Modifier
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.StateLayoutIconSize
-import com.trendyol.design.core.icon.icons.outline.Back
-import com.trendyol.design.core.statelayout.State
-import com.trendyol.design.core.statelayout.StateComposeLayout
-import com.trendyol.design.core.statelayout.TrendyolWarningInfoStateLayoutStyle
-import com.trendyol.design.core.toolbar.Toolbar
-import com.trendyol.design.core.toolbar.TrendyolToolbarStyle
+import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.button.Button
+import com.trendyol.design.core.button.TrendyolButtonSize
+import com.trendyol.design.core.button.TrendyolButtonStyle
+import com.trendyol.design.core.text.Text
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             TrendyolTheme {
-                Scaffold(
-                    topBar = {
-                        Toolbar(
-                            title = "Title",
-                            style = TrendyolToolbarStyle.Icon.TextButton(
-                                icon = {
-                                    Icon(
-                                        imageVector = Icons.Outline.Back,
-                                        tint = TrendyolDesign.colors.colorOnSurfaceVariant3,
-                                        onClick = { /*TODO*/ }
-                                    )
-                                },
-                                textButton = { Text(text = "CTA Label", onClick = { /*TODO*/ }) }
-                            )
-                        )
+                Column {
+                    Button(
+                        onClick = {
+                            ListExampleBottomSheetFragment().show(supportFragmentManager, "asdfas")
+                        },
+                        style = TrendyolButtonStyle.Primary,
+                        size = TrendyolButtonSize.Large,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp)
+                    ) {
+                        Text(text = "1")
                     }
-                ) { paddingValues ->
-                    StateComposeLayout(
-                        modifier = Modifier.padding(paddingValues),
-                        state = State.WarningInfo(
-                            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonNoDescription(
-                                iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
-                                primaryButtonClickListener = {}
-                            )
-                        )
-                    )
                 }
             }
         }
