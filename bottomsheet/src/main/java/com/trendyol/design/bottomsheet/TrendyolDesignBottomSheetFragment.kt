@@ -29,7 +29,6 @@ abstract class TrendyolDesignBottomSheetFragment : BottomSheetDialogFragment() {
      */
     override fun getTheme(): Int = R.style.BaseBottomSheetDialog
 
-
     /**
      * Creates and returns the view hierarchy associated with the fragment.
      * This method inflates a `ComposeView` and sets the content to the `PageContent` composable function.
