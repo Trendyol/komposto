@@ -15,43 +15,59 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.rememberNestedScrollInteropConnection
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.bottomsheet.header.BottomSheetHeader
 
-interface BottomSheetListContent<Item> : BottomSheetContent, ListContract<Item> {
-
-    @Composable
-    override fun DividerContent() {
-        Spacer(modifier = Modifier.height(12.dp))
+@Composable
+fun <Item> BottomSheetListContent(
+    title: String,
+    onCloseIconClick: () -> Unit,
+    itemList: List<Item>,
+    itemContent: @Composable (index: Int, item: Item) -> Unit,
+    modifier: Modifier = Modifier,
+    header: @Composable () -> Unit = {
+        BottomSheetHeader(title = title, onCloseIconClick = onCloseIconClick)
+    },
+) {
+    Column(
+        modifier = modifier.nestedScroll(rememberNestedScrollInteropConnection()),
+    ) {
+        header()
+        ListContent(
+            itemList = itemList,
+            itemContent = itemContent,
+        )
     }
+}
 
-    @Composable
-    override fun PageContent() {
-        Column(
-            modifier = Modifier.nestedScroll(rememberNestedScrollInteropConnection()),
-        ) {
-            Header()
-            val itemList = itemList()
-            val outerPadding = outerPadding()
-            LazyColumn(
-                modifier = Modifier.padding(
-                    paddingValues = PaddingValues(
-                        start = outerPadding.calculateStartPadding(LocalLayoutDirection.current),
-                        end = outerPadding.calculateEndPadding(LocalLayoutDirection.current),
-                    )
-                ),
-            ) {
-                item {
-                    Spacer(modifier = Modifier.height(outerPadding.calculateTopPadding()))
-                }
-                itemsIndexed(items = itemList) { index, item ->
-                    ItemContent(item)
-                    if (index != itemList.lastIndex) {
-                        DividerContent()
-                    }
-                }
-                item {
-                    Spacer(modifier = Modifier.height(outerPadding.calculateBottomPadding()))
-                }
+@Composable
+fun <Item> ListContent(
+    itemList: List<Item>,
+    itemContent: @Composable (index: Int, item: Item) -> Unit,
+    modifier: Modifier = Modifier,
+    outerPadding: PaddingValues = PaddingValues(horizontal = 16.dp, vertical = 12.dp),
+    dividerContent: @Composable (index: Int, item: Item) -> Unit = { _, _ ->
+        Spacer(modifier = Modifier.height(12.dp))
+    },
+) {
+    LazyColumn(
+        modifier = modifier.padding(
+            paddingValues = PaddingValues(
+                start = outerPadding.calculateStartPadding(LocalLayoutDirection.current),
+                end = outerPadding.calculateEndPadding(LocalLayoutDirection.current),
+            )
+        ),
+    ) {
+        item {
+            Spacer(modifier = Modifier.height(outerPadding.calculateTopPadding()))
+        }
+        itemsIndexed(items = itemList) { index, item ->
+            itemContent(index, item)
+            if (index != itemList.lastIndex) {
+                dividerContent(index, item)
             }
+        }
+        item {
+            Spacer(modifier = Modifier.height(outerPadding.calculateBottomPadding()))
         }
     }
 }
