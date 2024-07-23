@@ -14,7 +14,6 @@ import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 
-
 @Preview
 @Composable
 private fun VectorPreview() {
@@ -100,4 +99,3 @@ val Icons.Outline.Info: ImageVector
         }.build()
         return _Info!!
     }
-

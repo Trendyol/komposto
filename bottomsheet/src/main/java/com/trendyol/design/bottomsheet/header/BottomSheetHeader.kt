@@ -50,7 +50,7 @@ fun BottomSheetHeader(
                 size = TrendyolIconSize.XSmall,
                 modifier = Modifier
                     .clickable(onClick = onBackIconClick)
-                    .padding(start =  16.dp, end = 12.dp, top = topPadding, bottom = bottomPadding),
+                    .padding(start = 16.dp, end = 12.dp, top = topPadding, bottom = bottomPadding),
             )
         }
         val titleStartPadding = if (isBackIconVisible) {

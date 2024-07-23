@@ -22,6 +22,8 @@ androidx-compose-ui-util = { module = "androidx.compose.ui:ui-util" }
 androidx-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
 androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 
+kotlinXImmutableCollections = "org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7"
+
 detekt-formatting = "io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0"
 detekt-composeRules = "io.nlopez.compose.rules:detekt:0.1.13"
 

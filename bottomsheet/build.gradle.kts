@@ -75,6 +75,7 @@ dependencies {
 
     api(projects.theme)
     api(projects.core)
+    api(libs.kotlinXImmutableCollections)
     implementation(projects.previewTheme)
 
     implementation(libs.androidx.core)
