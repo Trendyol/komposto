@@ -21,7 +21,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.fill.Bullet
 import com.trendyol.design.core.icon.icons.outline.Union
 import com.trendyol.design.core.text.Text
-import com.trendyol.design.previewtheme.PreviewTheme
+import com.trendyol.design.bottomsheet.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 /**
