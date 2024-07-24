@@ -7,7 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.tooling.preview.Preview
-import com.trendyol.design.previewtheme.PreviewTheme
+import com.trendyol.design.core.preview.PreviewTheme
 
 /**
  * This composable function representing a custom checkbox component designed for the Trendyol.

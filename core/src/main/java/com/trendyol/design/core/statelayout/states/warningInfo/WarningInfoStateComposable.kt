@@ -23,7 +23,7 @@ import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.statelayout.WarningInfoStateLayoutStyle
 import com.trendyol.design.core.statelayout.TrendyolWarningInfoStateLayoutStyle
 import com.trendyol.design.core.text.Text
-import com.trendyol.design.previewtheme.PreviewTheme
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 @Composable

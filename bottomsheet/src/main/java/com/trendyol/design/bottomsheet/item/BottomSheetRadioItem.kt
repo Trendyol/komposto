@@ -21,7 +21,7 @@ import com.trendyol.design.core.radiobutton.TrendyolRadioButton
 import com.trendyol.design.core.radiobutton.TrendyolRadioButtonContainerType
 import com.trendyol.design.core.radiobutton.TrendyolRadioButtonSize
 import com.trendyol.design.core.text.Text
-import com.trendyol.design.previewtheme.PreviewTheme
+import com.trendyol.design.bottomsheet.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 /**

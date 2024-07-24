@@ -23,7 +23,7 @@ import com.trendyol.design.bottomsheet.header.BottomSheetHeader
 import com.trendyol.design.bottomsheet.item.BottomSheetStaticItem
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Bullet
-import com.trendyol.design.previewtheme.PreviewTheme
+import com.trendyol.design.bottomsheet.preview.PreviewTheme
 import kotlinx.collections.immutable.PersistentList
 import kotlinx.collections.immutable.toPersistentList
 import kotlinx.coroutines.flow.MutableStateFlow

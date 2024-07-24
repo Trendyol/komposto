@@ -10,7 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.trendyol.design.bottomsheet.header.BottomSheetHeader
-import com.trendyol.design.previewtheme.PreviewTheme
+import com.trendyol.design.bottomsheet.preview.PreviewTheme
 
 /**
  * A composable function that creates a bottom sheet content layout with an image and a customizable header.
