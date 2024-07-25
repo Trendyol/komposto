@@ -32,6 +32,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param text The text label to be displayed next to the checkbox.
  * @param onCheckedChange A lambda function to be invoked when the checked state changes.
  * @param modifier A `Modifier` for styling and layout customization. Default is `Modifier`.
+ * @param isIconVisible A boolean value indicating whether an icon should be displayed next to the text. Default is `false`.
  * @param textStyle A `TextStyle` for customizing the appearance of the text label. Default is `TrendyolDesign.typography.titleMediumColorOnSurfaceVariant3`.
  * @param iconSize An `IconSize` for customizing the size of the info icon. Default is `TrendyolIconSize.XSmall`.
  * @param description An optional description text to be displayed below the label. Default is an empty string.
@@ -43,6 +44,7 @@ fun BottomSheetCheckboxItem(
     text: String,
     onCheckedChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
+    isIconVisible: Boolean = false,
     textStyle: TextStyle = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant3,
     iconSize: IconSize = TrendyolIconSize.XSmall,
     description: String = "",
@@ -56,8 +58,10 @@ fun BottomSheetCheckboxItem(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(text = text, style = textStyle, maxLines = 1)
-                    Spacer(modifier = Modifier.width(4.dp))
-                    Icon(imageVector = Icons.Outline.Info, size = iconSize)
+                    if (isIconVisible) {
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Icon(imageVector = Icons.Outline.Info, size = iconSize)
+                    }
                 }
                 if (description.isNotEmpty()) {
                     Spacer(modifier = Modifier.height(4.dp))
