@@ -67,7 +67,7 @@ fun BottomSheetSingleSelectItem(
             modifier = Modifier.weight(1f),
         ) {
             Column(
-                modifier = Modifier.weight(1f),
+                modifier = Modifier.weight(1f, fill = false),
             ) {
                 val textColor = if (selected) {
                     TrendyolDesign.colors.colorPrimary
@@ -114,9 +114,21 @@ fun BottomSheetSingleSelectItem(
 private fun Preview() = PreviewTheme {
     BottomSheetSingleSelectItem(
         selected = true,
-        text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle",
+        text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle",
         onClick = { },
-        description = "DescriptionDescriptionDescriptionDescriptionDescriptionDescription",
+        description = "Description",
+        helperText = "Helper Text"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun Preview0() = PreviewTheme {
+    BottomSheetSingleSelectItem(
+        selected = true,
+        text = "Title",
+        onClick = { },
+        description = "Description",
         helperText = "Helper Text"
     )
 }
