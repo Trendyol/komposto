@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
+import com.trendyol.design.bottomsheet.BottomSheetImageContent
 import com.trendyol.design.bottomsheet.BottomSheetListContent
 import com.trendyol.design.bottomsheet.TrendyolDesignBottomSheetFragment
 import com.trendyol.design.bottomsheet.item.BottomSheetStaticItem
@@ -19,23 +20,10 @@ class ListExampleBottomSheetFragment : TrendyolDesignBottomSheetFragment() {
     @Composable
     override fun PageContent() {
         TrendyolTheme {
-            BottomSheetListContent(
+            BottomSheetImageContent(
                 title = "Some Title",
                 onCloseIconClick = { dismiss() },
-                itemList = MutableStateFlow(LoremIpsum().values.first().split(" ").subList(0, 30))
-                    .asStateFlow()
-                    .collectAsState()
-                    .value
-                    .toPersistentList(),
-                itemContent = { _, item ->
-                    BottomSheetStaticItem(
-                        text = item,
-                        onClick = { },
-                        icon = Icons.Fill.Bullet,
-                        iconPosition = Alignment.CenterVertically,
-                        description = "Description",
-                    )
-                },
+                model = "https://cdn.dsmcdn.com/ty1435/pimWidgetApi/mobile_20240722061404_2970506KadinMobile202407191702.jpg",
             )
         }
     }
