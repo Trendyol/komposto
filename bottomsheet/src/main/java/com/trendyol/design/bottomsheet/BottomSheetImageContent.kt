@@ -1,14 +1,27 @@
 package com.trendyol.design.bottomsheet
 
+import android.content.res.Configuration
+import android.graphics.Bitmap
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
+import androidx.core.graphics.drawable.toBitmap
+import coil.ImageLoader
+import coil.request.ImageRequest
 import com.trendyol.design.bottomsheet.header.BottomSheetHeader
 import com.trendyol.design.bottomsheet.preview.PreviewTheme
 
@@ -37,13 +50,38 @@ fun BottomSheetImageContent(
         modifier = modifier,
     ) {
         header()
-        AsyncImage(
-            model = model,
-            contentDescription = null,
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(paddingValues = outerPadding),
-        )
+
+        val configuration = LocalConfiguration.current
+        val context = LocalContext.current
+        val imageRequest = ImageRequest.Builder(LocalContext.current)
+            .data(model)
+            .build()
+        var bitmap by remember { mutableStateOf<Bitmap?>(null) }
+        LaunchedEffect(key1 = model) {
+            bitmap = ImageLoader(context).execute(imageRequest).drawable?.toBitmap()
+        }
+        bitmap?.let {
+            val imageRatio = it.height.toDouble() / it.width
+            Image(
+                bitmap = it.asImageBitmap(),
+                contentDescription = title,
+                modifier = Modifier
+                    .setImageRatioIfNeeded(imageRatio, configuration)
+                    .padding(paddingValues = outerPadding),
+            )
+        }
+    }
+}
+
+private fun Modifier.setImageRatioIfNeeded(
+    imageRatio: Double,
+    configuration: Configuration,
+): Modifier {
+    return if (imageRatio <= 0.0) this
+    else {
+        val width = configuration.screenWidthDp
+        val height = (width * imageRatio).dp
+        then(size(width = width.dp, height = height))
     }
 }
 
