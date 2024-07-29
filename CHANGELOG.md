@@ -16,13 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - InputPasswordField composable is introduced with [TrendyolOutlinedTextFieldStyle.Outline],
   [TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined] and [FloatingLabelOutlined.Filled] styles.
 
-### Fixed
+## [0.7.4] - 2024-07-19
 
-- N/A.
+### Added
 
-### Changed
-
-- N/A.
+- Add new vertical price api
 
 ## [0.7.3] - 2024-06-20
 
