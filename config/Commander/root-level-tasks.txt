@@ -1,3 +1,4 @@
 assembleDebug assembleDebug
 clean clean
 publishToMavenLocal publishToMavenLocal
+detekt detekt --continue

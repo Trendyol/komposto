@@ -51,17 +51,17 @@ fun BottomSheetImageContent(
     ) {
         header()
 
-        val configuration = LocalConfiguration.current
         val context = LocalContext.current
-        val imageRequest = ImageRequest.Builder(LocalContext.current)
-            .data(model)
-            .build()
         var bitmap by remember { mutableStateOf<Bitmap?>(null) }
         LaunchedEffect(key1 = model) {
+            val imageRequest = ImageRequest.Builder(context)
+                .data(model)
+                .build()
             bitmap = ImageLoader(context).execute(imageRequest).drawable?.toBitmap()
         }
         bitmap?.let {
             val imageRatio = it.height.toDouble() / it.width
+            val configuration = LocalConfiguration.current
             Image(
                 bitmap = it.asImageBitmap(),
                 contentDescription = title,
