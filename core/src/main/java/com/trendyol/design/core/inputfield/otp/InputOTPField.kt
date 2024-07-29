@@ -27,7 +27,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -71,7 +73,9 @@ fun InputOTPField(
     errorText: String? = null,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
-    var otpValue by remember { mutableStateOf(otp) }
+    var otpTextValue by remember {
+        mutableStateOf(TextFieldValue(text = otp, selection = TextRange(otp.length)))
+    }
     val focusManager = LocalFocusManager.current
     val isFocused by interactionSource.collectIsFocusedAsState()
     val isError = errorText != null
@@ -83,18 +87,19 @@ fun InputOTPField(
                 .onKeyEvent { keyEvent ->
                     if (keyEvent.nativeKeyEvent.keyCode == KeyEvent.KEYCODE_ENTER) {
                         focusManager.clearFocus(force = true)
-                        onValueChange(otpValue)
+                        onValueChange(otpTextValue.text)
 
                         return@onKeyEvent true
                     }
 
                     false
                 },
-            value = otpValue,
+            value = otpTextValue,
             onValueChange = { value ->
-                if (value.trim().length <= otpLength) {
-                    otpValue = value.trim()
-                }
+                otpTextValue = value.copy(
+                    text = value.text.trim(),
+                    selection = TextRange(value.text.length)
+                )
             },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
             interactionSource = interactionSource,
@@ -128,10 +133,10 @@ fun InputOTPField(
                         horizontalArrangement = Arrangement.Center,
                     ) {
                         repeat(otpLength) { index ->
-                            val shouldFocusChar = isFocused && otpValue.length == index
+                            val shouldFocusChar = isFocused && otpTextValue.text.length == index
                             val char = when {
-                                index >= otpValue.length -> EMPTY
-                                else -> otpValue[index].toString()
+                                index >= otpTextValue.text.length -> EMPTY
+                                else -> otpTextValue.text[index].toString()
                             }
 
                             Box(
