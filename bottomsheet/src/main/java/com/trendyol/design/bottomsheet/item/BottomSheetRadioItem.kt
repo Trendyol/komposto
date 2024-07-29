@@ -57,7 +57,7 @@ fun BottomSheetRadioItem(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(text = text, style = textStyle, maxLines = 1)
-                    if (isIconVisible){
+                    if (isIconVisible) {
                         Spacer(modifier = Modifier.width(4.dp))
                         Icon(imageVector = Icons.Outline.Info, size = iconSize)
                     }

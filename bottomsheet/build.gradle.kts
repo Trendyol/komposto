@@ -78,6 +78,7 @@ dependencies {
     api(libs.kotlinXImmutableCollections)
 
     implementation(libs.androidx.core)
+    implementation(libs.androidx.fragment.compose)
     implementation(libs.android.material)
 
     implementation(platform(libs.androidx.compose.bom))

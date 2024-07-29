@@ -20,37 +20,30 @@ private fun VectorPreview() {
     Icon(Icons.Fill.Bullet, TrendyolIconSize.XSmall)
 }
 
-private var _Bullet: ImageVector? = null
-
-val Icons.Fill.Bullet: ImageVector
-    get() {
-        if (_Bullet != null) {
-            return _Bullet!!
+val Icons.Fill.Bullet: ImageVector by lazy {
+    ImageVector.Builder(
+        name = "Bullet",
+        defaultWidth = 16.dp,
+        defaultHeight = 16.dp,
+        viewportWidth = 16f,
+        viewportHeight = 16f
+    ).apply {
+        path(
+            fill = SolidColor(Color(0xFFF27A1A)),
+            fillAlpha = 1.0f,
+            stroke = null,
+            strokeAlpha = 1.0f,
+            strokeLineWidth = 1.0f,
+            strokeLineCap = StrokeCap.Butt,
+            strokeLineJoin = StrokeJoin.Miter,
+            strokeLineMiter = 1.0f,
+            pathFillType = PathFillType.NonZero
+        ) {
+            moveTo(10f, 8f)
+            arcTo(2f, 2f, 0f, isMoreThanHalf = false, isPositiveArc = true, 8f, 10f)
+            arcTo(2f, 2f, 0f, isMoreThanHalf = false, isPositiveArc = true, 6f, 8f)
+            arcTo(2f, 2f, 0f, isMoreThanHalf = false, isPositiveArc = true, 10f, 8f)
+            close()
         }
-        _Bullet = ImageVector.Builder(
-            name = "Bullet",
-            defaultWidth = 16.dp,
-            defaultHeight = 16.dp,
-            viewportWidth = 16f,
-            viewportHeight = 16f
-        ).apply {
-            path(
-                fill = SolidColor(Color(0xFFF27A1A)),
-                fillAlpha = 1.0f,
-                stroke = null,
-                strokeAlpha = 1.0f,
-                strokeLineWidth = 1.0f,
-                strokeLineCap = StrokeCap.Butt,
-                strokeLineJoin = StrokeJoin.Miter,
-                strokeLineMiter = 1.0f,
-                pathFillType = PathFillType.NonZero
-            ) {
-                moveTo(10f, 8f)
-                arcTo(2f, 2f, 0f, isMoreThanHalf = false, isPositiveArc = true, 8f, 10f)
-                arcTo(2f, 2f, 0f, isMoreThanHalf = false, isPositiveArc = true, 6f, 8f)
-                arcTo(2f, 2f, 0f, isMoreThanHalf = false, isPositiveArc = true, 10f, 8f)
-                close()
-            }
-        }.build()
-        return _Bullet!!
-    }
+    }.build()
+}
