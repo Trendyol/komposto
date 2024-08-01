@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   [TrendyolInputOTPFieldStyle.Filled] styles.
 - InputPasswordField composable is introduced with [TrendyolOutlinedTextFieldStyle.Outline],
   [TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined] and [FloatingLabelOutlined.Filled] styles.
+- OutlinedTextField disabled label color changed to colorOnSurfaceVariant1.
 
 ## [0.7.4] - 2024-07-19
 
