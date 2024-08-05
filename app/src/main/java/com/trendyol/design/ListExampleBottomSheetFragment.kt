@@ -2,19 +2,51 @@ package com.trendyol.design
 
 import androidx.compose.runtime.Composable
 import com.trendyol.design.bottomsheet.BottomSheetImageContent
+import com.trendyol.design.bottomsheet.BottomSheetListContent
 import com.trendyol.design.bottomsheet.TrendyolDesignBottomSheetFragment
+import com.trendyol.design.bottomsheet.item.BottomSheetCheckboxItem
 import com.trendyol.design.ui.theme.TrendyolTheme
+import kotlinx.collections.immutable.persistentListOf
 
 class ListExampleBottomSheetFragment : TrendyolDesignBottomSheetFragment() {
 
     @Composable
     override fun PageContent() {
         TrendyolTheme {
-            BottomSheetImageContent(
-                title = "Some Title",
-                onCloseIconClick = { dismiss() },
-                model =
-                "https://cdn.dsmcdn.com/ty1435/pimWidgetApi/mobile_20240722061404_2970506KadinMobile202407191702.jpg",
+            BottomSheetListContent(
+                title = "SomeTitle",
+                onCloseIconClick = { },
+                itemList = persistentListOf(
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                    "asd",
+                ),
+                itemContent = { _, item ->
+                    BottomSheetCheckboxItem(
+                        checked = false,
+                        text = item,
+                        onCheckedChange = {},
+                        description = "description",
+                        isIconVisible = true,
+                    )
+                }
             )
         }
     }

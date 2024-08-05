@@ -47,7 +47,7 @@ fun BottomSheetSingleSelectItem(
     isIconVisible: Boolean = true,
     textStyle: TextStyle = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant3,
     helperText: String = "",
-    helperTextStyle: TextStyle = TrendyolDesign.typography.body2MediumColorWarning,
+    helperTextStyle: TextStyle = TrendyolDesign.typography.body1MediumColorWarning,
     description: String = "",
     descriptionTextStyle: TextStyle = TrendyolDesign.typography.body1ColorOnSurfaceVariant1,
 ) {
@@ -59,7 +59,7 @@ fun BottomSheetSingleSelectItem(
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         if (isIconVisible) {
-            Icon(imageVector = Icons.Outline.Info, size = TrendyolIconSize.Small)
+            Icon(imageVector = Icons.Outline.Info, size = TrendyolIconSize.Medium)
             Spacer(modifier = Modifier.width(8.dp))
         }
         Row(
