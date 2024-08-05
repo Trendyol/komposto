@@ -74,7 +74,7 @@ fun BottomSheetCheckboxItem(
             }
         },
         style = TrendyolCheckBoxStyle.Primary,
-        size = TrendyolCheckBoxSize.Medium,
+        size = TrendyolCheckBoxSize.Small,
         onCheckedChange = onCheckedChange,
         modifier = modifier
             .fillMaxWidth()
@@ -99,5 +99,17 @@ private fun BottomSheetCheckboxItemWithDescription() = PreviewTheme {
         text = "Title",
         onCheckedChange = {},
         description = "description"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun BottomSheetCheckboxItemWithDescriptionWithInfoIcon() = PreviewTheme {
+    BottomSheetCheckboxItem(
+        checked = false,
+        text = "Title",
+        onCheckedChange = {},
+        description = "description",
+        isIconVisible = true,
     )
 }

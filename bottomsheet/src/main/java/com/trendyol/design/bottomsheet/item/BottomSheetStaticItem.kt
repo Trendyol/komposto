@@ -55,7 +55,9 @@ fun BottomSheetStaticItem(
     ) {
         if (icon != null) {
             Icon(imageVector = icon, size = TrendyolIconSize.XSmall)
-            Spacer(modifier = Modifier.width(8.dp))
+            if (icon != Icons.Fill.Bullet) {
+                Spacer(modifier = Modifier.width(8.dp))
+            }
         }
         Column {
             Text(
