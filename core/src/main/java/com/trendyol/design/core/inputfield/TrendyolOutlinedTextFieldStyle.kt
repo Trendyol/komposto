@@ -23,7 +23,7 @@ sealed interface TrendyolOutlinedTextFieldStyle {
                 cursorColor = TrendyolDesign.colors.colorPrimary,
 
                 disabledBorderColor = TrendyolDesign.colors.colorBorder,
-                disabledLabelColor = TrendyolDesign.colors.colorBorder,
+                disabledLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 disabledTextColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
                 errorCursorColor = TrendyolDesign.colors.colorWarning,
@@ -48,7 +48,7 @@ sealed interface TrendyolOutlinedTextFieldStyle {
                 cursorColor = TrendyolDesign.colors.colorPrimary,
 
                 disabledBorderColor = TrendyolDesign.colors.colorBorder,
-                disabledLabelColor = TrendyolDesign.colors.colorBorder,
+                disabledLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 disabledTextColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
                 errorCursorColor = TrendyolDesign.colors.colorWarning,
