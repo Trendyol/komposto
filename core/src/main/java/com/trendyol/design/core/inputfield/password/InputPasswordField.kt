@@ -26,7 +26,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.inputfield.OutlinedTextFieldStyle
 import com.trendyol.design.core.inputfield.TrendyolOutlinedTextField
 import com.trendyol.design.core.inputfield.TrendyolOutlinedTextFieldStyle
-import com.trendyol.design.core.previewtheme.PreviewTheme
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
