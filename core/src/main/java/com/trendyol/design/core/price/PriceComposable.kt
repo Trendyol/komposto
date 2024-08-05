@@ -16,8 +16,7 @@ import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.fill.Basket
 import com.trendyol.design.core.icon.icons.fill.CampaignDownArrow
-import com.trendyol.design.core.previewtheme.PreviewTheme
-import com.trendyol.design.core.previewtheme.TrendyolColor
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
@@ -157,7 +156,7 @@ private fun SinglePriceWithUpperInfoStyleBasketPreview() {
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
                 icon = Icons.Fill.Basket,
                 iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolColor.themeColor.colorPrimary
+                iconTint = TrendyolDesign.colors.colorPrimary
             )
         )
     }
@@ -175,7 +174,7 @@ private fun SinglePriceWithUpperInfoStyleLowestPricePreview() {
                 upperInfoText = "Son 30 Günün En Düşük Fiyatı",
                 icon = Icons.Fill.CampaignDownArrow,
                 iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolColor.themeColor.colorWarning
+                iconTint = TrendyolDesign.colors.colorWarning
             )
         )
     }
@@ -193,7 +192,7 @@ private fun DualPriceWithUpperInfoStyleBasketPreview() {
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
                 icon = Icons.Fill.Basket,
                 iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolColor.themeColor.colorPrimary,
+                iconTint = TrendyolDesign.colors.colorPrimary,
                 marketPriceText = "999999.90 TL",
                 marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
             )
@@ -213,7 +212,7 @@ private fun DualPriceWithUpperInfoStyleLowestPricePreview() {
                 upperInfoText = "Son 30 Günün En Düşük Fiyatı",
                 icon = Icons.Fill.CampaignDownArrow,
                 iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolColor.themeColor.colorWarning,
+                iconTint = TrendyolDesign.colors.colorWarning,
                 marketPriceText = "999999.90 TL",
                 marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
             )
@@ -233,7 +232,7 @@ private fun SinglePriceWithUpperAndBottomInfoStyleBasketPreview() {
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
                 icon = Icons.Fill.Basket,
                 iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolColor.themeColor.colorPrimary,
+                iconTint = TrendyolDesign.colors.colorPrimary,
                 bottomInfoText = "(99.90 TL / Kapsül)",
                 bottomInfoTextStyle = TrendyolDesign.typography.body2ColorPrimary,
             )
@@ -253,7 +252,7 @@ private fun SinglePriceWithUpperAndBottomInfoStyleLowestPricePreview() {
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
                 icon = Icons.Fill.CampaignDownArrow,
                 iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolColor.themeColor.colorWarning,
+                iconTint = TrendyolDesign.colors.colorWarning,
                 bottomInfoText = "(99.90 TL / Kapsül)",
                 bottomInfoTextStyle = TrendyolDesign.typography.body2ColorWarning,
             )
@@ -273,7 +272,7 @@ private fun DualPriceWithUpperAndBottomInfoStyleBasketPreview() {
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
                 icon = Icons.Fill.Basket,
                 iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolColor.themeColor.colorPrimary,
+                iconTint = TrendyolDesign.colors.colorPrimary,
                 bottomInfoText = "(99.90 TL / Kapsül)",
                 bottomInfoTextStyle = TrendyolDesign.typography.body2ColorPrimary,
                 marketPriceText = "999999.90 TL",
@@ -294,7 +293,7 @@ private fun DualPriceWithUpperAndBottomInfoStyleLowestPricePreview() {
                 upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
                 iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolColor.themeColor.colorWarning,
+                iconTint = TrendyolDesign.colors.colorWarning,
                 bottomInfoText = "(99.90 TL / Kapsül)",
                 bottomInfoTextStyle = TrendyolDesign.typography.body2ColorWarning,
                 marketPriceText = "999999.90 TL",
