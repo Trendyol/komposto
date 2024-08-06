@@ -78,6 +78,7 @@ fun SearchBar(
                 )
             }
         },
+        textStyle = TrendyolDesign.typography.subtitle.copy(color = Color.Unspecified),
         colors = colors,
         isFilled = style is TrendyolSearchBarStyle.Filled,
         singleLine = true,
