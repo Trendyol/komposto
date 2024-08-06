@@ -13,6 +13,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
@@ -47,7 +48,7 @@ fun BottomSheetHeader(
     onBackIconClick: () -> Unit = {},
     isCloseIconVisible: Boolean = true,
     isBackIconVisible: Boolean = false,
-    verticalPadding: PaddingValues = PaddingValues(vertical = 12.dp),
+    verticalPadding: PaddingValues = PaddingValues(vertical = 16.dp),
 ) {
     val topPadding = verticalPadding.calculateTopPadding()
     val bottomPadding = verticalPadding.calculateBottomPadding()
