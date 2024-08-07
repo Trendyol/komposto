@@ -1,7 +1,6 @@
 package com.trendyol.design
 
 import androidx.compose.runtime.Composable
-import com.trendyol.design.bottomsheet.BottomSheetImageContent
 import com.trendyol.design.bottomsheet.BottomSheetListContent
 import com.trendyol.design.bottomsheet.TrendyolDesignBottomSheetFragment
 import com.trendyol.design.bottomsheet.item.BottomSheetCheckboxItem
