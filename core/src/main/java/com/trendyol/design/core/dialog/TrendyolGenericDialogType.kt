@@ -8,9 +8,9 @@ import com.trendyol.design.core.icon.icons.outline.ErrorState
 import com.trendyol.design.core.icon.icons.outline.SuccessState
 import com.trendyol.theme.TrendyolDesign
 
-interface TrendyolStatusDialogType {
+interface TrendyolGenericDialogType {
 
-    data object Success : StatusDialogType {
+    data object Success : GenericDialogType {
 
         override val textStyle: TextStyle
             @Composable get() = TrendyolDesign.typography.titleMediumColorGreen
@@ -19,12 +19,21 @@ interface TrendyolStatusDialogType {
             get() = Icons.Outline.SuccessState
     }
 
-    data object Error : StatusDialogType {
+    data object Error : GenericDialogType {
 
         override val textStyle: TextStyle
             @Composable get() = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant3
 
         override val iconVector: ImageVector
             get() = Icons.Outline.ErrorState
+    }
+
+    data object Custom : GenericDialogType {
+
+        override val textStyle: TextStyle?
+            @Composable get() = null
+
+        override val iconVector: ImageVector?
+            get() = null
     }
 }

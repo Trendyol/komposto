@@ -13,7 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.trendyol.design.core.dialog.DialogButtons.takeOrNull
@@ -21,11 +20,27 @@ import com.trendyol.design.core.previewtheme.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * Displays an [AlertDialog] with customizable options for title, message, and buttons.
+ *
+ * This composable function allows you to create an alert dialog with a title, a message,
+ * and optional buttons. You can specify a negative button, a positive button, and a neutral button,
+ * each of which can be customized with composable content.
+ *
+ * @param modifier Modifier to be applied to the AlertDialog container.
+ * @param title The title text to be displayed at the top of the dialog. Defaults to an empty string.
+ * @param message The main content message to be displayed in the dialog. This parameter is required.
+ * @param dialogProperties Configuration options for the dialog's behavior.
+ * @param negativeButton Composable function for the negative button. If null, no negative button is shown.
+ * @param positiveButton Composable function for the positive button. If null, no positive button is shown.
+ * @param neutralButton Composable function for the neutral button. If null, no neutral button is shown.
+ * @param onDismissRequest A lambda function that is called when the dialog is requested to be dismissed.
+ */
 @Composable
 fun AlertDialog(
-    modifier: Modifier = Modifier,
-    title: String? = null,
     message: String,
+    modifier: Modifier = Modifier,
+    title: String = "",
     dialogProperties: DialogProperties = DialogProperties(),
     negativeButton: (@Composable DialogButtons.() -> Unit)? = null,
     positiveButton: (@Composable DialogButtons.() -> Unit)? = null,
@@ -39,7 +54,7 @@ fun AlertDialog(
                     .fillMaxWidth()
                     .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 20.dp)
             ) {
-                title?.let {
+                if (title.isNotEmpty()) {
                     Text(title, style = TrendyolDesign.typography.titleBoldColorOnSurfaceVariant1)
                     Spacer(
                         modifier = Modifier
@@ -49,9 +64,7 @@ fun AlertDialog(
                 }
                 Text(
                     text = message,
-                    style = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1.copy(
-                        lineHeight = (16.41).sp
-                    )
+                    style = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1
                 )
                 Spacer(
                     modifier = Modifier

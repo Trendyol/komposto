@@ -18,8 +18,9 @@ object DialogButtons {
         Text(
             modifier = modifier.clickable(
                 interactionSource = remember { MutableInteractionSource() },
-                indication = null
-            ) { onClick() },
+                indication = null,
+                onClick = onClick
+            ),
             text = text,
             style = TrendyolDesign.typography.subtitleMediumColorPrimary,
         )
@@ -29,7 +30,7 @@ object DialogButtons {
     fun Primary(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
         Button(
             modifier = modifier,
-            onClick = { onClick() },
+            onClick = onClick,
             style = TrendyolButtonStyle.Primary,
             size = TrendyolButtonSize.Large
         ) {
@@ -41,7 +42,7 @@ object DialogButtons {
     fun Secondary(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
         Button(
             modifier = modifier,
-            onClick = { onClick() },
+            onClick = onClick,
             style = TrendyolButtonStyle.Secondary,
             size = TrendyolButtonSize.Large
         ) {
