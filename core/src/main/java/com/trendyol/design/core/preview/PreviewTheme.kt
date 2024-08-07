@@ -1,4 +1,4 @@
-package com.trendyol.design.core.previewtheme
+package com.trendyol.design.core.preview
 
 import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
@@ -27,9 +27,9 @@ internal fun PreviewTheme(
     }
 }
 
-internal object TrendyolColor {
-    internal val themeColor = TrendyolDesignColors().copy(colorPrimary = colorPrimary)
-    internal val materialColor: Colors
+private object TrendyolColor {
+    val themeColor = TrendyolDesignColors().copy(colorPrimary = colorPrimary)
+    val materialColor: Colors
         @ReadOnlyComposable
         @Composable
         get() = MaterialTheme.colors.copy(

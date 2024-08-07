@@ -1,28 +1,22 @@
 import io.gitlab.arturbosch.detekt.extensions.DetektExtension
 
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("io.gitlab.arturbosch.detekt")
-    id("shot")
+    id("maven-publish")
+    id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.trendyol.design"
+    namespace = "com.trendyol.design.bottomsheet"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.trendyol.design"
         minSdk = 23
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
-        testApplicationId = "com.trendyol.design.screenshot.test"
-        testInstrumentationRunner = "com.karumi.shot.ShotTestRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -44,16 +38,31 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
 }
 
-shot {
-    applicationId = "com.trendyol.design.screenshot.test"
-    showOnlyFailingTestsInReports = true
+publishing {
+    repositories {
+        maven {
+            name = "Nexus"
+            url = uri("http://10.84.105.74/repository/maven-releases")
+            isAllowInsecureProtocol = true
+            credentials {
+                username = properties["NEXUS_USER"]?.toString() ?: System.getenv("NEXUS_USER")
+                password = properties["NEXUS_PASS"]?.toString() ?: System.getenv("NEXUS_PASS")
+            }
+        }
+    }
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.trendyol"
+            artifactId = "design-bottomsheet"
+            version = publishedLibs.versions.design.get()
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
 
 configure<DetektExtension> {
@@ -64,26 +73,21 @@ configure<DetektExtension> {
 
 dependencies {
 
-    implementation(projects.core)
-    implementation(projects.bottomsheet)
+    api(projects.theme)
+    api(projects.core)
+    api(libs.kotlinXImmutableCollections)
 
     implementation(libs.androidx.core)
-    implementation(libs.androidx.lifecycle.runtime)
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.appCompat)
+    implementation(libs.androidx.fragment.compose)
     implementation(libs.android.material)
 
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.compose.ui.ui)
-    implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.compose.ui.tooling)
-    implementation(libs.androidx.compose.ui.googleFonts)
+    implementation(libs.androidx.compose.ui.util)
+
+    implementation(libs.composeCoil)
 
     detektPlugins(libs.detekt.formatting)
     detektPlugins(libs.detekt.composeRules)
-
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    androidTestImplementation(libs.androidx.test.rules)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
