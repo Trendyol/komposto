@@ -56,7 +56,7 @@ internal class RadioButtonTests : DesignScreenshotTest() {
     )
 
     @Test
-    fun sizeTEst() = runScreenShotTest(
+    fun sizeTest() = runScreenShotTest(
         testName = "sizeTest",
         contents = listOf(
             DesignScreenshotTestContainer("XSmall") {
