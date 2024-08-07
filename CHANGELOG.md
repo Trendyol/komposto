@@ -5,7 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
 ## [Unreleased]
+
+## [0.13.0] - 2024-09-26
+
+### Added
+
+- Introduced `AlertDiag` and `GenericDialog` composables
+- Implemented `TrendyolGenericDialogType` for defining different generic dialog
+  (`Success`, `Error` and `Custom`)
+  of the rating bar.
 
 ## [0.12.3] - 2024-09-25
 
@@ -133,13 +143,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Used "check" task instead of "detekt" task in CI/CD pipeline to check if everything is OK. "check"
   task includes Detekt and other checks such as running unit tests and Android Lint.
 
-## [Unreleased]
-
-## [0.10.0] - 2024-08-07
-
-### Added
-
-- Introduced `AlertDiag` and `GenericDialog` composables
-- Implemented `TrendyolGenericDialogType` for defining different generic dialog
-  (`Success`, `Error` and `Custom`)
-  of the rating bar.
