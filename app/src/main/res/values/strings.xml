@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">design</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="helper_text">Helper Text</string>
+    <string name="item">Item</string>
 </resources>

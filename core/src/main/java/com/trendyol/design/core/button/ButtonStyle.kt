@@ -26,7 +26,7 @@ interface ButtonStyle {
      */
     @Composable
     fun getBorder(
-        width: Dp = 1.dp,
+        width: Dp,
         enabled: Boolean,
     ): BorderStroke? {
         return buttonColors.borderColor(enabled = enabled).value?.let { borderColor ->
