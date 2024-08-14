@@ -1,0 +1,130 @@
+package com.trendyol.design.core.badge.boxbadge
+
+import androidx.compose.runtime.Composable
+import androidx.compose.foundation.layout.Column
+import com.trendyol.design.core.icon.Icon
+import androidx.compose.foundation.layout.width
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import com.trendyol.design.core.text.Text
+import com.trendyol.theme.TrendyolDesign
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Card
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
+import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeAttributes
+import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.icons.fill.Help
+import com.trendyol.design.core.preview.PreviewTheme
+
+@Composable
+fun BoxBadge(
+    boxBadgeType: BoxBadgeType,
+    modifier: Modifier = Modifier,
+    attributes: BoxBadgeAttributes = BoxBadgeAttributes(),
+) = with(boxBadgeType) {
+    Card(
+        modifier = modifier
+            .width(attributes.boxWidth)
+            .height(attributes.boxHeight),
+        shape = RoundedCornerShape(attributes.borderRadius),
+        elevation = attributes.elevation,
+    ) {
+        Column(
+            modifier = modifier
+                .background(color = badge.backgroundColor)
+                .padding(
+                    vertical = attributes.verticalPadding,
+                    horizontal = attributes.horizontalPadding,
+                ),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
+        ) {
+            Icon(
+                imageVector = badge.icon,
+                size = attributes.iconSize,
+                tint = badge.iconTint,
+            )
+            Text(
+                modifier = Modifier.fillMaxWidth(),
+                text = badge.title,
+                style = attributes.textStyle,
+                color = attributes.fontColor,
+                textAlign = TextAlign.Center,
+                minLines = attributes.line,
+                maxLines = attributes.line,
+            )
+        }
+    }
+}
+
+@Preview(showBackground = false)
+@Composable
+private fun CustomBoxBadgePreview() = PreviewTheme {
+    BoxBadge(
+        BoxBadgeType.Custom(
+            title = "Custom Badge",
+            backgroundColor = TrendyolDesign.colors.colorPinkVariant2,
+            icon = Icons.Fill.Help,
+        )
+    )
+}
+
+@Preview(showBackground = false)
+@Composable
+private fun CouponBoxBadgePreview() = PreviewTheme {
+    BoxBadge(BoxBadgeType.Coupon)
+}
+
+@Preview(showBackground = false)
+@Composable
+private fun CargoFreeBoxBadgePreview() = PreviewTheme {
+    BoxBadge(BoxBadgeType.FreeDelivery)
+}
+
+@Preview(showBackground = false)
+@Composable
+private fun FastDeliveryBoxBadgePreview() = PreviewTheme {
+    BoxBadge(BoxBadgeType.FastDelivery)
+}
+
+@Preview(showBackground = false)
+@Composable
+private fun BuyMorePayLessBoxBadgePreview() = PreviewTheme {
+    BoxBadge(BoxBadgeType.BuyMorePayLess)
+}
+
+@Preview(showBackground = false)
+@Composable
+private fun BuyTogetherBoxBadgePreview() = PreviewTheme {
+    BoxBadge(BoxBadgeType.BuyTogether)
+}
+
+@Preview(showBackground = false)
+@Composable
+private fun VideoBoxBadgePreview() = PreviewTheme {
+    BoxBadge(BoxBadgeType.Video)
+}
+
+@Preview(showBackground = false)
+@Composable
+private fun TodayDeliveryBoxBadgePreview() = PreviewTheme {
+    BoxBadge(BoxBadgeType.TodayDelivery)
+}
+
+@Preview(showBackground = false)
+@Composable
+private fun CreditBoxBadgePreview() = PreviewTheme {
+    BoxBadge(BoxBadgeType.Credit)
+}
+
+@Preview(showBackground = false)
+@Composable
+private fun InfluencerChoiceBoxBadgePreview() = PreviewTheme {
+    BoxBadge(BoxBadgeType.InfluencerChoice)
+}

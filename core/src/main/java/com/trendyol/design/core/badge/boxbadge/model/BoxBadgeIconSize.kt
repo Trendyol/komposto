@@ -1,4 +1,4 @@
-package com.trendyol.design.core.badge.boxbadge.attributes
+package com.trendyol.design.core.badge.boxbadge.model
 
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp

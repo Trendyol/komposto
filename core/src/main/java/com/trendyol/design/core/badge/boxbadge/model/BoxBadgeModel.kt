@@ -1,4 +1,4 @@
-package com.trendyol.design.core.badge.boxbadge
+package com.trendyol.design.core.badge.boxbadge.model
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color
