@@ -1,3 +1,4 @@
+@file:SuppressWarnings("MagicNumber")
 package com.trendyol.design.ui.component.radiobutton
 
 import androidx.compose.foundation.border
