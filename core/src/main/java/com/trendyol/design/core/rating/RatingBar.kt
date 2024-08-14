@@ -1,14 +1,15 @@
 package com.trendyol.design.core.rating
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
@@ -20,9 +21,11 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.R
 import com.trendyol.design.core.icon.Icons
@@ -90,6 +93,7 @@ fun RatingBar(
 
         Canvas(
             modifier = Modifier
+                .mirror()
                 .size(width = totalWidth, height = itemSize)
                 .graphicsLayer(alpha = 0.99f)
         ) {
@@ -112,13 +116,12 @@ fun RatingBar(
         }
 
         if (showCameraIcon) {
-            Icon(
+            Image(
                 modifier = Modifier
                     .padding(start = 6.dp)
                     .size(size.cameraIconSize),
                 painter = painterResource(id = R.drawable.ic_camera),
-                contentDescription = "Camera",
-                tint = Color.Unspecified
+                contentDescription = ""
             )
         }
     }
@@ -152,6 +155,15 @@ private fun DrawScope.drawRating(
         size = Size(width = rectWidth, height = size.height),
         blendMode = BlendMode.SrcIn,
     )
+}
+
+@Composable
+private fun Modifier.mirror(): Modifier {
+    val layoutDirection = LocalLayoutDirection.current
+    return if (layoutDirection == LayoutDirection.Rtl)
+        this.scale(scaleX = -1f, scaleY = 1f)
+    else
+        this
 }
 
 @Preview(showBackground = true)
