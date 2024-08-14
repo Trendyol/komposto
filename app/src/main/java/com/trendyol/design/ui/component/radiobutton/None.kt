@@ -27,14 +27,14 @@ internal fun Radio_Button_1_None_XSmall() = TrendyolTheme {
             enabled = true,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.XSmall,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
         TrendyolRadioButton(
             selected = true,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.XSmall,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
         TrendyolRadioButton(
@@ -42,7 +42,7 @@ internal fun Radio_Button_1_None_XSmall() = TrendyolTheme {
             enabled = false,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.XSmall,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
         TrendyolRadioButton(
@@ -50,7 +50,7 @@ internal fun Radio_Button_1_None_XSmall() = TrendyolTheme {
             enabled = false,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.XSmall,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
     }
 }
@@ -65,14 +65,14 @@ internal fun Radio_Button_1_None_Small() = TrendyolTheme {
             enabled = true,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.Small,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
         TrendyolRadioButton(
             selected = true,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.Small,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
         TrendyolRadioButton(
@@ -80,7 +80,7 @@ internal fun Radio_Button_1_None_Small() = TrendyolTheme {
             enabled = false,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.Small,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
         TrendyolRadioButton(
@@ -88,7 +88,7 @@ internal fun Radio_Button_1_None_Small() = TrendyolTheme {
             enabled = false,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.Small,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
     }
 }
@@ -103,14 +103,14 @@ internal fun Radio_Button_1_None_Medium() = TrendyolTheme {
             enabled = true,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.Medium,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
         TrendyolRadioButton(
             selected = true,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.Medium,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
         TrendyolRadioButton(
@@ -118,7 +118,7 @@ internal fun Radio_Button_1_None_Medium() = TrendyolTheme {
             enabled = false,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.Medium,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
         TrendyolRadioButton(
@@ -126,7 +126,7 @@ internal fun Radio_Button_1_None_Medium() = TrendyolTheme {
             enabled = false,
             containerType = TrendyolRadioButtonContainerType.None,
             size = TrendyolRadioButtonSize.Medium,
-            onClick = { /*TODO*/ }
+            onClick = { }
         )
     }
 }

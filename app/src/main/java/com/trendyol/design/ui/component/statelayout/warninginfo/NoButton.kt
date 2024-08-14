@@ -3,9 +3,11 @@ package com.trendyol.design.ui.component.statelayout.warninginfo
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
+import com.trendyol.design.R
 import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.statelayout.TrendyolWarningInfoStateLayoutStyle
 import com.trendyol.design.core.statelayout.states.warningInfo.WarningInfoStateComposable
@@ -26,8 +28,8 @@ internal fun NoButton_FullVersion_Small() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.NoButtonFullVersion(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
-                title = "İçerik Bulunamadı",
-                description = "Yeni içerikler keşfedebilirsin.",
+                title = stringResource(id = R.string.state_layout_title),
+                description = stringResource(id = R.string.state_layout_description),
             )
         )
     }
@@ -46,8 +48,8 @@ internal fun NoButton_FullVersion_Medium() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.NoButtonFullVersion(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
-                title = "İçerik Bulunamadı",
-                description = "Yeni içerikler keşfedebilirsin.",
+                title = stringResource(id = R.string.state_layout_title),
+                description = stringResource(id = R.string.state_layout_description),
             )
         )
     }
@@ -66,7 +68,7 @@ internal fun NoButton_NoTitle_Small() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.NoButtonNoTitle(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
-                description = "Yeni içerikler keşfedebilirsin.",
+                description = stringResource(id = R.string.state_layout_description),
             )
         )
     }
@@ -85,7 +87,7 @@ internal fun NoButton_NoTitle_Medium() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.NoButtonNoTitle(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
-                description = "Yeni içerikler keşfedebilirsin.",
+                description = stringResource(id = R.string.state_layout_description),
             )
         )
     }
@@ -104,7 +106,7 @@ internal fun NoButton_NoDescription_Small() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.NoButtonNoDescription(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
-                title = "İçerik Bulunamadı",
+                title = stringResource(id = R.string.state_layout_title),
             )
         )
     }
@@ -123,7 +125,7 @@ internal fun NoButton_NoDescription_Medium() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.NoButtonNoDescription(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
-                title = "İçerik Bulunamadı",
+                title = stringResource(id = R.string.state_layout_title),
             )
         )
     }

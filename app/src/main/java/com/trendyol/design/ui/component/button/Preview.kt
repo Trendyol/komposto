@@ -38,7 +38,7 @@ private fun Preview_Button_Style(
 ) {
     TrendyolTheme {
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { },
             style = style,
             size = TrendyolButtonSize.Large,
         ) {
@@ -54,7 +54,7 @@ private fun Preview_Button_Size(
 ) {
     TrendyolTheme {
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { },
             style = TrendyolButtonStyle.Primary,
             size = size,
         ) {

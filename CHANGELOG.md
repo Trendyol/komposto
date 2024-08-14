@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added sample code in the `:app` module.
+
 ## [0.8.0] - 2024-07-23
 
 ### Added
