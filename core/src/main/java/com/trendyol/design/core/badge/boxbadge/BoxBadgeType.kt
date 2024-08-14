@@ -2,6 +2,7 @@ package com.trendyol.design.core.badge.boxbadge
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeModel
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Cargo
 import com.trendyol.design.core.icon.icons.fill.Coupon
@@ -35,7 +36,7 @@ sealed class BoxBadgeType(val badge: BoxBadgeModel) {
         )
     )
 
-    data object CargoFree : BoxBadgeType(
+    data object FreeDelivery : BoxBadgeType(
         BoxBadgeModel(
             title = "Kargo Bedava",
             backgroundColor = Color(color = 0xFFF7F7F7),
