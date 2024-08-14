@@ -2,6 +2,7 @@ package com.trendyol.design.ui.component.button
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
@@ -11,12 +12,13 @@ import com.trendyol.design.core.button.TrendyolButtonStyle
 import com.trendyol.design.core.text.Text
 import com.trendyol.design.ui.theme.TrendyolTheme
 
+@Preview
 @ShowkaseComposable(group = Group.BUTTON, name = Component.TERTIARY_BUTTON, styleName = "4.Large.Enabled")
 @Composable
 internal fun Tertiary_Button_Large_Enabled_Showkase() {
     TrendyolTheme {
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { },
             style = TrendyolButtonStyle.Tertiary,
             size = TrendyolButtonSize.Large,
         ) {
@@ -25,12 +27,13 @@ internal fun Tertiary_Button_Large_Enabled_Showkase() {
     }
 }
 
+@Preview
 @ShowkaseComposable(group = Group.BUTTON, name = Component.TERTIARY_BUTTON, styleName = "3.Medium.Enabled")
 @Composable
 internal fun Tertiary_Button_Medium_Enabled_Showkase() {
     TrendyolTheme {
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { },
             style = TrendyolButtonStyle.Tertiary,
             size = TrendyolButtonSize.Medium,
         ) {
@@ -39,12 +42,13 @@ internal fun Tertiary_Button_Medium_Enabled_Showkase() {
     }
 }
 
+@Preview
 @ShowkaseComposable(group = Group.BUTTON, name = Component.TERTIARY_BUTTON, styleName = "2.Small.Enabled")
 @Composable
 internal fun Tertiary_Button_Small_Enabled_Showkase() {
     TrendyolTheme {
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { },
             style = TrendyolButtonStyle.Tertiary,
             size = TrendyolButtonSize.Small,
         ) {
@@ -53,12 +57,13 @@ internal fun Tertiary_Button_Small_Enabled_Showkase() {
     }
 }
 
+@Preview
 @ShowkaseComposable(group = Group.BUTTON, name = Component.TERTIARY_BUTTON, styleName = "1.XSmall.Enabled")
 @Composable
 internal fun Tertiary_Button_XSmall_Enabled_Showkase() {
     TrendyolTheme {
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { },
             style = TrendyolButtonStyle.Tertiary,
             size = TrendyolButtonSize.XSmall,
         ) {
@@ -67,12 +72,13 @@ internal fun Tertiary_Button_XSmall_Enabled_Showkase() {
     }
 }
 
+@Preview
 @ShowkaseComposable(group = Group.BUTTON, name = Component.TERTIARY_BUTTON, styleName = "5.Large.Disabled")
 @Composable
 internal fun Z_Tertiary_Button_Large_Disabled_Showkase() {
     TrendyolTheme {
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { },
             style = TrendyolButtonStyle.Tertiary,
             size = TrendyolButtonSize.Large,
             enabled = false,
@@ -82,12 +88,13 @@ internal fun Z_Tertiary_Button_Large_Disabled_Showkase() {
     }
 }
 
+@Preview
 @ShowkaseComposable(group = Group.BUTTON, name = Component.TERTIARY_BUTTON, styleName = "6.Large.Enabled.TwoLine")
 @Composable
 internal fun Tertiary_Button_Large_Enabled_TwoLine_Showkase() {
     TrendyolTheme {
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { },
             style = TrendyolButtonStyle.Tertiary,
             size = TrendyolButtonSize.Large,
         ) {

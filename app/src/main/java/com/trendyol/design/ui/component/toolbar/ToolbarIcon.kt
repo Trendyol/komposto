@@ -20,7 +20,7 @@ internal fun Toolbar_Icon_None_Showkase() {
         Toolbar(
             title = "Title",
             style = TrendyolToolbarStyle.Icon.None(
-                icon = { Icon(imageVector = Icons.Fill.Help, onClick = { /*TODO*/ }) },
+                icon = { Icon(imageVector = Icons.Fill.Help, onClick = { }) },
             )
         )
     }
@@ -40,11 +40,11 @@ internal fun Toolbar_Icon_Text_Button_Showkase() {
                 icon = {
                     Icon(
                         imageVector = Icons.Outline.Back,
-                        onClick = { /*TODO*/ },
+                        onClick = { },
                         tint = TrendyolDesign.colors.colorOnSurfaceVariant3
                     )
                 },
-                textButton = { Text(text = "CTA Label", onClick = { /*TODO*/ }) }
+                textButton = { Text(text = "CTA Label", onClick = { }) }
             )
         )
     }
@@ -60,12 +60,12 @@ internal fun Toolbar_Icon_End_Icon_Showkase() {
                 icon = {
                     Icon(
                         imageVector = Icons.Outline.Back,
-                        onClick = { /*TODO*/ },
+                        onClick = { },
                         tint = TrendyolDesign.colors.colorOnSurfaceVariant3
                     )
                 },
                 endIcon = {
-                    Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ })
+                    Icon(imageVector = Icons.Fill.Trash, onClick = { })
                 }
             )
         )
@@ -86,12 +86,12 @@ internal fun Toolbar_Icon_End_Two_Icon_Showkase() {
                 icon = {
                     Icon(
                         imageVector = Icons.Outline.Back,
-                        onClick = { /*TODO*/ },
+                        onClick = { },
                         tint = TrendyolDesign.colors.colorOnSurfaceVariant3
                     )
                 },
-                firstIcon = { Icon(imageVector = Icons.Fill.Help, onClick = { /*TODO*/ }) },
-                secondIcon = { Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ }) }
+                firstIcon = { Icon(imageVector = Icons.Fill.Help, onClick = { }) },
+                secondIcon = { Icon(imageVector = Icons.Fill.Trash, onClick = { }) }
             )
         )
     }

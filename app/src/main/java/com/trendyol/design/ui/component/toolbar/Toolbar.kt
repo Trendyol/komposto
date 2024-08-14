@@ -32,7 +32,7 @@ internal fun Toolbar_None_Text_Button_Showkase() {
         Toolbar(
             title = "Title",
             style = TrendyolToolbarStyle.TextButton(
-                textButton = { Text(text = "CTA Label", onClick = { /*TODO*/ }) }
+                textButton = { Text(text = "CTA Label", onClick = { }) }
             )
         )
     }
@@ -47,7 +47,7 @@ internal fun Toolbar_None_End_Icon_Showkase() {
             title = "Title",
             style = TrendyolToolbarStyle.EndIcon(
                 endIcon = {
-                    Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ })
+                    Icon(imageVector = Icons.Fill.Trash, onClick = { })
                 }
             )
         )
@@ -62,8 +62,8 @@ internal fun Toolbar_None_End_Two_Icon_Showkase() {
         Toolbar(
             title = "Title",
             style = TrendyolToolbarStyle.EndTwoIcons(
-                firstIcon = { Icon(imageVector = Icons.Fill.Help, onClick = { /*TODO*/ }) },
-                secondIcon = { Icon(imageVector = Icons.Fill.Trash, onClick = { /*TODO*/ }) }
+                firstIcon = { Icon(imageVector = Icons.Fill.Help, onClick = { }) },
+                secondIcon = { Icon(imageVector = Icons.Fill.Trash, onClick = { }) }
             )
         )
     }

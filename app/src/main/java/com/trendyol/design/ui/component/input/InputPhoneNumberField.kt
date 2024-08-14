@@ -34,14 +34,14 @@ internal fun Input_Field_1_PhoneNumber_Unfocused() = TrendyolTheme {
         InputPhoneNumberField(
             countryCode = "+90",
             number = SELECT,
-            onCountryCodeClick = { /*TODO*/ },
+            onCountryCodeClick = { },
             onValueChange = { number = it }
         )
         Spacer(modifier = Modifier.height(16.dp))
         InputPhoneNumberField(
             countryCode = "",
             number = number,
-            onCountryCodeClick = { /*TODO*/ },
+            onCountryCodeClick = { },
             onValueChange = { number = it },
             countryCodeLabel = LABEL,
             numberLabel = LABEL,
@@ -62,14 +62,14 @@ internal fun Input_Field_PhoneNumber_Filled() = TrendyolTheme {
         InputPhoneNumberField(
             countryCode = "+90",
             number = number,
-            onCountryCodeClick = { /*TODO*/ },
+            onCountryCodeClick = { },
             onValueChange = { number = it }
         )
         Spacer(modifier = Modifier.height(16.dp))
         InputPhoneNumberField(
             countryCode = "+90",
             number = number,
-            onCountryCodeClick = { /*TODO*/ },
+            onCountryCodeClick = { },
             onValueChange = { number = it },
             countryCodeLabel = LABEL,
             numberLabel = LABEL,
@@ -90,7 +90,7 @@ internal fun Input_Field_PhoneNumber_Disabled() = TrendyolTheme {
         InputPhoneNumberField(
             countryCode = "+90",
             number = number,
-            onCountryCodeClick = { /*TODO*/ },
+            onCountryCodeClick = { },
             onValueChange = { number = it },
             enabled = false,
         )
@@ -98,7 +98,7 @@ internal fun Input_Field_PhoneNumber_Disabled() = TrendyolTheme {
         InputPhoneNumberField(
             countryCode = "+90",
             number = number,
-            onCountryCodeClick = { /*TODO*/ },
+            onCountryCodeClick = { },
             onValueChange = { number = it },
             countryCodeLabel = LABEL,
             numberLabel = LABEL,
@@ -120,7 +120,7 @@ internal fun Input_Field_PhoneNumber_Error() = TrendyolTheme {
         InputPhoneNumberField(
             countryCode = "+90",
             number = number,
-            onCountryCodeClick = { /*TODO*/ },
+            onCountryCodeClick = { },
             onValueChange = { number = it },
             error = "Error message goes here",
         )
@@ -128,7 +128,7 @@ internal fun Input_Field_PhoneNumber_Error() = TrendyolTheme {
         InputPhoneNumberField(
             countryCode = "+90",
             number = number,
-            onCountryCodeClick = { /*TODO*/ },
+            onCountryCodeClick = { },
             onValueChange = { number = it },
             countryCodeLabel = LABEL,
             numberLabel = LABEL,
