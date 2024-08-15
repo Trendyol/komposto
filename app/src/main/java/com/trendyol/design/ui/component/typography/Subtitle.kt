@@ -52,25 +52,25 @@ internal fun Subtitle_Medium_OneLine() = TrendyolTheme {
     )
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun Preview() {
     C_Subtitle()
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun PreviewBold() {
     Subtitle_Bold()
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun PreviewMedium() {
     Subtitle_Medium()
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun PreviewMediumOneLine() {
     Subtitle_Medium_OneLine()
