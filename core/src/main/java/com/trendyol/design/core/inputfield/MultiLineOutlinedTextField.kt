@@ -39,7 +39,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param onValueChange Callback for when the value of the TextField changes.
  */
 @Composable
-fun MultiLineOutlineTextField(
+public fun MultiLineOutlineTextField(
     style: OutlinedTextFieldStyle,
     value: String,
     maxChar: Int,

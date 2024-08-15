@@ -56,7 +56,7 @@ import com.trendyol.theme.TrendyolDesign
  *             The mask is applied only when the password is hidden.
  */
 @Composable
-fun InputPasswordField(
+public fun InputPasswordField(
     style: OutlinedTextFieldStyle,
     password: String,
     onValueChange: (String) -> Unit,

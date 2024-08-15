@@ -20,7 +20,7 @@ private fun VectorPreview() {
     Icon(Icons.Fill.Tick, TrendyolIconSize.XSmall)
 }
 
-val Icons.Fill.Tick: ImageVector by lazy {
+public val Icons.Fill.Tick: ImageVector by lazy {
     ImageVector.Builder(
         name = "Tick",
         defaultWidth = 20.dp,

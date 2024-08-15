@@ -30,7 +30,7 @@ import androidx.compose.material.TopAppBar as MaterialTopAppBar
  * @param contentPadding the padding applied to the content of this Toolbar
  */
 @Composable
-fun Toolbar(
+public fun Toolbar(
     title: String,
     modifier: Modifier = Modifier,
     style: ToolbarStyle = TrendyolToolbarStyle.None,

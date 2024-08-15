@@ -20,7 +20,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.text.Text
 
 @Stable
-object ToolbarScope {
+public object ToolbarScope {
 
     /**
      * Default icon used for Toolbar
@@ -36,7 +36,7 @@ object ToolbarScope {
      * Defaults to the value from [ToolbarDefaults.IconSize].
      */
     @Composable
-    fun Icon(
+    public fun Icon(
         imageVector: ImageVector,
         modifier: Modifier = Modifier,
         onClick: () -> Unit,
@@ -70,7 +70,7 @@ object ToolbarScope {
      * value is [TrendyolDesign.typography.subtitleMediumColorPrimary]
      */
     @Composable
-    fun Text(
+    public fun Text(
         text: String,
         modifier: Modifier = Modifier,
         onClick: () -> Unit,

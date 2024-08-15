@@ -11,9 +11,9 @@ import com.trendyol.theme.TrendyolDesign
  * CheckboxStyle provides options for specifying colors, padding,
  * stroke width, and different styles for checkbox labels or contents.
  */
-sealed interface TrendyolCheckBoxStyle {
+public sealed interface TrendyolCheckBoxStyle {
 
-    data object Primary : CheckboxStyle {
+    public data object Primary : CheckboxStyle {
 
         override val colors: TrendyolCheckboxColors
             @Composable get() = TrendyolCheckboxDefaults.colors(
@@ -36,7 +36,7 @@ sealed interface TrendyolCheckBoxStyle {
             get() = 0.dp
     }
 
-    data object Secondary : CheckboxStyle {
+    public data object Secondary : CheckboxStyle {
 
         override val colors: TrendyolCheckboxColors
             @Composable get() = TrendyolCheckboxDefaults.colors(

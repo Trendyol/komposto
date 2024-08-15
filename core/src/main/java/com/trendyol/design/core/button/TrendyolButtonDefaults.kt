@@ -11,10 +11,10 @@ import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
-object TrendyolButtonDefaults {
+public object TrendyolButtonDefaults {
 
     @Composable
-    fun elevation(
+    public fun elevation(
         defaultElevation: Dp = 0.dp,
         pressedElevation: Dp = 0.dp,
         disabledElevation: Dp = 0.dp,
@@ -31,7 +31,7 @@ object TrendyolButtonDefaults {
     }
 
     @Composable
-    fun buttonColors(
+    public fun buttonColors(
         backgroundColor: Color = MaterialTheme.colors.primary,
         contentColor: Color = contentColorFor(backgroundColor),
         borderColor: Color? = null,

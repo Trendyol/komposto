@@ -20,7 +20,7 @@ private fun VectorPreview() {
     Icon(Icons.Fill.Bullet, TrendyolIconSize.XSmall)
 }
 
-val Icons.Fill.Bullet: ImageVector by lazy {
+public val Icons.Fill.Bullet: ImageVector by lazy {
     ImageVector.Builder(
         name = "Bullet",
         defaultWidth = 16.dp,

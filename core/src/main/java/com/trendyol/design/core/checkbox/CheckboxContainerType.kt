@@ -4,21 +4,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 
 @Immutable
-sealed interface CheckboxContainerType {
+public sealed interface CheckboxContainerType {
 
-    data object None : CheckboxContainerType
+    public data object None : CheckboxContainerType
 
     /**
      * The text label for checkbox.
      */
-    data class Text(
+    public data class Text(
         val text: String
     ) : CheckboxContainerType
 
     /**
      * The custom Composable content to be displayed within the checkbox.
      */
-    data class Content(
+    public data class Content(
         val content: @Composable () -> Unit
     ) : CheckboxContainerType
 }

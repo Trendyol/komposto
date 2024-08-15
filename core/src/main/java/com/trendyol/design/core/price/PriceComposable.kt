@@ -30,7 +30,7 @@ import com.trendyol.theme.TrendyolDesign
  */
 
 @Composable
-fun Price(
+public fun Price(
     style: PriceStyle,
     modifier: Modifier = Modifier
 ) {
