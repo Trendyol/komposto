@@ -36,7 +36,7 @@ import com.trendyol.design.bottomsheet.preview.PreviewTheme
  * @param outerPadding A `PaddingValues` object to set the padding around the image content. Default is `PaddingValues(horizontal = 16.dp, vertical = 12.dp)`.
  */
 @Composable
-fun BottomSheetImageContent(
+public fun BottomSheetImageContent(
     title: String,
     onCloseIconClick: () -> Unit,
     model: Any?,
