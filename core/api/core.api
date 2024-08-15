@@ -1479,7 +1479,7 @@ public final class com/trendyol/design/core/toolbar/ToolbarDefaults {
 	public static final field INSTANCE Lcom/trendyol/design/core/toolbar/ToolbarDefaults;
 	public final fun getContentPadding ()Landroidx/compose/foundation/layout/PaddingValues;
 	public final fun getElevation-D9Ej5fM ()F
-	public final fun getIconSize ()Lcom/trendyol/design/core/icon/TrendyolIconSize$Medium;
+	public final fun getIconSize ()Lcom/trendyol/design/core/icon/IconSize;
 }
 
 public final class com/trendyol/design/core/toolbar/ToolbarKt {

@@ -177,7 +177,7 @@ public sealed interface TrendyolWarningInfoStateLayoutStyle {
             )
     }
 
-    private companion object {
+    public companion object {
         private const val DEFAULT_TITLE = "İçerik Bulunamadı"
         private const val DEFAULT_DESCRIPTION = "Yeni içerikler keşfedebilirsin."
         private const val DEFAULT_PRIMARY_BUTTON_TEXT = "Alışverişe Devam Et"
