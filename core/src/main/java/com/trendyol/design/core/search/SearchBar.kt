@@ -26,13 +26,13 @@ import com.trendyol.theme.TrendyolDesign
  * @param style determines the style of the search bar.
  * It can be either [TrendyolSearchBarStyle.Outline] or [TrendyolSearchBarStyle.Filled]
  * @param size determines the size of the search bar.
- * It can be either [TrendyolSearchBarSize.Small] or [TrendyolSearchBarSize.Large]
+ * It can be either [TrendyolSearchBarSize.Small] or [TrendyolSearchBarSize.Medium]
  * @param onValueChange the callback that is triggered when the input service updates values
  * in the search bar. An updated search bar value comes as a parameter of the callback
  * @param modifier a [Modifier] for this search bar
  * @param colors [TextFieldColors] that will be used to resolve color of the text and content
  * (including placeholder, leading and trailing icons, border) for this search bar
- * in different states. See [TextFieldDefaults.textFieldColors]
+ * in different states. See [TrendyolSearchBarStyle]
  * @param placeholder the optional placeholder to be displayed when the search bar is in focus
  * and the input text is empty. Default is "Ürün Ara"
  */
@@ -60,7 +60,7 @@ fun SearchBar(
         onValueChange = onValueChange,
         leadingIcon = {
             Icon(
-                modifier = Modifier.padding(size.leadingIconPadding),
+                modifier = Modifier.padding(start = 16.dp, end = 8.dp),
                 imageVector = Icons.Fill.Search,
                 size = TrendyolIconSize.Small,
                 tint = Color.Unspecified
@@ -83,7 +83,7 @@ fun SearchBar(
         isFilled = style is TrendyolSearchBarStyle.Filled,
         singleLine = true,
         minHeight = size.barHeight,
-        shape = RoundedCornerShape(size.barRadius),
+        shape = RoundedCornerShape(8.dp),
     )
 }
 
