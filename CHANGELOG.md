@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Added Kotlin's binary-compatibility-validator in order to validate public APIs
+- Enabled explicitApi in order to prevent publishing wrong APIs to public
+
+### Added
 
 - Added sample code in the `:app` module.
 
