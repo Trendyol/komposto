@@ -38,7 +38,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param descriptionTextStyle A `TextStyle` for customizing the appearance of the description text. Default is `TrendyolDesign.typography.body1ColorOnSurfaceVariant1`.
  */
 @Composable
-fun BottomSheetRadioItem(
+public fun BottomSheetRadioItem(
     selected: Boolean,
     text: String,
     onClick: () -> Unit,
