@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.TextUnit
  * order to remove default font padding value.
  */
 @Composable
-fun Text(
+public fun Text(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
@@ -78,7 +78,7 @@ fun Text(
  * order to remove default font padding value.
  */
 @Composable
-fun Text(
+public fun Text(
     text: AnnotatedString,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,

@@ -9,7 +9,7 @@ import kotlinx.parcelize.RawValue
 
 @Stable
 @Parcelize
-data class InfoModel(
+public data class InfoModel(
     val title: String? = null,
     val description: String? = null,
     val image: @RawValue ImageVector? = null,
@@ -19,7 +19,7 @@ data class InfoModel(
 
 @Stable
 @Parcelize
-data class ButtonsInfoModel(
+public data class ButtonsInfoModel(
     val primaryButtonText: String? = null,
     val secondaryButtonText: String? = null,
     val primaryButtonClickListener: (() -> Unit)? = null,

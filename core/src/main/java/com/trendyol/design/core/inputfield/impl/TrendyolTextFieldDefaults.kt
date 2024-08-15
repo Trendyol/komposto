@@ -65,7 +65,7 @@ import androidx.compose.ui.text.input.VisualTransformation
  */
 @Composable
 @ExperimentalMaterialApi
-fun TrendyolOutlinedTextFieldDecorationBox(
+public fun TrendyolOutlinedTextFieldDecorationBox(
     value: String,
     innerTextField: @Composable () -> Unit,
     enabled: Boolean,

@@ -20,7 +20,7 @@ private fun VectorPreview() {
     Icon(Icons.Outline.Chevron, TrendyolIconSize.XSmall)
 }
 
-val Icons.Outline.Chevron: ImageVector by lazy {
+public val Icons.Outline.Chevron: ImageVector by lazy {
     ImageVector.Builder(
         name = "Chevron",
         defaultWidth = 16.dp,
