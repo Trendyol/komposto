@@ -15,12 +15,6 @@ sealed interface TrendyolSearchBarSize {
         override val barHeight: Dp
             @Composable
             get() = 32.dp
-        override val barRadius: Dp
-            @Composable
-            get() = 8.dp
-        override val leadingIconPadding: PaddingValues
-            @Composable
-            get() = PaddingValues(start = 16.dp, end = 8.dp)
         override val trailingIconPadding: PaddingValues
             @Composable
             get() = PaddingValues(horizontal = 16.dp)
@@ -30,12 +24,6 @@ sealed interface TrendyolSearchBarSize {
         override val barHeight: Dp
             @Composable
             get() = 40.dp
-        override val barRadius: Dp
-            @Composable
-            get() = 12.dp
-        override val leadingIconPadding: PaddingValues
-            @Composable
-            get() = PaddingValues(start = 16.dp, end = 12.dp)
         override val trailingIconPadding: PaddingValues
             @Composable
             get() = PaddingValues(horizontal = 16.dp)
