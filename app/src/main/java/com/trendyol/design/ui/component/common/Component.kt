@@ -69,4 +69,20 @@ object Component {
     const val RATING_BAR = "Rating Bar"
 
     const val COUNTDOWN_TIMER = "Countdown Timer"
+
+    const val BOX_BADGE_CUSTOM = "Custom"
+    const val BOX_BADGE_COUPON = "Coupon"
+    const val BOX_BADGE_FREE_DELIVERY = "FreeDelivery"
+    const val BOX_BADGE_FAST_DELIVERY = "FastDelivery"
+    const val BOX_BADGE_BUY_MORE_PAY_LESS = "BuyMorePayLess"
+    const val BOX_BADGE_BUY_TOGETHER = "BuyTogether"
+    const val BOX_BADGE_VIDEO = "Video"
+    const val BOX_BADGE_TODAY_DELIVERY = "TodayDelivery"
+    const val BOX_BADGE_CREDIT = "Credit"
+    const val BOX_BADGE_INFLUENCER_CHOICE = "InfluencerChoice"
+
+    const val BOX_BADGE_LIST_4 = "4BadgesList"
+    const val BOX_BADGE_LIST_3 = "3BadgesList"
+    const val BOX_BADGE_LIST_2 = "2BadgesList"
+    const val BOX_BADGE_LIST_1 = "1BadgeList"
 }
