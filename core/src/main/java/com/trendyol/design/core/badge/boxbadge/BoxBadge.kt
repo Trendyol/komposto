@@ -17,6 +17,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeAttributes
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
@@ -29,14 +30,14 @@ fun BoxBadge(
     attributes: BoxBadgeAttributes = BoxBadgeAttributes(),
 ) = with(boxBadgeType) {
     Card(
-        modifier = modifier
-            .width(attributes.boxWidth)
-            .height(attributes.boxHeight),
-        shape = RoundedCornerShape(attributes.borderRadius),
+        modifier = modifier,
+        shape = RoundedCornerShape(attributes.cornerRadius),
         elevation = attributes.elevation,
     ) {
         Column(
             modifier = modifier
+                .width(attributes.boxWidth.dp)
+                .height(attributes.boxHeight.dp)
                 .background(color = badge.backgroundColor)
                 .padding(
                     vertical = attributes.verticalPadding,
@@ -53,7 +54,7 @@ fun BoxBadge(
             Text(
                 modifier = Modifier.fillMaxWidth(),
                 text = badge.title,
-                style = attributes.textStyle,
+                style = attributes.textStyle ?: attributes.defaultTextStyle,
                 color = attributes.fontColor,
                 textAlign = TextAlign.Center,
                 minLines = attributes.line,
