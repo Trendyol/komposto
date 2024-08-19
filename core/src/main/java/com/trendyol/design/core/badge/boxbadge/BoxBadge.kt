@@ -23,6 +23,14 @@ import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.preview.PreviewTheme
 
+/**
+ * Represents a single badge based on the provided badge type and attributes.
+ *
+ * @param boxBadgeType The type of badge to display, which determines the icon, title, and background.
+ * @param modifier Modifier to be applied to the badge.
+ * @param attributes Configuration options for the badge's appearance,
+ * including size, padding, and text style.
+ */
 @Composable
 fun BoxBadge(
     boxBadgeType: BoxBadgeType,

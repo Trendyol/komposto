@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.0] - 2024-09-11
+
+### Added
+
+- BoxBadge composable is introduced with [BoxBadgeType.Dynamic] and
+  predefined [BoxBadgeType.Defaults] types
+- BoxBadgeList composable is introduced with [BoxBadgeListDisplayMode.SPREAD] and
+  [BoxBadgeListDisplayMode.FIXED] modes
+
+### Changed
+
+- Add Ltr fonts to Preview Theme
+
 ## [0.11.1] - 2024-09-06
 
 ### Fixed
