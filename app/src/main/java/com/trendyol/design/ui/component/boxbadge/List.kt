@@ -24,15 +24,15 @@ import com.trendyol.theme.TrendyolDesign
 @Composable
 internal fun Fixed_BoxBadge_List_4() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.Custom(
-            title = "Custom Badge",
+        BoxBadgeType.Dynamic(
+            title = "Dynamic Badge",
             backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
             icon = Icons.Fill.Help,
         ),
-        BoxBadgeType.Coupon,
-        BoxBadgeType.FreeDelivery,
-        BoxBadgeType.FastDelivery,
-        BoxBadgeType.FastDelivery,
+        BoxBadgeType.Defaults.Coupon,
+        BoxBadgeType.Defaults.FreeDelivery,
+        BoxBadgeType.Defaults.FastDelivery,
+        BoxBadgeType.Defaults.FastDelivery,
     )
     BoxBadgeList(
         list = list,
@@ -51,15 +51,15 @@ internal fun Fixed_BoxBadge_List_4() = TrendyolTheme {
 @Composable
 internal fun Spread_BoxBadge_List_4() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.Custom(
-            title = "Custom Badge",
+        BoxBadgeType.Dynamic(
+            title = "Dynamic Badge",
             backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
             icon = Icons.Fill.Help,
         ),
-        BoxBadgeType.Coupon,
-        BoxBadgeType.FreeDelivery,
-        BoxBadgeType.FastDelivery,
-        BoxBadgeType.FastDelivery,
+        BoxBadgeType.Defaults.Coupon,
+        BoxBadgeType.Defaults.FreeDelivery,
+        BoxBadgeType.Defaults.FastDelivery,
+        BoxBadgeType.Defaults.FastDelivery,
     )
     BoxBadgeList(
         list = list,
@@ -78,9 +78,9 @@ internal fun Spread_BoxBadge_List_4() = TrendyolTheme {
 @Composable
 internal fun Fixed_BoxBadge_List_3() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.BuyMorePayLess,
-        BoxBadgeType.BuyTogether,
-        BoxBadgeType.Video,
+        BoxBadgeType.Defaults.BuyMorePayLess,
+        BoxBadgeType.Defaults.BuyTogether,
+        BoxBadgeType.Defaults.Video,
     )
     BoxBadgeList(
         list = list,
@@ -99,9 +99,9 @@ internal fun Fixed_BoxBadge_List_3() = TrendyolTheme {
 @Composable
 internal fun Spread_BoxBadge_List_3() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.BuyMorePayLess,
-        BoxBadgeType.BuyTogether,
-        BoxBadgeType.Video,
+        BoxBadgeType.Defaults.BuyMorePayLess,
+        BoxBadgeType.Defaults.BuyTogether,
+        BoxBadgeType.Defaults.Video,
     )
     BoxBadgeList(
         list = list,
@@ -120,8 +120,8 @@ internal fun Spread_BoxBadge_List_3() = TrendyolTheme {
 @Composable
 internal fun Fixed_BoxBadge_List_2() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.TodayDelivery,
-        BoxBadgeType.Credit,
+        BoxBadgeType.Defaults.TodayDelivery,
+        BoxBadgeType.Defaults.Credit,
     )
     BoxBadgeList(
         list = list,
@@ -140,8 +140,8 @@ internal fun Fixed_BoxBadge_List_2() = TrendyolTheme {
 @Composable
 internal fun Spread_BoxBadge_List_2() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.TodayDelivery,
-        BoxBadgeType.Credit,
+        BoxBadgeType.Defaults.TodayDelivery,
+        BoxBadgeType.Defaults.Credit,
     )
     BoxBadgeList(
         list = list,
@@ -160,7 +160,7 @@ internal fun Spread_BoxBadge_List_2() = TrendyolTheme {
 @Composable
 internal fun Fixed_BoxBadge_List_1() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.InfluencerChoice,
+        BoxBadgeType.Defaults.InfluencerChoice,
     )
     BoxBadgeList(
         list = list,
@@ -179,7 +179,7 @@ internal fun Fixed_BoxBadge_List_1() = TrendyolTheme {
 @Composable
 internal fun Spread_BoxBadge_List_1() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.InfluencerChoice,
+        BoxBadgeType.Defaults.InfluencerChoice,
     )
     BoxBadgeList(
         list = list,

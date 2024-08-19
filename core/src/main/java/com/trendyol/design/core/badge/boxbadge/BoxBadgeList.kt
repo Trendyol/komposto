@@ -71,14 +71,14 @@ fun BoxBadgeList(
 @Composable
 private fun Fixed4BadgesListPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Custom(
-            title = "Custom Badge",
+        BoxBadgeType.Dynamic(
+            title = "Dynamic Badge",
             backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
             icon = Icons.Fill.Help,
         ),
-        BoxBadgeType.Coupon,
-        BoxBadgeType.FreeDelivery,
-        BoxBadgeType.FastDelivery,
+        BoxBadgeType.Defaults.Coupon,
+        BoxBadgeType.Defaults.FreeDelivery,
+        BoxBadgeType.Defaults.FastDelivery,
     )
     BoxBadgeList(
         list = list,
@@ -92,9 +92,9 @@ private fun Fixed4BadgesListPreview() = PreviewTheme {
 @Composable
 private fun Fixed3BadgesListPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.BuyMorePayLess,
-        BoxBadgeType.BuyTogether,
-        BoxBadgeType.Video,
+        BoxBadgeType.Defaults.BuyMorePayLess,
+        BoxBadgeType.Defaults.BuyTogether,
+        BoxBadgeType.Defaults.Video,
     )
     BoxBadgeList(
         list = list,
@@ -108,8 +108,8 @@ private fun Fixed3BadgesListPreview() = PreviewTheme {
 @Composable
 private fun Fixed2BadgesListPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.TodayDelivery,
-        BoxBadgeType.Credit,
+        BoxBadgeType.Defaults.TodayDelivery,
+        BoxBadgeType.Defaults.Credit,
     )
     BoxBadgeList(
         list = list,
@@ -123,7 +123,7 @@ private fun Fixed2BadgesListPreview() = PreviewTheme {
 @Composable
 private fun Fixed1BadgeListPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.InfluencerChoice,
+        BoxBadgeType.Defaults.InfluencerChoice,
     )
     BoxBadgeList(
         list = list,
@@ -138,14 +138,14 @@ private fun Fixed1BadgeListPreview() = PreviewTheme {
 @Composable
 private fun Spread4BadgesListPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Custom(
-            title = "Custom Badge",
+        BoxBadgeType.Dynamic(
+            title = "Dynamic Badge",
             backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
             icon = Icons.Fill.Help,
         ),
-        BoxBadgeType.Coupon,
-        BoxBadgeType.FreeDelivery,
-        BoxBadgeType.FastDelivery,
+        BoxBadgeType.Defaults.Coupon,
+        BoxBadgeType.Defaults.FreeDelivery,
+        BoxBadgeType.Defaults.FastDelivery,
     )
     Row(modifier = Modifier.width(200.dp)) {
         BoxBadgeList(
@@ -161,9 +161,9 @@ private fun Spread4BadgesListPreview() = PreviewTheme {
 @Composable
 private fun Spread3BadgesListPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.BuyMorePayLess,
-        BoxBadgeType.BuyTogether,
-        BoxBadgeType.Video,
+        BoxBadgeType.Defaults.BuyMorePayLess,
+        BoxBadgeType.Defaults.BuyTogether,
+        BoxBadgeType.Defaults.Video,
     )
     Row(modifier = Modifier.width(200.dp)) {
         BoxBadgeList(
@@ -180,8 +180,8 @@ private fun Spread3BadgesListPreview() = PreviewTheme {
 @Composable
 private fun Spread2BadgesListPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.TodayDelivery,
-        BoxBadgeType.Credit,
+        BoxBadgeType.Defaults.TodayDelivery,
+        BoxBadgeType.Defaults.Credit,
     )
     Row(modifier = Modifier.width(200.dp)) {
         BoxBadgeList(
@@ -197,7 +197,7 @@ private fun Spread2BadgesListPreview() = PreviewTheme {
 @Composable
 private fun Spread1BadgeListPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.InfluencerChoice,
+        BoxBadgeType.Defaults.InfluencerChoice,
     )
     Row(modifier = Modifier.width(200.dp)) {
         BoxBadgeList(
