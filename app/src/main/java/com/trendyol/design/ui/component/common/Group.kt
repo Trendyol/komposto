@@ -12,4 +12,5 @@ object Group {
     const val CHECKBOX = "Checkbox"
     const val BOTTOM_SHEET = "Bottom Sheet"
     const val LIST_CELL = "List Cell"
+    const val RATING_BAR = "Rating Bar"
 }
