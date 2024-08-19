@@ -19,6 +19,14 @@ import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * Represents a list of badges displayed in either a spread or fixed mode.
+ *
+ * @param list List of badges to be displayed.
+ * @param modifier Modifier to be applied to the list.
+ * @param attributes Configuration options for the badge list,
+ * including display mode, spacing, and item attributes.
+ */
 @Composable
 fun BoxBadgeList(
     list: List<BoxBadgeType>,
