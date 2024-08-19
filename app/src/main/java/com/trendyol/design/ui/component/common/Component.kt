@@ -64,4 +64,6 @@ object Component {
     const val LIST_CELL_CHECKBOX_ITEM = "BottomSheetCheckboxItem"
     const val LIST_CELL_SINGLE_SELECT_ITEM = "BottomSheetSingleSelectItem"
     const val LIST_CELL_STATIC_ITEM = "BottomSheetStaticItem"
+
+    const val RATING_BAR = "Rating Bar"
 }

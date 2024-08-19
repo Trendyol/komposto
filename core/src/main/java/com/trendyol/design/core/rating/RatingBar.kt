@@ -1,10 +1,13 @@
 package com.trendyol.design.core.rating
 
+import android.graphics.drawable.AdaptiveIconDrawable
+import android.os.Build
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -14,12 +17,15 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.painterResource
@@ -27,10 +33,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import androidx.core.content.res.ResourcesCompat
+import androidx.core.graphics.drawable.toBitmap
 import com.trendyol.design.core.R
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Star
-import com.trendyol.design.core.previewtheme.PreviewTheme
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 import kotlin.math.floor
@@ -116,14 +124,36 @@ fun RatingBar(
         }
 
         if (showCameraIcon) {
-            Image(
+            Icon(
                 modifier = Modifier
-                    .padding(start = 6.dp)
+                    .padding(start = 4.dp)
                     .size(size.cameraIconSize),
-                painter = painterResource(id = R.drawable.ic_camera),
-                contentDescription = ""
+                painter = adaptiveIconPainterResource(id = R.drawable.medium),
+                contentDescription = "Camera Icon",
+                tint = Color.Unspecified,
             )
         }
+    }
+}
+
+@Composable
+private fun adaptiveIconPainterResource(@DrawableRes id: Int): Painter {
+    val res = LocalContext.current.resources
+    val theme = LocalContext.current.theme
+
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        // Android O supports adaptive icons, try loading this first
+        // (even though this is least likely to be the format).
+        val adaptiveIcon = ResourcesCompat.getDrawable(res, id, theme) as? AdaptiveIconDrawable
+        if (adaptiveIcon != null) {
+            BitmapPainter(adaptiveIcon.toBitmap().asImageBitmap())
+        } else {
+            // We couldn't load the drawable as an Adaptive Icon, just use painterResource
+            painterResource(id)
+        }
+    } else {
+        // We're not on Android O or later, just use painterResource
+        painterResource(id)
     }
 }
 
