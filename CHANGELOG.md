@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.9.0] - 2024-08-19
+
+### Added
+
+- Introduced `RatingBar` composable to facilitate customizable rating bar components
+- Implemented `TrendyolRatingBarSize` for defining different sizes (`Small` and `Medium`)
+  of the rating bar.
+- Added `Star` icon to represent the rating in the `RatingBar` component.
+
 ### Added
 
 - Added sample code in the `:app` module.
