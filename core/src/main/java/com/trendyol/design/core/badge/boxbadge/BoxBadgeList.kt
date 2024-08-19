@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListAttributes
+import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListContent
 import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListDisplayMode
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
@@ -29,12 +30,12 @@ import com.trendyol.theme.TrendyolDesign
  */
 @Composable
 fun BoxBadgeList(
-    list: List<BoxBadgeType>,
+    content: BoxBadgeListContent,
     modifier: Modifier = Modifier,
     attributes: BoxBadgeListAttributes = BoxBadgeListAttributes(),
 ) {
     val visibleBadgeCount = attributes.visibleBadgeCount
-    val itemsToShow = remember(list) { list.take(visibleBadgeCount) }
+    val itemsToShow = remember(content) { content.list.take(visibleBadgeCount) }
     val emptySlots = visibleBadgeCount - itemsToShow.size
     val itemAttributes = attributes.itemAttributes
 
@@ -89,7 +90,7 @@ private fun Fixed4BadgesListPreview() = PreviewTheme {
         BoxBadgeType.Defaults.FastDelivery,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.FIXED
         ),
@@ -105,7 +106,7 @@ private fun Fixed3BadgesListPreview() = PreviewTheme {
         BoxBadgeType.Defaults.Video,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.FIXED
         ),
@@ -120,7 +121,7 @@ private fun Fixed2BadgesListPreview() = PreviewTheme {
         BoxBadgeType.Defaults.Credit,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.FIXED
         ),
@@ -134,13 +135,12 @@ private fun Fixed1BadgeListPreview() = PreviewTheme {
         BoxBadgeType.Defaults.InfluencerChoice,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.FIXED
         ),
     )
 }
-
 
 @Preview(showBackground = false)
 @Composable
@@ -157,7 +157,7 @@ private fun Spread4BadgesListPreview() = PreviewTheme {
     )
     Row(modifier = Modifier.width(200.dp)) {
         BoxBadgeList(
-            list = list,
+            content = BoxBadgeListContent(list),
             attributes = BoxBadgeListAttributes().copy(
                 displayMode = BoxBadgeListDisplayMode.SPREAD
             ),
@@ -175,14 +175,13 @@ private fun Spread3BadgesListPreview() = PreviewTheme {
     )
     Row(modifier = Modifier.width(200.dp)) {
         BoxBadgeList(
-            list = list,
+            content = BoxBadgeListContent(list),
             attributes = BoxBadgeListAttributes().copy(
                 displayMode = BoxBadgeListDisplayMode.SPREAD
             ),
         )
     }
 }
-
 
 @Preview(showBackground = false)
 @Composable
@@ -193,7 +192,7 @@ private fun Spread2BadgesListPreview() = PreviewTheme {
     )
     Row(modifier = Modifier.width(200.dp)) {
         BoxBadgeList(
-            list = list,
+            content = BoxBadgeListContent(list),
             attributes = BoxBadgeListAttributes().copy(
                 displayMode = BoxBadgeListDisplayMode.SPREAD
             ),
@@ -209,7 +208,7 @@ private fun Spread1BadgeListPreview() = PreviewTheme {
     )
     Row(modifier = Modifier.width(200.dp)) {
         BoxBadgeList(
-            list = list,
+            content = BoxBadgeListContent(list),
             attributes = BoxBadgeListAttributes().copy(
                 displayMode = BoxBadgeListDisplayMode.SPREAD
             ),

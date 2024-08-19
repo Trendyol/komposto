@@ -6,6 +6,7 @@ import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.badge.boxbadge.BoxBadgeList
 import com.trendyol.design.core.badge.boxbadge.BoxBadgeType
 import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListAttributes
+import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListContent
 import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListDisplayMode
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
@@ -35,7 +36,7 @@ internal fun Fixed_BoxBadge_List_4() = TrendyolTheme {
         BoxBadgeType.Defaults.FastDelivery,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.FIXED
         ),
@@ -62,7 +63,7 @@ internal fun Spread_BoxBadge_List_4() = TrendyolTheme {
         BoxBadgeType.Defaults.FastDelivery,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.SPREAD
         ),
@@ -83,7 +84,7 @@ internal fun Fixed_BoxBadge_List_3() = TrendyolTheme {
         BoxBadgeType.Defaults.Video,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.FIXED
         ),
@@ -104,7 +105,7 @@ internal fun Spread_BoxBadge_List_3() = TrendyolTheme {
         BoxBadgeType.Defaults.Video,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.SPREAD
         ),
@@ -124,7 +125,7 @@ internal fun Fixed_BoxBadge_List_2() = TrendyolTheme {
         BoxBadgeType.Defaults.Credit,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.FIXED
         ),
@@ -144,7 +145,7 @@ internal fun Spread_BoxBadge_List_2() = TrendyolTheme {
         BoxBadgeType.Defaults.Credit,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.SPREAD
         ),
@@ -163,7 +164,7 @@ internal fun Fixed_BoxBadge_List_1() = TrendyolTheme {
         BoxBadgeType.Defaults.InfluencerChoice,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.FIXED
         ),
@@ -182,7 +183,7 @@ internal fun Spread_BoxBadge_List_1() = TrendyolTheme {
         BoxBadgeType.Defaults.InfluencerChoice,
     )
     BoxBadgeList(
-        list = list,
+        content = BoxBadgeListContent(list),
         attributes = BoxBadgeListAttributes().copy(
             displayMode = BoxBadgeListDisplayMode.SPREAD
         ),
