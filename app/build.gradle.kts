@@ -5,6 +5,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("io.gitlab.arturbosch.detekt")
     id("shot")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -42,7 +43,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
     packaging {
         resources {
@@ -62,13 +63,20 @@ configure<DetektExtension> {
     config.from.add("$rootDir/config/detekt/detekt-compose.yml")
 }
 
+ksp {
+    arg("skipPrivatePreviews", "true")
+}
+
 dependencies {
 
     implementation(projects.core)
+    implementation(projects.bottomsheet)
 
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle.runtime)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.appCompat)
+    implementation(libs.android.material)
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui.ui)
@@ -76,6 +84,9 @@ dependencies {
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.compose.ui.tooling)
     implementation(libs.androidx.compose.ui.googleFonts)
+
+    implementation(libs.showkase)
+    ksp(libs.showkaseProcessor)
 
     detektPlugins(libs.detekt.formatting)
     detektPlugins(libs.detekt.composeRules)

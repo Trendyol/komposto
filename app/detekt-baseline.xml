@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>MagicNumber:ListExampleBottomSheetFragment.kt$ListExampleBottomSheetFragment$30</ID>
+  </CurrentIssues>
+</SmellBaseline>
