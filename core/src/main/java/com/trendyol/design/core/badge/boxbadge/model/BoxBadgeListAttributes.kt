@@ -33,4 +33,3 @@ data class BoxBadgeListAttributes(
     val space: Dp = 4.dp,
     val itemAttributes: BoxBadgeAttributes = BoxBadgeAttributes(),
 )
-
