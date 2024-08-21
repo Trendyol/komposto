@@ -15,7 +15,6 @@ import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.theme.TrendyolDesign
 
-
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
