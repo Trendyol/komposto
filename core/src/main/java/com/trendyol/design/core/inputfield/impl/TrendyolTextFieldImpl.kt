@@ -97,7 +97,7 @@ internal fun TrendyolCommonDecorationBox(
     val caption = typography.body2Medium
     val shouldOverrideTextStyleColor =
         (subtitle1.color == Color.Unspecified && caption.color != Color.Unspecified) ||
-                (subtitle1.color != Color.Unspecified && caption.color == Color.Unspecified)
+            (subtitle1.color != Color.Unspecified && caption.color == Color.Unspecified)
 
     TextFieldTransitionScope.Transition(
         inputState = inputState,

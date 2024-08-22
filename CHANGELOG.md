@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.7.4] - 2024-07-09
+## [0.10.0] - 2024-08-22
 
 ### Added
 
@@ -26,6 +26,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated `ArrowDown` icon preview naming.
+
+## [0.9.0] - 2024-08-19
+
+### Added
+
+- Introduced `RatingBar` composable to facilitate customizable rating bar components
+- Implemented `TrendyolRatingBarSize` for defining different sizes (`Small` and `Medium`)
+  of the rating bar.
+- Added `Star` icon to represent the rating in the `RatingBar` component.
+
+### Added
+
+- Added sample code in the `:app` module.
+
+## [0.8.0] - 2024-07-23
+
+### Added
+
+- Added bottom sheet Composable APIs(`BottomSheetListContent`, `BottomSheetSliderContent`, etc...).
+- Added bottom sheet item Composable APIs(`BottomSheetCheckboxItem`, `BottomSheetSingleSelectionItem`).
+
+
+## [0.7.5] - 2024-07-10
+
+### Added
+
+- InputOTPField composable is introduced with [TrendyolInputOTPFieldStyle.Outline] and
+  [TrendyolInputOTPFieldStyle.Filled] styles.
+- InputPasswordField composable is introduced with [TrendyolOutlinedTextFieldStyle.Outline],
+  [TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined] and [FloatingLabelOutlined.Filled] styles.
+- OutlinedTextField disabled label color changed to colorOnSurfaceVariant1.
+
+## [0.7.4] - 2024-07-19
+
+### Added
+
+- Add new vertical price api
 
 ## [0.7.3] - 2024-06-20
 
