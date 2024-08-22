@@ -12,7 +12,6 @@ import androidx.compose.material.LocalTextStyle
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.TextFieldColors
 import androidx.compose.material.TextFieldDefaults
-import androidx.compose.material.TextFieldDefaults.indicatorLine
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -131,13 +130,6 @@ internal fun TrendyolOutlinedTextField(
         } else {
             modifier
         }
-            .indicatorLine(
-                enabled = enabled,
-                isError = isError,
-                interactionSource = interactionSource,
-                colors = colors,
-                focusedIndicatorLineThickness = 1.dp,
-            )
             .background(
                 color = if (enabled) backgroundColor else backgroundColor.copy(alpha = 0.5f),
                 shape = shape
