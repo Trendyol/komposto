@@ -49,6 +49,7 @@ object Component {
     const val INPUT_FIELD_PHONE_NUMBER = "PhoneNumber"
     const val INPUT_FIELD_PASSWORD = "Password"
     const val INPUT_FIELD_OTP = "OTP"
+    const val INPUT_FIELD_SEARCH_BAR = "SearchBar"
 
     const val CHECKBOX_NONE = "None"
     const val CHECKBOX_TEXT = "Text"
