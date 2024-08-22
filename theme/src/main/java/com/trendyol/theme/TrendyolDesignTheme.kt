@@ -2,7 +2,7 @@ package com.trendyol.theme
 
 import androidx.compose.runtime.staticCompositionLocalOf
 
-class TrendyolDesignTheme(
+data class TrendyolDesignTheme(
     val colors: TrendyolDesignColors,
     val typography: TrendyolDesignTypography,
     val fontFamily: TrendyolDesignFontFamily,
