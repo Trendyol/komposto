@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.0] - 2024-08-22
+
+### Added
+
+- Introduced `SearchBar` composable to facilitate customizable search bar components
+- Implemented `TrendyolSearchBarSize` for defining different sizes (`Small` and `Large`)
+  of the search bar.
+- Implemented `TrendyolSearchBarStyle` for defining different styles (`Outline` and `Filled`)
+  of the search bar.
+- Added `Search` icon as the leading icon in the `SearchBar` component.
+- Added `Cancel` icon as the trailing icon in the `SearchBar` component.
+
+### Fixed
+
+- Fixed issue with state updates not being applied in input fields.
+
+### Changed
+
+- Updated `ArrowDown` icon preview naming.
+
 ## [0.9.0] - 2024-08-19
 
 ### Added

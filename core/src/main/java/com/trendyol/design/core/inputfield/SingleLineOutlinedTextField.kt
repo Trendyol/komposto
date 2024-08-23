@@ -5,10 +5,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -45,11 +41,9 @@ fun SingleLineOutlinedTextField(
     colors: TextFieldColors = style.outlinedTextFieldColors,
     onValueChange: (String) -> Unit,
 ) {
-    var text by rememberSaveable { mutableStateOf(value) }
-
     Column(modifier = modifier) {
         TrendyolOutlinedTextField(
-            value = text,
+            value = value,
             label = if (!label.isNullOrBlank()) {
                 {
                     Text(text = label)
@@ -63,10 +57,7 @@ fun SingleLineOutlinedTextField(
                     )
                 }
             } else null,
-            onValueChange = { changedValue ->
-                text = changedValue
-                onValueChange(changedValue)
-            },
+            onValueChange = onValueChange,
             colors = colors,
             isError = isError,
             isFilled = style is TrendyolOutlinedTextFieldStyle.Filled,
