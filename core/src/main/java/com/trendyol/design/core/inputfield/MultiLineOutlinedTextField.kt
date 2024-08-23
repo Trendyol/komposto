@@ -10,10 +10,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -52,12 +48,10 @@ fun MultiLineOutlineTextField(
     colors: TextFieldColors = style.outlinedTextFieldColors,
     onValueChange: (String) -> Unit,
 ) {
-    var text by rememberSaveable { mutableStateOf(value) }
-
     Column(modifier = modifier.width(IntrinsicSize.Max)) {
         TrendyolOutlinedTextField(
             modifier = Modifier,
-            value = text,
+            value = value,
             label = if (!label.isNullOrBlank()) {
                 {
                     Text(text = label)
@@ -71,10 +65,7 @@ fun MultiLineOutlineTextField(
                     )
                 }
             } else null,
-            onValueChange = { changedValue ->
-                text = changedValue
-                onValueChange(changedValue)
-            },
+            onValueChange = onValueChange,
             colors = colors,
             isError = isError,
             isFilled = style is TrendyolOutlinedTextFieldStyle.Filled,
@@ -111,7 +102,7 @@ fun MultiLineOutlineTextField(
             }
 
             Text(
-                text = "${text.length} / $maxChar",
+                text = "${value.length} / $maxChar",
                 style = if (isError) TrendyolDesign.typography.body1ColorWarning
                 else TrendyolDesign.typography.body1ColorOnSurfaceVariant1
             )
