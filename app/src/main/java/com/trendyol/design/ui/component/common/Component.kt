@@ -67,4 +67,6 @@ object Component {
     const val LIST_CELL_STATIC_ITEM = "BottomSheetStaticItem"
 
     const val RATING_BAR = "Rating Bar"
+
+    const val COUNTDOWN_TIMER = "Countdown Timer"
 }
