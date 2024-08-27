@@ -56,8 +56,8 @@ private const val TIME_FORMAT = "%02d"
 internal fun TimeRowItemLargePreview() {
     PreviewTheme {
         TimeBoxItem(
-            style = TrendyolCountdownTimerStyle.Primary,
-            size = TrendyolCountdownTimerSize.Large,
+            style = KPCountdownTimerStyle.Primary,
+            size = KPCountdownTimerSize.Large,
             time = 24,
             backgroundAlpha = .5F,
             modifier = Modifier.width(24.dp),
@@ -70,8 +70,8 @@ internal fun TimeRowItemLargePreview() {
 internal fun TimeRowItemMediumPreview() {
     PreviewTheme {
         TimeBoxItem(
-            style = TrendyolCountdownTimerStyle.Primary,
-            size = TrendyolCountdownTimerSize.Medium,
+            style = KPCountdownTimerStyle.Primary,
+            size = KPCountdownTimerSize.Medium,
             modifier = Modifier.width(24.dp),
             time = 24,
             backgroundAlpha = .5F,
@@ -84,8 +84,8 @@ internal fun TimeRowItemMediumPreview() {
 internal fun TimeRowItemSmallPreview() {
     PreviewTheme {
         TimeBoxItem(
-            style = TrendyolCountdownTimerStyle.Primary,
-            size = TrendyolCountdownTimerSize.Small,
+            style = KPCountdownTimerStyle.Primary,
+            size = KPCountdownTimerSize.Small,
             modifier = Modifier.width(24.dp),
             time = 24,
             backgroundAlpha = .5F,

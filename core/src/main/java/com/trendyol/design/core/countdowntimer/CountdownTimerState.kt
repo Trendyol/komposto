@@ -10,7 +10,7 @@ import androidx.compose.runtime.setValue
 import java.util.concurrent.TimeUnit
 
 @Stable
-class CountDownTimerState(
+class CountdownTimerState(
     val endDate: Long,
 ) {
     private val countDownTimer: CountDownTimer by lazy {
@@ -67,7 +67,7 @@ class CountDownTimerState(
         internal val Saver = listSaver(
             save = { listOf(it.endDate) },
             restore = {
-                CountDownTimerState(
+                CountdownTimerState(
                     endDate = it[0] as Long,
                 )
             }

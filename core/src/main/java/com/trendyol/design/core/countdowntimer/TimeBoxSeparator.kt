@@ -33,7 +33,7 @@ private const val SEPARATOR = ":"
 private fun TimeRowItemSeparatorPreview() {
     PreviewTheme {
         TimeBoxSeparator(
-            style = TrendyolCountdownTimerStyle.Primary,
+            style = KPCountdownTimerStyle.Primary,
         )
     }
 }

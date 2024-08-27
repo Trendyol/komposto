@@ -31,15 +31,15 @@ import java.util.concurrent.TimeUnit
  * @param backgroundAlpha The alpha value for the background color, allowing control over the transparency of the time boxes. Defaults to `1F`.
  */
 @Composable
-fun CountDownTimer(
-    style: CountdownTimerStyle,
+fun KPCountdownTimer(
     size: CountdownTimerSize,
     endDate: Long,
     modifier: Modifier = Modifier,
+    style: CountdownTimerStyle = KPCountdownTimerStyle.Primary,
     backgroundAlpha: Float = 1F,
 ) {
-    val state = rememberSaveable(endDate, saver = CountDownTimerState.Saver) {
-        CountDownTimerState(endDate = endDate)
+    val state = rememberSaveable(endDate, saver = CountdownTimerState.Saver) {
+        CountdownTimerState(endDate = endDate)
     }
     val remainingTimes by remember(state) { derivedStateOf { state.getRemainingTimes(state.remainingTime) } }
     val isVisible by remember(state) { derivedStateOf { state.isVisible } }
@@ -88,9 +88,9 @@ fun CountDownTimer(
 @Composable
 private fun CountDownTimerLargePreview() {
     PreviewTheme {
-        CountDownTimer(
-            style = TrendyolCountdownTimerStyle.Primary,
-            size = TrendyolCountdownTimerSize.Large,
+        KPCountdownTimer(
+            style = KPCountdownTimerStyle.Primary,
+            size = KPCountdownTimerSize.Large,
             endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
         )
     }
@@ -100,9 +100,9 @@ private fun CountDownTimerLargePreview() {
 @Composable
 private fun CountDownTimerMediumPreview() {
     PreviewTheme {
-        CountDownTimer(
-            style = TrendyolCountdownTimerStyle.Primary,
-            size = TrendyolCountdownTimerSize.Medium,
+        KPCountdownTimer(
+            style = KPCountdownTimerStyle.Primary,
+            size = KPCountdownTimerSize.Medium,
             endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
         )
     }
@@ -112,9 +112,9 @@ private fun CountDownTimerMediumPreview() {
 @Composable
 private fun CountDownTimerSmallPreview() {
     PreviewTheme {
-        CountDownTimer(
-            style = TrendyolCountdownTimerStyle.Primary,
-            size = TrendyolCountdownTimerSize.Small,
+        KPCountdownTimer(
+            style = KPCountdownTimerStyle.Primary,
+            size = KPCountdownTimerSize.Small,
             endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
         )
     }
@@ -124,9 +124,9 @@ private fun CountDownTimerSmallPreview() {
 @Composable
 private fun CountDownTimerRTLPreview() {
     PreviewTheme {
-        CountDownTimer(
-            style = TrendyolCountdownTimerStyle.Primary,
-            size = TrendyolCountdownTimerSize.Large,
+        KPCountdownTimer(
+            style = KPCountdownTimerStyle.Primary,
+            size = KPCountdownTimerSize.Large,
             endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
         )
     }

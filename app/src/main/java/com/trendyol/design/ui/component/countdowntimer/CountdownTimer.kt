@@ -9,9 +9,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.countdowntimer.CountDownTimer
-import com.trendyol.design.core.countdowntimer.TrendyolCountdownTimerSize
-import com.trendyol.design.core.countdowntimer.TrendyolCountdownTimerStyle
+import com.trendyol.design.core.countdowntimer.KPCountdownTimer
+import com.trendyol.design.core.countdowntimer.KPCountdownTimerSize
+import com.trendyol.design.core.countdowntimer.KPCountdownTimerStyle
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -33,14 +33,14 @@ internal fun Countdown_Timer_Large() {
                 .padding(4.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            CountDownTimer(
-                style = TrendyolCountdownTimerStyle.Primary,
-                size = TrendyolCountdownTimerSize.Large,
+            KPCountdownTimer(
+                style = KPCountdownTimerStyle.Primary,
+                size = KPCountdownTimerSize.Large,
                 endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
             )
-            CountDownTimer(
-                style = TrendyolCountdownTimerStyle.Primary,
-                size = TrendyolCountdownTimerSize.Large,
+            KPCountdownTimer(
+                style = KPCountdownTimerStyle.Primary,
+                size = KPCountdownTimerSize.Large,
                 endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
                 backgroundAlpha = .8F
             )
@@ -63,14 +63,14 @@ internal fun Countdown_Timer_Medium() {
                 .padding(4.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            CountDownTimer(
-                style = TrendyolCountdownTimerStyle.Primary,
-                size = TrendyolCountdownTimerSize.Medium,
+            KPCountdownTimer(
+                style = KPCountdownTimerStyle.Primary,
+                size = KPCountdownTimerSize.Medium,
                 endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
             )
-            CountDownTimer(
-                style = TrendyolCountdownTimerStyle.Primary,
-                size = TrendyolCountdownTimerSize.Medium,
+            KPCountdownTimer(
+                style = KPCountdownTimerStyle.Primary,
+                size = KPCountdownTimerSize.Medium,
                 endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
                 backgroundAlpha = .8F
             )
@@ -93,14 +93,14 @@ internal fun Countdown_Timer_Small() {
                 .padding(4.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            CountDownTimer(
-                style = TrendyolCountdownTimerStyle.Primary,
-                size = TrendyolCountdownTimerSize.Small,
+            KPCountdownTimer(
+                style = KPCountdownTimerStyle.Primary,
+                size = KPCountdownTimerSize.Small,
                 endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
             )
-            CountDownTimer(
-                style = TrendyolCountdownTimerStyle.Primary,
-                size = TrendyolCountdownTimerSize.Small,
+            KPCountdownTimer(
+                style = KPCountdownTimerStyle.Primary,
+                size = KPCountdownTimerSize.Small,
                 endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
                 backgroundAlpha = .8F
             )
