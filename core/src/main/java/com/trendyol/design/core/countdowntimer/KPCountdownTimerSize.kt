@@ -10,7 +10,7 @@ import androidx.compose.ui.unit.dp
  *
  * This sealed interface restricts the set of possible sizes to the predefined options.
  */
-sealed interface TrendyolCountdownTimerSize {
+sealed interface KPCountdownTimerSize {
 
     /**
      * `Large` provides the large size configuration for the Trendyol countdown timer.

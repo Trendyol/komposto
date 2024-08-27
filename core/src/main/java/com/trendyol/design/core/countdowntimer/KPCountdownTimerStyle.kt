@@ -11,7 +11,7 @@ import com.trendyol.theme.TrendyolDesign
  *
  * This sealed interface allows defining a limited set of styles that conform to the `CountdownTimerStyle` interface.
  */
-sealed interface TrendyolCountdownTimerStyle {
+sealed interface KPCountdownTimerStyle {
 
     /**
      * `Primary` provides the primary style for the Trendyol countdown timer.
@@ -28,13 +28,13 @@ sealed interface TrendyolCountdownTimerStyle {
         @Composable
         override fun textStyle(size: CountdownTimerSize): TextStyle {
             return when (size) {
-                is TrendyolCountdownTimerSize.Large ->
+                is KPCountdownTimerSize.Large ->
                     TrendyolDesign.typography.subtitleBoldColorOnSurfaceVariant3
 
-                is TrendyolCountdownTimerSize.Medium ->
+                is KPCountdownTimerSize.Medium ->
                     TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3
 
-                is TrendyolCountdownTimerSize.Small ->
+                is KPCountdownTimerSize.Small ->
                     TrendyolDesign.typography.body1BoldColorOnSurfaceVariant3
 
                 else -> TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3
