@@ -15,10 +15,10 @@ import com.trendyol.theme.TrendyolDesign
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
-    name = Component.BOX_BADGE_CUSTOM,
+    name = Component.BOX_BADGE_DYNAMIC,
 )
 @Composable
-internal fun BoxBadge_Single_Custom() = TrendyolTheme {
+internal fun BoxBadge_Single_Dynamic() = TrendyolTheme {
     val dynamicBadge = BoxBadgeType.Dynamic(
         title = "Dynamic Badge",
         backgroundColor = TrendyolDesign.colors.colorPinkVariant2,
@@ -34,7 +34,7 @@ internal fun BoxBadge_Single_Custom() = TrendyolTheme {
 )
 @Composable
 internal fun BoxBadge_Single_Coupon() = TrendyolTheme {
-    BoxBadge(BoxBadgeType.Defaults.Coupon)
+    BoxBadge(BoxBadgeType.Defaults.Coupon())
 }
 
 @Preview(showBackground = true)
@@ -44,7 +44,7 @@ internal fun BoxBadge_Single_Coupon() = TrendyolTheme {
 )
 @Composable
 internal fun BoxBadge_Single_FreeDelivery() = TrendyolTheme {
-    BoxBadge(BoxBadgeType.Defaults.FreeDelivery)
+    BoxBadge(BoxBadgeType.Defaults.FreeDelivery())
 }
 
 @Preview(showBackground = true)
@@ -54,7 +54,7 @@ internal fun BoxBadge_Single_FreeDelivery() = TrendyolTheme {
 )
 @Composable
 internal fun BoxBadge_Single_FastDelivery() = TrendyolTheme {
-    BoxBadge(BoxBadgeType.Defaults.FastDelivery)
+    BoxBadge(BoxBadgeType.Defaults.FastDelivery())
 }
 
 @Preview(showBackground = true)
@@ -64,7 +64,7 @@ internal fun BoxBadge_Single_FastDelivery() = TrendyolTheme {
 )
 @Composable
 internal fun BoxBadge_Single_BuyMorePayLess() = TrendyolTheme {
-    BoxBadge(BoxBadgeType.Defaults.BuyMorePayLess)
+    BoxBadge(BoxBadgeType.Defaults.BuyMorePayLess())
 }
 
 @Preview(showBackground = true)
@@ -74,7 +74,7 @@ internal fun BoxBadge_Single_BuyMorePayLess() = TrendyolTheme {
 )
 @Composable
 internal fun BoxBadge_Single_BuyTogether() = TrendyolTheme {
-    BoxBadge(BoxBadgeType.Defaults.BuyTogether)
+    BoxBadge(BoxBadgeType.Defaults.BuyTogether())
 }
 
 @Preview(showBackground = true)
@@ -84,7 +84,7 @@ internal fun BoxBadge_Single_BuyTogether() = TrendyolTheme {
 )
 @Composable
 internal fun BoxBadge_Single_Video() = TrendyolTheme {
-    BoxBadge(BoxBadgeType.Defaults.Video)
+    BoxBadge(BoxBadgeType.Defaults.Video())
 }
 
 @Preview(showBackground = true)
@@ -94,7 +94,7 @@ internal fun BoxBadge_Single_Video() = TrendyolTheme {
 )
 @Composable
 internal fun BoxBadge_Single_TodayDelivery() = TrendyolTheme {
-    BoxBadge(BoxBadgeType.Defaults.TodayDelivery)
+    BoxBadge(BoxBadgeType.Defaults.TodayDelivery())
 }
 
 @Preview(showBackground = true)
@@ -104,7 +104,7 @@ internal fun BoxBadge_Single_TodayDelivery() = TrendyolTheme {
 )
 @Composable
 internal fun BoxBadge_Single_Credit() = TrendyolTheme {
-    BoxBadge(BoxBadgeType.Defaults.Credit)
+    BoxBadge(BoxBadgeType.Defaults.Credit())
 }
 
 @Preview(showBackground = true)
@@ -114,5 +114,5 @@ internal fun BoxBadge_Single_Credit() = TrendyolTheme {
 )
 @Composable
 internal fun BoxBadge_Single_InfluencerChoice() = TrendyolTheme {
-    BoxBadge(BoxBadgeType.Defaults.InfluencerChoice)
+    BoxBadge(BoxBadgeType.Defaults.InfluencerChoice())
 }

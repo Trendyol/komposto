@@ -10,7 +10,7 @@ import com.trendyol.design.core.badge.boxbadge.BoxBadgeGroup
  *
  * @param space Determines the space between badges in the list, measured in Dp.
  *
- * @param itemAttributes Defines the styling attributes for individual badges, including
+ * @param itemAttributes Defines the styling attributes for badge items, including
  * properties like padding, icon size, and border radius, etc.
  */
 @Immutable

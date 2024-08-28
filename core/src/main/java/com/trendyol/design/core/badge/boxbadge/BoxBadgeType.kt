@@ -31,16 +31,16 @@ sealed class BoxBadgeType(val badge: BoxBadgeModel) {
 
     object Defaults {
 
-        data object Coupon : BoxBadgeType(
+        data class Coupon(val title: String = "Kupon Fırsatı") : BoxBadgeType(
             BoxBadgeModel(
-                title = "Kupon Fırsatı",
+                title = title,
                 backgroundColor = Color(color = 0xFFFFF0F5),
                 icon = Icons.Fill.Coupon,
                 iconTint = Color(color = 0xFFFF4988)
             )
         )
 
-        data object FreeDelivery : BoxBadgeType(
+        data class FreeDelivery(val title: String = "Kargo Bedava") : BoxBadgeType(
             BoxBadgeModel(
                 title = "Kargo Bedava",
                 backgroundColor = Color(color = 0xFFF7F7F7),
@@ -49,62 +49,62 @@ sealed class BoxBadgeType(val badge: BoxBadgeModel) {
             )
         )
 
-        data object FastDelivery : BoxBadgeType(
+        data class FastDelivery(val title: String = "Hızlı Teslimat") : BoxBadgeType(
             BoxBadgeModel(
-                title = "Hızlı Teslimat",
+                title = title,
                 backgroundColor = Color(color = 0xFFEBFAF2),
                 icon = Icons.Fill.Delivery,
                 iconTint = Color(color = 0xFF0BC15C)
             )
         )
 
-        data object BuyMorePayLess : BoxBadgeType(
+        data class BuyMorePayLess(val title: String = "Çok Al Az Öde") : BoxBadgeType(
             BoxBadgeModel(
-                title = "Çok Al Az Öde",
+                title = title,
                 backgroundColor = Color(color = 0xFFFEF4ED),
                 icon = Icons.Fill.Campaign,
                 iconTint = Color(color = 0xFFF27A1A)
             )
         )
 
-        data object BuyTogether : BoxBadgeType(
+        data class BuyTogether(val title: String = "Birlikte Al Kazan") : BoxBadgeType(
             BoxBadgeModel(
-                title = "Birlikte Al Kazan",
+                title = title,
                 backgroundColor = Color(color = 0xFFFEF4ED),
                 icon = Icons.Fill.Percentage,
                 iconTint = Color(color = 0xFFF27A1A)
             )
         )
 
-        data object Video : BoxBadgeType(
+        data class Video(val title: String = "Videolu Ürün") : BoxBadgeType(
             BoxBadgeModel(
-                title = "Videolu Ürün",
+                title = title,
                 backgroundColor = Color(color = 0xFFF6EFFF),
                 icon = Icons.Fill.PlayGradient,
             )
         )
 
-        data object TodayDelivery : BoxBadgeType(
+        data class TodayDelivery(val title: String = "Bugün Kargoda") : BoxBadgeType(
             BoxBadgeModel(
-                title = "Bugün Kargoda",
+                title = title,
                 backgroundColor = Color(color = 0xFFCFFFE4),
                 icon = Icons.Fill.Delivery,
                 iconTint = Color(color = 0xFF159F52),
             )
         )
 
-        data object Credit : BoxBadgeType(
+        data class Credit(val title: String = "Krediye Uygun") : BoxBadgeType(
             BoxBadgeModel(
-                title = "Krediye Uygun",
+                title = title,
                 backgroundColor = Color(color = 0xFFFFF9E5),
                 icon = Icons.Fill.Credit,
                 iconTint = Color(color = 0xFFFFC000),
             )
         )
 
-        data object InfluencerChoice : BoxBadgeType(
+        data class InfluencerChoice(val title: String = "Fenomen Seçimi") : BoxBadgeType(
             BoxBadgeModel(
-                title = "Fenomen Seçimi",
+                title = title,
                 backgroundColor = Color(color = 0xFFFEF5ED),
                 icon = Icons.Fill.FenomenGradient,
             )
