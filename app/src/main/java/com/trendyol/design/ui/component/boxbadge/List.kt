@@ -5,9 +5,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.badge.boxbadge.BoxBadgeList
+import com.trendyol.design.core.badge.boxbadge.BoxBadgeGroup
 import com.trendyol.design.core.badge.boxbadge.BoxBadgeType
-import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListContent
+import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeGroupContent
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -18,11 +18,11 @@ import com.trendyol.theme.TrendyolDesign
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
-    name = Component.BOX_BADGE_LIST_4,
+    name = Component.BOX_BADGE_GROUP_4_ITEM,
     styleName = "Default"
 )
 @Composable
-internal fun Default_BoxBadge_List_4() = TrendyolTheme {
+internal fun Default_BoxBadgeGroup_4() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Dynamic(
             title = "Dynamic Badge",
@@ -34,19 +34,19 @@ internal fun Default_BoxBadge_List_4() = TrendyolTheme {
         BoxBadgeType.Defaults.FastDelivery,
         BoxBadgeType.Defaults.FastDelivery,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
     )
 }
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
-    name = Component.BOX_BADGE_LIST_4,
+    name = Component.BOX_BADGE_GROUP_4_ITEM,
     styleName = "Scaled"
 )
 @Composable
-internal fun Scaled_BoxBadge_List_4() = TrendyolTheme {
+internal fun Scaled_BoxBadgeGroup_4() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Dynamic(
             title = "Dynamic Badge",
@@ -58,8 +58,8 @@ internal fun Scaled_BoxBadge_List_4() = TrendyolTheme {
         BoxBadgeType.Defaults.FastDelivery,
         BoxBadgeType.Defaults.FastDelivery,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
         modifier = Modifier.fillMaxWidth(),
     )
 }
@@ -67,36 +67,36 @@ internal fun Scaled_BoxBadge_List_4() = TrendyolTheme {
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
-    name = Component.BOX_BADGE_LIST_3,
+    name = Component.BOX_BADGE_GROUP_3_ITEM,
     styleName = "Default"
 )
 @Composable
-internal fun Default_BoxBadge_List_3() = TrendyolTheme {
+internal fun Default_BoxBadgeGroup_3() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.BuyMorePayLess,
         BoxBadgeType.Defaults.BuyTogether,
         BoxBadgeType.Defaults.Video,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
     )
 }
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
-    name = Component.BOX_BADGE_LIST_3,
+    name = Component.BOX_BADGE_GROUP_3_ITEM,
     styleName = "Scaled"
 )
 @Composable
-internal fun Scaled_BoxBadge_List_3() = TrendyolTheme {
+internal fun Scaled_BoxBadgeGroup_3() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.BuyMorePayLess,
         BoxBadgeType.Defaults.BuyTogether,
         BoxBadgeType.Defaults.Video,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
         modifier = Modifier.fillMaxWidth(),
     )
 }
@@ -104,34 +104,34 @@ internal fun Scaled_BoxBadge_List_3() = TrendyolTheme {
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
-    name = Component.BOX_BADGE_LIST_2,
+    name = Component.BOX_BADGE_GROUP_2_ITEM,
     styleName = "Default"
 )
 @Composable
-internal fun Default_BoxBadge_List_2() = TrendyolTheme {
+internal fun Default_BoxBadgeGroup_2() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.TodayDelivery,
         BoxBadgeType.Defaults.Credit,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
     )
 }
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
-    name = Component.BOX_BADGE_LIST_2,
+    name = Component.BOX_BADGE_GROUP_2_ITEM,
     styleName = "Scaled"
 )
 @Composable
-internal fun Scaled_BoxBadge_List_2() = TrendyolTheme {
+internal fun Scaled_BoxBadgeGroup_2() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.TodayDelivery,
         BoxBadgeType.Defaults.Credit,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
         modifier = Modifier.fillMaxWidth(),
     )
 }
@@ -139,32 +139,32 @@ internal fun Scaled_BoxBadge_List_2() = TrendyolTheme {
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
-    name = Component.BOX_BADGE_LIST_1,
+    name = Component.BOX_BADGE_GROUP_1_ITEM,
     styleName = "Default"
 )
 @Composable
-internal fun Default_BoxBadge_List_1() = TrendyolTheme {
+internal fun Default_BoxBadgeGroup_1() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.InfluencerChoice,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
     )
 }
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
-    name = Component.BOX_BADGE_LIST_1,
+    name = Component.BOX_BADGE_GROUP_1_ITEM,
     styleName = "Scaled"
 )
 @Composable
-internal fun Scaled_BoxBadge_List_1() = TrendyolTheme {
+internal fun Scaled_BoxBadgeGroup_1() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.InfluencerChoice,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
         modifier = Modifier.fillMaxWidth(),
     )
 }

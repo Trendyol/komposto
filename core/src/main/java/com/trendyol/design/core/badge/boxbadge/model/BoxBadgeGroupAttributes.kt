@@ -1,10 +1,10 @@
 package com.trendyol.design.core.badge.boxbadge.model
 
 import androidx.compose.runtime.Immutable
-import com.trendyol.design.core.badge.boxbadge.BoxBadgeList
+import com.trendyol.design.core.badge.boxbadge.BoxBadgeGroup
 
 /**
- * Customizable styling attributes of the [BoxBadgeList] component
+ * Customizable styling attributes of the [BoxBadgeGroup] component
  *
  * @param maxBadgeCount Specifies the maximum number of badges to display in the list.
  *
@@ -14,7 +14,7 @@ import com.trendyol.design.core.badge.boxbadge.BoxBadgeList
  * properties like padding, icon size, and border radius, etc.
  */
 @Immutable
-data class BoxBadgeListAttributes(
+data class BoxBadgeGroupAttributes(
     val maxBadgeCount: Int = 4,
     val space: Int = 4,
     val itemAttributes: BoxBadgeAttributes = BoxBadgeAttributes(),
