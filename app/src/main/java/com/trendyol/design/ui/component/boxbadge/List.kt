@@ -1,13 +1,13 @@
 package com.trendyol.design.ui.component.boxbadge
 
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.badge.boxbadge.BoxBadgeList
 import com.trendyol.design.core.badge.boxbadge.BoxBadgeType
-import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListAttributes
 import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListContent
-import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListDisplayMode
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -19,10 +19,10 @@ import com.trendyol.theme.TrendyolDesign
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
     name = Component.BOX_BADGE_LIST_4,
-    styleName = "BoxBadgeListDisplayMode.FIXED"
+    styleName = "Default"
 )
 @Composable
-internal fun Fixed_BoxBadge_List_4() = TrendyolTheme {
+internal fun Default_BoxBadge_List_4() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Dynamic(
             title = "Dynamic Badge",
@@ -36,9 +36,6 @@ internal fun Fixed_BoxBadge_List_4() = TrendyolTheme {
     )
     BoxBadgeList(
         content = BoxBadgeListContent(list),
-        attributes = BoxBadgeListAttributes().copy(
-            displayMode = BoxBadgeListDisplayMode.FIXED
-        ),
     )
 }
 
@@ -46,10 +43,10 @@ internal fun Fixed_BoxBadge_List_4() = TrendyolTheme {
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
     name = Component.BOX_BADGE_LIST_4,
-    styleName = "BoxBadgeListDisplayMode.SPREAD"
+    styleName = "Scaled"
 )
 @Composable
-internal fun Spread_BoxBadge_List_4() = TrendyolTheme {
+internal fun Scaled_BoxBadge_List_4() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Dynamic(
             title = "Dynamic Badge",
@@ -63,9 +60,7 @@ internal fun Spread_BoxBadge_List_4() = TrendyolTheme {
     )
     BoxBadgeList(
         content = BoxBadgeListContent(list),
-        attributes = BoxBadgeListAttributes().copy(
-            displayMode = BoxBadgeListDisplayMode.SPREAD
-        ),
+        modifier = Modifier.fillMaxWidth(),
     )
 }
 
@@ -73,10 +68,10 @@ internal fun Spread_BoxBadge_List_4() = TrendyolTheme {
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
     name = Component.BOX_BADGE_LIST_3,
-    styleName = "BoxBadgeListDisplayMode.FIXED"
+    styleName = "Default"
 )
 @Composable
-internal fun Fixed_BoxBadge_List_3() = TrendyolTheme {
+internal fun Default_BoxBadge_List_3() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.BuyMorePayLess,
         BoxBadgeType.Defaults.BuyTogether,
@@ -84,9 +79,6 @@ internal fun Fixed_BoxBadge_List_3() = TrendyolTheme {
     )
     BoxBadgeList(
         content = BoxBadgeListContent(list),
-        attributes = BoxBadgeListAttributes().copy(
-            displayMode = BoxBadgeListDisplayMode.FIXED
-        ),
     )
 }
 
@@ -94,10 +86,10 @@ internal fun Fixed_BoxBadge_List_3() = TrendyolTheme {
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
     name = Component.BOX_BADGE_LIST_3,
-    styleName = "BoxBadgeListDisplayMode.SPREAD"
+    styleName = "Scaled"
 )
 @Composable
-internal fun Spread_BoxBadge_List_3() = TrendyolTheme {
+internal fun Scaled_BoxBadge_List_3() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.BuyMorePayLess,
         BoxBadgeType.Defaults.BuyTogether,
@@ -105,9 +97,7 @@ internal fun Spread_BoxBadge_List_3() = TrendyolTheme {
     )
     BoxBadgeList(
         content = BoxBadgeListContent(list),
-        attributes = BoxBadgeListAttributes().copy(
-            displayMode = BoxBadgeListDisplayMode.SPREAD
-        ),
+        modifier = Modifier.fillMaxWidth(),
     )
 }
 
@@ -115,19 +105,16 @@ internal fun Spread_BoxBadge_List_3() = TrendyolTheme {
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
     name = Component.BOX_BADGE_LIST_2,
-    styleName = "BoxBadgeListDisplayMode.FIXED"
+    styleName = "Default"
 )
 @Composable
-internal fun Fixed_BoxBadge_List_2() = TrendyolTheme {
+internal fun Default_BoxBadge_List_2() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.TodayDelivery,
         BoxBadgeType.Defaults.Credit,
     )
     BoxBadgeList(
         content = BoxBadgeListContent(list),
-        attributes = BoxBadgeListAttributes().copy(
-            displayMode = BoxBadgeListDisplayMode.FIXED
-        ),
     )
 }
 
@@ -135,19 +122,17 @@ internal fun Fixed_BoxBadge_List_2() = TrendyolTheme {
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
     name = Component.BOX_BADGE_LIST_2,
-    styleName = "BoxBadgeListDisplayMode.SPREAD"
+    styleName = "Scaled"
 )
 @Composable
-internal fun Spread_BoxBadge_List_2() = TrendyolTheme {
+internal fun Scaled_BoxBadge_List_2() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.TodayDelivery,
         BoxBadgeType.Defaults.Credit,
     )
     BoxBadgeList(
         content = BoxBadgeListContent(list),
-        attributes = BoxBadgeListAttributes().copy(
-            displayMode = BoxBadgeListDisplayMode.SPREAD
-        ),
+        modifier = Modifier.fillMaxWidth(),
     )
 }
 
@@ -155,18 +140,15 @@ internal fun Spread_BoxBadge_List_2() = TrendyolTheme {
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
     name = Component.BOX_BADGE_LIST_1,
-    styleName = "BoxBadgeListDisplayMode.FIXED"
+    styleName = "Default"
 )
 @Composable
-internal fun Fixed_BoxBadge_List_1() = TrendyolTheme {
+internal fun Default_BoxBadge_List_1() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.InfluencerChoice,
     )
     BoxBadgeList(
         content = BoxBadgeListContent(list),
-        attributes = BoxBadgeListAttributes().copy(
-            displayMode = BoxBadgeListDisplayMode.FIXED
-        ),
     )
 }
 
@@ -174,17 +156,15 @@ internal fun Fixed_BoxBadge_List_1() = TrendyolTheme {
 @ShowkaseComposable(
     group = Group.BOX_BADGE,
     name = Component.BOX_BADGE_LIST_1,
-    styleName = "BoxBadgeListDisplayMode.SPREAD"
+    styleName = "Scaled"
 )
 @Composable
-internal fun Spread_BoxBadge_List_1() = TrendyolTheme {
+internal fun Scaled_BoxBadge_List_1() = TrendyolTheme {
     val list = listOf(
         BoxBadgeType.Defaults.InfluencerChoice,
     )
     BoxBadgeList(
         content = BoxBadgeListContent(list),
-        attributes = BoxBadgeListAttributes().copy(
-            displayMode = BoxBadgeListDisplayMode.SPREAD
-        ),
+        modifier = Modifier.fillMaxWidth(),
     )
 }
