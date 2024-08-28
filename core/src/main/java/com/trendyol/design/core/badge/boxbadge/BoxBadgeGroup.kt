@@ -11,8 +11,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListAttributes
-import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeListContent
+import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeGroupAttributes
+import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeGroupContent
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.preview.PreviewTheme
@@ -27,10 +27,10 @@ import com.trendyol.theme.TrendyolDesign
  * including badge count, spacing, and item attributes.
  */
 @Composable
-fun BoxBadgeList(
-    content: BoxBadgeListContent,
+fun BoxBadgeGroup(
+    content: BoxBadgeGroupContent,
     modifier: Modifier = Modifier,
-    attributes: BoxBadgeListAttributes = BoxBadgeListAttributes(),
+    attributes: BoxBadgeGroupAttributes = BoxBadgeGroupAttributes(),
 ) = with(attributes) {
 
     val itemsToShow = remember(content) { content.list.take(maxBadgeCount) }
@@ -63,7 +63,7 @@ fun BoxBadgeList(
 
 @Preview(showBackground = false)
 @Composable
-private fun Default4BadgesListPreview() = PreviewTheme {
+private fun Default4BadgesPreview() = PreviewTheme {
     val list = listOf(
         BoxBadgeType.Dynamic(
             title = "Dynamic Badge",
@@ -74,50 +74,50 @@ private fun Default4BadgesListPreview() = PreviewTheme {
         BoxBadgeType.Defaults.FreeDelivery,
         BoxBadgeType.Defaults.FastDelivery,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
     )
 }
 
 @Preview(showBackground = false)
 @Composable
-private fun Default3BadgesListPreview() = PreviewTheme {
+private fun Default3BadgesPreview() = PreviewTheme {
     val list = listOf(
         BoxBadgeType.Defaults.BuyMorePayLess,
         BoxBadgeType.Defaults.BuyTogether,
         BoxBadgeType.Defaults.Video,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list)
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list)
     )
 }
 
 @Preview(showBackground = false)
 @Composable
-private fun Default2BadgesListPreview() = PreviewTheme {
+private fun Default2BadgesPreview() = PreviewTheme {
     val list = listOf(
         BoxBadgeType.Defaults.TodayDelivery,
         BoxBadgeType.Defaults.Credit,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
     )
 }
 
 @Preview(showBackground = false)
 @Composable
-private fun Default1BadgeListPreview() = PreviewTheme {
+private fun Default1BadgesPreview() = PreviewTheme {
     val list = listOf(
         BoxBadgeType.Defaults.InfluencerChoice,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
     )
 }
 
 @Preview(showBackground = false)
 @Composable
-private fun Scaled4BadgesListPreview() = PreviewTheme {
+private fun Scaled4BadgesPreview() = PreviewTheme {
     val list = listOf(
         BoxBadgeType.Dynamic(
             title = "Dynamic Badge",
@@ -128,47 +128,47 @@ private fun Scaled4BadgesListPreview() = PreviewTheme {
         BoxBadgeType.Defaults.FreeDelivery,
         BoxBadgeType.Defaults.FastDelivery,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
         modifier = Modifier.fillMaxWidth(),
     )
 }
 
 @Preview(showBackground = false)
 @Composable
-private fun Scaled3BadgesListPreview() = PreviewTheme {
+private fun Scaled3BadgesPreview() = PreviewTheme {
     val list = listOf(
         BoxBadgeType.Defaults.BuyMorePayLess,
         BoxBadgeType.Defaults.BuyTogether,
         BoxBadgeType.Defaults.Video,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
         modifier = Modifier.fillMaxWidth(),
     )
 }
 
 @Preview(showBackground = false)
 @Composable
-private fun Scaled2BadgesListPreview() = PreviewTheme {
+private fun Scaled2BadgesPreview() = PreviewTheme {
     val list = listOf(
         BoxBadgeType.Defaults.TodayDelivery,
         BoxBadgeType.Defaults.Credit,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
         modifier = Modifier.fillMaxWidth(),
     )
 }
 
 @Preview(showBackground = false)
 @Composable
-private fun Scaled1BadgeListPreview() = PreviewTheme {
+private fun Scaled1BadgesPreview() = PreviewTheme {
     val list = listOf(
         BoxBadgeType.Defaults.InfluencerChoice,
     )
-    BoxBadgeList(
-        content = BoxBadgeListContent(list),
+    BoxBadgeGroup(
+        content = BoxBadgeGroupContent(list),
         modifier = Modifier.fillMaxWidth(),
     )
 }

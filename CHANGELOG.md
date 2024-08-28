@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - BoxBadge composable is introduced with [BoxBadgeType.Dynamic] and
   predefined [BoxBadgeType.Defaults] types
-- BoxBadgeList composable is introduced as a horizontal list of BoxBadge items
+- BoxBadgeGroup composable is introduced as a horizontal list of BoxBadge items
 
 ### Changed
 

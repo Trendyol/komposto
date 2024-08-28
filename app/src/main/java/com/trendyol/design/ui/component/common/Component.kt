@@ -81,8 +81,8 @@ object Component {
     const val BOX_BADGE_CREDIT = "Credit"
     const val BOX_BADGE_INFLUENCER_CHOICE = "InfluencerChoice"
 
-    const val BOX_BADGE_LIST_4 = "4BadgesList"
-    const val BOX_BADGE_LIST_3 = "3BadgesList"
-    const val BOX_BADGE_LIST_2 = "2BadgesList"
-    const val BOX_BADGE_LIST_1 = "1BadgeList"
+    const val BOX_BADGE_GROUP_4_ITEM = "4ItemsBoxBadgesGroup"
+    const val BOX_BADGE_GROUP_3_ITEM = "3ItemsBoxBadgesGroup"
+    const val BOX_BADGE_GROUP_2_ITEM = "2ItemsBoxBadgesGroup"
+    const val BOX_BADGE_GROUP_1_ITEM = "1ItemsBoxBadgesGroup"
 }
