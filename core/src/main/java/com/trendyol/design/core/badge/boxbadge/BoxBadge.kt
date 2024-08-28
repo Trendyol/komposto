@@ -74,7 +74,7 @@ fun BoxBadge(
 
 @Preview(showBackground = false)
 @Composable
-private fun CustomBoxBadgePreview() = PreviewTheme {
+private fun DynamicBoxBadgePreview() = PreviewTheme {
     BoxBadge(
         BoxBadgeType.Dynamic(
             title = "Dynamic Badge",
@@ -87,53 +87,53 @@ private fun CustomBoxBadgePreview() = PreviewTheme {
 @Preview(showBackground = false)
 @Composable
 private fun CouponBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.Coupon)
+    BoxBadge(BoxBadgeType.Defaults.Coupon())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun CargoFreeBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.FreeDelivery)
+    BoxBadge(BoxBadgeType.Defaults.FreeDelivery())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun FastDeliveryBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.FastDelivery)
+    BoxBadge(BoxBadgeType.Defaults.FastDelivery())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun BuyMorePayLessBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.BuyMorePayLess)
+    BoxBadge(BoxBadgeType.Defaults.BuyMorePayLess())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun BuyTogetherBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.BuyTogether)
+    BoxBadge(BoxBadgeType.Defaults.BuyTogether())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun VideoBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.Video)
+    BoxBadge(BoxBadgeType.Defaults.Video())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun TodayDeliveryBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.TodayDelivery)
+    BoxBadge(BoxBadgeType.Defaults.TodayDelivery())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun CreditBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.Credit)
+    BoxBadge(BoxBadgeType.Defaults.Credit())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun InfluencerChoiceBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.InfluencerChoice)
+    BoxBadge(BoxBadgeType.Defaults.InfluencerChoice())
 }

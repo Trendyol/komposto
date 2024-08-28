@@ -29,10 +29,9 @@ internal fun Default_BoxBadgeGroup_4() = TrendyolTheme {
             backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
             icon = Icons.Fill.Help,
         ),
-        BoxBadgeType.Defaults.Coupon,
-        BoxBadgeType.Defaults.FreeDelivery,
-        BoxBadgeType.Defaults.FastDelivery,
-        BoxBadgeType.Defaults.FastDelivery,
+        BoxBadgeType.Defaults.Coupon(),
+        BoxBadgeType.Defaults.FreeDelivery(),
+        BoxBadgeType.Defaults.FastDelivery(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -53,10 +52,9 @@ internal fun Scaled_BoxBadgeGroup_4() = TrendyolTheme {
             backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
             icon = Icons.Fill.Help,
         ),
-        BoxBadgeType.Defaults.Coupon,
-        BoxBadgeType.Defaults.FreeDelivery,
-        BoxBadgeType.Defaults.FastDelivery,
-        BoxBadgeType.Defaults.FastDelivery,
+        BoxBadgeType.Defaults.Coupon(),
+        BoxBadgeType.Defaults.FreeDelivery(),
+        BoxBadgeType.Defaults.FastDelivery(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -73,9 +71,9 @@ internal fun Scaled_BoxBadgeGroup_4() = TrendyolTheme {
 @Composable
 internal fun Default_BoxBadgeGroup_3() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.BuyMorePayLess,
-        BoxBadgeType.Defaults.BuyTogether,
-        BoxBadgeType.Defaults.Video,
+        BoxBadgeType.Defaults.BuyMorePayLess(),
+        BoxBadgeType.Defaults.BuyTogether(),
+        BoxBadgeType.Defaults.Video(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -91,9 +89,9 @@ internal fun Default_BoxBadgeGroup_3() = TrendyolTheme {
 @Composable
 internal fun Scaled_BoxBadgeGroup_3() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.BuyMorePayLess,
-        BoxBadgeType.Defaults.BuyTogether,
-        BoxBadgeType.Defaults.Video,
+        BoxBadgeType.Defaults.BuyMorePayLess(),
+        BoxBadgeType.Defaults.BuyTogether(),
+        BoxBadgeType.Defaults.Video(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -110,8 +108,8 @@ internal fun Scaled_BoxBadgeGroup_3() = TrendyolTheme {
 @Composable
 internal fun Default_BoxBadgeGroup_2() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.TodayDelivery,
-        BoxBadgeType.Defaults.Credit,
+        BoxBadgeType.Defaults.TodayDelivery(),
+        BoxBadgeType.Defaults.Credit(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -127,8 +125,8 @@ internal fun Default_BoxBadgeGroup_2() = TrendyolTheme {
 @Composable
 internal fun Scaled_BoxBadgeGroup_2() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.TodayDelivery,
-        BoxBadgeType.Defaults.Credit,
+        BoxBadgeType.Defaults.TodayDelivery(),
+        BoxBadgeType.Defaults.Credit(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -145,7 +143,7 @@ internal fun Scaled_BoxBadgeGroup_2() = TrendyolTheme {
 @Composable
 internal fun Default_BoxBadgeGroup_1() = TrendyolTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.InfluencerChoice,
+        BoxBadgeType.Defaults.InfluencerChoice(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -160,9 +158,10 @@ internal fun Default_BoxBadgeGroup_1() = TrendyolTheme {
 )
 @Composable
 internal fun Scaled_BoxBadgeGroup_1() = TrendyolTheme {
-    val list = listOf(
-        BoxBadgeType.Defaults.InfluencerChoice,
+    val list = listOf<BoxBadgeType>(
+        BoxBadgeType.Defaults.InfluencerChoice(),
     )
+
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
         modifier = Modifier.fillMaxWidth(),

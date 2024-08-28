@@ -70,7 +70,7 @@ object Component {
 
     const val COUNTDOWN_TIMER = "Countdown Timer"
 
-    const val BOX_BADGE_CUSTOM = "Custom"
+    const val BOX_BADGE_DYNAMIC = "Dynamic"
     const val BOX_BADGE_COUPON = "Coupon"
     const val BOX_BADGE_FREE_DELIVERY = "FreeDelivery"
     const val BOX_BADGE_FAST_DELIVERY = "FastDelivery"
@@ -81,8 +81,8 @@ object Component {
     const val BOX_BADGE_CREDIT = "Credit"
     const val BOX_BADGE_INFLUENCER_CHOICE = "InfluencerChoice"
 
-    const val BOX_BADGE_GROUP_4_ITEM = "4ItemsBoxBadgesGroup"
-    const val BOX_BADGE_GROUP_3_ITEM = "3ItemsBoxBadgesGroup"
-    const val BOX_BADGE_GROUP_2_ITEM = "2ItemsBoxBadgesGroup"
-    const val BOX_BADGE_GROUP_1_ITEM = "1ItemsBoxBadgesGroup"
+    const val BOX_BADGE_GROUP_4_ITEM = "4ItemsBoxBadgeGroup"
+    const val BOX_BADGE_GROUP_3_ITEM = "3ItemsBoxBadgeGroup"
+    const val BOX_BADGE_GROUP_2_ITEM = "2ItemsBoxBadgeGroup"
+    const val BOX_BADGE_GROUP_1_ITEM = "1ItemsBoxBadgeGroup"
 }

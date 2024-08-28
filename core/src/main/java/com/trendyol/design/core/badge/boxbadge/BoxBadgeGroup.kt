@@ -19,12 +19,14 @@ import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 /**
- * Represents a list of badges displayed in either a spread or fixed mode.
+ * Represents a horizontal list of badges displayed.
  *
  * @param content List of badges to be displayed.
  * @param modifier Modifier to be applied to the list.
+ * BadgeGroup is rendered with its default width, but scales to the specified width
+ * when a width-related modifier (e.g., fillMaxWidth, width, etc) is applied.
  * @param attributes Configuration options for the badge list,
- * including badge count, spacing, and item attributes.
+ * including max badge count, spacing, and item attributes.
  */
 @Composable
 fun BoxBadgeGroup(
@@ -70,9 +72,9 @@ private fun Default4BadgesPreview() = PreviewTheme {
             backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
             icon = Icons.Fill.Help,
         ),
-        BoxBadgeType.Defaults.Coupon,
-        BoxBadgeType.Defaults.FreeDelivery,
-        BoxBadgeType.Defaults.FastDelivery,
+        BoxBadgeType.Defaults.Coupon(),
+        BoxBadgeType.Defaults.FreeDelivery(),
+        BoxBadgeType.Defaults.FastDelivery(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -83,9 +85,9 @@ private fun Default4BadgesPreview() = PreviewTheme {
 @Composable
 private fun Default3BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.BuyMorePayLess,
-        BoxBadgeType.Defaults.BuyTogether,
-        BoxBadgeType.Defaults.Video,
+        BoxBadgeType.Defaults.BuyMorePayLess(),
+        BoxBadgeType.Defaults.BuyTogether(),
+        BoxBadgeType.Defaults.Video(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list)
@@ -96,8 +98,8 @@ private fun Default3BadgesPreview() = PreviewTheme {
 @Composable
 private fun Default2BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.TodayDelivery,
-        BoxBadgeType.Defaults.Credit,
+        BoxBadgeType.Defaults.TodayDelivery(),
+        BoxBadgeType.Defaults.Credit(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -108,7 +110,7 @@ private fun Default2BadgesPreview() = PreviewTheme {
 @Composable
 private fun Default1BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.InfluencerChoice,
+        BoxBadgeType.Defaults.InfluencerChoice(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -124,9 +126,9 @@ private fun Scaled4BadgesPreview() = PreviewTheme {
             backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
             icon = Icons.Fill.Help,
         ),
-        BoxBadgeType.Defaults.Coupon,
-        BoxBadgeType.Defaults.FreeDelivery,
-        BoxBadgeType.Defaults.FastDelivery,
+        BoxBadgeType.Defaults.Coupon(),
+        BoxBadgeType.Defaults.FreeDelivery(),
+        BoxBadgeType.Defaults.FastDelivery(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -138,9 +140,9 @@ private fun Scaled4BadgesPreview() = PreviewTheme {
 @Composable
 private fun Scaled3BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.BuyMorePayLess,
-        BoxBadgeType.Defaults.BuyTogether,
-        BoxBadgeType.Defaults.Video,
+        BoxBadgeType.Defaults.BuyMorePayLess(),
+        BoxBadgeType.Defaults.BuyTogether(),
+        BoxBadgeType.Defaults.Video(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -152,8 +154,8 @@ private fun Scaled3BadgesPreview() = PreviewTheme {
 @Composable
 private fun Scaled2BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.TodayDelivery,
-        BoxBadgeType.Defaults.Credit,
+        BoxBadgeType.Defaults.TodayDelivery(),
+        BoxBadgeType.Defaults.Credit(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
@@ -165,7 +167,7 @@ private fun Scaled2BadgesPreview() = PreviewTheme {
 @Composable
 private fun Scaled1BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.InfluencerChoice,
+        BoxBadgeType.Defaults.InfluencerChoice(),
     )
     BoxBadgeGroup(
         content = BoxBadgeGroupContent(list),
