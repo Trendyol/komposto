@@ -37,8 +37,7 @@ fun BoxBadgeGroup(
 
     val itemsToShow = remember(content) { content.list.take(maxBadgeCount) }
     val emptySlots = maxBadgeCount - itemsToShow.size
-    val defaultWidth = (itemAttributes.boxWidth * maxBadgeCount) +
-            (maxBadgeCount.dec() * attributes.space)
+    val defaultWidth = (itemAttributes.boxWidth * maxBadgeCount) + (maxBadgeCount.dec() * attributes.space)
 
     Row(
         modifier = modifier.then(Modifier.width(defaultWidth.dp)),
