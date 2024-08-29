@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.0] - 2024-08-26
+
+### Added
+
+- Introduced `CountDownTimer` composable to have a styled and custom sized component
+- Implemented `TrendyolCountdownTimerSize` for different sizes (`Large`, `Medium`, and `Small`)
+- Implemented `TrendyolCountdownTimerStyle` for different styles (`Primary`)
+
 ## [0.10.0] - 2024-08-22
 
 ### Added
