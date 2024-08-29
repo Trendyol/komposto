@@ -21,6 +21,8 @@ sealed interface KPCountdownTimerSize {
             get() = 6.dp
         override val horizontalPadding: Dp
             get() = 8.dp
+        override val verticalBoxPadding: Dp
+            get() = 2.dp
     }
 
     /**
@@ -32,6 +34,8 @@ sealed interface KPCountdownTimerSize {
             get() = 2.dp
         override val horizontalPadding: Dp
             get() = 4.dp
+        override val verticalBoxPadding: Dp
+            get() = 1.dp
     }
 
     /**
@@ -43,5 +47,7 @@ sealed interface KPCountdownTimerSize {
             get() = 1.dp
         override val horizontalPadding: Dp
             get() = 5.dp
+        override val verticalBoxPadding: Dp
+            get() = 0.dp
     }
 }

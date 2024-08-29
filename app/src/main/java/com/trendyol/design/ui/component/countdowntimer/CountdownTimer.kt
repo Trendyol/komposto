@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit
 @ShowkaseComposable(
     group = Group.TIMER,
     name = Component.COUNTDOWN_TIMER,
-    styleName = "1.Large"
+    styleName = "3.Large"
 )
 @Composable
 internal fun Countdown_Timer_Large() {
@@ -69,7 +69,7 @@ internal fun Countdown_Timer_Medium() {
 @ShowkaseComposable(
     group = Group.TIMER,
     name = Component.COUNTDOWN_TIMER,
-    styleName = "3.Small"
+    styleName = "1.Small"
 )
 @Composable
 internal fun Countdown_Timer_Small() {

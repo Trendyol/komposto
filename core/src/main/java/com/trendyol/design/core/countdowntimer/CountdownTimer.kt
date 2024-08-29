@@ -1,7 +1,8 @@
 package com.trendyol.design.core.countdowntimer
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
@@ -61,7 +62,6 @@ fun KPCountdownTimer(
         ) {
             Row(
                 modifier = modifier,
-                horizontalArrangement = Arrangement.spacedBy(4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 TimeBoxItem(
@@ -70,24 +70,28 @@ fun KPCountdownTimer(
                     time = hours,
                     backgroundAlpha = backgroundAlpha,
                 )
+                Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 Icon(
                     size = CustomIconSize,
                     imageVector = Icons.Fill.Colon,
                     contentDescription = Icons.Fill.Colon.name,
                     tint = style.backgroundColor
                 )
+                Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 TimeBoxItem(
                     style = style,
                     size = size,
                     time = minutes,
                     backgroundAlpha = backgroundAlpha,
                 )
+                Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 Icon(
                     size = CustomIconSize,
                     imageVector = Icons.Fill.Colon,
                     contentDescription = Icons.Fill.Colon.name,
                     tint = style.backgroundColor
                 )
+                Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 TimeBoxItem(
                     style = style,
                     size = size,

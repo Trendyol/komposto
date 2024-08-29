@@ -23,10 +23,10 @@ private fun ColonPreview() {
 val Icons.Fill.Colon: ImageVector by lazy {
     ImageVector.Builder(
         name = "Colon",
-        defaultWidth = 2.dp,
-        defaultHeight = 6.dp,
-        viewportWidth = 2f,
-        viewportHeight = 6f,
+        defaultWidth = 8.dp,
+        defaultHeight = 8.dp,
+        viewportWidth = 8F,
+        viewportHeight = 8F
     ).apply {
         path(
             fill = SolidColor(Color(0xFFFFFFFF)),
@@ -37,39 +37,19 @@ val Icons.Fill.Colon: ImageVector by lazy {
             strokeLineCap = StrokeCap.Butt,
             strokeLineJoin = StrokeJoin.Miter,
             strokeLineMiter = 1.0f,
-            pathFillType = PathFillType.NonZero
+            pathFillType = PathFillType.EvenOdd
         ) {
-            moveTo(1f, 0f)
-            horizontalLineTo(1f)
-            arcTo(1f, 1f, 0f, isMoreThanHalf = false, isPositiveArc = true, 2f, 1f)
-            verticalLineTo(1f)
-            arcTo(1f, 1f, 0f, isMoreThanHalf = false, isPositiveArc = true, 1f, 2f)
-            horizontalLineTo(1f)
-            arcTo(1f, 1f, 0f, isMoreThanHalf = false, isPositiveArc = true, 0f, 1f)
-            verticalLineTo(1f)
-            arcTo(1f, 1f, 0f, isMoreThanHalf = false, isPositiveArc = true, 1f, 0f)
+            moveTo(4f, 1f)
+            curveTo(3.4477f, 1f, 3f, 1.4477f, 3f, 2f)
+            curveTo(3f, 2.5523f, 3.4477f, 3f, 4f, 3f)
+            curveTo(4.5523f, 3f, 5f, 2.5523f, 5f, 2f)
+            curveTo(5f, 1.4477f, 4.5523f, 1f, 4f, 1f)
             close()
-        }
-        path(
-            fill = SolidColor(Color(0xFFFFFFFF)),
-            fillAlpha = 1.0f,
-            stroke = null,
-            strokeAlpha = 1.0f,
-            strokeLineWidth = 1.0f,
-            strokeLineCap = StrokeCap.Butt,
-            strokeLineJoin = StrokeJoin.Miter,
-            strokeLineMiter = 1.0f,
-            pathFillType = PathFillType.NonZero
-        ) {
-            moveTo(1f, 4f)
-            horizontalLineTo(1f)
-            arcTo(1f, 1f, 0f, isMoreThanHalf = false, isPositiveArc = true, 2f, 5f)
-            verticalLineTo(5f)
-            arcTo(1f, 1f, 0f, isMoreThanHalf = false, isPositiveArc = true, 1f, 6f)
-            horizontalLineTo(1f)
-            arcTo(1f, 1f, 0f, isMoreThanHalf = false, isPositiveArc = true, 0f, 5f)
-            verticalLineTo(5f)
-            arcTo(1f, 1f, 0f, isMoreThanHalf = false, isPositiveArc = true, 1f, 4f)
+            moveTo(4f, 5f)
+            curveTo(3.4477f, 5f, 3f, 5.4477f, 3f, 6f)
+            curveTo(3f, 6.5523f, 3.4477f, 7f, 4f, 7f)
+            curveTo(4.5523f, 7f, 5f, 6.5523f, 5f, 6f)
+            curveTo(5f, 5.4477f, 4.5523f, 5f, 4f, 5f)
             close()
         }
     }.build()
