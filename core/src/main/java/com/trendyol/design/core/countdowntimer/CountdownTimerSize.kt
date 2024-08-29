@@ -24,4 +24,11 @@ interface CountdownTimerSize {
      * @return a `Dp` value representing the horizontal padding.
      */
     val horizontalPadding: Dp
+
+    /**
+     * Retrieves the horizontal padding for the countdown timer box and separator icon.
+     *
+     * @return a `Dp` value representing the horizontal padding.
+     */
+    val verticalBoxPadding: Dp
 }
