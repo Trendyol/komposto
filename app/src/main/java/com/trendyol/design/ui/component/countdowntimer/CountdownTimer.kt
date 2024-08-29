@@ -1,8 +1,7 @@
 package com.trendyol.design.ui.component.countdowntimer
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -22,22 +21,16 @@ import java.util.concurrent.TimeUnit
 @ShowkaseComposable(
     group = Group.TIMER,
     name = Component.COUNTDOWN_TIMER,
-    styleName = "1.Primary_Large"
+    styleName = "1.Large"
 )
 @Composable
 internal fun Countdown_Timer_Large() {
     TrendyolTheme {
-        Column(
+        Box(
             modifier = Modifier
                 .background(TrendyolDesign.colors.colorPrimary)
                 .padding(4.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            KPCountdownTimer(
-                style = KPCountdownTimerStyle.Primary,
-                size = KPCountdownTimerSize.Large,
-                endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
-            )
             KPCountdownTimer(
                 style = KPCountdownTimerStyle.Primary,
                 size = KPCountdownTimerSize.Large,
@@ -52,22 +45,16 @@ internal fun Countdown_Timer_Large() {
 @ShowkaseComposable(
     group = Group.TIMER,
     name = Component.COUNTDOWN_TIMER,
-    styleName = "2.Primary_Medium"
+    styleName = "2.Medium"
 )
 @Composable
 internal fun Countdown_Timer_Medium() {
     TrendyolTheme {
-        Column(
+        Box(
             modifier = Modifier
                 .background(TrendyolDesign.colors.colorPrimary)
                 .padding(4.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            KPCountdownTimer(
-                style = KPCountdownTimerStyle.Primary,
-                size = KPCountdownTimerSize.Medium,
-                endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
-            )
             KPCountdownTimer(
                 style = KPCountdownTimerStyle.Primary,
                 size = KPCountdownTimerSize.Medium,
@@ -82,22 +69,16 @@ internal fun Countdown_Timer_Medium() {
 @ShowkaseComposable(
     group = Group.TIMER,
     name = Component.COUNTDOWN_TIMER,
-    styleName = "3.Primary_Small"
+    styleName = "3.Small"
 )
 @Composable
 internal fun Countdown_Timer_Small() {
     TrendyolTheme {
-        Column(
+        Box(
             modifier = Modifier
                 .background(TrendyolDesign.colors.colorPrimary)
                 .padding(4.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            KPCountdownTimer(
-                style = KPCountdownTimerStyle.Primary,
-                size = KPCountdownTimerSize.Small,
-                endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
-            )
             KPCountdownTimer(
                 style = KPCountdownTimerStyle.Primary,
                 size = KPCountdownTimerSize.Small,

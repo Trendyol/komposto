@@ -13,8 +13,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.icon.Icon
+import com.trendyol.design.core.icon.IconSize
+import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.icons.fill.Colon
 import com.trendyol.design.core.preview.PreviewTheme
 import java.util.concurrent.TimeUnit
 
@@ -65,14 +70,24 @@ fun KPCountdownTimer(
                     time = hours,
                     backgroundAlpha = backgroundAlpha,
                 )
-                TimeBoxSeparator(style = style)
+                Icon(
+                    size = CustomIconSize,
+                    imageVector = Icons.Fill.Colon,
+                    contentDescription = Icons.Fill.Colon.name,
+                    tint = style.backgroundColor
+                )
                 TimeBoxItem(
                     style = style,
                     size = size,
                     time = minutes,
                     backgroundAlpha = backgroundAlpha,
                 )
-                TimeBoxSeparator(style = style)
+                Icon(
+                    size = CustomIconSize,
+                    imageVector = Icons.Fill.Colon,
+                    contentDescription = Icons.Fill.Colon.name,
+                    tint = style.backgroundColor
+                )
                 TimeBoxItem(
                     style = style,
                     size = size,
@@ -82,6 +97,12 @@ fun KPCountdownTimer(
             }
         }
     }
+}
+
+private object CustomIconSize : IconSize {
+
+    override val dp: Dp
+        get() = 8.dp
 }
 
 @Preview(showBackground = true, backgroundColor = 0xFF000000)
