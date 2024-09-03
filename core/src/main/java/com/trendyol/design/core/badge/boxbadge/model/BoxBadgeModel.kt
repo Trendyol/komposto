@@ -5,7 +5,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 
 @Immutable
-data class BoxBadgeModel(
+internal data class BoxBadgeModel(
     val title: String,
     val backgroundColor: Color,
     val icon: ImageVector,

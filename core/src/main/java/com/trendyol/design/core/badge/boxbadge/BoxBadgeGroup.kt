@@ -10,40 +10,45 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeGroupAttributes
-import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeGroupContent
+import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeAttributes
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
+import kotlinx.collections.immutable.PersistentList
+import kotlinx.collections.immutable.toPersistentList
 
 /**
  * Represents a horizontal list of badges displayed.
  *
- * @param content List of badges to be displayed.
+ * @param badges List of badges to be displayed.
  * @param modifier Modifier to be applied to the list.
  * BadgeGroup is rendered with its default width, but scales to the specified width
  * when a width-related modifier (e.g., fillMaxWidth, width, etc) is applied.
- * @param attributes Configuration options for the badge list,
- * including max badge count, spacing, and item attributes.
+ * @param maxBadgeCount Specifies the maximum number of badges to display in the list.
+ * @param space Determines the space between badges in the list, measured in Dp.
+ * @param itemAttributes Defines the styling attributes for badge items, including
+ * properties like padding, icon size, and border radius, etc.
  */
 @Composable
 fun BoxBadgeGroup(
-    content: BoxBadgeGroupContent,
+    badges: PersistentList<BoxBadgeType>,
     modifier: Modifier = Modifier,
-    attributes: BoxBadgeGroupAttributes = BoxBadgeGroupAttributes(),
-) = with(attributes) {
-
-    val itemsToShow = remember(content) { content.list.take(maxBadgeCount) }
+    itemAttributes: BoxBadgeAttributes = BoxBadgeAttributes(),
+    maxBadgeCount: Int = 4,
+    space: Dp = 4.dp,
+) {
+    val itemsToShow = remember(badges) { badges.take(maxBadgeCount) }
     val emptySlots = maxBadgeCount - itemsToShow.size
-    val defaultWidth = (itemAttributes.boxWidth * maxBadgeCount) + (maxBadgeCount.dec() * attributes.space)
+    val defaultWidth = (itemAttributes.boxWidth.value * maxBadgeCount) + (maxBadgeCount.dec() * space.value)
 
     Row(
         modifier = modifier.then(Modifier.width(defaultWidth.dp)),
-        horizontalArrangement = Arrangement.spacedBy(attributes.space.dp),
+        horizontalArrangement = Arrangement.spacedBy(space),
     ) {
-        val ratio = itemAttributes.boxWidth.toFloat() / itemAttributes.boxHeight.toFloat()
+        val ratio = itemAttributes.boxWidth.value / itemAttributes.boxHeight.value
         val itemModifier = Modifier
             .weight(1f)
             .aspectRatio(ratio)
@@ -76,7 +81,7 @@ private fun Default4BadgesPreview() = PreviewTheme {
         BoxBadgeType.Defaults.FastDelivery(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
     )
 }
 
@@ -89,7 +94,7 @@ private fun Default3BadgesPreview() = PreviewTheme {
         BoxBadgeType.Defaults.Video(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list)
+        badges = list.toPersistentList()
     )
 }
 
@@ -101,7 +106,7 @@ private fun Default2BadgesPreview() = PreviewTheme {
         BoxBadgeType.Defaults.Credit(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
     )
 }
 
@@ -112,7 +117,7 @@ private fun Default1BadgesPreview() = PreviewTheme {
         BoxBadgeType.Defaults.InfluencerChoice(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
     )
 }
 
@@ -130,7 +135,7 @@ private fun Scaled4BadgesPreview() = PreviewTheme {
         BoxBadgeType.Defaults.FastDelivery(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
 }
@@ -144,7 +149,7 @@ private fun Scaled3BadgesPreview() = PreviewTheme {
         BoxBadgeType.Defaults.Video(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
 }
@@ -157,7 +162,7 @@ private fun Scaled2BadgesPreview() = PreviewTheme {
         BoxBadgeType.Defaults.Credit(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
 }
@@ -169,7 +174,7 @@ private fun Scaled1BadgesPreview() = PreviewTheme {
         BoxBadgeType.Defaults.InfluencerChoice(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
 }

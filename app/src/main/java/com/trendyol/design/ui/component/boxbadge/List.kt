@@ -7,13 +7,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.badge.boxbadge.BoxBadgeGroup
 import com.trendyol.design.core.badge.boxbadge.BoxBadgeType
-import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeGroupContent
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.ui.theme.TrendyolTheme
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.theme.TrendyolDesign
+import kotlinx.collections.immutable.toPersistentList
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
@@ -34,7 +34,7 @@ internal fun Default_BoxBadgeGroup_4() = TrendyolTheme {
         BoxBadgeType.Defaults.FastDelivery(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
     )
 }
 
@@ -57,7 +57,7 @@ internal fun Scaled_BoxBadgeGroup_4() = TrendyolTheme {
         BoxBadgeType.Defaults.FastDelivery(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
 }
@@ -76,7 +76,7 @@ internal fun Default_BoxBadgeGroup_3() = TrendyolTheme {
         BoxBadgeType.Defaults.Video(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
     )
 }
 
@@ -94,7 +94,7 @@ internal fun Scaled_BoxBadgeGroup_3() = TrendyolTheme {
         BoxBadgeType.Defaults.Video(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
 }
@@ -112,7 +112,7 @@ internal fun Default_BoxBadgeGroup_2() = TrendyolTheme {
         BoxBadgeType.Defaults.Credit(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
     )
 }
 
@@ -129,7 +129,7 @@ internal fun Scaled_BoxBadgeGroup_2() = TrendyolTheme {
         BoxBadgeType.Defaults.Credit(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
 }
@@ -146,7 +146,7 @@ internal fun Default_BoxBadgeGroup_1() = TrendyolTheme {
         BoxBadgeType.Defaults.InfluencerChoice(),
     )
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
     )
 }
 
@@ -163,7 +163,7 @@ internal fun Scaled_BoxBadgeGroup_1() = TrendyolTheme {
     )
 
     BoxBadgeGroup(
-        content = BoxBadgeGroupContent(list),
+        badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
 }

@@ -13,8 +13,8 @@ import com.trendyol.design.core.badge.boxbadge.BoxBadge
 /**
  * Customizable styling attributes of the [BoxBadge] component
  *
- * @param boxWidth The width of the card.
- * @param boxHeight The height of the card.
+ * @param boxWidth The width of the card in Dp.
+ * @param boxHeight The height of the card in Dp.
  * @param cornerRadius The corner radius of the card, which determines how rounded the corners will be.
  * @param verticalPadding The amount of vertical padding inside the card, adding space above and below the content.
  * @param horizontalPadding The amount of horizontal padding inside the card, adding space to the sides of the content.
@@ -26,18 +26,24 @@ import com.trendyol.design.core.badge.boxbadge.BoxBadge
  */
 @Immutable
 data class BoxBadgeAttributes(
-    val boxWidth: Int = 34,
-    val boxHeight: Int = 40,
+    val boxWidth: Dp = 34.dp,
+    val boxHeight: Dp = 40.dp,
     val cornerRadius: Dp = 4.dp,
     val verticalPadding: Dp = 0.dp,
     val horizontalPadding: Dp = 0.dp,
     val elevation: Dp = 0.dp,
     val iconSize: IconSize = BoxBadgeIconSize,
     val line: Int = 2,
-    val fontColor: Color = Color(color = 0xFF333333),
+    val fontColor: Color? = null,
     val textStyle: TextStyle? = null,
 ) {
-    val defaultTextStyle: TextStyle
-        @Composable
-        get() = TrendyolDesign.typography.overLineMedium
+    @Composable
+    fun textStyle(): TextStyle {
+        return textStyle ?: TrendyolDesign.typography.overLineMedium
+    }
+
+    @Composable
+    fun fontColor(): Color {
+        return fontColor ?: TrendyolDesign.colors.colorOnSurfaceVariant3
+    }
 }
