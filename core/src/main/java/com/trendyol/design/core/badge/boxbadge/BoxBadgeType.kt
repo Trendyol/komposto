@@ -13,7 +13,7 @@ import com.trendyol.design.core.icon.icons.fill.Campaign
 import com.trendyol.design.core.icon.icons.fill.Percentage
 import com.trendyol.design.core.icon.icons.fill.PlayGradient
 
-sealed class BoxBadgeType(val badge: BoxBadgeModel) {
+sealed class BoxBadgeType(internal val badge: BoxBadgeModel) {
 
     data class Dynamic(
         val title: String,
