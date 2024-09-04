@@ -25,27 +25,27 @@ import com.trendyol.design.core.preview.PreviewTheme
 /**
  * Represents a single badge based on the provided badge type and attributes.
  *
- * @param boxBadgeType The type of badge to display, which determines the icon, title, and background.
+ * @param badge The type of badge to display, which determines the icon, title, and background.
  * @param modifier Modifier to be applied to the badge.
  * @param attributes Configuration options for the badge's appearance,
  * including size, padding, and text style.
  */
 @Composable
-fun BoxBadge(
-    boxBadgeType: BoxBadgeType,
+fun KPBoxBadge(
+    badge: BoxBadgeType,
     modifier: Modifier = Modifier,
     attributes: BoxBadgeAttributes = BoxBadgeAttributes(),
-) = with(boxBadgeType) {
+) {
     Card(
         modifier = modifier,
         shape = RoundedCornerShape(attributes.cornerRadius),
         elevation = attributes.elevation,
     ) {
         Column(
-            modifier = modifier
+            modifier = Modifier
                 .width(attributes.boxWidth)
                 .height(attributes.boxHeight)
-                .background(color = badge.backgroundColor)
+                .background(color = badge.boxBackgroundColor)
                 .padding(
                     vertical = attributes.verticalPadding,
                     horizontal = attributes.horizontalPadding,
@@ -56,7 +56,7 @@ fun BoxBadge(
             Icon(
                 imageVector = badge.icon,
                 size = attributes.iconSize,
-                tint = badge.iconTint,
+                tint = badge.iconTintColor,
             )
             Text(
                 modifier = Modifier.fillMaxWidth(),
@@ -73,10 +73,10 @@ fun BoxBadge(
 
 @Preview(showBackground = false)
 @Composable
-private fun DynamicBoxBadgePreview() = PreviewTheme {
-    BoxBadge(
-        BoxBadgeType.Dynamic(
-            title = "Dynamic Badge",
+private fun CustomBoxBadgePreview() = PreviewTheme {
+    KPBoxBadge(
+        KPBoxBadgeType.Custom(
+            title = "Custom Badge",
             backgroundColor = TrendyolDesign.colors.colorPinkVariant2,
             icon = Icons.Fill.Help,
         )
@@ -86,53 +86,53 @@ private fun DynamicBoxBadgePreview() = PreviewTheme {
 @Preview(showBackground = false)
 @Composable
 private fun CouponBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.Coupon())
+    KPBoxBadge(KPBoxBadgeType.Defaults.Coupon())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun CargoFreeBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.FreeDelivery())
+    KPBoxBadge(KPBoxBadgeType.Defaults.FreeDelivery())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun FastDeliveryBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.FastDelivery())
+    KPBoxBadge(KPBoxBadgeType.Defaults.FastDelivery())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun BuyMorePayLessBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.BuyMorePayLess())
+    KPBoxBadge(KPBoxBadgeType.Defaults.BuyMorePayLess())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun BuyTogetherBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.BuyTogether())
+    KPBoxBadge(KPBoxBadgeType.Defaults.BuyTogether())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun VideoBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.Video())
+    KPBoxBadge(KPBoxBadgeType.Defaults.Video())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun TodayDeliveryBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.TodayDelivery())
+    KPBoxBadge(KPBoxBadgeType.Defaults.TodayDelivery())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun CreditBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.Credit())
+    KPBoxBadge(KPBoxBadgeType.Defaults.Credit())
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun InfluencerChoiceBoxBadgePreview() = PreviewTheme {
-    BoxBadge(BoxBadgeType.Defaults.InfluencerChoice())
+    KPBoxBadge(KPBoxBadgeType.Defaults.InfluencerChoice())
 }

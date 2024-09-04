@@ -8,10 +8,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.IconSize
 import com.trendyol.theme.TrendyolDesign
-import com.trendyol.design.core.badge.boxbadge.BoxBadge
+import com.trendyol.design.core.badge.boxbadge.KPBoxBadge
 
 /**
- * Customizable styling attributes of the [BoxBadge] component
+ * Customizable styling attributes of the [KPBoxBadge] component
  *
  * @param boxWidth The width of the card in Dp.
  * @param boxHeight The height of the card in Dp.

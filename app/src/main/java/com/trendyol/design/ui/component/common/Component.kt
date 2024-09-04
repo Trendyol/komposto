@@ -70,7 +70,7 @@ object Component {
 
     const val COUNTDOWN_TIMER = "Countdown Timer"
 
-    const val BOX_BADGE_DYNAMIC = "Dynamic"
+    const val BOX_BADGE_CUSTOM = "Custom"
     const val BOX_BADGE_COUPON = "Coupon"
     const val BOX_BADGE_FREE_DELIVERY = "FreeDelivery"
     const val BOX_BADGE_FAST_DELIVERY = "FastDelivery"
