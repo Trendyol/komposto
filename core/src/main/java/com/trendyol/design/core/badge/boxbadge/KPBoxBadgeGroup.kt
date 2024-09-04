@@ -33,7 +33,7 @@ import kotlinx.collections.immutable.toPersistentList
  * properties like padding, icon size, and border radius, etc.
  */
 @Composable
-fun BoxBadgeGroup(
+fun KPBoxBadgeGroup(
     badges: PersistentList<BoxBadgeType>,
     modifier: Modifier = Modifier,
     itemAttributes: BoxBadgeAttributes = BoxBadgeAttributes(),
@@ -54,8 +54,8 @@ fun BoxBadgeGroup(
             .aspectRatio(ratio)
 
         itemsToShow.forEach { item ->
-            BoxBadge(
-                boxBadgeType = item,
+            KPBoxBadge(
+                badge = item,
                 modifier = itemModifier,
                 attributes = itemAttributes,
             )
@@ -71,16 +71,16 @@ fun BoxBadgeGroup(
 @Composable
 private fun Default4BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Dynamic(
-            title = "Dynamic Badge",
+        KPBoxBadgeType.Custom(
+            title = "Custom Badge",
             backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
             icon = Icons.Fill.Help,
         ),
-        BoxBadgeType.Defaults.Coupon(),
-        BoxBadgeType.Defaults.FreeDelivery(),
-        BoxBadgeType.Defaults.FastDelivery(),
+        KPBoxBadgeType.Defaults.Coupon(),
+        KPBoxBadgeType.Defaults.FreeDelivery(),
+        KPBoxBadgeType.Defaults.FastDelivery(),
     )
-    BoxBadgeGroup(
+    KPBoxBadgeGroup(
         badges = list.toPersistentList(),
     )
 }
@@ -89,11 +89,11 @@ private fun Default4BadgesPreview() = PreviewTheme {
 @Composable
 private fun Default3BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.BuyMorePayLess(),
-        BoxBadgeType.Defaults.BuyTogether(),
-        BoxBadgeType.Defaults.Video(),
+        KPBoxBadgeType.Defaults.BuyMorePayLess(),
+        KPBoxBadgeType.Defaults.BuyTogether(),
+        KPBoxBadgeType.Defaults.Video(),
     )
-    BoxBadgeGroup(
+    KPBoxBadgeGroup(
         badges = list.toPersistentList()
     )
 }
@@ -102,10 +102,10 @@ private fun Default3BadgesPreview() = PreviewTheme {
 @Composable
 private fun Default2BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.TodayDelivery(),
-        BoxBadgeType.Defaults.Credit(),
+        KPBoxBadgeType.Defaults.TodayDelivery(),
+        KPBoxBadgeType.Defaults.Credit(),
     )
-    BoxBadgeGroup(
+    KPBoxBadgeGroup(
         badges = list.toPersistentList(),
     )
 }
@@ -114,9 +114,9 @@ private fun Default2BadgesPreview() = PreviewTheme {
 @Composable
 private fun Default1BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.InfluencerChoice(),
+        KPBoxBadgeType.Defaults.InfluencerChoice(),
     )
-    BoxBadgeGroup(
+    KPBoxBadgeGroup(
         badges = list.toPersistentList(),
     )
 }
@@ -125,16 +125,16 @@ private fun Default1BadgesPreview() = PreviewTheme {
 @Composable
 private fun Scaled4BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Dynamic(
-            title = "Dynamic Badge",
+        KPBoxBadgeType.Custom(
+            title = "Custom Badge",
             backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
             icon = Icons.Fill.Help,
         ),
-        BoxBadgeType.Defaults.Coupon(),
-        BoxBadgeType.Defaults.FreeDelivery(),
-        BoxBadgeType.Defaults.FastDelivery(),
+        KPBoxBadgeType.Defaults.Coupon(),
+        KPBoxBadgeType.Defaults.FreeDelivery(),
+        KPBoxBadgeType.Defaults.FastDelivery(),
     )
-    BoxBadgeGroup(
+    KPBoxBadgeGroup(
         badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
@@ -144,11 +144,11 @@ private fun Scaled4BadgesPreview() = PreviewTheme {
 @Composable
 private fun Scaled3BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.BuyMorePayLess(),
-        BoxBadgeType.Defaults.BuyTogether(),
-        BoxBadgeType.Defaults.Video(),
+        KPBoxBadgeType.Defaults.BuyMorePayLess(),
+        KPBoxBadgeType.Defaults.BuyTogether(),
+        KPBoxBadgeType.Defaults.Video(),
     )
-    BoxBadgeGroup(
+    KPBoxBadgeGroup(
         badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
@@ -158,10 +158,10 @@ private fun Scaled3BadgesPreview() = PreviewTheme {
 @Composable
 private fun Scaled2BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.TodayDelivery(),
-        BoxBadgeType.Defaults.Credit(),
+        KPBoxBadgeType.Defaults.TodayDelivery(),
+        KPBoxBadgeType.Defaults.Credit(),
     )
-    BoxBadgeGroup(
+    KPBoxBadgeGroup(
         badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
@@ -171,9 +171,9 @@ private fun Scaled2BadgesPreview() = PreviewTheme {
 @Composable
 private fun Scaled1BadgesPreview() = PreviewTheme {
     val list = listOf(
-        BoxBadgeType.Defaults.InfluencerChoice(),
+        KPBoxBadgeType.Defaults.InfluencerChoice(),
     )
-    BoxBadgeGroup(
+    KPBoxBadgeGroup(
         badges = list.toPersistentList(),
         modifier = Modifier.fillMaxWidth(),
     )
