@@ -7,6 +7,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.0] - 2024-08-26
+
+### Added
+
+- Introduced `CountDownTimer` composable to have a styled and custom sized component
+- Implemented `TrendyolCountdownTimerSize` for different sizes (`Large`, `Medium`, and `Small`)
+- Implemented `TrendyolCountdownTimerStyle` for different styles (`Primary`)
+
+## [0.10.0] - 2024-08-22
+
+### Added
+
+- Introduced `SearchBar` composable to facilitate customizable search bar components
+- Implemented `TrendyolSearchBarSize` for defining different sizes (`Small` and `Large`)
+  of the search bar.
+- Implemented `TrendyolSearchBarStyle` for defining different styles (`Outline` and `Filled`)
+  of the search bar.
+- Added `Search` icon as the leading icon in the `SearchBar` component.
+- Added `Cancel` icon as the trailing icon in the `SearchBar` component.
+
+### Fixed
+
+- Fixed issue with state updates not being applied in input fields.
+
+### Changed
+
+- Updated `ArrowDown` icon preview naming.
+
+## [0.9.0] - 2024-08-19
+
+### Added
+
+- Introduced `RatingBar` composable to facilitate customizable rating bar components
+- Implemented `TrendyolRatingBarSize` for defining different sizes (`Small` and `Medium`)
+  of the rating bar.
+- Added `Star` icon to represent the rating in the `RatingBar` component.
+
 ### Added
 - Added Kotlin's binary-compatibility-validator in order to validate public APIs
 - Enabled explicitApi in order to prevent publishing wrong APIs to public

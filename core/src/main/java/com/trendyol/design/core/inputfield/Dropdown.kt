@@ -6,10 +6,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
@@ -54,8 +50,6 @@ public fun Dropdown(
     colors: TextFieldColors = style.outlinedTextFieldColors,
     onClicked: () -> Unit,
 ) {
-    var text by rememberSaveable { mutableStateOf(value) }
-
     Column(modifier = modifier) {
         TrendyolOutlinedTextField(
             modifier = Modifier
@@ -63,7 +57,7 @@ public fun Dropdown(
                     enabled = enabled,
                     onClick = onClicked,
                 ),
-            value = text,
+            value = value,
             label = if (!label.isNullOrBlank()) {
                 {
                     Text(
@@ -73,9 +67,7 @@ public fun Dropdown(
                     )
                 }
             } else null,
-            onValueChange = { selected ->
-                text = selected
-            },
+            onValueChange = {},
             colors = colors,
             isError = isError,
             isFilled = style is TrendyolDropdownStyle.Filled,

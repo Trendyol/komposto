@@ -21,7 +21,9 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.takeOrElse
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldDecorationBox
 import com.trendyol.theme.TrendyolDesign
@@ -94,7 +96,7 @@ internal fun TrendyolOutlinedTextField(
     isFilled: Boolean = false,
     isError: Boolean = false,
     visualTransformation: VisualTransformation = VisualTransformation.None,
-    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+    keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
     keyboardActions: KeyboardActions = KeyboardActions.Default,
     singleLine: Boolean = false,
     maxLines: Int = if (singleLine) 1 else Int.MAX_VALUE,
@@ -107,7 +109,9 @@ internal fun TrendyolOutlinedTextField(
         bottom = 0.dp,
         start = 12.dp,
         end = 12.dp
-    )
+    ),
+    minWidth: Dp = 280.dp,
+    minHeight: Dp = 44.dp,
 ) {
     // If color is not provided via the text style, use content color as a default
     val textColor = textStyle.color.takeOrElse {
@@ -131,8 +135,8 @@ internal fun TrendyolOutlinedTextField(
                 shape = shape
             )
             .defaultMinSize(
-                minWidth = TextFieldDefaults.MinWidth,
-                minHeight = 44.dp
+                minWidth = minWidth,
+                minHeight = minHeight,
             ),
         onValueChange = onValueChange,
         enabled = enabled,
