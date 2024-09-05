@@ -6,6 +6,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.group
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
@@ -16,26 +17,21 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun ArrowDownPreview() {
-    Icon(imageVector = Icons.Fill.ArrowDown, size = TrendyolIconSize.Medium)
+private fun CancelPreview() {
+    Icon(imageVector = Icons.Fill.Cancel, size = TrendyolIconSize.Medium)
 }
 
-private var _ArrowDown: ImageVector? = null
-
-public val Icons.Fill.ArrowDown: ImageVector
-    get() {
-        if (_ArrowDown != null) {
-            return _ArrowDown!!
-        }
-        _ArrowDown = ImageVector.Builder(
-            name = "ArrowDown",
-            defaultWidth = 12.dp,
-            defaultHeight = 6.dp,
-            viewportWidth = 12f,
-            viewportHeight = 6f
-        ).apply {
+public val Icons.Fill.Cancel: ImageVector by lazy {
+    ImageVector.Builder(
+        name = "Cancel",
+        defaultWidth = 16.dp,
+        defaultHeight = 16.dp,
+        viewportWidth = 16f,
+        viewportHeight = 16f
+    ).apply {
+        group {
             path(
-                fill = SolidColor(Color(0xFF999999)),
+                fill = SolidColor(Color(0xFF333333)),
                 fillAlpha = 1.0f,
                 stroke = null,
                 strokeAlpha = 1.0f,
@@ -45,12 +41,21 @@ public val Icons.Fill.ArrowDown: ImageVector
                 strokeLineMiter = 1.0f,
                 pathFillType = PathFillType.EvenOdd
             ) {
-                moveTo(0f, 0f)
-                lineTo(6f, 6f)
-                lineTo(12f, 0f)
-                horizontalLineTo(0f)
+                moveTo(14f, 3.2f)
+                lineTo(12.8f, 2f)
+                lineTo(8f, 6.8f)
+                lineTo(3.2f, 2f)
+                lineTo(2f, 3.2f)
+                lineTo(6.8f, 8f)
+                lineTo(2f, 12.8f)
+                lineTo(3.2f, 14f)
+                lineTo(8f, 9.2f)
+                lineTo(12.8f, 14f)
+                lineTo(14f, 12.8f)
+                lineTo(9.2f, 8f)
+                lineTo(14f, 3.2f)
                 close()
             }
-        }.build()
-        return _ArrowDown!!
-    }
+        }
+    }.build()
+}

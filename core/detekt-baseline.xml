@@ -13,6 +13,7 @@
     <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:381</ID>
     <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldImpl.kt:382</ID>
     <ID>Indentation:com.trendyol.design.core.inputfield.impl.TrendyolTextFieldImpl.kt:100</ID>
+    <ID>LongParameterList:RatingBar.kt$( itemCount: Int, painter: Painter, rating: Float, filledColor: Color, emptyColor: Color, space: Float, )</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( height: Int, width: Int, leadingPlaceable: Placeable?, trailingPlaceable: Placeable?, textFieldPlaceable: Placeable, labelPlaceable: Placeable?, placeholderPlaceable: Placeable?, borderPlaceable: Placeable, animationProgress: Float, singleLine: Boolean, density: Float, layoutDirection: LayoutDirection, paddingValues: PaddingValues )</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( leadingPlaceableHeight: Int, trailingPlaceableHeight: Int, textFieldPlaceableHeight: Int, labelPlaceableHeight: Int, placeholderPlaceableHeight: Int, animationProgress: Float, constraints: Constraints, density: Float, paddingValues: PaddingValues )</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( leadingPlaceableWidth: Int, trailingPlaceableWidth: Int, textFieldPlaceableWidth: Int, labelPlaceableWidth: Int, placeholderPlaceableWidth: Int, animationProgress: Float, constraints: Constraints, density: Float, paddingValues: PaddingValues, )</ID>
@@ -28,6 +29,7 @@
     <ID>MagicNumber:TrendyolRadioButtonSize.kt$TrendyolRadioButtonSize.Small$1.6</ID>
     <ID>MagicNumber:TrendyolRadioButtonSize.kt$TrendyolRadioButtonSize.XSmall$1.2</ID>
     <ID>MatchingDeclarationName:TrendyolTextFieldImpl.kt$TrendyolTextFieldType</ID>
+    <ID>ModifierComposable:RatingBar.kt$mirror</ID>
     <ID>ModifierMissing:CheckToolbarLayoutIds.kt$CheckToolbarLayoutIds</ID>
     <ID>ModifierWithoutDefault:TrendyolOutlinedTextFieldImpl.kt$modifier</ID>
     <ID>ModifierWithoutDefault:TrendyolTextField.kt$modifier</ID>
