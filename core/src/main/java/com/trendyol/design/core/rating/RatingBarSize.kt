@@ -16,22 +16,22 @@ import androidx.compose.ui.unit.DpSize
  * @property cameraIconSize The size of the camera icon, if displayed, defined as a DpSize.
  * @property textSize The text style to be applied to the rating value and review count text.
  */
-interface RatingBarSize {
+public interface RatingBarSize {
 
     /**
      * The size of each star icon in the rating bar.
      */
-    val starIconSize: Dp
+    public val starIconSize: Dp
 
     /**
      * The size of the camera icon, if displayed, defined as a DpSize.
      */
     @get:Composable
-    val cameraIconSize: DpSize
+    public val cameraIconSize: DpSize
 
     /**
      * The text style to be applied to the rating value and review count text.
      */
     @get:Composable
-    val textSize: TextStyle
+    public val textSize: TextStyle
 }

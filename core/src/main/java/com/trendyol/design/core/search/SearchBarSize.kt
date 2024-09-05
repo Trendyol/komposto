@@ -10,11 +10,11 @@ import androidx.compose.ui.unit.Dp
  * @property barHeight Height of the search bar.
  * @property trailingIconPadding Icon padding of the search bar trailing icon.
  */
-interface SearchBarSize {
+public interface SearchBarSize {
 
     @get:Composable
-    val barHeight: Dp
+    public val barHeight: Dp
 
     @get:Composable
-    val trailingIconPadding: PaddingValues
+    public val trailingIconPadding: PaddingValues
 }

@@ -14,9 +14,9 @@ import com.trendyol.theme.TrendyolDesign
  * `TrendyolRatingBarSize`  implements the `RatingBarStyle` interface and offers
  * predefined styles (`Small` and `Medium`) according to Trendyol's design guidelines.
  */
-sealed interface TrendyolRatingBarSize : RatingBarSize {
+public sealed interface TrendyolRatingBarSize : RatingBarSize {
 
-    data object Small : TrendyolRatingBarSize {
+    public data object Small : TrendyolRatingBarSize {
         override val starIconSize: Dp
             get() = 10.dp
         override val cameraIconSize: DpSize
@@ -27,7 +27,7 @@ sealed interface TrendyolRatingBarSize : RatingBarSize {
             get() = TrendyolDesign.typography.body2ColorOnSurfaceVariant3
     }
 
-    data object Medium : TrendyolRatingBarSize {
+    public data object Medium : TrendyolRatingBarSize {
         override val starIconSize: Dp
             get() = 12.dp
         override val cameraIconSize: DpSize
