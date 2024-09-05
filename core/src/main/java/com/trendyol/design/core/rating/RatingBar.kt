@@ -68,7 +68,7 @@ import kotlin.math.floor
  * @param filledColor The color of the filled stars.
  */
 @Composable
-fun RatingBar(
+public fun RatingBar(
     rating: Float,
     size: RatingBarSize,
     modifier: Modifier = Modifier,
