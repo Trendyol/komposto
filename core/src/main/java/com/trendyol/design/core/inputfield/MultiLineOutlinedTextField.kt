@@ -23,8 +23,8 @@ import com.trendyol.theme.TrendyolDesign
  * @param style Style configuration for the TextField. This should be an object implementing the
  *              OutlinedTextFieldStyle interface.
  * @param value The initial value for the TextField.
- * @param maxChar Maximum number of characters allowed in the TextField.
  * @param modifier Modifier used to shape the TextField.
+ * @param maxChar Maximum number of characters allowed in the TextField.
  * @param label The label text to display above the TextField.
  * @param errorLabel The error message to display below the TextField when there is an error.
  * @param isError Indicates whether the TextField is in an error state.
@@ -38,8 +38,8 @@ import com.trendyol.theme.TrendyolDesign
 fun MultiLineOutlineTextField(
     style: OutlinedTextFieldStyle,
     value: String,
-    maxChar: Int,
     modifier: Modifier = Modifier,
+    maxChar: Int? = null,
     label: String? = null,
     placeholder: String? = null,
     errorLabel: String? = null,
@@ -50,7 +50,7 @@ fun MultiLineOutlineTextField(
 ) {
     Column(modifier = modifier.width(IntrinsicSize.Max)) {
         TrendyolOutlinedTextField(
-            modifier = Modifier,
+            modifier = Modifier.fillMaxWidth(),
             value = value,
             label = if (!label.isNullOrBlank()) {
                 {
@@ -101,11 +101,13 @@ fun MultiLineOutlineTextField(
                 Spacer(modifier = Modifier.weight(1f))
             }
 
-            Text(
-                text = "${value.length} / $maxChar",
-                style = if (isError) TrendyolDesign.typography.body1ColorWarning
-                else TrendyolDesign.typography.body1ColorOnSurfaceVariant1
-            )
+            if (maxChar != null) {
+                Text(
+                    text = "${value.length} / $maxChar",
+                    style = if (isError) TrendyolDesign.typography.body1ColorWarning
+                    else TrendyolDesign.typography.body1ColorOnSurfaceVariant1
+                )
+            }
         }
     }
 }
