@@ -606,7 +606,7 @@ public abstract interface class com/trendyol/design/core/inputfield/DropdownStyl
 }
 
 public final class com/trendyol/design/core/inputfield/MultiLineOutlinedTextFieldKt {
-	public static final fun MultiLineOutlineTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;ILandroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;III)V
+	public static final fun MultiLineOutlineTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;III)V
 }
 
 public abstract interface class com/trendyol/design/core/inputfield/OutlinedTextFieldStyle {
@@ -1165,7 +1165,7 @@ public final class com/trendyol/design/core/rating/ComposableSingletons$RatingBa
 }
 
 public final class com/trendyol/design/core/rating/RatingBarKt {
-	public static final fun RatingBar-25JXyh4 (FLcom/trendyol/design/core/rating/RatingBarSize;Landroidx/compose/ui/Modifier;ILjava/lang/String;ZZFFLandroidx/compose/ui/graphics/vector/ImageVector;JJLandroidx/compose/runtime/Composer;III)V
+	public static final fun RatingBar-4qA3X-s (FLcom/trendyol/design/core/rating/RatingBarSize;Landroidx/compose/ui/Modifier;ILjava/lang/String;ZZFFLandroidx/compose/ui/graphics/vector/ImageVector;JJLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;III)V
 }
 
 public abstract interface class com/trendyol/design/core/rating/RatingBarSize {
