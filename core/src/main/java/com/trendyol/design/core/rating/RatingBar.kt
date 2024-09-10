@@ -4,6 +4,7 @@ import android.graphics.drawable.AdaptiveIconDrawable
 import android.os.Build
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -13,6 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
@@ -25,6 +27,7 @@ import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
@@ -66,6 +69,7 @@ import kotlin.math.floor
  * @param icon The resource of the image vector to use for the stars.
  * @param emptyColor The color of the empty stars.
  * @param filledColor The color of the filled stars.
+ * @param onRatingClick An optional function to rate, returns clicked star index plus one as Int.
  */
 @Composable
 public fun RatingBar(
@@ -81,6 +85,7 @@ public fun RatingBar(
     icon: ImageVector = Icons.Fill.Star,
     filledColor: Color = TrendyolDesign.colors.colorStar,
     emptyColor: Color = TrendyolDesign.colors.colorBorder,
+    onRatingClick: ((rate: Int) -> Unit)? = null,
 ) {
 
     val vectorPainter = rememberVectorPainter(image = icon)
@@ -104,6 +109,22 @@ public fun RatingBar(
                 .mirror()
                 .size(width = totalWidth, height = itemSize)
                 .graphicsLayer(alpha = 0.99f)
+                .then(
+                    if (onRatingClick != null) {
+                        Modifier.pointerInput(Unit) {
+                            detectTapGestures { offset: Offset ->
+                                val clickedStarIndex = calculateStarIndex(
+                                    tapX = offset.x,
+                                    itemSize = itemSize.toPx(),
+                                    spacePx = spaceBetween.toPx(),
+                                    itemCount = itemCount,
+                                )
+
+                                onRatingClick(clickedStarIndex + 1)
+                            }
+                        }
+                    } else Modifier
+                )
         ) {
             drawRating(
                 itemCount = itemCount,
@@ -157,6 +178,7 @@ private fun adaptiveIconPainterResource(@DrawableRes id: Int): Painter {
     }
 }
 
+@Suppress("LongParameterList")
 private fun DrawScope.drawRating(
     itemCount: Int,
     painter: Painter,
@@ -185,6 +207,12 @@ private fun DrawScope.drawRating(
         size = Size(width = rectWidth, height = size.height),
         blendMode = BlendMode.SrcIn,
     )
+}
+
+private fun calculateStarIndex(tapX: Float, itemSize: Float, spacePx: Float, itemCount: Int): Int {
+    val totalItemWidthWithSpace = itemSize + spacePx
+
+    return (tapX / totalItemWidthWithSpace).toInt().coerceIn(0, itemCount - 1)
 }
 
 @Composable
