@@ -34,7 +34,7 @@ data class IconModel(
     val outerIcon: ImageVector = Icons.Fill.CircleIcon,
     val innerIcon: ImageVector = Icons.Fill.InfoIcon,
     val outerTint: Color = Color.Unspecified,
-    val innerTint: Color?,
+    val innerTint: Color? = Color.White,
 )
 
 enum class IconPosition {
