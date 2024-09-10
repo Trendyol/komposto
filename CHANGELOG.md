@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.1] - 2024-09-06
+
+### Fixed
+
+- Fixed `MultiLineTextField` filling max width issue.
+
+### Changed
+
+- Updated `MultiLineTextField` parameter `maxChar` as optional.
+- Updated `RatingBar`RatingBar with onRatingClick and make it clickable. 
+
 ## [0.11.0] - 2024-08-26
 
 ### Added
