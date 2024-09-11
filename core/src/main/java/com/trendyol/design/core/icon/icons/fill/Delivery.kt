@@ -13,7 +13,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun VectorPreview() {
+private fun DeliveryImageVectorPreview() {
     Icon(imageVector = Icons.Fill.Delivery, size = TrendyolIconSize.Large)
 }
 

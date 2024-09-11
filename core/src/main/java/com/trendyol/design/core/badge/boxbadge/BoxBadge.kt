@@ -8,7 +8,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
  * Represents the basic properties needed to create a [KPBoxBadge], including
  * a title, an icon, and colors for the background and icon tint.
  */
-interface BoxBadgeType {
+interface BoxBadge {
 
     /**
      * The title text to be displayed in the badge.

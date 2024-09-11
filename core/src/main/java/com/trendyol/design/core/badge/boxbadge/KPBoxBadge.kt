@@ -32,7 +32,7 @@ import com.trendyol.design.core.preview.PreviewTheme
  */
 @Composable
 fun KPBoxBadge(
-    badge: BoxBadgeType,
+    badge: BoxBadge,
     modifier: Modifier = Modifier,
     attributes: BoxBadgeAttributes = BoxBadgeAttributes(),
 ) {

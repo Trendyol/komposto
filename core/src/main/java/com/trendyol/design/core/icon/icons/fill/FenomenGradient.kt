@@ -13,7 +13,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun VectorPreview() {
+private fun FenomenGradientImageVectorPreview() {
     Icon(imageVector = Icons.Fill.FenomenGradient, size = TrendyolIconSize.Large)
 }
 

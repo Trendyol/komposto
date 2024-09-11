@@ -7,7 +7,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.badge.boxbadge.KPBoxBadgeGroup
 import com.trendyol.design.core.badge.boxbadge.KPBoxBadgeType
-import com.trendyol.design.core.badge.boxbadge.BoxBadgeType
+import com.trendyol.design.core.badge.boxbadge.BoxBadge
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -159,7 +159,7 @@ internal fun Default_BoxBadgeGroup_1() = TrendyolTheme {
 )
 @Composable
 internal fun Scaled_BoxBadgeGroup_1() = TrendyolTheme {
-    val list = listOf<BoxBadgeType>(
+    val list = listOf<BoxBadge>(
         KPBoxBadgeType.Defaults.InfluencerChoice(),
     )
 

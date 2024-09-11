@@ -14,7 +14,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun VectorPreview() {
+private fun CampaignImageVectorPreview() {
     Icon(imageVector = Icons.Fill.Campaign, size = TrendyolIconSize.Large)
 }
 
