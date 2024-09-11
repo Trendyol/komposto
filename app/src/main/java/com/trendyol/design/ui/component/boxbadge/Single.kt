@@ -18,7 +18,7 @@ import com.trendyol.theme.TrendyolDesign
     name = Component.BOX_BADGE_CUSTOM,
 )
 @Composable
-internal fun BoxBadge_Single_Custom() = TrendyolTheme {
+internal fun BoxBadge_Single_A_Custom() = TrendyolTheme {
     val customBadge = KPBoxBadgeType.Custom(
         title = "Custom Badge",
         backgroundColor = TrendyolDesign.colors.colorPinkVariant2,
