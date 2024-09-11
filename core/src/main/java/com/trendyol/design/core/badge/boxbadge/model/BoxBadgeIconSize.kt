@@ -4,6 +4,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.IconSize
 
-data object BoxBadgeIconSize : IconSize {
-    override val dp: Dp = 14.dp
+public data object BoxBadgeIconSize : IconSize {
+    public override val dp: Dp = 14.dp
 }

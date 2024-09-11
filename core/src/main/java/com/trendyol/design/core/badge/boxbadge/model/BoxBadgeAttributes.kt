@@ -25,7 +25,7 @@ import com.trendyol.design.core.badge.boxbadge.KPBoxBadge
  * @property textStyle The text style of the badge title, such as font size, weight, and letter spacing.
  */
 @Immutable
-data class BoxBadgeAttributes(
+public data class BoxBadgeAttributes(
     val boxWidth: Dp = 34.dp,
     val boxHeight: Dp = 40.dp,
     val cornerRadius: Dp = 4.dp,
@@ -38,12 +38,12 @@ data class BoxBadgeAttributes(
     val textStyle: TextStyle? = null,
 ) {
     @Composable
-    fun textStyle(): TextStyle {
+    public fun textStyle(): TextStyle {
         return textStyle ?: TrendyolDesign.typography.overLineMedium
     }
 
     @Composable
-    fun fontColor(): Color {
+    public fun fontColor(): Color {
         return fontColor ?: TrendyolDesign.colors.colorOnSurfaceVariant3
     }
 }

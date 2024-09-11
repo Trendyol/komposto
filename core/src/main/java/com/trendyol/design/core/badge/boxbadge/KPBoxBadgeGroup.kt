@@ -33,7 +33,7 @@ import kotlinx.collections.immutable.toPersistentList
  * properties like padding, icon size, and border radius, etc.
  */
 @Composable
-fun KPBoxBadgeGroup(
+public fun KPBoxBadgeGroup(
     badges: PersistentList<BoxBadge>,
     modifier: Modifier = Modifier,
     itemAttributes: BoxBadgeAttributes = BoxBadgeAttributes(),
