@@ -14,7 +14,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun VectorPreview() {
+private fun PercentageImageVectorPreview() {
     Icon(imageVector = Icons.Fill.Percentage, size = TrendyolIconSize.Large)
 }
 

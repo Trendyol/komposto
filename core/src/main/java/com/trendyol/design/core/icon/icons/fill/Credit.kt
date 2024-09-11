@@ -14,7 +14,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun VectorPreview() {
+private fun CreditImageVectorPreview() {
     Icon(imageVector = Icons.Fill.Credit, size = TrendyolIconSize.Large)
 }
 

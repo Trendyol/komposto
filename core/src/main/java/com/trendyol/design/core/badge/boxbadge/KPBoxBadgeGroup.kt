@@ -34,7 +34,7 @@ import kotlinx.collections.immutable.toPersistentList
  */
 @Composable
 fun KPBoxBadgeGroup(
-    badges: PersistentList<BoxBadgeType>,
+    badges: PersistentList<BoxBadge>,
     modifier: Modifier = Modifier,
     itemAttributes: BoxBadgeAttributes = BoxBadgeAttributes(),
     maxBadgeCount: Int = 4,

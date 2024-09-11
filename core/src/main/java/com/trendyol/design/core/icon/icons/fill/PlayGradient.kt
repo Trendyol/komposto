@@ -15,7 +15,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun VectorPreview() {
+private fun PlayGradientImageVectorPreview() {
     Icon(imageVector = Icons.Fill.PlayGradient, size = TrendyolIconSize.Large)
 }
 
