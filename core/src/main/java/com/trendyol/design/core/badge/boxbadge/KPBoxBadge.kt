@@ -31,7 +31,7 @@ import com.trendyol.design.core.preview.PreviewTheme
  * including size, padding, and text style.
  */
 @Composable
-fun KPBoxBadge(
+public fun KPBoxBadge(
     badge: BoxBadge,
     modifier: Modifier = Modifier,
     attributes: BoxBadgeAttributes = BoxBadgeAttributes(),
