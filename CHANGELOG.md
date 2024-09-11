@@ -11,8 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- BoxBadge composable is introduced with [BoxBadgeType.Custom] and
-  predefined [BoxBadgeType.Defaults] types
+- BoxBadge composable is introduced with [KPBoxBadgeType.Custom] and
+  predefined [KPBoxBadgeType.Defaults] types
 - BoxBadgeGroup composable is introduced as a horizontal list of BoxBadge items
 
 ### Changed
