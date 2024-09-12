@@ -1,4 +1,4 @@
 # This file contains the versions of the artifacts we publish.
 
 [versions]
-design = "0.11.1"
+design = "0.11.2"

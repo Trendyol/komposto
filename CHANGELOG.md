@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.2] - 2024-09-12
+
+### Added
+- Added Kotlin's binary-compatibility-validator in order to validate public APIs
+- Enabled explicitApi in order to prevent publishing wrong APIs to public
+
 ## [0.11.1] - 2024-09-06
 
 ### Fixed
@@ -54,10 +60,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Implemented `TrendyolRatingBarSize` for defining different sizes (`Small` and `Medium`)
   of the rating bar.
 - Added `Star` icon to represent the rating in the `RatingBar` component.
-
-### Added
-- Added Kotlin's binary-compatibility-validator in order to validate public APIs
-- Enabled explicitApi in order to prevent publishing wrong APIs to public
 
 ### Added
 
