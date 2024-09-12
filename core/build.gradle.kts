@@ -81,6 +81,7 @@ dependencies {
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.compose.ui.tooling)
     implementation(libs.androidx.compose.ui.util)
+    implementation(libs.kotlinXImmutableCollections)
 
     detektPlugins(libs.detekt.formatting)
     detektPlugins(libs.detekt.composeRules)
