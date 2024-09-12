@@ -6,9 +6,9 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.graphics.Color
 
-interface TrendyolButtonColors : ButtonColors {
+public interface TrendyolButtonColors : ButtonColors {
     @Composable
-    fun borderColor(enabled: Boolean): State<Color?>
+    public fun borderColor(enabled: Boolean): State<Color?>
 }
 
 internal class TrendyolDefaultButtonColors(

@@ -20,7 +20,7 @@ private fun ColonPreview() {
     Icon(Icons.Fill.Colon, TrendyolIconSize.XSmall)
 }
 
-val Icons.Fill.Colon: ImageVector by lazy {
+public val Icons.Fill.Colon: ImageVector by lazy {
     ImageVector.Builder(
         name = "Colon",
         defaultWidth = 8.dp,

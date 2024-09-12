@@ -12,9 +12,9 @@ import com.trendyol.theme.TrendyolDesign
  * This interface provides sealed classes representing different sizes for [TrendyolRadioButton] components with customization options
  * tailored to the Trendyol design guidelines.
  */
-sealed interface TrendyolRadioButtonSize : RadioButtonSize {
+public sealed interface TrendyolRadioButtonSize : RadioButtonSize {
 
-    data object XSmall : TrendyolRadioButtonSize {
+    public data object XSmall : TrendyolRadioButtonSize {
         override val rippleRadius: Dp
             get() = 14.dp
         override val buttonSize: Dp
@@ -28,7 +28,7 @@ sealed interface TrendyolRadioButtonSize : RadioButtonSize {
             get() = TrendyolDesign.typography.body1
     }
 
-    data object Small : TrendyolRadioButtonSize {
+    public data object Small : TrendyolRadioButtonSize {
         override val rippleRadius: Dp
             get() = 19.dp
         override val buttonSize: Dp
@@ -42,7 +42,7 @@ sealed interface TrendyolRadioButtonSize : RadioButtonSize {
             get() = TrendyolDesign.typography.subtitle
     }
 
-    data object Medium : TrendyolRadioButtonSize {
+    public data object Medium : TrendyolRadioButtonSize {
         override val rippleRadius: Dp
             get() = 24.dp
         override val buttonSize: Dp

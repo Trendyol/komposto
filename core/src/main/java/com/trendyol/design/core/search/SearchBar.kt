@@ -37,7 +37,7 @@ import com.trendyol.theme.TrendyolDesign
  * and the input text is empty. Default is "Ürün Ara"
  */
 @Composable
-fun SearchBar(
+public fun SearchBar(
     value: String,
     style: SearchBarStyle,
     size: SearchBarSize,

@@ -39,7 +39,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param onClicked Callback for when the dropdown is clicked.
  */
 @Composable
-fun Dropdown(
+public fun Dropdown(
     style: DropdownStyle,
     value: String,
     modifier: Modifier = Modifier,

@@ -5,24 +5,24 @@ import androidx.compose.runtime.Composable
 /**
  * Interface defining what to display after radio dot while using [TrendyolRadioButton].
  */
-interface RadioButtonContainerType {
+public interface RadioButtonContainerType {
 
     /**
      * Represents a RadioButton container with no additional properties. Just showing radio dot.
      */
-    interface None : RadioButtonContainerType
+    public interface None : RadioButtonContainerType
 
     /**
      * Represents a RadioButton container with a text.
      */
-    interface Text : RadioButtonContainerType {
-        val text: String
+    public interface Text : RadioButtonContainerType {
+        public val text: String
     }
 
     /**
      * Represents a RadioButton container with custom composable content.
      */
-    interface Content : RadioButtonContainerType {
-        val content: @Composable () -> Unit
+    public interface Content : RadioButtonContainerType {
+        public val content: @Composable () -> Unit
     }
 }

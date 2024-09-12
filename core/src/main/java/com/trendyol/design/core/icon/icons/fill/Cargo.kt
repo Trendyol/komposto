@@ -17,7 +17,7 @@ private fun CargoImageVectorPreview() {
     Icon(imageVector = Icons.Fill.Cargo, size = TrendyolIconSize.Large)
 }
 
-val Icons.Fill.Cargo: ImageVector by lazy {
+public val Icons.Fill.Cargo: ImageVector by lazy {
     ImageVector.Builder(
         name = "Cargo",
         defaultWidth = 14.dp,

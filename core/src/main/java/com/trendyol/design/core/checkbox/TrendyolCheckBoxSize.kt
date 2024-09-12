@@ -10,9 +10,9 @@ import com.trendyol.theme.TrendyolDesign
  * This sealed interface defines the size variations for Trendyol checkboxes.
  * Different size options are provided as sealed data objects.
  */
-sealed interface TrendyolCheckBoxSize {
+public sealed interface TrendyolCheckBoxSize {
 
-    data object Medium : CheckboxSize {
+    public data object Medium : CheckboxSize {
         override val containerSize: Dp
             get() = 24.dp
         override val checkboxSize: Dp
@@ -28,7 +28,7 @@ sealed interface TrendyolCheckBoxSize {
             if (style is TrendyolCheckBoxStyle.Secondary) 1.2.dp else 2.dp
     }
 
-    data object Small : CheckboxSize {
+    public data object Small : CheckboxSize {
         override val containerSize: Dp
             get() = 20.dp
         override val checkboxSize: Dp
@@ -44,7 +44,7 @@ sealed interface TrendyolCheckBoxSize {
             if (style is TrendyolCheckBoxStyle.Secondary) 1.2.dp else 1.75.dp
     }
 
-    data object XSmall : CheckboxSize {
+    public data object XSmall : CheckboxSize {
         override val containerSize: Dp
             get() = 16.dp
         override val checkboxSize: Dp

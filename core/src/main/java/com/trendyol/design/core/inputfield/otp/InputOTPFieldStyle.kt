@@ -15,7 +15,7 @@ import androidx.compose.ui.graphics.Color
  * the appropriate `Color` values wrapped in `State` objects for reactive updates.
  */
 @Immutable
-interface InputOTPFieldStyle {
+public interface InputOTPFieldStyle {
 
     /**
      * Returns the border color for the OTP input field in style based on its state.
@@ -30,7 +30,7 @@ interface InputOTPFieldStyle {
      */
     @Composable
     @ReadOnlyComposable
-    fun getBorderColor(enabled: Boolean, isFocused: Boolean, isError: Boolean): State<Color>
+    public fun getBorderColor(enabled: Boolean, isFocused: Boolean, isError: Boolean): State<Color>
 
     /**
      * Returns the text color for the OTP input field in style based on whether it is enabled or disabled.
@@ -41,7 +41,7 @@ interface InputOTPFieldStyle {
      */
     @Composable
     @ReadOnlyComposable
-    fun getTextColor(enabled: Boolean): State<Color>
+    public fun getTextColor(enabled: Boolean): State<Color>
 
     /**
      * Returns the background color for the OTP input field in style based on its state.
@@ -54,7 +54,7 @@ interface InputOTPFieldStyle {
      */
     @Composable
     @ReadOnlyComposable
-    fun getBackgroundColor(enabled: Boolean, isError: Boolean): State<Color>
+    public fun getBackgroundColor(enabled: Boolean, isError: Boolean): State<Color>
 
     /**
      * Returns the tab indicator color for the OTP input field in style based on its state.
@@ -70,5 +70,5 @@ interface InputOTPFieldStyle {
      */
     @Composable
     @ReadOnlyComposable
-    fun getTabIndicatorColor(enabled: Boolean, isFocused: Boolean, isError: Boolean): State<Color>
+    public fun getTabIndicatorColor(enabled: Boolean, isFocused: Boolean, isError: Boolean): State<Color>
 }

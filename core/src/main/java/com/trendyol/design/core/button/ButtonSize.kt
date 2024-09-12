@@ -11,24 +11,24 @@ import androidx.compose.ui.unit.dp
  * and [minHeight]. Implementations of this interface customize the appearance and dimensions
  * of [Button].
  */
-interface ButtonSize {
+public interface ButtonSize {
 
     /**
      * Padding values defining the spacing around the content of the button.
      */
-    val contentPadding: PaddingValues
+    public val contentPadding: PaddingValues
 
     /**
      * Text style for the button content.
      */
     @get:Composable
-    val font: TextStyle
+    public val font: TextStyle
 
     /**
      * Minimum height required for the button to ensure proper visibility and touchability.
      * By default, it calculates the height based on the [font] and [contentPadding].
      */
-    val minHeight: Dp
+    public val minHeight: Dp
         @Composable
         get() = (
             font.fontSize.value +

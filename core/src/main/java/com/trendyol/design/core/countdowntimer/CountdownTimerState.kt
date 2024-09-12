@@ -10,19 +10,19 @@ import androidx.compose.runtime.setValue
 import java.util.concurrent.TimeUnit
 
 @Stable
-class CountdownTimerState(
-    val endDate: Long,
+public class CountdownTimerState(
+    public val endDate: Long,
 ) {
     private val countDownTimer: CountDownTimer by lazy {
         createCountDownTimer()
     }
 
-    var remainingTime by mutableLongStateOf(endDate - System.currentTimeMillis())
+    public var remainingTime: Long by mutableLongStateOf(endDate - System.currentTimeMillis())
         private set
-    var isVisible by mutableStateOf(true)
+    public var isVisible: Boolean by mutableStateOf(true)
         private set
 
-    fun startTimer() {
+    public fun startTimer() {
         if (endDate <= 0) {
             cancelTimer()
             return
@@ -30,11 +30,11 @@ class CountdownTimerState(
         countDownTimer.start()
     }
 
-    fun cancelTimer() {
+    public fun cancelTimer() {
         countDownTimer.cancel()
     }
 
-    fun getRemainingTimes(time: Long): Triple<Long, Long, Long> {
+    public fun getRemainingTimes(time: Long): Triple<Long, Long, Long> {
         val seconds = time / ONE_SECOND_MILLISECONDS
         val hours = seconds / ONE_HOUR_SECONDS
         val minutes = (seconds % ONE_HOUR_SECONDS) / ONE_MINUTE_SECONDS
@@ -59,7 +59,7 @@ class CountdownTimerState(
         }
     }
 
-    companion object {
+    public companion object {
         private val TICK_INTERVAL = TimeUnit.SECONDS.toMillis(1)
         private const val ONE_HOUR_SECONDS = 3600
         private const val ONE_MINUTE_SECONDS = 60

@@ -40,7 +40,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param verticalPadding A `PaddingValues` object to set the vertical padding of the header. Default is `PaddingValues(vertical = 12.dp)`.
  */
 @Composable
-fun BottomSheetHeader(
+public fun BottomSheetHeader(
     title: String,
     onCloseIconClick: () -> Unit,
     modifier: Modifier = Modifier,

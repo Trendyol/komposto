@@ -17,7 +17,7 @@ private fun FenomenGradientImageVectorPreview() {
     Icon(imageVector = Icons.Fill.FenomenGradient, size = TrendyolIconSize.Large)
 }
 
-val Icons.Fill.FenomenGradient: ImageVector by lazy {
+public val Icons.Fill.FenomenGradient: ImageVector by lazy {
     ImageVector.Builder(
         name = "HeartStar",
         defaultWidth = 14.dp,

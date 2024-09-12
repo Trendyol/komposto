@@ -12,7 +12,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
  * An abstract class that represents a bottom sheet fragment with a Compose UI.
  * This class extends `BottomSheetDialogFragment` and provides a structure for implementing a Compose-based bottom sheet.
  */
-abstract class TrendyolDesignBottomSheetFragment : BottomSheetDialogFragment() {
+public abstract class TrendyolDesignBottomSheetFragment : BottomSheetDialogFragment() {
 
     /**
      * An abstract composable function to define the content of the page.
