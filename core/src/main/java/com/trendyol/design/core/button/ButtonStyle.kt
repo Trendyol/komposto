@@ -8,13 +8,13 @@ import androidx.compose.ui.unit.Dp
  * Style configuration for a [Button], including [buttonColors] and border settings.
  * Implementations of this interface customize the visual appearance of [Button].
  */
-interface ButtonStyle {
+public interface ButtonStyle {
 
     /**
      * Providing the button colors configuration.
      */
     @get:Composable
-    val buttonColors: TrendyolButtonColors
+    public val buttonColors: TrendyolButtonColors
 
     /**
      * Retrieves the border stroke configuration for the button based on the specified parameters.
@@ -24,7 +24,7 @@ interface ButtonStyle {
      * @return The border stroke configuration for the button. Returns `null` if no border color is provided.
      */
     @Composable
-    fun getBorder(
+    public fun getBorder(
         width: Dp,
         enabled: Boolean,
     ): BorderStroke? {

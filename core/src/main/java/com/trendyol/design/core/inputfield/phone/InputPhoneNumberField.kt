@@ -48,7 +48,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param maxPhoneNumberLength Maximum length allowed for the phone number.
  */
 @Composable
-fun InputPhoneNumberField(
+public fun InputPhoneNumberField(
     countryCode: String,
     number: String,
     onCountryCodeClick: () -> Unit,

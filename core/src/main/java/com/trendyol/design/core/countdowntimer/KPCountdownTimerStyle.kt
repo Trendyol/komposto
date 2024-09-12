@@ -11,14 +11,14 @@ import com.trendyol.theme.TrendyolDesign
  *
  * This sealed interface allows defining a limited set of styles that conform to the `CountdownTimerStyle` interface.
  */
-sealed interface KPCountdownTimerStyle {
+public sealed interface KPCountdownTimerStyle {
 
     /**
      * `Primary` provides the primary style for the Trendyol countdown timer.
      * It includes specific design elements such as background color, separator text style,
      * and text styles for different countdown timer sizes.
      */
-    data object Primary : CountdownTimerStyle {
+    public data object Primary : CountdownTimerStyle {
         override val backgroundColor: Color
             @Composable get() = TrendyolDesign.colors.colorSurface
 

@@ -15,13 +15,13 @@ import com.trendyol.theme.TrendyolDesign
  * Implementations of this interface use Composable functions to dynamically provide style attributes
  * like border color, text color, background color, and tab indicator color.
  */
-sealed interface TrendyolInputOTPFieldStyle {
+public sealed interface TrendyolInputOTPFieldStyle {
 
     /**
      * An object defining the Outline style for the OTP input field.
      * This style typically features a border that changes color based on the focus and error states.
      */
-    data object Outline : InputOTPFieldStyle {
+    public data object Outline : InputOTPFieldStyle {
 
         @Composable
         override fun getBorderColor(
@@ -72,7 +72,7 @@ sealed interface TrendyolInputOTPFieldStyle {
         }
     }
 
-    data object Filled : InputOTPFieldStyle {
+    public data object Filled : InputOTPFieldStyle {
         @Composable
         override fun getBorderColor(
             enabled: Boolean,

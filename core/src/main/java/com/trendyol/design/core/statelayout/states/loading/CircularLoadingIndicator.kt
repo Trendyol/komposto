@@ -24,7 +24,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param indicatorStrokeWidth Optional parameter to specify the stroke width of the loading indicator. Defaults to 4dp.
  */
 @Composable
-fun CircularLoadingIndicator(
+public fun CircularLoadingIndicator(
     modifier: Modifier = Modifier,
     indicatorColor: Color = TrendyolDesign.colors.colorPrimary,
     indicatorStrokeWidth: Dp = 4.dp,

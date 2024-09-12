@@ -43,7 +43,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param shape Shape of the input field.
  */
 @Composable
-fun InputEmailField(
+public fun InputEmailField(
     email: String,
     onValueChange: ((String) -> Unit)?,
     modifier: Modifier = Modifier,

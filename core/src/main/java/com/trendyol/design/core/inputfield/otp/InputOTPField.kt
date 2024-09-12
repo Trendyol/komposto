@@ -62,7 +62,7 @@ import com.trendyol.theme.TrendyolDesign
  *                          This parameter is optional and defaults to a newly remembered instance of MutableInteractionSource.
  */
 @Composable
-fun InputOTPField(
+public fun InputOTPField(
     style: InputOTPFieldStyle,
     otp: String,
     onValueChange: (String) -> Unit,

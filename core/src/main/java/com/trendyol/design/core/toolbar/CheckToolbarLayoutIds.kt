@@ -5,12 +5,12 @@ import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.layoutId
 
 @Composable
-fun CheckToolbarLayoutIds(
+public fun CheckToolbarLayoutIds(
     layoutId: Any?,
     isSingleChildRequired: Boolean = false,
     errorMessage: String = "Failed requirement.",
     content: @Composable () -> Unit,
-) = Layout(content) { measurables, _ ->
+): Unit = Layout(content) { measurables, _ ->
 
     if (isSingleChildRequired) {
         val child = measurables.singleOrNull()

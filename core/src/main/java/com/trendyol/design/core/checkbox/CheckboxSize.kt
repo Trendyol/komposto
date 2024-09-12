@@ -12,42 +12,42 @@ import androidx.compose.ui.unit.Dp
  * checkbox component.
  */
 @Immutable
-interface CheckboxSize {
+public interface CheckboxSize {
 
     /**
      * Represents the size of the container in which the checkbox component resides.
      * This value typically determines the perimeter of the checkbox component.
      */
-    val containerSize: Dp
+    public val containerSize: Dp
 
     /**
      * Represents the size of the checkbox component.
      * This value determines the width and height of the checkbox.
      */
-    val checkboxSize: Dp
+    public val checkboxSize: Dp
 
     /**
      * Represents the border corner radius of the checkbox.
      * This value determines the degree of rounding of the checkbox corners.
      */
-    val borderCornerRadius: Dp
+    public val borderCornerRadius: Dp
 
     /**
      * Represents the ripple radius of the checkbox.
      * This value determines the radius of the ripple effect when the checkbox is clicked.
      */
-    val rippleRadius: Dp
+    public val rippleRadius: Dp
 
     /**
      * Represents the style of the checkbox text.
      * This value determines the font family, text size of the check box.
      */
-    val textStyle: TextStyle
+    public val textStyle: TextStyle
         @Composable get
 
     /**
      * Returns the stroke width of the checkbox.
      * Stroke width determines the thickness of the checkbox border.
      */
-    fun strokeWidth(style: CheckboxStyle): Dp
+    public fun strokeWidth(style: CheckboxStyle): Dp
 }

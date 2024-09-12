@@ -8,8 +8,8 @@ import androidx.compose.runtime.Composable
  *
  * @property searchBarColors Color configuration for the search bar.
  */
-interface SearchBarStyle {
+public interface SearchBarStyle {
 
     @get:Composable
-    val searchBarColors: TextFieldColors
+    public val searchBarColors: TextFieldColors
 }

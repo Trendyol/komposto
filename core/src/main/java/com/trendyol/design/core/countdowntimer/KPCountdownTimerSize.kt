@@ -10,13 +10,13 @@ import androidx.compose.ui.unit.dp
  *
  * This sealed interface restricts the set of possible sizes to the predefined options.
  */
-sealed interface KPCountdownTimerSize {
+public sealed interface KPCountdownTimerSize {
 
     /**
      * `Large` provides the large size configuration for the Trendyol countdown timer.
      * It includes larger padding values for both vertical and horizontal padding.
      */
-    data object Large : CountdownTimerSize {
+    public data object Large : CountdownTimerSize {
         override val verticalPadding: Dp
             get() = 6.dp
         override val horizontalPadding: Dp
@@ -29,7 +29,7 @@ sealed interface KPCountdownTimerSize {
      * `Medium` provides the medium size configuration for the Trendyol countdown timer.
      * It includes moderate padding values for both vertical and horizontal padding.
      */
-    data object Medium : CountdownTimerSize {
+    public data object Medium : CountdownTimerSize {
         override val verticalPadding: Dp
             get() = 2.dp
         override val horizontalPadding: Dp
@@ -42,7 +42,7 @@ sealed interface KPCountdownTimerSize {
      * `Small` provides the small size configuration for the Trendyol countdown timer.
      * It includes smaller padding values for both vertical and horizontal padding.
      */
-    data object Small : CountdownTimerSize {
+    public data object Small : CountdownTimerSize {
         override val verticalPadding: Dp
             get() = 1.dp
         override val horizontalPadding: Dp

@@ -18,7 +18,7 @@ private fun PercentageImageVectorPreview() {
     Icon(imageVector = Icons.Fill.Percentage, size = TrendyolIconSize.Large)
 }
 
-val Icons.Fill.Percentage: ImageVector by lazy {
+public val Icons.Fill.Percentage: ImageVector by lazy {
     ImageVector.Builder(
         name = "Percentage",
         defaultWidth = 14.dp,

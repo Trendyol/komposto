@@ -18,7 +18,7 @@ private fun CreditImageVectorPreview() {
     Icon(imageVector = Icons.Fill.Credit, size = TrendyolIconSize.Large)
 }
 
-val Icons.Fill.Credit: ImageVector by lazy {
+public val Icons.Fill.Credit: ImageVector by lazy {
     ImageVector.Builder(
         name = "Credit",
         defaultWidth = 14.dp,

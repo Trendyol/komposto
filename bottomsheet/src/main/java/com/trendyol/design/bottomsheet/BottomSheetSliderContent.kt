@@ -39,7 +39,7 @@ import kotlinx.coroutines.flow.asStateFlow
  * @param header A composable lambda for customizing the header content. Default is a `BottomSheetHeader` with the provided title and close icon click action.
  */
 @Composable
-fun <Item> BottomSheetSliderContent(
+public fun <Item> BottomSheetSliderContent(
     title: String,
     onCloseIconClick: () -> Unit,
     itemList: PersistentList<Item>,
@@ -72,7 +72,7 @@ fun <Item> BottomSheetSliderContent(
  * @param dividerContent A composable lambda to define the content for the divider between items. Default is a `Spacer` with a width of 12.dp.
  */
 @Composable
-fun <Item> SliderContent(
+public fun <Item> SliderContent(
     itemList: PersistentList<Item>,
     itemContent: @Composable (index: Int, item: Item) -> Unit,
     modifier: Modifier = Modifier,

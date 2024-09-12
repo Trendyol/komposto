@@ -9,7 +9,7 @@ import com.trendyol.design.core.statelayout.states.loading.LoadingType
 import com.trendyol.design.core.statelayout.states.warningInfo.WarningInfoStateComposable
 
 @Composable
-fun StateComposeLayout(
+public fun StateComposeLayout(
     modifier: Modifier = Modifier,
     state: State,
     contentStateLayout: @Composable () -> Unit = {},
@@ -38,7 +38,7 @@ fun StateComposeLayout(
 }
 
 @Composable
-fun ContentState(
+public fun ContentState(
     content: State.ContentWithLoading,
     contentLayout: @Composable () -> Unit,
 ) {

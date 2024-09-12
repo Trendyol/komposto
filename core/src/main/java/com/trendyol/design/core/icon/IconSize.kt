@@ -4,7 +4,7 @@ import androidx.compose.runtime.Immutable
 import androidx.compose.ui.unit.Dp
 
 @Immutable
-interface IconSize {
+public interface IconSize {
 
-    val dp: Dp
+    public val dp: Dp
 }

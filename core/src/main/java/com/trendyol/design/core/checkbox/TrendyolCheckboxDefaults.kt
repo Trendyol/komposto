@@ -12,10 +12,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.state.ToggleableState
 import com.trendyol.theme.TrendyolDesign
 
-object TrendyolCheckboxDefaults {
+public object TrendyolCheckboxDefaults {
 
     @Composable
-    fun colors(
+    public fun colors(
         checkedColor: Color = TrendyolDesign.colors.colorPrimary,
         uncheckedColor: Color = TrendyolDesign.colors.colorOnSurfaceVariant1,
 

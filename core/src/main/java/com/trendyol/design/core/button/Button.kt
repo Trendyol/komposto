@@ -32,7 +32,7 @@ import com.trendyol.design.core.text.TrendyolTextDefaults
  */
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun Button(
+public fun Button(
     onClick: () -> Unit,
     style: ButtonStyle,
     size: ButtonSize,
