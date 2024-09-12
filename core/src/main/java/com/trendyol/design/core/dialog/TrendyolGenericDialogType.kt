@@ -31,7 +31,7 @@ interface TrendyolGenericDialogType {
     data object Custom : GenericDialogType {
 
         override val textStyle: TextStyle?
-            @Composable get() = null
+            @Composable get() = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant3
 
         override val iconVector: ImageVector?
             get() = null
