@@ -24,7 +24,7 @@ import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.outline.Cancel
 import com.trendyol.design.core.dialog.DialogButtons.takeOrNull
-import com.trendyol.design.core.previewtheme.PreviewTheme
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
@@ -62,47 +62,73 @@ fun GenericDialog(
     onDismissRequest: () -> Unit,
 ) {
     Dialog(onDismissRequest = onDismissRequest, properties = dialogProperties) {
-        Card(
+        GenericDialogContent(
+            type = type,
+            displayCloseButton = displayCloseButton,
             modifier = modifier,
-            backgroundColor = TrendyolDesign.colors.colorOnPrimary,
-            shape = RoundedCornerShape(8.dp)
-        ) {
-            Box {
-                if (displayCloseButton) {
-                    Icon(modifier = Modifier
-                        .padding(top = 16.dp, end = 20.dp)
-                        .align(Alignment.TopEnd)
-                        .clickable(
-                            indication = null,
-                            interactionSource = remember { MutableInteractionSource() }
-                        ) { onCloseClicked() },
-                        imageVector = Icons.Outline.Cancel,
-                        size = TrendyolIconSize.XSmall
-                    )
+            title = title,
+            message = message,
+            icon = icon,
+            primaryButton = primaryButton,
+            secondaryButton = secondaryButton,
+            onCloseClicked = onCloseClicked
+        )
+    }
+}
 
+
+@Composable
+fun GenericDialogContent(
+    type: GenericDialogType,
+    displayCloseButton: Boolean,
+    modifier: Modifier = Modifier,
+    title: String = "",
+    message: String = "",
+    icon: @Composable (() -> Unit)? = null,
+    primaryButton: (@Composable DialogButtons.() -> Unit)? = null,
+    secondaryButton: (@Composable DialogButtons.() -> Unit)? = null,
+    onCloseClicked: () -> Unit = {},
+) {
+    Card(
+        modifier = modifier,
+        backgroundColor = TrendyolDesign.colors.colorOnPrimary,
+        shape = RoundedCornerShape(8.dp)
+    ) {
+        Box {
+            if (displayCloseButton) {
+                Icon(modifier = Modifier
+                    .padding(top = 16.dp, end = 20.dp)
+                    .align(Alignment.TopEnd)
+                    .clickable(
+                        indication = null,
+                        interactionSource = remember { MutableInteractionSource() }
+                    ) { onCloseClicked() },
+                    imageVector = Icons.Outline.Cancel,
+                    size = TrendyolIconSize.XSmall
+                )
+
+            }
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 20.dp, top = 16.dp, end = 20.dp, bottom = 16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Content(
+                    type = type,
+                    title = title,
+                    message = message,
+                    icon = icon
+                )
+
+                if (primaryButton != null) {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    primaryButton.takeOrNull()?.invoke()
+                    Spacer(modifier = Modifier.height(8.dp))
                 }
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(start = 20.dp, top = 16.dp, end = 20.dp, bottom = 16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Content(
-                        type = type,
-                        title = title,
-                        message = message,
-                        icon = icon
-                    )
 
-                    if (primaryButton != null) {
-                        Spacer(modifier = Modifier.height(16.dp))
-                        primaryButton.takeOrNull()?.invoke()
-                        Spacer(modifier = Modifier.height(8.dp))
-                    }
-
-                    if (secondaryButton != null) {
-                        secondaryButton.takeOrNull()?.invoke()
-                    }
+                if (secondaryButton != null) {
+                    secondaryButton.takeOrNull()?.invoke()
                 }
             }
         }
