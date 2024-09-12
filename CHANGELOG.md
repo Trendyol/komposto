@@ -7,11 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.11.2] - 2024-09-12
+## [0.12.1] - 2024-09-12
 
 ### Added
 - Added Kotlin's binary-compatibility-validator in order to validate public APIs
 - Enabled explicitApi in order to prevent publishing wrong APIs to public
+
+## [0.12.0] - 2024-09-11
+
+### Added
+
+- BoxBadge composable is introduced with [KPBoxBadgeType.Custom] and
+  predefined [KPBoxBadgeType.Defaults] types
+- BoxBadgeGroup composable is introduced as a horizontal list of BoxBadge items
+
+### Changed
+
+- Add Ltr fonts to Preview Theme
 
 ## [0.11.1] - 2024-09-06
 
