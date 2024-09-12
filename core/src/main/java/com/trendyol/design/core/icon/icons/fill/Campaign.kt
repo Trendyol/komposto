@@ -18,7 +18,7 @@ private fun CampaignImageVectorPreview() {
     Icon(imageVector = Icons.Fill.Campaign, size = TrendyolIconSize.Large)
 }
 
-val Icons.Fill.Campaign: ImageVector by lazy {
+public val Icons.Fill.Campaign: ImageVector by lazy {
     ImageVector.Builder(
         name = "Campaign",
         defaultWidth = 14.dp,

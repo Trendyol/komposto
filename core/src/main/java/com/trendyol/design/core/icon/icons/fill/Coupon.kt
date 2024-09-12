@@ -19,7 +19,7 @@ private fun CouponPreview() {
     Icon(imageVector = Icons.Fill.Coupon, size = TrendyolIconSize.Large)
 }
 
-val Icons.Fill.Coupon: ImageVector by lazy {
+public val Icons.Fill.Coupon: ImageVector by lazy {
     ImageVector.Builder(
         name = "Coupon",
         defaultWidth = 16.dp,
