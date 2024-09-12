@@ -17,7 +17,7 @@ private fun DeliveryImageVectorPreview() {
     Icon(imageVector = Icons.Fill.Delivery, size = TrendyolIconSize.Large)
 }
 
-val Icons.Fill.Delivery: ImageVector by lazy {
+public val Icons.Fill.Delivery: ImageVector by lazy {
     ImageVector.Builder(
         name = "Delivery",
         defaultWidth = 14.dp,

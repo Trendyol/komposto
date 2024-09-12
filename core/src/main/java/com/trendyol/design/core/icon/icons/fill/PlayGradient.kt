@@ -19,7 +19,7 @@ private fun PlayGradientImageVectorPreview() {
     Icon(imageVector = Icons.Fill.PlayGradient, size = TrendyolIconSize.Large)
 }
 
-val Icons.Fill.PlayGradient: ImageVector by lazy {
+public val Icons.Fill.PlayGradient: ImageVector by lazy {
     ImageVector.Builder(
         name = "PlayGradient",
         defaultWidth = 14.dp,
