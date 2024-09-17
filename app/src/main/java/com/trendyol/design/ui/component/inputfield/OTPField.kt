@@ -3,6 +3,7 @@ package com.trendyol.design.ui.component.inputfield
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -24,6 +25,7 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 internal fun Input_Field_7_OTP_1_Unfocused() = TrendyolTheme {
     Column {
         InputOTPField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolInputOTPFieldStyle.Outline,
             otp = "",
             hint = LABEL,
@@ -31,6 +33,7 @@ internal fun Input_Field_7_OTP_1_Unfocused() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputOTPField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolInputOTPFieldStyle.Filled,
             otp = "",
             hint = LABEL,
@@ -49,6 +52,7 @@ internal fun Input_Field_7_OTP_1_Unfocused() = TrendyolTheme {
 internal fun Input_Field_7_OTP_2_Typed() = TrendyolTheme {
     Column {
         InputOTPField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolInputOTPFieldStyle.Outline,
             otp = OTP,
             hint = LABEL,
@@ -56,6 +60,7 @@ internal fun Input_Field_7_OTP_2_Typed() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputOTPField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolInputOTPFieldStyle.Filled,
             otp = OTP,
             hint = LABEL,
@@ -74,6 +79,7 @@ internal fun Input_Field_7_OTP_2_Typed() = TrendyolTheme {
 internal fun Input_Field_7_OTP_3_Disabled() = TrendyolTheme {
     Column {
         InputOTPField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolInputOTPFieldStyle.Outline,
             otp = OTP,
             hint = DISABLED,
@@ -82,6 +88,7 @@ internal fun Input_Field_7_OTP_3_Disabled() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputOTPField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolInputOTPFieldStyle.Filled,
             otp = OTP,
             hint = DISABLED,
@@ -101,6 +108,7 @@ internal fun Input_Field_7_OTP_3_Disabled() = TrendyolTheme {
 internal fun Input_Field_7_OTP_4_Error() = TrendyolTheme {
     Column {
         InputOTPField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolInputOTPFieldStyle.Outline,
             otp = OTP,
             hint = LABEL,
@@ -109,6 +117,7 @@ internal fun Input_Field_7_OTP_4_Error() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputOTPField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolInputOTPFieldStyle.Outline,
             otp = OTP,
             hint = LABEL,
@@ -122,3 +131,4 @@ private const val LABEL = "Helper text goes here"
 private const val OTP = "1907"
 private const val DISABLED = "Disabled"
 private const val ERROR = "Error message goes here"
+private const val MIN_WIDTH = 280

@@ -3,6 +3,7 @@ package com.trendyol.design.ui.component.inputfield
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -19,6 +20,7 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 
 private const val LABEL = "Label"
 private const val SELECT = "Select"
+private const val MIN_WIDTH = 280
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
@@ -30,6 +32,7 @@ private const val SELECT = "Select"
 internal fun Input_Field_3_Dropdown_1_Unfocused() = TrendyolTheme {
     Column {
         Dropdown(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.FloatingLabelOutlined,
             label = LABEL,
             value = "",
@@ -37,12 +40,14 @@ internal fun Input_Field_3_Dropdown_1_Unfocused() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         Dropdown(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Outlined,
             value = "",
             onClicked = {},
         )
         Spacer(modifier = Modifier.height(8.dp))
         Dropdown(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Filled,
             value = "",
             onClicked = {},
@@ -60,6 +65,7 @@ internal fun Input_Field_3_Dropdown_1_Unfocused() = TrendyolTheme {
 internal fun Input_Field_3_Dropdown_2_Typed() = TrendyolTheme {
     Column {
         Dropdown(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.FloatingLabelOutlined,
             label = LABEL,
             value = SELECT,
@@ -67,12 +73,14 @@ internal fun Input_Field_3_Dropdown_2_Typed() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         Dropdown(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Outlined,
             value = SELECT,
             onClicked = {},
         )
         Spacer(modifier = Modifier.height(8.dp))
         Dropdown(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Filled,
             value = SELECT,
             onClicked = {},
@@ -91,6 +99,7 @@ internal fun Input_Field_3_Dropdown_3_Disabled() = TrendyolTheme {
     Column {
         val value by remember { mutableStateOf("Disabled") }
         Dropdown(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.FloatingLabelOutlined,
             value = value,
             onClicked = {},
@@ -98,6 +107,7 @@ internal fun Input_Field_3_Dropdown_3_Disabled() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         Dropdown(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Outlined,
             value = value,
             onClicked = {},
@@ -105,6 +115,7 @@ internal fun Input_Field_3_Dropdown_3_Disabled() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         Dropdown(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Filled,
             value = value,
             onClicked = {},

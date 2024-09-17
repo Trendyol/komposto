@@ -3,6 +3,7 @@ package com.trendyol.design.ui.component.input
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -21,6 +22,7 @@ import com.trendyol.theme.TrendyolDesign
 
 private const val LABEL = "Label"
 private const val ENTER = "Write here"
+private const val MIN_WIDTH = 280
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
@@ -33,6 +35,7 @@ internal fun Input_Field_1_Email_Unfocused() = TrendyolTheme {
     Column {
         var email by remember { mutableStateOf("") }
         InputEmailField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             email = email,
             placeholder = {
                 Text(
@@ -46,6 +49,7 @@ internal fun Input_Field_1_Email_Unfocused() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputEmailField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             email = email,
             onValueChange = {
                 email = it
@@ -68,6 +72,7 @@ internal fun Input_Field_Email_Filled() = TrendyolTheme {
     Column {
         var email by remember { mutableStateOf("Text") }
         InputEmailField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             email = email,
             onValueChange = {
                 email = it
@@ -75,6 +80,7 @@ internal fun Input_Field_Email_Filled() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputEmailField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             email = email,
             onValueChange = {
                 email = it
@@ -97,6 +103,7 @@ internal fun Input_Field_Email_Disabled() = TrendyolTheme {
     Column {
         var email by remember { mutableStateOf("Text") }
         InputEmailField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             email = email,
             onValueChange = {
                 email = it
@@ -105,6 +112,7 @@ internal fun Input_Field_Email_Disabled() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputEmailField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             email = email,
             onValueChange = {
                 email = it
@@ -128,6 +136,7 @@ internal fun Input_Field_Email_Error() = TrendyolTheme {
     Column {
         var email by remember { mutableStateOf("Text") }
         InputEmailField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             email = email,
             onValueChange = {
                 email = it
@@ -136,6 +145,7 @@ internal fun Input_Field_Email_Error() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputEmailField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             email = email,
             onValueChange = {
                 email = it
