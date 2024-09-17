@@ -3,6 +3,7 @@ package com.trendyol.design.ui.component.inputfield
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -24,6 +25,7 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 internal fun Input_Field_6_Password_1_Unfocused() = TrendyolTheme {
     Column {
         InputPasswordField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
             password = "",
             label = LABEL,
@@ -31,6 +33,7 @@ internal fun Input_Field_6_Password_1_Unfocused() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputPasswordField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolOutlinedTextFieldStyle.Outlined,
             password = "",
             placeHolder = LABEL,
@@ -49,6 +52,7 @@ internal fun Input_Field_6_Password_1_Unfocused() = TrendyolTheme {
 internal fun Input_Field_6_Password_2_Typed() = TrendyolTheme {
     Column {
         InputPasswordField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
             password = TEXT,
             label = LABEL,
@@ -56,6 +60,7 @@ internal fun Input_Field_6_Password_2_Typed() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputPasswordField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolOutlinedTextFieldStyle.Outlined,
             password = TEXT,
             placeHolder = LABEL,
@@ -74,6 +79,7 @@ internal fun Input_Field_6_Password_2_Typed() = TrendyolTheme {
 internal fun Input_Field_6_Password_3_Disabled() = TrendyolTheme {
     Column {
         InputPasswordField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
             password = DISABLED,
             label = LABEL,
@@ -82,6 +88,7 @@ internal fun Input_Field_6_Password_3_Disabled() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputPasswordField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolOutlinedTextFieldStyle.Outlined,
             password = DISABLED,
             placeHolder = LABEL,
@@ -101,6 +108,7 @@ internal fun Input_Field_6_Password_3_Disabled() = TrendyolTheme {
 internal fun Input_Field_6_Password_4_Error() = TrendyolTheme {
     Column {
         InputPasswordField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
             password = TEXT,
             label = LABEL,
@@ -109,6 +117,7 @@ internal fun Input_Field_6_Password_4_Error() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(8.dp))
         InputPasswordField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolOutlinedTextFieldStyle.Outlined,
             password = TEXT,
             placeHolder = LABEL,
@@ -122,3 +131,4 @@ private const val LABEL = "Label"
 private const val TEXT = "Text"
 private const val DISABLED = "Disabled"
 private const val ERROR = "Error message goes here"
+private const val MIN_WIDTH = 280

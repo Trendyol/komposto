@@ -3,6 +3,7 @@ package com.trendyol.design.ui.component.input
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -20,6 +21,7 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 private const val LABEL = "Label"
 private const val SELECT = "Select"
 private const val NUMBER = "5551234567"
+private const val MIN_WIDTH = 280
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
@@ -32,6 +34,7 @@ internal fun Input_Field_1_PhoneNumber_Unfocused() = TrendyolTheme {
     Column {
         var number by remember { mutableStateOf("") }
         InputPhoneNumberField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             countryCode = "+90",
             number = SELECT,
             onCountryCodeClick = { },
@@ -39,6 +42,7 @@ internal fun Input_Field_1_PhoneNumber_Unfocused() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(16.dp))
         InputPhoneNumberField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             countryCode = "",
             number = number,
             onCountryCodeClick = { },
@@ -60,6 +64,7 @@ internal fun Input_Field_PhoneNumber_Filled() = TrendyolTheme {
     Column {
         var number by remember { mutableStateOf(NUMBER) }
         InputPhoneNumberField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             countryCode = "+90",
             number = number,
             onCountryCodeClick = { },
@@ -67,6 +72,7 @@ internal fun Input_Field_PhoneNumber_Filled() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(16.dp))
         InputPhoneNumberField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             countryCode = "+90",
             number = number,
             onCountryCodeClick = { },
@@ -88,6 +94,7 @@ internal fun Input_Field_PhoneNumber_Disabled() = TrendyolTheme {
     Column {
         var number by remember { mutableStateOf(NUMBER) }
         InputPhoneNumberField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             countryCode = "+90",
             number = number,
             onCountryCodeClick = { },
@@ -96,6 +103,7 @@ internal fun Input_Field_PhoneNumber_Disabled() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(16.dp))
         InputPhoneNumberField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             countryCode = "+90",
             number = number,
             onCountryCodeClick = { },
@@ -118,6 +126,7 @@ internal fun Input_Field_PhoneNumber_Error() = TrendyolTheme {
     Column {
         var number by remember { mutableStateOf(NUMBER) }
         InputPhoneNumberField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             countryCode = "+90",
             number = number,
             onCountryCodeClick = { },
@@ -126,6 +135,7 @@ internal fun Input_Field_PhoneNumber_Error() = TrendyolTheme {
         )
         Spacer(modifier = Modifier.height(16.dp))
         InputPhoneNumberField(
+            modifier = Modifier.width(MIN_WIDTH.dp),
             countryCode = "+90",
             number = number,
             onCountryCodeClick = { },
