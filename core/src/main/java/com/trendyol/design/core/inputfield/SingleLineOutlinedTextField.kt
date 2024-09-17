@@ -43,6 +43,7 @@ public fun SingleLineOutlinedTextField(
 ) {
     Column(modifier = modifier) {
         TrendyolOutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
             value = value,
             label = if (!label.isNullOrBlank()) {
                 {

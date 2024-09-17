@@ -53,6 +53,7 @@ public fun Dropdown(
     Column(modifier = modifier) {
         TrendyolOutlinedTextField(
             modifier = Modifier
+                .fillMaxWidth()
                 .clickable(
                     enabled = enabled,
                     onClick = onClicked,
