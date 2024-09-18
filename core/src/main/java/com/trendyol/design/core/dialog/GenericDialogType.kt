@@ -4,10 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
 
-interface GenericDialogType {
+public interface GenericDialogType {
 
     @get:Composable
-    val textStyle: TextStyle?
+    public val textStyle: TextStyle?
 
-    val iconVector: ImageVector?
+    public val iconVector: ImageVector?
 }

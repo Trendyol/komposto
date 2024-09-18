@@ -11,10 +11,10 @@ import com.trendyol.design.core.button.TrendyolButtonStyle
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
-object DialogButtons {
+public object DialogButtons {
 
     @Composable
-    fun Text(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    public fun Text(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
         Text(
             modifier = modifier.clickable(
                 interactionSource = remember { MutableInteractionSource() },
@@ -27,7 +27,7 @@ object DialogButtons {
     }
 
     @Composable
-    fun Primary(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    public fun Primary(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
         Button(
             modifier = modifier,
             onClick = onClick,
@@ -39,7 +39,7 @@ object DialogButtons {
     }
 
     @Composable
-    fun Secondary(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    public fun Secondary(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
         Button(
             modifier = modifier,
             onClick = onClick,
@@ -50,7 +50,7 @@ object DialogButtons {
         }
     }
 
-    fun (@Composable DialogButtons.() -> Unit)?.takeOrNull(): (@Composable () -> Unit)? {
+    internal fun (@Composable DialogButtons.() -> Unit)?.takeOrNull(): (@Composable () -> Unit)? {
         if (this == null) return null
 
         return { DialogButtons.this() }
