@@ -38,7 +38,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param onDismissRequest A lambda function that is called when the dialog is requested to be dismissed.
  */
 @Composable
-fun AlertDialog(
+public fun AlertDialog(
     message: String,
     modifier: Modifier = Modifier,
     title: String = "",
@@ -61,7 +61,7 @@ fun AlertDialog(
 }
 
 @Composable
-fun AlertDialogContent(
+public fun AlertDialogContent(
     message: String,
     modifier: Modifier = Modifier,
     title: String = "",

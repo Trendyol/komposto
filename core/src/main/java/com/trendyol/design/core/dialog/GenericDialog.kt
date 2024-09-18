@@ -48,7 +48,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param onDismissRequest Lambda function to be called when the dialog is requested to be dismissed.
  */
 @Composable
-fun GenericDialog(
+public fun GenericDialog(
     type: GenericDialogType,
     displayCloseButton: Boolean,
     modifier: Modifier = Modifier,
@@ -78,7 +78,7 @@ fun GenericDialog(
 
 
 @Composable
-fun GenericDialogContent(
+public fun GenericDialogContent(
     type: GenericDialogType,
     displayCloseButton: Boolean,
     modifier: Modifier = Modifier,
