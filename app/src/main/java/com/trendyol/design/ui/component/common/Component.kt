@@ -85,4 +85,7 @@ object Component {
     const val BOX_BADGE_GROUP_3_ITEM = "3ItemsBoxBadgeGroup"
     const val BOX_BADGE_GROUP_2_ITEM = "2ItemsBoxBadgeGroup"
     const val BOX_BADGE_GROUP_1_ITEM = "1ItemsBoxBadgeGroup"
+
+    const val PRICE_SINGLE = "Single Price"
+    const val PRICE_DUAL = "Dual Price"
 }
