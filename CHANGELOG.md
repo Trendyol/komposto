@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.2] - 2024-09-18
+
+### Added
+- Added horizontally price view support to price API
+
 ## [0.12.1] - 2024-09-12
 
 ### Added

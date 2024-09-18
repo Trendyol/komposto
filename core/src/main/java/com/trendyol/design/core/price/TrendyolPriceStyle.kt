@@ -23,13 +23,15 @@ public sealed interface TrendyolPriceStyle {
         val salePriceTextStyle: TextStyle,
         val marketPriceText: String,
         val marketPriceTextStyle: TextStyle,
+        val isPriceViewVertical: Boolean
     ) : PriceStyle {
         override val priceModel: PriceModel
             get() = PriceModel(
                 salePriceText = salePriceText,
                 salePriceTextStyle = salePriceTextStyle,
                 marketPriceText = marketPriceText,
-                marketPriceTextStyle = marketPriceTextStyle
+                marketPriceTextStyle = marketPriceTextStyle,
+                isPriceViewVertical = isPriceViewVertical
             )
     }
 
@@ -55,6 +57,7 @@ public sealed interface TrendyolPriceStyle {
         val marketPriceTextStyle: TextStyle,
         val bottomInfoText: String,
         val bottomInfoTextStyle: TextStyle,
+        val isPriceViewVertical: Boolean
     ) : PriceStyle {
         override val priceModel: PriceModel
             get() = PriceModel(
@@ -64,6 +67,7 @@ public sealed interface TrendyolPriceStyle {
                 marketPriceTextStyle = marketPriceTextStyle,
                 bottomInfoText = bottomInfoText,
                 bottomInfoTextStyle = bottomInfoTextStyle,
+                isPriceViewVertical = isPriceViewVertical
             )
     }
 
@@ -98,6 +102,7 @@ public sealed interface TrendyolPriceStyle {
         val salePriceTextStyle: TextStyle,
         val marketPriceText: String,
         val marketPriceTextStyle: TextStyle,
+        val isPriceViewVertical: Boolean
     ) : PriceStyle {
         override val priceModel: PriceModel
             get() = PriceModel(
@@ -109,7 +114,8 @@ public sealed interface TrendyolPriceStyle {
                 upperInfoText = upperInfoText,
                 upperInfoTextStyle = upperInfoTextStyle,
                 marketPriceText = marketPriceText,
-                marketPriceTextStyle = marketPriceTextStyle
+                marketPriceTextStyle = marketPriceTextStyle,
+                isPriceViewVertical = isPriceViewVertical
             )
     }
 
@@ -150,6 +156,7 @@ public sealed interface TrendyolPriceStyle {
         val marketPriceTextStyle: TextStyle,
         val bottomInfoText: String,
         val bottomInfoTextStyle: TextStyle,
+        val isPriceViewVertical: Boolean
     ) : PriceStyle {
         override val priceModel: PriceModel
             get() = PriceModel(
@@ -163,7 +170,8 @@ public sealed interface TrendyolPriceStyle {
                 bottomInfoText = bottomInfoText,
                 bottomInfoTextStyle = bottomInfoTextStyle,
                 marketPriceText = marketPriceText,
-                marketPriceTextStyle = marketPriceTextStyle
+                marketPriceTextStyle = marketPriceTextStyle,
+                isPriceViewVertical = isPriceViewVertical
             )
     }
 }
