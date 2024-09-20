@@ -10,7 +10,7 @@ import com.trendyol.theme.TrendyolDesign
  * Object containing default values and utilities for [TrendyolRadioButton] components tailored for the
  * [com.trendyol.theme.TrendyolDesign] theme.
  */
-object TrendyolRadioButtonDefaults {
+public object TrendyolRadioButtonDefaults {
 
     /**
      * Provides default RadioButtonColors based on the Trendyol design guidelines.
@@ -22,7 +22,7 @@ object TrendyolRadioButtonDefaults {
      * @return RadioButtonColors object representing the default colors for RadioButton components.
      */
     @Composable
-    fun colors(
+    public fun colors(
         selectedColor: Color = TrendyolDesign.colors.colorPrimary,
         unselectedColor: Color = TrendyolDesign.colors.colorOnSurfaceVariant1,
         disabledSelectedColor: Color = TrendyolDesign.colors.colorOnSurfaceVariant1,

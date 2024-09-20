@@ -32,11 +32,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    kotlin {
+        explicitApi()
+    }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 }
 
@@ -56,7 +59,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.trendyol"
             artifactId = "design-core"
-            version = properties["VERSION"]?.toString() ?: System.getenv("VERSION")
+            version = publishedLibs.versions.design.get()
 
             afterEvaluate {
                 from(components["release"])
@@ -73,12 +76,16 @@ configure<DetektExtension> {
 
 dependencies {
 
-    api(project(":theme"))
+    api(projects.theme)
 
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.compose.material:material:1.5.1")
-    implementation("androidx.compose.ui:ui-tooling:1.5.1")
+    implementation(libs.androidx.core)
 
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0")
-    detektPlugins("io.nlopez.compose.rules:detekt:0.1.13")
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.compose.ui.util)
+    implementation(libs.kotlinXImmutableCollections)
+
+    detektPlugins(libs.detekt.formatting)
+    detektPlugins(libs.detekt.composeRules)
 }

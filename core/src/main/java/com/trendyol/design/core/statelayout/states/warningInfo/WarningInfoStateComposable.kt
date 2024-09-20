@@ -20,15 +20,14 @@ import com.trendyol.design.core.button.TrendyolButtonSize
 import com.trendyol.design.core.button.TrendyolButtonStyle
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.StateLayoutIconSize
-import com.trendyol.design.core.previewtheme.PreviewTheme
-import com.trendyol.design.core.previewtheme.TrendyolColor
 import com.trendyol.design.core.statelayout.WarningInfoStateLayoutStyle
 import com.trendyol.design.core.statelayout.TrendyolWarningInfoStateLayoutStyle
 import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 @Composable
-fun WarningInfoStateComposable(
+public fun WarningInfoStateComposable(
     modifier: Modifier = Modifier,
     warningInfoStateLayoutStyle: WarningInfoStateLayoutStyle,
 ) {
@@ -38,7 +37,7 @@ fun WarningInfoStateComposable(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(TrendyolColor.themeColor.colorBackground),
+            .background(TrendyolDesign.colors.colorBackground),
         contentAlignment = Alignment.Center,
     ) {
         Column(

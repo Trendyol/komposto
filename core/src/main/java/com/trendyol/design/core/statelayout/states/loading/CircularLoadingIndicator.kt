@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.previewtheme.PreviewTheme
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 /**
@@ -24,7 +24,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param indicatorStrokeWidth Optional parameter to specify the stroke width of the loading indicator. Defaults to 4dp.
  */
 @Composable
-fun CircularLoadingIndicator(
+public fun CircularLoadingIndicator(
     modifier: Modifier = Modifier,
     indicatorColor: Color = TrendyolDesign.colors.colorPrimary,
     indicatorStrokeWidth: Dp = 4.dp,

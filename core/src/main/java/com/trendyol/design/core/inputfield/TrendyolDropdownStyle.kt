@@ -5,9 +5,9 @@ import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import com.trendyol.theme.TrendyolDesign
 
-sealed interface TrendyolDropdownStyle {
+public sealed interface TrendyolDropdownStyle {
 
-    data object FloatingLabelOutlined : DropdownStyle {
+    public data object FloatingLabelOutlined : DropdownStyle {
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
@@ -30,7 +30,7 @@ sealed interface TrendyolDropdownStyle {
             )
     }
 
-    data object Outlined : DropdownStyle {
+    public data object Outlined : DropdownStyle {
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
@@ -53,7 +53,7 @@ sealed interface TrendyolDropdownStyle {
             )
     }
 
-    data object Filled : DropdownStyle {
+    public data object Filled : DropdownStyle {
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(

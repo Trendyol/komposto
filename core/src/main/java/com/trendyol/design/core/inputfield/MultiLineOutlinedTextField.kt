@@ -10,14 +10,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.previewtheme.PreviewTheme
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
@@ -27,8 +23,8 @@ import com.trendyol.theme.TrendyolDesign
  * @param style Style configuration for the TextField. This should be an object implementing the
  *              OutlinedTextFieldStyle interface.
  * @param value The initial value for the TextField.
- * @param maxChar Maximum number of characters allowed in the TextField.
  * @param modifier Modifier used to shape the TextField.
+ * @param maxChar Maximum number of characters allowed in the TextField.
  * @param label The label text to display above the TextField.
  * @param errorLabel The error message to display below the TextField when there is an error.
  * @param isError Indicates whether the TextField is in an error state.
@@ -39,11 +35,11 @@ import com.trendyol.theme.TrendyolDesign
  * @param onValueChange Callback for when the value of the TextField changes.
  */
 @Composable
-fun MultiLineOutlineTextField(
+public fun MultiLineOutlineTextField(
     style: OutlinedTextFieldStyle,
     value: String,
-    maxChar: Int,
     modifier: Modifier = Modifier,
+    maxChar: Int? = null,
     label: String? = null,
     placeholder: String? = null,
     errorLabel: String? = null,
@@ -52,12 +48,10 @@ fun MultiLineOutlineTextField(
     colors: TextFieldColors = style.outlinedTextFieldColors,
     onValueChange: (String) -> Unit,
 ) {
-    var text by rememberSaveable { mutableStateOf(value) }
-
     Column(modifier = modifier.width(IntrinsicSize.Max)) {
         TrendyolOutlinedTextField(
-            modifier = Modifier,
-            value = text,
+            modifier = Modifier.fillMaxWidth(),
+            value = value,
             label = if (!label.isNullOrBlank()) {
                 {
                     Text(text = label)
@@ -71,10 +65,7 @@ fun MultiLineOutlineTextField(
                     )
                 }
             } else null,
-            onValueChange = { changedValue ->
-                text = changedValue
-                onValueChange(changedValue)
-            },
+            onValueChange = onValueChange,
             colors = colors,
             isError = isError,
             isFilled = style is TrendyolOutlinedTextFieldStyle.Filled,
@@ -110,11 +101,13 @@ fun MultiLineOutlineTextField(
                 Spacer(modifier = Modifier.weight(1f))
             }
 
-            Text(
-                text = "${text.length} / $maxChar",
-                style = if (isError) TrendyolDesign.typography.body1ColorWarning
-                else TrendyolDesign.typography.body1ColorOnSurfaceVariant1
-            )
+            if (maxChar != null) {
+                Text(
+                    text = "${value.length} / $maxChar",
+                    style = if (isError) TrendyolDesign.typography.body1ColorWarning
+                    else TrendyolDesign.typography.body1ColorOnSurfaceVariant1
+                )
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Preview
 @Composable
-private fun VectorPreview() {
+private fun ArrowDownPreview() {
     Icon(imageVector = Icons.Fill.ArrowDown, size = TrendyolIconSize.Medium)
 }
 

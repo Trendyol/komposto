@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">design</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="helper_text">Helper Text</string>
+    <string name="item">Item</string>
+    <string name="state_layout_title">Content Not Found</string>
+    <string name="state_layout_description">You can discover new contents.</string>
 </resources>

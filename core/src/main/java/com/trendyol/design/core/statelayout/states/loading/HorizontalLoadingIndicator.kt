@@ -12,7 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.tooling.preview.Preview
-import com.trendyol.design.core.previewtheme.PreviewTheme
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 /**
@@ -24,7 +24,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param progressValue Optional parameter to specify the progress value (0.0 to 1.0). Defaults to 0.0.
  */
 @Composable
-fun HorizontalLoadingIndicator(
+public fun HorizontalLoadingIndicator(
     modifier: Modifier = Modifier,
     progressState: HorizontalProgressState = HorizontalProgressState.INFINITIVE,
     @FloatRange(0.0, 1.0) progressValue: Float = 0.0F,
@@ -56,7 +56,7 @@ fun HorizontalLoadingIndicator(
     }
 }
 
-enum class HorizontalProgressState {
+public enum class HorizontalProgressState {
     INFINITIVE, PROGRESSIVE
 }
 

@@ -23,7 +23,7 @@ import androidx.compose.material.Icon as MaterialIcon
  *
  * */
 @Composable
-fun Icon(
+public fun Icon(
     imageVector: ImageVector,
     size: IconSize,
     modifier: Modifier = Modifier,

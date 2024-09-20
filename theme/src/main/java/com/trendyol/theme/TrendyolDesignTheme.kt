@@ -1,13 +1,14 @@
 package com.trendyol.theme
 
+import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.staticCompositionLocalOf
 
-class TrendyolDesignTheme(
+public data class TrendyolDesignTheme(
     val colors: TrendyolDesignColors,
     val typography: TrendyolDesignTypography,
     val fontFamily: TrendyolDesignFontFamily,
 )
 
-val LocalTrendyolDesignTheme = staticCompositionLocalOf<TrendyolDesignTheme> {
+public val LocalTrendyolDesignTheme: ProvidableCompositionLocal<TrendyolDesignTheme> = staticCompositionLocalOf {
     error("CompositionLocal LocalAppResources not present")
 }
