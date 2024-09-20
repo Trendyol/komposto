@@ -40,7 +40,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param position Alignment representing the vertical alignment of the RadioButton within its container.
  */
 @Composable
-fun TrendyolRadioButton(
+public fun TrendyolRadioButton(
     selected: Boolean,
     containerType: RadioButtonContainerType,
     size: RadioButtonSize,

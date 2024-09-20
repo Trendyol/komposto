@@ -17,6 +17,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.text.TrendyolTextDefaults
 
 /**
@@ -31,7 +32,7 @@ import com.trendyol.design.core.text.TrendyolTextDefaults
  */
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun Button(
+public fun Button(
     onClick: () -> Unit,
     style: ButtonStyle,
     size: ButtonSize,
@@ -40,7 +41,7 @@ fun Button(
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     elevation: ButtonElevation? = TrendyolButtonDefaults.elevation(),
     shape: Shape = MaterialTheme.shapes.small,
-    border: BorderStroke? = style.getBorder(enabled = enabled),
+    border: BorderStroke? = style.getBorder(width = 1.dp, enabled = enabled),
     colors: ButtonColors = style.buttonColors,
     contentPadding: PaddingValues = size.contentPadding,
     content: @Composable RowScope.() -> Unit,

@@ -8,9 +8,9 @@ import androidx.compose.runtime.Composable
  *
  * @property outlinedTextFieldColors Colors configuration for the outlined text field.
  */
-interface OutlinedTextFieldStyle {
+public interface OutlinedTextFieldStyle {
 
     /** Colors configuration for the outlined text field. */
     @get:Composable
-    val outlinedTextFieldColors: TextFieldColors
+    public val outlinedTextFieldColors: TextFieldColors
 }

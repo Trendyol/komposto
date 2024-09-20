@@ -5,9 +5,9 @@ import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import com.trendyol.theme.TrendyolDesign
 
-sealed interface TrendyolOutlinedTextFieldStyle {
+public sealed interface TrendyolOutlinedTextFieldStyle {
 
-    data object FloatingLabelOutlined : OutlinedTextFieldStyle {
+    public data object FloatingLabelOutlined : OutlinedTextFieldStyle {
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
@@ -23,7 +23,7 @@ sealed interface TrendyolOutlinedTextFieldStyle {
                 cursorColor = TrendyolDesign.colors.colorPrimary,
 
                 disabledBorderColor = TrendyolDesign.colors.colorBorder,
-                disabledLabelColor = TrendyolDesign.colors.colorBorder,
+                disabledLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 disabledTextColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
                 errorCursorColor = TrendyolDesign.colors.colorWarning,
@@ -32,7 +32,7 @@ sealed interface TrendyolOutlinedTextFieldStyle {
             )
     }
 
-    data object Outlined : OutlinedTextFieldStyle {
+    public data object Outlined : OutlinedTextFieldStyle {
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
@@ -48,7 +48,7 @@ sealed interface TrendyolOutlinedTextFieldStyle {
                 cursorColor = TrendyolDesign.colors.colorPrimary,
 
                 disabledBorderColor = TrendyolDesign.colors.colorBorder,
-                disabledLabelColor = TrendyolDesign.colors.colorBorder,
+                disabledLabelColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
                 disabledTextColor = TrendyolDesign.colors.colorOnSurfaceVariant1,
 
                 errorCursorColor = TrendyolDesign.colors.colorWarning,
@@ -57,7 +57,7 @@ sealed interface TrendyolOutlinedTextFieldStyle {
             )
     }
 
-    data object Filled : OutlinedTextFieldStyle {
+    public data object Filled : OutlinedTextFieldStyle {
         override val outlinedTextFieldColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(

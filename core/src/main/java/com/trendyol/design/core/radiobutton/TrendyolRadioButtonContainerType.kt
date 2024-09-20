@@ -8,9 +8,9 @@ import androidx.compose.runtime.Composable
  * This interface provides sealed classes representing different container types for [TrendyolRadioButton] components
  * with customization options tailored to the Trendyol design guidelines.
  */
-sealed interface TrendyolRadioButtonContainerType {
+public sealed interface TrendyolRadioButtonContainerType {
 
-    data object None : RadioButtonContainerType.None
-    data class Text(override val text: String) : RadioButtonContainerType.Text
-    data class Content(override val content: @Composable () -> Unit) : RadioButtonContainerType.Content
+    public data object None : RadioButtonContainerType.None
+    public data class Text(override val text: String) : RadioButtonContainerType.Text
+    public data class Content(override val content: @Composable () -> Unit) : RadioButtonContainerType.Content
 }

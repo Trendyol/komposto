@@ -5,6 +5,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("io.gitlab.arturbosch.detekt")
     id("shot")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -42,7 +43,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
     packaging {
         resources {
@@ -62,24 +63,35 @@ configure<DetektExtension> {
     config.from.add("$rootDir/config/detekt/detekt-compose.yml")
 }
 
+ksp {
+    arg("skipPrivatePreviews", "true")
+}
+
 dependencies {
 
-    implementation(project(":core"))
+    implementation(projects.core)
+    implementation(projects.bottomsheet)
 
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-    implementation("androidx.activity:activity-compose:1.8.2")
-    implementation(platform("androidx.compose:compose-bom:2023.08.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.material:material:1.5.1")
-    implementation("androidx.compose.ui:ui-tooling:1.5.1")
-    implementation("androidx.compose.ui:ui-text-google-fonts:1.5.1")
+    implementation(libs.androidx.core)
+    implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.appCompat)
+    implementation(libs.android.material)
 
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0")
-    detektPlugins("io.nlopez.compose.rules:detekt:0.1.13")
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.compose.ui.googleFonts)
 
-    androidTestImplementation(libs.compose.ui.test.junit4)
-    androidTestImplementation(libs.test.rules)
-    debugImplementation(libs.compose.ui.test.manifest)
+    implementation(libs.showkase)
+    ksp(libs.showkaseProcessor)
+
+    detektPlugins(libs.detekt.formatting)
+    detektPlugins(libs.detekt.composeRules)
+
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    androidTestImplementation(libs.androidx.test.rules)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
 }

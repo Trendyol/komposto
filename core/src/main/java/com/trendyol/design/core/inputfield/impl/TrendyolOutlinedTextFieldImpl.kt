@@ -165,7 +165,7 @@ private class TrendyolOutlinedTextFieldMeasurePolicy(
         // measure label
         val labelHorizontalPaddingOffset =
             paddingValues.calculateLeftPadding(layoutDirection).roundToPx() +
-                    paddingValues.calculateRightPadding(layoutDirection).roundToPx()
+                paddingValues.calculateRightPadding(layoutDirection).roundToPx()
         val labelConstraints = relaxedConstraints.offset(
             horizontal = lerp(
                 -occupiedSpaceHorizontally - labelHorizontalPaddingOffset,
@@ -280,8 +280,10 @@ private fun calculateWidth(
         leadingPlaceableWidth + middleSection + trailingPlaceableWidth
 
     // Actual LayoutDirection doesn't matter; we only need the sum
-    val labelHorizontalPadding = (paddingValues.calculateLeftPadding(LayoutDirection.Ltr) +
-            paddingValues.calculateRightPadding(LayoutDirection.Ltr)).value * density
+    val labelHorizontalPadding = (
+        paddingValues.calculateLeftPadding(LayoutDirection.Ltr) +
+            paddingValues.calculateRightPadding(LayoutDirection.Ltr)
+        ).value * density
     val focusedLabelWidth =
         ((labelPlaceableWidth + labelHorizontalPadding) * animationProgress).roundToInt()
 
@@ -374,12 +376,12 @@ private fun Placeable.PlacementScope.place(
         }
         val positionY = lerp(startPositionY, -(it.height / 2), animationProgress)
         val positionX = (
-                if (leadingPlaceable == null) {
-                    0f
-                } else {
-                    (widthOrZero(leadingPlaceable) - iconPadding) * (1 - animationProgress)
-                }
-                ).roundToInt() + startPadding
+            if (leadingPlaceable == null) {
+                0f
+            } else {
+                (widthOrZero(leadingPlaceable) - iconPadding) * (1 - animationProgress)
+            }
+            ).roundToInt() + startPadding
         it.placeRelative(positionX, positionY)
     }
 
