@@ -10,25 +10,27 @@ import org.junit.Test
 
 internal class ContentWithLoadingTests : DesignScreenshotTest() {
 
-    private val contents = listOf(
-        DesignScreenshotTestContainer("Circular Loading") {
-            BoxWithHorizontalPadding {
-                StateComposeLayout(state = State.ContentWithLoading(LoadingType.Circular))
-            }
-            Thread.sleep(15000)
-        },
-        DesignScreenshotTestContainer("Progressive Loading") {
-            BoxWithHorizontalPadding {
-                StateComposeLayout(state = State.ContentWithLoading(LoadingType.Progressive))
-            }
-            Thread.sleep(15000)
-        }
-
+    @Test
+    fun circularLoadingTests() = runScreenShotTest(
+        testName = "Circular Loading Tests",
+        contents = listOf(
+            DesignScreenshotTestContainer("Circular Loading") {
+                BoxWithHorizontalPadding {
+                    StateComposeLayout(state = State.ContentWithLoading(LoadingType.Circular))
+                }
+            },
+        )
     )
 
     @Test
-    fun circularLoadingTests() = runScreenShotTest(
-        testName = "Content With Loading Tests",
-        contents = contents
+    fun progressiveLoadingTests() = runScreenShotTest(
+        testName = "Progressive Loading Tests",
+        contents = listOf(
+            DesignScreenshotTestContainer("Progressive Loading") {
+                BoxWithHorizontalPadding {
+                    StateComposeLayout(state = State.ContentWithLoading(LoadingType.Progressive))
+                }
+            }
+        )
     )
 }
