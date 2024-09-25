@@ -32,7 +32,8 @@ public val Icons.Outline.Back: ImageVector
             defaultWidth = 32.dp,
             defaultHeight = 32.dp,
             viewportWidth = 32f,
-            viewportHeight = 32f
+            viewportHeight = 32f,
+            autoMirror = true,
         ).apply {
             path(
                 fill = SolidColor(Color(0xFF666666)),

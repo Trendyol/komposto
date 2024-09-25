@@ -1,5 +1,8 @@
 package icon.outline
 
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
@@ -57,5 +60,22 @@ internal class BackIconTests : DesignScreenshotTest() {
     fun backIconTests() = runScreenShotTest(
         testName = "Back Icon Tests",
         contents = contents
+    )
+
+    @Test
+    fun backIconRTLTest() = runScreenShotTest(
+        testName = "Back Icon RTL Tests",
+        contents = listOf(
+            DesignScreenshotTestContainer("Large") {
+                BoxWithHorizontalPadding {
+                    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+                        Icon(
+                            imageVector = Icons.Outline.Back,
+                            size = TrendyolIconSize.Large
+                        )
+                    }
+                }
+            },
+        )
     )
 }
