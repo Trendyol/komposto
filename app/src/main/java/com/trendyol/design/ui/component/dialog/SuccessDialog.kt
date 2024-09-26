@@ -23,7 +23,7 @@ import com.trendyol.design.ui.theme.TrendyolTheme
     name = Component.SUCCESS_DIALOG,
     styleName = "Single Button",
 )
-fun Succes_Dialog_Single_Button() {
+private fun Succes_Dialog_Single_Button() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -52,7 +52,7 @@ fun Succes_Dialog_Single_Button() {
     name = Component.SUCCESS_DIALOG,
     styleName = "Single Button With Close",
 )
-fun Succes_Dialog_Single_Button_Close() {
+private fun Succes_Dialog_Single_Button_Close() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -81,7 +81,7 @@ fun Succes_Dialog_Single_Button_Close() {
     name = Component.SUCCESS_DIALOG,
     styleName = "Two Button",
 )
-fun Succes_Dialog_Two_Button() {
+private fun Succes_Dialog_Two_Button() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -114,7 +114,7 @@ fun Succes_Dialog_Two_Button() {
     name = Component.SUCCESS_DIALOG,
     styleName = "Two Button With Close",
 )
-fun Succes_Dialog_Two_Button_Button_Close() {
+private fun Succes_Dialog_Two_Button_Button_Close() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -147,7 +147,7 @@ fun Succes_Dialog_Two_Button_Button_Close() {
     name = Component.SUCCESS_DIALOG,
     styleName = "No Button Dialog",
 )
-fun Success_Dialog_No_Button_Dialog() {
+private fun Success_Dialog_No_Button_Dialog() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -172,7 +172,7 @@ fun Success_Dialog_No_Button_Dialog() {
     name = Component.SUCCESS_DIALOG,
     styleName = "No Button Dialog With Close",
 )
-fun Success_Dialog_No_Button_Dialog_Button_Close() {
+private fun Success_Dialog_No_Button_Dialog_Button_Close() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
