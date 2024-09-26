@@ -90,5 +90,4 @@ object Component {
     const val SUCCESS_DIALOG = "Success Dialog"
     const val ERROR_DIALOG = "Error Dialog"
     const val GENERIC_DIALOG = "Generic Dialog"
-
 }

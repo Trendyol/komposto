@@ -76,7 +76,6 @@ public fun GenericDialog(
     }
 }
 
-
 @Composable
 public fun GenericDialogContent(
     type: GenericDialogType,
@@ -96,17 +95,17 @@ public fun GenericDialogContent(
     ) {
         Box {
             if (displayCloseButton) {
-                Icon(modifier = Modifier
-                    .padding(top = 16.dp, end = 20.dp)
-                    .align(Alignment.TopEnd)
-                    .clickable(
-                        indication = null,
-                        interactionSource = remember { MutableInteractionSource() }
-                    ) { onCloseClicked() },
+                Icon(
+                    modifier = Modifier
+                        .padding(top = 16.dp, end = 20.dp)
+                        .align(Alignment.TopEnd)
+                        .clickable(
+                            indication = null,
+                            interactionSource = remember { MutableInteractionSource() }
+                        ) { onCloseClicked() },
                     imageVector = Icons.Outline.Cancel,
                     size = TrendyolIconSize.XSmall
                 )
-
             }
             Column(
                 modifier = Modifier
