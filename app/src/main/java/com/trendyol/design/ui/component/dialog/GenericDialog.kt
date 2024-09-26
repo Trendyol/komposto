@@ -26,7 +26,7 @@ import com.trendyol.design.ui.theme.TrendyolTheme
     name = Component.GENERIC_DIALOG,
     styleName = "Single Button",
 )
-fun Generic_Dialog_Single_Button() {
+private fun Generic_Dialog_Single_Button() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -61,7 +61,7 @@ fun Generic_Dialog_Single_Button() {
     name = Component.GENERIC_DIALOG,
     styleName = "Single Button With Close",
 )
-fun Generic_Dialog_Single_Button_Close() {
+private fun Generic_Dialog_Single_Button_Close() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -96,7 +96,7 @@ fun Generic_Dialog_Single_Button_Close() {
     name = Component.GENERIC_DIALOG,
     styleName = "Two Button",
 )
-fun Generic_Dialog_Two_Button() {
+private fun Generic_Dialog_Two_Button() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -135,7 +135,7 @@ fun Generic_Dialog_Two_Button() {
     name = Component.GENERIC_DIALOG,
     styleName = "Two Button With Close",
 )
-fun Generic_Dialog_Two_Button_Button_Close() {
+private fun Generic_Dialog_Two_Button_Button_Close() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -174,7 +174,7 @@ fun Generic_Dialog_Two_Button_Button_Close() {
     name = Component.GENERIC_DIALOG,
     styleName = "No Button Dialog",
 )
-fun Generic_Dialog_No_Button_Dialog() {
+private fun Generic_Dialog_No_Button_Dialog() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -205,7 +205,7 @@ fun Generic_Dialog_No_Button_Dialog() {
     name = Component.GENERIC_DIALOG,
     styleName = "No Button Dialog With Close",
 )
-fun Generic_Dialog_No_Button_Dialog_Button_Close() {
+private fun Generic_Dialog_No_Button_Dialog_Button_Close() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,

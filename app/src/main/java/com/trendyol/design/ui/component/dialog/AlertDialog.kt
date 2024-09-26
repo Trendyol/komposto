@@ -20,7 +20,7 @@ import com.trendyol.design.ui.theme.TrendyolTheme
     name = Component.ALERT_DIALOG,
     styleName = "Single Button",
 )
-fun AlertDialog_Single_Button() {
+private fun AlertDialog_Single_Button() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -46,7 +46,7 @@ fun AlertDialog_Single_Button() {
     name = Component.ALERT_DIALOG,
     styleName = "Two Button",
 )
-fun AlertDialog_Two_Button() {
+private fun AlertDialog_Two_Button() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,
@@ -75,7 +75,7 @@ fun AlertDialog_Two_Button() {
     name = Component.ALERT_DIALOG,
     styleName = "Three Button",
 )
-fun AlertDialog_Three_Button() {
+private fun AlertDialog_Three_Button() {
     TrendyolTheme {
         Surface(
             color = TrendyolColor.themeColor.colorOnPrimary,

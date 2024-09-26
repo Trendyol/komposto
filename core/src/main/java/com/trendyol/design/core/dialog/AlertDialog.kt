@@ -117,7 +117,8 @@ private fun TrendyolAlertDialogFull() {
     PreviewTheme {
         AlertDialog(
             title = "Uyarı",
-            message = "Aynı anda iki kupon kullanamazsınız. Devam ederseniz sadece son seçtiğiniz kupon uygulanacaktır.",
+            message = "Aynı anda iki kupon kullanamazsınız." +
+                    " Devam ederseniz sadece son seçtiğiniz kupon uygulanacaktır.",
             negativeButton = { DialogButtons.Text(text = "Vazgeç", onClick = {}) },
             positiveButton = { DialogButtons.Text(text = "Devam Et", onClick = {}) },
             neutralButton = { DialogButtons.Text(text = "Neutral", onClick = {}) },
@@ -132,7 +133,8 @@ private fun TrendyolAlertDialogWithoutNeutral() {
     PreviewTheme {
         AlertDialog(
             title = "Uyarı",
-            message = "Aynı anda iki kupon kullanamazsınız. Devam ederseniz sadece son seçtiğiniz kupon uygulanacaktır.",
+            message = "Aynı anda iki kupon kullanamazsınız." +
+                    " Devam ederseniz sadece son seçtiğiniz kupon uygulanacaktır.",
             negativeButton = { DialogButtons.Text(text = "Vazgeç", onClick = {}) },
             positiveButton = { DialogButtons.Text(text = "Devam Et", onClick = {}) },
             onDismissRequest = {}
@@ -146,7 +148,8 @@ private fun TrendyolAlertDialogFullWithoutPositive() {
     PreviewTheme {
         AlertDialog(
             title = "Uyarı",
-            message = "Aynı anda iki kupon kullanamazsınız. Devam ederseniz sadece son seçtiğiniz kupon uygulanacaktır.",
+            message = "Aynı anda iki kupon kullanamazsınız." +
+                    " Devam ederseniz sadece son seçtiğiniz kupon uygulanacaktır.",
             negativeButton = { DialogButtons.Text(text = "Vazgeç", onClick = {}) },
             onDismissRequest = {}
         )
@@ -158,7 +161,8 @@ private fun TrendyolAlertDialogFullWithoutPositive() {
 private fun TrendyolAlertDialogNoTitle() {
     PreviewTheme {
         AlertDialog(
-            message = "Aynı anda iki kupon kullanamazsınız. Devam ederseniz sadece son seçtiğiniz kupon uygulanacaktır.",
+            message = "Aynı anda iki kupon kullanamazsınız." +
+                    " Devam ederseniz sadece son seçtiğiniz kupon uygulanacaktır.",
             negativeButton = { DialogButtons.Text(text = "Vazgeç", onClick = {}) },
             positiveButton = { DialogButtons.Text(text = "Devam Et", onClick = {}) },
             onDismissRequest = {}

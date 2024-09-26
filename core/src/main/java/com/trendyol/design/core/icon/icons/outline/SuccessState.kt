@@ -17,7 +17,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 @Preview
 @Composable
 private fun SuccessDialogPreview() {
-	Icon(imageVector = Icons.Outline.SuccessState, size = TrendyolIconSize.XXLarge)
+    Icon(imageVector = Icons.Outline.SuccessState, size = TrendyolIconSize.XXLarge)
 }
 
 private var _SuccessState: ImageVector? = null
