@@ -77,7 +77,7 @@ public fun InputPhoneNumberField(
                 label = countryCodeLabel,
                 isError = error != null,
                 enabled = enabled,
-                onClicked = onCountryCodeClick,
+                onClick = onCountryCodeClick,
                 modifier = Modifier.width(90.dp),
             )
             Spacer(modifier = Modifier.width(8.dp))

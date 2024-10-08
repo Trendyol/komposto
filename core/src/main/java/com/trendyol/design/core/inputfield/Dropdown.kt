@@ -29,6 +29,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param value The currently selected value in the dropdown.
  * @param modifier Modifier to apply to the Dropdown.
  * @param label The label text to display above the dropdown.
+ * @param placeholder Optional placeholder text displayed when the dropdown is not selected.
  * @param errorLabel The error message to display below the dropdown when an error occurs.
  * @param isError Indicates whether the dropdown is in an error state.
  * @param enabled Determines if the dropdown is enabled for interaction.
@@ -36,7 +37,7 @@ import com.trendyol.theme.TrendyolDesign
  *               dropdown component, including the text color, background color, and colors for different states
  *               (such as selected, focused, disabled, etc.). TextFieldColors provides the means to customize
  *               these colors according to the desired visual appearance.
- * @param onClicked Callback for when the dropdown is clicked.
+ * @param onClick Callback for when the dropdown is clicked.
  */
 @Composable
 public fun Dropdown(
@@ -44,11 +45,12 @@ public fun Dropdown(
     value: String,
     modifier: Modifier = Modifier,
     label: String? = null,
+    placeholder: String? = null,
     errorLabel: String? = null,
     isError: Boolean = false,
     enabled: Boolean = true,
     colors: TextFieldColors = style.outlinedTextFieldColors,
-    onClicked: () -> Unit,
+    onClick: () -> Unit,
 ) {
     Column(modifier = modifier) {
         TrendyolOutlinedTextField(
@@ -56,7 +58,7 @@ public fun Dropdown(
                 .fillMaxWidth()
                 .clickable(
                     enabled = enabled,
-                    onClick = onClicked,
+                    onClick = onClick,
                 ),
             value = value,
             label = if (!label.isNullOrBlank()) {
@@ -68,11 +70,20 @@ public fun Dropdown(
                     )
                 }
             } else null,
+            placeholder = if (!placeholder.isNullOrBlank()) {
+                {
+                    Text(
+                        text = placeholder,
+                        style = TrendyolDesign.typography.subtitleMedium,
+                    )
+                }
+            } else null,
             onValueChange = {},
             colors = colors,
             isError = isError,
             isFilled = style is TrendyolDropdownStyle.Filled,
-            enabled = enabled,
+            enabled = false,
+            enabledColor = enabled,
             singleLine = true,
             readOnly = true,
             trailingIcon = {
@@ -117,7 +128,7 @@ private fun DropdownPreview() {
             value = "Filled",
             isError = false,
             enabled = true,
-            onClicked = {},
+            onClick = {},
         )
     }
 }
