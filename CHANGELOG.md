@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.13.1] - 2024-10-08
+
+### Fixed
+
+- The issue where the `Dropdown` component lacked a placeholder has been resolved.
+- The problem preventing the `onClick` function of `Dropdown` component from being triggered
+  has been addressed.
+
 ## [0.13.0] - 2024-09-26
 
 ### Added
