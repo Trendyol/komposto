@@ -36,21 +36,21 @@ internal fun Input_Field_3_Dropdown_1_Unfocused() = TrendyolTheme {
             style = TrendyolDropdownStyle.FloatingLabelOutlined,
             label = LABEL,
             value = "",
-            onClicked = {},
+            onClick = {},
         )
         Spacer(modifier = Modifier.height(8.dp))
         Dropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Outlined,
             value = "",
-            onClicked = {},
+            onClick = {},
         )
         Spacer(modifier = Modifier.height(8.dp))
         Dropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Filled,
             value = "",
-            onClicked = {},
+            onClick = {},
         )
     }
 }
@@ -69,21 +69,21 @@ internal fun Input_Field_3_Dropdown_2_Typed() = TrendyolTheme {
             style = TrendyolDropdownStyle.FloatingLabelOutlined,
             label = LABEL,
             value = SELECT,
-            onClicked = {},
+            onClick = {},
         )
         Spacer(modifier = Modifier.height(8.dp))
         Dropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Outlined,
             value = SELECT,
-            onClicked = {},
+            onClick = {},
         )
         Spacer(modifier = Modifier.height(8.dp))
         Dropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Filled,
             value = SELECT,
-            onClicked = {},
+            onClick = {},
         )
     }
 }
@@ -102,7 +102,7 @@ internal fun Input_Field_3_Dropdown_3_Disabled() = TrendyolTheme {
             modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.FloatingLabelOutlined,
             value = value,
-            onClicked = {},
+            onClick = {},
             enabled = false,
         )
         Spacer(modifier = Modifier.height(8.dp))
@@ -110,7 +110,7 @@ internal fun Input_Field_3_Dropdown_3_Disabled() = TrendyolTheme {
             modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Outlined,
             value = value,
-            onClicked = {},
+            onClick = {},
             enabled = false,
         )
         Spacer(modifier = Modifier.height(8.dp))
@@ -118,7 +118,7 @@ internal fun Input_Field_3_Dropdown_3_Disabled() = TrendyolTheme {
             modifier = Modifier.width(MIN_WIDTH.dp),
             style = TrendyolDropdownStyle.Filled,
             value = value,
-            onClicked = {},
+            onClick = {},
             enabled = false,
         )
     }
@@ -138,7 +138,7 @@ internal fun Input_Field_3_Dropdown_4_Error() = TrendyolTheme {
             style = TrendyolDropdownStyle.FloatingLabelOutlined,
             label = LABEL,
             value = value,
-            onClicked = {},
+            onClick = {},
             isError = true,
             errorLabel = "Error message goes here",
         )
@@ -146,7 +146,7 @@ internal fun Input_Field_3_Dropdown_4_Error() = TrendyolTheme {
         Dropdown(
             style = TrendyolDropdownStyle.FloatingLabelOutlined,
             value = value,
-            onClicked = {},
+            onClick = {},
             isError = true,
             errorLabel = "Error message goes here",
         )
@@ -154,7 +154,7 @@ internal fun Input_Field_3_Dropdown_4_Error() = TrendyolTheme {
         Dropdown(
             style = TrendyolDropdownStyle.Filled,
             value = value,
-            onClicked = {},
+            onClick = {},
             isError = true,
             errorLabel = "Error message goes here",
         )
