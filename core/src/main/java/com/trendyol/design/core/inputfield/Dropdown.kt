@@ -1,11 +1,14 @@
 package com.trendyol.design.core.inputfield
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
@@ -52,6 +55,10 @@ public fun Dropdown(
     colors: TextFieldColors = style.outlinedTextFieldColors,
     onClick: () -> Unit,
 ) {
+    val interactionSource = remember { MutableInteractionSource() }
+
+    if (interactionSource.collectIsPressedAsState().value) onClick.invoke()
+
     Column(modifier = modifier) {
         TrendyolOutlinedTextField(
             modifier = Modifier
@@ -78,12 +85,12 @@ public fun Dropdown(
                     )
                 }
             } else null,
+            interactionSource = interactionSource,
             onValueChange = {},
             colors = colors,
             isError = isError,
             isFilled = style is TrendyolDropdownStyle.Filled,
-            enabled = false,
-            enabledColor = enabled,
+            enabled = enabled,
             singleLine = true,
             readOnly = true,
             trailingIcon = {
