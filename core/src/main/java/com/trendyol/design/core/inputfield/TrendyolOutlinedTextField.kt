@@ -39,6 +39,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param enabled controls the enabled state of the [TrendyolOutlinedTextField]. When `false`, the text field will
  * be neither editable nor focusable, the input of the text field will not be selectable,
  * visually text field will appear in the disabled UI state
+ * @param enabledColor controls the enabled color state of the [TrendyolOutlinedTextField].
  * @param readOnly controls the editable state of the [TrendyolOutlinedTextField]. When `true`, the text
  * field can not be modified, however, a user can focus it and copy text from it. Read-only text
  * fields are usually used to display pre-filled forms that user can not edit
@@ -87,6 +88,7 @@ internal fun TrendyolOutlinedTextField(
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
+    enabledColor: Boolean = enabled,
     readOnly: Boolean = false,
     textStyle: TextStyle = TrendyolDesign.typography.subtitleMedium.copy(color = Color.Unspecified),
     label: @Composable (() -> Unit)? = null,
@@ -115,12 +117,12 @@ internal fun TrendyolOutlinedTextField(
 ) {
     // If color is not provided via the text style, use content color as a default
     val textColor = textStyle.color.takeOrElse {
-        colors.textColor(enabled).value
+        colors.textColor(enabledColor).value
     }
     val mergedTextStyle = textStyle.merge(TextStyle(color = textColor))
     val backgroundColor = if (isFilled && isError) {
         TrendyolDesign.colors.colorWarningVariant2
-    } else colors.backgroundColor(enabled).value
+    } else colors.backgroundColor(enabledColor).value
 
     BasicTextField(
         value = value,
@@ -131,7 +133,7 @@ internal fun TrendyolOutlinedTextField(
             modifier
         }
             .background(
-                color = if (enabled) backgroundColor else backgroundColor.copy(alpha = 0.5f),
+                color = if (enabledColor) backgroundColor else backgroundColor.copy(alpha = 0.5f),
                 shape = shape
             )
             .defaultMinSize(
@@ -160,13 +162,13 @@ internal fun TrendyolOutlinedTextField(
                 leadingIcon = leadingIcon,
                 trailingIcon = trailingIcon,
                 singleLine = singleLine,
-                enabled = enabled,
+                enabled = enabledColor,
                 isError = isError,
                 interactionSource = interactionSource,
                 colors = colors,
                 border = {
                     TextFieldDefaults.BorderBox(
-                        enabled = enabled,
+                        enabled = enabledColor,
                         isError = isError,
                         interactionSource = interactionSource,
                         colors = colors,
