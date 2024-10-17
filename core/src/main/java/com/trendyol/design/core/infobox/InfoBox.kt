@@ -27,9 +27,9 @@ import com.trendyol.theme.TrendyolDesign
 
 @Composable
 fun InfoBox(
-    modifier: Modifier = Modifier,
     style: InfoBoxStyle,
     text: String,
+    modifier: Modifier = Modifier,
     iconPosition: Arrangement.Horizontal? = null,
     showBorder: Boolean = false,
 ) {
