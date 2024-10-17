@@ -20,7 +20,7 @@ private fun VectorPreview() {
     Icon(Icons.Outline.Union, TrendyolIconSize.XSmall)
 }
 
-val Icons.Outline.Union: ImageVector by lazy {
+public val Icons.Outline.Union: ImageVector by lazy {
     ImageVector.Builder(
         name = "Union",
         defaultWidth = 16.dp,

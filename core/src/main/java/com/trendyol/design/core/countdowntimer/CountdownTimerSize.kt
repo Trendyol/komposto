@@ -9,26 +9,26 @@ import androidx.compose.ui.unit.Dp
  * @property verticalPadding Represents the vertical padding of the countdown timer box.
  * @property horizontalPadding Represents the horizontal padding of the countdown timer box.
  */
-interface CountdownTimerSize {
+public interface CountdownTimerSize {
 
     /**
      * Retrieves the vertical padding for the countdown timer box.
      *
      * @return a `Dp` value representing the vertical padding.
      */
-    val verticalPadding: Dp
+    public val verticalPadding: Dp
 
     /**
      * Retrieves the horizontal padding for the countdown timer box.
      *
      * @return a `Dp` value representing the horizontal padding.
      */
-    val horizontalPadding: Dp
+    public val horizontalPadding: Dp
 
     /**
      * Retrieves the horizontal padding for the countdown timer box and separator icon.
      *
      * @return a `Dp` value representing the horizontal padding.
      */
-    val verticalBoxPadding: Dp
+    public val verticalBoxPadding: Dp
 }

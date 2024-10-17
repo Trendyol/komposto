@@ -72,7 +72,7 @@ import kotlin.math.floor
  * @param onRatingClick An optional function to rate, returns clicked star index plus one as Int.
  */
 @Composable
-fun RatingBar(
+public fun RatingBar(
     rating: Float,
     size: RatingBarSize,
     modifier: Modifier = Modifier,

@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 
-class TrendyolDesignColors(
+public class TrendyolDesignColors(
     colorOnSurfaceVariant1: Color = DefaultColors.colorOnSurfaceVariant1,
     colorOnSurfaceVariant2: Color = DefaultColors.colorOnSurfaceVariant2,
     colorOnSurfaceVariant3: Color = DefaultColors.colorOnSurfaceVariant3,
@@ -34,85 +34,85 @@ class TrendyolDesignColors(
     colorStarVariant2: Color = DefaultColors.colorStarVariant2,
 ) {
 
-    var colorOnSurfaceVariant1 by mutableStateOf(colorOnSurfaceVariant1)
+    public var colorOnSurfaceVariant1: Color by mutableStateOf(colorOnSurfaceVariant1)
         private set
 
-    var colorOnSurfaceVariant2 by mutableStateOf(colorOnSurfaceVariant2)
+    public var colorOnSurfaceVariant2: Color by mutableStateOf(colorOnSurfaceVariant2)
         private set
 
-    var colorOnSurfaceVariant3 by mutableStateOf(colorOnSurfaceVariant3)
+    public var colorOnSurfaceVariant3: Color by mutableStateOf(colorOnSurfaceVariant3)
         private set
 
-    var colorPrimary by mutableStateOf(colorPrimary)
+    public var colorPrimary: Color by mutableStateOf(colorPrimary)
         private set
 
-    var colorPrimaryVariant1 by mutableStateOf(colorPrimaryVariant1)
+    public var colorPrimaryVariant1: Color by mutableStateOf(colorPrimaryVariant1)
         private set
 
-    var colorPrimaryVariant2 by mutableStateOf(colorPrimaryVariant2)
+    public var colorPrimaryVariant2: Color by mutableStateOf(colorPrimaryVariant2)
         private set
 
-    var colorOnPrimary by mutableStateOf(colorOnPrimary)
+    public var colorOnPrimary: Color by mutableStateOf(colorOnPrimary)
         private set
 
-    var colorWarning by mutableStateOf(colorWarning)
+    public var colorWarning: Color by mutableStateOf(colorWarning)
         private set
 
-    var colorWarningVariant1 by mutableStateOf(colorWarningVariant1)
+    public var colorWarningVariant1: Color by mutableStateOf(colorWarningVariant1)
         private set
 
-    var colorWarningVariant2 by mutableStateOf(colorWarningVariant2)
+    public var colorWarningVariant2: Color by mutableStateOf(colorWarningVariant2)
         private set
 
-    var colorGreen by mutableStateOf(colorGreen)
+    public var colorGreen: Color by mutableStateOf(colorGreen)
         private set
 
-    var colorGreenVariant1 by mutableStateOf(colorGreenVariant1)
+    public var colorGreenVariant1: Color by mutableStateOf(colorGreenVariant1)
         private set
 
-    var colorGreenVariant2 by mutableStateOf(colorGreenVariant2)
+    public var colorGreenVariant2: Color by mutableStateOf(colorGreenVariant2)
         private set
 
-    var colorBlue by mutableStateOf(colorBlue)
+    public var colorBlue: Color by mutableStateOf(colorBlue)
         private set
 
-    var colorBlueVariant1 by mutableStateOf(colorBlueVariant1)
+    public var colorBlueVariant1: Color by mutableStateOf(colorBlueVariant1)
         private set
 
-    var colorBlueVariant2 by mutableStateOf(colorBlueVariant2)
+    public var colorBlueVariant2: Color by mutableStateOf(colorBlueVariant2)
         private set
 
-    var colorSurface by mutableStateOf(colorSurface)
+    public var colorSurface: Color by mutableStateOf(colorSurface)
         private set
 
-    var colorBackground by mutableStateOf(colorBackground)
+    public var colorBackground: Color by mutableStateOf(colorBackground)
         private set
 
-    var colorBorder by mutableStateOf(colorBorder)
+    public var colorBorder: Color by mutableStateOf(colorBorder)
         private set
 
-    var colorTransparent by mutableStateOf(colorTransparent)
+    public var colorTransparent: Color by mutableStateOf(colorTransparent)
         private set
 
-    var colorPink by mutableStateOf(colorPink)
+    public var colorPink: Color by mutableStateOf(colorPink)
         private set
 
-    var colorPinkVariant1 by mutableStateOf(colorPinkVariant1)
+    public var colorPinkVariant1: Color by mutableStateOf(colorPinkVariant1)
         private set
 
-    var colorPinkVariant2 by mutableStateOf(colorPinkVariant2)
+    public var colorPinkVariant2: Color by mutableStateOf(colorPinkVariant2)
         private set
 
-    var colorStar by mutableStateOf(colorStar)
+    public var colorStar: Color by mutableStateOf(colorStar)
         private set
 
-    var colorStarVariant1 by mutableStateOf(colorStarVariant1)
+    public var colorStarVariant1: Color by mutableStateOf(colorStarVariant1)
         private set
 
-    var colorStarVariant2 by mutableStateOf(colorStarVariant2)
+    public var colorStarVariant2: Color by mutableStateOf(colorStarVariant2)
         private set
 
-    fun copy(
+    public fun copy(
         colorOnSurfaceVariant1: Color = DefaultColors.colorOnSurfaceVariant1,
         colorOnSurfaceVariant2: Color = DefaultColors.colorOnSurfaceVariant2,
         colorOnSurfaceVariant3: Color = DefaultColors.colorOnSurfaceVariant3,

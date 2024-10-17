@@ -69,4 +69,25 @@ object Component {
     const val RATING_BAR = "Rating Bar"
 
     const val COUNTDOWN_TIMER = "Countdown Timer"
+
+    const val BOX_BADGE_CUSTOM = "Custom"
+    const val BOX_BADGE_COUPON = "Coupon"
+    const val BOX_BADGE_FREE_DELIVERY = "FreeDelivery"
+    const val BOX_BADGE_FAST_DELIVERY = "FastDelivery"
+    const val BOX_BADGE_BUY_MORE_PAY_LESS = "BuyMorePayLess"
+    const val BOX_BADGE_BUY_TOGETHER = "BuyTogether"
+    const val BOX_BADGE_VIDEO = "Video"
+    const val BOX_BADGE_TODAY_DELIVERY = "TodayDelivery"
+    const val BOX_BADGE_CREDIT = "Credit"
+    const val BOX_BADGE_INFLUENCER_CHOICE = "InfluencerChoice"
+
+    const val BOX_BADGE_GROUP_4_ITEM = "4ItemsBoxBadgeGroup"
+    const val BOX_BADGE_GROUP_3_ITEM = "3ItemsBoxBadgeGroup"
+    const val BOX_BADGE_GROUP_2_ITEM = "2ItemsBoxBadgeGroup"
+    const val BOX_BADGE_GROUP_1_ITEM = "1ItemsBoxBadgeGroup"
+
+    const val ALERT_DIALOG = "Native Alert Dialog"
+    const val SUCCESS_DIALOG = "Success Dialog"
+    const val ERROR_DIALOG = "Error Dialog"
+    const val GENERIC_DIALOG = "Generic Dialog"
 }

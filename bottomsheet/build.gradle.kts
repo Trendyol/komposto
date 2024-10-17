@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    kotlin {
+        explicitApi()
+    }
     buildFeatures {
         compose = true
     }

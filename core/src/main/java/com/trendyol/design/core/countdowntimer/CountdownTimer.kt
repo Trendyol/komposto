@@ -37,7 +37,7 @@ import java.util.concurrent.TimeUnit
  * @param backgroundAlpha The alpha value for the background color, allowing control over the transparency of the time boxes. Defaults to `1F`.
  */
 @Composable
-fun KPCountdownTimer(
+public fun KPCountdownTimer(
     size: CountdownTimerSize,
     endDate: Long,
     modifier: Modifier = Modifier,

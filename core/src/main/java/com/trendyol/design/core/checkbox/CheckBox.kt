@@ -27,7 +27,7 @@ import com.trendyol.design.core.preview.PreviewTheme
  * @param position The vertical alignment of the checkbox within its container.
  */
 @Composable
-fun TrendyolCheckbox(
+public fun TrendyolCheckbox(
     style: CheckboxStyle,
     size: CheckboxSize,
     containerType: CheckboxContainerType,

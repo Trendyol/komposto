@@ -27,7 +27,7 @@ import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 @Composable
-fun WarningInfoStateComposable(
+public fun WarningInfoStateComposable(
     modifier: Modifier = Modifier,
     warningInfoStateLayoutStyle: WarningInfoStateLayoutStyle,
 ) {

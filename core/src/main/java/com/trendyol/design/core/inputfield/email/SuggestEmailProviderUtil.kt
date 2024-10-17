@@ -11,7 +11,7 @@ import androidx.compose.ui.text.withStyle
  *
  * This object analyzes the input text and suggests email format suggestions based on predefined domain list.
  */
-object SuggestEmailProviderUtil {
+public object SuggestEmailProviderUtil {
 
     private val DOMAIN_LIST = listOf(
         "@gmail.com",
@@ -30,7 +30,7 @@ object SuggestEmailProviderUtil {
         "@trendyol.com",
     )
 
-    fun suggest(email: String): AnnotatedString {
+    public fun suggest(email: String): AnnotatedString {
         return if (email.contains("@")) {
             val domainText = email.substring(email.indexOf("@"))
             val hit = DOMAIN_LIST.firstOrNull { it.startsWith(domainText) }

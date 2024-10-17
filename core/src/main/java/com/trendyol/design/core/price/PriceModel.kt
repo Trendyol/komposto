@@ -23,7 +23,7 @@ import kotlinx.parcelize.RawValue
  * @param bottomInfoTextStyle If you need a textStyle in your bottomInfoText, you can set it in this parameter.
  */
 @Stable
-data class PriceModel(
+public data class PriceModel(
     val icon: @RawValue ImageVector? = null,
     val iconSize: @RawValue IconSize = TrendyolIconSize.XXSmall,
     val iconTint: @RawValue Color? = null,

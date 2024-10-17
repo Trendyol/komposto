@@ -5,13 +5,61 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
 ## [Unreleased]
 
-## [0.12.0] - 2024-09-10
+## [0.14.0] - 2024-09-10
 
 ### Added
 
 - InfoBox composable is introduced with icon positions, border and two lines
+
+## [0.13.1] - 2024-10-08
+
+### Fixed
+
+- The issue where the `Dropdown` component lacked a placeholder has been resolved.
+- The problem preventing the `onClick` function of `Dropdown` component from being triggered
+  has been addressed.
+
+## [0.13.0] - 2024-09-26
+
+### Added
+
+- Introduced `AlertDiag` and `GenericDialog` composables
+- Implemented `TrendyolGenericDialogType` for defining different generic dialog
+  (`Success`, `Error` and `Custom`)
+  of the rating bar.
+
+## [0.12.3] - 2024-09-25
+
+### Fixed
+
+- Fixed back icon RTL mirror issue.
+
+## [0.12.2] - 2024-09-17
+
+### Fixed
+
+- Fixed all of the input field components which uses `TrendyolOutlinedField` filling width issue.
+
+## [0.12.1] - 2024-09-12
+
+### Added
+- Added Kotlin's binary-compatibility-validator in order to validate public APIs
+- Enabled explicitApi in order to prevent publishing wrong APIs to public
+
+## [0.12.0] - 2024-09-11
+
+### Added
+
+- BoxBadge composable is introduced with [KPBoxBadgeType.Custom] and
+  predefined [KPBoxBadgeType.Defaults] types
+- BoxBadgeGroup composable is introduced as a horizontal list of BoxBadge items
+
+### Changed
+
+- Add Ltr fonts to Preview Theme
 
 ## [0.11.1] - 2024-09-06
 
@@ -108,3 +156,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   file is changed.
 - Used "check" task instead of "detekt" task in CI/CD pipeline to check if everything is OK. "check"
   task includes Detekt and other checks such as running unit tests and Android Lint.
+

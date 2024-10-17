@@ -14,4 +14,6 @@ object Group {
     const val LIST_CELL = "List Cell"
     const val RATING_BAR = "Rating Bar"
     const val TIMER = "Timer"
+    const val BOX_BADGE = "Box Badge"
+    const val DIALOG = "Dialog"
 }

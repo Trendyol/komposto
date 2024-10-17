@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.state.ToggleableState
 
 @Stable
-interface TrendyolCheckboxColors {
+public interface TrendyolCheckboxColors {
 
     /**
      * Represents the color used for the checkmark inside the checkbox, depending on [state].
@@ -15,7 +15,7 @@ interface TrendyolCheckboxColors {
      * @param state the [ToggleableState] of the checkbox
      */
     @Composable
-    fun checkmarkColor(enabled: Boolean, state: ToggleableState): State<Color>
+    public fun checkmarkColor(enabled: Boolean, state: ToggleableState): State<Color>
 
     /**
      * Represents the color used for the box (background) of the checkbox, depending on [enabled]
@@ -25,7 +25,7 @@ interface TrendyolCheckboxColors {
      * @param state the [ToggleableState] of the checkbox
      */
     @Composable
-    fun boxColor(enabled: Boolean, state: ToggleableState): State<Color>
+    public fun boxColor(enabled: Boolean, state: ToggleableState): State<Color>
 
     /**
      * Represents the color used for the border of the checkbox, depending on [enabled] and [state].
@@ -34,5 +34,5 @@ interface TrendyolCheckboxColors {
      * @param state the [ToggleableState] of the checkbox
      */
     @Composable
-    fun borderColor(enabled: Boolean, state: ToggleableState): State<Color>
+    public fun borderColor(enabled: Boolean, state: ToggleableState): State<Color>
 }

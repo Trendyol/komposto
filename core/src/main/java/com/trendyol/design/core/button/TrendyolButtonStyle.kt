@@ -3,8 +3,8 @@ package com.trendyol.design.core.button
 import androidx.compose.runtime.Composable
 import com.trendyol.theme.TrendyolDesign
 
-sealed interface TrendyolButtonStyle {
-    data object Primary : ButtonStyle {
+public sealed interface TrendyolButtonStyle {
+    public data object Primary : ButtonStyle {
         override val buttonColors: TrendyolButtonColors
             @Composable
             get() = TrendyolButtonDefaults.buttonColors(
@@ -15,7 +15,7 @@ sealed interface TrendyolButtonStyle {
             )
     }
 
-    data object Secondary : ButtonStyle {
+    public data object Secondary : ButtonStyle {
         override val buttonColors: TrendyolButtonColors
             @Composable
             get() = TrendyolButtonDefaults.buttonColors(
@@ -28,7 +28,7 @@ sealed interface TrendyolButtonStyle {
             )
     }
 
-    data object Tertiary : ButtonStyle {
+    public data object Tertiary : ButtonStyle {
         override val buttonColors: TrendyolButtonColors
             @Composable
             get() = TrendyolButtonDefaults.buttonColors(

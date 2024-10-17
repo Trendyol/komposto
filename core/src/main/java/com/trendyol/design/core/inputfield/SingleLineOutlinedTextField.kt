@@ -29,7 +29,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param onValueChange Callback for when the value of the TextField changes.
  */
 @Composable
-fun SingleLineOutlinedTextField(
+public fun SingleLineOutlinedTextField(
     style: OutlinedTextFieldStyle,
     value: String,
     modifier: Modifier = Modifier,
@@ -43,6 +43,7 @@ fun SingleLineOutlinedTextField(
 ) {
     Column(modifier = modifier) {
         TrendyolOutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
             value = value,
             label = if (!label.isNullOrBlank()) {
                 {
