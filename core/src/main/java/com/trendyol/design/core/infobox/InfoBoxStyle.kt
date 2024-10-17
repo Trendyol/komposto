@@ -6,16 +6,16 @@ import com.trendyol.theme.TrendyolDesign
 
 interface InfoBoxStyle {
     @get:Composable
-    val backgroundColor: Color
+    public val backgroundColor: Color
 
     @get:Composable
-    val borderColor: Color
+    public val borderColor: Color
 
     @get:Composable
-    val textColor: Color
+    public val textColor: Color
 
     @get:Composable
-    val iconTint: Color
+    public val iconTint: Color
 }
 
 sealed interface KPInfoBoxStyle {

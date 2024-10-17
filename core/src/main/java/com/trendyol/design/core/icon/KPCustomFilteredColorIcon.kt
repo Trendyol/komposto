@@ -18,7 +18,7 @@ import com.trendyol.design.core.icon.icons.fill.InfoIcon
  * @param innerTint You can set innerIcon's tint in this parameter.
  */
 @Composable
-fun CustomFilteredColorIcon(
+fun KPCustomFilteredColorIcon(
     modifier: Modifier = Modifier,
     outerIcon: ImageVector = Icons.Fill.CircleIcon,
     outerTint: Color,
@@ -44,7 +44,7 @@ fun CustomFilteredColorIcon(
 @Preview
 @Composable
 private fun CustomFilteredColorIconPreview() {
-    CustomFilteredColorIcon(
+    KPCustomFilteredColorIcon(
         outerTint = Color.Red,
         innerIcon = Icons.Fill.InfoIcon,
         innerTint = Color.White
