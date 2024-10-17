@@ -19,7 +19,7 @@ import com.trendyol.theme.TrendyolDesign
  * @property iconTint A [Color] that sets the tint color for the icon displayed in the info box.
  */
 
-interface InfoBoxStyle {
+public interface InfoBoxStyle {
     @get:Composable
     public val backgroundColor: Color
 
@@ -33,8 +33,8 @@ interface InfoBoxStyle {
     public val iconTint: Color
 }
 
-sealed interface KPInfoBoxStyle {
-    data object Orange : InfoBoxStyle {
+public sealed interface KPInfoBoxStyle {
+    public data object Orange : InfoBoxStyle {
         override val backgroundColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorPrimaryVariant1
@@ -53,7 +53,7 @@ sealed interface KPInfoBoxStyle {
 
     }
 
-    data object White : InfoBoxStyle {
+    public data object White : InfoBoxStyle {
         override val backgroundColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorSurface
@@ -71,7 +71,7 @@ sealed interface KPInfoBoxStyle {
             get() = TrendyolDesign.colors.colorPrimary
     }
 
-    data object Gray : InfoBoxStyle {
+    public data object Gray : InfoBoxStyle {
         override val backgroundColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorOnSurfaceVariant1.copy(alpha = 0.12f)
@@ -89,7 +89,7 @@ sealed interface KPInfoBoxStyle {
             get() = TrendyolDesign.colors.colorPrimary
     }
 
-    data object Red : InfoBoxStyle {
+    public data object Red : InfoBoxStyle {
         override val backgroundColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorWarningVariant1
@@ -108,7 +108,7 @@ sealed interface KPInfoBoxStyle {
 
     }
 
-    data object Blue : InfoBoxStyle {
+    public data object Blue : InfoBoxStyle {
         override val backgroundColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorBlueVariant1
@@ -127,7 +127,7 @@ sealed interface KPInfoBoxStyle {
 
     }
 
-    data object Green : InfoBoxStyle {
+    public data object Green : InfoBoxStyle {
         override val backgroundColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorGreenVariant1
@@ -145,7 +145,7 @@ sealed interface KPInfoBoxStyle {
             get() = TrendyolDesign.colors.colorGreen
     }
 
-    data object Pink : InfoBoxStyle {
+    public data object Pink : InfoBoxStyle {
         override val backgroundColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorPinkVariant1

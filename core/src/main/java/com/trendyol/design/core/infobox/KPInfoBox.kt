@@ -41,7 +41,7 @@ import com.trendyol.theme.TrendyolDesign
 
 
 @Composable
-fun KPInfoBox(
+public fun KPInfoBox(
     style: InfoBoxStyle,
     text: String,
     modifier: Modifier = Modifier,
@@ -95,7 +95,7 @@ fun KPInfoBox(
 }
 
 @Composable
-fun KPInfoBox(
+public fun KPInfoBox(
     style: InfoBoxStyle,
     modifier: Modifier = Modifier,
     iconPosition: Arrangement.Horizontal? = null,
