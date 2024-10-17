@@ -87,8 +87,6 @@ fun InfoBox(
     showBorder: Boolean = false,
     multiText: @Composable ColumnScope.() -> Unit,
 ) {
-
-
     val rootModifier = modifier
         .then(
             if (showBorder) {
