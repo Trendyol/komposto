@@ -5,15 +5,17 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.LocalTextStyle
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icons
@@ -26,54 +28,109 @@ import com.trendyol.theme.TrendyolDesign
 @Composable
 fun InfoBox(
     modifier: Modifier = Modifier,
-    style: InfoBoxStyle
+    style: InfoBoxStyle,
+    text: String,
+    iconPosition: Arrangement.Horizontal? = null,
+    showBorder: Boolean = false,
 ) {
-    val model = style.infoBoxModel
+    val rootModifier = modifier
+        .then(
+            if (showBorder) {
+                modifier.border(
+                    border = BorderStroke(width = 1.dp, color = style.borderColor),
+                    shape = RoundedCornerShape(8.dp)
+                )
+            } else {
+                modifier
+            }
+        )
+        .background(color = style.backgroundColor, shape = RoundedCornerShape(8.dp))
+        .padding(12.dp)
+
 
     Row(
-        modifier = modifier
-            .background(color = model.backgroundColor, shape = RoundedCornerShape(8.dp))
-            .border(
-                border = BorderStroke(width = 1.dp, color = model.borderColor ?: model.backgroundColor),
-                shape = RoundedCornerShape(8.dp)
-            )
-            .padding(12.dp),
+        modifier = rootModifier,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        if (model.iconPosition == IconPosition.START) {
+        if (iconPosition == Arrangement.Start) {
             CustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
                 outerIcon = Icons.Fill.CircleIcon,
-                outerTint = model.icon.outerTint,
+                outerTint = style.iconTint,
+                innerIcon = Icons.Fill.InfoIcon,
+            )
+        }
+
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = text,
+                style = TrendyolDesign.typography.body1.copy(color = style.textColor),
+            )
+        }
+
+        if (iconPosition == Arrangement.End) {
+            CustomFilteredColorIcon(
+                modifier = Modifier.align(Alignment.CenterVertically),
+                outerIcon = Icons.Fill.CircleIcon,
+                outerTint = style.iconTint,
+                innerIcon = Icons.Fill.InfoIcon,
+            )
+        }
+    }
+}
+
+@Composable
+fun InfoBox(
+    modifier: Modifier = Modifier,
+    style: InfoBoxStyle,
+    iconPosition: Arrangement.Horizontal? = null,
+    showBorder: Boolean = false,
+    multiText: @Composable ColumnScope.() -> Unit,
+) {
+
+
+    val rootModifier = modifier
+        .then(
+            if (showBorder) {
+                modifier.border(
+                    border = BorderStroke(width = 1.dp, color = style.borderColor),
+                    shape = RoundedCornerShape(8.dp)
+                )
+            } else {
+                modifier
+            }
+        )
+        .background(color = style.backgroundColor, shape = RoundedCornerShape(8.dp))
+        .padding(12.dp)
+
+
+    Row(
+        modifier = rootModifier,
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        if (iconPosition == Arrangement.Start) {
+            CustomFilteredColorIcon(
+                modifier = Modifier.align(Alignment.CenterVertically),
+                outerIcon = Icons.Fill.CircleIcon,
+                outerTint = style.iconTint,
                 innerIcon = Icons.Fill.InfoIcon,
             )
         }
 
 
         Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = model.textModel.text,
-                textAlign = TextAlign.Start,
-                style = TrendyolDesign.typography.body1,
-                color = model.textModel.textTint
-            )
-
-            if (model.textModel.secondText.isNullOrEmpty().not()) {
-                Text(
-                    modifier = Modifier.padding(top = 8.dp),
-                    text = model.textModel.text,
-                    textAlign = TextAlign.Start,
-                    style = TrendyolDesign.typography.body1,
-                    color = model.textModel.textTint
-                )
+            CompositionLocalProvider(
+                LocalTextStyle provides TrendyolDesign.typography.body1.copy(color = style.textColor)
+            ) {
+                multiText()
             }
         }
 
-        if (model.iconPosition == IconPosition.END) {
+        if (iconPosition == Arrangement.End) {
             CustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
                 outerIcon = Icons.Fill.CircleIcon,
-                outerTint = model.icon.outerTint,
+                outerTint = style.iconTint,
                 innerIcon = Icons.Fill.InfoIcon,
             )
         }
@@ -82,116 +139,141 @@ fun InfoBox(
 
 @Preview
 @Composable
-private fun DefaultInfoBoxLeftIconPreview() {
+private fun OrangeInfoBoxLeftIconPreview() {
     PreviewTheme {
         InfoBox(
-            style = TrendyolInfoBoxStyle.DefaultInfoBox(
-                textModel = ContentTextModel(
-                    text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget metus commodo.",
-                    textTint = TrendyolDesign.colors.colorPrimary,
-                ),
-                icon = IconModel(
-                    outerIcon = Icons.Fill.CircleIcon,
-                    outerTint = TrendyolDesign.colors.colorPrimary,
-                    innerIcon = Icons.Fill.InfoIcon,
-                    innerTint = Color.White
-                ),
-                backgroundColor = TrendyolDesign.colors.colorPrimaryVariant1,
-                iconPosition = IconPosition.START
-            )
+            style = KPInfoBoxStyle.Orange,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+            iconPosition = Arrangement.Start,
         )
     }
 }
 
 @Preview
 @Composable
-private fun DefaultInfoBoxRightIconPreview() {
+private fun OrangeInfoBoxRightIconPreview() {
     PreviewTheme {
         InfoBox(
-            style = TrendyolInfoBoxStyle.DefaultInfoBoxWithBorder(
-                textModel = ContentTextModel(
-                    text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
-                    textTint = TrendyolDesign.colors.colorPrimary,
-                ),
-                icon = IconModel(
-                    outerIcon = Icons.Fill.CircleIcon,
-                    outerTint = TrendyolDesign.colors.colorPrimary,
-                    innerIcon = Icons.Fill.InfoIcon,
-                    innerTint = Color.White
-                ),
-                backgroundColor = TrendyolDesign.colors.colorPrimaryVariant1,
-                iconPosition = IconPosition.END
-            )
+            style = KPInfoBoxStyle.Orange,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+            iconPosition = Arrangement.End,
         )
     }
 }
 
 @Preview
 @Composable
-private fun DefaultInfoBoxNoIconPreview() {
+private fun OrangeInfoBoxNoIconPreview() {
     PreviewTheme {
         InfoBox(
-            style = TrendyolInfoBoxStyle.DefaultInfoBoxWithBorder(
-                textModel = ContentTextModel(
-                    text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
-                ),
-                icon = IconModel(
-                    outerIcon = Icons.Fill.CircleIcon,
-                    outerTint = TrendyolDesign.colors.colorPrimary,
-                    innerIcon = Icons.Fill.InfoIcon,
-                    innerTint = Color.White
-                ),
-                backgroundColor = Color.White,
-                iconPosition = IconPosition.NONE
-            )
+            style = KPInfoBoxStyle.Orange,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun OrangeInfoBoxLeftIconWithBorderPreview() {
+    PreviewTheme {
+        InfoBox(
+            style = KPInfoBoxStyle.Orange,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+            iconPosition = Arrangement.Start,
+            showBorder = true
         )
     }
 }
 
 @Preview
 @Composable
-private fun DefaultInfoBoxLeftIconWithBorderPreview() {
+private fun OrangeInfoBoxLeftIconWithTwoTextsPreview() {
     PreviewTheme {
         InfoBox(
-            style = TrendyolInfoBoxStyle.DefaultInfoBoxWithBorder(
-                textModel = ContentTextModel(
-                    text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget metus commodo.",
-                    textTint = TrendyolDesign.colors.colorPrimary,
-                ),
-                icon = IconModel(
-                    outerIcon = Icons.Fill.CircleIcon,
-                    outerTint = TrendyolDesign.colors.colorPrimary,
-                    innerIcon = Icons.Fill.InfoIcon,
-                    innerTint = Color.White
-                ),
-                backgroundColor = TrendyolDesign.colors.colorPrimaryVariant1,
-                iconPosition = IconPosition.START,
-                borderColor = Color.Red
+            style = KPInfoBoxStyle.Orange,
+            iconPosition = Arrangement.Start,
+            showBorder = false
+        ) {
+            Text(
+                text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             )
+            Text(
+                modifier = Modifier.padding(top = 8.dp),
+                text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+                color = Color.Red
+            )
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun WhiteInfoBoxLeftIconPreview() {
+    PreviewTheme {
+        InfoBox(
+            style = KPInfoBoxStyle.White,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+            iconPosition = Arrangement.Start,
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun GrayInfoBoxLeftIconPreview() {
+    PreviewTheme {
+        InfoBox(
+            style = KPInfoBoxStyle.Gray,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+            iconPosition = Arrangement.Start
         )
     }
 }
 
 @Preview
 @Composable
-private fun DoubleLineInfoBoxLeftIconPreview() {
+private fun RedInfoBoxLeftIconPreview() {
     PreviewTheme {
         InfoBox(
-            style = TrendyolInfoBoxStyle.DefaultInfoBox(
-                textModel = ContentTextModel(
-                    text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget metus commodo.",
-                    textTint = TrendyolDesign.colors.colorPrimary,
-                    secondText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget metus commodo.",
-                ),
-                icon = IconModel(
-                    outerIcon = Icons.Fill.CircleIcon,
-                    outerTint = TrendyolDesign.colors.colorPrimary,
-                    innerIcon = Icons.Fill.InfoIcon,
-                    innerTint = Color.White
-                ),
-                backgroundColor = TrendyolDesign.colors.colorPrimaryVariant1,
-                iconPosition = IconPosition.START
-            )
+            style = KPInfoBoxStyle.Red,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+            iconPosition = Arrangement.Start
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun BlueInfoBoxLeftIconPreview() {
+    PreviewTheme {
+        InfoBox(
+            style = KPInfoBoxStyle.Blue,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+            iconPosition = Arrangement.Start
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun GreenInfoBoxLeftIconPreview() {
+    PreviewTheme {
+        InfoBox(
+            style = KPInfoBoxStyle.Green,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+            iconPosition = Arrangement.Start
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun PinkInfoBoxLeftIconPreview() {
+    PreviewTheme {
+        InfoBox(
+            style = KPInfoBoxStyle.Pink,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+            iconPosition = Arrangement.Start
         )
     }
 }
