@@ -19,14 +19,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.CustomFilteredColorIcon
+import com.trendyol.design.core.icon.KPCustomFilteredColorIcon
 import com.trendyol.design.core.icon.icons.fill.CircleIcon
 import com.trendyol.design.core.icon.icons.fill.InfoIcon
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 @Composable
-fun InfoBox(
+fun KPInfoBox(
     style: InfoBoxStyle,
     text: String,
     modifier: Modifier = Modifier,
@@ -53,7 +53,7 @@ fun InfoBox(
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         if (iconPosition == Arrangement.Start) {
-            CustomFilteredColorIcon(
+            KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
                 outerIcon = Icons.Fill.CircleIcon,
                 outerTint = style.iconTint,
@@ -69,7 +69,7 @@ fun InfoBox(
         }
 
         if (iconPosition == Arrangement.End) {
-            CustomFilteredColorIcon(
+            KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
                 outerIcon = Icons.Fill.CircleIcon,
                 outerTint = style.iconTint,
@@ -80,7 +80,7 @@ fun InfoBox(
 }
 
 @Composable
-fun InfoBox(
+fun KPInfoBox(
     style: InfoBoxStyle,
     modifier: Modifier = Modifier,
     iconPosition: Arrangement.Horizontal? = null,
@@ -107,7 +107,7 @@ fun InfoBox(
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         if (iconPosition == Arrangement.Start) {
-            CustomFilteredColorIcon(
+            KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
                 outerIcon = Icons.Fill.CircleIcon,
                 outerTint = style.iconTint,
@@ -125,7 +125,7 @@ fun InfoBox(
         }
 
         if (iconPosition == Arrangement.End) {
-            CustomFilteredColorIcon(
+            KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
                 outerIcon = Icons.Fill.CircleIcon,
                 outerTint = style.iconTint,
@@ -139,7 +139,7 @@ fun InfoBox(
 @Composable
 private fun OrangeInfoBoxLeftIconPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.Orange,
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             iconPosition = Arrangement.Start,
@@ -151,7 +151,7 @@ private fun OrangeInfoBoxLeftIconPreview() {
 @Composable
 private fun OrangeInfoBoxRightIconPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.Orange,
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             iconPosition = Arrangement.End,
@@ -163,7 +163,7 @@ private fun OrangeInfoBoxRightIconPreview() {
 @Composable
 private fun OrangeInfoBoxNoIconPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.Orange,
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
         )
@@ -174,7 +174,7 @@ private fun OrangeInfoBoxNoIconPreview() {
 @Composable
 private fun OrangeInfoBoxLeftIconWithBorderPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.Orange,
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             iconPosition = Arrangement.Start,
@@ -187,7 +187,7 @@ private fun OrangeInfoBoxLeftIconWithBorderPreview() {
 @Composable
 private fun OrangeInfoBoxLeftIconWithTwoTextsPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.Orange,
             iconPosition = Arrangement.Start,
             showBorder = false
@@ -208,7 +208,7 @@ private fun OrangeInfoBoxLeftIconWithTwoTextsPreview() {
 @Composable
 private fun WhiteInfoBoxLeftIconPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.White,
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             iconPosition = Arrangement.Start,
@@ -220,7 +220,7 @@ private fun WhiteInfoBoxLeftIconPreview() {
 @Composable
 private fun GrayInfoBoxLeftIconPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.Gray,
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             iconPosition = Arrangement.Start
@@ -232,7 +232,7 @@ private fun GrayInfoBoxLeftIconPreview() {
 @Composable
 private fun RedInfoBoxLeftIconPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.Red,
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             iconPosition = Arrangement.Start
@@ -244,7 +244,7 @@ private fun RedInfoBoxLeftIconPreview() {
 @Composable
 private fun BlueInfoBoxLeftIconPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.Blue,
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             iconPosition = Arrangement.Start
@@ -256,7 +256,7 @@ private fun BlueInfoBoxLeftIconPreview() {
 @Composable
 private fun GreenInfoBoxLeftIconPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.Green,
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             iconPosition = Arrangement.Start
@@ -268,7 +268,7 @@ private fun GreenInfoBoxLeftIconPreview() {
 @Composable
 private fun PinkInfoBoxLeftIconPreview() {
     PreviewTheme {
-        InfoBox(
+        KPInfoBox(
             style = KPInfoBoxStyle.Pink,
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             iconPosition = Arrangement.Start
