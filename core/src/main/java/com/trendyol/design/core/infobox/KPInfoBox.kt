@@ -25,6 +25,21 @@ import com.trendyol.design.core.icon.icons.fill.InfoIcon
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
+/**
+ * `KPInfoBox` is a composable component that represents an information box.
+ * It can accept either a single text or multiple text content.
+ * Optionally, it can display an icon and a border.
+ *
+ * @param style An [InfoBoxStyle] instance that defines the style of the info box.
+ * @param text A single text content that will be displayed if the `multiText` parameter is not used.
+ * @param modifier A [Modifier] instance to modify the component. The default value is `Modifier`.
+ * @param iconPosition Determines the position of the icon, which can be `Arrangement.Start` or `Arrangement.End`.
+ * @param showBorder A boolean value to enable border display. The default value is `false`.
+ *
+ * @param multiText A composable function for providing multiple text content. This should be called within a `ColumnScope`.
+ */
+
+
 @Composable
 fun KPInfoBox(
     style: InfoBoxStyle,
