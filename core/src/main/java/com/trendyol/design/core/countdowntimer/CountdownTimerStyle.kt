@@ -14,14 +14,14 @@ import androidx.compose.ui.text.TextStyle
  * @property separatorTextStyle Represents the text style for separators (e.g., between hours, minutes, and seconds) in the countdown timer. This value is retrieved from a `@Composable` function.
  */
 @Immutable
-interface CountdownTimerStyle {
+public interface CountdownTimerStyle {
 
     /**
      * Retrieves the background color for the countdown timer.
      *
      * @return A `Color` representing the background color.
      */
-    val backgroundColor: Color
+    public val backgroundColor: Color
         @Composable get
 
     /**
@@ -29,7 +29,7 @@ interface CountdownTimerStyle {
      *
      * @return A `TextStyle` representing the style of the separator text.
      */
-    val separatorTextStyle: TextStyle
+    public val separatorTextStyle: TextStyle
         @Composable get
 
     /**
@@ -40,5 +40,5 @@ interface CountdownTimerStyle {
      */
     @ReadOnlyComposable
     @Composable
-    fun textStyle(size: CountdownTimerSize): TextStyle
+    public fun textStyle(size: CountdownTimerSize): TextStyle
 }

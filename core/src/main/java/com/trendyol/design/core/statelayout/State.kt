@@ -8,10 +8,10 @@ import kotlinx.parcelize.RawValue
 
 @Stable
 @Parcelize
-sealed class State : Parcelable {
-    data class ContentWithLoading(val loadingType: LoadingType?) : State()
-    data class WarningInfo(val warningInfoStateLayoutStyle: @RawValue WarningInfoStateLayoutStyle) : State()
-    data class Loading(val message: String? = null) : State()
+public sealed class State : Parcelable {
+    public data class ContentWithLoading(val loadingType: LoadingType?) : State()
+    public data class WarningInfo(val warningInfoStateLayoutStyle: @RawValue WarningInfoStateLayoutStyle) : State()
+    public data class Loading(val message: String? = null) : State()
 
     /**
      * When we need the LoadingWithContent state, we must set the LoadingType.Progressive in ContentWithLoading.

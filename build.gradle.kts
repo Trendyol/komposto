@@ -5,6 +5,14 @@ plugins {
     id("com.android.library") version "8.3.2" apply false
     id("io.gitlab.arturbosch.detekt") version("1.23.5")
     id("com.google.devtools.ksp") version("1.9.24-1.0.20") apply false
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.16.3"
+}
+
+apiValidation {
+    /**
+     * Sub-projects that are excluded from API validation
+     */
+    ignoredProjects.addAll(listOf("app"))
 }
 
 buildscript {

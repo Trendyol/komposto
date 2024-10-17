@@ -4,9 +4,9 @@ import WarningInfoStateDefaultIcon
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.trendyol.design.core.icon.StateLayoutIconSize
 
-sealed interface TrendyolWarningInfoStateLayoutStyle {
+public sealed interface TrendyolWarningInfoStateLayoutStyle {
 
-    data class SingleButtonFullVersion(
+    public data class SingleButtonFullVersion(
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val title: String = DEFAULT_TITLE,
@@ -27,7 +27,7 @@ sealed interface TrendyolWarningInfoStateLayoutStyle {
             )
     }
 
-    data class SingleButtonNoTitle(
+    public data class SingleButtonNoTitle(
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val description: String = DEFAULT_DESCRIPTION,
@@ -46,7 +46,7 @@ sealed interface TrendyolWarningInfoStateLayoutStyle {
             )
     }
 
-    data class SingleButtonNoDescription(
+    public data class SingleButtonNoDescription(
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val title: String = DEFAULT_TITLE,
@@ -65,7 +65,7 @@ sealed interface TrendyolWarningInfoStateLayoutStyle {
             )
     }
 
-    data class TwoButtonsFullVersion(
+    public data class TwoButtonsFullVersion(
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val title: String,
@@ -90,7 +90,7 @@ sealed interface TrendyolWarningInfoStateLayoutStyle {
             )
     }
 
-    data class TwoButtonsNoTitle(
+    public data class TwoButtonsNoTitle(
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val description: String,
@@ -113,7 +113,7 @@ sealed interface TrendyolWarningInfoStateLayoutStyle {
             )
     }
 
-    data class TwoButtonsNoDescription(
+    public data class TwoButtonsNoDescription(
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val title: String,
@@ -136,7 +136,7 @@ sealed interface TrendyolWarningInfoStateLayoutStyle {
             )
     }
 
-    data class NoButtonFullVersion(
+    public data class NoButtonFullVersion(
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val title: String,
@@ -151,7 +151,7 @@ sealed interface TrendyolWarningInfoStateLayoutStyle {
             )
     }
 
-    data class NoButtonNoTitle(
+    public data class NoButtonNoTitle(
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val description: String,
@@ -164,7 +164,7 @@ sealed interface TrendyolWarningInfoStateLayoutStyle {
             )
     }
 
-    data class NoButtonNoDescription(
+    public data class NoButtonNoDescription(
         val icon: ImageVector = WarningInfoStateDefaultIcon,
         val iconSize: StateLayoutIconSize,
         val title: String,
@@ -177,7 +177,7 @@ sealed interface TrendyolWarningInfoStateLayoutStyle {
             )
     }
 
-    companion object {
+    public companion object {
         private const val DEFAULT_TITLE = "İçerik Bulunamadı"
         private const val DEFAULT_DESCRIPTION = "Yeni içerikler keşfedebilirsin."
         private const val DEFAULT_PRIMARY_BUTTON_TEXT = "Alışverişe Devam Et"

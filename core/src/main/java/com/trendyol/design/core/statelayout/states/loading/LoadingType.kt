@@ -1,5 +1,5 @@
 package com.trendyol.design.core.statelayout.states.loading
 
-enum class LoadingType {
+public enum class LoadingType {
     Progressive, Circular
 }

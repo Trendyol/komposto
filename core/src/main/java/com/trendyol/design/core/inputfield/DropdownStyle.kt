@@ -8,9 +8,9 @@ import androidx.compose.runtime.Composable
  *
  * @property outlinedTextFieldColors Colors configuration for the outlined text field used in the dropdown.
  */
-interface DropdownStyle {
+public interface DropdownStyle {
 
     /** Colors configuration for the outlined text field used in the dropdown. */
     @get:Composable
-    val outlinedTextFieldColors: TextFieldColors
+    public val outlinedTextFieldColors: TextFieldColors
 }

@@ -39,7 +39,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param descriptionTextStyle A `TextStyle` for customizing the appearance of the description text. Default is `TrendyolDesign.typography.body1ColorOnSurfaceVariant1`.
  */
 @Composable
-fun BottomSheetCheckboxItem(
+public fun BottomSheetCheckboxItem(
     checked: Boolean,
     text: String,
     onCheckedChange: (Boolean) -> Unit,

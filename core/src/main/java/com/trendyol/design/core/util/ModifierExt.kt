@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.LayoutDirection
  * @return A modified `Modifier` with horizontal mirroring applied if the layout direction is `LayoutDirection.Rtl`.
  */
 @Stable
-fun Modifier.mirror(layoutDirection: LayoutDirection): Modifier {
+public fun Modifier.mirror(layoutDirection: LayoutDirection): Modifier {
     return if (layoutDirection == LayoutDirection.Rtl)
         this.scale(scaleX = -1f, scaleY = 1f)
     else

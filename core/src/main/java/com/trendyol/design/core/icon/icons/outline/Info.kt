@@ -20,7 +20,7 @@ private fun VectorPreview() {
     Icon(Icons.Outline.Info, TrendyolIconSize.Medium)
 }
 
-val Icons.Outline.Info: ImageVector by lazy {
+public val Icons.Outline.Info: ImageVector by lazy {
     ImageVector.Builder(
         name = "Info",
         defaultWidth = 16.dp,

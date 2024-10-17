@@ -6,8 +6,8 @@ import androidx.compose.ui.text.TextStyle
 import com.trendyol.design.core.icon.IconSize
 import com.trendyol.design.core.icon.TrendyolIconSize
 
-sealed interface TrendyolPriceStyle {
-    data class SinglePrice(
+public sealed interface TrendyolPriceStyle {
+    public data class SinglePrice(
         val salePriceText: String,
         val salePriceTextStyle: TextStyle
     ) : PriceStyle {
@@ -18,7 +18,7 @@ sealed interface TrendyolPriceStyle {
             )
     }
 
-    data class DualPrice(
+    public data class DualPrice(
         val salePriceText: String,
         val salePriceTextStyle: TextStyle,
         val marketPriceText: String,
@@ -33,7 +33,7 @@ sealed interface TrendyolPriceStyle {
             )
     }
 
-    data class SinglePriceWithBottomInfo(
+    public data class SinglePriceWithBottomInfo(
         val salePriceText: String,
         val salePriceTextStyle: TextStyle,
         val bottomInfoText: String,
@@ -48,7 +48,7 @@ sealed interface TrendyolPriceStyle {
             )
     }
 
-    data class DualPriceWithBottomInfo(
+    public data class DualPriceWithBottomInfo(
         val salePriceText: String,
         val salePriceTextStyle: TextStyle,
         val marketPriceText: String,
@@ -67,7 +67,7 @@ sealed interface TrendyolPriceStyle {
             )
     }
 
-    data class SinglePriceWithUpperInfo(
+    public data class SinglePriceWithUpperInfo(
         val icon: ImageVector? = null,
         val iconSize: IconSize = TrendyolIconSize.XXSmall,
         val iconTint: Color? = null,
@@ -88,7 +88,7 @@ sealed interface TrendyolPriceStyle {
             )
     }
 
-    data class DualPriceWithUpperInfo(
+    public data class DualPriceWithUpperInfo(
         val icon: ImageVector? = null,
         val iconSize: IconSize,
         val iconTint: Color? = null,
@@ -113,7 +113,7 @@ sealed interface TrendyolPriceStyle {
             )
     }
 
-    data class SinglePriceWithUpperAndBottomInfo(
+    public data class SinglePriceWithUpperAndBottomInfo(
         val icon: ImageVector? = null,
         val iconSize: IconSize,
         val iconTint: Color? = null,
@@ -138,7 +138,7 @@ sealed interface TrendyolPriceStyle {
             )
     }
 
-    data class DualPriceWithUpperAndBottomInfo(
+    public data class DualPriceWithUpperAndBottomInfo(
         val icon: ImageVector? = null,
         val iconSize: IconSize,
         val iconTint: Color? = null,

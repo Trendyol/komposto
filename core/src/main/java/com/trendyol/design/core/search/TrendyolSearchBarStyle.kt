@@ -9,9 +9,9 @@ import com.trendyol.theme.TrendyolDesign
  * The [TrendyolSearchBarStyle] sealed interface defines the possible styles for the search bar.
  * It includes two predefined styles: [Outline] and [Filled].
  */
-sealed interface TrendyolSearchBarStyle {
+public sealed interface TrendyolSearchBarStyle {
 
-    data object Outline : SearchBarStyle {
+    public data object Outline : SearchBarStyle {
         override val searchBarColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
@@ -23,7 +23,7 @@ sealed interface TrendyolSearchBarStyle {
             )
     }
 
-    data object Filled : SearchBarStyle {
+    public data object Filled : SearchBarStyle {
         override val searchBarColors: TextFieldColors
             @Composable
             get() = TextFieldDefaults.outlinedTextFieldColors(
