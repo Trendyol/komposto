@@ -73,6 +73,9 @@ dokka:
     - gradle dokkaHtmlMultiModule
     - mkdir -p public
     - mv build/dokka/htmlMultiModule/* public/
+  artifacts:
+    paths:
+      - public  # Store the public folder as an artifact
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
