@@ -6,6 +6,7 @@ plugins {
     id("io.gitlab.arturbosch.detekt")
     id("maven-publish")
     id("kotlin-parcelize")
+    id("org.jetbrains.dokka")
 }
 
 android {
