@@ -71,11 +71,11 @@ dokka:
   image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
   script:
     - gradle dokkaHtmlMultiModule
-    - mkdir -p public
-    - mv build/dokka/htmlMultiModule/* public/
+    - mkdir -p htmlMultiModule
+    - mv build/dokka/htmlMultiModule/* htmlMultiModule/
   artifacts:
     paths:
-      - public  # Store the public folder as an artifact
+      - htmlMultiModule  # Store the dokka output on htmlMultiModule folder as an artifact
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
@@ -86,9 +86,10 @@ pages:
   script:
     - gem install bundler
     - bundle install
-    - bundle exec jekyll build -d public
+    - bundle exec jekyll build -s htmlMultiModule -d public
   artifacts:
     paths:
+      - htmlMultiModule
       - public
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
