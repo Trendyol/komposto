@@ -61,6 +61,10 @@ setup:
   artifacts:
     paths:
       - venv/
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes:
+        - gradle/published-libs.versions.toml
 
 dokka:
   stage: deploy
@@ -69,22 +73,22 @@ dokka:
     - gradle dokkaHtmlMultiModule
     - mkdir -p public
     - mv build/dokka/htmlMultiModule/* public/
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+#  rules:
+#    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 pages:
   stage: deploy
   image: ruby:3.2
   needs: ["dokka"]
   script:
-    - gem install bundler
+    - gem install bundler jekyll
     - bundle install
     - bundle exec jekyll build -d public
   artifacts:
     paths:
       - public
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+#  rules:
+#    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 announce:
   stage: announcement
