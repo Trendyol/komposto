@@ -73,8 +73,8 @@ dokka:
     - gradle dokkaHtmlMultiModule
     - mkdir -p public
     - mv build/dokka/htmlMultiModule/* public/
-#  rules:
-#    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 pages:
   stage: deploy
@@ -87,8 +87,8 @@ pages:
   artifacts:
     paths:
       - public
-#  rules:
-#    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 announce:
   stage: announcement
