@@ -66,20 +66,12 @@ setup:
       changes:
         - gradle/published-libs.versions.toml
 
-dokka:
-  stage: deploy
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
-  script:
-    - gradle dokkaHtmlMultiModule
-    - mkdir -p public
-    - mv build/dokka/htmlMultiModule/* public/
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-
+image: ruby:3.2
+before_script:
+  - gradle dokkaHtmlMultiModule
+  - mkdir -p public
+  - mv build/dokka/htmlMultiModule/* public/
 pages:
-  stage: deploy
-  image: ruby:3.2
-  needs: ["dokka"]
   script:
     - gem install bundler jekyll
     - bundle install
@@ -88,7 +80,7 @@ pages:
     paths:
       - public
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
 
 announce:
   stage: announcement
