@@ -66,12 +66,13 @@ setup:
       changes:
         - gradle/published-libs.versions.toml
 
-image: ruby:3.2
-before_script:
-  - gradle dokkaHtmlMultiModule
-  - mkdir -p public
-  - mv build/dokka/htmlMultiModule/* public/
 pages:
+  stage: deploy
+  image: ruby:3.2
+  before_script:
+    - gradle dokkaHtmlMultiModule
+    - mkdir -p public
+    - mv build/dokka/htmlMultiModule/* public/
   script:
     - gem install bundler jekyll
     - bundle install
