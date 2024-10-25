@@ -38,16 +38,17 @@ publish_msg_description = '\n'.join(modified_msg)
 
 # Execute Leylek task
 gitlab_user_name = os.getenv('GITLAB_USER_NAME')
-image_tag = os.getenv('CI_COMMIT_REF_NAME')
-publish_msg = f'UI Kit new version deployed. :checkmark:\nDeployer: {gitlab_user_name}\n{publish_msg_description}'
+token = os.getenv('SLACK_TOKEN')
+publish_msg = f'Komposto new version deployed. :checkmark:\nDeployer: {gitlab_user_name}\n{publish_msg_description}'
 
-url = 'https://mobile-androidplatform-leylek-legacy-service.mars.trendyol.com/slack/send-message'
+url = 'https://slack.com/api/chat.postMessage'
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "442c5be1-5fa8-4880-b304-619eebb61d65"
+    "Authorization": f"Bearer {token}"
 }
 data = {
     "channel": "android-ui-kit-announcement",
-    "message": publish_msg
+    "text": publish_msg
 }
-requests.post(url=url, headers=headers, json=data)
+response = requests.post(url=url, headers=headers, json=data)
+response.raise_for_status()
