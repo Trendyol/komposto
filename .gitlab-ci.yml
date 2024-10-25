@@ -7,6 +7,7 @@ include:
 stages:
   - build
   - check
+  - screenshot
   - deploy
   - announcement
 
@@ -105,3 +106,9 @@ announce:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       changes:
         - gradle/published-libs.versions.toml
+
+shot:
+  stage: screenshot
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
+  script:
+    - gradle executeScreenshotTests
