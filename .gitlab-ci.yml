@@ -136,6 +136,7 @@ shot:
 
 shot-success:
   stage: screenshot
+  extends: .slack_send
   needs: ["shot"]
   variables:
     SLACK_CHANNEL: $SLACK_DEV_CHANNEL
@@ -145,6 +146,7 @@ shot-success:
 
 shot-failure:
   stage: screenshot
+  extends: .slack_send
   needs: ["shot"]
   variables:
     SLACK_CHANNEL: $SLACK_DEV_CHANNEL
