@@ -118,3 +118,5 @@ shot:
   script:
     - !reference [.allocate_emulator, script]
     - gradle executeScreenshotTests
+  tags:
+    - tribe=mobile-android
