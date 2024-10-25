@@ -112,11 +112,8 @@ announce:
 
 shot:
   stage: screenshot
-  extends: .fast_checkout
   variables:
     SDK_VERSION: "android-32"
   script:
     - !reference [.allocate_emulator, script]
     - gradle executeScreenshotTests
-  tags:
-    - tribe=mobile-android
