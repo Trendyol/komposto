@@ -13,6 +13,7 @@ stages:
   - screenshot
   - deploy
   - announcement
+  - Assign Reviewers
 
 variables:
   VIRTUAL_ENV: "venv"
