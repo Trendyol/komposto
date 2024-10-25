@@ -7,8 +7,18 @@ include:
     ref: "main"
     file:
       - "slack_send.gitlab-ci.yml"
-  - project: "mobile/mobile-all/android-all/shared/infrastructure/pipeline/stages"
-    file: "functions.gitlab-ci.yml"
+
+.allocate_emulator:
+  variables:
+    SDK_VERSION: "android-32"
+  script:
+    - echo Allocating an emulator with SDK version $SDK_VERSION
+    - export EMU_URL=$(curl -X POST "https://mobile-androidplatform-awilix-service.mars.trendyol.com/allocate" -H "Content-Type:application/json" -d "{\"projectId\":\"${CI_PROJECT_ID}\", \"jobId\":\"${CI_JOB_ID}\", \"sdk\":\"${SDK_VERSION}\"}")
+    - adb connect $EMU_URL
+    - adb devices
+    - adb shell settings put global window_animation_scale 0.0
+    - adb shell settings put global transition_animation_scale 0.0
+    - adb shell settings put global animator_duration_scale 0.0
 
 stages:
   - build
@@ -121,6 +131,8 @@ shot:
   script:
     - !reference [.allocate_emulator, script]
     - gradle executeScreenshotTests
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
 
 shot-success:
   stage: screenshot
