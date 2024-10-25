@@ -142,7 +142,9 @@ shot-success:
     SLACK_CHANNEL: $SLACK_DEV_CHANNEL
     SLACK_MESSAGE: "Screenshot test run is success :saygilar: You can access to the log from <$CI_PIPELINE_URL|here>."
     SLACK_TOKEN: $SLACK_TOKEN
-  when: on_success
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      when: on_success
 
 shot-failure:
   stage: screenshot
@@ -152,4 +154,6 @@ shot-failure:
     SLACK_CHANNEL: $SLACK_DEV_CHANNEL
     SLACK_MESSAGE: "Screenshot test run is failed :hellmo: You can access to the error log from <$CI_PIPELINE_URL|here>."
     SLACK_TOKEN: $SLACK_TOKEN
-  when: on_failure
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      when: on_failure
