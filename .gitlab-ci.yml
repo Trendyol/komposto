@@ -3,6 +3,11 @@ include:
     ref: master
     file:
       - "template.gitlab-ci.yml"
+  - project: "mobile/mobile-all/android-all/platform-subgroup/pipeline/pipeline"
+    ref: "main"
+    file:
+      - "slack_send.gitlab-ci.yml"
+
 
 .allocate_emulator:
   variables:
@@ -128,3 +133,21 @@ shot:
   script:
     - !reference [.allocate_emulator, script]
     - gradle executeScreenshotTests
+
+shot-success:
+  stage: screenshot
+  needs: ["shot"]
+  variables:
+    SLACK_CHANNEL: $SLACK_DEV_CHANNEL
+    SLACK_MESSAGE: "Screenshot test run is success :saygilar:"
+    SLACK_TOKEN: $SLACK_TOKEN
+  when: on_success
+
+shot-failure:
+  stage: screenshot
+  needs: ["shot"]
+  variables:
+    SLACK_CHANNEL: $SLACK_DEV_CHANNEL
+    SLACK_MESSAGE: "Screenshot test run is failed :hellmo:"
+    SLACK_TOKEN: $SLACK_TOKEN
+  when: on_failure
