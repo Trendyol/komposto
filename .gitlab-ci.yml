@@ -7,7 +7,7 @@ include:
     ref: "main"
     file:
       - "slack_send.gitlab-ci.yml"
-  - project: "mobile/mobile-all/android-all/shared/infrastructure/pipeline"
+  - project: "mobile/mobile-all/android-all/shared/infrastructure/pipeline/stages"
     file: "functions.gitlab-ci.yml"
 
 stages:
