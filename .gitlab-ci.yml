@@ -10,6 +10,7 @@ include:
 stages:
   - build
   - check
+  - screenshot
   - deploy
   - announcement
 
