@@ -3,9 +3,9 @@ include:
     ref: master
     file:
       - "template.gitlab-ci.yml"
-#  - project: "mobile/mobile-all/android-all/shared/infrastructure/pipeline"
-#    ref: main
-#    file: "base.yml"
+  - project: "mobile/mobile-all/android-all/shared/infrastructure/pipeline"
+    ref: main
+    file: "base.yml"
 
 stages:
   - build
