@@ -61,14 +61,46 @@ setup:
   artifacts:
     paths:
       - venv/
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes:
+        - gradle/published-libs.versions.toml
+
+dokka:
+  stage: deploy
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
+  script:
+    - gradle dokkaHtmlMultiModule
+    - mkdir -p htmlMultiModule
+    - mv build/dokka/htmlMultiModule/* htmlMultiModule/
+  artifacts:
+    paths:
+      - htmlMultiModule  # Store the dokka output on htmlMultiModule folder as an artifact
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+pages:
+  stage: deploy
+  image: ruby:3.2
+  needs: ["dokka"]
+  script:
+    - gem install bundler
+    - bundle install
+    - bundle exec jekyll build -s htmlMultiModule -d public
+  artifacts:
+    paths:
+      - htmlMultiModule
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 announce:
-  stage: deploy
+  stage: announcement
   image: python:3.6
   needs: [ "publish", "setup" ]
   script:
     - source venv/bin/activate
-    - python3 ./scripts/publish_message_description.py
+    - python3 scripts/publish_message_description.py
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       changes:
