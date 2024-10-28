@@ -26,8 +26,7 @@ import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
 
 /**
- * `KPInfoBox` is a composable component that represents an information box.
- * It can accept either a single text or multiple text content.
+ * `KPInfoBox` is a composable function that displays an information box with a specified style, text, and optional icon.
  * Optionally, it can display an icon and a border.
  *
  * @param style An [InfoBoxStyle] instance that defines the style of the info box.
@@ -35,11 +34,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param modifier A [Modifier] instance to modify the component. The default value is `Modifier`.
  * @param iconPosition Determines the position of the icon, which can be `Arrangement.Start` or `Arrangement.End`.
  * @param showBorder A boolean value to enable border display. The default value is `false`.
- *
- * @param multiText A composable function for providing multiple text content. This should be called within a `ColumnScope`.
  */
-
-
 @Composable
 public fun KPInfoBox(
     style: InfoBoxStyle,
@@ -94,6 +89,19 @@ public fun KPInfoBox(
     }
 }
 
+
+/**
+ * `KPInfoBox` is a composable function that displays an information box with a specified style and customizable multi-line text.
+ * Optionally, it can display an icon and a border.
+ *
+ * @param style An [InfoBoxStyle] instance that defines the style of the info box.
+ * @param modifier A [Modifier] instance to modify the component. The default value is `Modifier`.
+ * @param iconPosition Determines the position of the icon, which can be `Arrangement.Start` or `Arrangement.End`.
+ * @param showBorder A boolean value to enable border display. The default value is `false`.
+ *
+ * @param multiText A composable lambda that allows for custom text content in a `ColumnScope`.
+ *  *        Use this to provide multiple lines of text or custom text elements.
+ */
 @Composable
 public fun KPInfoBox(
     style: InfoBoxStyle,
