@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.LocalTextStyle
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
@@ -23,6 +22,7 @@ import com.trendyol.design.core.icon.KPCustomFilteredColorIcon
 import com.trendyol.design.core.icon.icons.fill.CircleIcon
 import com.trendyol.design.core.icon.icons.fill.InfoIcon
 import com.trendyol.design.core.preview.PreviewTheme
+import com.trendyol.design.core.text.Text
 import com.trendyol.theme.TrendyolDesign
 
 /**
