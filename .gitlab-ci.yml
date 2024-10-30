@@ -7,18 +7,7 @@ include:
     ref: "main"
     file:
       - "slack_send.gitlab-ci.yml"
-
-.allocate_emulator:
-  variables:
-    SDK_VERSION: "android-32"
-  script:
-    - echo Allocating an emulator with SDK version $SDK_VERSION
-    - export EMU_URL=$(curl -X POST "https://mobile-androidplatform-awilix-service.mars.trendyol.com/allocate" -H "Content-Type:application/json" -d "{\"projectId\":\"${CI_PROJECT_ID}\", \"jobId\":\"${CI_JOB_ID}\", \"sdk\":\"${SDK_VERSION}\"}")
-    - adb connect $EMU_URL
-    - adb devices
-    - adb shell settings put global window_animation_scale 0.0
-    - adb shell settings put global transition_animation_scale 0.0
-    - adb shell settings put global animator_duration_scale 0.0
+      - "awilix_allocate_emulator.gitlab-ci.yml"
 
 stages:
   - build
@@ -126,8 +115,9 @@ announce:
 shot:
   stage: screenshot
   image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.10.0-jdk17-34.0.0-26.1.10909125-34-8df60147
+  extends: .allocate_emulator
   variables:
-    SDK_VERSION: "android-32"
+    SDK_VERSION: "android-34"
   script:
     - !reference [.allocate_emulator, script]
     - gradle executeScreenshotTests
