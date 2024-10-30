@@ -74,7 +74,8 @@ public fun KPInfoBox(
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = text,
-                style = TrendyolDesign.typography.body1.copy(color = style.textColor),
+                style = TrendyolDesign.typography.body1,
+                color = style.textColor,
             )
         }
 
