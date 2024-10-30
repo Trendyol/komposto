@@ -1,7 +1,6 @@
 package com.trendyol.design.core.icon
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -31,12 +30,12 @@ public fun KPCustomFilteredColorIcon(
         Icon(
             imageVector = outerIcon,
             tint = outerTint,
-            contentDescription = "outer icon",
+            size = TrendyolIconSize.Small,
         )
         Icon(
             imageVector = innerIcon,
             tint = innerTint,
-            contentDescription = "inner icon",
+            size = TrendyolIconSize.Small,
         )
     }
 }
