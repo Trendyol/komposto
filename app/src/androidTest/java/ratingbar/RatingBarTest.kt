@@ -12,7 +12,7 @@ internal class RatingBarTest : DesignScreenshotTest() {
     fun ratingBarSizeTest() = runScreenShotTest(
         testName = "ratingBarSizeTest",
         contents = listOf(
-            DesignScreenshotTestContainer("Small"){
+            DesignScreenshotTestContainer("Small") {
                 BoxWithHorizontalPadding {
                     RatingBar(
                         rating = 3.5f,
@@ -23,50 +23,56 @@ internal class RatingBarTest : DesignScreenshotTest() {
                     )
                 }
             },
-            DesignScreenshotTestContainer("Medium"){
-                RatingBar(
-                    rating = 3.5f,
-                    size = TrendyolRatingBarSize.Medium,
-                    reviewCount = "277",
-                    showRating = false,
-                    showCameraIcon = false,
-                )
+            DesignScreenshotTestContainer("Medium") {
+                BoxWithHorizontalPadding {
+                    RatingBar(
+                        rating = 3.5f,
+                        size = TrendyolRatingBarSize.Medium,
+                        reviewCount = "277",
+                        showRating = false,
+                        showCameraIcon = false,
+                    )
+                }
             }
         )
     )
 
     @Test
-    fun ratingBarCameraIconTest() = runScreenShotTest(
-        testName = "ratingBarCameraIconTest",
+    fun ratingBarCameraTest() = runScreenShotTest(
+        testName = "ratingBarCameraTest",
         contents = listOf(
-            DesignScreenshotTestContainer("Show Camera Icon"){
+            DesignScreenshotTestContainer("Medium") {
                 BoxWithHorizontalPadding {
                     RatingBar(
                         rating = 3.5f,
                         size = TrendyolRatingBarSize.Small,
                         reviewCount = "277",
-                        showRating = false,
+                        showRating = true,
                         showCameraIcon = true,
                     )
                 }
             },
-            DesignScreenshotTestContainer("Unshow Camera Icon"){
-                RatingBar(
-                    rating = 3.5f,
-                    size = TrendyolRatingBarSize.Small,
-                    reviewCount = "277",
-                    showRating = false,
-                    showCameraIcon = false,
-                )
+            DesignScreenshotTestContainer("Medium") {
+                BoxWithHorizontalPadding {
+                    RatingBar(
+                        rating = 3.5f,
+                        size = TrendyolRatingBarSize.Medium,
+                        reviewCount = "277",
+                        showRating = true,
+                        showCameraIcon = true,
+                    )
+                }
             }
         )
     )
+
+
 
     @Test
     fun ratingBarRatingTest() = runScreenShotTest(
         testName = "ratingBarRatingTest",
         contents = listOf(
-            DesignScreenshotTestContainer("Show Rating"){
+            DesignScreenshotTestContainer("Show Rating") {
                 BoxWithHorizontalPadding {
                     RatingBar(
                         rating = 3.5f,
@@ -77,14 +83,16 @@ internal class RatingBarTest : DesignScreenshotTest() {
                     )
                 }
             },
-            DesignScreenshotTestContainer("Unshow Rating"){
-                RatingBar(
-                    rating = 3.5f,
-                    size = TrendyolRatingBarSize.Small,
-                    reviewCount = "277",
-                    showRating = false,
-                    showCameraIcon = false,
-                )
+            DesignScreenshotTestContainer("Unshow Rating") {
+                BoxWithHorizontalPadding {
+                    RatingBar(
+                        rating = 3.5f,
+                        size = TrendyolRatingBarSize.Small,
+                        reviewCount = "277",
+                        showRating = false,
+                        showCameraIcon = false,
+                    )
+                }
             }
         )
     )
