@@ -46,7 +46,7 @@ internal class RatingBarTest : DesignScreenshotTest() {
                         size = TrendyolRatingBarSize.Small,
                         reviewCount = "277",
                         showRating = false,
-                        showCameraIcon = false,
+                        showCameraIcon = true,
                     )
                 }
             },
