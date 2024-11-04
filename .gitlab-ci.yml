@@ -32,7 +32,7 @@ build:
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
       when: always
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"'
       when: always
 
 check:
@@ -43,7 +43,7 @@ check:
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
       when: always
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"'
       when: always
 
 publish:
@@ -52,7 +52,7 @@ publish:
   script:
     - gradle publishReleasePublicationToNexusRepository
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"'
       changes:
         - gradle/published-libs.versions.toml
 
@@ -68,7 +68,7 @@ setup:
     paths:
       - venv/
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"'
       changes:
         - gradle/published-libs.versions.toml
 
@@ -83,7 +83,7 @@ dokka:
     paths:
       - htmlMultiModule  # Store the dokka output on htmlMultiModule folder as an artifact
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"'
 
 pages:
   stage: deploy
@@ -98,7 +98,7 @@ pages:
       - htmlMultiModule
       - public
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"'
 
 announce:
   stage: announcement
@@ -108,7 +108,7 @@ announce:
     - source venv/bin/activate
     - python3 scripts/publish_message_description.py
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"'
       changes:
         - gradle/published-libs.versions.toml
 
