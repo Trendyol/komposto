@@ -97,6 +97,7 @@ object Component {
     const val INFO_BOX_LEFT_ICON_WITH_BORDER = "Info Box Left Icon With Border"
     const val INFO_BOX_RIGHT_ICON_WITH_BORDER = "Info Box Right Icon With Border"
     const val INFO_BOX_NO_ICON_WITH_BORDER = "Info Box No Icon With Border"
+    const val INFO_BOX_NO_ICON_WITH_DASHED_BORDER = "Info Box No Icon With Dashed Border"
     const val INFO_BOX_LEFT_ICON_WITH_TWO_TEXTS = "Info Box Left Icon With Two Texts"
     const val INFO_BOX_RIGHT_ICON_WITH_BORDER_AND_TWO_TEXTS = "Info Box Right Icon With Two Texts"
     const val INFO_BOX_NO_ICON_WITH_BORDER_AND_TWO_TEXTS = "Info Box No Icon With Two Texts"

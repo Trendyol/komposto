@@ -122,6 +122,23 @@ internal fun InfoBox_NoIconWithBorder() {
 @Preview(showBackground = true)
 @ShowkaseComposable(
     group = Group.INFO_BOX,
+    name = Component.INFO_BOX_NO_ICON_WITH_DASHED_BORDER,
+    styleName = "Info Box No Icon With Dashed Border"
+)
+@Composable
+internal fun InfoBox_NoIconWithDashedBorder() {
+    TrendyolTheme {
+        KPInfoBox(
+            style = KPInfoBoxStyle.Green,
+            text = TEXT,
+            showDashedBorder = true
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@ShowkaseComposable(
+    group = Group.INFO_BOX,
     name = Component.INFO_BOX_LEFT_ICON_WITH_TWO_TEXTS,
     styleName = "Info Box Left Icon With Two Texts"
 )
