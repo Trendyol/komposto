@@ -1,8 +1,6 @@
 package com.trendyol.design.core.infobox
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -23,6 +21,7 @@ import com.trendyol.design.core.icon.icons.fill.CircleIcon
 import com.trendyol.design.core.icon.icons.fill.InfoIcon
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.util.customBorder
 import com.trendyol.theme.TrendyolDesign
 
 /**
@@ -34,6 +33,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param modifier A [Modifier] instance to modify the component. The default value is `Modifier`.
  * @param iconPosition Determines the position of the icon, which can be `Arrangement.Start` or `Arrangement.End`.
  * @param showBorder A boolean value to enable border display. The default value is `false`.
+ * @param showDashedBorder A boolean value to enable dashed border display. The default value is `false`.
  */
 @Composable
 public fun KPInfoBox(
@@ -42,15 +42,24 @@ public fun KPInfoBox(
     modifier: Modifier = Modifier,
     iconPosition: Arrangement.Horizontal? = null,
     showBorder: Boolean = false,
+    showDashedBorder: Boolean = false,
 ) {
     val rootModifier = modifier
         .then(
             if (showBorder) {
-                modifier.border(
-                    border = BorderStroke(width = 1.dp, color = style.borderColor),
+                modifier.customBorder(
+                    color = style.borderColor,
                     shape = RoundedCornerShape(8.dp)
                 )
-            } else {
+            } else if (showDashedBorder) {
+                modifier.customBorder(
+                    color = style.borderColor,
+                    shape = RoundedCornerShape(8.dp),
+                    dashWidth = style.dashedBorderDashWidth,
+                    gapWidth = style.dashedBorderGapWidth
+                )
+            }
+            else {
                 modifier
             }
         )
@@ -99,6 +108,7 @@ public fun KPInfoBox(
  * @param modifier A [Modifier] instance to modify the component. The default value is `Modifier`.
  * @param iconPosition Determines the position of the icon, which can be `Arrangement.Start` or `Arrangement.End`.
  * @param showBorder A boolean value to enable border display. The default value is `false`.
+ * @param showDashedBorder A boolean value to enable dashed border display. The default value is `false`.
  *
  * @param multiText A composable lambda that allows for custom text content in a `ColumnScope`.
  *  *        Use this to provide multiple lines of text or custom text elements.
@@ -109,14 +119,22 @@ public fun KPInfoBox(
     modifier: Modifier = Modifier,
     iconPosition: Arrangement.Horizontal? = null,
     showBorder: Boolean = false,
+    showDashedBorder: Boolean = false,
     multiText: @Composable ColumnScope.() -> Unit,
 ) {
     val rootModifier = modifier
         .then(
             if (showBorder) {
-                modifier.border(
-                    border = BorderStroke(width = 1.dp, color = style.borderColor),
+                modifier.customBorder(
+                    color = style.borderColor,
                     shape = RoundedCornerShape(8.dp)
+                )
+            } else if (showDashedBorder) {
+                modifier.customBorder(
+                    color = style.borderColor,
+                    shape = RoundedCornerShape(8.dp),
+                    dashWidth = style.dashedBorderDashWidth,
+                    gapWidth = style.dashedBorderGapWidth
                 )
             } else {
                 modifier
@@ -203,6 +221,19 @@ private fun OrangeInfoBoxLeftIconWithBorderPreview() {
             text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             iconPosition = Arrangement.Start,
             showBorder = true
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun OrangeInfoBoxLeftIconWithDashBorderPreview() {
+    PreviewTheme {
+        KPInfoBox(
+            style = KPInfoBoxStyle.Orange,
+            text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
+            iconPosition = Arrangement.Start,
+            showDashedBorder = true
         )
     }
 }

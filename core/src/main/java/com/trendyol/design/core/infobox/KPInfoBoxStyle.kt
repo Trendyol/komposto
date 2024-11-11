@@ -2,6 +2,8 @@ package com.trendyol.design.core.infobox
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import com.trendyol.theme.TrendyolDesign
 
 /**
@@ -21,6 +23,14 @@ public sealed interface KPInfoBoxStyle {
         override val borderColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorPrimaryVariant2
+
+        override val dashedBorderDashWidth: Dp?
+            @Composable
+            get() = 4.dp
+
+        override val dashedBorderGapWidth: Dp?
+            @Composable
+            get() = 4.dp
 
         override val textColor: Color
             @Composable
@@ -44,6 +54,14 @@ public sealed interface KPInfoBoxStyle {
             @Composable
             get() = TrendyolDesign.colors.colorBorder
 
+        override val dashedBorderDashWidth: Dp?
+            @Composable
+            get() = 4.dp
+
+        override val dashedBorderGapWidth: Dp?
+            @Composable
+            get() = 4.dp
+
         override val textColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorPrimary
@@ -65,6 +83,14 @@ public sealed interface KPInfoBoxStyle {
             @Composable
             get() = TrendyolDesign.colors.colorBorder
 
+        override val dashedBorderDashWidth: Dp?
+            @Composable
+            get() = 4.dp
+
+        override val dashedBorderGapWidth: Dp?
+            @Composable
+            get() = 4.dp
+
         override val textColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorOnSurfaceVariant3
@@ -85,6 +111,14 @@ public sealed interface KPInfoBoxStyle {
         override val borderColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorWarningVariant2
+
+        override val dashedBorderDashWidth: Dp?
+            @Composable
+            get() = 4.dp
+
+        override val dashedBorderGapWidth: Dp?
+            @Composable
+            get() = 4.dp
 
         override val textColor: Color
             @Composable
@@ -108,6 +142,14 @@ public sealed interface KPInfoBoxStyle {
             @Composable
             get() = TrendyolDesign.colors.colorBlueVariant2
 
+        override val dashedBorderDashWidth: Dp?
+            @Composable
+            get() = 4.dp
+
+        override val dashedBorderGapWidth: Dp?
+            @Composable
+            get() = 4.dp
+
         override val textColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorBlue
@@ -130,6 +172,14 @@ public sealed interface KPInfoBoxStyle {
             @Composable
             get() = TrendyolDesign.colors.colorGreenVariant2
 
+        override val dashedBorderDashWidth: Dp?
+            @Composable
+            get() = 4.dp
+
+        override val dashedBorderGapWidth: Dp?
+            @Composable
+            get() = 4.dp
+
         override val textColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorGreen
@@ -150,6 +200,14 @@ public sealed interface KPInfoBoxStyle {
         override val borderColor: Color
             @Composable
             get() = TrendyolDesign.colors.colorPinkVariant2
+
+        override val dashedBorderDashWidth: Dp?
+            @Composable
+            get() = 4.dp
+
+        override val dashedBorderGapWidth: Dp?
+            @Composable
+            get() = 4.dp
 
         override val textColor: Color
             @Composable

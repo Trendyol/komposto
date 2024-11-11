@@ -2,6 +2,7 @@ package com.trendyol.design.core.infobox
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.Dp
 
 /**
  * `InfoBoxStyle` is an interface that defines the styling properties for an information box.
@@ -24,6 +25,12 @@ public interface InfoBoxStyle {
 
     @get:Composable
     public val borderColor: Color
+
+    @get:Composable
+    public val dashedBorderDashWidth: Dp?
+
+    @get:Composable
+    public val dashedBorderGapWidth: Dp?
 
     @get:Composable
     public val textColor: Color
