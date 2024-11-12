@@ -39,7 +39,6 @@ public sealed interface KPInfoBoxStyle {
         override val iconTint: Color
             @Composable
             get() = TrendyolDesign.colors.colorPrimary
-
     }
 
     /**
@@ -127,7 +126,6 @@ public sealed interface KPInfoBoxStyle {
         override val iconTint: Color
             @Composable
             get() = TrendyolDesign.colors.colorWarning
-
     }
 
     /**
@@ -157,7 +155,6 @@ public sealed interface KPInfoBoxStyle {
         override val iconTint: Color
             @Composable
             get() = TrendyolDesign.colors.colorBlue
-
     }
 
     /**
