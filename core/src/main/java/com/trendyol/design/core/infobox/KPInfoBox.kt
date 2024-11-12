@@ -58,14 +58,12 @@ public fun KPInfoBox(
                     dashWidth = style.dashedBorderDashWidth,
                     gapWidth = style.dashedBorderGapWidth
                 )
-            }
-            else {
+            } else {
                 modifier
             }
         )
         .background(color = style.backgroundColor, shape = RoundedCornerShape(8.dp))
         .padding(12.dp)
-
 
     Row(
         modifier = rootModifier,
@@ -98,7 +96,6 @@ public fun KPInfoBox(
         }
     }
 }
-
 
 /**
  * `KPInfoBox` is a composable function that displays an information box with a specified style and customizable multi-line text.
@@ -143,7 +140,6 @@ public fun KPInfoBox(
         .background(color = style.backgroundColor, shape = RoundedCornerShape(8.dp))
         .padding(12.dp)
 
-
     Row(
         modifier = rootModifier,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -156,7 +152,6 @@ public fun KPInfoBox(
                 innerIcon = Icons.Fill.InfoIcon,
             )
         }
-
 
         Column(modifier = Modifier.weight(1f)) {
             CompositionLocalProvider(
