@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.13.2] - 2024-11-14
+
+### Added
+- Added missing [colorOnSurfaceVariant2] typography APIs
+
 ## [0.13.1] - 2024-10-08
 
 ### Fixed
