@@ -1,24 +1,38 @@
 package com.trendyol.design.ui.component.button
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
+import com.trendyol.design.R
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.core.button.Button
 import com.trendyol.design.core.button.TrendyolButtonSize
 import com.trendyol.design.core.button.TrendyolButtonStyle
+import com.trendyol.design.core.icon.Icon
+import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.icons.fill.RunningOut
 import com.trendyol.design.core.text.Text
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.theme.TrendyolTheme
+import com.trendyol.theme.TrendyolDesign
 
 const val BUTTON_TEXT = "CTA Label"
 
 @Preview
 @ShowkaseComposable(group = Group.BUTTON, name = Component.PRIMARY_BUTTON, styleName = "4.Large.Enabled")
 @Composable
-internal fun Primary_Button_Large_Enabled_Showkase() {
-    TrendyolTheme {
+internal fun Primary_Button_Large_Enabled_Showkase() = TrendyolTheme {
+    Row {
         Button(
             onClick = { },
             style = TrendyolButtonStyle.Primary,
@@ -26,20 +40,77 @@ internal fun Primary_Button_Large_Enabled_Showkase() {
         ) {
             Text(text = BUTTON_TEXT)
         }
+
+        Spacer(modifier = Modifier.width(16.dp))
+
+        Button(
+            onClick = { },
+            style = TrendyolButtonStyle.Primary,
+            size = TrendyolButtonSize.Large,
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = stringResource(R.string.button_top_text),
+                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = Icons.Fill.RunningOut,
+                        size = TrendyolIconSize.XXSmall,
+                    )
+                    Spacer(modifier = Modifier.width(4.dp))
+                    Text(
+                        text = stringResource(R.string.button_bottom_text),
+                        style = TrendyolDesign.typography.body2Medium
+                    )
+                }
+            }
+        }
     }
 }
 
 @Preview
 @ShowkaseComposable(group = Group.BUTTON, name = Component.PRIMARY_BUTTON, styleName = "3.Medium.Enabled")
 @Composable
-internal fun Primary_Button_Medium_Enabled_Showkase() {
-    TrendyolTheme {
+internal fun Primary_Button_Medium_Enabled_Showkase() = TrendyolTheme {
+    Row {
         Button(
             onClick = { },
             style = TrendyolButtonStyle.Primary,
             size = TrendyolButtonSize.Medium,
         ) {
             Text(text = BUTTON_TEXT)
+        }
+
+        Spacer(modifier = Modifier.width(16.dp))
+
+        Button(
+            onClick = { },
+            style = TrendyolButtonStyle.Primary,
+            size = TrendyolButtonSize.Medium,
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = stringResource(R.string.button_top_text),
+                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = Icons.Fill.RunningOut,
+                        size = TrendyolIconSize.XXSmall,
+                    )
+                    Text(
+                        text = stringResource(R.string.button_bottom_text),
+                        style = TrendyolDesign.typography.overLineMedium
+                    )
+                }
+            }
         }
     }
 }
