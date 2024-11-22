@@ -1,5 +1,10 @@
 # UI-Kit Screenshot Rule Sets
 
+### Create an emulator with following configurations in order to align with awilix instances:
+- Resolution Size: 720x1280
+- Screen Size: 9.17 inch
+- API 34
+
 We can consider the following items to create a rule set that guides those who will write a screenshot test of a new component. This set will be a step-by-step guide and guideline, so that even beginners can write component screenshot tests correctly and consistently.
 Android Screenshot Test Rule Set:
 ### 1. Follow Test Name Standards
