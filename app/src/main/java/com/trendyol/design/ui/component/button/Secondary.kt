@@ -1,8 +1,10 @@
 package com.trendyol.design.ui.component.button
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.LocalContentColor
 import androidx.compose.runtime.Composable
@@ -46,13 +48,19 @@ internal fun Secondary_Button_Large_Enabled_Showkase() = TrendyolTheme {
             onClick = { },
             style = TrendyolButtonStyle.Secondary,
             size = TrendyolButtonSize.Large,
+            contentPadding = PaddingValues(
+                vertical = 3.5.dp,
+                horizontal = 20.dp
+            ),
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     text = stringResource(R.string.button_top_text),
+                    style = TrendyolDesign.typography.titleBold,
                 )
+                Spacer(modifier = Modifier.height(2.dp))
                 Row(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -91,12 +99,17 @@ internal fun Secondary_Button_Medium_Enabled_Showkase() = TrendyolTheme {
             onClick = { },
             style = TrendyolButtonStyle.Secondary,
             size = TrendyolButtonSize.Medium,
+            contentPadding = PaddingValues(
+                vertical = 3.5.dp,
+                horizontal = 20.dp
+            ),
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     text = stringResource(R.string.button_top_text),
+                    style = TrendyolDesign.typography.body1Bold
                 )
                 Row(
                     verticalAlignment = Alignment.CenterVertically
@@ -105,7 +118,9 @@ internal fun Secondary_Button_Medium_Enabled_Showkase() = TrendyolTheme {
                         imageVector = Icons.Fill.RunningOut,
                         size = TrendyolIconSize.XXSmall,
                         tint = LocalContentColor.current,
+                        modifier = Modifier.width(10.dp),
                     )
+                    Spacer(modifier = Modifier.width(1.dp))
                     Text(
                         text = stringResource(R.string.button_bottom_text),
                         style = TrendyolDesign.typography.overLineMedium
@@ -149,8 +164,8 @@ internal fun Secondary_Button_XSmall_Enabled_Showkase() {
 @Preview
 @ShowkaseComposable(group = Group.BUTTON, name = Component.SECONDARY_BUTTON, styleName = "5.Large.Disabled")
 @Composable
-internal fun Z_Secondary_Button_Large_Disabled_Showkase() {
-    TrendyolTheme {
+internal fun Z_Secondary_Button_Large_Disabled_Showkase() = TrendyolTheme {
+    Row {
         Button(
             onClick = { },
             style = TrendyolButtonStyle.Secondary,
@@ -158,6 +173,43 @@ internal fun Z_Secondary_Button_Large_Disabled_Showkase() {
             enabled = false,
         ) {
             Text(text = BUTTON_TEXT)
+        }
+
+        Spacer(modifier = Modifier.width(16.dp))
+
+        Button(
+            onClick = { },
+            style = TrendyolButtonStyle.Secondary,
+            size = TrendyolButtonSize.Large,
+            contentPadding = PaddingValues(
+                vertical = 3.5.dp,
+                horizontal = 20.dp
+            ),
+            enabled = false,
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = stringResource(R.string.button_top_text),
+                    style = TrendyolDesign.typography.titleBold,
+                )
+                Spacer(modifier = Modifier.height(2.dp))
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = Icons.Fill.RunningOut,
+                        size = TrendyolIconSize.XXSmall,
+                        tint = LocalContentColor.current,
+                    )
+                    Spacer(modifier = Modifier.width(4.dp))
+                    Text(
+                        text = stringResource(R.string.button_bottom_text),
+                        style = TrendyolDesign.typography.body2Medium
+                    )
+                }
+            }
         }
     }
 }
