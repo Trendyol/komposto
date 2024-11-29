@@ -21,7 +21,7 @@ public sealed interface TrendyolRatingBarSize : RatingBarSize {
             get() = 10.dp
         override val cameraIconSize: DpSize
             @Composable
-            get() = DpSize(width = 14.dp, height = 12.dp)
+            get() = DpSize(width = 12.dp, height = (10.3).dp)
         override val textSize: TextStyle
             @Composable
             get() = TrendyolDesign.typography.body2ColorOnSurfaceVariant3
@@ -32,7 +32,7 @@ public sealed interface TrendyolRatingBarSize : RatingBarSize {
             get() = 12.dp
         override val cameraIconSize: DpSize
             @Composable
-            get() = DpSize(width = 16.dp, height = 14.dp)
+            get() = DpSize(width = 14.dp, height = 12.dp)
         override val textSize: TextStyle
             @Composable
             get() = TrendyolDesign.typography.body1ColorOnSurfaceVariant3
