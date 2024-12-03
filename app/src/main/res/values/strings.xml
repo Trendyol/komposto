@@ -6,4 +6,6 @@
     <string name="item">Item</string>
     <string name="state_layout_title">Content Not Found</string>
     <string name="state_layout_description">You can discover new contents.</string>
+    <string name="button_top_text">Button</string>
+    <string name="button_bottom_text">Last 1 Item</string>
 </resources>
