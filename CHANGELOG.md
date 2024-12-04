@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.14.0] - 2024-09-10
+
+### Added
+
+- InfoBox composable is introduced with icon positions, border and two lines
+
 ## [0.13.4] - 2024-11-18
 
 ### Added

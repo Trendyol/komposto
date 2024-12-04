@@ -16,4 +16,5 @@ object Group {
     const val TIMER = "Timer"
     const val BOX_BADGE = "Box Badge"
     const val DIALOG = "Dialog"
+    const val INFO_BOX = "InfoBox"
 }

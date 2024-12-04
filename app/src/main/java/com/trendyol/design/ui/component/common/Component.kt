@@ -90,4 +90,8 @@ object Component {
     const val SUCCESS_DIALOG = "Success Dialog"
     const val ERROR_DIALOG = "Error Dialog"
     const val GENERIC_DIALOG = "Generic Dialog"
+
+    const val INFO_BOX_LEFT_ICON = "Info Box Left Icon"
+    const val INFO_BOX_RIGHT_ICON = "Info Box Right Icon"
+    const val INFO_BOX_NO_ICON = "Info Box No Icon"
 }
