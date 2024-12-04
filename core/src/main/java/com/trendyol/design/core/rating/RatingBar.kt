@@ -147,9 +147,9 @@ public fun RatingBar(
         if (showCameraIcon) {
             Icon(
                 modifier = Modifier
-                    .padding(start = 4.dp)
+                    .padding(start = 6.dp)
                     .size(size.cameraIconSize),
-                painter = adaptiveIconPainterResource(id = R.drawable.medium),
+                painter = adaptiveIconPainterResource(id = R.drawable.photo),
                 contentDescription = "Camera Icon",
                 tint = Color.Unspecified,
             )

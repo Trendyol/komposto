@@ -970,6 +970,10 @@ public final class com/trendyol/design/core/icon/icons/fill/PlayGradientKt {
 	public static final fun getPlayGradient (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
+public final class com/trendyol/design/core/icon/icons/fill/RunningOutKt {
+	public static final fun getRunningOut (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+}
+
 public final class com/trendyol/design/core/icon/icons/fill/SearchKt {
 	public static final fun getSearch (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
