@@ -78,6 +78,7 @@ public class com/trendyol/theme/TrendyolDesignTypography {
 	public fun getBody1BoldColorGreen (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getBody1BoldColorOnPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getBody1BoldColorOnSurfaceVariant1 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getBody1BoldColorOnSurfaceVariant2 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getBody1BoldColorOnSurfaceVariant3 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getBody1BoldColorPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getBody1BoldColorWarning (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
@@ -104,6 +105,7 @@ public class com/trendyol/theme/TrendyolDesignTypography {
 	public fun getBody2BoldColorGreen (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getBody2BoldColorOnPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getBody2BoldColorOnSurfaceVariant1 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getBody2BoldColorOnSurfaceVariant2 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getBody2BoldColorOnSurfaceVariant3 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getBody2BoldColorPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getBody2BoldColorWarning (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
@@ -130,6 +132,7 @@ public class com/trendyol/theme/TrendyolDesignTypography {
 	public fun getHeaderBoldColorGreen (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderBoldColorOnPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderBoldColorOnSurfaceVariant1 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getHeaderBoldColorOnSurfaceVariant2 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderBoldColorOnSurfaceVariant3 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderBoldColorPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderBoldColorWarning (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
@@ -137,6 +140,7 @@ public class com/trendyol/theme/TrendyolDesignTypography {
 	public fun getHeaderColorGreen (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderColorOnPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderColorOnSurfaceVariant1 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getHeaderColorOnSurfaceVariant2 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderColorOnSurfaceVariant3 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderColorPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderColorWarning (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
@@ -145,6 +149,7 @@ public class com/trendyol/theme/TrendyolDesignTypography {
 	public fun getHeaderMediumColorGreen (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderMediumColorOnPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderMediumColorOnSurfaceVariant1 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getHeaderMediumColorOnSurfaceVariant2 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderMediumColorOnSurfaceVariant3 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderMediumColorPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getHeaderMediumColorWarning (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
@@ -154,6 +159,7 @@ public class com/trendyol/theme/TrendyolDesignTypography {
 	public fun getOverLineBoldColorGreen (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineBoldColorOnPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineBoldColorOnSurfaceVariant1 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getOverLineBoldColorOnSurfaceVariant2 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineBoldColorOnSurfaceVariant3 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineBoldColorPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineBoldColorWarning (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
@@ -161,6 +167,7 @@ public class com/trendyol/theme/TrendyolDesignTypography {
 	public fun getOverLineColorGreen (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineColorOnPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineColorOnSurfaceVariant1 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getOverLineColorOnSurfaceVariant2 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineColorOnSurfaceVariant3 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineColorPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineColorWarning (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
@@ -169,6 +176,7 @@ public class com/trendyol/theme/TrendyolDesignTypography {
 	public fun getOverLineMediumColorGreen (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineMediumColorOnPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineMediumColorOnSurfaceVariant1 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getOverLineMediumColorOnSurfaceVariant2 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineMediumColorOnSurfaceVariant3 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineMediumColorPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getOverLineMediumColorWarning (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
@@ -205,6 +213,7 @@ public class com/trendyol/theme/TrendyolDesignTypography {
 	public fun getTitleBoldColorGreen (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getTitleBoldColorOnPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getTitleBoldColorOnSurfaceVariant1 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getTitleBoldColorOnSurfaceVariant2 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getTitleBoldColorOnSurfaceVariant3 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getTitleBoldColorPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getTitleBoldColorWarning (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
@@ -212,6 +221,7 @@ public class com/trendyol/theme/TrendyolDesignTypography {
 	public fun getTitleColorGreen (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getTitleColorOnPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getTitleColorOnSurfaceVariant1 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getTitleColorOnSurfaceVariant2 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getTitleColorOnSurfaceVariant3 (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getTitleColorPrimary (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun getTitleColorWarning (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;

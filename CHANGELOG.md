@@ -14,6 +14,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - InfoBox composable is introduced with icon positions, border and two lines
 
+## [0.13.4] - 2024-11-18
+
+### Added
+- Added RunningOut icon
+
+## [0.13.3] - 2024-11-14
+
+### Fixed
+- The mdpi resolution exception related to `RatingBar`s photo icon is fixed.
+
+## [0.13.2] - 2024-11-14
+
+### Added
+- Added missing [colorOnSurfaceVariant2] typography APIs
+
 ## [0.13.1] - 2024-10-08
 
 ### Fixed
