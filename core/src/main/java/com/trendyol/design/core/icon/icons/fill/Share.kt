@@ -1,4 +1,4 @@
-package com.trendyol.design.core.icon.icons.outline
+package com.trendyol.design.core.icon.icons.fill
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
@@ -18,10 +18,10 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 @Preview
 @Composable
 private fun VectorPreview() {
-    Icon(Icons.Outline.Share, TrendyolIconSize.XXXLarge)
+    Icon(Icons.Fill.Share, TrendyolIconSize.XXXLarge)
 }
 
-public val Icons.Outline.Share: ImageVector
+public val Icons.Fill.Share: ImageVector
     by lazy {
         Builder(
             name = "Share", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,

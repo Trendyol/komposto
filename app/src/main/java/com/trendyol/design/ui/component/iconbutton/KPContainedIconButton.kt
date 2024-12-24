@@ -10,7 +10,7 @@ import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.SaveSelected
 import com.trendyol.design.core.icon.icons.outline.SaveUnselected
-import com.trendyol.design.core.icon.icons.outline.Share
+import com.trendyol.design.core.icon.icons.fill.Share
 import com.trendyol.design.core.iconbutton.contained.KPContainedIconButton
 import com.trendyol.design.core.iconbutton.contained.KPContainedIconToggleButton
 import com.trendyol.design.core.iconbutton.contained.KPContainedIconButtonSize
@@ -27,7 +27,7 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 )
 internal fun PreviewKPContainedIconButtonLargeNoToggle() = TrendyolTheme {
     KPContainedIconButton(
-        icon = Icons.Outline.Share,
+        icon = Icons.Fill.Share,
         size = KPContainedIconButtonSize.Large,
         onClick = { }
     )
@@ -42,7 +42,7 @@ internal fun PreviewKPContainedIconButtonLargeNoToggle() = TrendyolTheme {
 )
 internal fun PreviewKPContainedIconButtonMediumNoToggle() = TrendyolTheme {
     KPContainedIconButton(
-        icon = Icons.Outline.Share,
+        icon = Icons.Fill.Share,
         size = KPContainedIconButtonSize.Medium,
         onClick = { }
     )
@@ -57,7 +57,7 @@ internal fun PreviewKPContainedIconButtonMediumNoToggle() = TrendyolTheme {
 )
 internal fun PreviewKPContainedIconButtonSmallNoToggle() = TrendyolTheme {
     KPContainedIconButton(
-        icon = Icons.Outline.Share,
+        icon = Icons.Fill.Share,
         size = KPContainedIconButtonSize.Small,
         onClick = { }
     )
