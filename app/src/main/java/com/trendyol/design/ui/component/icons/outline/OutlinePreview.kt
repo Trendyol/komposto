@@ -8,9 +8,14 @@ import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.icons.fill.Chevron
 import com.trendyol.design.core.icon.icons.outline.Back
 import com.trendyol.design.core.icon.icons.outline.Cancel
+import com.trendyol.design.core.icon.icons.outline.ErrorState
+import com.trendyol.design.core.icon.icons.outline.Info
 import com.trendyol.design.core.icon.icons.outline.StateCaution
+import com.trendyol.design.core.icon.icons.outline.SuccessState
+import com.trendyol.design.core.icon.icons.outline.Union
 import com.trendyol.design.ui.theme.TrendyolTheme
 
 private class TrendyolIconParameterProvider : PreviewParameterProvider<ImageVector> {
@@ -18,7 +23,12 @@ private class TrendyolIconParameterProvider : PreviewParameterProvider<ImageVect
         get() = sequenceOf(
             Icons.Outline.Back,
             Icons.Outline.Cancel,
+            Icons.Outline.Chevron,
+            Icons.Outline.ErrorState,
+            Icons.Outline.Info,
             Icons.Outline.StateCaution,
+            Icons.Outline.SuccessState,
+            Icons.Outline.Union,
         )
 }
 
