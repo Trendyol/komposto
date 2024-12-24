@@ -14,6 +14,8 @@ import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
 
+// TODO deprecate and move under outline package
+
 @Preview
 @Composable
 private fun VectorPreview() {
