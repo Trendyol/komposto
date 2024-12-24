@@ -19,7 +19,7 @@ import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.SaveSelected
 import com.trendyol.design.core.icon.icons.outline.SaveUnselected
-import com.trendyol.design.core.icon.icons.outline.Share
+import com.trendyol.design.core.icon.icons.fill.Share
 import com.trendyol.design.core.iconbutton.IconButtonDefaults
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.TrendyolDesign
@@ -149,7 +149,7 @@ public fun KPContainedIconToggleButton(
 @Composable
 private fun PreviewKPContainedIconButton() = PreviewTheme {
     KPContainedIconButton(
-        icon = Icons.Outline.Share,
+        icon = Icons.Fill.Share,
         size = KPContainedIconButtonSize.Large,
         onClick = {},
     )
@@ -159,7 +159,7 @@ private fun PreviewKPContainedIconButton() = PreviewTheme {
 @Composable
 private fun PreviewKPContainedIconButtonDisabled() = PreviewTheme {
     KPContainedIconButton(
-        icon = Icons.Outline.Share,
+        icon = Icons.Fill.Share,
         size = KPContainedIconButtonSize.Large,
         onClick = {},
         enabled = false,
