@@ -18,7 +18,7 @@ internal class ContentWithLoadingTests : DesignScreenshotTest() {
                 BoxWithHorizontalPadding {
                     StateComposeLayout(state = State.ContentWithLoading(LoadingType.Circular))
                 }
-            },
+            }
         )
     )
 
