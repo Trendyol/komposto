@@ -49,7 +49,7 @@ public object TrendyolDesign {
  *
  * Example usage:
  * ```
- * val backgroundColor = KPDesign.colors.background
+ * val backgroundColor = KPDesign.colors.colorPrimary
  * ```
  *
  * @return [KPDesignColors] representing the active color scheme.
