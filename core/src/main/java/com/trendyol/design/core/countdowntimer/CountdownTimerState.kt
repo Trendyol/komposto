@@ -9,11 +9,32 @@ import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.setValue
 import java.util.concurrent.TimeUnit
 
+/**
+ * Represents a countdown timer state with functionality to track the remaining time,
+ * control the timer's visibility, and handle the timer's lifecycle events.
+ *
+ * This class is designed to work seamlessly with Jetpack Compose by using mutable states
+ * to notify recompositions when the state changes.
+ *
+ * @constructor Creates a new [CountdownTimerState] instance.
+ * @param endDate The end time of the countdown timer, represented in milliseconds since epoch.
+ *
+ * @property remainingTime The remaining time in milliseconds. This is updated in real-time
+ * as the timer counts down.
+ * @property isVisible Indicates whether the countdown timer is currently visible.
+ *
+ * @function startTimer Starts the countdown timer. If the `endDate` is invalid (<= 0),
+ * the timer will be canceled immediately.
+ * @function cancelTimer Cancels the countdown timer and stops any updates to the state.
+ * @function setOnTimerFinishListener Registers a callback to be invoked when the timer finishes.
+ * @function getRemainingTimes Calculates and returns the remaining time as a [Triple] containing
+ * hours, minutes, and seconds.
+ */
 @Stable
 public class CountdownTimerState(
     public val endDate: Long,
 ) {
-    private var onTimerFinished: () -> Unit = {}
+    private var onTimerFinish: () -> Unit = {}
     private val countDownTimer: CountDownTimer by lazy {
         createCountDownTimer()
     }
@@ -35,8 +56,8 @@ public class CountdownTimerState(
         countDownTimer.cancel()
     }
 
-    public fun setOnTimerFinishedListener(action: () -> Unit) {
-        onTimerFinished = action
+    public fun setOnTimerFinishListener(action: () -> Unit) {
+        onTimerFinish = action
     }
 
     public fun getRemainingTimes(time: Long): Triple<Long, Long, Long> {
@@ -60,7 +81,7 @@ public class CountdownTimerState(
             override fun onFinish() {
                 remainingTime = 0
                 isVisible = false
-                onTimerFinished.invoke()
+                onTimerFinish.invoke()
             }
         }
     }

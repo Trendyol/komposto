@@ -601,7 +601,7 @@ public final class com/trendyol/design/core/countdowntimer/CountdownTimerState {
 	public final fun getRemainingTime ()J
 	public final fun getRemainingTimes (J)Lkotlin/Triple;
 	public final fun isVisible ()Z
-	public final fun setOnTimerFinishedListener (Lkotlin/jvm/functions/Function0;)V
+	public final fun setOnTimerFinishListener (Lkotlin/jvm/functions/Function0;)V
 	public final fun startTimer ()V
 }
 
