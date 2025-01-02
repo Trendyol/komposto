@@ -60,7 +60,7 @@ public object TrendyolDesign {
  *
  * Example usage:
  * ```
- * val bodyTextStyle = KPDesign.typography.body
+ * val bodyTextStyle = KPDesign.typography.body1
  * ```
  *
  * @return [KPDesignTypography] representing the active typography styles.
