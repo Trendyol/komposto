@@ -41,16 +41,20 @@ public fun KPCountdownTimer(
     size: CountdownTimerSize,
     endDate: Long,
     modifier: Modifier = Modifier,
+    onTimerFinished: () -> Unit = {},
     style: CountdownTimerStyle = KPCountdownTimerStyle.Primary,
     backgroundAlpha: Float = 1F,
 ) {
     val state = rememberSaveable(endDate, saver = CountdownTimerState.Saver) {
         CountdownTimerState(endDate = endDate)
     }
-    val remainingTimes by remember(state) { derivedStateOf { state.getRemainingTimes(state.remainingTime) } }
+    val remainingTimes by remember(state) {
+        derivedStateOf { state.getRemainingTimes(state.remainingTime) }
+    }
     val isVisible by remember(state) { derivedStateOf { state.isVisible } }
 
     DisposableEffect(state) {
+        state.setOnTimerFinishedListener(onTimerFinished)
         state.startTimer()
         onDispose { state.cancelTimer() }
     }
@@ -75,7 +79,7 @@ public fun KPCountdownTimer(
                     size = CustomIconSize,
                     imageVector = Icons.Fill.Colon,
                     contentDescription = Icons.Fill.Colon.name,
-                    tint = style.backgroundColor
+                    tint = style.separatorTintColor
                 )
                 Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 TimeBoxItem(
@@ -89,7 +93,7 @@ public fun KPCountdownTimer(
                     size = CustomIconSize,
                     imageVector = Icons.Fill.Colon,
                     contentDescription = Icons.Fill.Colon.name,
-                    tint = style.backgroundColor
+                    tint = style.separatorTintColor
                 )
                 Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 TimeBoxItem(

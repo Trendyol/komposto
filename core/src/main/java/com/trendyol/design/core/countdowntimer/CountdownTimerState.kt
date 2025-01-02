@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit
 public class CountdownTimerState(
     public val endDate: Long,
 ) {
+    private var onTimerFinished: () -> Unit = {}
     private val countDownTimer: CountDownTimer by lazy {
         createCountDownTimer()
     }
@@ -32,6 +33,10 @@ public class CountdownTimerState(
 
     public fun cancelTimer() {
         countDownTimer.cancel()
+    }
+
+    public fun setOnTimerFinishedListener(action: () -> Unit) {
+        onTimerFinished = action
     }
 
     public fun getRemainingTimes(time: Long): Triple<Long, Long, Long> {
@@ -55,6 +60,7 @@ public class CountdownTimerState(
             override fun onFinish() {
                 remainingTime = 0
                 isVisible = false
+                onTimerFinished.invoke()
             }
         }
     }

@@ -22,8 +22,8 @@ public sealed interface KPCountdownTimerStyle {
         override val backgroundColor: Color
             @Composable get() = TrendyolDesign.colors.colorSurface
 
-        override val separatorTextStyle: TextStyle
-            @Composable get() = TrendyolDesign.typography.titleBold
+        override val separatorTintColor: Color
+            @Composable get() = TrendyolDesign.colors.colorSurface
 
         @Composable
         override fun textStyle(size: CountdownTimerSize): TextStyle {
