@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.14.1] - 2025-01-02
+
+### Fixed
+- Warning info icon elevation is added
+- Warning info description and title text alignment is added
+- Countdown timer onTimerFinished action is added
+- Countdown timer background and separator colors separated.
+
 ## [0.14.0] - 2024-09-10
 
 ### Added
