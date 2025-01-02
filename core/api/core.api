@@ -583,7 +583,7 @@ public final class com/trendyol/design/core/countdowntimer/ComposableSingletons$
 }
 
 public final class com/trendyol/design/core/countdowntimer/CountdownTimerKt {
-	public static final fun KPCountdownTimer (Lcom/trendyol/design/core/countdowntimer/CountdownTimerSize;JLandroidx/compose/ui/Modifier;Lcom/trendyol/design/core/countdowntimer/CountdownTimerStyle;FLandroidx/compose/runtime/Composer;II)V
+	public static final fun KPCountdownTimer (Lcom/trendyol/design/core/countdowntimer/CountdownTimerSize;JLandroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Lcom/trendyol/design/core/countdowntimer/CountdownTimerStyle;FLandroidx/compose/runtime/Composer;II)V
 }
 
 public abstract interface class com/trendyol/design/core/countdowntimer/CountdownTimerSize {
@@ -601,6 +601,7 @@ public final class com/trendyol/design/core/countdowntimer/CountdownTimerState {
 	public final fun getRemainingTime ()J
 	public final fun getRemainingTimes (J)Lkotlin/Triple;
 	public final fun isVisible ()Z
+	public final fun setOnTimerFinishedListener (Lkotlin/jvm/functions/Function0;)V
 	public final fun startTimer ()V
 }
 
@@ -609,7 +610,7 @@ public final class com/trendyol/design/core/countdowntimer/CountdownTimerState$C
 
 public abstract interface class com/trendyol/design/core/countdowntimer/CountdownTimerStyle {
 	public abstract fun getBackgroundColor (Landroidx/compose/runtime/Composer;I)J
-	public abstract fun getSeparatorTextStyle (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public abstract fun getSeparatorTintColor (Landroidx/compose/runtime/Composer;I)J
 	public abstract fun textStyle (Lcom/trendyol/design/core/countdowntimer/CountdownTimerSize;Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 }
 
@@ -657,7 +658,7 @@ public final class com/trendyol/design/core/countdowntimer/KPCountdownTimerStyle
 	public static final field INSTANCE Lcom/trendyol/design/core/countdowntimer/KPCountdownTimerStyle$Primary;
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getBackgroundColor (Landroidx/compose/runtime/Composer;I)J
-	public fun getSeparatorTextStyle (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getSeparatorTintColor (Landroidx/compose/runtime/Composer;I)J
 	public fun hashCode ()I
 	public fun textStyle (Lcom/trendyol/design/core/countdowntimer/CountdownTimerSize;Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun toString ()Ljava/lang/String;
@@ -1916,22 +1917,26 @@ public final class com/trendyol/design/core/statelayout/ComposableSingletons$Sta
 public final class com/trendyol/design/core/statelayout/InfoModel : android/os/Parcelable {
 	public static final field $stable I
 	public static final field CREATOR Landroid/os/Parcelable$Creator;
-	public fun <init> (Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/icon/StateLayoutIconSize;Lcom/trendyol/design/core/statelayout/ButtonsInfoModel;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/icon/StateLayoutIconSize;Lcom/trendyol/design/core/statelayout/ButtonsInfoModel;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/icon/StateLayoutIconSize;Lcom/trendyol/design/core/statelayout/ButtonsInfoModel;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/icon/StateLayoutIconSize;Lcom/trendyol/design/core/statelayout/ButtonsInfoModel;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Landroidx/compose/ui/graphics/vector/ImageVector;
 	public final fun component4 ()Lcom/trendyol/design/core/icon/StateLayoutIconSize;
 	public final fun component5 ()Lcom/trendyol/design/core/statelayout/ButtonsInfoModel;
-	public final fun copy (Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/icon/StateLayoutIconSize;Lcom/trendyol/design/core/statelayout/ButtonsInfoModel;)Lcom/trendyol/design/core/statelayout/InfoModel;
-	public static synthetic fun copy$default (Lcom/trendyol/design/core/statelayout/InfoModel;Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/icon/StateLayoutIconSize;Lcom/trendyol/design/core/statelayout/ButtonsInfoModel;ILjava/lang/Object;)Lcom/trendyol/design/core/statelayout/InfoModel;
+	public final fun component6-e0LSkKk ()I
+	public final fun component7-e0LSkKk ()I
+	public final fun copy-LYY4USU (Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/icon/StateLayoutIconSize;Lcom/trendyol/design/core/statelayout/ButtonsInfoModel;II)Lcom/trendyol/design/core/statelayout/InfoModel;
+	public static synthetic fun copy-LYY4USU$default (Lcom/trendyol/design/core/statelayout/InfoModel;Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/icon/StateLayoutIconSize;Lcom/trendyol/design/core/statelayout/ButtonsInfoModel;IIILjava/lang/Object;)Lcom/trendyol/design/core/statelayout/InfoModel;
 	public fun describeContents ()I
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getButtonsInfoModel ()Lcom/trendyol/design/core/statelayout/ButtonsInfoModel;
 	public final fun getDescription ()Ljava/lang/String;
+	public final fun getDescriptionTextAlignment-e0LSkKk ()I
 	public final fun getIconSize ()Lcom/trendyol/design/core/icon/StateLayoutIconSize;
 	public final fun getImage ()Landroidx/compose/ui/graphics/vector/ImageVector;
 	public final fun getTitle ()Ljava/lang/String;
+	public final fun getTitleTextAlignment-e0LSkKk ()I
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 	public fun writeToParcel (Landroid/os/Parcel;I)V
