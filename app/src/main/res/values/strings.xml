@@ -5,7 +5,9 @@
     <string name="helper_text">Helper Text</string>
     <string name="item">Item</string>
     <string name="state_layout_title">Content Not Found</string>
-    <string name="state_layout_description">You can discover new contents.</string>
+    <string name="state_layout_description">You can discover new contents. This string can be multiple lines with center text alignment.</string>
+    <string name="state_layout_primary_button">Continue to Shopping</string>
+    <string name="state_layout_secondary_button">Cancel</string>
     <string name="button_top_text">Button</string>
     <string name="button_bottom_text">Last 1 Item</string>
 </resources>
