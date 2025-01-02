@@ -35,13 +35,14 @@ import java.util.concurrent.TimeUnit
  * @param endDate The end date for the countdown, represented as a `Long` timestamp in milliseconds.
  * @param modifier A `Modifier` used to adjust the layout or behavior of the composable. Defaults to `Modifier`.
  * @param backgroundAlpha The alpha value for the background color, allowing control over the transparency of the time boxes. Defaults to `1F`.
+ * @param onTimerFinish Registers a callback to be invoked when the timer finishes.
  */
 @Composable
 public fun KPCountdownTimer(
     size: CountdownTimerSize,
     endDate: Long,
     modifier: Modifier = Modifier,
-    onTimerFinished: () -> Unit = {},
+    onTimerFinish: () -> Unit = {},
     style: CountdownTimerStyle = KPCountdownTimerStyle.Primary,
     backgroundAlpha: Float = 1F,
 ) {
@@ -54,7 +55,7 @@ public fun KPCountdownTimer(
     val isVisible by remember(state) { derivedStateOf { state.isVisible } }
 
     DisposableEffect(state) {
-        state.setOnTimerFinishedListener(onTimerFinished)
+        state.setOnTimerFinishListener(onTimerFinish)
         state.startTimer()
         onDispose { state.cancelTimer() }
     }
