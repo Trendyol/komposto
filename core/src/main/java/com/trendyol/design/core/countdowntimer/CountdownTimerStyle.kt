@@ -11,7 +11,7 @@ import androidx.compose.ui.text.TextStyle
  * It includes properties such as background color, separator text style, and a function to get the text style based on the countdown timer's size.
  *
  * @property backgroundColor Represents the background color of the countdown timer. This value is retrieved from a `@Composable` function.
- * @property separatorTextStyle Represents the text style for separators (e.g., between hours, minutes, and seconds) in the countdown timer. This value is retrieved from a `@Composable` function.
+ * @property separatorTintColor Represents the tint color for separators (e.g., between hours, minutes, and seconds) in the countdown timer. This value is retrieved from a `@Composable` function.
  */
 @Immutable
 public interface CountdownTimerStyle {
@@ -29,7 +29,7 @@ public interface CountdownTimerStyle {
      *
      * @return A `TextStyle` representing the style of the separator text.
      */
-    public val separatorTextStyle: TextStyle
+    public val separatorTintColor: Color
         @Composable get
 
     /**
