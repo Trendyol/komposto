@@ -85,7 +85,7 @@ public val KPIcons.Outline.ErrorState: ImageVector by lazy {
 private var _ErrorState: ImageVector? = null
 
 @Deprecated(
-    message = "Use KPIcons.ErrorState.Back instead for consistent naming. " +
+    message = "Use KPIcons.Outline.ErrorState instead for consistent naming. " +
         "This API will get removed in future releases.",
     replaceWith = ReplaceWith(
         expression = "KPIcons.Outline.ErrorState"
