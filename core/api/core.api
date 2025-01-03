@@ -1,4 +1,5 @@
 public final class WarningInfoStateDefaultIconKt {
+	public static final fun getStateWarningInfoDefault (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 	public static final fun getWarningInfoStateDefaultIcon ()Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
@@ -290,6 +291,7 @@ public final class com/trendyol/design/core/badge/boxbadge/model/BoxBadgeIconSiz
 
 public final class com/trendyol/design/core/button/ButtonKt {
 	public static final fun Button (Lkotlin/jvm/functions/Function0;Lcom/trendyol/design/core/button/ButtonStyle;Lcom/trendyol/design/core/button/ButtonSize;Landroidx/compose/ui/Modifier;ZLandroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/material/ButtonElevation;Landroidx/compose/ui/graphics/Shape;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/material/ButtonColors;Landroidx/compose/foundation/layout/PaddingValues;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;III)V
+	public static final fun KPButton (Lkotlin/jvm/functions/Function0;Lcom/trendyol/design/core/button/ButtonStyle;Lcom/trendyol/design/core/button/ButtonSize;Landroidx/compose/ui/Modifier;ZLandroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/material/ButtonElevation;Landroidx/compose/ui/graphics/Shape;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/material/ButtonColors;Landroidx/compose/foundation/layout/PaddingValues;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;III)V
 }
 
 public abstract interface class com/trendyol/design/core/button/ButtonSize {
@@ -304,14 +306,109 @@ public final class com/trendyol/design/core/button/ButtonSize$DefaultImpls {
 
 public abstract interface class com/trendyol/design/core/button/ButtonStyle {
 	public abstract fun getBorder-kHDZbjc (FZLandroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/BorderStroke;
-	public abstract fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/TrendyolButtonColors;
+	public abstract fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/KPButtonColors;
 }
 
 public final class com/trendyol/design/core/button/ButtonStyle$DefaultImpls {
 	public static fun getBorder-kHDZbjc (Lcom/trendyol/design/core/button/ButtonStyle;FZLandroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/BorderStroke;
 }
 
-public abstract interface class com/trendyol/design/core/button/TrendyolButtonColors : androidx/compose/material/ButtonColors {
+public abstract interface class com/trendyol/design/core/button/KPButtonColors : androidx/compose/material/ButtonColors {
+	public abstract fun borderColor (ZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+}
+
+public final class com/trendyol/design/core/button/KPButtonDefaults {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/button/KPButtonDefaults;
+	public final fun buttonColors-rTWuKDQ (JJLandroidx/compose/ui/graphics/Color;JJLandroidx/compose/ui/graphics/Color;Landroidx/compose/runtime/Composer;II)Lcom/trendyol/design/core/button/KPButtonColors;
+	public final fun elevation-R_JCAzs (FFFFFLandroidx/compose/runtime/Composer;II)Landroidx/compose/material/ButtonElevation;
+}
+
+public abstract interface class com/trendyol/design/core/button/KPButtonSize {
+}
+
+public final class com/trendyol/design/core/button/KPButtonSize$Large : com/trendyol/design/core/button/ButtonSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/button/KPButtonSize$Large;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getContentPadding ()Landroidx/compose/foundation/layout/PaddingValues;
+	public fun getFont (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getMinHeight (Landroidx/compose/runtime/Composer;I)F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/button/KPButtonSize$Medium : com/trendyol/design/core/button/ButtonSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/button/KPButtonSize$Medium;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getContentPadding ()Landroidx/compose/foundation/layout/PaddingValues;
+	public fun getFont (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getMinHeight (Landroidx/compose/runtime/Composer;I)F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/button/KPButtonSize$Small : com/trendyol/design/core/button/ButtonSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/button/KPButtonSize$Small;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getContentPadding ()Landroidx/compose/foundation/layout/PaddingValues;
+	public fun getFont (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getMinHeight (Landroidx/compose/runtime/Composer;I)F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/button/KPButtonSize$XSmall : com/trendyol/design/core/button/ButtonSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/button/KPButtonSize$XSmall;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getContentPadding ()Landroidx/compose/foundation/layout/PaddingValues;
+	public fun getFont (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun getMinHeight (Landroidx/compose/runtime/Composer;I)F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/trendyol/design/core/button/KPButtonStyle : com/trendyol/design/core/button/ButtonStyle {
+}
+
+public final class com/trendyol/design/core/button/KPButtonStyle$DefaultImpls {
+	public static fun getBorder-kHDZbjc (Lcom/trendyol/design/core/button/KPButtonStyle;FZLandroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/BorderStroke;
+}
+
+public final class com/trendyol/design/core/button/KPButtonStyle$Primary : com/trendyol/design/core/button/KPButtonStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/button/KPButtonStyle$Primary;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getBorder-kHDZbjc (FZLandroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/BorderStroke;
+	public fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/KPButtonColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/button/KPButtonStyle$Secondary : com/trendyol/design/core/button/KPButtonStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/button/KPButtonStyle$Secondary;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getBorder-kHDZbjc (FZLandroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/BorderStroke;
+	public fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/KPButtonColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/button/KPButtonStyle$Tertiary : com/trendyol/design/core/button/KPButtonStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/button/KPButtonStyle$Tertiary;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getBorder-kHDZbjc (FZLandroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/BorderStroke;
+	public fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/KPButtonColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/trendyol/design/core/button/TrendyolButtonColors : androidx/compose/material/ButtonColors, com/trendyol/design/core/button/KPButtonColors {
 	public abstract fun borderColor (ZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
 }
 
@@ -377,6 +474,7 @@ public final class com/trendyol/design/core/button/TrendyolButtonStyle$Primary :
 	public static final field INSTANCE Lcom/trendyol/design/core/button/TrendyolButtonStyle$Primary;
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getBorder-kHDZbjc (FZLandroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/BorderStroke;
+	public synthetic fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/KPButtonColors;
 	public fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/TrendyolButtonColors;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
@@ -387,6 +485,7 @@ public final class com/trendyol/design/core/button/TrendyolButtonStyle$Secondary
 	public static final field INSTANCE Lcom/trendyol/design/core/button/TrendyolButtonStyle$Secondary;
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getBorder-kHDZbjc (FZLandroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/BorderStroke;
+	public synthetic fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/KPButtonColors;
 	public fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/TrendyolButtonColors;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
@@ -397,6 +496,7 @@ public final class com/trendyol/design/core/button/TrendyolButtonStyle$Tertiary 
 	public static final field INSTANCE Lcom/trendyol/design/core/button/TrendyolButtonStyle$Tertiary;
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getBorder-kHDZbjc (FZLandroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/BorderStroke;
+	public synthetic fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/KPButtonColors;
 	public fun getButtonColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/button/TrendyolButtonColors;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
@@ -777,6 +877,7 @@ public final class com/trendyol/design/core/dialog/TrendyolGenericDialogType$Suc
 
 public final class com/trendyol/design/core/icon/IconKt {
 	public static final fun Icon-yrwZFoE (Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/icon/IconSize;Landroidx/compose/ui/Modifier;Ljava/lang/String;JLandroidx/compose/runtime/Composer;II)V
+	public static final fun KPIcon-yrwZFoE (Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/icon/IconSize;Landroidx/compose/ui/Modifier;Ljava/lang/String;JLandroidx/compose/runtime/Composer;II)V
 }
 
 public abstract interface class com/trendyol/design/core/icon/IconSize {
@@ -800,6 +901,96 @@ public final class com/trendyol/design/core/icon/Icons$Outline {
 
 public final class com/trendyol/design/core/icon/KPCustomFilteredColorIconKt {
 	public static final fun KPCustomFilteredColorIcon-fKkg6MU (Landroidx/compose/ui/Modifier;Landroidx/compose/ui/graphics/vector/ImageVector;JLandroidx/compose/ui/graphics/vector/ImageVector;JLandroidx/compose/runtime/Composer;II)V
+}
+
+public abstract interface class com/trendyol/design/core/icon/KPIconSize {
+}
+
+public final class com/trendyol/design/core/icon/KPIconSize$Large : com/trendyol/design/core/icon/IconSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIconSize$Large;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getDp-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/icon/KPIconSize$Medium : com/trendyol/design/core/icon/IconSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIconSize$Medium;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getDp-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/icon/KPIconSize$Small : com/trendyol/design/core/icon/IconSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIconSize$Small;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getDp-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/icon/KPIconSize$XLarge : com/trendyol/design/core/icon/IconSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIconSize$XLarge;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getDp-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/icon/KPIconSize$XSmall : com/trendyol/design/core/icon/IconSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIconSize$XSmall;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getDp-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/icon/KPIconSize$XXLarge : com/trendyol/design/core/icon/IconSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIconSize$XXLarge;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getDp-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/icon/KPIconSize$XXSmall : com/trendyol/design/core/icon/IconSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIconSize$XXSmall;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getDp-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/icon/KPIconSize$XXXLarge : com/trendyol/design/core/icon/IconSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIconSize$XXXLarge;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getDp-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/icon/KPIcons {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIcons;
+}
+
+public final class com/trendyol/design/core/icon/KPIcons$Fill {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIcons$Fill;
+}
+
+public final class com/trendyol/design/core/icon/KPIcons$Outline {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/icon/KPIcons$Outline;
 }
 
 public abstract interface class com/trendyol/design/core/icon/StateLayoutIconSize : com/trendyol/design/core/icon/IconSize {
@@ -900,30 +1091,37 @@ public final class com/trendyol/design/core/icon/TrendyolIconSize$XXXLarge : com
 
 public final class com/trendyol/design/core/icon/icons/fill/ArrowDownKt {
 	public static final fun getArrowDown (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getArrowDown (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/BasketKt {
 	public static final fun getBasket (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getBasket (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/BulletKt {
 	public static final fun getBullet (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getBullet (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/CampaignDownArrowKt {
 	public static final fun getCampaignDownArrow (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getCampaignDownArrow (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/CampaignKt {
 	public static final fun getCampaign (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getCampaign (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/CancelKt {
 	public static final fun getCancel (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getCancel (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/CargoKt {
 	public static final fun getCargo (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getCargo (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/ChevronKt {
@@ -932,102 +1130,131 @@ public final class com/trendyol/design/core/icon/icons/fill/ChevronKt {
 
 public final class com/trendyol/design/core/icon/icons/fill/CircleIconKt {
 	public static final fun getCircleIcon (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getCircleIcon (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/ColonKt {
 	public static final fun getColon (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getColon (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/CouponKt {
 	public static final fun getCoupon (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getCoupon (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/CreditKt {
 	public static final fun getCredit (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getCredit (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/DeliveryKt {
 	public static final fun getDelivery (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getDelivery (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/FenomenGradientKt {
 	public static final fun getFenomenGradient (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getFenomenGradient (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/HelpKt {
 	public static final fun getHelp (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getHelp (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/InfoIconKt {
 	public static final fun getInfoIcon (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getInfoIcon (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/PercentageKt {
 	public static final fun getPercentage (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getPercentage (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/PlayGradientKt {
 	public static final fun getPlayGradient (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getPlayGradient (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/RunningOutKt {
 	public static final fun getRunningOut (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getRunningOut (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/SearchKt {
 	public static final fun getSearch (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getSearch (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/StarKt {
 	public static final fun getStar (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getStar (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/StateOrderKt {
 	public static final fun getStateOrder (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getStateOrder (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/StatePinKt {
 	public static final fun getStatePin (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getStatePin (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/StateRefreshKt {
 	public static final fun getStateRefresh (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getStateRefresh (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/TickKt {
 	public static final fun getTick (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getTick (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/TrashKt {
 	public static final fun getTrash (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getTrash (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/outline/BackKt {
 	public static final fun getBack (Lcom/trendyol/design/core/icon/Icons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getBack (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/outline/CancelKt {
 	public static final fun getCancel (Lcom/trendyol/design/core/icon/Icons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getCancel (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
+}
+
+public final class com/trendyol/design/core/icon/icons/outline/ChevronKt {
+	public static final fun getChevron (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/outline/ErrorStateKt {
 	public static final fun getErrorState (Lcom/trendyol/design/core/icon/Icons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getErrorState (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/outline/InfoKt {
 	public static final fun getInfo (Lcom/trendyol/design/core/icon/Icons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getInfo (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/outline/StateCautionKt {
 	public static final fun getStateCaution (Lcom/trendyol/design/core/icon/Icons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getStateCaution (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/outline/SuccessStateKt {
 	public static final fun getSuccessState (Lcom/trendyol/design/core/icon/Icons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getSuccessState (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/outline/UnionKt {
 	public static final fun getUnion (Lcom/trendyol/design/core/icon/Icons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getUnion (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/infobox/ComposableSingletons$KPInfoBoxKt {
@@ -2307,7 +2534,16 @@ public final class com/trendyol/design/core/statelayout/states/warningInfo/Warni
 	public static final fun WarningInfoStateComposable (Landroidx/compose/ui/Modifier;Lcom/trendyol/design/core/statelayout/WarningInfoStateLayoutStyle;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class com/trendyol/design/core/text/KPTextDefaults {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/text/KPTextDefaults;
+	public final fun getLetterSpacing-XSAIIZE ()J
+	public final fun getPlatformStyle ()Landroidx/compose/ui/text/PlatformTextStyle;
+}
+
 public final class com/trendyol/design/core/text/TextKt {
+	public static final fun KPText--4IGK_g (Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
+	public static final fun KPText-IbK3jfQ (Landroidx/compose/ui/text/AnnotatedString;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILjava/util/Map;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
 	public static final fun Text--4IGK_g (Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
 	public static final fun Text-IbK3jfQ (Landroidx/compose/ui/text/AnnotatedString;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILjava/util/Map;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
 }
