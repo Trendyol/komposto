@@ -3,6 +3,7 @@ package com.trendyol.design.core.statelayout
 import android.os.Parcelable
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.style.TextAlign
 import com.trendyol.design.core.icon.StateLayoutIconSize
 import kotlinx.parcelize.Parcelize
 import kotlinx.parcelize.RawValue
@@ -15,6 +16,8 @@ public data class InfoModel(
     val image: @RawValue ImageVector? = null,
     val iconSize: @RawValue StateLayoutIconSize,
     val buttonsInfoModel: ButtonsInfoModel? = null,
+    val titleTextAlignment: @RawValue TextAlign = TextAlign.Center,
+    val descriptionTextAlignment: @RawValue TextAlign = TextAlign.Center,
 ) : Parcelable
 
 @Stable
