@@ -1944,6 +1944,89 @@ public final class com/trendyol/design/core/price/TrendyolPriceStyle$SinglePrice
 	public fun toString ()Ljava/lang/String;
 }
 
+public abstract interface class com/trendyol/design/core/radiobutton/KPRadioButtonContainerType {
+}
+
+public final class com/trendyol/design/core/radiobutton/KPRadioButtonContainerType$Content : com/trendyol/design/core/radiobutton/RadioButtonContainerType$Content {
+	public static final field $stable I
+	public fun <init> (Lkotlin/jvm/functions/Function2;)V
+	public final fun component1 ()Lkotlin/jvm/functions/Function2;
+	public final fun copy (Lkotlin/jvm/functions/Function2;)Lcom/trendyol/design/core/radiobutton/KPRadioButtonContainerType$Content;
+	public static synthetic fun copy$default (Lcom/trendyol/design/core/radiobutton/KPRadioButtonContainerType$Content;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lcom/trendyol/design/core/radiobutton/KPRadioButtonContainerType$Content;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getContent ()Lkotlin/jvm/functions/Function2;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/radiobutton/KPRadioButtonContainerType$None : com/trendyol/design/core/radiobutton/RadioButtonContainerType$None {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/radiobutton/KPRadioButtonContainerType$None;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/radiobutton/KPRadioButtonContainerType$Text : com/trendyol/design/core/radiobutton/RadioButtonContainerType$Text {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lcom/trendyol/design/core/radiobutton/KPRadioButtonContainerType$Text;
+	public static synthetic fun copy$default (Lcom/trendyol/design/core/radiobutton/KPRadioButtonContainerType$Text;Ljava/lang/String;ILjava/lang/Object;)Lcom/trendyol/design/core/radiobutton/KPRadioButtonContainerType$Text;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/radiobutton/KPRadioButtonDefaults {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/radiobutton/KPRadioButtonDefaults;
+	public final fun colors-ro_MJ88 (JJJJLandroidx/compose/runtime/Composer;II)Landroidx/compose/material/RadioButtonColors;
+}
+
+public abstract interface class com/trendyol/design/core/radiobutton/KPRadioButtonSize : com/trendyol/design/core/radiobutton/RadioButtonSize {
+}
+
+public final class com/trendyol/design/core/radiobutton/KPRadioButtonSize$Medium : com/trendyol/design/core/radiobutton/KPRadioButtonSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/radiobutton/KPRadioButtonSize$Medium;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getButtonSize-D9Ej5fM ()F
+	public fun getDotSize-D9Ej5fM ()F
+	public fun getRippleRadius-D9Ej5fM ()F
+	public fun getStrokeWidth-D9Ej5fM ()F
+	public fun getTextSize (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/radiobutton/KPRadioButtonSize$Small : com/trendyol/design/core/radiobutton/KPRadioButtonSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/radiobutton/KPRadioButtonSize$Small;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getButtonSize-D9Ej5fM ()F
+	public fun getDotSize-D9Ej5fM ()F
+	public fun getRippleRadius-D9Ej5fM ()F
+	public fun getStrokeWidth-D9Ej5fM ()F
+	public fun getTextSize (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/radiobutton/KPRadioButtonSize$XSmall : com/trendyol/design/core/radiobutton/KPRadioButtonSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/radiobutton/KPRadioButtonSize$XSmall;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getButtonSize-D9Ej5fM ()F
+	public fun getDotSize-D9Ej5fM ()F
+	public fun getRippleRadius-D9Ej5fM ()F
+	public fun getStrokeWidth-D9Ej5fM ()F
+	public fun getTextSize (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
 public abstract interface class com/trendyol/design/core/radiobutton/RadioButtonContainerType {
 }
 
@@ -2008,6 +2091,7 @@ public final class com/trendyol/design/core/radiobutton/TrendyolRadioButtonDefau
 }
 
 public final class com/trendyol/design/core/radiobutton/TrendyolRadioButtonKt {
+	public static final fun KPRadioButton (ZLcom/trendyol/design/core/radiobutton/RadioButtonContainerType;Lcom/trendyol/design/core/radiobutton/RadioButtonSize;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/material/RadioButtonColors;Landroidx/compose/ui/Alignment$Vertical;Landroidx/compose/runtime/Composer;II)V
 	public static final fun TrendyolRadioButton (ZLcom/trendyol/design/core/radiobutton/RadioButtonContainerType;Lcom/trendyol/design/core/radiobutton/RadioButtonSize;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/material/RadioButtonColors;Landroidx/compose/ui/Alignment$Vertical;Landroidx/compose/runtime/Composer;II)V
 }
 
