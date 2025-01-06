@@ -2158,7 +2158,33 @@ public final class com/trendyol/design/core/rating/ComposableSingletons$RatingBa
 	public final fun getLambda-8$core_release ()Lkotlin/jvm/functions/Function2;
 }
 
+public abstract interface class com/trendyol/design/core/rating/KPRatingBarSize : com/trendyol/design/core/rating/RatingBarSize {
+}
+
+public final class com/trendyol/design/core/rating/KPRatingBarSize$Medium : com/trendyol/design/core/rating/KPRatingBarSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/rating/KPRatingBarSize$Medium;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getCameraIconSize (Landroidx/compose/runtime/Composer;I)J
+	public fun getStarIconSize-D9Ej5fM ()F
+	public fun getTextSize (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/rating/KPRatingBarSize$Small : com/trendyol/design/core/rating/KPRatingBarSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/rating/KPRatingBarSize$Small;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getCameraIconSize (Landroidx/compose/runtime/Composer;I)J
+	public fun getStarIconSize-D9Ej5fM ()F
+	public fun getTextSize (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
 public final class com/trendyol/design/core/rating/RatingBarKt {
+	public static final fun KPRatingBar-4qA3X-s (FLcom/trendyol/design/core/rating/RatingBarSize;Landroidx/compose/ui/Modifier;ILjava/lang/String;ZZFFLandroidx/compose/ui/graphics/vector/ImageVector;JJLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;III)V
 	public static final fun RatingBar-4qA3X-s (FLcom/trendyol/design/core/rating/RatingBarSize;Landroidx/compose/ui/Modifier;ILjava/lang/String;ZZFFLandroidx/compose/ui/graphics/vector/ImageVector;JJLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;III)V
 }
 
