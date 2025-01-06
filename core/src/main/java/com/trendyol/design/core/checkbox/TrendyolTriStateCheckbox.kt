@@ -39,7 +39,7 @@ import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.lerp
 import com.trendyol.design.core.text.KPText
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 import kotlin.math.floor
 import kotlin.math.max
 
@@ -113,7 +113,7 @@ internal fun KPTriStateCheckbox(
                 KPText(
                     text = containerType.text,
                     style = size.textStyle,
-                    color = TrendyolDesign.colors.colorOnSurfaceVariant3
+                    color = KPDesign.colors.colorOnSurfaceVariant3
                 )
             }
 
