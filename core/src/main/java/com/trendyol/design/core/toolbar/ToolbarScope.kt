@@ -14,10 +14,10 @@ import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.IconSize
-import com.trendyol.theme.TrendyolDesign
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.TrendyolIconSize
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.text.KPText
+import com.trendyol.theme.KPDesign
 
 @Stable
 public object ToolbarScope {
@@ -32,15 +32,15 @@ public object ToolbarScope {
      * @param onClick This parameter allows you to specify an action to be performed when the user
      * clicks on the icon.
      * @param size  This parameter controls the size of the icon. It can be set to one of the
-     * predefined IconSize enum values, such as [IconSize.Small] or [IconSize.Medium].
-     * Defaults to the value from [ToolbarDefaults.IconSize].
+     * predefined IconSize enum values, such as [KPIconSize.Small] or [KPIconSize.Medium].
+     * Defaults to the value from [KPToolbarDefaults.IconSize].
      */
     @Composable
     public fun Icon(
         imageVector: ImageVector,
         modifier: Modifier = Modifier,
         onClick: () -> Unit,
-        size: IconSize = ToolbarDefaults.IconSize,
+        size: IconSize = KPToolbarDefaults.IconSize,
         tint: Color = Color.Unspecified
     ) {
         Box(
@@ -49,9 +49,9 @@ public object ToolbarScope {
                 .size(size = size.dp)
                 .clickable { onClick.invoke() },
         ) {
-            Icon(
+            KPIcon(
                 imageVector = imageVector,
-                size = TrendyolIconSize.Medium,
+                size = KPIconSize.Medium,
                 modifier = Modifier
                     .align(alignment = Alignment.Center)
                     .padding(all = 2.dp),
@@ -67,16 +67,16 @@ public object ToolbarScope {
      * @param modifier modifier The [Modifier] to be applied to this Toolbar
      * @param onClick A lambda function that will be called when the user clicks on the text.
      * @param style A TextStyle object that defines the text style. The default
-     * value is [TrendyolDesign.typography.subtitleMediumColorPrimary]
+     * value is [KPDesign.typography.subtitleMediumColorPrimary]
      */
     @Composable
     public fun Text(
         text: String,
         modifier: Modifier = Modifier,
         onClick: () -> Unit,
-        style: TextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
+        style: TextStyle = KPDesign.typography.subtitleMediumColorPrimary,
     ) {
-        Text(
+        KPText(
             text = text,
             modifier = modifier
                 .layoutId(TextLayoutId)

@@ -2789,6 +2789,122 @@ public final class com/trendyol/design/core/toolbar/CheckToolbarLayoutIdsKt {
 	public static final fun CheckToolbarLayoutIds (Ljava/lang/Object;ZLjava/lang/String;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class com/trendyol/design/core/toolbar/KPToolbarDefaults {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/toolbar/KPToolbarDefaults;
+	public final fun getContentPadding ()Landroidx/compose/foundation/layout/PaddingValues;
+	public final fun getElevation-D9Ej5fM ()F
+	public final fun getIconSize ()Lcom/trendyol/design/core/icon/IconSize;
+}
+
+public abstract interface class com/trendyol/design/core/toolbar/KPToolbarStyle : com/trendyol/design/core/toolbar/ToolbarStyle {
+}
+
+public final class com/trendyol/design/core/toolbar/KPToolbarStyle$EndIcon : com/trendyol/design/core/toolbar/KPToolbarStyle, com/trendyol/design/core/toolbar/ToolbarStyleEndIcon {
+	public static final field $stable I
+	public fun <init> (Lkotlin/jvm/functions/Function3;)V
+	public final fun component1 ()Lkotlin/jvm/functions/Function3;
+	public final fun copy (Lkotlin/jvm/functions/Function3;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$EndIcon;
+	public static synthetic fun copy$default (Lcom/trendyol/design/core/toolbar/KPToolbarStyle$EndIcon;Lkotlin/jvm/functions/Function3;ILjava/lang/Object;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$EndIcon;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getEndIcon ()Lkotlin/jvm/functions/Function3;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/toolbar/KPToolbarStyle$EndTwoIcons : com/trendyol/design/core/toolbar/KPToolbarStyle, com/trendyol/design/core/toolbar/ToolbarStyleEndTwoIcons {
+	public static final field $stable I
+	public fun <init> (Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;)V
+	public final fun component1 ()Lkotlin/jvm/functions/Function3;
+	public final fun component2 ()Lkotlin/jvm/functions/Function3;
+	public final fun copy (Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$EndTwoIcons;
+	public static synthetic fun copy$default (Lcom/trendyol/design/core/toolbar/KPToolbarStyle$EndTwoIcons;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;ILjava/lang/Object;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$EndTwoIcons;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getFirstIcon ()Lkotlin/jvm/functions/Function3;
+	public fun getSecondIcon ()Lkotlin/jvm/functions/Function3;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/trendyol/design/core/toolbar/KPToolbarStyle$Icon {
+}
+
+public final class com/trendyol/design/core/toolbar/KPToolbarStyle$Icon$EndIcon : com/trendyol/design/core/toolbar/ToolbarStyleEndIcon, com/trendyol/design/core/toolbar/ToolbarStyleIcon {
+	public static final field $stable I
+	public fun <init> (Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;)V
+	public final fun component1 ()Lkotlin/jvm/functions/Function3;
+	public final fun component2 ()Lkotlin/jvm/functions/Function3;
+	public final fun copy (Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$EndIcon;
+	public static synthetic fun copy$default (Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$EndIcon;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;ILjava/lang/Object;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$EndIcon;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getEndIcon ()Lkotlin/jvm/functions/Function3;
+	public fun getIcon ()Lkotlin/jvm/functions/Function3;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/toolbar/KPToolbarStyle$Icon$EndTwoIcons : com/trendyol/design/core/toolbar/ToolbarStyleEndTwoIcons, com/trendyol/design/core/toolbar/ToolbarStyleIcon {
+	public static final field $stable I
+	public fun <init> (Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;)V
+	public final fun component1 ()Lkotlin/jvm/functions/Function3;
+	public final fun component2 ()Lkotlin/jvm/functions/Function3;
+	public final fun component3 ()Lkotlin/jvm/functions/Function3;
+	public final fun copy (Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$EndTwoIcons;
+	public static synthetic fun copy$default (Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$EndTwoIcons;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;ILjava/lang/Object;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$EndTwoIcons;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getFirstIcon ()Lkotlin/jvm/functions/Function3;
+	public fun getIcon ()Lkotlin/jvm/functions/Function3;
+	public fun getSecondIcon ()Lkotlin/jvm/functions/Function3;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/toolbar/KPToolbarStyle$Icon$None : com/trendyol/design/core/toolbar/ToolbarStyleIcon {
+	public static final field $stable I
+	public fun <init> (Lkotlin/jvm/functions/Function3;)V
+	public final fun component1 ()Lkotlin/jvm/functions/Function3;
+	public final fun copy (Lkotlin/jvm/functions/Function3;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$None;
+	public static synthetic fun copy$default (Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$None;Lkotlin/jvm/functions/Function3;ILjava/lang/Object;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$None;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getIcon ()Lkotlin/jvm/functions/Function3;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/toolbar/KPToolbarStyle$Icon$TextButton : com/trendyol/design/core/toolbar/ToolbarStyleIcon, com/trendyol/design/core/toolbar/ToolbarStyleTextButton {
+	public static final field $stable I
+	public fun <init> (Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;)V
+	public final fun component1 ()Lkotlin/jvm/functions/Function3;
+	public final fun component2 ()Lkotlin/jvm/functions/Function3;
+	public final fun copy (Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$TextButton;
+	public static synthetic fun copy$default (Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$TextButton;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;ILjava/lang/Object;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$Icon$TextButton;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getIcon ()Lkotlin/jvm/functions/Function3;
+	public fun getTextButton ()Lkotlin/jvm/functions/Function3;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/toolbar/KPToolbarStyle$None : com/trendyol/design/core/toolbar/KPToolbarStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/toolbar/KPToolbarStyle$None;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/toolbar/KPToolbarStyle$TextButton : com/trendyol/design/core/toolbar/KPToolbarStyle, com/trendyol/design/core/toolbar/ToolbarStyleTextButton {
+	public static final field $stable I
+	public fun <init> (Lkotlin/jvm/functions/Function3;)V
+	public final fun component1 ()Lkotlin/jvm/functions/Function3;
+	public final fun copy (Lkotlin/jvm/functions/Function3;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$TextButton;
+	public static synthetic fun copy$default (Lcom/trendyol/design/core/toolbar/KPToolbarStyle$TextButton;Lkotlin/jvm/functions/Function3;ILjava/lang/Object;)Lcom/trendyol/design/core/toolbar/KPToolbarStyle$TextButton;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getTextButton ()Lkotlin/jvm/functions/Function3;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
 public final class com/trendyol/design/core/toolbar/ToolbarDefaults {
 	public static final field $stable I
 	public static final field INSTANCE Lcom/trendyol/design/core/toolbar/ToolbarDefaults;
@@ -2798,6 +2914,7 @@ public final class com/trendyol/design/core/toolbar/ToolbarDefaults {
 }
 
 public final class com/trendyol/design/core/toolbar/ToolbarKt {
+	public static final fun KPToolbar-ZfqMctQ (Ljava/lang/String;Landroidx/compose/ui/Modifier;Lcom/trendyol/design/core/toolbar/ToolbarStyle;Landroidx/compose/ui/text/TextStyle;JFLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/runtime/Composer;II)V
 	public static final fun Toolbar-ZfqMctQ (Ljava/lang/String;Landroidx/compose/ui/Modifier;Lcom/trendyol/design/core/toolbar/ToolbarStyle;Landroidx/compose/ui/text/TextStyle;JFLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/runtime/Composer;II)V
 }
 
