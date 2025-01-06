@@ -1,7 +1,7 @@
 # UI-Kit Screenshot Rule Sets
 
 ### Create an emulator with following configurations in order to align with awilix instances:
-- Resolution Size: 720x1280
+- Resolution Size: 1080 x 2340
 - Screen Size: 9.17 inch
 - API 34
 
