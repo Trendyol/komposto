@@ -849,6 +849,8 @@ public final class com/trendyol/design/core/countdowntimer/KPCountdownTimerStyle
 public final class com/trendyol/design/core/dialog/AlertDialogKt {
 	public static final fun AlertDialog (Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/ui/window/DialogProperties;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 	public static final fun AlertDialogContent (Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun KPAlertDialog (Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/ui/window/DialogProperties;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+	public static final fun KPAlertDialogContent (Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class com/trendyol/design/core/dialog/ComposableSingletons$AlertDialogKt {
@@ -918,11 +920,46 @@ public final class com/trendyol/design/core/dialog/DialogButtons {
 public final class com/trendyol/design/core/dialog/GenericDialogKt {
 	public static final fun GenericDialog (Lcom/trendyol/design/core/dialog/GenericDialogType;ZLandroidx/compose/ui/Modifier;Landroidx/compose/ui/window/DialogProperties;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;III)V
 	public static final fun GenericDialogContent (Lcom/trendyol/design/core/dialog/GenericDialogType;ZLandroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+	public static final fun KPGenericDialog (Lcom/trendyol/design/core/dialog/GenericDialogType;ZLandroidx/compose/ui/Modifier;Landroidx/compose/ui/window/DialogProperties;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;III)V
+	public static final fun KPGenericDialogContent (Lcom/trendyol/design/core/dialog/GenericDialogType;ZLandroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
 public abstract interface class com/trendyol/design/core/dialog/GenericDialogType {
 	public abstract fun getIconVector ()Landroidx/compose/ui/graphics/vector/ImageVector;
 	public abstract fun getTextStyle (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+}
+
+public abstract interface class com/trendyol/design/core/dialog/KPGenericDialogType {
+}
+
+public final class com/trendyol/design/core/dialog/KPGenericDialogType$Custom : com/trendyol/design/core/dialog/GenericDialogType {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/dialog/KPGenericDialogType$Custom;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getIconVector ()Landroidx/compose/ui/graphics/vector/ImageVector;
+	public fun getTextStyle (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/dialog/KPGenericDialogType$Error : com/trendyol/design/core/dialog/GenericDialogType {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/dialog/KPGenericDialogType$Error;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getIconVector ()Landroidx/compose/ui/graphics/vector/ImageVector;
+	public fun getTextStyle (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/dialog/KPGenericDialogType$Success : com/trendyol/design/core/dialog/GenericDialogType {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/dialog/KPGenericDialogType$Success;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getIconVector ()Landroidx/compose/ui/graphics/vector/ImageVector;
+	public fun getTextStyle (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
 }
 
 public abstract interface class com/trendyol/design/core/dialog/TrendyolGenericDialogType {
