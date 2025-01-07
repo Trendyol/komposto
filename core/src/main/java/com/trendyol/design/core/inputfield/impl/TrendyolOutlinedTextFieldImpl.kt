@@ -37,10 +37,9 @@ import kotlin.math.roundToInt
  * [OutlinedTextField].
  * It doesn't use Row to position the icons and middle part because label should not be
  * positioned in the middle part.
-\ */
-
+ */
 @Composable
-internal fun TrendyolOutlinedTextFieldLayout(
+internal fun KPOutlinedTextFieldLayout(
     modifier: Modifier,
     textField: @Composable () -> Unit,
     placeholder: @Composable ((Modifier) -> Unit)?,
@@ -54,7 +53,7 @@ internal fun TrendyolOutlinedTextFieldLayout(
     paddingValues: PaddingValues
 ) {
     val measurePolicy = remember(onLabelMeasured, singleLine, animationProgress, paddingValues) {
-        TrendyolOutlinedTextFieldMeasurePolicy(
+        KPOutlinedTextFieldMeasurePolicy(
             onLabelMeasured,
             singleLine,
             animationProgress,
@@ -132,7 +131,7 @@ internal fun TrendyolOutlinedTextFieldLayout(
     )
 }
 
-private class TrendyolOutlinedTextFieldMeasurePolicy(
+private class KPOutlinedTextFieldMeasurePolicy(
     private val onLabelMeasured: (Size) -> Unit,
     private val singleLine: Boolean,
     private val animationProgress: Float,
