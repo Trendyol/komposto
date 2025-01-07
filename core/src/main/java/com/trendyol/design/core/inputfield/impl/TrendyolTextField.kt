@@ -34,7 +34,7 @@ import kotlin.math.roundToInt
  * placeholder and the input field.
  */
 @Composable
-internal fun TrendyolTextFieldLayout(
+internal fun KPTextFieldLayout(
     modifier: Modifier,
     textField: @Composable () -> Unit,
     label: @Composable (() -> Unit)?,

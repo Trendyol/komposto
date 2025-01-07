@@ -1546,13 +1546,75 @@ public final class com/trendyol/design/core/inputfield/ComposableSingletons$Sing
 
 public final class com/trendyol/design/core/inputfield/DropdownKt {
 	public static final fun Dropdown (Lcom/trendyol/design/core/inputfield/DropdownStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+	public static final fun KPDropdown (Lcom/trendyol/design/core/inputfield/DropdownStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
 public abstract interface class com/trendyol/design/core/inputfield/DropdownStyle {
 	public abstract fun getOutlinedTextFieldColors (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material/TextFieldColors;
 }
 
+public abstract interface class com/trendyol/design/core/inputfield/KPDropdownStyle : com/trendyol/design/core/inputfield/DropdownStyle {
+}
+
+public final class com/trendyol/design/core/inputfield/KPDropdownStyle$Filled : com/trendyol/design/core/inputfield/KPDropdownStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/KPDropdownStyle$Filled;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getOutlinedTextFieldColors (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material/TextFieldColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/inputfield/KPDropdownStyle$FloatingLabelOutlined : com/trendyol/design/core/inputfield/KPDropdownStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/KPDropdownStyle$FloatingLabelOutlined;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getOutlinedTextFieldColors (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material/TextFieldColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/inputfield/KPDropdownStyle$Outlined : com/trendyol/design/core/inputfield/KPDropdownStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/KPDropdownStyle$Outlined;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getOutlinedTextFieldColors (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material/TextFieldColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle : com/trendyol/design/core/inputfield/OutlinedTextFieldStyle {
+}
+
+public final class com/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle$Filled : com/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle$Filled;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getOutlinedTextFieldColors (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material/TextFieldColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle$FloatingLabelOutlined : com/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle$FloatingLabelOutlined;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getOutlinedTextFieldColors (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material/TextFieldColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle$Outlined : com/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle$Outlined;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getOutlinedTextFieldColors (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material/TextFieldColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
 public final class com/trendyol/design/core/inputfield/MultiLineOutlinedTextFieldKt {
+	public static final fun KPMultiLineOutlineTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;III)V
 	public static final fun MultiLineOutlineTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;III)V
 }
 
@@ -1561,6 +1623,7 @@ public abstract interface class com/trendyol/design/core/inputfield/OutlinedText
 }
 
 public final class com/trendyol/design/core/inputfield/SingleLineOutlinedTextFieldKt {
+	public static final fun KPSingleLineOutlinedTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 	public static final fun SingleLineOutlinedTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 }
 
@@ -1626,6 +1689,7 @@ public final class com/trendyol/design/core/inputfield/TrendyolOutlinedTextField
 
 public final class com/trendyol/design/core/inputfield/email/InputEmailFieldKt {
 	public static final fun InputEmailField (Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZZLkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Ljava/lang/String;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;III)V
+	public static final fun KPInputEmailField (Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZZLkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Ljava/lang/String;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/ui/graphics/Shape;Landroidx/compose/runtime/Composer;III)V
 }
 
 public final class com/trendyol/design/core/inputfield/email/SuggestEmailProviderUtil {
@@ -1657,6 +1721,7 @@ public final class com/trendyol/design/core/inputfield/otp/ComposableSingletons$
 
 public final class com/trendyol/design/core/inputfield/otp/InputOTPFieldKt {
 	public static final fun InputOTPField (Lcom/trendyol/design/core/inputfield/otp/InputOTPFieldStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;IZLjava/lang/String;Ljava/lang/String;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
+	public static final fun KPInputOTPField (Lcom/trendyol/design/core/inputfield/otp/InputOTPFieldStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;IZLjava/lang/String;Ljava/lang/String;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
 }
 
 public abstract interface class com/trendyol/design/core/inputfield/otp/InputOTPFieldStyle {
@@ -1664,6 +1729,33 @@ public abstract interface class com/trendyol/design/core/inputfield/otp/InputOTP
 	public abstract fun getBorderColor (ZZZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
 	public abstract fun getTabIndicatorColor (ZZZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
 	public abstract fun getTextColor (ZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+}
+
+public abstract interface class com/trendyol/design/core/inputfield/otp/KPInputOTPFieldStyle : com/trendyol/design/core/inputfield/otp/InputOTPFieldStyle {
+}
+
+public final class com/trendyol/design/core/inputfield/otp/KPInputOTPFieldStyle$Filled : com/trendyol/design/core/inputfield/otp/KPInputOTPFieldStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/otp/KPInputOTPFieldStyle$Filled;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getBackgroundColor (ZZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public fun getBorderColor (ZZZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public fun getTabIndicatorColor (ZZZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public fun getTextColor (ZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/inputfield/otp/KPInputOTPFieldStyle$Outline : com/trendyol/design/core/inputfield/otp/KPInputOTPFieldStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/otp/KPInputOTPFieldStyle$Outline;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getBackgroundColor (ZZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public fun getBorderColor (ZZZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public fun getTabIndicatorColor (ZZZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public fun getTextColor (ZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
 }
 
 public abstract interface class com/trendyol/design/core/inputfield/otp/TrendyolInputOTPFieldStyle {
@@ -1706,10 +1798,12 @@ public final class com/trendyol/design/core/inputfield/password/ComposableSingle
 
 public final class com/trendyol/design/core/inputfield/password/InputPasswordFieldKt {
 	public static final fun InputPasswordField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZCLandroidx/compose/runtime/Composer;II)V
+	public static final fun KPInputPasswordField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZCLandroidx/compose/runtime/Composer;II)V
 }
 
 public final class com/trendyol/design/core/inputfield/phone/InputPhoneNumberFieldKt {
 	public static final fun InputPhoneNumberField (Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/text/input/VisualTransformation;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/ui/graphics/Shape;ILandroidx/compose/runtime/Composer;III)V
+	public static final fun KPInputPhoneNumberField (Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/text/input/VisualTransformation;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/ui/graphics/Shape;ILandroidx/compose/runtime/Composer;III)V
 }
 
 public final class com/trendyol/design/core/price/ComposableSingletons$PriceComposableKt {
@@ -2463,15 +2557,62 @@ public final class com/trendyol/design/core/search/ComposableSingletons$SearchBa
 	public static field lambda-3 Lkotlin/jvm/functions/Function2;
 	public static field lambda-4 Lkotlin/jvm/functions/Function2;
 	public static field lambda-5 Lkotlin/jvm/functions/Function2;
+	public static field lambda-6 Lkotlin/jvm/functions/Function2;
 	public fun <init> ()V
 	public final fun getLambda-1$core_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda-2$core_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda-3$core_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda-4$core_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda-5$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-6$core_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public abstract interface class com/trendyol/design/core/search/KPSearchBarSize {
+}
+
+public final class com/trendyol/design/core/search/KPSearchBarSize$Medium : com/trendyol/design/core/search/SearchBarSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/search/KPSearchBarSize$Medium;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getBarHeight (Landroidx/compose/runtime/Composer;I)F
+	public fun getTrailingIconPadding (Landroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/layout/PaddingValues;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/search/KPSearchBarSize$Small : com/trendyol/design/core/search/SearchBarSize {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/search/KPSearchBarSize$Small;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getBarHeight (Landroidx/compose/runtime/Composer;I)F
+	public fun getTrailingIconPadding (Landroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/layout/PaddingValues;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/trendyol/design/core/search/KPSearchBarStyle : com/trendyol/design/core/search/SearchBarStyle {
+}
+
+public final class com/trendyol/design/core/search/KPSearchBarStyle$Filled : com/trendyol/design/core/search/KPSearchBarStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/search/KPSearchBarStyle$Filled;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getSearchBarColors (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material/TextFieldColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/search/KPSearchBarStyle$Outline : com/trendyol/design/core/search/KPSearchBarStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/search/KPSearchBarStyle$Outline;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getSearchBarColors (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material/TextFieldColors;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
 }
 
 public final class com/trendyol/design/core/search/SearchBarKt {
+	public static final fun KPSearchBar (Ljava/lang/String;Lcom/trendyol/design/core/search/SearchBarStyle;Lcom/trendyol/design/core/search/SearchBarSize;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Landroidx/compose/material/TextFieldColors;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
 	public static final fun SearchBar (Ljava/lang/String;Lcom/trendyol/design/core/search/SearchBarStyle;Lcom/trendyol/design/core/search/SearchBarSize;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Landroidx/compose/material/TextFieldColors;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
 }
 
