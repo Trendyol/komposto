@@ -9,8 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.inputfield.otp.InputOTPField
-import com.trendyol.design.core.inputfield.otp.TrendyolInputOTPFieldStyle
+import com.trendyol.design.core.inputfield.otp.KPInputOTPField
+import com.trendyol.design.core.inputfield.otp.KPInputOTPFieldStyle
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -24,17 +24,17 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 @Composable
 internal fun Input_Field_7_OTP_1_Unfocused() = TrendyolTheme {
     Column {
-        InputOTPField(
+        KPInputOTPField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolInputOTPFieldStyle.Outline,
+            style = KPInputOTPFieldStyle.Outline,
             otp = "",
             hint = LABEL,
             onValueChange = { }
         )
         Spacer(modifier = Modifier.height(8.dp))
-        InputOTPField(
+        KPInputOTPField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolInputOTPFieldStyle.Filled,
+            style = KPInputOTPFieldStyle.Filled,
             otp = "",
             hint = LABEL,
             onValueChange = { }
@@ -51,17 +51,17 @@ internal fun Input_Field_7_OTP_1_Unfocused() = TrendyolTheme {
 @Composable
 internal fun Input_Field_7_OTP_2_Typed() = TrendyolTheme {
     Column {
-        InputOTPField(
+        KPInputOTPField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolInputOTPFieldStyle.Outline,
+            style = KPInputOTPFieldStyle.Outline,
             otp = OTP,
             hint = LABEL,
             onValueChange = { }
         )
         Spacer(modifier = Modifier.height(8.dp))
-        InputOTPField(
+        KPInputOTPField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolInputOTPFieldStyle.Filled,
+            style = KPInputOTPFieldStyle.Filled,
             otp = OTP,
             hint = LABEL,
             onValueChange = { }
@@ -78,18 +78,18 @@ internal fun Input_Field_7_OTP_2_Typed() = TrendyolTheme {
 @Composable
 internal fun Input_Field_7_OTP_3_Disabled() = TrendyolTheme {
     Column {
-        InputOTPField(
+        KPInputOTPField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolInputOTPFieldStyle.Outline,
+            style = KPInputOTPFieldStyle.Outline,
             otp = OTP,
             hint = DISABLED,
             enabled = false,
             onValueChange = { }
         )
         Spacer(modifier = Modifier.height(8.dp))
-        InputOTPField(
+        KPInputOTPField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolInputOTPFieldStyle.Filled,
+            style = KPInputOTPFieldStyle.Filled,
             otp = OTP,
             hint = DISABLED,
             enabled = false,
@@ -107,18 +107,18 @@ internal fun Input_Field_7_OTP_3_Disabled() = TrendyolTheme {
 @Composable
 internal fun Input_Field_7_OTP_4_Error() = TrendyolTheme {
     Column {
-        InputOTPField(
+        KPInputOTPField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolInputOTPFieldStyle.Outline,
+            style = KPInputOTPFieldStyle.Outline,
             otp = OTP,
             hint = LABEL,
             errorText = ERROR,
             onValueChange = { }
         )
         Spacer(modifier = Modifier.height(8.dp))
-        InputOTPField(
+        KPInputOTPField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolInputOTPFieldStyle.Outline,
+            style = KPInputOTPFieldStyle.Outline,
             otp = OTP,
             hint = LABEL,
             errorText = ERROR,

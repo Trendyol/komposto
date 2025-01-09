@@ -10,8 +10,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
-import com.trendyol.design.bottomsheet.item.BottomSheetStaticItem
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.bottomsheet.item.KPBottomSheetStaticItem
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Bullet
 import com.trendyol.design.core.icon.icons.outline.Union
 import com.trendyol.design.ui.component.common.Component.LIST_CELL_STATIC_ITEM
@@ -23,12 +23,12 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 @Composable
 internal fun ListCellStaticBasic() = TrendyolTheme {
     Column {
-        BottomSheetStaticItem(
+        KPBottomSheetStaticItem(
             text = stringResource(id = R.string.title),
             onClick = { },
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetStaticItem(
+        KPBottomSheetStaticItem(
             text = stringResource(id = R.string.title),
             onClick = { },
             description = stringResource(id = R.string.description),
@@ -42,32 +42,32 @@ internal fun ListCellStaticBasic() = TrendyolTheme {
 @Composable
 internal fun ListCellStaticIcon() = TrendyolTheme {
     Column {
-        BottomSheetStaticItem(
+        KPBottomSheetStaticItem(
             text = stringResource(id = R.string.title),
             onClick = { },
-            icon = Icons.Outline.Union,
+            icon = KPIcons.Outline.Union,
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetStaticItem(
+        KPBottomSheetStaticItem(
             text = stringResource(id = R.string.title),
             onClick = { },
-            icon = Icons.Outline.Union,
+            icon = KPIcons.Outline.Union,
             iconPosition = Alignment.Top,
             description = stringResource(id = R.string.description),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetStaticItem(
+        KPBottomSheetStaticItem(
             text = stringResource(id = R.string.title),
             onClick = { },
-            icon = Icons.Outline.Union,
+            icon = KPIcons.Outline.Union,
             iconPosition = Alignment.CenterVertically,
             description = stringResource(id = R.string.description),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetStaticItem(
+        KPBottomSheetStaticItem(
             text = stringResource(id = R.string.title),
             onClick = { },
-            icon = Icons.Outline.Union,
+            icon = KPIcons.Outline.Union,
             iconPosition = Alignment.Bottom,
             description = stringResource(id = R.string.description),
             modifier = Modifier.padding(vertical = 12.dp),
@@ -80,32 +80,32 @@ internal fun ListCellStaticIcon() = TrendyolTheme {
 @Composable
 internal fun ListCellStaticBullet() = TrendyolTheme {
     Column {
-        BottomSheetStaticItem(
+        KPBottomSheetStaticItem(
             text = stringResource(id = R.string.title),
             onClick = { },
-            icon = Icons.Fill.Bullet,
+            icon = KPIcons.Fill.Bullet,
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetStaticItem(
+        KPBottomSheetStaticItem(
             text = stringResource(id = R.string.title),
             onClick = { },
-            icon = Icons.Fill.Bullet,
+            icon = KPIcons.Fill.Bullet,
             iconPosition = Alignment.Top,
             description = stringResource(id = R.string.description),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetStaticItem(
+        KPBottomSheetStaticItem(
             text = stringResource(id = R.string.title),
             onClick = { },
-            icon = Icons.Fill.Bullet,
+            icon = KPIcons.Fill.Bullet,
             iconPosition = Alignment.CenterVertically,
             description = stringResource(id = R.string.description),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetStaticItem(
+        KPBottomSheetStaticItem(
             text = stringResource(id = R.string.title),
             onClick = { },
-            icon = Icons.Fill.Bullet,
+            icon = KPIcons.Fill.Bullet,
             iconPosition = Alignment.Bottom,
             description = stringResource(id = R.string.description),
             modifier = Modifier.padding(vertical = 12.dp),

@@ -9,9 +9,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.checkbox.CheckboxContainerType
-import com.trendyol.design.core.checkbox.TrendyolCheckBoxSize
-import com.trendyol.design.core.checkbox.TrendyolCheckBoxStyle
-import com.trendyol.design.core.checkbox.TrendyolCheckbox
+import com.trendyol.design.core.checkbox.KPCheckboxSize
+import com.trendyol.design.core.checkbox.KPCheckBoxStyle
+import com.trendyol.design.core.checkbox.KPCheckbox
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -26,34 +26,34 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 @Composable
 internal fun Checkbox_1_Primary_None_XSmall() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = false,
             enabled = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = true,
             enabled = false,
@@ -71,34 +71,34 @@ internal fun Checkbox_1_Primary_None_XSmall() = TrendyolTheme {
 @Composable
 internal fun Checkbox_1_Primary_None_Small() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = false,
             enabled = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = true,
             enabled = false,
@@ -116,34 +116,34 @@ internal fun Checkbox_1_Primary_None_Small() = TrendyolTheme {
 @Composable
 internal fun Checkbox_1_Primary_None_Medium() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = false,
             enabled = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = true,
             enabled = false,
@@ -163,34 +163,34 @@ internal fun Checkbox_1_Primary_None_Medium() = TrendyolTheme {
 @Composable
 internal fun Checkbox_1_Secondary_None_XSmall() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = false,
             enabled = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = true,
             enabled = false,
@@ -208,34 +208,34 @@ internal fun Checkbox_1_Secondary_None_XSmall() = TrendyolTheme {
 @Composable
 internal fun Checkbox_1_Secondary_None_Small() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = false,
             enabled = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = true,
             enabled = false,
@@ -253,34 +253,34 @@ internal fun Checkbox_1_Secondary_None_Small() = TrendyolTheme {
 @Composable
 internal fun Checkbox_1_Secondary_None_Medium() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = false,
             enabled = false,
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = true,
             enabled = false,

@@ -4,45 +4,45 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
-import com.trendyol.design.core.button.Button
 import com.trendyol.design.core.button.ButtonSize
 import com.trendyol.design.core.button.ButtonStyle
-import com.trendyol.design.core.button.TrendyolButtonSize
-import com.trendyol.design.core.button.TrendyolButtonStyle
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.button.KPButton
+import com.trendyol.design.core.button.KPButtonSize
+import com.trendyol.design.core.button.KPButtonStyle
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.theme.TrendyolTheme
 
-private class TrendyolButtonStyleParameterProvider : PreviewParameterProvider<ButtonStyle> {
+private class KPButtonStyleParameterProvider : PreviewParameterProvider<ButtonStyle> {
     override val values: Sequence<ButtonStyle>
         get() = sequenceOf(
-            TrendyolButtonStyle.Primary,
-            TrendyolButtonStyle.Secondary,
-            TrendyolButtonStyle.Tertiary,
+            KPButtonStyle.Primary,
+            KPButtonStyle.Secondary,
+            KPButtonStyle.Tertiary,
         )
 }
 
-private class TrendyolButtonSizeParameterProvider : PreviewParameterProvider<ButtonSize> {
+private class KPButtonSizeParameterProvider : PreviewParameterProvider<ButtonSize> {
     override val values: Sequence<ButtonSize>
         get() = sequenceOf(
-            TrendyolButtonSize.Large,
-            TrendyolButtonSize.Medium,
-            TrendyolButtonSize.Small,
-            TrendyolButtonSize.XSmall,
+            KPButtonSize.Large,
+            KPButtonSize.Medium,
+            KPButtonSize.Small,
+            KPButtonSize.XSmall,
         )
 }
 
 @Preview
 @Composable
 private fun Preview_Button_Style(
-    @PreviewParameter(TrendyolButtonStyleParameterProvider::class) style: ButtonStyle,
+    @PreviewParameter(KPButtonStyleParameterProvider::class) style: ButtonStyle,
 ) {
     TrendyolTheme {
-        Button(
+        KPButton(
             onClick = { },
             style = style,
-            size = TrendyolButtonSize.Large,
+            size = KPButtonSize.Large,
         ) {
-            Text(text = BUTTON_TEXT)
+            KPText(text = BUTTON_TEXT)
         }
     }
 }
@@ -50,15 +50,15 @@ private fun Preview_Button_Style(
 @Preview
 @Composable
 private fun Preview_Button_Size(
-    @PreviewParameter(TrendyolButtonSizeParameterProvider::class) size: ButtonSize,
+    @PreviewParameter(KPButtonSizeParameterProvider::class) size: ButtonSize,
 ) {
     TrendyolTheme {
-        Button(
+        KPButton(
             onClick = { },
-            style = TrendyolButtonStyle.Primary,
+            style = KPButtonStyle.Primary,
             size = size,
         ) {
-            Text(text = BUTTON_TEXT)
+            KPText(text = BUTTON_TEXT)
         }
     }
 }

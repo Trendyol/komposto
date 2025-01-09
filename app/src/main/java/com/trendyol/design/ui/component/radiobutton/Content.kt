@@ -14,14 +14,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.radiobutton.TrendyolRadioButton
-import com.trendyol.design.core.radiobutton.TrendyolRadioButtonContainerType
-import com.trendyol.design.core.radiobutton.TrendyolRadioButtonSize
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.radiobutton.KPRadioButton
+import com.trendyol.design.core.radiobutton.KPRadioButtonContainerType
+import com.trendyol.design.core.radiobutton.KPRadioButtonSize
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 private val dividerPadding = 8.dp
 internal val radioButtonTexts = listOf(
@@ -37,14 +37,14 @@ private fun content(text: String): @Composable () -> Unit = {
         modifier = Modifier
             .border(
                 width = 1.dp,
-                color = TrendyolDesign.colors.colorBorder,
+                color = KPDesign.colors.colorBorder,
                 shape = RoundedCornerShape(4.dp)
             )
             .padding(8.dp)
             .fillMaxWidth()
     ) {
         Row {
-            Text(text = text)
+            KPText(text = text)
         }
     }
 }
@@ -54,48 +54,48 @@ private fun content(text: String): @Composable () -> Unit = {
 @Composable
 internal fun Radio_Button_3_Content_XSmall() = TrendyolTheme {
     Column {
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = false,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[0])),
-            size = TrendyolRadioButtonSize.XSmall,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[0])),
+            size = KPRadioButtonSize.XSmall,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[1])),
-            size = TrendyolRadioButtonSize.XSmall,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[1])),
+            size = KPRadioButtonSize.XSmall,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = false,
             enabled = false,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[2])),
-            size = TrendyolRadioButtonSize.XSmall,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[2])),
+            size = KPRadioButtonSize.XSmall,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
             enabled = false,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[3])),
-            size = TrendyolRadioButtonSize.XSmall,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[3])),
+            size = KPRadioButtonSize.XSmall,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[4])),
-            size = TrendyolRadioButtonSize.XSmall,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[4])),
+            size = KPRadioButtonSize.XSmall,
             position = Alignment.Top,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[5])),
-            size = TrendyolRadioButtonSize.XSmall,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[5])),
+            size = KPRadioButtonSize.XSmall,
             position = Alignment.Bottom,
             onClick = { }
         )
@@ -107,49 +107,49 @@ internal fun Radio_Button_3_Content_XSmall() = TrendyolTheme {
 @Composable
 internal fun Radio_Button_3_Content_Small() = TrendyolTheme {
     Column {
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = false,
             enabled = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[0])),
-            size = TrendyolRadioButtonSize.Small,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[0])),
+            size = KPRadioButtonSize.Small,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[1])),
-            size = TrendyolRadioButtonSize.Small,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[1])),
+            size = KPRadioButtonSize.Small,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = false,
             enabled = false,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[2])),
-            size = TrendyolRadioButtonSize.Small,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[2])),
+            size = KPRadioButtonSize.Small,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
             enabled = false,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[3])),
-            size = TrendyolRadioButtonSize.Small,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[3])),
+            size = KPRadioButtonSize.Small,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[4])),
-            size = TrendyolRadioButtonSize.Small,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[4])),
+            size = KPRadioButtonSize.Small,
             position = Alignment.Top,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[5])),
-            size = TrendyolRadioButtonSize.Small,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[5])),
+            size = KPRadioButtonSize.Small,
             position = Alignment.Bottom,
             onClick = { }
         )
@@ -161,49 +161,49 @@ internal fun Radio_Button_3_Content_Small() = TrendyolTheme {
 @Composable
 internal fun Radio_Button_3_Content_Medium() = TrendyolTheme {
     Column {
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = false,
             enabled = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[0])),
-            size = TrendyolRadioButtonSize.Medium,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[0])),
+            size = KPRadioButtonSize.Medium,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[1])),
-            size = TrendyolRadioButtonSize.Medium,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[1])),
+            size = KPRadioButtonSize.Medium,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = false,
             enabled = false,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[2])),
-            size = TrendyolRadioButtonSize.Medium,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[2])),
+            size = KPRadioButtonSize.Medium,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
             enabled = false,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[3])),
-            size = TrendyolRadioButtonSize.Medium,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[3])),
+            size = KPRadioButtonSize.Medium,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[4])),
-            size = TrendyolRadioButtonSize.Medium,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[4])),
+            size = KPRadioButtonSize.Medium,
             position = Alignment.Top,
             onClick = { }
         )
         Divider(modifier = Modifier.padding(vertical = dividerPadding))
-        TrendyolRadioButton(
+        KPRadioButton(
             selected = true,
-            containerType = TrendyolRadioButtonContainerType.Content(content(radioButtonTexts[5])),
-            size = TrendyolRadioButtonSize.Medium,
+            containerType = KPRadioButtonContainerType.Content(content(radioButtonTexts[5])),
+            size = KPRadioButtonSize.Medium,
             position = Alignment.Bottom,
             onClick = { }
         )
