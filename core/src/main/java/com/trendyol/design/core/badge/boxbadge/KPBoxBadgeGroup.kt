@@ -13,10 +13,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeAttributes
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.preview.PreviewTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 import kotlinx.collections.immutable.PersistentList
 import kotlinx.collections.immutable.toPersistentList
 
@@ -73,8 +73,8 @@ private fun Default4BadgesPreview() = PreviewTheme {
     val list = listOf(
         KPBoxBadgeType.Custom(
             title = "Custom Badge",
-            backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
-            icon = Icons.Fill.Help,
+            backgroundColor = KPDesign.colors.colorBlueVariant1,
+            icon = KPIcons.Fill.Help,
         ),
         KPBoxBadgeType.Defaults.Coupon(),
         KPBoxBadgeType.Defaults.FreeDelivery(),
@@ -127,8 +127,8 @@ private fun Scaled4BadgesPreview() = PreviewTheme {
     val list = listOf(
         KPBoxBadgeType.Custom(
             title = "Custom Badge",
-            backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
-            icon = Icons.Fill.Help,
+            backgroundColor = KPDesign.colors.colorBlueVariant1,
+            icon = KPIcons.Fill.Help,
         ),
         KPBoxBadgeType.Defaults.Coupon(),
         KPBoxBadgeType.Defaults.FreeDelivery(),
