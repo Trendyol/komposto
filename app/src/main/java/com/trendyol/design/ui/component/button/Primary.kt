@@ -16,17 +16,17 @@ import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
 import com.trendyol.design.ui.component.common.Group
-import com.trendyol.design.core.button.Button
-import com.trendyol.design.core.button.TrendyolButtonSize
-import com.trendyol.design.core.button.TrendyolButtonStyle
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.button.KPButton
+import com.trendyol.design.core.button.KPButtonSize
+import com.trendyol.design.core.button.KPButtonStyle
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.RunningOut
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 const val BUTTON_TEXT = "CTA Label"
 
@@ -35,20 +35,20 @@ const val BUTTON_TEXT = "CTA Label"
 @Composable
 internal fun Primary_Button_Large_Enabled_Showkase() = TrendyolTheme {
     Row {
-        Button(
+        KPButton(
             onClick = { },
-            style = TrendyolButtonStyle.Primary,
-            size = TrendyolButtonSize.Large,
+            style = KPButtonStyle.Primary,
+            size = KPButtonSize.Large,
         ) {
-            Text(text = BUTTON_TEXT)
+            KPText(text = BUTTON_TEXT)
         }
 
         Spacer(modifier = Modifier.width(16.dp))
 
-        Button(
+        KPButton(
             onClick = { },
-            style = TrendyolButtonStyle.Primary,
-            size = TrendyolButtonSize.Large,
+            style = KPButtonStyle.Primary,
+            size = KPButtonSize.Large,
             contentPadding = PaddingValues(
                 vertical = 3.5.dp,
                 horizontal = 20.dp
@@ -57,22 +57,22 @@ internal fun Primary_Button_Large_Enabled_Showkase() = TrendyolTheme {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(
+                KPText(
                     text = stringResource(R.string.button_top_text),
-                    style = TrendyolDesign.typography.titleBold,
+                    style = KPDesign.typography.titleBold,
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 Row(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Icon(
-                        imageVector = Icons.Fill.RunningOut,
-                        size = TrendyolIconSize.XXSmall,
+                    KPIcon(
+                        imageVector = KPIcons.Fill.RunningOut,
+                        size = KPIconSize.XXSmall,
                     )
                     Spacer(modifier = Modifier.width(4.dp))
-                    Text(
+                    KPText(
                         text = stringResource(R.string.button_bottom_text),
-                        style = TrendyolDesign.typography.body2Medium
+                        style = KPDesign.typography.body2Medium
                     )
                 }
             }
@@ -85,20 +85,20 @@ internal fun Primary_Button_Large_Enabled_Showkase() = TrendyolTheme {
 @Composable
 internal fun Primary_Button_Medium_Enabled_Showkase() = TrendyolTheme {
     Row {
-        Button(
+        KPButton(
             onClick = { },
-            style = TrendyolButtonStyle.Primary,
-            size = TrendyolButtonSize.Medium,
+            style = KPButtonStyle.Primary,
+            size = KPButtonSize.Medium,
         ) {
-            Text(text = BUTTON_TEXT)
+            KPText(text = BUTTON_TEXT)
         }
 
         Spacer(modifier = Modifier.width(16.dp))
 
-        Button(
+        KPButton(
             onClick = { },
-            style = TrendyolButtonStyle.Primary,
-            size = TrendyolButtonSize.Medium,
+            style = KPButtonStyle.Primary,
+            size = KPButtonSize.Medium,
             contentPadding = PaddingValues(
                 vertical = 3.5.dp,
                 horizontal = 20.dp
@@ -107,22 +107,22 @@ internal fun Primary_Button_Medium_Enabled_Showkase() = TrendyolTheme {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(
+                KPText(
                     text = stringResource(R.string.button_top_text),
-                    style = TrendyolDesign.typography.body1Bold
+                    style = KPDesign.typography.body1Bold
                 )
                 Row(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Icon(
-                        imageVector = Icons.Fill.RunningOut,
-                        size = TrendyolIconSize.XXSmall,
+                    KPIcon(
+                        imageVector = KPIcons.Fill.RunningOut,
+                        size = KPIconSize.XXSmall,
                         modifier = Modifier.width(10.dp),
                     )
                     Spacer(modifier = Modifier.width(1.dp))
-                    Text(
+                    KPText(
                         text = stringResource(R.string.button_bottom_text),
-                        style = TrendyolDesign.typography.overLineMedium
+                        style = KPDesign.typography.overLineMedium
                     )
                 }
             }
@@ -135,12 +135,12 @@ internal fun Primary_Button_Medium_Enabled_Showkase() = TrendyolTheme {
 @Composable
 internal fun Primary_Button_Small_Enabled_Showkase() {
     TrendyolTheme {
-        Button(
+        KPButton(
             onClick = { },
-            style = TrendyolButtonStyle.Primary,
-            size = TrendyolButtonSize.Small,
+            style = KPButtonStyle.Primary,
+            size = KPButtonSize.Small,
         ) {
-            Text(text = BUTTON_TEXT)
+            KPText(text = BUTTON_TEXT)
         }
     }
 }
@@ -150,12 +150,12 @@ internal fun Primary_Button_Small_Enabled_Showkase() {
 @Composable
 internal fun Primary_Button_XSmall_Enabled_Showkase() {
     TrendyolTheme {
-        Button(
+        KPButton(
             onClick = { },
-            style = TrendyolButtonStyle.Primary,
-            size = TrendyolButtonSize.XSmall,
+            style = KPButtonStyle.Primary,
+            size = KPButtonSize.XSmall,
         ) {
-            Text(text = BUTTON_TEXT)
+            KPText(text = BUTTON_TEXT)
         }
     }
 }
@@ -165,21 +165,21 @@ internal fun Primary_Button_XSmall_Enabled_Showkase() {
 @Composable
 internal fun Z_Primary_Button_Large_Disabled_Showkase() = TrendyolTheme {
     Row {
-        Button(
+        KPButton(
             onClick = { },
-            style = TrendyolButtonStyle.Primary,
-            size = TrendyolButtonSize.Large,
+            style = KPButtonStyle.Primary,
+            size = KPButtonSize.Large,
             enabled = false,
         ) {
-            Text(text = BUTTON_TEXT)
+            KPText(text = BUTTON_TEXT)
         }
 
         Spacer(modifier = Modifier.width(16.dp))
 
-        Button(
+        KPButton(
             onClick = { },
-            style = TrendyolButtonStyle.Primary,
-            size = TrendyolButtonSize.Large,
+            style = KPButtonStyle.Primary,
+            size = KPButtonSize.Large,
             contentPadding = PaddingValues(
                 vertical = 3.5.dp,
                 horizontal = 20.dp
@@ -189,22 +189,22 @@ internal fun Z_Primary_Button_Large_Disabled_Showkase() = TrendyolTheme {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(
+                KPText(
                     text = stringResource(R.string.button_top_text),
-                    style = TrendyolDesign.typography.titleBold,
+                    style = KPDesign.typography.titleBold,
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 Row(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Icon(
-                        imageVector = Icons.Fill.RunningOut,
-                        size = TrendyolIconSize.XXSmall,
+                    KPIcon(
+                        imageVector = KPIcons.Fill.RunningOut,
+                        size = KPIconSize.XXSmall,
                     )
                     Spacer(modifier = Modifier.width(4.dp))
-                    Text(
+                    KPText(
                         text = stringResource(R.string.button_bottom_text),
-                        style = TrendyolDesign.typography.body2Medium
+                        style = KPDesign.typography.body2Medium
                     )
                 }
             }
@@ -217,12 +217,12 @@ internal fun Z_Primary_Button_Large_Disabled_Showkase() = TrendyolTheme {
 @Composable
 internal fun Primary_Button_Large_Enabled_TwoLine_Showkase() {
     TrendyolTheme {
-        Button(
+        KPButton(
             onClick = { },
-            style = TrendyolButtonStyle.Primary,
-            size = TrendyolButtonSize.Large,
+            style = KPButtonStyle.Primary,
+            size = KPButtonSize.Large,
         ) {
-            Text(
+            KPText(
                 text = "Long Title example\n is like that",
                 textAlign = TextAlign.Center,
             )

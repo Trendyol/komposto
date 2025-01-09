@@ -10,9 +10,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.checkbox.CheckboxContainerType
-import com.trendyol.design.core.checkbox.TrendyolCheckBoxSize
-import com.trendyol.design.core.checkbox.TrendyolCheckBoxStyle
-import com.trendyol.design.core.checkbox.TrendyolCheckbox
+import com.trendyol.design.core.checkbox.KPCheckboxSize
+import com.trendyol.design.core.checkbox.KPCheckBoxStyle
+import com.trendyol.design.core.checkbox.KPCheckbox
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -27,9 +27,9 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 @Composable
 internal fun Checkbox_2_Primary_Text_XSmall() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and enabled checkbox component with text"
             ),
@@ -37,9 +37,9 @@ internal fun Checkbox_2_Primary_Text_XSmall() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and enabled checkbox component with text"
             ),
@@ -47,9 +47,9 @@ internal fun Checkbox_2_Primary_Text_XSmall() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and not enabled checkbox component with text"
             ),
@@ -58,9 +58,9 @@ internal fun Checkbox_2_Primary_Text_XSmall() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and not enabled checkbox component with text"
             ),
@@ -69,9 +69,9 @@ internal fun Checkbox_2_Primary_Text_XSmall() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for checkbox component aligned to top of text"
             ),
@@ -80,9 +80,9 @@ internal fun Checkbox_2_Primary_Text_XSmall() = TrendyolTheme {
             position = Alignment.Top
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for checkbox component aligned to bottom of text"
             ),
@@ -102,9 +102,9 @@ internal fun Checkbox_2_Primary_Text_XSmall() = TrendyolTheme {
 @Composable
 internal fun Checkbox_2_Primary_Text_Small() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and enabled checkbox component with text"
             ),
@@ -112,9 +112,9 @@ internal fun Checkbox_2_Primary_Text_Small() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and enabled checkbox component with text"
             ),
@@ -122,9 +122,9 @@ internal fun Checkbox_2_Primary_Text_Small() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and not enabled checkbox component with text"
             ),
@@ -133,9 +133,9 @@ internal fun Checkbox_2_Primary_Text_Small() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and not enabled checkbox component with text"
             ),
@@ -144,9 +144,9 @@ internal fun Checkbox_2_Primary_Text_Small() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for checkbox component aligned to top of text"
             ),
@@ -155,9 +155,9 @@ internal fun Checkbox_2_Primary_Text_Small() = TrendyolTheme {
             position = Alignment.Top
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for checkbox component aligned to bottom of text"
             ),
@@ -177,9 +177,9 @@ internal fun Checkbox_2_Primary_Text_Small() = TrendyolTheme {
 @Composable
 internal fun Checkbox_2_Primary_Text_Medium() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and enabled checkbox component with text"
             ),
@@ -187,9 +187,9 @@ internal fun Checkbox_2_Primary_Text_Medium() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and enabled checkbox component with text"
             ),
@@ -197,9 +197,9 @@ internal fun Checkbox_2_Primary_Text_Medium() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and not enabled checkbox component with text"
             ),
@@ -208,9 +208,9 @@ internal fun Checkbox_2_Primary_Text_Medium() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and not enabled checkbox component with text"
             ),
@@ -219,9 +219,9 @@ internal fun Checkbox_2_Primary_Text_Medium() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for checkbox component aligned to top of text"
             ),
@@ -230,9 +230,9 @@ internal fun Checkbox_2_Primary_Text_Medium() = TrendyolTheme {
             position = Alignment.Top
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for checkbox component aligned to bottom of text"
             ),
@@ -254,9 +254,9 @@ internal fun Checkbox_2_Primary_Text_Medium() = TrendyolTheme {
 @Composable
 internal fun Checkbox_2_Secondary_Text_XSmall() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and enabled checkbox component with text"
             ),
@@ -264,9 +264,9 @@ internal fun Checkbox_2_Secondary_Text_XSmall() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and enabled checkbox component with text"
             ),
@@ -274,9 +274,9 @@ internal fun Checkbox_2_Secondary_Text_XSmall() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and not enabled checkbox component with text"
             ),
@@ -285,9 +285,9 @@ internal fun Checkbox_2_Secondary_Text_XSmall() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and not enabled checkbox component with text"
             ),
@@ -307,9 +307,9 @@ internal fun Checkbox_2_Secondary_Text_XSmall() = TrendyolTheme {
 @Composable
 internal fun Checkbox_2_Secondary_Text_Small() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and enabled checkbox component with text"
             ),
@@ -317,9 +317,9 @@ internal fun Checkbox_2_Secondary_Text_Small() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and enabled checkbox component with text"
             ),
@@ -327,9 +327,9 @@ internal fun Checkbox_2_Secondary_Text_Small() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and not enabled checkbox component with text"
             ),
@@ -338,9 +338,9 @@ internal fun Checkbox_2_Secondary_Text_Small() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and not enabled checkbox component with text"
             ),
@@ -360,9 +360,9 @@ internal fun Checkbox_2_Secondary_Text_Small() = TrendyolTheme {
 @Composable
 internal fun Checkbox_2_Secondary_Text_Medium() = TrendyolTheme {
     Column {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and enabled checkbox component with text"
             ),
@@ -370,9 +370,9 @@ internal fun Checkbox_2_Secondary_Text_Medium() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and enabled checkbox component with text"
             ),
@@ -380,9 +380,9 @@ internal fun Checkbox_2_Secondary_Text_Medium() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the unselected and not enabled checkbox component with text"
             ),
@@ -391,9 +391,9 @@ internal fun Checkbox_2_Secondary_Text_Medium() = TrendyolTheme {
             onCheckedChange = { }
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Secondary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckBoxStyle.Secondary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Text(
                 "This sample stands for the selected and not enabled checkbox component with text"
             ),

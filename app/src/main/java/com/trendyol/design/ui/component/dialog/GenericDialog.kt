@@ -9,15 +9,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.dialog.DialogButtons
-import com.trendyol.design.core.dialog.GenericDialogContent
-import com.trendyol.design.core.dialog.TrendyolGenericDialogType
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.dialog.KPGenericDialogContent
+import com.trendyol.design.core.dialog.KPGenericDialogType
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.outline.StateCaution
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
-import com.trendyol.design.ui.theme.TrendyolColor
 import com.trendyol.design.ui.theme.TrendyolTheme
+import com.trendyol.theme.KPDesign
 
 @Composable
 @Preview(showBackground = true)
@@ -29,19 +30,19 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 internal fun Generic_Dialog_Single_Button() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Custom,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Custom,
                 displayCloseButton = false,
                 title = "Popup Title",
                 icon = {
-                    com.trendyol.design.core.icon.Icon(
-                        imageVector = Icons.Outline.StateCaution,
-                        size = TrendyolIconSize.XXXLarge
+                    KPIcon(
+                        imageVector = KPIcons.Outline.StateCaution,
+                        size = KPIconSize.XXXLarge
                     )
                 },
                 message = "Message Detail",
@@ -64,19 +65,19 @@ internal fun Generic_Dialog_Single_Button() {
 internal fun Generic_Dialog_Single_Button_Close() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Custom,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Custom,
                 displayCloseButton = true,
                 title = "Popup Title",
                 icon = {
-                    com.trendyol.design.core.icon.Icon(
-                        imageVector = Icons.Outline.StateCaution,
-                        size = TrendyolIconSize.XXXLarge
+                    KPIcon(
+                        imageVector = KPIcons.Outline.StateCaution,
+                        size = KPIconSize.XXXLarge
                     )
                 },
                 message = "Message Detail",
@@ -99,19 +100,19 @@ internal fun Generic_Dialog_Single_Button_Close() {
 internal fun Generic_Dialog_Two_Button() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Custom,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Custom,
                 displayCloseButton = false,
                 title = "Popup Title",
                 icon = {
-                    com.trendyol.design.core.icon.Icon(
-                        imageVector = Icons.Outline.StateCaution,
-                        size = TrendyolIconSize.XXXLarge
+                    KPIcon(
+                        imageVector = KPIcons.Outline.StateCaution,
+                        size = KPIconSize.XXXLarge
                     )
                 },
                 message = "Message Detail",
@@ -138,19 +139,19 @@ internal fun Generic_Dialog_Two_Button() {
 internal fun Generic_Dialog_Two_Button_Button_Close() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Custom,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Custom,
                 displayCloseButton = true,
                 title = "Popup Title",
                 icon = {
-                    com.trendyol.design.core.icon.Icon(
-                        imageVector = Icons.Outline.StateCaution,
-                        size = TrendyolIconSize.XXXLarge
+                    KPIcon(
+                        imageVector = KPIcons.Outline.StateCaution,
+                        size = KPIconSize.XXXLarge
                     )
                 },
                 message = "Message Detail",
@@ -177,19 +178,19 @@ internal fun Generic_Dialog_Two_Button_Button_Close() {
 internal fun Generic_Dialog_No_Button_Dialog() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Custom,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Custom,
                 displayCloseButton = false,
                 title = "Popup Title",
                 icon = {
-                    com.trendyol.design.core.icon.Icon(
-                        imageVector = Icons.Outline.StateCaution,
-                        size = TrendyolIconSize.XXXLarge
+                    KPIcon(
+                        imageVector = KPIcons.Outline.StateCaution,
+                        size = KPIconSize.XXXLarge
                     )
                 },
                 message = "Message Detail"
@@ -208,19 +209,19 @@ internal fun Generic_Dialog_No_Button_Dialog() {
 internal fun Generic_Dialog_No_Button_Dialog_Button_Close() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Custom,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Custom,
                 displayCloseButton = true,
                 title = "Popup Title",
                 icon = {
-                    com.trendyol.design.core.icon.Icon(
-                        imageVector = Icons.Outline.StateCaution,
-                        size = TrendyolIconSize.XXXLarge
+                    KPIcon(
+                        imageVector = KPIcons.Outline.StateCaution,
+                        size = KPIconSize.XXXLarge
                     )
                 },
                 message = "Message Detail"
