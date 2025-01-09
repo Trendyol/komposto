@@ -579,29 +579,6 @@ public final class com/trendyol/design/core/checkbox/ComposableSingletons$CheckB
 	public final fun getLambda-9$core_release ()Lkotlin/jvm/functions/Function2;
 }
 
-public abstract interface class com/trendyol/design/core/checkbox/KPCheckBoxStyle {
-}
-
-public final class com/trendyol/design/core/checkbox/KPCheckBoxStyle$Primary : com/trendyol/design/core/checkbox/CheckboxStyle {
-	public static final field $stable I
-	public static final field INSTANCE Lcom/trendyol/design/core/checkbox/KPCheckBoxStyle$Primary;
-	public fun equals (Ljava/lang/Object;)Z
-	public fun getColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/checkbox/KPCheckboxColors;
-	public fun getInnerPadding-D9Ej5fM ()F
-	public fun hashCode ()I
-	public fun toString ()Ljava/lang/String;
-}
-
-public final class com/trendyol/design/core/checkbox/KPCheckBoxStyle$Secondary : com/trendyol/design/core/checkbox/CheckboxStyle {
-	public static final field $stable I
-	public static final field INSTANCE Lcom/trendyol/design/core/checkbox/KPCheckBoxStyle$Secondary;
-	public fun equals (Ljava/lang/Object;)Z
-	public fun getColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/checkbox/KPCheckboxColors;
-	public fun getInnerPadding-D9Ej5fM ()F
-	public fun hashCode ()I
-	public fun toString ()Ljava/lang/String;
-}
-
 public abstract interface class com/trendyol/design/core/checkbox/KPCheckboxColors {
 	public abstract fun borderColor (ZLandroidx/compose/ui/state/ToggleableState;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
 	public abstract fun boxColor (ZLandroidx/compose/ui/state/ToggleableState;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
@@ -656,6 +633,29 @@ public final class com/trendyol/design/core/checkbox/KPCheckboxSize$XSmall : com
 	public fun getTextStyle (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/text/TextStyle;
 	public fun hashCode ()I
 	public fun strokeWidth-u2uoSUM (Lcom/trendyol/design/core/checkbox/CheckboxStyle;)F
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/trendyol/design/core/checkbox/KPCheckboxStyle {
+}
+
+public final class com/trendyol/design/core/checkbox/KPCheckboxStyle$Primary : com/trendyol/design/core/checkbox/CheckboxStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/checkbox/KPCheckboxStyle$Primary;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/checkbox/KPCheckboxColors;
+	public fun getInnerPadding-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/checkbox/KPCheckboxStyle$Secondary : com/trendyol/design/core/checkbox/CheckboxStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/checkbox/KPCheckboxStyle$Secondary;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getColors (Landroidx/compose/runtime/Composer;I)Lcom/trendyol/design/core/checkbox/KPCheckboxColors;
+	public fun getInnerPadding-D9Ej5fM ()F
+	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 

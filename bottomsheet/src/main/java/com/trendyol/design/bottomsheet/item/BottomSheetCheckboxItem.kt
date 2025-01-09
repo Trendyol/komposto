@@ -23,7 +23,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.outline.Info
 import com.trendyol.design.core.text.Text
 import com.trendyol.design.bottomsheet.preview.PreviewTheme
-import com.trendyol.design.core.checkbox.KPCheckBoxStyle
+import com.trendyol.design.core.checkbox.KPCheckboxStyle
 import com.trendyol.design.core.checkbox.KPCheckbox
 import com.trendyol.design.core.checkbox.KPCheckboxSize
 import com.trendyol.design.core.icon.KPIcon
@@ -81,7 +81,7 @@ public fun KPBottomSheetCheckboxItem(
                 }
             }
         },
-        style = KPCheckBoxStyle.Primary,
+        style = KPCheckboxStyle.Primary,
         size = KPCheckboxSize.Small,
         onCheckedChange = onCheckedChange,
         modifier = modifier

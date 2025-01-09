@@ -17,7 +17,7 @@ import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.checkbox.CheckboxContainerType
 import com.trendyol.design.core.checkbox.KPCheckbox
 import com.trendyol.design.core.checkbox.KPCheckboxSize
-import com.trendyol.design.core.checkbox.KPCheckBoxStyle
+import com.trendyol.design.core.checkbox.KPCheckboxStyle
 import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
@@ -35,7 +35,7 @@ import com.trendyol.theme.KPDesign
 internal fun Checkbox_3_Primary_Content_XSmall() = TrendyolTheme {
     Column {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[0])),
             checked = false,
@@ -43,7 +43,7 @@ internal fun Checkbox_3_Primary_Content_XSmall() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[1])),
             checked = true,
@@ -51,7 +51,7 @@ internal fun Checkbox_3_Primary_Content_XSmall() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[2])),
             checked = false,
@@ -60,7 +60,7 @@ internal fun Checkbox_3_Primary_Content_XSmall() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[3])),
             checked = true,
@@ -69,7 +69,7 @@ internal fun Checkbox_3_Primary_Content_XSmall() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[4])),
             checked = true,
@@ -78,7 +78,7 @@ internal fun Checkbox_3_Primary_Content_XSmall() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[5])),
             checked = true,
@@ -98,7 +98,7 @@ internal fun Checkbox_3_Primary_Content_XSmall() = TrendyolTheme {
 internal fun Checkbox_3_Primary_Content_Small() = TrendyolTheme {
     Column {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[0])),
             checked = false,
@@ -106,7 +106,7 @@ internal fun Checkbox_3_Primary_Content_Small() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[1])),
             checked = true,
@@ -114,7 +114,7 @@ internal fun Checkbox_3_Primary_Content_Small() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[2])),
             checked = false,
@@ -123,7 +123,7 @@ internal fun Checkbox_3_Primary_Content_Small() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[3])),
             checked = true,
@@ -132,7 +132,7 @@ internal fun Checkbox_3_Primary_Content_Small() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[4])),
             checked = true,
@@ -141,7 +141,7 @@ internal fun Checkbox_3_Primary_Content_Small() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[5])),
             checked = true,
@@ -161,7 +161,7 @@ internal fun Checkbox_3_Primary_Content_Small() = TrendyolTheme {
 internal fun Checkbox_3_Primary_Content_Medium() = TrendyolTheme {
     Column {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[0])),
             checked = false,
@@ -169,7 +169,7 @@ internal fun Checkbox_3_Primary_Content_Medium() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[1])),
             checked = true,
@@ -177,7 +177,7 @@ internal fun Checkbox_3_Primary_Content_Medium() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[2])),
             checked = false,
@@ -186,7 +186,7 @@ internal fun Checkbox_3_Primary_Content_Medium() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[3])),
             checked = true,
@@ -195,7 +195,7 @@ internal fun Checkbox_3_Primary_Content_Medium() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[4])),
             checked = true,
@@ -204,7 +204,7 @@ internal fun Checkbox_3_Primary_Content_Medium() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[5])),
             checked = true,
@@ -226,7 +226,7 @@ internal fun Checkbox_3_Primary_Content_Medium() = TrendyolTheme {
 internal fun Checkbox_3_Secondary_Content_XSmall() = TrendyolTheme {
     Column {
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[0])),
             checked = false,
@@ -234,7 +234,7 @@ internal fun Checkbox_3_Secondary_Content_XSmall() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[1])),
             checked = true,
@@ -242,7 +242,7 @@ internal fun Checkbox_3_Secondary_Content_XSmall() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[2])),
             checked = false,
@@ -251,7 +251,7 @@ internal fun Checkbox_3_Secondary_Content_XSmall() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[3])),
             checked = true,
@@ -271,7 +271,7 @@ internal fun Checkbox_3_Secondary_Content_XSmall() = TrendyolTheme {
 internal fun Checkbox_3_Secondary_Content_Small() = TrendyolTheme {
     Column {
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[0])),
             checked = false,
@@ -279,7 +279,7 @@ internal fun Checkbox_3_Secondary_Content_Small() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[1])),
             checked = true,
@@ -287,7 +287,7 @@ internal fun Checkbox_3_Secondary_Content_Small() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[2])),
             checked = false,
@@ -296,7 +296,7 @@ internal fun Checkbox_3_Secondary_Content_Small() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[3])),
             checked = true,
@@ -316,7 +316,7 @@ internal fun Checkbox_3_Secondary_Content_Small() = TrendyolTheme {
 internal fun Checkbox_3_Secondary_Content_Medium() = TrendyolTheme {
     Column {
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[0])),
             checked = false,
@@ -324,7 +324,7 @@ internal fun Checkbox_3_Secondary_Content_Medium() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[1])),
             checked = true,
@@ -332,7 +332,7 @@ internal fun Checkbox_3_Secondary_Content_Medium() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[2])),
             checked = false,
@@ -341,7 +341,7 @@ internal fun Checkbox_3_Secondary_Content_Medium() = TrendyolTheme {
         )
         Divider(modifier = Modifier.padding(vertical = 8.dp))
         KPCheckbox(
-            style = KPCheckBoxStyle.Secondary,
+            style = KPCheckboxStyle.Secondary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.Content(content(checkboxTexts[3])),
             checked = true,
