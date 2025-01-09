@@ -1,34 +1,26 @@
-package com.trendyol.design.core.icon.icons.fill
+package com.trendyol.design.core.icon.icons.outline
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.vector.path
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 
 @Preview
 @Composable
 private fun VectorPreview() {
-    Icon(Icons.Outline.Chevron, TrendyolIconSize.XSmall)
+    KPIcon(KPIcons.Outline.Chevron, KPIconSize.XXXLarge)
 }
 
-@Deprecated(
-    message = "Use KPIcons.Outline.Chevron instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    replaceWith = ReplaceWith(
-        expression = "KPIcons.Outline.Chevron",
-    ),
-    level = DeprecationLevel.WARNING
-)
-public val Icons.Outline.Chevron: ImageVector by lazy {
+public val KPIcons.Outline.Chevron: ImageVector by lazy {
     ImageVector.Builder(
         name = "Chevron",
         defaultWidth = 16.dp,
