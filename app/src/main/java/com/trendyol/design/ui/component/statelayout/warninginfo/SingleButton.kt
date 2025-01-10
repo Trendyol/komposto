@@ -3,9 +3,11 @@ package com.trendyol.design.ui.component.statelayout.warninginfo
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
+import com.trendyol.design.R
 import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.statelayout.KPWarningInfoStateLayoutStyle
 import com.trendyol.design.core.statelayout.states.warningInfo.KPWarningInfoStateComposable
@@ -26,9 +28,9 @@ internal fun SingleButton_FullVersion_Small() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonFullVersion(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
-                title = "İçerik Bulunamadı",
-                description = "Yeni içerikler keşfedebilirsin.",
-                primaryButtonText = "Alışverişe Devam Et",
+                title = stringResource(id = R.string.state_layout_title),
+                description = stringResource(id = R.string.state_layout_description),
+                primaryButtonText = stringResource(id = R.string.state_layout_primary_button),
                 primaryButtonClickListener = {},
             )
         )
@@ -48,9 +50,9 @@ internal fun SingleButton_FullVersion_Medium() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonFullVersion(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
-                title = "İçerik Bulunamadı",
-                description = "Yeni içerikler keşfedebilirsin.",
-                primaryButtonText = "Alışverişe Devam Et",
+                title = stringResource(id = R.string.state_layout_title),
+                description = stringResource(id = R.string.state_layout_description),
+                primaryButtonText = stringResource(id = R.string.state_layout_primary_button),
                 primaryButtonClickListener = {},
             )
         )
@@ -70,8 +72,8 @@ internal fun SingleButton_NoTitle_Small() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonNoTitle(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
-                description = "Yeni içerikler keşfedebilirsin.",
-                primaryButtonText = "Alışverişe Devam Et",
+                description = stringResource(id = R.string.state_layout_description),
+                primaryButtonText = stringResource(id = R.string.state_layout_primary_button),
                 primaryButtonClickListener = {},
             )
         )
@@ -91,8 +93,8 @@ internal fun SingleButton_NoTitle_Medium() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonNoTitle(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
-                description = "Yeni içerikler keşfedebilirsin.",
-                primaryButtonText = "Alışverişe Devam Et",
+                description = stringResource(id = R.string.state_layout_description),
+                primaryButtonText = stringResource(id = R.string.state_layout_primary_button),
                 primaryButtonClickListener = {},
             )
         )
@@ -112,8 +114,8 @@ internal fun SingleButton_NoDescription_Small() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonNoDescription(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
-                title = "İçerik Bulunamadı",
-                primaryButtonText = "Alışverişe Devam Et",
+                title = stringResource(id = R.string.state_layout_title),
+                primaryButtonText = stringResource(id = R.string.state_layout_primary_button),
                 primaryButtonClickListener = {},
             )
         )
@@ -133,8 +135,8 @@ internal fun SingleButton_NoDescription_Medium() {
             modifier = Modifier.size(400.dp),
             warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonNoDescription(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
-                title = "İçerik Bulunamadı",
-                primaryButtonText = "Alışverişe Devam Et",
+                title = stringResource(id = R.string.state_layout_title),
+                primaryButtonText = stringResource(id = R.string.state_layout_primary_button),
                 primaryButtonClickListener = {},
             )
         )

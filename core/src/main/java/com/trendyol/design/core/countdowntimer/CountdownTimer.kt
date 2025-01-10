@@ -36,22 +36,27 @@ import java.util.concurrent.TimeUnit
  * @param endDate The end date for the countdown, represented as a `Long` timestamp in milliseconds.
  * @param modifier A `Modifier` used to adjust the layout or behavior of the composable. Defaults to `Modifier`.
  * @param backgroundAlpha The alpha value for the background color, allowing control over the transparency of the time boxes. Defaults to `1F`.
+ * @param onTimerFinish Registers a callback to be invoked when the timer finishes.
  */
 @Composable
 public fun KPCountdownTimer(
     size: CountdownTimerSize,
     endDate: Long,
     modifier: Modifier = Modifier,
+    onTimerFinish: () -> Unit = {},
     style: CountdownTimerStyle = KPCountdownTimerStyle.Primary,
     backgroundAlpha: Float = 1F,
 ) {
     val state = rememberSaveable(endDate, saver = CountdownTimerState.Saver) {
         CountdownTimerState(endDate = endDate)
     }
-    val remainingTimes by remember(state) { derivedStateOf { state.getRemainingTimes(state.remainingTime) } }
+    val remainingTimes by remember(state) {
+        derivedStateOf { state.getRemainingTimes(state.remainingTime) }
+    }
     val isVisible by remember(state) { derivedStateOf { state.isVisible } }
 
     DisposableEffect(state) {
+        state.setOnTimerFinishListener(onTimerFinish)
         state.startTimer()
         onDispose { state.cancelTimer() }
     }
@@ -76,7 +81,7 @@ public fun KPCountdownTimer(
                     size = CustomIconSize,
                     imageVector = KPIcons.Fill.Colon,
                     contentDescription = KPIcons.Fill.Colon.name,
-                    tint = style.backgroundColor
+                    tint = style.separatorTintColor
                 )
                 Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 TimeBoxItem(
@@ -90,7 +95,7 @@ public fun KPCountdownTimer(
                     size = CustomIconSize,
                     imageVector = KPIcons.Fill.Colon,
                     contentDescription = KPIcons.Fill.Colon.name,
-                    tint = style.backgroundColor
+                    tint = style.separatorTintColor
                 )
                 Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 TimeBoxItem(

@@ -48,7 +48,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param icon Optional composable function to display an icon within the dialog. If null, no icon is shown.
  * @param primaryButton Composable function for the primary action button. If null, no primary button is shown.
  * @param secondaryButton Composable function for the secondary action button. If null, no secondary button is shown.
- * @param onCloseClicked Lambda function to be invoked when the close button is clicked. Defaults to an empty function.
+ * @param onCloseClick Lambda function to be invoked when the close button is clicked. Defaults to an empty function.
  * @param onDismissRequest Lambda function to be called when the dialog is requested to be dismissed.
  */
 @Composable
@@ -62,7 +62,7 @@ public fun KPGenericDialog(
     icon: @Composable (() -> Unit)? = null,
     primaryButton: (@Composable DialogButtons.() -> Unit)? = null,
     secondaryButton: (@Composable DialogButtons.() -> Unit)? = null,
-    onCloseClicked: () -> Unit = {},
+    onCloseClick: () -> Unit = {},
     onDismissRequest: () -> Unit,
 ) {
     Dialog(onDismissRequest = onDismissRequest, properties = dialogProperties) {
@@ -75,7 +75,7 @@ public fun KPGenericDialog(
             icon = icon,
             primaryButton = primaryButton,
             secondaryButton = secondaryButton,
-            onCloseClicked = onCloseClicked
+            onCloseClick = onCloseClick
         )
     }
 }
@@ -143,7 +143,7 @@ public fun KPGenericDialogContent(
     icon: @Composable (() -> Unit)? = null,
     primaryButton: (@Composable DialogButtons.() -> Unit)? = null,
     secondaryButton: (@Composable DialogButtons.() -> Unit)? = null,
-    onCloseClicked: () -> Unit = {},
+    onCloseClick: () -> Unit = {},
 ) {
     Card(
         modifier = modifier,
@@ -159,7 +159,7 @@ public fun KPGenericDialogContent(
                         .clickable(
                             indication = null,
                             interactionSource = remember { MutableInteractionSource() }
-                        ) { onCloseClicked() },
+                        ) { onCloseClick() },
                     imageVector = KPIcons.Outline.Cancel,
                     size = KPIconSize.XSmall
                 )
