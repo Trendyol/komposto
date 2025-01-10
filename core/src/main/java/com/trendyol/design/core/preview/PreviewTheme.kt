@@ -1,11 +1,9 @@
 package com.trendyol.design.core.preview
 
 import android.content.Context
-import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -26,7 +24,9 @@ internal fun PreviewTheme(
     }
 
     MaterialTheme(
-        colors = TrendyolColor.materialColor
+        colors = MaterialTheme.colors.copy(
+            primary = colorPrimary
+        )
     ) {
         CompositionLocalProvider(
             LocalKPDesignTheme provides kompostoDesignTheme
@@ -34,15 +34,6 @@ internal fun PreviewTheme(
             content()
         }
     }
-}
-
-private object TrendyolColor {
-    val materialColor: Colors
-        @ReadOnlyComposable
-        @Composable
-        get() = MaterialTheme.colors.copy(
-            primary = colorPrimary
-        )
 }
 
 private val colorPrimary = Color(color = 0xFFF27A1A)
