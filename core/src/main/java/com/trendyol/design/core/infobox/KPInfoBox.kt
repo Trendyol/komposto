@@ -15,13 +15,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.KPCustomFilteredColorIcon
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.CircleIcon
 import com.trendyol.design.core.icon.icons.fill.InfoIcon
 import com.trendyol.design.core.preview.PreviewTheme
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.core.text.Text
 import com.trendyol.design.core.util.customBorder
+import com.trendyol.theme.KPDesign
 import com.trendyol.theme.TrendyolDesign
 
 /**
@@ -72,16 +74,16 @@ public fun KPInfoBox(
         if (iconPosition == Arrangement.Start) {
             KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
-                outerIcon = Icons.Fill.CircleIcon,
+                outerIcon = KPIcons.Fill.CircleIcon,
                 outerTint = style.iconTint,
-                innerIcon = Icons.Fill.InfoIcon,
+                innerIcon = KPIcons.Fill.InfoIcon,
             )
         }
 
         Column(modifier = Modifier.weight(1f)) {
-            Text(
+            KPText(
                 text = text,
-                style = TrendyolDesign.typography.body1,
+                style = KPDesign.typography.body1,
                 color = style.textColor,
             )
         }
@@ -89,9 +91,9 @@ public fun KPInfoBox(
         if (iconPosition == Arrangement.End) {
             KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
-                outerIcon = Icons.Fill.CircleIcon,
+                outerIcon = KPIcons.Fill.CircleIcon,
                 outerTint = style.iconTint,
-                innerIcon = Icons.Fill.InfoIcon,
+                innerIcon = KPIcons.Fill.InfoIcon,
             )
         }
     }
@@ -147,9 +149,9 @@ public fun KPInfoBox(
         if (iconPosition == Arrangement.Start) {
             KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
-                outerIcon = Icons.Fill.CircleIcon,
+                outerIcon = KPIcons.Fill.CircleIcon,
                 outerTint = style.iconTint,
-                innerIcon = Icons.Fill.InfoIcon,
+                innerIcon = KPIcons.Fill.InfoIcon,
             )
         }
 
@@ -164,9 +166,9 @@ public fun KPInfoBox(
         if (iconPosition == Arrangement.End) {
             KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
-                outerIcon = Icons.Fill.CircleIcon,
+                outerIcon = KPIcons.Fill.CircleIcon,
                 outerTint = style.iconTint,
-                innerIcon = Icons.Fill.InfoIcon,
+                innerIcon = KPIcons.Fill.InfoIcon,
             )
         }
     }

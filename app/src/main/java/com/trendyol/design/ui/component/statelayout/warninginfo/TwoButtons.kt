@@ -9,8 +9,8 @@ import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
 import com.trendyol.design.core.icon.StateLayoutIconSize
-import com.trendyol.design.core.statelayout.TrendyolWarningInfoStateLayoutStyle
-import com.trendyol.design.core.statelayout.states.warningInfo.WarningInfoStateComposable
+import com.trendyol.design.core.statelayout.KPWarningInfoStateLayoutStyle
+import com.trendyol.design.core.statelayout.states.warningInfo.KPWarningInfoStateComposable
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -24,9 +24,9 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 @Composable
 internal fun TwoButtons_FullVersion_Small() {
     TrendyolTheme {
-        WarningInfoStateComposable(
+        KPWarningInfoStateComposable(
             modifier = Modifier.size(400.dp),
-            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.TwoButtonsFullVersion(
+            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.TwoButtonsFullVersion(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
                 title = stringResource(id = R.string.state_layout_title),
                 description = stringResource(id = R.string.state_layout_description),
@@ -48,9 +48,9 @@ internal fun TwoButtons_FullVersion_Small() {
 @Composable
 internal fun TwoButtons_FullVersion_Medium() {
     TrendyolTheme {
-        WarningInfoStateComposable(
+        KPWarningInfoStateComposable(
             modifier = Modifier.size(400.dp),
-            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.TwoButtonsFullVersion(
+            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.TwoButtonsFullVersion(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                 title = stringResource(id = R.string.state_layout_title),
                 description = stringResource(id = R.string.state_layout_description),
@@ -72,9 +72,9 @@ internal fun TwoButtons_FullVersion_Medium() {
 @Composable
 internal fun TwoButtons_NoTitle_Small() {
     TrendyolTheme {
-        WarningInfoStateComposable(
+        KPWarningInfoStateComposable(
             modifier = Modifier.size(400.dp),
-            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.TwoButtonsNoTitle(
+            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.TwoButtonsNoTitle(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
                 description = stringResource(id = R.string.state_layout_description),
                 primaryButtonText = stringResource(id = R.string.state_layout_primary_button),
@@ -95,9 +95,9 @@ internal fun TwoButtons_NoTitle_Small() {
 @Composable
 internal fun TwoButtons_NoTitle_Medium() {
     TrendyolTheme {
-        WarningInfoStateComposable(
+        KPWarningInfoStateComposable(
             modifier = Modifier.size(400.dp),
-            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.TwoButtonsNoTitle(
+            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.TwoButtonsNoTitle(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                 description = stringResource(id = R.string.state_layout_description),
                 primaryButtonText = stringResource(id = R.string.state_layout_primary_button),
@@ -118,9 +118,9 @@ internal fun TwoButtons_NoTitle_Medium() {
 @Composable
 internal fun TwoButtons_NoDescription_Small() {
     TrendyolTheme {
-        WarningInfoStateComposable(
+        KPWarningInfoStateComposable(
             modifier = Modifier.size(400.dp),
-            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.TwoButtonsNoDescription(
+            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.TwoButtonsNoDescription(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
                 title = stringResource(id = R.string.state_layout_title),
                 primaryButtonText = stringResource(id = R.string.state_layout_primary_button),
@@ -141,9 +141,9 @@ internal fun TwoButtons_NoDescription_Small() {
 @Composable
 internal fun TwoButtons_NoDescription_Medium() {
     TrendyolTheme {
-        WarningInfoStateComposable(
+        KPWarningInfoStateComposable(
             modifier = Modifier.size(400.dp),
-            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.TwoButtonsNoDescription(
+            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.TwoButtonsNoDescription(
                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                 title = stringResource(id = R.string.state_layout_title),
                 primaryButtonText = stringResource(id = R.string.state_layout_primary_button),

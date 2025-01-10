@@ -6,18 +6,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.component.common.Component.BODY2
 import com.trendyol.design.ui.component.common.Group.TYPOGRAPHY
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 @ShowkaseComposable(group = TYPOGRAPHY, name = BODY2, styleName = "Body2")
 @Composable
 internal fun E_Body2() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.body2,
+        style = KPDesign.typography.body2,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -25,9 +25,9 @@ internal fun E_Body2() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = BODY2, styleName = "Body2.Bold")
 @Composable
 internal fun E_Body2_Bold() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.body2Bold,
+        style = KPDesign.typography.body2Bold,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -35,9 +35,9 @@ internal fun E_Body2_Bold() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = BODY2, styleName = "Body2.Medium")
 @Composable
 internal fun E_Body2_Medium() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.body2Medium,
+        style = KPDesign.typography.body2Medium,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -45,9 +45,9 @@ internal fun E_Body2_Medium() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = BODY2, styleName = "Body2.Medium.OneLine")
 @Composable
 internal fun E_Body2_Medium_OneLine() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.body2Medium,
+        style = KPDesign.typography.body2Medium,
         maxLines = 1,
     )
 }

@@ -7,7 +7,7 @@ import androidx.compose.ui.unit.dp
 import com.trendyol.theme.KPDesign
 import com.trendyol.theme.TrendyolDesign
 
-public sealed interface KPCheckBoxStyle {
+public sealed interface KPCheckboxStyle {
 
     public data object Primary : CheckboxStyle {
 

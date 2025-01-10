@@ -74,7 +74,7 @@ public fun KPToolbar(
             ) {
                 style.textButton(ToolbarScope)
             }
-            ProvideTextStyle(value = TrendyolDesign.typography.titleMediumColorPrimary) {
+            ProvideTextStyle(value = KPDesign.typography.titleMediumColorPrimary) {
                 style.textButton(ToolbarScope)
             }
         }

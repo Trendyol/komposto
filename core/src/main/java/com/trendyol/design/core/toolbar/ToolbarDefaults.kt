@@ -5,6 +5,7 @@ import androidx.compose.runtime.Stable
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.IconSize
+import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.TrendyolIconSize
 
 @Stable
@@ -25,7 +26,7 @@ public object KPToolbarDefaults {
     /**
      * Default icon size used for TrendyolToolbar
      */
-    public val IconSize: IconSize = TrendyolIconSize.Medium
+    public val IconSize: IconSize = KPIconSize.Medium
 }
 
 @Stable

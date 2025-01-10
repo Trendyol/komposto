@@ -9,12 +9,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.dialog.DialogButtons
-import com.trendyol.design.core.dialog.GenericDialogContent
-import com.trendyol.design.core.dialog.TrendyolGenericDialogType
+import com.trendyol.design.core.dialog.KPGenericDialogContent
+import com.trendyol.design.core.dialog.KPGenericDialogType
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
-import com.trendyol.design.ui.theme.TrendyolColor
 import com.trendyol.design.ui.theme.TrendyolTheme
+import com.trendyol.theme.KPDesign
 
 @Composable
 @Preview(showBackground = true)
@@ -26,13 +26,13 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 internal fun Succes_Dialog_Single_Button() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Success,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Success,
                 displayCloseButton = false,
                 title = "Success Message Title",
                 message = "Message Detail",
@@ -55,13 +55,13 @@ internal fun Succes_Dialog_Single_Button() {
 internal fun Succes_Dialog_Single_Button_Close() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Success,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Success,
                 displayCloseButton = true,
                 title = "Success Message Title",
                 message = "Message Detail",
@@ -84,13 +84,13 @@ internal fun Succes_Dialog_Single_Button_Close() {
 internal fun Succes_Dialog_Two_Button() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Success,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Success,
                 displayCloseButton = false,
                 title = "Success Message Title",
                 message = "Message Detail",
@@ -117,13 +117,13 @@ internal fun Succes_Dialog_Two_Button() {
 internal fun Succes_Dialog_Two_Button_Button_Close() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Success,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Success,
                 displayCloseButton = true,
                 title = "Success Message Title",
                 message = "Message Detail",
@@ -150,13 +150,13 @@ internal fun Succes_Dialog_Two_Button_Button_Close() {
 internal fun Success_Dialog_No_Button_Dialog() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Success,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Success,
                 displayCloseButton = false,
                 title = "Success Message Title",
                 message = "Message Detail"
@@ -175,13 +175,13 @@ internal fun Success_Dialog_No_Button_Dialog() {
 internal fun Success_Dialog_No_Button_Dialog_Button_Close() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            GenericDialogContent(
-                type = TrendyolGenericDialogType.Success,
+            KPGenericDialogContent(
+                type = KPGenericDialogType.Success,
                 displayCloseButton = true,
                 title = "Success Message Title",
                 message = "Message Detail"

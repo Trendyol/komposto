@@ -13,8 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.inputfield.SingleLineOutlinedTextField
-import com.trendyol.design.core.inputfield.TrendyolOutlinedTextFieldStyle
+import com.trendyol.design.core.inputfield.KPSingleLineOutlinedTextField
+import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -33,9 +33,9 @@ private const val MIN_WIDTH = 280
 internal fun Input_Field_1_SingleLine_1_Unfocused() = TrendyolTheme {
     Column {
         var value by remember { mutableStateOf("") }
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             label = LABEL,
             value = value,
             onValueChange = {
@@ -43,9 +43,9 @@ internal fun Input_Field_1_SingleLine_1_Unfocused() = TrendyolTheme {
             }
         )
         Spacer(modifier = Modifier.height(8.dp))
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.Outlined,
+            style = KPOutlinedTextFieldStyle.Outlined,
             value = value,
             placeholder = WRITE_HERE,
             onValueChange = {
@@ -53,9 +53,9 @@ internal fun Input_Field_1_SingleLine_1_Unfocused() = TrendyolTheme {
             },
         )
         Spacer(modifier = Modifier.height(8.dp))
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.Filled,
+            style = KPOutlinedTextFieldStyle.Filled,
             value = value,
             placeholder = WRITE_HERE,
             onValueChange = {
@@ -75,9 +75,9 @@ internal fun Input_Field_1_SingleLine_1_Unfocused() = TrendyolTheme {
 internal fun Input_Field_1_SingleLine_2_Typed() = TrendyolTheme {
     Column {
         var value by remember { mutableStateOf("Filled") }
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             label = LABEL,
             value = value,
             onValueChange = {
@@ -85,9 +85,9 @@ internal fun Input_Field_1_SingleLine_2_Typed() = TrendyolTheme {
             }
         )
         Spacer(modifier = Modifier.height(8.dp))
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.Outlined,
+            style = KPOutlinedTextFieldStyle.Outlined,
             value = value,
             placeholder = WRITE_HERE,
             onValueChange = {
@@ -95,9 +95,9 @@ internal fun Input_Field_1_SingleLine_2_Typed() = TrendyolTheme {
             },
         )
         Spacer(modifier = Modifier.height(8.dp))
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.Filled,
+            style = KPOutlinedTextFieldStyle.Filled,
             value = value,
             placeholder = WRITE_HERE,
             onValueChange = {
@@ -117,9 +117,9 @@ internal fun Input_Field_1_SingleLine_2_Typed() = TrendyolTheme {
 internal fun Input_Field_1_SingleLine_3_Disabled() = TrendyolTheme {
     Column {
         var value by remember { mutableStateOf("Disabled") }
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             value = value,
             onValueChange = {
                 value = it
@@ -127,9 +127,9 @@ internal fun Input_Field_1_SingleLine_3_Disabled() = TrendyolTheme {
             enabled = false,
         )
         Spacer(modifier = Modifier.height(8.dp))
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.Outlined,
+            style = KPOutlinedTextFieldStyle.Outlined,
             value = value,
             onValueChange = {
                 value = it
@@ -137,9 +137,9 @@ internal fun Input_Field_1_SingleLine_3_Disabled() = TrendyolTheme {
             enabled = false,
         )
         Spacer(modifier = Modifier.height(8.dp))
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.Filled,
+            style = KPOutlinedTextFieldStyle.Filled,
             value = value,
             onValueChange = {
                 value = it
@@ -159,9 +159,9 @@ internal fun Input_Field_1_SingleLine_3_Disabled() = TrendyolTheme {
 internal fun Input_Field_1_SingleLine_4_Error() = TrendyolTheme {
     Column {
         var value by remember { mutableStateOf("Error") }
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             label = LABEL,
             value = value,
             onValueChange = {
@@ -171,9 +171,9 @@ internal fun Input_Field_1_SingleLine_4_Error() = TrendyolTheme {
             errorLabel = "Error message goes here",
         )
         Spacer(modifier = Modifier.height(8.dp))
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             value = value,
             onValueChange = {
                 value = it
@@ -182,9 +182,9 @@ internal fun Input_Field_1_SingleLine_4_Error() = TrendyolTheme {
             errorLabel = "Error message goes here",
         )
         Spacer(modifier = Modifier.height(8.dp))
-        SingleLineOutlinedTextField(
+        KPSingleLineOutlinedTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.Filled,
+            style = KPOutlinedTextFieldStyle.Filled,
             value = value,
             onValueChange = {
                 value = it
