@@ -23,7 +23,56 @@ import androidx.core.graphics.drawable.toBitmap
 import coil.ImageLoader
 import coil.request.ImageRequest
 import com.trendyol.design.bottomsheet.header.BottomSheetHeader
+import com.trendyol.design.bottomsheet.header.KPBottomSheetHeader
 import com.trendyol.design.bottomsheet.preview.PreviewTheme
+
+/**
+ * A composable function that creates a bottom sheet content layout with an image and a customizable header.
+ *
+ * @param title The title to be displayed in the header.
+ * @param onCloseIconClick A lambda function to be invoked when the close icon in the header is clicked.
+ * @param model The data model for the image to be displayed.
+ * @param modifier A `Modifier` for styling and layout customization. Default is `Modifier`.
+ * @param header A composable lambda for customizing the header content. Default is a `KPBottomSheetHeader` with the provided title and close icon click action.
+ * @param outerPadding A `PaddingValues` object to set the padding around the image content. Default is `PaddingValues(horizontal = 16.dp, vertical = 12.dp)`.
+ */
+@Composable
+public fun KPBottomSheetImageContent(
+    title: String,
+    onCloseIconClick: () -> Unit,
+    model: Any?,
+    modifier: Modifier = Modifier,
+    header: @Composable () -> Unit = {
+        KPBottomSheetHeader(title = title, onCloseIconClick = onCloseIconClick)
+    },
+    outerPadding: PaddingValues = PaddingValues(horizontal = 16.dp, vertical = 12.dp),
+) {
+    Column(
+        modifier = modifier,
+    ) {
+        header()
+
+        val context = LocalContext.current
+        var bitmap by remember { mutableStateOf<Bitmap?>(null) }
+        LaunchedEffect(key1 = model) {
+            val imageRequest = ImageRequest.Builder(context)
+                .data(model)
+                .build()
+            bitmap = ImageLoader(context).execute(imageRequest).drawable?.toBitmap()
+        }
+        bitmap?.let {
+            val imageRatio = it.height.toDouble() / it.width
+            val configuration = LocalConfiguration.current
+            Image(
+                bitmap = it.asImageBitmap(),
+                contentDescription = title,
+                modifier = Modifier
+                    .setImageRatioIfNeeded(imageRatio, configuration)
+                    .padding(paddingValues = outerPadding),
+            )
+        }
+    }
+}
 
 /**
  * A composable function that creates a bottom sheet content layout with an image and a customizable header.
@@ -36,6 +85,11 @@ import com.trendyol.design.bottomsheet.preview.PreviewTheme
  * @param outerPadding A `PaddingValues` object to set the padding around the image content. Default is `PaddingValues(horizontal = 16.dp, vertical = 12.dp)`.
  */
 @Composable
+@Deprecated(
+    message = "Use KPBottomSheetImageContent instead for consistent naming. " +
+        "This API will get removed in future releases.",
+    level = DeprecationLevel.WARNING
+)
 public fun BottomSheetImageContent(
     title: String,
     onCloseIconClick: () -> Unit,
@@ -88,7 +142,7 @@ private fun Modifier.setImageRatioIfNeeded(
 @Preview(showBackground = true)
 @Composable
 private fun Preview() = PreviewTheme {
-    BottomSheetImageContent(
+    KPBottomSheetImageContent(
         title = "Some Title",
         onCloseIconClick = { },
         model = "https://fastly.picsum.photos/id/340/536/354.jpg?hmac=TEqJ_0Lnvw38Q0oP_A5i3KuSxW6HV1xiJ3U_W8LW7G4",
