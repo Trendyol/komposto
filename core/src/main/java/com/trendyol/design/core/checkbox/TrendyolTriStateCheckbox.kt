@@ -44,7 +44,8 @@ import kotlin.math.floor
 import kotlin.math.max
 
 /**
- * This Composable function enhances Material Checkbox with content alignment between the check box and it's content (text or content composable).
+ * This Composable function enhances Material Checkbox with content alignment between the check box
+ * and it's content (text or content composable).
  */
 @Composable
 internal fun KPTriStateCheckbox(
