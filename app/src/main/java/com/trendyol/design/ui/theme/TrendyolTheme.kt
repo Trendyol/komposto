@@ -5,6 +5,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
+import com.trendyol.theme.KPDesignFontFamily
+import com.trendyol.theme.KPDesignTheme
+import com.trendyol.theme.KPDesignTypography
+import com.trendyol.theme.LocalKPDesignTheme
 import com.trendyol.theme.LocalTrendyolDesignTheme
 import com.trendyol.theme.TrendyolDesignFontFamily
 import com.trendyol.theme.TrendyolDesignTheme
@@ -28,6 +32,24 @@ private val trendyolDesignRTLTheme = trendyolDesignTheme.copy(
     )
 )
 
+private val KPDesignTheme = KPDesignTheme(
+    colors = TrendyolColor.kpThemeColor,
+    typography = KPDesignTypography(),
+    fontFamily = KPDesignFontFamily(
+        regular = Fonts.RobotoRegular,
+        medium = Fonts.RobotoMedium,
+        bold = Fonts.RobotoBold,
+    ),
+)
+
+private val KPDesignRTLTheme = KPDesignTheme.copy(
+    fontFamily = KPDesignFontFamily(
+        regular = Fonts.CairoRegular,
+        medium = Fonts.CairoMedium,
+        bold = Fonts.CairoBold
+    )
+)
+
 @Composable
 fun TrendyolTheme(
     content: @Composable () -> Unit
@@ -40,8 +62,15 @@ fun TrendyolTheme(
         } else {
             trendyolDesignRTLTheme
         }
+
+        val kpTheme = if (LocalLayoutDirection.current == LayoutDirection.Ltr) {
+            KPDesignTheme
+        } else {
+            KPDesignRTLTheme
+        }
         CompositionLocalProvider(
-            LocalTrendyolDesignTheme provides theme
+            LocalTrendyolDesignTheme provides theme,
+            LocalKPDesignTheme provides kpTheme
         ) {
             content()
         }
