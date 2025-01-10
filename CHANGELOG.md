@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.15.0] - 2025-01-10
+
+### Changed
+- We renamed all public APIs with 'KP' prefix to avoid conflicts with other libraries. Projects
+must implement the new theme APIs in order to use Komposto APIs.
+- We don't have significant date in order to remove deprecated APIs but we will remove them in the 
+next major version. :alert:
+
 ## [0.14.1] - 2025-01-02
 
 ### Fixed
