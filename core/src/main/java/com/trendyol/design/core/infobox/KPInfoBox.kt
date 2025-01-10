@@ -27,7 +27,7 @@ import com.trendyol.theme.KPDesign
 import com.trendyol.theme.TrendyolDesign
 
 /**
- * `KPInfoBox` is a composable function that displays an information box with a specified style, text, and optional icon.
+ * [KPInfoBox] is a composable function that displays an information box with a specified style, text, and optional icon.
  * Optionally, it can display an icon and a border.
  *
  * @param style An [InfoBoxStyle] instance that defines the style of the info box.
@@ -100,7 +100,7 @@ public fun KPInfoBox(
 }
 
 /**
- * `KPInfoBox` is a composable function that displays an information box with a specified style and customizable multi-line text.
+ * [KPInfoBox] is a composable function that displays an information box with a specified style and customizable multi-line text.
  * Optionally, it can display an icon and a border.
  *
  * @param style An [InfoBoxStyle] instance that defines the style of the info box.

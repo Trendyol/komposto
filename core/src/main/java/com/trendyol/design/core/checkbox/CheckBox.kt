@@ -13,9 +13,9 @@ import com.trendyol.design.core.preview.PreviewTheme
  * This composable function representing a custom checkbox component designed for the Trendyol.
  *
  * @param style The style configuration for the checkbox, defining its appearance.
- * See [TrendyolCheckBoxStyle.Primary] and [TrendyolCheckBoxStyle.Secondary]
+ * See [KPCheckboxStyle.Primary] and [KPCheckboxStyle.Secondary]
  * @param size The size configuration for the checkbox, determining its dimensions.
- * See [TrendyolCheckBoxSize.Medium], [TrendyolCheckBoxSize.Small] and [TrendyolCheckBoxSize.XSmall]
+ * See [KPCheckboxSize.Medium], [KPCheckboxSize.Small] and [KPCheckboxSize.XSmall]
  * @param containerType The type of container in which the checkbox is placed.
  * See [CheckboxContainerType.Text], [CheckboxContainerType.Content] and [CheckboxContainerType.None]
  * @param checked The current checked state of the checkbox.
