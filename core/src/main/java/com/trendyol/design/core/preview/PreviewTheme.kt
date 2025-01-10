@@ -9,11 +9,11 @@ import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import com.trendyol.theme.LocalTrendyolDesignTheme
-import com.trendyol.theme.TrendyolDesignColors
-import com.trendyol.theme.TrendyolDesignFontFamily
-import com.trendyol.theme.TrendyolDesignTheme
-import com.trendyol.theme.TrendyolDesignTypography
+import com.trendyol.theme.KPDesignColors
+import com.trendyol.theme.KPDesignFontFamily
+import com.trendyol.theme.KPDesignTheme
+import com.trendyol.theme.KPDesignTypography
+import com.trendyol.theme.LocalKPDesignTheme
 
 @Composable
 internal fun PreviewTheme(
@@ -21,7 +21,7 @@ internal fun PreviewTheme(
 ) {
     val context = LocalContext.current
 
-    val trendyolDesignTheme = remember {
+    val kompostoDesignTheme = remember {
         createTrendyolDesignTheme(context)
     }
 
@@ -29,7 +29,7 @@ internal fun PreviewTheme(
         colors = TrendyolColor.materialColor
     ) {
         CompositionLocalProvider(
-            LocalTrendyolDesignTheme provides trendyolDesignTheme
+            LocalKPDesignTheme provides kompostoDesignTheme
         ) {
             content()
         }
@@ -37,7 +37,6 @@ internal fun PreviewTheme(
 }
 
 private object TrendyolColor {
-    val themeColor = TrendyolDesignColors().copy(colorPrimary = colorPrimary)
     val materialColor: Colors
         @ReadOnlyComposable
         @Composable
@@ -48,10 +47,10 @@ private object TrendyolColor {
 
 private val colorPrimary = Color(color = 0xFFF27A1A)
 
-private fun createTrendyolDesignTheme(context: Context) = TrendyolDesignTheme(
-    colors = TrendyolDesignColors(),
-    typography = TrendyolDesignTypography(),
-    fontFamily = TrendyolDesignFontFamily(
+private fun createTrendyolDesignTheme(context: Context) = KPDesignTheme(
+    colors = KPDesignColors(),
+    typography = KPDesignTypography(),
+    fontFamily = KPDesignFontFamily(
         regular = PreviewFonts.getRobotoRegular(context),
         medium = PreviewFonts.getRobotoMedium(context),
         bold = PreviewFonts.getRobotoBold(context),
