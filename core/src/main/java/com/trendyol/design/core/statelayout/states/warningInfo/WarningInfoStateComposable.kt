@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -159,16 +161,25 @@ public fun WarningInfoStateComposable(
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Icon(
-                modifier = Modifier.padding(bottom = 8.dp),
-                imageVector = getIcon(infoModel.image),
-                size = iconSize
-            )
+            Surface(
+                modifier = Modifier
+                    .padding(bottom = 8.dp)
+                    .size(iconSize.dp),
+                shape = CircleShape,
+                elevation = 1.dp,
+            ) {
+                Icon(
+                    modifier = Modifier,
+                    imageVector = getIcon(infoModel.image),
+                    size = iconSize,
+                )
+            }
             infoModel.title?.let {
                 Text(
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
                     text = infoModel.title,
                     style = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant2,
+                    textAlign = infoModel.titleTextAlignment,
                 )
             }
             infoModel.description?.let {
@@ -176,6 +187,7 @@ public fun WarningInfoStateComposable(
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
                     text = infoModel.description,
                     style = TrendyolDesign.typography.body1MediumColorOnSurfaceVariant1,
+                    textAlign = infoModel.descriptionTextAlignment,
                 )
             }
             if (infoModel.buttonsInfoModel?.primaryButtonText.isNullOrEmpty().not()) {
