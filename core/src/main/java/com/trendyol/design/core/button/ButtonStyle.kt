@@ -14,7 +14,7 @@ public interface ButtonStyle {
      * Providing the button colors configuration.
      */
     @get:Composable
-    public val buttonColors: TrendyolButtonColors
+    public val buttonColors: KPButtonColors
 
     /**
      * Retrieves the border stroke configuration for the button based on the specified parameters.

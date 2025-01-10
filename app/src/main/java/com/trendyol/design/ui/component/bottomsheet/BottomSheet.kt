@@ -16,16 +16,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
-import com.trendyol.design.bottomsheet.BottomSheetImageContent
-import com.trendyol.design.bottomsheet.BottomSheetListContent
-import com.trendyol.design.bottomsheet.BottomSheetSliderContent
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.bottomsheet.KPBottomSheetImageContent
+import com.trendyol.design.bottomsheet.KPBottomSheetListContent
+import com.trendyol.design.bottomsheet.KPBottomSheetSliderContent
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.component.common.Component.BOTTOM_SHEET_IMAGE
 import com.trendyol.design.ui.component.common.Component.BOTTOM_SHEET_LIST
 import com.trendyol.design.ui.component.common.Component.BOTTOM_SHEET_SLIDER
 import com.trendyol.design.ui.component.common.Group.BOTTOM_SHEET
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 import kotlinx.collections.immutable.toPersistentList
 
 private val exampleList =
@@ -35,7 +35,7 @@ private val exampleList =
 @ShowkaseComposable(group = BOTTOM_SHEET, name = BOTTOM_SHEET_LIST)
 @Composable
 internal fun BottomSheetList() = TrendyolTheme {
-    BottomSheetListContent(
+    KPBottomSheetListContent(
         title = "Title",
         onCloseIconClick = { },
         itemList = exampleList,
@@ -45,15 +45,15 @@ internal fun BottomSheetList() = TrendyolTheme {
                     .height(48.dp)
                     .fillMaxWidth()
                     .border(
-                        border = BorderStroke(1.dp, TrendyolDesign.colors.colorBorder),
+                        border = BorderStroke(1.dp, KPDesign.colors.colorBorder),
                         shape = RoundedCornerShape(8.dp)
                     ),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
-                Text(
+                KPText(
                     text = stringResource(id = R.string.item),
-                    style = TrendyolDesign.typography.body1ColorOnSurfaceVariant1,
+                    style = KPDesign.typography.body1ColorOnSurfaceVariant1,
                 )
             }
         }
@@ -64,7 +64,7 @@ internal fun BottomSheetList() = TrendyolTheme {
 @ShowkaseComposable(group = BOTTOM_SHEET, name = BOTTOM_SHEET_SLIDER)
 @Composable
 internal fun BottomSheetSlider() = TrendyolTheme {
-    BottomSheetSliderContent(
+    KPBottomSheetSliderContent(
         title = stringResource(id = R.string.title),
         onCloseIconClick = { },
         itemList = exampleList,
@@ -74,15 +74,15 @@ internal fun BottomSheetSlider() = TrendyolTheme {
                     .height(210.dp)
                     .width(140.dp)
                     .border(
-                        border = BorderStroke(1.dp, TrendyolDesign.colors.colorBorder),
+                        border = BorderStroke(1.dp, KPDesign.colors.colorBorder),
                         shape = RoundedCornerShape(8.dp)
                     ),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
-                Text(
+                KPText(
                     text = stringResource(id = R.string.item),
-                    style = TrendyolDesign.typography.body1ColorOnSurfaceVariant1,
+                    style = KPDesign.typography.body1ColorOnSurfaceVariant1,
                 )
             }
         }
@@ -93,7 +93,7 @@ internal fun BottomSheetSlider() = TrendyolTheme {
 @ShowkaseComposable(group = BOTTOM_SHEET, name = BOTTOM_SHEET_IMAGE)
 @Composable
 internal fun BottomSheetImage() = TrendyolTheme {
-    BottomSheetImageContent(
+    KPBottomSheetImageContent(
         title = stringResource(id = R.string.title),
         onCloseIconClick = { },
         model = "https://fastly.picsum.photos/id/340/536/354.jpg?hmac=TEqJ_0Lnvw38Q0oP_A5i3KuSxW6HV1xiJ3U_W8LW7G4",

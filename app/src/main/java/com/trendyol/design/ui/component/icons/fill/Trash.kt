@@ -2,9 +2,9 @@ package com.trendyol.design.ui.component.icons.fill
 
 import androidx.compose.runtime.Composable
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Trash
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
@@ -12,29 +12,29 @@ import com.trendyol.design.ui.component.common.Group
 @ShowkaseComposable(group = Group.ICON, name = Component.TRASH_ICON, styleName = "1.Fill.XXSmall")
 @Composable
 internal fun Trash_Fill_XXSmall() {
-    Icon(imageVector = Icons.Fill.Trash, size = TrendyolIconSize.XXSmall)
+    KPIcon(imageVector = KPIcons.Fill.Trash, size = KPIconSize.XXSmall)
 }
 
 @ShowkaseComposable(group = Group.ICON, name = Component.TRASH_ICON, styleName = "2.Fill.XSmall")
 @Composable
 internal fun Trash_Fill_XSmall() {
-    Icon(imageVector = Icons.Fill.Trash, size = TrendyolIconSize.XSmall)
+    KPIcon(imageVector = KPIcons.Fill.Trash, size = KPIconSize.XSmall)
 }
 
 @ShowkaseComposable(group = Group.ICON, name = Component.TRASH_ICON, styleName = "3.Fill.Small")
 @Composable
 internal fun Trash_Fill_Small() {
-    Icon(imageVector = Icons.Fill.Trash, size = TrendyolIconSize.Small)
+    KPIcon(imageVector = KPIcons.Fill.Trash, size = KPIconSize.Small)
 }
 
 @ShowkaseComposable(group = Group.ICON, name = Component.TRASH_ICON, styleName = "4.Fill.Medium")
 @Composable
 internal fun Trash_Fill_Medium() {
-    Icon(imageVector = Icons.Fill.Trash, size = TrendyolIconSize.Medium)
+    KPIcon(imageVector = KPIcons.Fill.Trash, size = KPIconSize.Medium)
 }
 
 @ShowkaseComposable(group = Group.ICON, name = Component.TRASH_ICON, styleName = "5.Fill.Large")
 @Composable
 internal fun Trash_Fill_Large() {
-    Icon(imageVector = Icons.Fill.Trash, size = TrendyolIconSize.Large)
+    KPIcon(imageVector = KPIcons.Fill.Trash, size = KPIconSize.Large)
 }

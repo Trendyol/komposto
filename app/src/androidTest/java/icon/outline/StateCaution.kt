@@ -1,8 +1,8 @@
 package icon.outline
 
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.outline.StateCaution
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
@@ -13,25 +13,25 @@ internal class StateCaution : DesignScreenshotTest() {
     private val contents = listOf(
         DesignScreenshotTestContainer("XXXLarge") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.StateCaution,
-                    size = TrendyolIconSize.XXXLarge
+                KPIcon(
+                    imageVector = KPIcons.Outline.StateCaution,
+                    size = KPIconSize.XXXLarge
                 )
             }
         },
         DesignScreenshotTestContainer("XXLarge") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.StateCaution,
-                    size = TrendyolIconSize.XXLarge
+                KPIcon(
+                    imageVector = KPIcons.Outline.StateCaution,
+                    size = KPIconSize.XXLarge
                 )
             }
         },
         DesignScreenshotTestContainer("XLarge") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.StateCaution,
-                    size = TrendyolIconSize.XLarge
+                KPIcon(
+                    imageVector = KPIcons.Outline.StateCaution,
+                    size = KPIconSize.XLarge
                 )
             }
         }

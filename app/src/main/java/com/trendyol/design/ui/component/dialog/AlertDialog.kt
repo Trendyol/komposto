@@ -6,12 +6,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.dialog.AlertDialogContent
 import com.trendyol.design.core.dialog.DialogButtons
+import com.trendyol.design.core.dialog.KPAlertDialogContent
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
-import com.trendyol.design.ui.theme.TrendyolColor
 import com.trendyol.design.ui.theme.TrendyolTheme
+import com.trendyol.theme.KPDesign
 
 @Composable
 @Preview(showBackground = true)
@@ -23,12 +23,12 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 internal fun AlertDialog_Single_Button() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            AlertDialogContent(
+            KPAlertDialogContent(
                 message = "Description",
                 title = "Title",
                 negativeButton = {
@@ -49,12 +49,12 @@ internal fun AlertDialog_Single_Button() {
 internal fun AlertDialog_Two_Button() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            AlertDialogContent(
+            KPAlertDialogContent(
                 message = "Description",
                 title = "Title",
                 negativeButton = {
@@ -78,12 +78,12 @@ internal fun AlertDialog_Two_Button() {
 internal fun AlertDialog_Three_Button() {
     TrendyolTheme {
         Surface(
-            color = TrendyolColor.themeColor.colorOnPrimary,
-            contentColor = TrendyolColor.themeColor.colorOnPrimary,
+            color = KPDesign.colors.colorOnPrimary,
+            contentColor = KPDesign.colors.colorOnPrimary,
             elevation = 8.dp,
             shape = RoundedCornerShape(8.dp)
         ) {
-            AlertDialogContent(
+            KPAlertDialogContent(
                 message = "Description",
                 title = "Title",
                 negativeButton = {

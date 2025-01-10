@@ -8,10 +8,10 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.button.Button
-import com.trendyol.design.core.button.TrendyolButtonSize
-import com.trendyol.design.core.button.TrendyolButtonStyle
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.button.KPButton
+import com.trendyol.design.core.button.KPButtonSize
+import com.trendyol.design.core.button.KPButtonStyle
+import com.trendyol.design.core.text.KPText
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -28,29 +28,29 @@ internal class ButtonTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Primary") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Medium,
-                    ) { Text(text = buttonText) }
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Medium,
+                    ) { KPText(text = buttonText) }
                 }
             },
             DesignScreenshotTestContainer("Secondary") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Secondary,
-                        size = TrendyolButtonSize.Medium,
-                    ) { Text(text = buttonText) }
+                        style = KPButtonStyle.Secondary,
+                        size = KPButtonSize.Medium,
+                    ) { KPText(text = buttonText) }
                 }
             },
             DesignScreenshotTestContainer("Tertiary") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Tertiary,
-                        size = TrendyolButtonSize.Medium,
-                    ) { Text(text = buttonText) }
+                        style = KPButtonStyle.Tertiary,
+                        size = KPButtonSize.Medium,
+                    ) { KPText(text = buttonText) }
                 }
             },
         )
@@ -62,38 +62,38 @@ internal class ButtonTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Large") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Large,
-                    ) { Text(text = buttonText) }
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Large,
+                    ) { KPText(text = buttonText) }
                 }
             },
             DesignScreenshotTestContainer("Medium") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Medium,
-                    ) { Text(text = buttonText) }
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Medium,
+                    ) { KPText(text = buttonText) }
                 }
             },
             DesignScreenshotTestContainer("Small") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Small,
-                    ) { Text(text = buttonText) }
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Small,
+                    ) { KPText(text = buttonText) }
                 }
             },
             DesignScreenshotTestContainer("XSmall") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.XSmall,
-                    ) { Text(text = buttonText) }
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.XSmall,
+                    ) { KPText(text = buttonText) }
                 }
             },
         )
@@ -105,49 +105,49 @@ internal class ButtonTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Large") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Large,
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Large,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text(text = buttonText)
+                        KPText(text = buttonText)
                     }
                 }
             },
             DesignScreenshotTestContainer("Medium") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Medium,
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Medium,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text(text = buttonText)
+                        KPText(text = buttonText)
                     }
                 }
             },
             DesignScreenshotTestContainer("Small") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Small,
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Small,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text(text = buttonText)
+                        KPText(text = buttonText)
                     }
                 }
             },
             DesignScreenshotTestContainer("XSmall") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.XSmall,
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.XSmall,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text(text = buttonText)
+                        KPText(text = buttonText)
                     }
                 }
             },
@@ -160,45 +160,45 @@ internal class ButtonTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Large") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Large,
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Large,
                     ) {
-                        Text(text = twoLineButtonText)
+                        KPText(text = twoLineButtonText)
                     }
                 }
             },
             DesignScreenshotTestContainer("Medium") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Medium,
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Medium,
                     ) {
-                        Text(text = twoLineButtonText)
+                        KPText(text = twoLineButtonText)
                     }
                 }
             },
             DesignScreenshotTestContainer("Small") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Small,
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Small,
                     ) {
-                        Text(text = twoLineButtonText)
+                        KPText(text = twoLineButtonText)
                     }
                 }
             },
             DesignScreenshotTestContainer("XSmall") {
                 BoxWithHorizontalPadding {
-                    Button(
+                    KPButton(
                         onClick = { },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.XSmall,
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.XSmall,
                     ) {
-                        Text(text = twoLineButtonText)
+                        KPText(text = twoLineButtonText)
                     }
                 }
             },
@@ -213,24 +213,24 @@ internal class ButtonTest : DesignScreenshotTest() {
                 BoxWithHorizontalPadding {
                     Column {
                         Row {
-                            Button(
+                            KPButton(
                                 onClick = { },
-                                style = TrendyolButtonStyle.Primary,
-                                size = TrendyolButtonSize.Large
-                            ) { Text(text = buttonText) }
+                                style = KPButtonStyle.Primary,
+                                size = KPButtonSize.Large
+                            ) { KPText(text = buttonText) }
                             Spacer(modifier = Modifier.width(8.dp))
-                            Button(
+                            KPButton(
                                 onClick = { },
-                                style = TrendyolButtonStyle.Primary,
-                                size = TrendyolButtonSize.Large
-                            ) { Text(text = buttonText) }
+                                style = KPButtonStyle.Primary,
+                                size = KPButtonSize.Large
+                            ) { KPText(text = buttonText) }
                         }
                         Spacer(modifier = Modifier.height(8.dp))
-                        Button(
+                        KPButton(
                             onClick = { },
-                            style = TrendyolButtonStyle.Primary,
-                            size = TrendyolButtonSize.Large
-                        ) { Text(text = buttonText) }
+                            style = KPButtonStyle.Primary,
+                            size = KPButtonSize.Large
+                        ) { KPText(text = buttonText) }
                     }
                 }
             },
@@ -238,24 +238,24 @@ internal class ButtonTest : DesignScreenshotTest() {
                 BoxWithHorizontalPadding {
                     Column {
                         Row {
-                            Button(
+                            KPButton(
                                 onClick = { },
-                                style = TrendyolButtonStyle.Primary,
-                                size = TrendyolButtonSize.Medium
-                            ) { Text(text = buttonText) }
+                                style = KPButtonStyle.Primary,
+                                size = KPButtonSize.Medium
+                            ) { KPText(text = buttonText) }
                             Spacer(modifier = Modifier.width(8.dp))
-                            Button(
+                            KPButton(
                                 onClick = { },
-                                style = TrendyolButtonStyle.Primary,
-                                size = TrendyolButtonSize.Medium
-                            ) { Text(text = buttonText) }
+                                style = KPButtonStyle.Primary,
+                                size = KPButtonSize.Medium
+                            ) { KPText(text = buttonText) }
                         }
                         Spacer(modifier = Modifier.height(8.dp))
-                        Button(
+                        KPButton(
                             onClick = { },
-                            style = TrendyolButtonStyle.Primary,
-                            size = TrendyolButtonSize.Medium
-                        ) { Text(text = buttonText) }
+                            style = KPButtonStyle.Primary,
+                            size = KPButtonSize.Medium
+                        ) { KPText(text = buttonText) }
                     }
                 }
             },
@@ -263,24 +263,24 @@ internal class ButtonTest : DesignScreenshotTest() {
                 BoxWithHorizontalPadding {
                     Column {
                         Row {
-                            Button(
+                            KPButton(
                                 onClick = { },
-                                style = TrendyolButtonStyle.Primary,
-                                size = TrendyolButtonSize.Small
-                            ) { Text(text = buttonText) }
+                                style = KPButtonStyle.Primary,
+                                size = KPButtonSize.Small
+                            ) { KPText(text = buttonText) }
                             Spacer(modifier = Modifier.width(8.dp))
-                            Button(
+                            KPButton(
                                 onClick = { },
-                                style = TrendyolButtonStyle.Primary,
-                                size = TrendyolButtonSize.Small
-                            ) { Text(text = buttonText) }
+                                style = KPButtonStyle.Primary,
+                                size = KPButtonSize.Small
+                            ) { KPText(text = buttonText) }
                         }
                         Spacer(modifier = Modifier.height(8.dp))
-                        Button(
+                        KPButton(
                             onClick = { },
-                            style = TrendyolButtonStyle.Primary,
-                            size = TrendyolButtonSize.Small
-                        ) { Text(text = buttonText) }
+                            style = KPButtonStyle.Primary,
+                            size = KPButtonSize.Small
+                        ) { KPText(text = buttonText) }
                     }
                 }
             },
@@ -288,24 +288,24 @@ internal class ButtonTest : DesignScreenshotTest() {
                 BoxWithHorizontalPadding {
                     Column {
                         Row {
-                            Button(
+                            KPButton(
                                 onClick = { },
-                                style = TrendyolButtonStyle.Primary,
-                                size = TrendyolButtonSize.XSmall
-                            ) { Text(text = buttonText) }
+                                style = KPButtonStyle.Primary,
+                                size = KPButtonSize.XSmall
+                            ) { KPText(text = buttonText) }
                             Spacer(modifier = Modifier.width(8.dp))
-                            Button(
+                            KPButton(
                                 onClick = { },
-                                style = TrendyolButtonStyle.Primary,
-                                size = TrendyolButtonSize.XSmall
-                            ) { Text(text = buttonText) }
+                                style = KPButtonStyle.Primary,
+                                size = KPButtonSize.XSmall
+                            ) { KPText(text = buttonText) }
                         }
                         Spacer(modifier = Modifier.height(8.dp))
-                        Button(
+                        KPButton(
                             onClick = { },
-                            style = TrendyolButtonStyle.Primary,
-                            size = TrendyolButtonSize.XSmall
-                        ) { Text(text = buttonText) }
+                            style = KPButtonStyle.Primary,
+                            size = KPButtonSize.XSmall
+                        ) { KPText(text = buttonText) }
                     }
                 }
             },
@@ -319,57 +319,57 @@ internal class ButtonTest : DesignScreenshotTest() {
             DesignScreenshotTestContainer("Primary") {
                 BoxWithHorizontalPadding {
                     Row {
-                        Button(
+                        KPButton(
                             onClick = { },
-                            style = TrendyolButtonStyle.Primary,
-                            size = TrendyolButtonSize.Medium,
+                            style = KPButtonStyle.Primary,
+                            size = KPButtonSize.Medium,
                             enabled = true
-                        ) { Text(text = buttonText) }
+                        ) { KPText(text = buttonText) }
                         Spacer(modifier = Modifier.width(8.dp))
-                        Button(
+                        KPButton(
                             onClick = { },
-                            style = TrendyolButtonStyle.Primary,
-                            size = TrendyolButtonSize.Medium,
+                            style = KPButtonStyle.Primary,
+                            size = KPButtonSize.Medium,
                             enabled = false
-                        ) { Text(text = buttonText) }
+                        ) { KPText(text = buttonText) }
                     }
                 }
             },
             DesignScreenshotTestContainer("Secondary") {
                 BoxWithHorizontalPadding {
                     Row {
-                        Button(
+                        KPButton(
                             onClick = { },
-                            style = TrendyolButtonStyle.Secondary,
-                            size = TrendyolButtonSize.Medium,
+                            style = KPButtonStyle.Secondary,
+                            size = KPButtonSize.Medium,
                             enabled = true
-                        ) { Text(text = buttonText) }
+                        ) { KPText(text = buttonText) }
                         Spacer(modifier = Modifier.width(8.dp))
-                        Button(
+                        KPButton(
                             onClick = { },
-                            style = TrendyolButtonStyle.Secondary,
-                            size = TrendyolButtonSize.Medium,
+                            style = KPButtonStyle.Secondary,
+                            size = KPButtonSize.Medium,
                             enabled = false
-                        ) { Text(text = buttonText) }
+                        ) { KPText(text = buttonText) }
                     }
                 }
             },
             DesignScreenshotTestContainer("Tertiary") {
                 BoxWithHorizontalPadding {
                     Row {
-                        Button(
+                        KPButton(
                             onClick = { },
-                            style = TrendyolButtonStyle.Tertiary,
-                            size = TrendyolButtonSize.Medium,
+                            style = KPButtonStyle.Tertiary,
+                            size = KPButtonSize.Medium,
                             enabled = true
-                        ) { Text(text = buttonText) }
+                        ) { KPText(text = buttonText) }
                         Spacer(modifier = Modifier.width(8.dp))
-                        Button(
+                        KPButton(
                             onClick = { },
-                            style = TrendyolButtonStyle.Tertiary,
-                            size = TrendyolButtonSize.Medium,
+                            style = KPButtonStyle.Tertiary,
+                            size = KPButtonSize.Medium,
                             enabled = false
-                        ) { Text(text = buttonText) }
+                        ) { KPText(text = buttonText) }
                     }
                 }
             },

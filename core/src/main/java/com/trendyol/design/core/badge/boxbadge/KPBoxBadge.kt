@@ -2,12 +2,9 @@ package com.trendyol.design.core.badge.boxbadge
 
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.Column
-import com.trendyol.design.core.icon.Icon
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.trendyol.design.core.text.Text
-import com.trendyol.theme.TrendyolDesign
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,9 +15,12 @@ import androidx.compose.material.Card
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeAttributes
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.preview.PreviewTheme
+import com.trendyol.design.core.text.KPText
+import com.trendyol.theme.KPDesign
 
 /**
  * Represents a single badge based on the provided badge type and attributes.
@@ -53,12 +53,12 @@ public fun KPBoxBadge(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
-            Icon(
+            KPIcon(
                 imageVector = badge.icon,
                 size = attributes.iconSize,
                 tint = badge.iconTintColor,
             )
-            Text(
+            KPText(
                 modifier = Modifier.fillMaxWidth(),
                 text = badge.title,
                 style = attributes.textStyle(),
@@ -77,8 +77,8 @@ private fun CustomBoxBadgePreview() = PreviewTheme {
     KPBoxBadge(
         KPBoxBadgeType.Custom(
             title = "Custom Badge",
-            backgroundColor = TrendyolDesign.colors.colorPinkVariant2,
-            icon = Icons.Fill.Help,
+            backgroundColor = KPDesign.colors.colorPinkVariant2,
+            icon = KPIcons.Fill.Help,
         )
     )
 }

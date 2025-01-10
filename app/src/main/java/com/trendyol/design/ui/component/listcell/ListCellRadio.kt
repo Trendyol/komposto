@@ -9,7 +9,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
-import com.trendyol.design.bottomsheet.item.BottomSheetRadioItem
+import com.trendyol.design.bottomsheet.item.KPBottomSheetRadioItem
 import com.trendyol.design.ui.component.common.Component.LIST_CELL_RADIO_ITEM
 import com.trendyol.design.ui.component.common.Group.LIST_CELL
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -19,21 +19,21 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 @Composable
 internal fun ListCellRadioBasic() = TrendyolTheme {
     Column {
-        BottomSheetRadioItem(
+        KPBottomSheetRadioItem(
             selected = true,
             text = stringResource(id = R.string.title),
             onClick = { },
             isIconVisible = true,
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetRadioItem(
+        KPBottomSheetRadioItem(
             selected = true,
             text = stringResource(id = R.string.title),
             onClick = { },
             isIconVisible = false,
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetRadioItem(
+        KPBottomSheetRadioItem(
             selected = false,
             text = stringResource(id = R.string.title),
             onClick = { },
@@ -48,7 +48,7 @@ internal fun ListCellRadioBasic() = TrendyolTheme {
 @Composable
 internal fun ListCellRadioRich() = TrendyolTheme {
     Column {
-        BottomSheetRadioItem(
+        KPBottomSheetRadioItem(
             selected = true,
             text = stringResource(id = R.string.title),
             onClick = { },
@@ -56,7 +56,7 @@ internal fun ListCellRadioRich() = TrendyolTheme {
             description = stringResource(id = R.string.description),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetRadioItem(
+        KPBottomSheetRadioItem(
             selected = true,
             text = stringResource(id = R.string.title),
             onClick = { },
@@ -64,7 +64,7 @@ internal fun ListCellRadioRich() = TrendyolTheme {
             description = stringResource(id = R.string.description),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetRadioItem(
+        KPBottomSheetRadioItem(
             selected = false,
             text = stringResource(id = R.string.title),
             onClick = { },
