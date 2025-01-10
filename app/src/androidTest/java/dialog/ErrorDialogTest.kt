@@ -3,8 +3,8 @@ package dialog
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.ui.Modifier
 import com.trendyol.design.core.dialog.DialogButtons
-import com.trendyol.design.core.dialog.GenericDialogContent
-import com.trendyol.design.core.dialog.TrendyolGenericDialogType
+import com.trendyol.design.core.dialog.KPGenericDialogContent
+import com.trendyol.design.core.dialog.KPGenericDialogType
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -17,8 +17,8 @@ internal class ErrorDialogTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Single") {
                 BoxWithHorizontalPadding {
-                    GenericDialogContent(
-                        type = TrendyolGenericDialogType.Error,
+                    KPGenericDialogContent(
+                        type = KPGenericDialogType.Error,
                         displayCloseButton = false,
                         title = "Success Message Title",
                         message = "Message Detail",
@@ -41,8 +41,8 @@ internal class ErrorDialogTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("singleWithClose") {
                 BoxWithHorizontalPadding {
-                    GenericDialogContent(
-                        type = TrendyolGenericDialogType.Error,
+                    KPGenericDialogContent(
+                        type = KPGenericDialogType.Error,
                         displayCloseButton = true,
                         title = "Success Message Title",
                         message = "Message Detail",
@@ -65,8 +65,8 @@ internal class ErrorDialogTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("twoButton") {
                 BoxWithHorizontalPadding {
-                    GenericDialogContent(
-                        type = TrendyolGenericDialogType.Error,
+                    KPGenericDialogContent(
+                        type = KPGenericDialogType.Error,
                         displayCloseButton = false,
                         title = "Success Message Title",
                         message = "Message Detail",
@@ -96,8 +96,8 @@ internal class ErrorDialogTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("twoButtonWithClose") {
                 BoxWithHorizontalPadding {
-                    GenericDialogContent(
-                        type = TrendyolGenericDialogType.Error,
+                    KPGenericDialogContent(
+                        type = KPGenericDialogType.Error,
                         displayCloseButton = true,
                         title = "Success Message Title",
                         message = "Message Detail",
@@ -127,8 +127,8 @@ internal class ErrorDialogTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("noButton") {
                 BoxWithHorizontalPadding {
-                    GenericDialogContent(
-                        type = TrendyolGenericDialogType.Error,
+                    KPGenericDialogContent(
+                        type = KPGenericDialogType.Error,
                         displayCloseButton = false,
                         title = "Success Message Title",
                         message = "Message Detail"
@@ -144,8 +144,8 @@ internal class ErrorDialogTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("noButtonWithClose") {
                 BoxWithHorizontalPadding {
-                    GenericDialogContent(
-                        type = TrendyolGenericDialogType.Error,
+                    KPGenericDialogContent(
+                        type = KPGenericDialogType.Error,
                         displayCloseButton = true,
                         title = "Success Message Title",
                         message = "Message Detail"

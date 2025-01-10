@@ -25,21 +25,21 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.inputfield.impl.TrendyolOutlinedTextFieldDecorationBox
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.design.core.inputfield.impl.KPOutlinedTextFieldDecorationBox
+import com.trendyol.theme.KPDesign
 
 /**
- * The [TrendyolOutlinedTextField] composable is used instead of the [androidx.compose.material.OutlinedTextField]
+ * The [KPOutlinedTextField] composable is used instead of the [androidx.compose.material.OutlinedTextField]
  * to manage content padding, height, and handle updates related to the Filled states.
  *
  * @param value the input to be shown in the text field
  * @param onValueChange the callback that is triggered when the input service updates values in
- * [TrendyolOutlinedTextField]. An updated [TrendyolOutlinedTextField] value comes as a parameter of the callback
+ * [KPOutlinedTextField]. An updated [KPOutlinedTextField] value comes as a parameter of the callback
  * @param modifier a [Modifier] for this text field
- * @param enabled controls the enabled state of the [TrendyolOutlinedTextField]. When `false`, the text field will
+ * @param enabled controls the enabled state of the [KPOutlinedTextField]. When `false`, the text field will
  * be neither editable nor focusable, the input of the text field will not be selectable,
  * visually text field will appear in the disabled UI state
- * @param readOnly controls the editable state of the [TrendyolOutlinedTextField]. When `true`, the text
+ * @param readOnly controls the editable state of the [KPOutlinedTextField]. When `true`, the text
  * field can not be modified, however, a user can focus it and copy text from it. Read-only text
  * fields are usually used to display pre-filled forms that user can not edit
  * @param textStyle the style to be applied to the input text. The default [textStyle] uses the
@@ -82,13 +82,13 @@ import com.trendyol.theme.TrendyolDesign
  */
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-internal fun TrendyolOutlinedTextField(
+internal fun KPOutlinedTextField(
     value: String,
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     readOnly: Boolean = false,
-    textStyle: TextStyle = TrendyolDesign.typography.subtitleMedium.copy(color = Color.Unspecified),
+    textStyle: TextStyle = KPDesign.typography.subtitleMedium.copy(color = Color.Unspecified),
     label: @Composable (() -> Unit)? = null,
     placeholder: @Composable (() -> Unit)? = null,
     leadingIcon: @Composable (() -> Unit)? = null,
@@ -119,7 +119,7 @@ internal fun TrendyolOutlinedTextField(
     }
     val mergedTextStyle = textStyle.merge(TextStyle(color = textColor))
     val backgroundColor = if (isFilled && isError) {
-        TrendyolDesign.colors.colorWarningVariant2
+        KPDesign.colors.colorWarningVariant2
     } else colors.backgroundColor(enabled).value
 
     BasicTextField(
@@ -151,7 +151,7 @@ internal fun TrendyolOutlinedTextField(
         maxLines = maxLines,
         minLines = minLines,
         decorationBox = @Composable { innerTextField ->
-            TrendyolOutlinedTextFieldDecorationBox(
+            KPOutlinedTextFieldDecorationBox(
                 value = value,
                 visualTransformation = visualTransformation,
                 innerTextField = innerTextField,

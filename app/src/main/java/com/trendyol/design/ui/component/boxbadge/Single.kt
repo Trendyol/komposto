@@ -5,12 +5,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.badge.boxbadge.KPBoxBadge
 import com.trendyol.design.core.badge.boxbadge.KPBoxBadgeType
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.ui.theme.TrendyolTheme
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
@@ -21,8 +21,8 @@ import com.trendyol.theme.TrendyolDesign
 internal fun BoxBadge_Single_A_Custom() = TrendyolTheme {
     val customBadge = KPBoxBadgeType.Custom(
         title = "Custom Badge",
-        backgroundColor = TrendyolDesign.colors.colorPinkVariant2,
-        icon = Icons.Fill.Help,
+        backgroundColor = KPDesign.colors.colorPinkVariant2,
+        icon = KPIcons.Fill.Help,
     )
     KPBoxBadge(customBadge)
 }

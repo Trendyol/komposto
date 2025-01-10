@@ -1,10 +1,10 @@
 package bottomsheet.item
 
-import com.trendyol.design.bottomsheet.item.BottomSheetCheckboxItem
-import com.trendyol.design.bottomsheet.item.BottomSheetRadioItem
-import com.trendyol.design.bottomsheet.item.BottomSheetSingleSelectItem
-import com.trendyol.design.bottomsheet.item.BottomSheetStaticItem
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.bottomsheet.item.KPBottomSheetCheckboxItem
+import com.trendyol.design.bottomsheet.item.KPBottomSheetRadioItem
+import com.trendyol.design.bottomsheet.item.KPBottomSheetSingleSelectItem
+import com.trendyol.design.bottomsheet.item.KPBottomSheetStaticItem
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Bullet
 import com.trendyol.design.core.icon.icons.outline.Union
 import core.BoxWithHorizontalPadding
@@ -24,17 +24,17 @@ internal class BottomSheetItemTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("BottomSheet Checkbox is Checked") {
                 BoxWithHorizontalPadding {
-                    BottomSheetCheckboxItem(checked = true, text = text, onCheckedChange = {})
+                    KPBottomSheetCheckboxItem(checked = true, text = text, onCheckedChange = {})
                 }
             },
             DesignScreenshotTestContainer("BottomSheet Checkbox is Unchecked") {
                 BoxWithHorizontalPadding {
-                    BottomSheetCheckboxItem(checked = false, text = text, onCheckedChange = {})
+                    KPBottomSheetCheckboxItem(checked = false, text = text, onCheckedChange = {})
                 }
             },
             DesignScreenshotTestContainer("BottomSheet Checkbox is Visible") {
                 BoxWithHorizontalPadding {
-                    BottomSheetCheckboxItem(
+                    KPBottomSheetCheckboxItem(
                         checked = true, text = text, onCheckedChange = {},
                         isIconVisible = true
                     )
@@ -42,7 +42,7 @@ internal class BottomSheetItemTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("BottomSheet Checkbox is with Description") {
                 BoxWithHorizontalPadding {
-                    BottomSheetCheckboxItem(
+                    KPBottomSheetCheckboxItem(
                         checked = false, text = text, onCheckedChange = {},
                         description = description
                     )
@@ -57,17 +57,17 @@ internal class BottomSheetItemTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("BottomSheet Radio is Selected") {
                 BoxWithHorizontalPadding {
-                    BottomSheetRadioItem(selected = true, text = text, onClick = {})
+                    KPBottomSheetRadioItem(selected = true, text = text, onClick = {})
                 }
             },
             DesignScreenshotTestContainer("BottomSheet Radio is Unselected") {
                 BoxWithHorizontalPadding {
-                    BottomSheetRadioItem(selected = false, text = text, onClick = {})
+                    KPBottomSheetRadioItem(selected = false, text = text, onClick = {})
                 }
             },
             DesignScreenshotTestContainer("BottomSheet Radio's icon is Visible") {
                 BoxWithHorizontalPadding {
-                    BottomSheetRadioItem(
+                    KPBottomSheetRadioItem(
                         selected = true, text = text, onClick = {},
                         isIconVisible = true
                     )
@@ -75,7 +75,7 @@ internal class BottomSheetItemTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("BottomSheet Radio is with Description") {
                 BoxWithHorizontalPadding {
-                    BottomSheetRadioItem(
+                    KPBottomSheetRadioItem(
                         selected = false, text = text, onClick = {},
                         description = description
                     )
@@ -90,18 +90,18 @@ internal class BottomSheetItemTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("BottomSheet Single Select is Selected") {
                 BoxWithHorizontalPadding {
-                    BottomSheetSingleSelectItem(selected = true, text = text, onClick = {})
+                    KPBottomSheetSingleSelectItem(selected = true, text = text, onClick = {})
                 }
             },
             DesignScreenshotTestContainer("BottomSheet Single Select is Unselected") {
                 BoxWithHorizontalPadding {
-                    BottomSheetSingleSelectItem(selected = false, text = text, onClick = {})
+                    KPBottomSheetSingleSelectItem(selected = false, text = text, onClick = {})
                 }
             },
             DesignScreenshotTestContainer("BottomSheet Single Select is not Visible")
             {
                 BoxWithHorizontalPadding {
-                    BottomSheetSingleSelectItem(
+                    KPBottomSheetSingleSelectItem(
                         selected = true, text = text, onClick = {},
                         isIconVisible = false
                     )
@@ -109,7 +109,7 @@ internal class BottomSheetItemTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("BottomSheet Single Select is with Description") {
                 BoxWithHorizontalPadding {
-                    BottomSheetSingleSelectItem(
+                    KPBottomSheetSingleSelectItem(
                         selected = false, text = text, onClick = {},
                         description = description
                     )
@@ -117,7 +117,7 @@ internal class BottomSheetItemTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("BottomSheet Single Select is with Helper Text") {
                 BoxWithHorizontalPadding {
-                    BottomSheetSingleSelectItem(
+                    KPBottomSheetSingleSelectItem(
                         selected = false, text = text, onClick = {},
                         helperText = text
                     )
@@ -133,35 +133,35 @@ internal class BottomSheetItemTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("BottomSheet Static is with Text") {
                 BoxWithHorizontalPadding {
-                    BottomSheetStaticItem(text = text, onClick = {})
+                    KPBottomSheetStaticItem(text = text, onClick = {})
                 }
             },
             DesignScreenshotTestContainer("BottomSheet Static is with Description Text") {
                 BoxWithHorizontalPadding {
-                    BottomSheetStaticItem(
+                    KPBottomSheetStaticItem(
                         text = text, onClick = {},
                         description = description
                     )
                 }
             },
             DesignScreenshotTestContainer(
-                "BottomSheet Static is with Icons.Outline.Union icon"
+                "BottomSheet Static is with Outline.Union icon"
             ) {
                 BoxWithHorizontalPadding {
-                    BottomSheetStaticItem(
+                    KPBottomSheetStaticItem(
                         text = text, onClick = {},
-                        icon = Icons.Outline.Union,
+                        icon = KPIcons.Outline.Union,
                         description = description
                     )
                 }
             },
             DesignScreenshotTestContainer(
-                "BottomSheet Static is with Icons.Fill.Bullet icon"
+                "BottomSheet Static is with Fill.Bullet icon"
             ) {
                 BoxWithHorizontalPadding {
-                    BottomSheetStaticItem(
+                    KPBottomSheetStaticItem(
                         text = text, onClick = {},
-                        icon = Icons.Fill.Bullet,
+                        icon = KPIcons.Fill.Bullet,
                         description = description
                     )
                 }

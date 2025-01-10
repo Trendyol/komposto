@@ -16,11 +16,119 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.fill.ArrowDown
 import com.trendyol.design.core.preview.PreviewTheme
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.core.text.Text
+import com.trendyol.theme.KPDesign
 import com.trendyol.theme.TrendyolDesign
+
+/**
+ * A Composable function to render a dropdown UI component.
+ *
+ * @param style Style configuration for the Dropdown. It should implement the [DropdownStyle] interface.
+ *              This parameter determines the appearance of the dropdown, including the shape of the outer frame,
+ *              the visibility of the label, and other style properties. For example, the styles defined within
+ *              [KPDropdownStyle] represent the customized dropdown styles.
+ * @param value The currently selected value in the dropdown.
+ * @param modifier Modifier to apply to the Dropdown.
+ * @param label The label text to display above the dropdown.
+ * @param placeholder Optional placeholder text displayed when the dropdown is not selected.
+ * @param errorLabel The error message to display below the dropdown when an error occurs.
+ * @param isError Indicates whether the dropdown is in an error state.
+ * @param enabled Determines if the dropdown is enabled for interaction.
+ * @param colors The colors configuration for the dropdown. This parameter allows configuring the colors of the
+ *               dropdown component, including the text color, background color, and colors for different states
+ *               (such as selected, focused, disabled, etc.). TextFieldColors provides the means to customize
+ *               these colors according to the desired visual appearance.
+ * @param onClick Callback for when the dropdown is clicked.
+ */
+@Composable
+public fun KPDropdown(
+    style: DropdownStyle,
+    value: String,
+    modifier: Modifier = Modifier,
+    label: String? = null,
+    placeholder: String? = null,
+    errorLabel: String? = null,
+    isError: Boolean = false,
+    enabled: Boolean = true,
+    colors: TextFieldColors = style.outlinedTextFieldColors,
+    onClick: () -> Unit,
+) {
+    val interactionSource = remember { MutableInteractionSource() }
+
+    if (interactionSource.collectIsPressedAsState().value) onClick.invoke()
+
+    Column(modifier = modifier) {
+        KPOutlinedTextField(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(
+                    enabled = enabled,
+                    onClick = onClick,
+                ),
+            value = value,
+            label = if (!label.isNullOrBlank()) {
+                {
+                    KPText(
+                        text = label,
+                        overflow = TextOverflow.Ellipsis,
+                        softWrap = false,
+                    )
+                }
+            } else null,
+            placeholder = if (!placeholder.isNullOrBlank()) {
+                {
+                    KPText(
+                        text = placeholder,
+                        style = KPDesign.typography.subtitleMedium,
+                    )
+                }
+            } else null,
+            interactionSource = interactionSource,
+            onValueChange = {},
+            colors = colors,
+            isError = isError,
+            isFilled = style is KPDropdownStyle.Filled,
+            enabled = enabled,
+            singleLine = true,
+            readOnly = true,
+            trailingIcon = {
+                KPIcon(
+                    modifier = Modifier.padding(
+                        top = 16.dp,
+                        bottom = 16.dp,
+                        start = 8.dp,
+                        end = 12.dp
+                    ),
+                    imageVector = KPIcons.Fill.ArrowDown,
+                    size = KPIconSize.XXSmall,
+                    tint = if (!enabled && style is KPDropdownStyle.Filled)
+                        KPDesign.colors.colorBorder else Color.Unspecified
+                )
+            }
+        )
+
+        if (enabled && isError && !errorLabel.isNullOrBlank()) {
+            KPText(
+                modifier = Modifier
+                    .padding(
+                        top = 8.dp,
+                        start = 12.dp,
+                        end = 12.dp,
+                    )
+                    .fillMaxWidth(),
+                text = errorLabel,
+                style = KPDesign.typography.body1ColorWarning,
+            )
+        }
+    }
+}
 
 /**
  * A Composable function to render a dropdown UI component.
@@ -43,6 +151,11 @@ import com.trendyol.theme.TrendyolDesign
  * @param onClick Callback for when the dropdown is clicked.
  */
 @Composable
+@Deprecated(
+    message = "Use KPDropdown instead for consistent naming. " +
+        "This API will get removed in future releases.",
+    level = DeprecationLevel.WARNING
+)
 public fun Dropdown(
     style: DropdownStyle,
     value: String,
@@ -60,7 +173,7 @@ public fun Dropdown(
     if (interactionSource.collectIsPressedAsState().value) onClick.invoke()
 
     Column(modifier = modifier) {
-        TrendyolOutlinedTextField(
+        KPOutlinedTextField(
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable(
@@ -129,9 +242,9 @@ public fun Dropdown(
 @Composable
 private fun DropdownPreview() {
     PreviewTheme {
-        Dropdown(
+        KPDropdown(
             modifier = Modifier.padding(16.dp),
-            style = TrendyolDropdownStyle.Filled,
+            style = KPDropdownStyle.Filled,
             value = "Filled",
             isError = false,
             enabled = true,

@@ -6,9 +6,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpSize
 
 /**
- * An interface defining the styling options for the `RatingBar` composable function.
+ * An interface defining the styling options for the [KPRatingBar] composable function.
  *
- * `RatingBarSize` provides customizable attributes for the appearance of the rating bar, including
+ * [RatingBarSize] provides customizable attributes for the appearance of the rating bar, including
  * the size of the star icons, the size of the camera icon (if displayed), and the text style used
  * for the rating and review count text.
  *
