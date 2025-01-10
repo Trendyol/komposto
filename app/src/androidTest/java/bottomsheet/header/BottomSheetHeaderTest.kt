@@ -1,6 +1,6 @@
 package bottomsheet.header
 
-import com.trendyol.design.bottomsheet.header.BottomSheetHeader
+import com.trendyol.design.bottomsheet.header.KPBottomSheetHeader // Assuming KPBottomSheetHeader is the correct import
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -18,12 +18,12 @@ internal class BottomSheetHeaderTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("BottomSheet Header Single Row") {
                 BoxWithHorizontalPadding {
-                    BottomSheetHeader(title = singleRowTitle, onCloseIconClick = { })
+                    KPBottomSheetHeader(title = singleRowTitle, onCloseIconClick = { }) // Replaced BottomSheetHeader with KPBottomSheetHeader
                 }
             },
             DesignScreenshotTestContainer("BottomSheet Header Double Row") {
                 BoxWithHorizontalPadding {
-                    BottomSheetHeader(title = doubleRowTitle, onCloseIconClick = { })
+                    KPBottomSheetHeader(title = doubleRowTitle, onCloseIconClick = { }) // Replaced BottomSheetHeader with KPBottomSheetHeader
                 }
             }
         )
@@ -35,7 +35,7 @@ internal class BottomSheetHeaderTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("BottomSheet Header Back Icon is Visible") {
                 BoxWithHorizontalPadding {
-                    BottomSheetHeader(
+                    KPBottomSheetHeader( // Replaced BottomSheetHeader with KPBottomSheetHeader
                         title = singleRowTitle, onCloseIconClick = { },
                         isBackIconVisible = true
                     )
@@ -43,7 +43,7 @@ internal class BottomSheetHeaderTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("BottomSheet Header Back Icon is not Visible") {
                 BoxWithHorizontalPadding {
-                    BottomSheetHeader(
+                    KPBottomSheetHeader( // Replaced BottomSheetHeader with KPBottomSheetHeader
                         title = singleRowTitle, onCloseIconClick = { },
                         isBackIconVisible = false
                     )
@@ -58,7 +58,7 @@ internal class BottomSheetHeaderTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("BottomSheet Header Back Icon is Visible") {
                 BoxWithHorizontalPadding {
-                    BottomSheetHeader(
+                    KPBottomSheetHeader( // Replaced BottomSheetHeader with KPBottomSheetHeader
                         title = singleRowTitle, onCloseIconClick = { },
                         isCloseIconVisible = true
                     )
@@ -66,7 +66,7 @@ internal class BottomSheetHeaderTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("BottomSheet Header Close Icon is not Visible") {
                 BoxWithHorizontalPadding {
-                    BottomSheetHeader(
+                    KPBottomSheetHeader( // Replaced BottomSheetHeader with KPBottomSheetHeader
                         title = singleRowTitle, onCloseIconClick = { },
                         isCloseIconVisible = false
                     )

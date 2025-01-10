@@ -1,7 +1,7 @@
 package ratingbar
 
-import com.trendyol.design.core.rating.RatingBar
-import com.trendyol.design.core.rating.TrendyolRatingBarSize
+import com.trendyol.design.core.rating.KPRatingBar
+import com.trendyol.design.core.rating.KPRatingBarSize
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -14,9 +14,9 @@ internal class RatingBarTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Small") {
                 BoxWithHorizontalPadding {
-                    RatingBar(
+                    KPRatingBar(
                         rating = 3.5f,
-                        size = TrendyolRatingBarSize.Small,
+                        size = KPRatingBarSize.Small,
                         reviewCount = "277",
                         showRating = false,
                         showCameraIcon = false,
@@ -25,9 +25,9 @@ internal class RatingBarTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Medium") {
                 BoxWithHorizontalPadding {
-                    RatingBar(
+                    KPRatingBar(
                         rating = 3.5f,
-                        size = TrendyolRatingBarSize.Medium,
+                        size = KPRatingBarSize.Medium,
                         reviewCount = "277",
                         showRating = false,
                         showCameraIcon = false,
@@ -43,9 +43,9 @@ internal class RatingBarTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Medium") {
                 BoxWithHorizontalPadding {
-                    RatingBar(
+                    KPRatingBar(
                         rating = 3.5f,
-                        size = TrendyolRatingBarSize.Small,
+                        size = KPRatingBarSize.Small,
                         reviewCount = "277",
                         showRating = true,
                         showCameraIcon = true,
@@ -54,9 +54,9 @@ internal class RatingBarTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Medium") {
                 BoxWithHorizontalPadding {
-                    RatingBar(
+                    KPRatingBar(
                         rating = 3.5f,
-                        size = TrendyolRatingBarSize.Medium,
+                        size = KPRatingBarSize.Medium,
                         reviewCount = "277",
                         showRating = true,
                         showCameraIcon = true,
@@ -74,9 +74,9 @@ internal class RatingBarTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Show Rating") {
                 BoxWithHorizontalPadding {
-                    RatingBar(
+                    KPRatingBar(
                         rating = 3.5f,
-                        size = TrendyolRatingBarSize.Small,
+                        size = KPRatingBarSize.Small,
                         reviewCount = "277",
                         showRating = true,
                         showCameraIcon = false,
@@ -85,9 +85,9 @@ internal class RatingBarTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Unshow Rating") {
                 BoxWithHorizontalPadding {
-                    RatingBar(
+                    KPRatingBar(
                         rating = 3.5f,
-                        size = TrendyolRatingBarSize.Small,
+                        size = KPRatingBarSize.Small,
                         reviewCount = "277",
                         showRating = false,
                         showCameraIcon = false,
