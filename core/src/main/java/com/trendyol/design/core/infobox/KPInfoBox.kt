@@ -21,10 +21,8 @@ import com.trendyol.design.core.icon.icons.fill.CircleIcon
 import com.trendyol.design.core.icon.icons.fill.InfoIcon
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
-import com.trendyol.design.core.text.Text
 import com.trendyol.design.core.util.customBorder
 import com.trendyol.theme.KPDesign
-import com.trendyol.theme.TrendyolDesign
 
 /**
  * [KPInfoBox] is a composable function that displays an information box with a specified style, text, and optional icon.
@@ -157,7 +155,7 @@ public fun KPInfoBox(
 
         Column(modifier = Modifier.weight(1f)) {
             CompositionLocalProvider(
-                LocalTextStyle provides TrendyolDesign.typography.body1.copy(color = style.textColor)
+                LocalTextStyle provides KPDesign.typography.body1.copy(color = style.textColor)
             ) {
                 multiText()
             }
@@ -244,10 +242,10 @@ private fun OrangeInfoBoxLeftIconWithTwoTextsPreview() {
             iconPosition = Arrangement.Start,
             showBorder = false
         ) {
-            Text(
+            KPText(
                 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             )
-            Text(
+            KPText(
                 modifier = Modifier.padding(top = 8.dp),
                 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
                 color = Color.Red
