@@ -22,7 +22,7 @@ public sealed interface KPCheckboxSize {
             @Composable get() = KPDesign.typography.subtitle
 
         override fun strokeWidth(style: CheckboxStyle): Dp =
-            if (style is KPCheckBoxStyle.Secondary) 1.2.dp else 2.dp
+            if (style is KPCheckboxStyle.Secondary) 1.2.dp else 2.dp
     }
 
     public data object Small : CheckboxSize {
@@ -38,7 +38,7 @@ public sealed interface KPCheckboxSize {
             @Composable get() = KPDesign.typography.subtitle
 
         override fun strokeWidth(style: CheckboxStyle): Dp =
-            if (style is KPCheckBoxStyle.Secondary) 1.2.dp else 1.75.dp
+            if (style is KPCheckboxStyle.Secondary) 1.2.dp else 1.75.dp
     }
 
     public data object XSmall : CheckboxSize {
@@ -54,7 +54,7 @@ public sealed interface KPCheckboxSize {
             @Composable get() = KPDesign.typography.body1
 
         override fun strokeWidth(style: CheckboxStyle): Dp =
-            if (style is KPCheckBoxStyle.Secondary) 1.dp else 1.25.dp
+            if (style is KPCheckboxStyle.Secondary) 1.dp else 1.25.dp
     }
 }
 

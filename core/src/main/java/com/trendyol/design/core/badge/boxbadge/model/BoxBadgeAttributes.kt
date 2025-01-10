@@ -7,8 +7,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.IconSize
-import com.trendyol.theme.TrendyolDesign
 import com.trendyol.design.core.badge.boxbadge.KPBoxBadge
+import com.trendyol.theme.KPDesign
 
 /**
  * Customizable styling attributes of the [KPBoxBadge] component
@@ -39,11 +39,11 @@ public data class BoxBadgeAttributes(
 ) {
     @Composable
     public fun textStyle(): TextStyle {
-        return textStyle ?: TrendyolDesign.typography.overLineMedium
+        return textStyle ?: KPDesign.typography.overLineMedium
     }
 
     @Composable
     public fun fontColor(): Color {
-        return fontColor ?: TrendyolDesign.colors.colorOnSurfaceVariant3
+        return fontColor ?: KPDesign.colors.colorOnSurfaceVariant3
     }
 }

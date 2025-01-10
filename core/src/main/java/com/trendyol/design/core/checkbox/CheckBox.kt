@@ -109,7 +109,7 @@ public fun TrendyolCheckbox(
 private fun TrendyolMediumCheckboxPreviewChecked() {
     PreviewTheme {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = true,
@@ -123,7 +123,7 @@ private fun TrendyolMediumCheckboxPreviewChecked() {
 private fun TrendyolMediumCheckboxPreview() {
     PreviewTheme {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = false,
@@ -137,7 +137,7 @@ private fun TrendyolMediumCheckboxPreview() {
 private fun TrendyolMediumCheckboxPreviewDisabled() {
     PreviewTheme {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = true,
@@ -152,7 +152,7 @@ private fun TrendyolMediumCheckboxPreviewDisabled() {
 private fun TrendyolSmallCheckboxPreviewChecked() {
     PreviewTheme {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = true,
@@ -166,7 +166,7 @@ private fun TrendyolSmallCheckboxPreviewChecked() {
 private fun TrendyolSmallCheckboxPreview() {
     PreviewTheme {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = false,
@@ -180,7 +180,7 @@ private fun TrendyolSmallCheckboxPreview() {
 private fun TrendyolSmallCheckboxPreviewDisabled() {
     PreviewTheme {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = true,
@@ -195,7 +195,7 @@ private fun TrendyolSmallCheckboxPreviewDisabled() {
 private fun TrendyolXSmallCheckboxPreviewChecked() {
     PreviewTheme {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = true,
@@ -209,7 +209,7 @@ private fun TrendyolXSmallCheckboxPreviewChecked() {
 private fun TrendyolXSmallCheckboxPreview() {
     PreviewTheme {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = false,
@@ -223,7 +223,7 @@ private fun TrendyolXSmallCheckboxPreview() {
 private fun TrendyolXSmallCheckboxPreviewDisabled() {
     PreviewTheme {
         KPCheckbox(
-            style = KPCheckBoxStyle.Primary,
+            style = KPCheckboxStyle.Primary,
             size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = true,
