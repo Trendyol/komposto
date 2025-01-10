@@ -1,7 +1,7 @@
 package statelayout.loading
 
 import com.trendyol.design.core.statelayout.State
-import com.trendyol.design.core.statelayout.StateComposeLayout
+import com.trendyol.design.core.statelayout.KPStateComposeLayout
 import com.trendyol.design.core.statelayout.states.loading.LoadingType
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
@@ -16,7 +16,7 @@ internal class ContentWithLoadingTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Circular Loading") {
                 BoxWithHorizontalPadding {
-                    StateComposeLayout(state = State.ContentWithLoading(LoadingType.Circular))
+                    KPStateComposeLayout(state = State.ContentWithLoading(LoadingType.Circular))
                 }
             }
         )
@@ -28,7 +28,7 @@ internal class ContentWithLoadingTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Progressive Loading") {
                 BoxWithHorizontalPadding {
-                    StateComposeLayout(state = State.ContentWithLoading(LoadingType.Progressive))
+                    KPStateComposeLayout(state = State.ContentWithLoading(LoadingType.Progressive))
                 }
             }
         )

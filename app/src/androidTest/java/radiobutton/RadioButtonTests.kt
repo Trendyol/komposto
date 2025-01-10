@@ -1,9 +1,9 @@
 package radiobutton;
 
 import androidx.compose.foundation.layout.Column
-import com.trendyol.design.core.radiobutton.TrendyolRadioButton
-import com.trendyol.design.core.radiobutton.TrendyolRadioButtonContainerType
-import com.trendyol.design.core.radiobutton.TrendyolRadioButtonSize
+import com.trendyol.design.core.radiobutton.KPRadioButton
+import com.trendyol.design.core.radiobutton.KPRadioButtonContainerType
+import com.trendyol.design.core.radiobutton.KPRadioButtonSize
 import com.trendyol.design.core.text.Text
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
@@ -20,34 +20,34 @@ internal class RadioButtonTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("None") {
                 BoxWithHorizontalPadding {
-                    TrendyolRadioButton(
+                    KPRadioButton(
                         selected = true,
-                        containerType = TrendyolRadioButtonContainerType.None,
-                        size = TrendyolRadioButtonSize.Medium,
+                        containerType = KPRadioButtonContainerType.None,
+                        size = KPRadioButtonSize.Medium,
                         onClick = { }
                     )
                 }
             },
             DesignScreenshotTestContainer("Text") {
                 BoxWithHorizontalPadding {
-                    TrendyolRadioButton(
+                    KPRadioButton(
                         selected = false,
-                        containerType = TrendyolRadioButtonContainerType.Text(text),
-                        size = TrendyolRadioButtonSize.Medium,
+                        containerType = KPRadioButtonContainerType.Text(text),
+                        size = KPRadioButtonSize.Medium,
                         onClick = { }
                     )
                 }
             },
             DesignScreenshotTestContainer("Content") {
                 BoxWithHorizontalPadding {
-                    TrendyolRadioButton(
+                    KPRadioButton(
                         selected = false,
-                        containerType = TrendyolRadioButtonContainerType.Content{
+                        containerType = KPRadioButtonContainerType.Content{
                             Column {
                                 Text(text)
                             }
                         },
-                        size = TrendyolRadioButtonSize.Medium,
+                        size = KPRadioButtonSize.Medium,
                         onClick = { }
                     )
                 }
@@ -61,30 +61,30 @@ internal class RadioButtonTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("XSmall") {
                 BoxWithHorizontalPadding {
-                    TrendyolRadioButton(
+                    KPRadioButton(
                         selected = true,
-                        containerType = TrendyolRadioButtonContainerType.Text(text),
-                        size = TrendyolRadioButtonSize.XSmall,
+                        containerType = KPRadioButtonContainerType.Text(text),
+                        size = KPRadioButtonSize.XSmall,
                         onClick = { }
                     )
                 }
             },
             DesignScreenshotTestContainer("Small") {
                 BoxWithHorizontalPadding {
-                    TrendyolRadioButton(
+                    KPRadioButton(
                         selected = false,
-                        containerType = TrendyolRadioButtonContainerType.Text(text),
-                        size = TrendyolRadioButtonSize.Small,
+                        containerType = KPRadioButtonContainerType.Text(text),
+                        size = KPRadioButtonSize.Small,
                         onClick = { }
                     )
                 }
             },
             DesignScreenshotTestContainer("Medium") {
                 BoxWithHorizontalPadding {
-                    TrendyolRadioButton(
+                    KPRadioButton(
                         selected = false,
-                        containerType = TrendyolRadioButtonContainerType.Text(text),
-                        size = TrendyolRadioButtonSize.Medium,
+                        containerType = KPRadioButtonContainerType.Text(text),
+                        size = KPRadioButtonSize.Medium,
                         onClick = { }
                     )
                 }
@@ -98,20 +98,20 @@ internal class RadioButtonTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Selected") {
                 BoxWithHorizontalPadding {
-                    TrendyolRadioButton(
+                    KPRadioButton(
                         selected = true,
-                        containerType = TrendyolRadioButtonContainerType.None,
-                        size = TrendyolRadioButtonSize.Medium,
+                        containerType = KPRadioButtonContainerType.None,
+                        size = KPRadioButtonSize.Medium,
                         onClick = { }
                     )
                 }
             },
             DesignScreenshotTestContainer("Unselected") {
                 BoxWithHorizontalPadding {
-                    TrendyolRadioButton(
+                    KPRadioButton(
                         selected = false,
-                        containerType = TrendyolRadioButtonContainerType.None,
-                        size = TrendyolRadioButtonSize.Medium,
+                        containerType = KPRadioButtonContainerType.None,
+                        size = KPRadioButtonSize.Medium,
                         onClick = { }
                     )
                 }

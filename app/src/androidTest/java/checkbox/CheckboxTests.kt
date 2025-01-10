@@ -2,10 +2,10 @@ package checkbox;
 
 import androidx.compose.foundation.layout.Column
 import com.trendyol.design.core.checkbox.CheckboxContainerType
-import com.trendyol.design.core.checkbox.TrendyolCheckBoxSize
-import com.trendyol.design.core.checkbox.TrendyolCheckBoxStyle
-import com.trendyol.design.core.checkbox.TrendyolCheckbox
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.checkbox.KPCheckbox
+import com.trendyol.design.core.checkbox.KPCheckboxSize
+import com.trendyol.design.core.checkbox.KPCheckboxStyle
+import com.trendyol.design.core.text.KPText
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -21,9 +21,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Primary None") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Primary,
-                        size = TrendyolCheckBoxSize.Medium,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Primary,
+                        size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.None,
                         checked = true,
                         onCheckedChange = {}
@@ -32,9 +32,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Primary Text") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Primary,
-                        size = TrendyolCheckBoxSize.Medium,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Primary,
+                        size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Text(text),
                         checked = true,
                         onCheckedChange = {}
@@ -43,12 +43,12 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Primary Content") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Primary,
-                        size = TrendyolCheckBoxSize.Medium,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Primary,
+                        size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Content {
                             Column {
-                                Text(text)
+                                KPText(text)
                             }
                         },
                         checked = true,
@@ -58,9 +58,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Secondary None") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Secondary,
-                        size = TrendyolCheckBoxSize.Medium,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Secondary,
+                        size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.None,
                         checked = true,
                         onCheckedChange = {}
@@ -69,9 +69,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Secondary Text") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Secondary,
-                        size = TrendyolCheckBoxSize.Medium,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Secondary,
+                        size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Text(text),
                         checked = true,
                         onCheckedChange = {}
@@ -80,12 +80,12 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Secondary Content") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Secondary,
-                        size = TrendyolCheckBoxSize.Medium,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Secondary,
+                        size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Content {
                             Column {
-                                Text(text)
+                                KPText(text)
                             }
                         },
                         checked = true,
@@ -102,9 +102,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Primary Medium") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Primary,
-                        size = TrendyolCheckBoxSize.Medium,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Primary,
+                        size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Text(text),
                         checked = true,
                         onCheckedChange = {}
@@ -113,9 +113,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Primary Small") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Primary,
-                        size = TrendyolCheckBoxSize.Small,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Primary,
+                        size = KPCheckboxSize.Small,
                         containerType = CheckboxContainerType.Text(text),
                         checked = true,
                         onCheckedChange = {}
@@ -124,9 +124,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Primary XSmall") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Primary,
-                        size = TrendyolCheckBoxSize.XSmall,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Primary,
+                        size = KPCheckboxSize.XSmall,
                         containerType =CheckboxContainerType.Text(text),
                         checked = true,
                         onCheckedChange = {}
@@ -135,9 +135,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Secondary Medium") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Secondary,
-                        size = TrendyolCheckBoxSize.Medium,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Secondary,
+                        size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Text(text),
                         checked = true,
                         onCheckedChange = {}
@@ -146,9 +146,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Secondary Small") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Secondary,
-                        size = TrendyolCheckBoxSize.Small,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Secondary,
+                        size = KPCheckboxSize.Small,
                         containerType = CheckboxContainerType.Text(text),
                         checked = true,
                         onCheckedChange = {}
@@ -157,9 +157,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Secondary XSmall") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Secondary,
-                        size = TrendyolCheckBoxSize.XSmall,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Secondary,
+                        size = KPCheckboxSize.XSmall,
                         containerType =CheckboxContainerType.Text(text),
                         checked = true,
                         onCheckedChange = {}
@@ -175,9 +175,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Checked") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Primary,
-                        size = TrendyolCheckBoxSize.Medium,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Primary,
+                        size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Text(text),
                         checked = true,
                         onCheckedChange = {}
@@ -186,9 +186,9 @@ internal class CheckboxTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("Unchecked") {
                 BoxWithHorizontalPadding {
-                    TrendyolCheckbox(
-                        style = TrendyolCheckBoxStyle.Primary,
-                        size = TrendyolCheckBoxSize.Medium,
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Primary,
+                        size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Text(text),
                         checked = false,
                         onCheckedChange = {}

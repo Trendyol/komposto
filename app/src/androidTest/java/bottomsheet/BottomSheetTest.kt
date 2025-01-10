@@ -12,6 +12,9 @@ import androidx.compose.ui.unit.dp
 import com.trendyol.design.bottomsheet.BottomSheetImageContent
 import com.trendyol.design.bottomsheet.BottomSheetListContent
 import com.trendyol.design.bottomsheet.BottomSheetSliderContent
+import com.trendyol.design.bottomsheet.KPBottomSheetImageContent
+import com.trendyol.design.bottomsheet.KPBottomSheetListContent
+import com.trendyol.design.bottomsheet.KPBottomSheetSliderContent
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -35,7 +38,7 @@ internal class BottomSheetTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("BottomSheet Image Content") {
                 BoxWithHorizontalPadding {
-                    BottomSheetImageContent(
+                    KPBottomSheetImageContent(
                         title = headerTitle,
                         onCloseIconClick = { },
                         model = null
@@ -44,7 +47,7 @@ internal class BottomSheetTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("BottomSheet List Content") {
                 BoxWithHorizontalPadding {
-                    BottomSheetListContent(
+                    KPBottomSheetListContent(
                         title = headerTitle,
                         onCloseIconClick = {},
                         itemList = testItemList,
@@ -70,7 +73,7 @@ internal class BottomSheetTest : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("BottomSheet Slider Content") {
                 BoxWithHorizontalPadding {
-                    BottomSheetSliderContent(
+                    KPBottomSheetSliderContent(
                         title = headerTitle,
                         onCloseIconClick = { },
                         itemList = testItemList,

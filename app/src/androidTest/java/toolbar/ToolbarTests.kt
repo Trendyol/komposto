@@ -3,8 +3,8 @@ package toolbar
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.icon.icons.fill.Trash
-import com.trendyol.design.core.toolbar.Toolbar
-import com.trendyol.design.core.toolbar.TrendyolToolbarStyle
+import com.trendyol.design.core.toolbar.KPToolbar
+import com.trendyol.design.core.toolbar.KPToolbarStyle
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -20,9 +20,9 @@ internal class ToolbarTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("ToolbarIconEndIcon") {
                 BoxWithHorizontalPadding {
-                    Toolbar(
+                    KPToolbar(
                         title = "ToolbarIconEndIcon",
-                        style = TrendyolToolbarStyle.Icon.EndIcon(
+                        style = KPToolbarStyle.Icon.EndIcon(
                             icon = {
                                 Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             },
@@ -35,9 +35,9 @@ internal class ToolbarTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("ToolbarIconEndTwoIcon") {
                 BoxWithHorizontalPadding {
-                    Toolbar(
+                    KPToolbar(
                         title = "ToolbarIconEndTwoIcon",
-                        style = TrendyolToolbarStyle.Icon.EndTwoIcons(
+                        style = KPToolbarStyle.Icon.EndTwoIcons(
                             icon = {
                                 Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             },
@@ -53,9 +53,9 @@ internal class ToolbarTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("ToolbarIconNone") {
                 BoxWithHorizontalPadding {
-                    Toolbar(
+                    KPToolbar(
                         title = "ToolbarIconNone",
-                        style = TrendyolToolbarStyle.Icon.None(
+                        style = KPToolbarStyle.Icon.None(
                             icon = {
                                 Icon(imageVector = Icons.Fill.Help, onClick = { })
                             }
@@ -65,9 +65,9 @@ internal class ToolbarTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("ToolbarIconTextButton") {
                 BoxWithHorizontalPadding {
-                    Toolbar(
+                    KPToolbar(
                         title = "ToolbarIconTextButton",
-                        style = TrendyolToolbarStyle.Icon.TextButton(
+                        style = KPToolbarStyle.Icon.TextButton(
                             icon = {
                                 Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             },
@@ -80,9 +80,9 @@ internal class ToolbarTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("ToolbarEndIcon") {
                 BoxWithHorizontalPadding {
-                    Toolbar(
+                    KPToolbar(
                         title = "ToolbarEndIcon",
-                        style = TrendyolToolbarStyle.EndIcon(
+                        style = KPToolbarStyle.EndIcon(
                             endIcon = {
                                 Icon(imageVector = Icons.Fill.Trash, onClick = { })
                             }
@@ -92,9 +92,9 @@ internal class ToolbarTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("ToolbarEndTwoIcon") {
                 BoxWithHorizontalPadding {
-                    Toolbar(
+                    KPToolbar(
                         title = "ToolbarIconEndTwoIcon",
-                        style = TrendyolToolbarStyle.EndTwoIcons(
+                        style = KPToolbarStyle.EndTwoIcons(
                             firstIcon = {
                                 Icon(imageVector = Icons.Fill.Help, onClick = { })
                             },
@@ -107,17 +107,17 @@ internal class ToolbarTests : DesignScreenshotTest() {
             },
             DesignScreenshotTestContainer("ToolbarNone") {
                 BoxWithHorizontalPadding {
-                    Toolbar(
+                    KPToolbar(
                         title = "ToolbarNone",
-                        style = TrendyolToolbarStyle.None
+                        style = KPToolbarStyle.None
                     )
                 }
             },
             DesignScreenshotTestContainer("ToolbarTextButton") {
                 BoxWithHorizontalPadding {
-                    Toolbar(
+                    KPToolbar(
                         title = "ToolbarTextButton",
-                        style = TrendyolToolbarStyle.TextButton(
+                        style = KPToolbarStyle.TextButton(
                             textButton = {
                                 Text(text = toolbarText, onClick = { })
                             }

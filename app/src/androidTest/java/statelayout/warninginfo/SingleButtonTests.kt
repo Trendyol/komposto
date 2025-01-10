@@ -2,8 +2,8 @@ package statelayout.warninginfo
 
 import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.statelayout.State
-import com.trendyol.design.core.statelayout.StateComposeLayout
-import com.trendyol.design.core.statelayout.TrendyolWarningInfoStateLayoutStyle
+import com.trendyol.design.core.statelayout.KPStateComposeLayout
+import com.trendyol.design.core.statelayout.KPWarningInfoStateLayoutStyle
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -21,9 +21,9 @@ internal class SingleButtonTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Full Version Medium") {
                 BoxWithHorizontalPadding {
-                    StateComposeLayout(
+                    KPStateComposeLayout(
                         state = State.WarningInfo(
-                            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonFullVersion(
+                            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonFullVersion(
                                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                                 title = title,
                                 description = description,
@@ -43,9 +43,9 @@ internal class SingleButtonTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Full Version Small") {
                 BoxWithHorizontalPadding {
-                    StateComposeLayout(
+                    KPStateComposeLayout(
                         state = State.WarningInfo(
-                            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonFullVersion(
+                            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonFullVersion(
                                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
                                 title = title,
                                 description = description,
@@ -65,9 +65,9 @@ internal class SingleButtonTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("No Description Medium") {
                 BoxWithHorizontalPadding {
-                    StateComposeLayout(
+                    KPStateComposeLayout(
                         state = State.WarningInfo(
-                            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonNoDescription(
+                            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonNoDescription(
                                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                                 title = title,
                                 primaryButtonText = primaryButtonText,
@@ -86,9 +86,9 @@ internal class SingleButtonTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("No Description Small") {
                 BoxWithHorizontalPadding {
-                    StateComposeLayout(
+                    KPStateComposeLayout(
                         state = State.WarningInfo(
-                            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonNoDescription(
+                            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonNoDescription(
                                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
                                 title = title,
                                 primaryButtonText = primaryButtonText,
@@ -107,9 +107,9 @@ internal class SingleButtonTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("No Title Medium") {
                 BoxWithHorizontalPadding {
-                    StateComposeLayout(
+                    KPStateComposeLayout(
                         state = State.WarningInfo(
-                            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonNoTitle(
+                            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonNoTitle(
                                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutMediumIcon,
                                 description = description,
                                 primaryButtonText = primaryButtonText,
@@ -128,9 +128,9 @@ internal class SingleButtonTests : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("No Title Small") {
                 BoxWithHorizontalPadding {
-                    StateComposeLayout(
+                    KPStateComposeLayout(
                         state = State.WarningInfo(
-                            warningInfoStateLayoutStyle = TrendyolWarningInfoStateLayoutStyle.SingleButtonNoTitle(
+                            warningInfoStateLayoutStyle = KPWarningInfoStateLayoutStyle.SingleButtonNoTitle(
                                 iconSize = StateLayoutIconSize.WarningInfoStateLayoutSmallIcon,
                                 description = description,
                                 primaryButtonText = primaryButtonText,

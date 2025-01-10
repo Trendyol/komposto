@@ -1,8 +1,8 @@
 package icon.outline
 
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.outline.Cancel
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
@@ -14,41 +14,41 @@ internal class CancelIconTests : DesignScreenshotTest(){
     private val contents = listOf(
         DesignScreenshotTestContainer("Large") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.Cancel,
-                    size = TrendyolIconSize.Large
+                KPIcon(
+                    imageVector = KPIcons.Outline.Cancel,
+                    size = KPIconSize.Large
                 )
             }
         },
         DesignScreenshotTestContainer("Medium") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.Cancel,
-                    size = TrendyolIconSize.Medium
+                KPIcon(
+                    imageVector = KPIcons.Outline.Cancel,
+                    size = KPIconSize.Medium
                 )
             }
         },
         DesignScreenshotTestContainer("Small") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.Cancel,
-                    size = TrendyolIconSize.Small
+                KPIcon(
+                    imageVector = KPIcons.Outline.Cancel,
+                    size = KPIconSize.Small
                 )
             }
         },
         DesignScreenshotTestContainer("XSmall") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.Cancel,
-                    size = TrendyolIconSize.XSmall
+                KPIcon(
+                    imageVector = KPIcons.Outline.Cancel,
+                    size = KPIconSize.XSmall
                 )
             }
         },
         DesignScreenshotTestContainer("XXSmall") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.Cancel,
-                    size = TrendyolIconSize.XXSmall
+                KPIcon(
+                    imageVector = KPIcons.Outline.Cancel,
+                    size = KPIconSize.XXSmall
                 )
             }
         }
