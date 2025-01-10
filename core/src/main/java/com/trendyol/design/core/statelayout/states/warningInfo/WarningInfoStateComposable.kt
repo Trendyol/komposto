@@ -85,16 +85,25 @@ public fun KPWarningInfoStateComposable(
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            KPIcon(
-                modifier = Modifier.padding(bottom = 8.dp),
-                imageVector = getIcon(infoModel.image),
-                size = iconSize
-            )
+            Surface(
+                modifier = Modifier
+                    .padding(bottom = 8.dp)
+                    .size(iconSize.dp),
+                shape = CircleShape,
+                elevation = 1.dp,
+            ) {
+                KPIcon(
+                    modifier = Modifier,
+                    imageVector = getIcon(infoModel.image),
+                    size = iconSize,
+                )
+            }
             infoModel.title?.let {
                 KPText(
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
                     text = infoModel.title,
                     style = KPDesign.typography.titleMediumColorOnSurfaceVariant2,
+                    textAlign = infoModel.titleTextAlignment,
                 )
             }
             infoModel.description?.let {
@@ -102,6 +111,7 @@ public fun KPWarningInfoStateComposable(
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
                     text = infoModel.description,
                     style = KPDesign.typography.body1MediumColorOnSurfaceVariant1,
+                    textAlign = infoModel.descriptionTextAlignment,
                 )
             }
             if (infoModel.buttonsInfoModel?.primaryButtonText.isNullOrEmpty().not()) {
