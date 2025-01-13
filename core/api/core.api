@@ -1274,6 +1274,10 @@ public final class com/trendyol/design/core/icon/icons/fill/DeliveryKt {
 	public static final fun getDelivery (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
+public final class com/trendyol/design/core/icon/icons/fill/FavoriteSelectedKt {
+	public static final fun getFavoriteSelected (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+}
+
 public final class com/trendyol/design/core/icon/icons/fill/FenomenGradientKt {
 	public static final fun getFenomenGradient (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 	public static final fun getFenomenGradient (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
@@ -1290,7 +1294,7 @@ public final class com/trendyol/design/core/icon/icons/fill/InfoIconKt {
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/PauseButtonKt {
-	public static final fun getPauseButton (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getPauseButton (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/PercentageKt {
@@ -1299,7 +1303,7 @@ public final class com/trendyol/design/core/icon/icons/fill/PercentageKt {
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/PlayButtonKt {
-	public static final fun getPlayButton (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getPlayButton (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/PlayGradientKt {
@@ -1313,12 +1317,16 @@ public final class com/trendyol/design/core/icon/icons/fill/RunningOutKt {
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/SaveSelectedKt {
-	public static final fun getSaveSelected (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getSaveSelected (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/SearchKt {
 	public static final fun getSearch (Lcom/trendyol/design/core/icon/Icons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 	public static final fun getSearch (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
+}
+
+public final class com/trendyol/design/core/icon/icons/fill/ShareKt {
+	public static final fun getShare (Lcom/trendyol/design/core/icon/KPIcons$Fill;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/fill/StarKt {
@@ -1370,17 +1378,17 @@ public final class com/trendyol/design/core/icon/icons/outline/ErrorStateKt {
 	public static final fun getErrorState (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
+public final class com/trendyol/design/core/icon/icons/outline/FavoriteUnselectedKt {
+	public static final fun getFavoriteUnselected (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
+}
+
 public final class com/trendyol/design/core/icon/icons/outline/InfoKt {
 	public static final fun getInfo (Lcom/trendyol/design/core/icon/Icons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 	public static final fun getInfo (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/outline/SaveUnselectedKt {
-	public static final fun getSaveUnselected (Lcom/trendyol/design/core/icon/Icons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
-}
-
-public final class com/trendyol/design/core/icon/icons/outline/ShareKt {
-	public static final fun getShare (Lcom/trendyol/design/core/icon/Icons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
+	public static final fun getSaveUnselected (Lcom/trendyol/design/core/icon/KPIcons$Outline;)Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
 public final class com/trendyol/design/core/icon/icons/outline/StateCautionKt {
