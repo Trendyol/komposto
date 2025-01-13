@@ -15,14 +15,14 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.SaveSelected
 import com.trendyol.design.core.icon.icons.outline.SaveUnselected
 import com.trendyol.design.core.icon.icons.fill.Share
 import com.trendyol.design.core.iconbutton.IconButtonDefaults
 import com.trendyol.design.core.preview.PreviewTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 /**
  * A composable function that displays a contained icon button with customizable size, colors,
@@ -59,7 +59,7 @@ public fun KPContainedIconButton(
                 .shadow(
                     elevation = 3.dp,
                     shape = CircleShape,
-                    spotColor = TrendyolDesign.colors.colorOnSurfaceVariant3,
+                    spotColor = KPDesign.colors.colorOnSurfaceVariant3,
                 )
                 .background(
                     shape = CircleShape,
@@ -69,7 +69,7 @@ public fun KPContainedIconButton(
             enabled = enabled,
             interactionSource = interactionSource,
         ) {
-            Icon(
+            KPIcon(
                 imageVector = icon,
                 size = size.iconButtonSize.iconSize,
                 tint = colors.contentColor(enabled).value,
@@ -118,7 +118,7 @@ public fun KPContainedIconToggleButton(
                 .shadow(
                     elevation = 3.dp,
                     shape = CircleShape,
-                    spotColor = TrendyolDesign.colors.colorOnSurfaceVariant3,
+                    spotColor = KPDesign.colors.colorOnSurfaceVariant3,
                 )
                 .background(
                     shape = CircleShape,
@@ -129,13 +129,13 @@ public fun KPContainedIconToggleButton(
             interactionSource = interactionSource,
         ) {
             if (checked) {
-                Icon(
+                KPIcon(
                     imageVector = checkedIcon,
                     size = size.iconButtonSize.iconSize,
                     tint = colors.contentColor(enabled).value,
                 )
             } else {
-                Icon(
+                KPIcon(
                     imageVector = unCheckedIcon,
                     size = size.iconButtonSize.iconSize,
                     tint = colors.contentColor(enabled).value,
@@ -149,7 +149,7 @@ public fun KPContainedIconToggleButton(
 @Composable
 private fun PreviewKPContainedIconButton() = PreviewTheme {
     KPContainedIconButton(
-        icon = Icons.Fill.Share,
+        icon = KPIcons.Fill.Share,
         size = KPContainedIconButtonSize.Large,
         onClick = {},
     )
@@ -159,7 +159,7 @@ private fun PreviewKPContainedIconButton() = PreviewTheme {
 @Composable
 private fun PreviewKPContainedIconButtonDisabled() = PreviewTheme {
     KPContainedIconButton(
-        icon = Icons.Fill.Share,
+        icon = KPIcons.Fill.Share,
         size = KPContainedIconButtonSize.Large,
         onClick = {},
         enabled = false,
@@ -171,8 +171,8 @@ private fun PreviewKPContainedIconButtonDisabled() = PreviewTheme {
 private fun PreviewKPContainedToggleIconButton() = PreviewTheme {
     KPContainedIconToggleButton(
         checked = true,
-        checkedIcon = Icons.Fill.SaveSelected,
-        unCheckedIcon = Icons.Outline.SaveUnselected,
+        checkedIcon = KPIcons.Fill.SaveSelected,
+        unCheckedIcon = KPIcons.Outline.SaveUnselected,
         size = KPContainedIconButtonSize.Large,
         onCheckedChange = {},
     )
@@ -183,8 +183,8 @@ private fun PreviewKPContainedToggleIconButton() = PreviewTheme {
 private fun PreviewKPContainedToggleIconButtonDisabled() = PreviewTheme {
     KPContainedIconToggleButton(
         checked = true,
-        checkedIcon = Icons.Fill.SaveSelected,
-        unCheckedIcon = Icons.Outline.SaveUnselected,
+        checkedIcon = KPIcons.Fill.SaveSelected,
+        unCheckedIcon = KPIcons.Outline.SaveUnselected,
         size = KPContainedIconButtonSize.Large,
         onCheckedChange = {},
         enabled = false,

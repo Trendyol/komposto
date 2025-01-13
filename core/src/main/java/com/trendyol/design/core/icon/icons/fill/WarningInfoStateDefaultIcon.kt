@@ -13,8 +13,6 @@ import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.KPIcons
 
-// TODO deprecate and add as extension val
-
 @Preview
 @Composable
 private fun WarningInfoStateDefaultIconPreview() {

@@ -1,14 +1,14 @@
 package com.trendyol.design.ui.component.icons.fill
 
-import WarningInfoStateDefaultIcon
+import StateWarningInfoDefault
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.ArrowDown
 import com.trendyol.design.core.icon.icons.fill.Basket
 import com.trendyol.design.core.icon.icons.fill.Bullet
@@ -39,32 +39,32 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 private class TrendyolIconParameterProvider : PreviewParameterProvider<ImageVector> {
     override val values: Sequence<ImageVector>
         get() = sequenceOf(
-            Icons.Fill.ArrowDown,
-            Icons.Fill.Basket,
-            Icons.Fill.Bullet,
-            Icons.Fill.Campaign,
-            Icons.Fill.CampaignDownArrow,
-            Icons.Fill.Cancel,
-            Icons.Fill.Cargo,
-            Icons.Fill.CircleIcon,
-            Icons.Fill.Colon,
-            Icons.Fill.Coupon,
-            Icons.Fill.Credit,
-            Icons.Fill.Delivery,
-            Icons.Fill.FenomenGradient,
-            Icons.Fill.Help,
-            Icons.Fill.InfoIcon,
-            Icons.Fill.Percentage,
-            Icons.Fill.PlayGradient,
-            Icons.Fill.RunningOut,
-            Icons.Fill.Search,
-            Icons.Fill.Star,
-            Icons.Fill.StateOrder,
-            Icons.Fill.StatePin,
-            Icons.Fill.StateRefresh,
-            Icons.Fill.Tick,
-            Icons.Fill.Trash,
-            WarningInfoStateDefaultIcon,
+            KPIcons.Fill.ArrowDown,
+            KPIcons.Fill.Basket,
+            KPIcons.Fill.Bullet,
+            KPIcons.Fill.Campaign,
+            KPIcons.Fill.CampaignDownArrow,
+            KPIcons.Fill.Cancel,
+            KPIcons.Fill.Cargo,
+            KPIcons.Fill.CircleIcon,
+            KPIcons.Fill.Colon,
+            KPIcons.Fill.Coupon,
+            KPIcons.Fill.Credit,
+            KPIcons.Fill.Delivery,
+            KPIcons.Fill.FenomenGradient,
+            KPIcons.Fill.Help,
+            KPIcons.Fill.InfoIcon,
+            KPIcons.Fill.Percentage,
+            KPIcons.Fill.PlayGradient,
+            KPIcons.Fill.RunningOut,
+            KPIcons.Fill.Search,
+            KPIcons.Fill.Star,
+            KPIcons.Fill.StateOrder,
+            KPIcons.Fill.StatePin,
+            KPIcons.Fill.StateRefresh,
+            KPIcons.Fill.Tick,
+            KPIcons.Fill.Trash,
+            KPIcons.Fill.StateWarningInfoDefault,
         )
 }
 

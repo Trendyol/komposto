@@ -11,8 +11,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.icon.icons.fill.PauseButton
 import com.trendyol.design.core.icon.icons.fill.PlayButton
@@ -49,7 +49,7 @@ public fun KPIconButton(
         enabled = enabled,
         interactionSource = interactionSource,
     ) {
-        Icon(
+        KPIcon(
             imageVector = icon,
             size = size.iconSize,
             tint = colors.contentColor(enabled).value
@@ -94,13 +94,13 @@ public fun KPIconToggleButton(
         interactionSource = interactionSource
     ) {
         if (checked) {
-            Icon(
+            KPIcon(
                 imageVector = checkedIcon,
                 size = size.iconSize,
                 tint = colors.contentColor(enabled).value,
             )
         } else {
-            Icon(
+            KPIcon(
                 imageVector = unCheckedIcon,
                 size = size.iconSize,
                 tint = colors.contentColor(enabled).value,
@@ -113,7 +113,7 @@ public fun KPIconToggleButton(
 @Composable
 private fun PreviewKPIconButton() = PreviewTheme {
     KPIconButton(
-        icon = Icons.Fill.Help,
+        icon = KPIcons.Fill.Help,
         size = KPIconButtonSize.Large,
         onClick = { },
     )
@@ -123,7 +123,7 @@ private fun PreviewKPIconButton() = PreviewTheme {
 @Composable
 private fun PreviewKPIconButtonDisabled() = PreviewTheme {
     KPIconButton(
-        icon = Icons.Fill.Help,
+        icon = KPIcons.Fill.Help,
         size = KPIconButtonSize.Large,
         onClick = { },
         enabled = false,
@@ -135,8 +135,8 @@ private fun PreviewKPIconButtonDisabled() = PreviewTheme {
 private fun PreviewKPContainedToggleIconButton() = PreviewTheme {
     KPIconToggleButton(
         checked = false,
-        checkedIcon = Icons.Fill.PlayButton,
-        unCheckedIcon = Icons.Fill.PauseButton,
+        checkedIcon = KPIcons.Fill.PlayButton,
+        unCheckedIcon = KPIcons.Fill.PauseButton,
         size = KPIconButtonSize.Large,
         onCheckedChange = {},
     )
@@ -147,8 +147,8 @@ private fun PreviewKPContainedToggleIconButton() = PreviewTheme {
 private fun PreviewKPContainedToggleIconButtonDisabled() = PreviewTheme {
     KPIconToggleButton(
         checked = false,
-        checkedIcon = Icons.Fill.PlayButton,
-        unCheckedIcon = Icons.Fill.PauseButton,
+        checkedIcon = KPIcons.Fill.PlayButton,
+        unCheckedIcon = KPIcons.Fill.PauseButton,
         size = KPIconButtonSize.Large,
         onCheckedChange = {},
         enabled = false,

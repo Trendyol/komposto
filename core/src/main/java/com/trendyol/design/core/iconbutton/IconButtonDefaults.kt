@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import com.trendyol.design.core.iconbutton.contained.ContainedIconButtonColors
 import com.trendyol.design.core.iconbutton.contained.KPDefaultContainedButtonColors
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 public object IconButtonDefaults {
 
@@ -52,10 +52,10 @@ public object IconButtonDefaults {
     public fun containedButtonColors(
         backgroundColor: Color = Color.Unspecified,
         contentColor: Color = Color.Unspecified,
-        containerColor: Color = TrendyolDesign.colors.colorSurface,
+        containerColor: Color = KPDesign.colors.colorSurface,
         disabledBackgroundColor: Color = Color.Unspecified,
         disabledContentColor: Color = Color.Unspecified,
-        disabledContainerColor: Color = TrendyolDesign.colors.colorSurface,
+        disabledContainerColor: Color = KPDesign.colors.colorSurface,
     ): ContainedIconButtonColors {
         return KPDefaultContainedButtonColors(
             backgroundColor = backgroundColor,

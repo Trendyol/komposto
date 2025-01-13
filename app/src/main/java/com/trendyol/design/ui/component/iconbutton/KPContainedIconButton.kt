@@ -7,7 +7,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.SaveSelected
 import com.trendyol.design.core.icon.icons.outline.SaveUnselected
 import com.trendyol.design.core.icon.icons.fill.Share
@@ -27,7 +27,7 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 )
 internal fun PreviewKPContainedIconButtonLargeNoToggle() = TrendyolTheme {
     KPContainedIconButton(
-        icon = Icons.Fill.Share,
+        icon = KPIcons.Fill.Share,
         size = KPContainedIconButtonSize.Large,
         onClick = { }
     )
@@ -42,7 +42,7 @@ internal fun PreviewKPContainedIconButtonLargeNoToggle() = TrendyolTheme {
 )
 internal fun PreviewKPContainedIconButtonMediumNoToggle() = TrendyolTheme {
     KPContainedIconButton(
-        icon = Icons.Fill.Share,
+        icon = KPIcons.Fill.Share,
         size = KPContainedIconButtonSize.Medium,
         onClick = { }
     )
@@ -57,7 +57,7 @@ internal fun PreviewKPContainedIconButtonMediumNoToggle() = TrendyolTheme {
 )
 internal fun PreviewKPContainedIconButtonSmallNoToggle() = TrendyolTheme {
     KPContainedIconButton(
-        icon = Icons.Fill.Share,
+        icon = KPIcons.Fill.Share,
         size = KPContainedIconButtonSize.Small,
         onClick = { }
     )
@@ -74,8 +74,8 @@ internal fun PreviewKPContainedIconButtonLargeToggle() = TrendyolTheme {
     var checked by remember { mutableStateOf(false) }
     KPContainedIconToggleButton(
         checked = checked,
-        checkedIcon = Icons.Fill.SaveSelected,
-        unCheckedIcon = Icons.Outline.SaveUnselected,
+        checkedIcon = KPIcons.Fill.SaveSelected,
+        unCheckedIcon = KPIcons.Outline.SaveUnselected,
         size = KPContainedIconButtonSize.Large,
         onCheckedChange = { checked = it },
     )
@@ -92,8 +92,8 @@ internal fun PreviewKPContainedIconButtonMediumToggle() = TrendyolTheme {
     var checked by remember { mutableStateOf(false) }
     KPContainedIconToggleButton(
         checked = checked,
-        checkedIcon = Icons.Fill.SaveSelected,
-        unCheckedIcon = Icons.Outline.SaveUnselected,
+        checkedIcon = KPIcons.Fill.SaveSelected,
+        unCheckedIcon = KPIcons.Outline.SaveUnselected,
         size = KPContainedIconButtonSize.Medium,
         onCheckedChange = { checked = it },
     )
@@ -110,8 +110,8 @@ internal fun PreviewKPContainedIconButtonSmallToggle() = TrendyolTheme {
     var checked by remember { mutableStateOf(false) }
     KPContainedIconToggleButton(
         checked = checked,
-        checkedIcon = Icons.Fill.SaveSelected,
-        unCheckedIcon = Icons.Outline.SaveUnselected,
+        checkedIcon = KPIcons.Fill.SaveSelected,
+        unCheckedIcon = KPIcons.Outline.SaveUnselected,
         size = KPContainedIconButtonSize.Small,
         onCheckedChange = { checked = it },
     )
