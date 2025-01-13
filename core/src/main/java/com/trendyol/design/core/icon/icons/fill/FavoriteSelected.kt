@@ -11,23 +11,27 @@ import androidx.compose.ui.graphics.vector.ImageVector.Builder
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 
 @Preview
 @Composable
 private fun VectorPreview() {
-    Icon(Icons.Fill.FavoriteSelected, TrendyolIconSize.XXXLarge)
+    KPIcon(KPIcons.Fill.FavoriteSelected, KPIconSize.XXXLarge)
 }
 
-public val Icons.Fill.FavoriteSelected: ImageVector
+public val KPIcons.Fill.FavoriteSelected: ImageVector
     by lazy {
-        Builder(name = "Favorite Selected", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-            viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
-            path(fill = SolidColor(Color(0xFFF27A1A)), stroke = SolidColor(Color(0xFFF27A1A)),
+        Builder(
+            name = "Favorite Selected", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
+            viewportWidth = 24.0f, viewportHeight = 24.0f
+        ).apply {
+            path(
+                fill = SolidColor(Color(0xFFF27A1A)), stroke = SolidColor(Color(0xFFF27A1A)),
                 strokeLineWidth = 1.38889f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                strokeLineMiter = 4.0f, pathFillType = NonZero
+            ) {
                 moveTo(11.5089f, 6.1507f)
                 lineTo(11.999f, 6.6264f)
                 lineTo(12.4828f, 6.1444f)

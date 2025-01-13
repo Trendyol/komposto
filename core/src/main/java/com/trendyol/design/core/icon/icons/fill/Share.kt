@@ -11,17 +11,17 @@ import androidx.compose.ui.graphics.vector.ImageVector.Builder
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 
 @Preview
 @Composable
 private fun VectorPreview() {
-    Icon(Icons.Fill.Share, TrendyolIconSize.XXXLarge)
+    KPIcon(KPIcons.Fill.Share, KPIconSize.XXXLarge)
 }
 
-public val Icons.Fill.Share: ImageVector
+public val KPIcons.Fill.Share: ImageVector
     by lazy {
         Builder(
             name = "Share", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,

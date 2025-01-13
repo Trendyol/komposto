@@ -7,7 +7,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.icon.icons.fill.PauseButton
 import com.trendyol.design.core.icon.icons.fill.PlayButton
@@ -27,7 +27,7 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 )
 internal fun PreviewKPIconButtonXLargeNoToggle() = TrendyolTheme {
     KPIconButton(
-        icon = Icons.Fill.Help,
+        icon = KPIcons.Fill.Help,
         size = KPIconButtonSize.XLarge,
         onClick = { }
     )
@@ -42,7 +42,7 @@ internal fun PreviewKPIconButtonXLargeNoToggle() = TrendyolTheme {
 )
 internal fun PreviewKPIconButtonLargeNoToggle() = TrendyolTheme {
     KPIconButton(
-        icon = Icons.Fill.Help,
+        icon = KPIcons.Fill.Help,
         size = KPIconButtonSize.Large,
         onClick = { }
     )
@@ -57,7 +57,7 @@ internal fun PreviewKPIconButtonLargeNoToggle() = TrendyolTheme {
 )
 internal fun PreviewKPIconButtonMediumNoToggle() = TrendyolTheme {
     KPIconButton(
-        icon = Icons.Fill.Help,
+        icon = KPIcons.Fill.Help,
         size = KPIconButtonSize.Medium,
         onClick = { }
     )
@@ -72,7 +72,7 @@ internal fun PreviewKPIconButtonMediumNoToggle() = TrendyolTheme {
 )
 internal fun PreviewKPIconButtonSmallNoToggle() = TrendyolTheme {
     KPIconButton(
-        icon = Icons.Fill.Help,
+        icon = KPIcons.Fill.Help,
         size = KPIconButtonSize.Small,
         onClick = { }
     )
@@ -87,7 +87,7 @@ internal fun PreviewKPIconButtonSmallNoToggle() = TrendyolTheme {
 )
 internal fun PreviewKPIconButtonXSmallNoToggle() = TrendyolTheme {
     KPIconButton(
-        icon = Icons.Fill.Help,
+        icon = KPIcons.Fill.Help,
         size = KPIconButtonSize.XSmall,
         onClick = { }
     )
@@ -104,8 +104,8 @@ internal fun PreviewKPIconButtonXLargeToggle() = TrendyolTheme {
     var checked by remember { mutableStateOf(false) }
     KPIconToggleButton(
         checked = checked,
-        checkedIcon = Icons.Fill.PlayButton,
-        unCheckedIcon = Icons.Fill.PauseButton,
+        checkedIcon = KPIcons.Fill.PlayButton,
+        unCheckedIcon = KPIcons.Fill.PauseButton,
         size = KPIconButtonSize.XLarge,
         onCheckedChange = { checked = it },
     )
@@ -122,8 +122,8 @@ internal fun PreviewKPIconButtonLargeToggle() = TrendyolTheme {
     var checked by remember { mutableStateOf(false) }
     KPIconToggleButton(
         checked = checked,
-        checkedIcon = Icons.Fill.PlayButton,
-        unCheckedIcon = Icons.Fill.PauseButton,
+        checkedIcon = KPIcons.Fill.PlayButton,
+        unCheckedIcon = KPIcons.Fill.PauseButton,
         size = KPIconButtonSize.Large,
         onCheckedChange = { checked = it },
     )
@@ -140,8 +140,8 @@ internal fun PreviewKPIconButtonMediumToggle() = TrendyolTheme {
     var checked by remember { mutableStateOf(false) }
     KPIconToggleButton(
         checked = checked,
-        checkedIcon = Icons.Fill.PlayButton,
-        unCheckedIcon = Icons.Fill.PauseButton,
+        checkedIcon = KPIcons.Fill.PlayButton,
+        unCheckedIcon = KPIcons.Fill.PauseButton,
         size = KPIconButtonSize.Medium,
         onCheckedChange = { checked = it },
     )
@@ -158,8 +158,8 @@ internal fun PreviewKPIconButtonSmallToggle() = TrendyolTheme {
     var checked by remember { mutableStateOf(false) }
     KPIconToggleButton(
         checked = checked,
-        checkedIcon = Icons.Fill.PlayButton,
-        unCheckedIcon = Icons.Fill.PauseButton,
+        checkedIcon = KPIcons.Fill.PlayButton,
+        unCheckedIcon = KPIcons.Fill.PauseButton,
         size = KPIconButtonSize.Small,
         onCheckedChange = { checked = it },
     )
@@ -176,8 +176,8 @@ internal fun PreviewKPIconButtonXSmallToggle() = TrendyolTheme {
     var checked by remember { mutableStateOf(false) }
     KPIconToggleButton(
         checked = checked,
-        checkedIcon = Icons.Fill.PlayButton,
-        unCheckedIcon = Icons.Fill.PauseButton,
+        checkedIcon = KPIcons.Fill.PlayButton,
+        unCheckedIcon = KPIcons.Fill.PauseButton,
         size = KPIconButtonSize.XSmall,
         onCheckedChange = { checked = it },
     )
