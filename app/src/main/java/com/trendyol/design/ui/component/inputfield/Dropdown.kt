@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.inputfield.Dropdown
-import com.trendyol.design.core.inputfield.TrendyolDropdownStyle
+import com.trendyol.design.core.inputfield.KPDropdown
+import com.trendyol.design.core.inputfield.KPDropdownStyle
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -31,24 +31,24 @@ private const val MIN_WIDTH = 280
 @Composable
 internal fun Input_Field_3_Dropdown_1_Unfocused() = TrendyolTheme {
     Column {
-        Dropdown(
+        KPDropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolDropdownStyle.FloatingLabelOutlined,
+            style = KPDropdownStyle.FloatingLabelOutlined,
             label = LABEL,
             value = "",
             onClick = {},
         )
         Spacer(modifier = Modifier.height(8.dp))
-        Dropdown(
+        KPDropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolDropdownStyle.Outlined,
+            style = KPDropdownStyle.Outlined,
             value = "",
             onClick = {},
         )
         Spacer(modifier = Modifier.height(8.dp))
-        Dropdown(
+        KPDropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolDropdownStyle.Filled,
+            style = KPDropdownStyle.Filled,
             value = "",
             onClick = {},
         )
@@ -64,24 +64,24 @@ internal fun Input_Field_3_Dropdown_1_Unfocused() = TrendyolTheme {
 @Composable
 internal fun Input_Field_3_Dropdown_2_Typed() = TrendyolTheme {
     Column {
-        Dropdown(
+        KPDropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolDropdownStyle.FloatingLabelOutlined,
+            style = KPDropdownStyle.FloatingLabelOutlined,
             label = LABEL,
             value = SELECT,
             onClick = {},
         )
         Spacer(modifier = Modifier.height(8.dp))
-        Dropdown(
+        KPDropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolDropdownStyle.Outlined,
+            style = KPDropdownStyle.Outlined,
             value = SELECT,
             onClick = {},
         )
         Spacer(modifier = Modifier.height(8.dp))
-        Dropdown(
+        KPDropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolDropdownStyle.Filled,
+            style = KPDropdownStyle.Filled,
             value = SELECT,
             onClick = {},
         )
@@ -98,25 +98,25 @@ internal fun Input_Field_3_Dropdown_2_Typed() = TrendyolTheme {
 internal fun Input_Field_3_Dropdown_3_Disabled() = TrendyolTheme {
     Column {
         val value by remember { mutableStateOf("Disabled") }
-        Dropdown(
+        KPDropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolDropdownStyle.FloatingLabelOutlined,
+            style = KPDropdownStyle.FloatingLabelOutlined,
             value = value,
             onClick = {},
             enabled = false,
         )
         Spacer(modifier = Modifier.height(8.dp))
-        Dropdown(
+        KPDropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolDropdownStyle.Outlined,
+            style = KPDropdownStyle.Outlined,
             value = value,
             onClick = {},
             enabled = false,
         )
         Spacer(modifier = Modifier.height(8.dp))
-        Dropdown(
+        KPDropdown(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolDropdownStyle.Filled,
+            style = KPDropdownStyle.Filled,
             value = value,
             onClick = {},
             enabled = false,
@@ -134,8 +134,8 @@ internal fun Input_Field_3_Dropdown_3_Disabled() = TrendyolTheme {
 internal fun Input_Field_3_Dropdown_4_Error() = TrendyolTheme {
     Column {
         val value by remember { mutableStateOf("Error") }
-        Dropdown(
-            style = TrendyolDropdownStyle.FloatingLabelOutlined,
+        KPDropdown(
+            style = KPDropdownStyle.FloatingLabelOutlined,
             label = LABEL,
             value = value,
             onClick = {},
@@ -143,16 +143,16 @@ internal fun Input_Field_3_Dropdown_4_Error() = TrendyolTheme {
             errorLabel = "Error message goes here",
         )
         Spacer(modifier = Modifier.height(8.dp))
-        Dropdown(
-            style = TrendyolDropdownStyle.FloatingLabelOutlined,
+        KPDropdown(
+            style = KPDropdownStyle.FloatingLabelOutlined,
             value = value,
             onClick = {},
             isError = true,
             errorLabel = "Error message goes here",
         )
         Spacer(modifier = Modifier.height(8.dp))
-        Dropdown(
-            style = TrendyolDropdownStyle.Filled,
+        KPDropdown(
+            style = KPDropdownStyle.Filled,
             value = value,
             onClick = {},
             isError = true,

@@ -1,7 +1,7 @@
 package dialog
 
-import com.trendyol.design.core.dialog.AlertDialogContent
 import com.trendyol.design.core.dialog.DialogButtons
+import com.trendyol.design.core.dialog.KPAlertDialogContent
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -14,7 +14,7 @@ internal class AlertDialogTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("Single") {
                 BoxWithHorizontalPadding {
-                    AlertDialogContent(
+                    KPAlertDialogContent(
                         message = "Description",
                         title = "Title",
                         negativeButton = {
@@ -32,7 +32,7 @@ internal class AlertDialogTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("TwoButtons") {
                 BoxWithHorizontalPadding {
-                    AlertDialogContent(
+                    KPAlertDialogContent(
                         message = "Description",
                         title = "Title",
                         negativeButton = {
@@ -53,7 +53,7 @@ internal class AlertDialogTest : DesignScreenshotTest() {
         contents = listOf(
             DesignScreenshotTestContainer("ThreeButtons") {
                 BoxWithHorizontalPadding {
-                    AlertDialogContent(
+                    KPAlertDialogContent(
                         message = "Description",
                         title = "Title",
                         negativeButton = {

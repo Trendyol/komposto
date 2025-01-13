@@ -5,48 +5,48 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import com.trendyol.design.core.button.Button
-import com.trendyol.design.core.button.TrendyolButtonSize
-import com.trendyol.design.core.button.TrendyolButtonStyle
-import com.trendyol.design.core.text.Text
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.design.core.button.KPButton
+import com.trendyol.design.core.button.KPButtonSize
+import com.trendyol.design.core.button.KPButtonStyle
+import com.trendyol.design.core.text.KPText
+import com.trendyol.theme.KPDesign
 
 public object DialogButtons {
 
     @Composable
     public fun Text(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
-        Text(
+        KPText(
             modifier = modifier.clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
                 onClick = onClick
             ),
             text = text,
-            style = TrendyolDesign.typography.subtitleMediumColorPrimary,
+            style = KPDesign.typography.subtitleMediumColorPrimary,
         )
     }
 
     @Composable
     public fun Primary(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
-        Button(
+        KPButton(
             modifier = modifier,
             onClick = onClick,
-            style = TrendyolButtonStyle.Primary,
-            size = TrendyolButtonSize.Large
+            style = KPButtonStyle.Primary,
+            size = KPButtonSize.Large
         ) {
-            Text(text = text)
+            KPText(text = text)
         }
     }
 
     @Composable
     public fun Secondary(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
-        Button(
+        KPButton(
             modifier = modifier,
             onClick = onClick,
-            style = TrendyolButtonStyle.Secondary,
-            size = TrendyolButtonSize.Large
+            style = KPButtonStyle.Secondary,
+            size = KPButtonSize.Large
         ) {
-            Text(text = text)
+            KPText(text = text)
         }
     }
 

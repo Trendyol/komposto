@@ -7,13 +7,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.statelayout.states.loading.CircularLoadingIndicator
-import com.trendyol.design.core.statelayout.states.loading.HorizontalLoadingIndicator
 import com.trendyol.design.core.statelayout.states.loading.HorizontalProgressState
+import com.trendyol.design.core.statelayout.states.loading.KPCircularLoadingIndicator
+import com.trendyol.design.core.statelayout.states.loading.KPHorizontalLoadingIndicator
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
@@ -24,9 +24,9 @@ import com.trendyol.theme.TrendyolDesign
 @Composable
 internal fun StateLayout_Circular_Loading() {
     TrendyolTheme {
-        CircularLoadingIndicator(
+        KPCircularLoadingIndicator(
             modifier = Modifier.size(400.dp),
-            indicatorColor = TrendyolDesign.colors.colorPrimary,
+            indicatorColor = KPDesign.colors.colorPrimary,
             indicatorStrokeWidth = 4.dp
         )
     }
@@ -42,7 +42,7 @@ internal fun StateLayout_Circular_Loading() {
 internal fun StateLayout_Infinitive_Horizontal_Loading() {
     TrendyolTheme {
         Box(modifier = Modifier.size(400.dp)) {
-            HorizontalLoadingIndicator(
+            KPHorizontalLoadingIndicator(
                 progressState = HorizontalProgressState.INFINITIVE,
             )
         }
@@ -59,7 +59,7 @@ internal fun StateLayout_Infinitive_Horizontal_Loading() {
 internal fun StateLayout_Progressive_Horizontal_Loading() {
     TrendyolTheme {
         Box(modifier = Modifier.size(400.dp)) {
-            HorizontalLoadingIndicator(
+            KPHorizontalLoadingIndicator(
                 progressState = HorizontalProgressState.PROGRESSIVE,
                 progressValue = 0.7F,
             )

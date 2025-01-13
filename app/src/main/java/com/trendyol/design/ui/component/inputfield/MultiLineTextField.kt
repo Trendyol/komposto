@@ -13,8 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.inputfield.MultiLineOutlineTextField
-import com.trendyol.design.core.inputfield.TrendyolOutlinedTextFieldStyle
+import com.trendyol.design.core.inputfield.KPMultiLineOutlineTextField
+import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -33,9 +33,9 @@ private const val MIN_WIDTH = 280
 internal fun Input_Field_2_MultiLine_1_Unfocused() = TrendyolTheme {
     Column {
         var value by remember { mutableStateOf("") }
-        MultiLineOutlineTextField(
+        KPMultiLineOutlineTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             label = LABEL,
             value = value,
             maxChar = 2000,
@@ -44,9 +44,9 @@ internal fun Input_Field_2_MultiLine_1_Unfocused() = TrendyolTheme {
             }
         )
         Spacer(modifier = Modifier.height(8.dp))
-        MultiLineOutlineTextField(
+        KPMultiLineOutlineTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.Outlined,
+            style = KPOutlinedTextFieldStyle.Outlined,
             placeholder = WRITE_HERE,
             value = value,
             maxChar = 2000,
@@ -55,9 +55,9 @@ internal fun Input_Field_2_MultiLine_1_Unfocused() = TrendyolTheme {
             },
         )
         Spacer(modifier = Modifier.height(8.dp))
-        MultiLineOutlineTextField(
+        KPMultiLineOutlineTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.Filled,
+            style = KPOutlinedTextFieldStyle.Filled,
             placeholder = WRITE_HERE,
             value = value,
             maxChar = 2000,
@@ -78,9 +78,9 @@ internal fun Input_Field_2_MultiLine_1_Unfocused() = TrendyolTheme {
 internal fun Input_Field_2_MultiLine_2_Typed() = TrendyolTheme {
     Column {
         var value by remember { mutableStateOf("Filled") }
-        MultiLineOutlineTextField(
+        KPMultiLineOutlineTextField(
             modifier = Modifier.width(MIN_WIDTH.dp),
-            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             label = LABEL,
             value = value,
             maxChar = 2000,
@@ -89,8 +89,8 @@ internal fun Input_Field_2_MultiLine_2_Typed() = TrendyolTheme {
             }
         )
         Spacer(modifier = Modifier.height(8.dp))
-        MultiLineOutlineTextField(
-            style = TrendyolOutlinedTextFieldStyle.Outlined,
+        KPMultiLineOutlineTextField(
+            style = KPOutlinedTextFieldStyle.Outlined,
             placeholder = WRITE_HERE,
             value = value,
             maxChar = 2000,
@@ -99,8 +99,8 @@ internal fun Input_Field_2_MultiLine_2_Typed() = TrendyolTheme {
             },
         )
         Spacer(modifier = Modifier.height(8.dp))
-        MultiLineOutlineTextField(
-            style = TrendyolOutlinedTextFieldStyle.Filled,
+        KPMultiLineOutlineTextField(
+            style = KPOutlinedTextFieldStyle.Filled,
             placeholder = WRITE_HERE,
             value = value,
             maxChar = 2000,
@@ -121,8 +121,8 @@ internal fun Input_Field_2_MultiLine_2_Typed() = TrendyolTheme {
 internal fun Input_Field_2_MultiLine_3_Disabled() = TrendyolTheme {
     Column {
         var value by remember { mutableStateOf("Disabled") }
-        MultiLineOutlineTextField(
-            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+        KPMultiLineOutlineTextField(
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             value = value,
             maxChar = 2000,
             onValueChange = {
@@ -131,8 +131,8 @@ internal fun Input_Field_2_MultiLine_3_Disabled() = TrendyolTheme {
             enabled = false,
         )
         Spacer(modifier = Modifier.height(8.dp))
-        MultiLineOutlineTextField(
-            style = TrendyolOutlinedTextFieldStyle.Outlined,
+        KPMultiLineOutlineTextField(
+            style = KPOutlinedTextFieldStyle.Outlined,
             value = value,
             maxChar = 2000,
             onValueChange = {
@@ -141,8 +141,8 @@ internal fun Input_Field_2_MultiLine_3_Disabled() = TrendyolTheme {
             enabled = false,
         )
         Spacer(modifier = Modifier.height(8.dp))
-        MultiLineOutlineTextField(
-            style = TrendyolOutlinedTextFieldStyle.Filled,
+        KPMultiLineOutlineTextField(
+            style = KPOutlinedTextFieldStyle.Filled,
             value = value,
             maxChar = 2000,
             onValueChange = {
@@ -163,8 +163,8 @@ internal fun Input_Field_2_MultiLine_3_Disabled() = TrendyolTheme {
 internal fun Input_Field_2_MultiLine_4_Error() = TrendyolTheme {
     Column {
         var value by remember { mutableStateOf("Error") }
-        MultiLineOutlineTextField(
-            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+        KPMultiLineOutlineTextField(
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             label = LABEL,
             value = value,
             maxChar = 2000,
@@ -175,8 +175,8 @@ internal fun Input_Field_2_MultiLine_4_Error() = TrendyolTheme {
             errorLabel = "Error message goes here",
         )
         Spacer(modifier = Modifier.height(8.dp))
-        MultiLineOutlineTextField(
-            style = TrendyolOutlinedTextFieldStyle.FloatingLabelOutlined,
+        KPMultiLineOutlineTextField(
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             value = value,
             maxChar = 2000,
             onValueChange = {
@@ -186,8 +186,8 @@ internal fun Input_Field_2_MultiLine_4_Error() = TrendyolTheme {
             errorLabel = "Error message goes here",
         )
         Spacer(modifier = Modifier.height(8.dp))
-        MultiLineOutlineTextField(
-            style = TrendyolOutlinedTextFieldStyle.Filled,
+        KPMultiLineOutlineTextField(
+            style = KPOutlinedTextFieldStyle.Filled,
             value = value,
             maxChar = 2000,
             onValueChange = {
