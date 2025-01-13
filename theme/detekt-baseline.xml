@@ -1,7 +1,8 @@
-<?xml version="1.0" ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <SmellBaseline>
-  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <ManuallySuppressedIssues/>
   <CurrentIssues>
+    <ID>CompositionLocalAllowlist:TrendyolDesignTheme.kt$LocalKPDesignTheme</ID>
     <ID>CompositionLocalAllowlist:TrendyolDesignTheme.kt$LocalTrendyolDesignTheme</ID>
   </CurrentIssues>
 </SmellBaseline>

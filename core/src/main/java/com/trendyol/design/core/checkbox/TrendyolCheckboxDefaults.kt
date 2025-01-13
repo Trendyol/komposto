@@ -10,8 +10,61 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.state.ToggleableState
+import com.trendyol.theme.KPDesign
 import com.trendyol.theme.TrendyolDesign
 
+public object KPCheckboxDefaults {
+
+    @Composable
+    public fun colors(
+        checkedColor: Color = KPDesign.colors.colorPrimary,
+        uncheckedColor: Color = KPDesign.colors.colorOnSurfaceVariant1,
+        checkmarkColor: Color = KPDesign.colors.colorSurface,
+        disabledCheckmarkColor: Color = KPDesign.colors.colorSurface,
+        disabledColor: Color = KPDesign.colors.colorBorder,
+        checkBoxColor: Color = KPDesign.colors.colorPrimary,
+        disabledBoxColor: Color = KPDesign.colors.colorOnSurfaceVariant1,
+        disabledUnselectedBorderColor: Color = KPDesign.colors.colorBorder,
+        disabledIndeterminateColor: Color = checkedColor.copy(alpha = ContentAlpha.disabled)
+    ): KPCheckboxColors {
+        return remember(
+            checkedColor,
+            uncheckedColor,
+            checkmarkColor,
+            disabledCheckmarkColor,
+            disabledColor,
+            checkBoxColor,
+            disabledBoxColor,
+            disabledUnselectedBorderColor,
+            disabledIndeterminateColor,
+        ) {
+            KPDefaultCheckboxColors(
+                checkedBorderColor = checkedColor,
+                checkedBoxColor = checkBoxColor,
+                disabledCheckmarkColor = disabledCheckmarkColor,
+                checkedCheckmarkColor = checkmarkColor,
+                uncheckedCheckmarkColor = checkmarkColor.copy(alpha = 0f),
+                uncheckedBoxColor = checkedColor.copy(alpha = 0f),
+                disabledCheckedBoxColor = disabledBoxColor,
+                disabledUncheckedBoxColor = disabledColor.copy(alpha = 0f),
+                disabledIndeterminateBoxColor = disabledIndeterminateColor,
+                uncheckedBorderColor = uncheckedColor,
+                disabledBorderColor = disabledColor,
+                disabledUnselectedBorderColor = disabledUnselectedBorderColor,
+                disabledIndeterminateBorderColor = disabledIndeterminateColor,
+            )
+        }
+    }
+}
+
+@Deprecated(
+    message = "Use KPCheckboxDefaults instead for consistent naming. " +
+        "This API will get removed in future releases.",
+    replaceWith = ReplaceWith(
+        expression = "KPCheckboxDefaults",
+    ),
+    level = DeprecationLevel.WARNING
+)
 public object TrendyolCheckboxDefaults {
 
     @Composable
@@ -40,7 +93,7 @@ public object TrendyolCheckboxDefaults {
             disabledUnselectedBorderColor,
             disabledIndeterminateColor,
         ) {
-            TrendyolDefaultCheckboxColors(
+            KPDefaultCheckboxColors(
                 checkedBorderColor = checkedColor,
                 checkedBoxColor = checkBoxColor,
                 disabledCheckmarkColor = disabledCheckmarkColor,
@@ -60,7 +113,7 @@ public object TrendyolCheckboxDefaults {
 }
 
 @Stable
-private class TrendyolDefaultCheckboxColors(
+private class KPDefaultCheckboxColors(
     private val checkedCheckmarkColor: Color,
     private val uncheckedCheckmarkColor: Color,
     private val disabledCheckmarkColor: Color,
@@ -74,7 +127,7 @@ private class TrendyolDefaultCheckboxColors(
     private val disabledBorderColor: Color,
     private val disabledUnselectedBorderColor: Color,
     private val disabledIndeterminateBorderColor: Color
-) : TrendyolCheckboxColors {
+) : TrendyolCheckboxColors, KPCheckboxColors {
     @Composable
     override fun checkmarkColor(enabled: Boolean, state: ToggleableState): State<Color> {
         val target = when {

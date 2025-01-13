@@ -6,18 +6,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.component.common.Component.SUBTITLE
 import com.trendyol.design.ui.component.common.Group.TYPOGRAPHY
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 @ShowkaseComposable(group = TYPOGRAPHY, name = SUBTITLE, styleName = "Subtitle")
 @Composable
 internal fun C_Subtitle() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.subtitle,
+        style = KPDesign.typography.subtitle,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -25,9 +25,9 @@ internal fun C_Subtitle() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = SUBTITLE, styleName = "Subtitle.Bold")
 @Composable
 internal fun Subtitle_Bold() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.subtitleBold,
+        style = KPDesign.typography.subtitleBold,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -35,9 +35,9 @@ internal fun Subtitle_Bold() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = SUBTITLE, styleName = "Subtitle.Medium")
 @Composable
 internal fun Subtitle_Medium() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.subtitleMedium,
+        style = KPDesign.typography.subtitleMedium,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -45,9 +45,9 @@ internal fun Subtitle_Medium() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = SUBTITLE, styleName = "Subtitle.Medium.OneLine")
 @Composable
 internal fun Subtitle_Medium_OneLine() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.subtitleMedium,
+        style = KPDesign.typography.subtitleMedium,
         maxLines = 1,
     )
 }

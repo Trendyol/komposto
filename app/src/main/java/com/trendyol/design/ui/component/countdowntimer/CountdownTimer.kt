@@ -14,7 +14,7 @@ import com.trendyol.design.core.countdowntimer.KPCountdownTimerStyle
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 import java.util.concurrent.TimeUnit
 
 @Preview(showBackground = true)
@@ -28,7 +28,7 @@ internal fun Countdown_Timer_Large() {
     TrendyolTheme {
         Box(
             modifier = Modifier
-                .background(TrendyolDesign.colors.colorPrimary)
+                .background(KPDesign.colors.colorPrimary)
                 .padding(4.dp),
         ) {
             KPCountdownTimer(
@@ -52,7 +52,7 @@ internal fun Countdown_Timer_Medium() {
     TrendyolTheme {
         Box(
             modifier = Modifier
-                .background(TrendyolDesign.colors.colorPrimary)
+                .background(KPDesign.colors.colorPrimary)
                 .padding(4.dp),
         ) {
             KPCountdownTimer(
@@ -76,7 +76,7 @@ internal fun Countdown_Timer_Small() {
     TrendyolTheme {
         Box(
             modifier = Modifier
-                .background(TrendyolDesign.colors.colorPrimary)
+                .background(KPDesign.colors.colorPrimary)
                 .padding(4.dp),
         ) {
             KPCountdownTimer(

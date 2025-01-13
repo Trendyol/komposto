@@ -1,18 +1,18 @@
 package com.trendyol.design
 
 import androidx.compose.runtime.Composable
-import com.trendyol.design.bottomsheet.BottomSheetListContent
-import com.trendyol.design.bottomsheet.TrendyolDesignBottomSheetFragment
-import com.trendyol.design.bottomsheet.item.BottomSheetCheckboxItem
+import com.trendyol.design.bottomsheet.KPBottomSheetFragment
+import com.trendyol.design.bottomsheet.KPBottomSheetListContent
+import com.trendyol.design.bottomsheet.item.KPBottomSheetCheckboxItem
 import com.trendyol.design.ui.theme.TrendyolTheme
 import kotlinx.collections.immutable.persistentListOf
 
-class ListExampleBottomSheetFragment : TrendyolDesignBottomSheetFragment() {
+class ListExampleBottomSheetFragment : KPBottomSheetFragment() {
 
     @Composable
     override fun PageContent() {
         TrendyolTheme {
-            BottomSheetListContent(
+            KPBottomSheetListContent(
                 title = "SomeTitle",
                 onCloseIconClick = { },
                 itemList = persistentListOf(
@@ -38,7 +38,7 @@ class ListExampleBottomSheetFragment : TrendyolDesignBottomSheetFragment() {
                     "asd",
                 ),
                 itemContent = { _, item ->
-                    BottomSheetCheckboxItem(
+                    KPBottomSheetCheckboxItem(
                         checked = false,
                         text = item,
                         onCheckedChange = {},

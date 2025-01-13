@@ -34,11 +34,11 @@ private class TrendyolIconParameterProvider : PreviewParameterProvider<ImageVect
 
 @Preview
 @Composable
-private fun Preview_Icon(
+private fun Preview_KPIcon(
     @PreviewParameter(TrendyolIconParameterProvider::class) icon: ImageVector,
 ) = TrendyolTheme {
-    Icon(
+    KPIcon(
         imageVector = icon,
-        size = TrendyolIconSize.Medium,
+        size = KPIconSize.Medium,
     )
 }

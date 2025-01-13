@@ -15,17 +15,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.KPCustomFilteredColorIcon
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.CircleIcon
 import com.trendyol.design.core.icon.icons.fill.InfoIcon
 import com.trendyol.design.core.preview.PreviewTheme
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.core.util.customBorder
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 /**
- * `KPInfoBox` is a composable function that displays an information box with a specified style, text, and optional icon.
+ * [KPInfoBox] is a composable function that displays an information box with a specified style, text, and optional icon.
  * Optionally, it can display an icon and a border.
  *
  * @param style An [InfoBoxStyle] instance that defines the style of the info box.
@@ -72,16 +72,16 @@ public fun KPInfoBox(
         if (iconPosition == Arrangement.Start) {
             KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
-                outerIcon = Icons.Fill.CircleIcon,
+                outerIcon = KPIcons.Fill.CircleIcon,
                 outerTint = style.iconTint,
-                innerIcon = Icons.Fill.InfoIcon,
+                innerIcon = KPIcons.Fill.InfoIcon,
             )
         }
 
         Column(modifier = Modifier.weight(1f)) {
-            Text(
+            KPText(
                 text = text,
-                style = TrendyolDesign.typography.body1,
+                style = KPDesign.typography.body1,
                 color = style.textColor,
             )
         }
@@ -89,16 +89,16 @@ public fun KPInfoBox(
         if (iconPosition == Arrangement.End) {
             KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
-                outerIcon = Icons.Fill.CircleIcon,
+                outerIcon = KPIcons.Fill.CircleIcon,
                 outerTint = style.iconTint,
-                innerIcon = Icons.Fill.InfoIcon,
+                innerIcon = KPIcons.Fill.InfoIcon,
             )
         }
     }
 }
 
 /**
- * `KPInfoBox` is a composable function that displays an information box with a specified style and customizable multi-line text.
+ * [KPInfoBox] is a composable function that displays an information box with a specified style and customizable multi-line text.
  * Optionally, it can display an icon and a border.
  *
  * @param style An [InfoBoxStyle] instance that defines the style of the info box.
@@ -147,15 +147,15 @@ public fun KPInfoBox(
         if (iconPosition == Arrangement.Start) {
             KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
-                outerIcon = Icons.Fill.CircleIcon,
+                outerIcon = KPIcons.Fill.CircleIcon,
                 outerTint = style.iconTint,
-                innerIcon = Icons.Fill.InfoIcon,
+                innerIcon = KPIcons.Fill.InfoIcon,
             )
         }
 
         Column(modifier = Modifier.weight(1f)) {
             CompositionLocalProvider(
-                LocalTextStyle provides TrendyolDesign.typography.body1.copy(color = style.textColor)
+                LocalTextStyle provides KPDesign.typography.body1.copy(color = style.textColor)
             ) {
                 multiText()
             }
@@ -164,9 +164,9 @@ public fun KPInfoBox(
         if (iconPosition == Arrangement.End) {
             KPCustomFilteredColorIcon(
                 modifier = Modifier.align(Alignment.CenterVertically),
-                outerIcon = Icons.Fill.CircleIcon,
+                outerIcon = KPIcons.Fill.CircleIcon,
                 outerTint = style.iconTint,
-                innerIcon = Icons.Fill.InfoIcon,
+                innerIcon = KPIcons.Fill.InfoIcon,
             )
         }
     }
@@ -242,10 +242,10 @@ private fun OrangeInfoBoxLeftIconWithTwoTextsPreview() {
             iconPosition = Arrangement.Start,
             showBorder = false
         ) {
-            Text(
+            KPText(
                 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
             )
-            Text(
+            KPText(
                 modifier = Modifier.padding(top = 8.dp),
                 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phas ellus eget metus commodo.",
                 color = Color.Red
