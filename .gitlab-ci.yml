@@ -16,7 +16,7 @@ include:
     - curl http://10.84.107.62/public/awilix-cli/awilix-cli-101 --create-dirs -o $HOME/awilix-bin/awilix-cli
     - chmod +x $HOME/awilix-bin/awilix-cli
     - export PATH=$PATH:$HOME/awilix-bin/
-    - awilix-cli allocate -v $SDK_VERSION -s pixel_6
+    - awilix-cli allocate -v $SDK_VERSION -s pixel6
     - adb shell settings put global window_animation_scale 0.0
     - adb shell settings put global transition_animation_scale 0.0
     - adb shell settings put global animator_duration_scale 0.0
