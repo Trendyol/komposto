@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `KPIconButton` and `KPContainedIconButton` APIs introduced
+- `KPStandardIconButton` and `KPContainedIconButton` APIs introduced
 - Added Pause, Play, Save, Share icons
 
 ## [0.15.0] - 2025-01-10

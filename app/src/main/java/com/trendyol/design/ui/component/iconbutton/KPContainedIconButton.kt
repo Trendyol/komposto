@@ -1,10 +1,13 @@
 package com.trendyol.design.ui.component.iconbutton
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.tooling.preview.Preview
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.icon.KPIcons
@@ -14,6 +17,7 @@ import com.trendyol.design.core.icon.icons.fill.Share
 import com.trendyol.design.core.iconbutton.contained.KPContainedIconButton
 import com.trendyol.design.core.iconbutton.contained.KPContainedIconToggleButton
 import com.trendyol.design.core.iconbutton.contained.KPContainedIconButtonSize
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -23,14 +27,52 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 @ShowkaseComposable(
     group = Group.ICON_BUTTON,
     name = Component.CONTAINED_ICON_BUTTON,
-    styleName = "1.Large.NoToggle",
+    styleName = "NoToggle",
 )
-internal fun PreviewKPContainedIconButtonLargeNoToggle() = TrendyolTheme {
-    KPContainedIconButton(
-        icon = KPIcons.Fill.Share,
-        size = KPContainedIconButtonSize.Large,
-        onClick = { }
-    )
+internal fun PreviewKPContainedIconButtonNoToggle() = TrendyolTheme {
+    Column {
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            KPContainedIconButton(
+                icon = KPIcons.Fill.Share,
+                size = KPContainedIconButtonSize.Large,
+                onClick = { }
+            )
+            KPText("Large")
+        }
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            KPContainedIconButton(
+                icon = KPIcons.Fill.Share,
+                size = KPContainedIconButtonSize.Medium,
+                onClick = { }
+            )
+            KPText("Medium")
+        }
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            KPContainedIconButton(
+                icon = KPIcons.Fill.Share,
+                size = KPContainedIconButtonSize.Small,
+                onClick = { }
+            )
+            KPText("Small")
+        }
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            KPContainedIconButton(
+                icon = KPIcons.Fill.Share,
+                size = KPContainedIconButtonSize.Large,
+                onClick = { },
+                enabled = false,
+            )
+            KPText("Disabled")
+        }
+    }
 }
 
 @Preview(showBackground = true)
@@ -38,81 +80,59 @@ internal fun PreviewKPContainedIconButtonLargeNoToggle() = TrendyolTheme {
 @ShowkaseComposable(
     group = Group.ICON_BUTTON,
     name = Component.CONTAINED_ICON_BUTTON,
-    styleName = "1.Medium.NoToggle",
+    styleName = "Toggle",
 )
-internal fun PreviewKPContainedIconButtonMediumNoToggle() = TrendyolTheme {
-    KPContainedIconButton(
-        icon = KPIcons.Fill.Share,
-        size = KPContainedIconButtonSize.Medium,
-        onClick = { }
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-@ShowkaseComposable(
-    group = Group.ICON_BUTTON,
-    name = Component.CONTAINED_ICON_BUTTON,
-    styleName = "1.Small.NoToggle",
-)
-internal fun PreviewKPContainedIconButtonSmallNoToggle() = TrendyolTheme {
-    KPContainedIconButton(
-        icon = KPIcons.Fill.Share,
-        size = KPContainedIconButtonSize.Small,
-        onClick = { }
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-@ShowkaseComposable(
-    group = Group.ICON_BUTTON,
-    name = Component.CONTAINED_ICON_BUTTON,
-    styleName = "1.Large.Toggle",
-)
-internal fun PreviewKPContainedIconButtonLargeToggle() = TrendyolTheme {
-    var checked by remember { mutableStateOf(false) }
-    KPContainedIconToggleButton(
-        checked = checked,
-        checkedIcon = KPIcons.Fill.SaveSelected,
-        unCheckedIcon = KPIcons.Outline.SaveUnselected,
-        size = KPContainedIconButtonSize.Large,
-        onCheckedChange = { checked = it },
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-@ShowkaseComposable(
-    group = Group.ICON_BUTTON,
-    name = Component.CONTAINED_ICON_BUTTON,
-    styleName = "1.Medium.Toggle",
-)
-internal fun PreviewKPContainedIconButtonMediumToggle() = TrendyolTheme {
-    var checked by remember { mutableStateOf(false) }
-    KPContainedIconToggleButton(
-        checked = checked,
-        checkedIcon = KPIcons.Fill.SaveSelected,
-        unCheckedIcon = KPIcons.Outline.SaveUnselected,
-        size = KPContainedIconButtonSize.Medium,
-        onCheckedChange = { checked = it },
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-@ShowkaseComposable(
-    group = Group.ICON_BUTTON,
-    name = Component.CONTAINED_ICON_BUTTON,
-    styleName = "1.Small.Toggle",
-)
-internal fun PreviewKPContainedIconButtonSmallToggle() = TrendyolTheme {
-    var checked by remember { mutableStateOf(false) }
-    KPContainedIconToggleButton(
-        checked = checked,
-        checkedIcon = KPIcons.Fill.SaveSelected,
-        unCheckedIcon = KPIcons.Outline.SaveUnselected,
-        size = KPContainedIconButtonSize.Small,
-        onCheckedChange = { checked = it },
-    )
+internal fun PreviewKPContainedIconButtonToggle() = TrendyolTheme {
+    Column {
+        var checked by remember { mutableStateOf(false) }
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            KPContainedIconToggleButton(
+                checked = checked,
+                checkedIcon = KPIcons.Fill.SaveSelected,
+                unCheckedIcon = KPIcons.Outline.SaveUnselected,
+                size = KPContainedIconButtonSize.Large,
+                onCheckedChange = { checked = it },
+            )
+            KPText("Large")
+        }
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            KPContainedIconToggleButton(
+                checked = checked,
+                checkedIcon = KPIcons.Fill.SaveSelected,
+                unCheckedIcon = KPIcons.Outline.SaveUnselected,
+                size = KPContainedIconButtonSize.Medium,
+                onCheckedChange = { checked = it },
+            )
+            KPText("Medium")
+        }
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            KPContainedIconToggleButton(
+                checked = checked,
+                checkedIcon = KPIcons.Fill.SaveSelected,
+                unCheckedIcon = KPIcons.Outline.SaveUnselected,
+                size = KPContainedIconButtonSize.Small,
+                onCheckedChange = { checked = it },
+            )
+            KPText("Small")
+        }
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            KPContainedIconToggleButton(
+                checked = false,
+                checkedIcon = KPIcons.Fill.SaveSelected,
+                unCheckedIcon = KPIcons.Outline.SaveUnselected,
+                size = KPContainedIconButtonSize.Large,
+                onCheckedChange = { checked = it },
+                enabled = false,
+            )
+            KPText("Disabled")
+        }
+    }
 }

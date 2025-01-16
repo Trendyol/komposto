@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterialApi::class)
+
 package com.trendyol.design.core.iconbutton.contained
 
 import androidx.compose.foundation.background
@@ -5,9 +7,12 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.IconButton
 import androidx.compose.material.IconToggleButton
+import androidx.compose.material.LocalMinimumInteractiveComponentEnforcement
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -18,8 +23,8 @@ import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.SaveSelected
-import com.trendyol.design.core.icon.icons.outline.SaveUnselected
 import com.trendyol.design.core.icon.icons.fill.Share
+import com.trendyol.design.core.icon.icons.outline.SaveUnselected
 import com.trendyol.design.core.iconbutton.IconButtonDefaults
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.KPDesign
@@ -47,33 +52,35 @@ public fun KPContainedIconButton(
     colors: ContainedIconButtonColors = IconButtonDefaults.containedButtonColors(),
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
-    Box(
-        modifier = modifier
-            .size(size.iconButtonSize.dp)
-            .background(color = colors.backgroundColor(enabled).value),
-        contentAlignment = Alignment.Center,
-    ) {
-        IconButton(
-            onClick = onClick,
-            modifier = Modifier
-                .shadow(
-                    elevation = 3.dp,
-                    shape = CircleShape,
-                    spotColor = KPDesign.colors.colorOnSurfaceVariant3,
-                )
-                .background(
-                    shape = CircleShape,
-                    color = colors.containerColor(enabled).value,
-                )
-                .size(size.containerSize),
-            enabled = enabled,
-            interactionSource = interactionSource,
+    CompositionLocalProvider(LocalMinimumInteractiveComponentEnforcement provides false) {
+        Box(
+            modifier = modifier
+                .size(size.iconButtonSize.dp)
+                .background(color = colors.backgroundColor(enabled).value),
+            contentAlignment = Alignment.Center,
         ) {
-            KPIcon(
-                imageVector = icon,
-                size = size.iconButtonSize.iconSize,
-                tint = colors.contentColor(enabled).value,
-            )
+            IconButton(
+                onClick = onClick,
+                modifier = Modifier
+                    .shadow(
+                        elevation = 3.dp,
+                        shape = CircleShape,
+                        spotColor = KPDesign.colors.colorOnSurfaceVariant3,
+                    )
+                    .background(
+                        shape = CircleShape,
+                        color = colors.containerColor(enabled).value,
+                    )
+                    .size(size.containerSize),
+                enabled = enabled,
+                interactionSource = interactionSource,
+            ) {
+                KPIcon(
+                    imageVector = icon,
+                    size = size.iconButtonSize.iconSize,
+                    tint = colors.contentColor(enabled).value,
+                )
+            }
         }
     }
 }
@@ -105,41 +112,43 @@ public fun KPContainedIconToggleButton(
     colors: ContainedIconButtonColors = IconButtonDefaults.containedButtonColors(),
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
-    Box(
-        modifier = modifier
-            .size(size.iconButtonSize.dp)
-            .background(color = colors.backgroundColor(enabled).value),
-        contentAlignment = Alignment.Center,
-    ) {
-        IconToggleButton(
-            checked = checked,
-            onCheckedChange = onCheckedChange,
-            modifier = Modifier
-                .shadow(
-                    elevation = 3.dp,
-                    shape = CircleShape,
-                    spotColor = KPDesign.colors.colorOnSurfaceVariant3,
-                )
-                .background(
-                    shape = CircleShape,
-                    color = colors.containerColor(enabled).value,
-                )
-                .size(size.containerSize),
-            enabled = enabled,
-            interactionSource = interactionSource,
+    CompositionLocalProvider(LocalMinimumInteractiveComponentEnforcement provides false) {
+        Box(
+            modifier = modifier
+                .size(size.iconButtonSize.dp)
+                .background(color = colors.backgroundColor(enabled).value),
+            contentAlignment = Alignment.Center,
         ) {
-            if (checked) {
-                KPIcon(
-                    imageVector = checkedIcon,
-                    size = size.iconButtonSize.iconSize,
-                    tint = colors.contentColor(enabled).value,
-                )
-            } else {
-                KPIcon(
-                    imageVector = unCheckedIcon,
-                    size = size.iconButtonSize.iconSize,
-                    tint = colors.contentColor(enabled).value,
-                )
+            IconToggleButton(
+                checked = checked,
+                onCheckedChange = onCheckedChange,
+                modifier = Modifier
+                    .shadow(
+                        elevation = 3.dp,
+                        shape = CircleShape,
+                        spotColor = KPDesign.colors.colorOnSurfaceVariant3,
+                    )
+                    .background(
+                        shape = CircleShape,
+                        color = colors.containerColor(enabled).value,
+                    )
+                    .size(size.containerSize),
+                enabled = enabled,
+                interactionSource = interactionSource,
+            ) {
+                if (checked) {
+                    KPIcon(
+                        imageVector = checkedIcon,
+                        size = size.iconButtonSize.iconSize,
+                        tint = colors.contentColor(enabled).value,
+                    )
+                } else {
+                    KPIcon(
+                        imageVector = unCheckedIcon,
+                        size = size.iconButtonSize.iconSize,
+                        tint = colors.contentColor(enabled).value,
+                    )
+                }
             }
         }
     }
