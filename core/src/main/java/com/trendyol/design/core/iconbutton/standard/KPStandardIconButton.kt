@@ -1,12 +1,17 @@
+@file:OptIn(ExperimentalMaterialApi::class)
+
 package com.trendyol.design.core.iconbutton.standard
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.ButtonColors
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.IconButton
 import androidx.compose.material.IconToggleButton
+import androidx.compose.material.LocalMinimumInteractiveComponentEnforcement
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -32,7 +37,7 @@ import com.trendyol.design.core.preview.PreviewTheme
  * @param interactionSource The [MutableInteractionSource] to track interaction events. Defaults to a new instance.
  */
 @Composable
-public fun KPIconButton(
+public fun KPStandardIconButton(
     icon: ImageVector,
     size: IconButtonSize,
     onClick: () -> Unit,
@@ -41,19 +46,21 @@ public fun KPIconButton(
     colors: ButtonColors = IconButtonDefaults.buttonColors(),
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
-    IconButton(
-        onClick = onClick,
-        modifier = modifier
-            .size(size.dp)
-            .background(color = colors.backgroundColor(enabled).value),
-        enabled = enabled,
-        interactionSource = interactionSource,
-    ) {
-        KPIcon(
-            imageVector = icon,
-            size = size.iconSize,
-            tint = colors.contentColor(enabled).value
-        )
+    CompositionLocalProvider(LocalMinimumInteractiveComponentEnforcement provides false) {
+        IconButton(
+            onClick = onClick,
+            modifier = modifier
+                .size(size.dp)
+                .background(color = colors.backgroundColor(enabled).value),
+            enabled = enabled,
+            interactionSource = interactionSource,
+        ) {
+            KPIcon(
+                imageVector = icon,
+                size = size.iconSize,
+                tint = colors.contentColor(enabled).value
+            )
+        }
     }
 }
 
@@ -73,7 +80,7 @@ public fun KPIconButton(
  * @param interactionSource The [MutableInteractionSource] to track interaction events. Defaults to a new instance.
  */
 @Composable
-public fun KPIconToggleButton(
+public fun KPStandardIconToggleButton(
     checked: Boolean,
     checkedIcon: ImageVector,
     unCheckedIcon: ImageVector,
@@ -84,27 +91,29 @@ public fun KPIconToggleButton(
     colors: ButtonColors = IconButtonDefaults.buttonColors(),
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
-    IconToggleButton(
-        checked = checked,
-        onCheckedChange = onCheckedChange,
-        modifier = modifier
-            .size(size.dp)
-            .background(color = colors.backgroundColor(enabled).value),
-        enabled = enabled,
-        interactionSource = interactionSource
-    ) {
-        if (checked) {
-            KPIcon(
-                imageVector = checkedIcon,
-                size = size.iconSize,
-                tint = colors.contentColor(enabled).value,
-            )
-        } else {
-            KPIcon(
-                imageVector = unCheckedIcon,
-                size = size.iconSize,
-                tint = colors.contentColor(enabled).value,
-            )
+    CompositionLocalProvider(LocalMinimumInteractiveComponentEnforcement provides false) {
+        IconToggleButton(
+            checked = checked,
+            onCheckedChange = onCheckedChange,
+            modifier = modifier
+                .size(size.dp)
+                .background(color = colors.backgroundColor(enabled).value),
+            enabled = enabled,
+            interactionSource = interactionSource
+        ) {
+            if (checked) {
+                KPIcon(
+                    imageVector = checkedIcon,
+                    size = size.iconSize,
+                    tint = colors.contentColor(enabled).value,
+                )
+            } else {
+                KPIcon(
+                    imageVector = unCheckedIcon,
+                    size = size.iconSize,
+                    tint = colors.contentColor(enabled).value,
+                )
+            }
         }
     }
 }
@@ -112,9 +121,9 @@ public fun KPIconToggleButton(
 @Preview(showBackground = true)
 @Composable
 private fun PreviewKPIconButton() = PreviewTheme {
-    KPIconButton(
+    KPStandardIconButton(
         icon = KPIcons.Fill.Help,
-        size = KPIconButtonSize.Large,
+        size = KPStandardIconButtonSize.Large,
         onClick = { },
     )
 }
@@ -122,9 +131,9 @@ private fun PreviewKPIconButton() = PreviewTheme {
 @Preview(showBackground = true)
 @Composable
 private fun PreviewKPIconButtonDisabled() = PreviewTheme {
-    KPIconButton(
+    KPStandardIconButton(
         icon = KPIcons.Fill.Help,
-        size = KPIconButtonSize.Large,
+        size = KPStandardIconButtonSize.Large,
         onClick = { },
         enabled = false,
     )
@@ -133,11 +142,11 @@ private fun PreviewKPIconButtonDisabled() = PreviewTheme {
 @Preview(showBackground = true)
 @Composable
 private fun PreviewKPContainedToggleIconButton() = PreviewTheme {
-    KPIconToggleButton(
+    KPStandardIconToggleButton(
         checked = false,
         checkedIcon = KPIcons.Fill.PlayButton,
         unCheckedIcon = KPIcons.Fill.PauseButton,
-        size = KPIconButtonSize.Large,
+        size = KPStandardIconButtonSize.Large,
         onCheckedChange = {},
     )
 }
@@ -145,11 +154,11 @@ private fun PreviewKPContainedToggleIconButton() = PreviewTheme {
 @Preview(showBackground = true)
 @Composable
 private fun PreviewKPContainedToggleIconButtonDisabled() = PreviewTheme {
-    KPIconToggleButton(
+    KPStandardIconToggleButton(
         checked = false,
         checkedIcon = KPIcons.Fill.PlayButton,
         unCheckedIcon = KPIcons.Fill.PauseButton,
-        size = KPIconButtonSize.Large,
+        size = KPStandardIconButtonSize.Large,
         onCheckedChange = {},
         enabled = false,
     )

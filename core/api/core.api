@@ -1474,8 +1474,8 @@ public final class com/trendyol/design/core/iconbutton/contained/KPContainedIcon
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class com/trendyol/design/core/iconbutton/standard/ComposableSingletons$KPIconButtonKt {
-	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/ComposableSingletons$KPIconButtonKt;
+public final class com/trendyol/design/core/iconbutton/standard/ComposableSingletons$KPStandardIconButtonKt {
+	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/ComposableSingletons$KPStandardIconButtonKt;
 	public static field lambda-1 Lkotlin/jvm/functions/Function2;
 	public static field lambda-2 Lkotlin/jvm/functions/Function2;
 	public static field lambda-3 Lkotlin/jvm/functions/Function2;
@@ -1492,18 +1492,18 @@ public abstract interface class com/trendyol/design/core/iconbutton/standard/Ico
 	public abstract fun getIconSize ()Lcom/trendyol/design/core/icon/IconSize;
 }
 
-public final class com/trendyol/design/core/iconbutton/standard/KPIconButtonKt {
-	public static final fun KPIconButton (Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/iconbutton/standard/IconButtonSize;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/material/ButtonColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
-	public static final fun KPIconToggleButton (ZLandroidx/compose/ui/graphics/vector/ImageVector;Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/iconbutton/standard/IconButtonSize;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZLandroidx/compose/material/ButtonColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
+public final class com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonKt {
+	public static final fun KPStandardIconButton (Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/iconbutton/standard/IconButtonSize;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/material/ButtonColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
+	public static final fun KPStandardIconToggleButton (ZLandroidx/compose/ui/graphics/vector/ImageVector;Landroidx/compose/ui/graphics/vector/ImageVector;Lcom/trendyol/design/core/iconbutton/standard/IconButtonSize;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZLandroidx/compose/material/ButtonColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
 }
 
-public abstract class com/trendyol/design/core/iconbutton/standard/KPIconButtonSize : com/trendyol/design/core/iconbutton/standard/IconButtonSize {
+public abstract class com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize : com/trendyol/design/core/iconbutton/standard/IconButtonSize {
 	public static final field $stable I
 }
 
-public final class com/trendyol/design/core/iconbutton/standard/KPIconButtonSize$Large : com/trendyol/design/core/iconbutton/standard/KPIconButtonSize {
+public final class com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize$Large : com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize {
 	public static final field $stable I
-	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/KPIconButtonSize$Large;
+	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize$Large;
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getDp-D9Ej5fM ()F
 	public fun getIconSize ()Lcom/trendyol/design/core/icon/IconSize;
@@ -1511,9 +1511,9 @@ public final class com/trendyol/design/core/iconbutton/standard/KPIconButtonSize
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class com/trendyol/design/core/iconbutton/standard/KPIconButtonSize$Medium : com/trendyol/design/core/iconbutton/standard/KPIconButtonSize {
+public final class com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize$Medium : com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize {
 	public static final field $stable I
-	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/KPIconButtonSize$Medium;
+	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize$Medium;
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getDp-D9Ej5fM ()F
 	public fun getIconSize ()Lcom/trendyol/design/core/icon/IconSize;
@@ -1521,9 +1521,9 @@ public final class com/trendyol/design/core/iconbutton/standard/KPIconButtonSize
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class com/trendyol/design/core/iconbutton/standard/KPIconButtonSize$Small : com/trendyol/design/core/iconbutton/standard/KPIconButtonSize {
+public final class com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize$Small : com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize {
 	public static final field $stable I
-	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/KPIconButtonSize$Small;
+	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize$Small;
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getDp-D9Ej5fM ()F
 	public fun getIconSize ()Lcom/trendyol/design/core/icon/IconSize;
@@ -1531,9 +1531,9 @@ public final class com/trendyol/design/core/iconbutton/standard/KPIconButtonSize
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class com/trendyol/design/core/iconbutton/standard/KPIconButtonSize$XLarge : com/trendyol/design/core/iconbutton/standard/KPIconButtonSize {
+public final class com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize$XLarge : com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize {
 	public static final field $stable I
-	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/KPIconButtonSize$XLarge;
+	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize$XLarge;
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getDp-D9Ej5fM ()F
 	public fun getIconSize ()Lcom/trendyol/design/core/icon/IconSize;
@@ -1541,9 +1541,9 @@ public final class com/trendyol/design/core/iconbutton/standard/KPIconButtonSize
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class com/trendyol/design/core/iconbutton/standard/KPIconButtonSize$XSmall : com/trendyol/design/core/iconbutton/standard/KPIconButtonSize {
+public final class com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize$XSmall : com/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize {
 	public static final field $stable I
-	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/KPIconButtonSize$XSmall;
+	public static final field INSTANCE Lcom/trendyol/design/core/iconbutton/standard/KPStandardIconButtonSize$XSmall;
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getDp-D9Ej5fM ()F
 	public fun getIconSize ()Lcom/trendyol/design/core/icon/IconSize;
