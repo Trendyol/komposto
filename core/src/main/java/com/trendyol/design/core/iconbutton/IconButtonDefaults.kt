@@ -41,11 +41,12 @@ public object IconButtonDefaults {
      * @param backgroundColor The background color of the button when it is enabled. Defaults to [Color.Unspecified].
      * @param contentColor The content (e.g., icon) color of the button when it is enabled. Defaults to [Color.Unspecified].
      * @param containerColor The container color of the button when it is enabled.
-     * Defaults to `TrendyolDesign.colors.colorSurface`.
+     * Defaults to `KPDesign.colors.colorSurface`.
      * @param disabledBackgroundColor The background color of the button when it is disabled. Defaults to [Color.Unspecified].
-     * @param disabledContentColor The content color of the button when it is disabled. Defaults to [Color.Unspecified].
+     * @param disabledContentColor The content color of the button when it is disabled.
+     * Defaults to `KPDesign.colors.colorOnSurfaceVariant1`.
      * @param disabledContainerColor The container color of the button when it is disabled.
-     * Defaults to `TrendyolDesign.colors.colorSurface`.
+     * Defaults to `KPDesign.colors.colorBackground`.
      * @return A [ContainedIconButtonColors] instance with the specified colors.
      */
     @Composable
@@ -54,8 +55,8 @@ public object IconButtonDefaults {
         contentColor: Color = Color.Unspecified,
         containerColor: Color = KPDesign.colors.colorSurface,
         disabledBackgroundColor: Color = Color.Unspecified,
-        disabledContentColor: Color = Color.Unspecified,
-        disabledContainerColor: Color = KPDesign.colors.colorSurface,
+        disabledContentColor: Color = KPDesign.colors.colorOnSurfaceVariant1,
+        disabledContainerColor: Color = KPDesign.colors.colorBackground,
     ): ContainedIconButtonColors {
         return KPDefaultContainedButtonColors(
             backgroundColor = backgroundColor,

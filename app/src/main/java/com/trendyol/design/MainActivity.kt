@@ -9,10 +9,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.models.Showkase
-import com.trendyol.design.core.button.Button
-import com.trendyol.design.core.button.TrendyolButtonSize
-import com.trendyol.design.core.button.TrendyolButtonStyle
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.button.KPButton
+import com.trendyol.design.core.button.KPButtonSize
+import com.trendyol.design.core.button.KPButtonStyle
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.di.getBrowserIntent
 import com.trendyol.design.ui.theme.TrendyolTheme
 
@@ -22,17 +22,17 @@ class MainActivity : AppCompatActivity() {
         setContent {
             TrendyolTheme {
                 Column {
-                    Button(
+                    KPButton(
                         onClick = {
                             startActivity(Showkase.getBrowserIntent(context = this@MainActivity))
                         },
-                        style = TrendyolButtonStyle.Primary,
-                        size = TrendyolButtonSize.Large,
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Large,
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(16.dp)
                     ) {
-                        Text(text = "Navigate To Showkase")
+                        KPText(text = "Navigate To Showkase")
                     }
                 }
             }
