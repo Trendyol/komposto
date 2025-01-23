@@ -10,7 +10,12 @@ import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.outline.Back
 import com.trendyol.design.core.icon.icons.outline.Cancel
+import com.trendyol.design.core.icon.icons.outline.Chevron
+import com.trendyol.design.core.icon.icons.outline.ErrorState
+import com.trendyol.design.core.icon.icons.outline.Info
 import com.trendyol.design.core.icon.icons.outline.StateCaution
+import com.trendyol.design.core.icon.icons.outline.SuccessState
+import com.trendyol.design.core.icon.icons.outline.Union
 import com.trendyol.design.ui.theme.TrendyolTheme
 
 private class TrendyolIconParameterProvider : PreviewParameterProvider<ImageVector> {
@@ -18,7 +23,12 @@ private class TrendyolIconParameterProvider : PreviewParameterProvider<ImageVect
         get() = sequenceOf(
             KPIcons.Outline.Back,
             KPIcons.Outline.Cancel,
+            KPIcons.Outline.Chevron,
+            KPIcons.Outline.ErrorState,
+            KPIcons.Outline.Info,
             KPIcons.Outline.StateCaution,
+            KPIcons.Outline.SuccessState,
+            KPIcons.Outline.Union,
         )
 }
 
