@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalMaterialApi::class)
-
 package com.trendyol.design.core.iconbutton.contained
 
 import androidx.compose.foundation.background
@@ -42,6 +40,7 @@ import com.trendyol.theme.KPDesign
  * and container colors. Defaults to [IconButtonDefaults.containedButtonColors].
  * @param interactionSource The [MutableInteractionSource] to track interaction events. Defaults to a new instance.
  */
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 public fun KPContainedIconButton(
     icon: ImageVector,
@@ -100,6 +99,7 @@ public fun KPContainedIconButton(
  * and container colors. Defaults to [IconButtonDefaults.containedButtonColors].
  * @param interactionSource The [MutableInteractionSource] to track interaction events. Defaults to a new instance.
  */
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 public fun KPContainedIconToggleButton(
     checked: Boolean,
