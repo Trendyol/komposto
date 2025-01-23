@@ -94,4 +94,7 @@ object Component {
     const val INFO_BOX_LEFT_ICON = "Info Box Left Icon"
     const val INFO_BOX_RIGHT_ICON = "Info Box Right Icon"
     const val INFO_BOX_NO_ICON = "Info Box No Icon"
+
+    const val STANDARD_ICON_BUTTON = "Standard Icon Button"
+    const val CONTAINED_ICON_BUTTON = "Contained Icon Button"
 }
