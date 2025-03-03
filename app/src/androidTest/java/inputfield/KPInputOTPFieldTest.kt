@@ -13,7 +13,7 @@ import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
 import org.junit.Test
 
-class InputOTPFieldTest : DesignScreenshotTest() {
+class KPInputOTPFieldTest : DesignScreenshotTest() {
 
     @Test
     fun kpInputOTPFieldStyleTest() = runScreenShotTest(
