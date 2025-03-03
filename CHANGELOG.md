@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `KPInputPhoneNumberField` error text's maxLines changed from `Int.MAX_VALUE` to `2`.
 - `KPDropdown` error text's maxLines changed from `Int.MAX_VALUE` to `2`.
 - `KPMultiLineOutlineTextField` error text's maxLines changed from `Int.MAX_VALUE` to `2`.
+- `KPSingleLineOutlinedTextField` error text's maxLines changed from `Int.MAX_VALUE` to `2`.
 
 ## [0.16.0] - 2025-01-13
 
