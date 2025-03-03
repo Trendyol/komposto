@@ -21,7 +21,7 @@ import core.DesignScreenshotTestContainer
 import org.junit.Ignore
 import org.junit.Test
 
-internal class InputEmailFieldTest : DesignScreenshotTest() {
+internal class KPInputEmailFieldTest : DesignScreenshotTest() {
 
     private val email = "komposto@trendyol.com"
     private val labelText = "Example Label Text"
