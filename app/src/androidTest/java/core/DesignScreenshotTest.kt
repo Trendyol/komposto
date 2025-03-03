@@ -9,7 +9,7 @@ import com.karumi.shot.ScreenshotTest
 import com.trendyol.design.ui.theme.TrendyolTheme
 import org.junit.Rule
 
-internal abstract class DesignScreenshotTest : ScreenshotTest {
+abstract class DesignScreenshotTest : ScreenshotTest {
 
     @get:Rule
     internal val composeTestRule: ComposeContentTestRule = createComposeRule()
