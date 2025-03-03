@@ -31,6 +31,7 @@ import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.preview.PreviewTheme
@@ -183,6 +184,8 @@ public fun KPInputOTPField(
                     .fillMaxWidth(),
                 text = errorText,
                 style = KPDesign.typography.body1ColorWarning,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
             )
         }
 
@@ -193,6 +196,8 @@ public fun KPInputOTPField(
                     .fillMaxWidth(),
                 text = hint,
                 style = KPDesign.typography.body1ColorOnSurfaceVariant1,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
             )
         }
     }
