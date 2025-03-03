@@ -17,9 +17,11 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.text.isDigitsOnly
 import com.trendyol.design.core.inputfield.Dropdown
+import com.trendyol.design.core.inputfield.KPDropdown
 import com.trendyol.design.core.inputfield.KPDropdownStyle
 import com.trendyol.design.core.inputfield.TrendyolDropdownStyle
 import com.trendyol.design.core.inputfield.KPOutlinedTextField
@@ -75,7 +77,7 @@ public fun KPInputPhoneNumberField(
         Row(
             modifier = Modifier.height(44.dp)
         ) {
-            Dropdown(
+            KPDropdown(
                 style = KPDropdownStyle.FloatingLabelOutlined,
                 value = countryCode,
                 label = countryCodeLabel,
@@ -126,6 +128,8 @@ public fun KPInputPhoneNumberField(
                     ),
                 text = error,
                 style = KPDesign.typography.body1ColorWarning,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
             )
         }
     }

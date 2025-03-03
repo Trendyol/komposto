@@ -124,6 +124,8 @@ public fun KPDropdown(
                     )
                     .fillMaxWidth(),
                 text = errorLabel,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
                 style = KPDesign.typography.body1ColorWarning,
             )
         }

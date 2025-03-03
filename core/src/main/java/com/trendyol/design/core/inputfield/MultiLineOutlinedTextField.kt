@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.preview.PreviewTheme
@@ -97,6 +98,8 @@ public fun KPMultiLineOutlineTextField(
                 KPText(
                     modifier = Modifier.weight(1f),
                     text = errorLabel,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
                     style = KPDesign.typography.body1ColorWarning,
                 )
             } else {
