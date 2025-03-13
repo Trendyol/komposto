@@ -1,11 +1,11 @@
 package icon.fill
 
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIconSize
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
-import com.trendyol.design.core.icon.Icons.Fill;
+import com.trendyol.design.core.icon.KPIcons.Fill;
+import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.icons.fill.Help
 import org.junit.Test
 
@@ -14,41 +14,41 @@ internal class HelpIconTests : DesignScreenshotTest() {
     private val contents = listOf(
         DesignScreenshotTestContainer("Large") {
             BoxWithHorizontalPadding {
-                Icon(
+                KPIcon(
                     imageVector = Fill.Help,
-                    size = TrendyolIconSize.Large
+                    size = KPIconSize.Large
                 )
             }
         },
         DesignScreenshotTestContainer("Medium") {
             BoxWithHorizontalPadding {
-                Icon(
+                KPIcon(
                     imageVector = Fill.Help,
-                    size = TrendyolIconSize.Medium
+                    size = KPIconSize.Medium
                 )
             }
         },
         DesignScreenshotTestContainer("Small") {
             BoxWithHorizontalPadding {
-                Icon(
+                KPIcon(
                     imageVector = Fill.Help,
-                    size = TrendyolIconSize.Small
+                    size = KPIconSize.Small
                 )
             }
         },
         DesignScreenshotTestContainer("XSmall") {
             BoxWithHorizontalPadding {
-                Icon(
+                KPIcon(
                     imageVector = Fill.Help,
-                    size = TrendyolIconSize.XSmall
+                    size = KPIconSize.XSmall
                 )
             }
         },
         DesignScreenshotTestContainer("XXSmall") {
             BoxWithHorizontalPadding {
-                Icon(
+                KPIcon(
                     imageVector = Fill.Help,
-                    size = TrendyolIconSize.XXSmall
+                    size = KPIconSize.XXSmall
                 )
             }
         }

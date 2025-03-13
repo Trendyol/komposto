@@ -13,9 +13,9 @@ import com.trendyol.design.core.preview.PreviewTheme
  * This composable function representing a custom checkbox component designed for the Trendyol.
  *
  * @param style The style configuration for the checkbox, defining its appearance.
- * See [TrendyolCheckBoxStyle.Primary] and [TrendyolCheckBoxStyle.Secondary]
+ * See [KPCheckboxStyle.Primary] and [KPCheckboxStyle.Secondary]
  * @param size The size configuration for the checkbox, determining its dimensions.
- * See [TrendyolCheckBoxSize.Medium], [TrendyolCheckBoxSize.Small] and [TrendyolCheckBoxSize.XSmall]
+ * See [KPCheckboxSize.Medium], [KPCheckboxSize.Small] and [KPCheckboxSize.XSmall]
  * @param containerType The type of container in which the checkbox is placed.
  * See [CheckboxContainerType.Text], [CheckboxContainerType.Content] and [CheckboxContainerType.None]
  * @param checked The current checked state of the checkbox.
@@ -27,7 +27,7 @@ import com.trendyol.design.core.preview.PreviewTheme
  * @param position The vertical alignment of the checkbox within its container.
  */
 @Composable
-public fun TrendyolCheckbox(
+public fun KPCheckbox(
     style: CheckboxStyle,
     size: CheckboxSize,
     containerType: CheckboxContainerType,
@@ -38,7 +38,7 @@ public fun TrendyolCheckbox(
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     position: Alignment.Vertical = Alignment.CenterVertically,
 ) {
-    TrendyolTriStateCheckbox(
+    KPTriStateCheckbox(
         modifier = modifier,
         style = style,
         containerType = containerType,
@@ -54,13 +54,63 @@ public fun TrendyolCheckbox(
     )
 }
 
-@Preview(showSystemUi = true, showBackground = true)
+/**
+ * This composable function representing a custom checkbox component designed for the Trendyol.
+ *
+ * @param style The style configuration for the checkbox, defining its appearance.
+ * See [TrendyolCheckBoxStyle.Primary] and [TrendyolCheckBoxStyle.Secondary]
+ * @param size The size configuration for the checkbox, determining its dimensions.
+ * See [TrendyolCheckBoxSize.Medium], [TrendyolCheckBoxSize.Small] and [TrendyolCheckBoxSize.XSmall]
+ * @param containerType The type of container in which the checkbox is placed.
+ * See [CheckboxContainerType.Text], [CheckboxContainerType.Content] and [CheckboxContainerType.None]
+ * @param checked The current checked state of the checkbox.
+ * @param onCheckedChange A callback function invoked when the checked state of the checkbox changes.
+ *                        It receives a Boolean parameter indicating the new checked state.
+ * @param modifier Additional modifier for the layout of the checkbox.
+ * @param enabled Whether the checkbox is interactive and can be checked/unchecked by the user.
+ * @param interactionSource The source of interactions for the checkbox, used for tracking user interactions.
+ * @param position The vertical alignment of the checkbox within its container.
+ */
+@Composable
+@Deprecated(
+    message = "Use KPCheckbox instead for consistent naming. " +
+        "This API will get removed in future releases.",
+    level = DeprecationLevel.WARNING
+)
+public fun TrendyolCheckbox(
+    style: CheckboxStyle,
+    size: CheckboxSize,
+    containerType: CheckboxContainerType,
+    checked: Boolean,
+    onCheckedChange: ((Boolean) -> Unit)?,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+    position: Alignment.Vertical = Alignment.CenterVertically,
+) {
+    KPTriStateCheckbox(
+        modifier = modifier,
+        style = style,
+        containerType = containerType,
+        size = size,
+        state = ToggleableState(checked),
+        onClick = if (onCheckedChange != null) {
+            { onCheckedChange(!checked) }
+        } else null,
+        interactionSource = interactionSource,
+        enabled = enabled,
+        colors = style.colors,
+        position = position,
+    )
+}
+
+@Preview(showBackground = true)
 @Composable
 private fun TrendyolMediumCheckboxPreviewChecked() {
     PreviewTheme {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { },
@@ -68,13 +118,13 @@ private fun TrendyolMediumCheckboxPreviewChecked() {
     }
 }
 
-@Preview(showSystemUi = true, showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun TrendyolMediumCheckboxPreview() {
     PreviewTheme {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = false,
             onCheckedChange = { },
@@ -82,13 +132,13 @@ private fun TrendyolMediumCheckboxPreview() {
     }
 }
 
-@Preview(showSystemUi = true, showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun TrendyolMediumCheckboxPreviewDisabled() {
     PreviewTheme {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Medium,
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.Medium,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { },
@@ -97,13 +147,13 @@ private fun TrendyolMediumCheckboxPreviewDisabled() {
     }
 }
 
-@Preview(showSystemUi = true, showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun TrendyolSmallCheckboxPreviewChecked() {
     PreviewTheme {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { },
@@ -111,13 +161,13 @@ private fun TrendyolSmallCheckboxPreviewChecked() {
     }
 }
 
-@Preview(showSystemUi = true, showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun TrendyolSmallCheckboxPreview() {
     PreviewTheme {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = false,
             onCheckedChange = { },
@@ -125,13 +175,13 @@ private fun TrendyolSmallCheckboxPreview() {
     }
 }
 
-@Preview(showSystemUi = true, showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun TrendyolSmallCheckboxPreviewDisabled() {
     PreviewTheme {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.Small,
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.Small,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { },
@@ -140,13 +190,13 @@ private fun TrendyolSmallCheckboxPreviewDisabled() {
     }
 }
 
-@Preview(showSystemUi = true, showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun TrendyolXSmallCheckboxPreviewChecked() {
     PreviewTheme {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { },
@@ -154,13 +204,13 @@ private fun TrendyolXSmallCheckboxPreviewChecked() {
     }
 }
 
-@Preview(showSystemUi = true, showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun TrendyolXSmallCheckboxPreview() {
     PreviewTheme {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = false,
             onCheckedChange = { },
@@ -168,13 +218,13 @@ private fun TrendyolXSmallCheckboxPreview() {
     }
 }
 
-@Preview(showSystemUi = true, showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun TrendyolXSmallCheckboxPreviewDisabled() {
     PreviewTheme {
-        TrendyolCheckbox(
-            style = TrendyolCheckBoxStyle.Primary,
-            size = TrendyolCheckBoxSize.XSmall,
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.XSmall,
             containerType = CheckboxContainerType.None,
             checked = true,
             onCheckedChange = { },

@@ -8,12 +8,12 @@ import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.core.badge.boxbadge.KPBoxBadgeGroup
 import com.trendyol.design.core.badge.boxbadge.KPBoxBadgeType
 import com.trendyol.design.core.badge.boxbadge.BoxBadge
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.ui.theme.TrendyolTheme
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 import kotlinx.collections.immutable.toPersistentList
 
 @Preview(showBackground = true)
@@ -27,8 +27,8 @@ internal fun Default_BoxBadgeGroup_4() = TrendyolTheme {
     val list = listOf(
         KPBoxBadgeType.Custom(
             title = "Custom Badge",
-            backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
-            icon = Icons.Fill.Help,
+            backgroundColor = KPDesign.colors.colorBlueVariant1,
+            icon = KPIcons.Fill.Help,
         ),
         KPBoxBadgeType.Defaults.Coupon(),
         KPBoxBadgeType.Defaults.FreeDelivery(),
@@ -50,8 +50,8 @@ internal fun Scaled_BoxBadgeGroup_4() = TrendyolTheme {
     val list = listOf(
         KPBoxBadgeType.Custom(
             title = "Custom Badge",
-            backgroundColor = TrendyolDesign.colors.colorBlueVariant1,
-            icon = Icons.Fill.Help,
+            backgroundColor = KPDesign.colors.colorBlueVariant1,
+            icon = KPIcons.Fill.Help,
         ),
         KPBoxBadgeType.Defaults.Coupon(),
         KPBoxBadgeType.Defaults.FreeDelivery(),

@@ -3,7 +3,7 @@ package com.trendyol.design.core.badge.boxbadge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Cargo
 import com.trendyol.design.core.icon.icons.fill.Coupon
 import com.trendyol.design.core.icon.icons.fill.Credit
@@ -12,7 +12,7 @@ import com.trendyol.design.core.icon.icons.fill.FenomenGradient
 import com.trendyol.design.core.icon.icons.fill.Campaign
 import com.trendyol.design.core.icon.icons.fill.Percentage
 import com.trendyol.design.core.icon.icons.fill.PlayGradient
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 public sealed class KPBoxBadgeType {
 
@@ -34,10 +34,10 @@ public sealed class KPBoxBadgeType {
 
         public data class Coupon(override val title: String = "Kupon Fırsatı") : BoxBadge {
 
-            public override val icon: ImageVector = Icons.Fill.Coupon
+            public override val icon: ImageVector = KPIcons.Fill.Coupon
 
             public override val iconTintColor: Color
-                @Composable get() = TrendyolDesign.colors.colorPink
+                @Composable get() = KPDesign.colors.colorPink
 
             public override val boxBackgroundColor: Color
                 @Composable get() = Color(color = 0xFFFFF0F5)
@@ -45,10 +45,10 @@ public sealed class KPBoxBadgeType {
 
         public data class FreeDelivery(override val title: String = "Kargo Bedava") : BoxBadge {
 
-            public override val icon: ImageVector = Icons.Fill.Cargo
+            public override val icon: ImageVector = KPIcons.Fill.Cargo
 
             public override val iconTintColor: Color
-                @Composable get() = TrendyolDesign.colors.colorOnSurfaceVariant2
+                @Composable get() = KPDesign.colors.colorOnSurfaceVariant2
 
             public override val boxBackgroundColor: Color
                 @Composable get() = Color(color = 0xFFF7F7F7)
@@ -56,7 +56,7 @@ public sealed class KPBoxBadgeType {
 
         public data class FastDelivery(override val title: String = "Hızlı Teslimat") : BoxBadge {
 
-            public override val icon: ImageVector = Icons.Fill.Delivery
+            public override val icon: ImageVector = KPIcons.Fill.Delivery
 
             public override val iconTintColor: Color
                 @Composable get() = Color(color = 0xFF0BC15C)
@@ -67,10 +67,10 @@ public sealed class KPBoxBadgeType {
 
         public data class BuyMorePayLess(override val title: String = "Çok Al Az Öde") : BoxBadge {
 
-            public override val icon: ImageVector = Icons.Fill.Campaign
+            public override val icon: ImageVector = KPIcons.Fill.Campaign
 
             public override val iconTintColor: Color
-                @Composable get() = TrendyolDesign.colors.colorPrimary
+                @Composable get() = KPDesign.colors.colorPrimary
 
             public override val boxBackgroundColor: Color
                 @Composable get() = Color(color = 0xFFFEF4ED)
@@ -78,10 +78,10 @@ public sealed class KPBoxBadgeType {
 
         public data class BuyTogether(override val title: String = "Birlikte Al Kazan") : BoxBadge {
 
-            public override val icon: ImageVector = Icons.Fill.Percentage
+            public override val icon: ImageVector = KPIcons.Fill.Percentage
 
             public override val iconTintColor: Color
-                @Composable get() = TrendyolDesign.colors.colorPrimary
+                @Composable get() = KPDesign.colors.colorPrimary
 
             public override val boxBackgroundColor: Color
                 @Composable get() = Color(color = 0xFFFEF4ED)
@@ -89,7 +89,7 @@ public sealed class KPBoxBadgeType {
 
         public data class Video(override val title: String = "Videolu Ürün") : BoxBadge {
 
-            public override val icon: ImageVector = Icons.Fill.PlayGradient
+            public override val icon: ImageVector = KPIcons.Fill.PlayGradient
 
             public override val iconTintColor: Color
                 @Composable get() = Color.Unspecified
@@ -100,7 +100,7 @@ public sealed class KPBoxBadgeType {
 
         public data class TodayDelivery(override val title: String = "Bugün Kargoda") : BoxBadge {
 
-            public override val icon: ImageVector = Icons.Fill.Delivery
+            public override val icon: ImageVector = KPIcons.Fill.Delivery
 
             public override val iconTintColor: Color
                 @Composable get() = Color(color = 0xFF159F52)
@@ -111,20 +111,20 @@ public sealed class KPBoxBadgeType {
 
         public data class Credit(override val title: String = "Krediye Uygun") : BoxBadge {
 
-            public override val icon: ImageVector = Icons.Fill.Credit
+            public override val icon: ImageVector = KPIcons.Fill.Credit
 
             public override val iconTintColor: Color
-                @Composable get() = TrendyolDesign.colors.colorStar
+                @Composable get() = KPDesign.colors.colorStar
 
             public override val boxBackgroundColor: Color
-                @Composable get() = TrendyolDesign.colors.colorStarVariant1
+                @Composable get() = KPDesign.colors.colorStarVariant1
         }
 
         public data class InfluencerChoice(
             override val title: String = "Fenomen Seçimi"
         ) : BoxBadge {
 
-            public override val icon: ImageVector = Icons.Fill.FenomenGradient
+            public override val icon: ImageVector = KPIcons.Fill.FenomenGradient
 
             public override val iconTintColor: Color
                 @Composable get() = Color.Unspecified

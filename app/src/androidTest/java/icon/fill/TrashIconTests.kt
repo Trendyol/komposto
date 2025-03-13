@@ -1,8 +1,8 @@
 package icon.fill
 
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Trash
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
@@ -13,41 +13,41 @@ internal class TrashIconTests : DesignScreenshotTest() {
     private val contents = listOf(
         DesignScreenshotTestContainer("Large") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Fill.Trash,
-                    size = TrendyolIconSize.Large
+                KPIcon(
+                    imageVector = KPIcons.Fill.Trash,
+                    size = KPIconSize.Large
                 )
             }
         },
         DesignScreenshotTestContainer("Medium") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Fill.Trash,
-                    size = TrendyolIconSize.Medium
+                KPIcon(
+                    imageVector = KPIcons.Fill.Trash,
+                    size = KPIconSize.Medium
                 )
             }
         },
         DesignScreenshotTestContainer("Small") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Fill.Trash,
-                    size = TrendyolIconSize.Small
+                KPIcon(
+                    imageVector = KPIcons.Fill.Trash,
+                    size = KPIconSize.Small
                 )
             }
         },
         DesignScreenshotTestContainer("XSmall") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Fill.Trash,
-                    size = TrendyolIconSize.XSmall
+                KPIcon(
+                    imageVector = KPIcons.Fill.Trash,
+                    size = KPIconSize.XSmall
                 )
             }
         },
         DesignScreenshotTestContainer("XXSmall") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Fill.Trash,
-                    size = TrendyolIconSize.XXSmall
+                KPIcon(
+                    imageVector = KPIcons.Fill.Trash,
+                    size = KPIconSize.XXSmall
                 )
             }
         }

@@ -9,16 +9,16 @@ import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.graphics.Color
 
 /**
- * Default implementation of RadioButtonColors tailored for [com.trendyol.theme.TrendyolDesign] theme.
+ * Default implementation of RadioButtonColors tailored for [com.trendyol.theme.KPDesign] theme.
  *
- * This class provides colors for [TrendyolRadioButton] components based on their state and the Trendyol design guidelines.
+ * This class provides colors for [KPRadioButton] components based on their state and the Trendyol design guidelines.
  *
  * @property selectedColor Color when the RadioButton is selected.
  * @property unselectedColor Color when the RadioButton is not selected.
  * @property disabledSelectedColor Color when the RadioButton is disabled and selected.
  * @property disabledUnselectedColor Color when the RadioButton is disabled and not selected.
  */
-internal class TrendyolDefaultRadioButtonColors(
+internal class KPDefaultRadioButtonColors(
     private val selectedColor: Color,
     private val unselectedColor: Color,
     private val disabledSelectedColor: Color,

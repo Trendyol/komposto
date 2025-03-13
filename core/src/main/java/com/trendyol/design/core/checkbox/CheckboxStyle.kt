@@ -17,7 +17,7 @@ public interface CheckboxStyle {
      * This includes the colors for the checkboxes various states
      * such as checked, unchecked, disabled, etc.
      */
-    public val colors: TrendyolCheckboxColors
+    public val colors: KPCheckboxColors
         @Composable get
 
     /**

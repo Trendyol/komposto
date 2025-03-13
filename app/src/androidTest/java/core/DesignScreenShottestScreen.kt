@@ -8,8 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.text.Text
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.design.core.text.KPText
+import com.trendyol.theme.KPDesign
 
 @Composable
 internal fun DesignScreenshotTestScreen(
@@ -21,23 +21,23 @@ internal fun DesignScreenshotTestScreen(
         modifier = modifier.padding(vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        Text(
+        KPText(
             modifier = Modifier
                 .padding(horizontal = 8.dp)
                 .align(Alignment.CenterHorizontally),
             text = title,
-            style = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant1
+            style = KPDesign.typography.titleMediumColorOnSurfaceVariant1
         )
-        Divider(color = TrendyolDesign.colors.colorBorder)
+        Divider(color = KPDesign.colors.colorBorder)
         containers.forEach { container ->
-            Text(
+            KPText(
                 modifier = Modifier.padding(horizontal = 8.dp),
                 text = container.name,
-                style = TrendyolDesign.typography.title
+                style = KPDesign.typography.title
             )
-            Divider(color = TrendyolDesign.colors.colorBorder)
+            Divider(color = KPDesign.colors.colorBorder)
             container.content()
-            Divider(color = TrendyolDesign.colors.colorBorder)
+            Divider(color = KPDesign.colors.colorBorder)
         }
     }
 }

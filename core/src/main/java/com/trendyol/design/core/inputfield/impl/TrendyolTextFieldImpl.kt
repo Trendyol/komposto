@@ -41,19 +41,19 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.lerp
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
-internal enum class TrendyolTextFieldType {
+internal enum class KPTextFieldType {
     Filled, Outlined
 }
 
 /**
- * Implementation of the [TrendyolTextFieldLayout] and [TrendyolOutlinedTextFieldLayout]
+ * Implementation of the [KPTextFieldLayout] and [KPOutlinedTextFieldLayout]
  */
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-internal fun TrendyolCommonDecorationBox(
-    type: TrendyolTextFieldType,
+internal fun KPCommonDecorationBox(
+    type: KPTextFieldType,
     value: String,
     innerTextField: @Composable () -> Unit,
     visualTransformation: VisualTransformation,
@@ -67,8 +67,8 @@ internal fun TrendyolCommonDecorationBox(
     interactionSource: InteractionSource,
     contentPadding: PaddingValues,
     colors: TextFieldColors,
-    labelInitialTextStyle: TextStyle = TrendyolDesign.typography.subtitleMedium,
-    labelEndTextStyle: TextStyle = TrendyolDesign.typography.body2Medium,
+    labelInitialTextStyle: TextStyle = KPDesign.typography.subtitleMedium,
+    labelEndTextStyle: TextStyle = KPDesign.typography.body2Medium,
     border: @Composable (() -> Unit)? = null
 ) {
     val transformedText = remember(value, visualTransformation) {
@@ -92,7 +92,7 @@ internal fun TrendyolCommonDecorationBox(
         ).value
     }
 
-    val typography = TrendyolDesign.typography
+    val typography = KPDesign.typography
     val subtitle1 = typography.subtitleMedium
     val caption = typography.body2Medium
     val shouldOverrideTextStyleColor =
@@ -168,8 +168,8 @@ internal fun TrendyolCommonDecorationBox(
         }
 
         when (type) {
-            TrendyolTextFieldType.Filled -> {
-                TrendyolTextFieldLayout(
+            KPTextFieldType.Filled -> {
+                KPTextFieldLayout(
                     modifier = decorationBoxModifier,
                     textField = innerTextField,
                     placeholder = decoratedPlaceholder,
@@ -182,7 +182,7 @@ internal fun TrendyolCommonDecorationBox(
                 )
             }
 
-            TrendyolTextFieldType.Outlined -> {
+            KPTextFieldType.Outlined -> {
                 // Outlined cutout
                 val labelSize = remember { mutableStateOf(Size.Zero) }
                 val drawBorder: @Composable () -> Unit = {
@@ -196,7 +196,7 @@ internal fun TrendyolCommonDecorationBox(
                     }
                 }
 
-                TrendyolOutlinedTextFieldLayout(
+                KPOutlinedTextFieldLayout(
                     modifier = decorationBoxModifier,
                     textField = innerTextField,
                     placeholder = decoratedPlaceholder,

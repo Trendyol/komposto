@@ -1,8 +1,11 @@
 package icon.outline
 
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.outline.Back
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
@@ -13,41 +16,41 @@ internal class BackIconTests : DesignScreenshotTest() {
     private val contents = listOf(
         DesignScreenshotTestContainer("Large") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.Back,
-                    size = TrendyolIconSize.Large
+                KPIcon(
+                    imageVector = KPIcons.Outline.Back,
+                    size = KPIconSize.Large
                 )
             }
         },
         DesignScreenshotTestContainer("Medium") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.Back,
-                    size = TrendyolIconSize.Medium
+                KPIcon(
+                    imageVector = KPIcons.Outline.Back,
+                    size = KPIconSize.Medium
                 )
             }
         },
         DesignScreenshotTestContainer("Small") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.Back,
-                    size = TrendyolIconSize.Small
+                KPIcon(
+                    imageVector = KPIcons.Outline.Back,
+                    size = KPIconSize.Small
                 )
             }
         },
         DesignScreenshotTestContainer("XSmall") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.Back,
-                    size = TrendyolIconSize.XSmall
+                KPIcon(
+                    imageVector = KPIcons.Outline.Back,
+                    size = KPIconSize.XSmall
                 )
             }
         },
         DesignScreenshotTestContainer("XXSmall") {
             BoxWithHorizontalPadding {
-                Icon(
-                    imageVector = Icons.Outline.Back,
-                    size = TrendyolIconSize.XXSmall
+                KPIcon(
+                    imageVector = KPIcons.Outline.Back,
+                    size = KPIconSize.XXSmall
                 )
             }
         }
@@ -57,5 +60,22 @@ internal class BackIconTests : DesignScreenshotTest() {
     fun backIconTests() = runScreenShotTest(
         testName = "Back Icon Tests",
         contents = contents
+    )
+
+    @Test
+    fun backIconRTLTest() = runScreenShotTest(
+        testName = "Back Icon RTL Tests",
+        contents = listOf(
+            DesignScreenshotTestContainer("Large") {
+                BoxWithHorizontalPadding {
+                    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+                        KPIcon(
+                            imageVector = KPIcons.Outline.Back,
+                            size = KPIconSize.Large
+                        )
+                    }
+                }
+            },
+        )
     )
 }

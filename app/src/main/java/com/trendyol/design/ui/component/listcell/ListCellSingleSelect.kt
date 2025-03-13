@@ -9,7 +9,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
-import com.trendyol.design.bottomsheet.item.BottomSheetSingleSelectItem
+import com.trendyol.design.bottomsheet.item.KPBottomSheetSingleSelectItem
 import com.trendyol.design.ui.component.common.Component.LIST_CELL_SINGLE_SELECT_ITEM
 import com.trendyol.design.ui.component.common.Group.LIST_CELL
 import com.trendyol.design.ui.theme.TrendyolTheme
@@ -19,20 +19,20 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 @Composable
 internal fun ListCellSingleSelectBasic() = TrendyolTheme {
     Column {
-        BottomSheetSingleSelectItem(
+        KPBottomSheetSingleSelectItem(
             selected = false,
             text = stringResource(id = R.string.title),
             onClick = { },
             helperText = stringResource(id = R.string.helper_text),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetSingleSelectItem(
+        KPBottomSheetSingleSelectItem(
             selected = false,
             text = stringResource(id = R.string.title),
             onClick = { },
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetSingleSelectItem(
+        KPBottomSheetSingleSelectItem(
             selected = false,
             text = stringResource(id = R.string.title),
             onClick = { },
@@ -40,14 +40,14 @@ internal fun ListCellSingleSelectBasic() = TrendyolTheme {
             helperText = stringResource(id = R.string.helper_text),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetSingleSelectItem(
+        KPBottomSheetSingleSelectItem(
             selected = false,
             text = stringResource(id = R.string.title),
             onClick = { },
             isIconVisible = false,
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetSingleSelectItem(
+        KPBottomSheetSingleSelectItem(
             selected = true,
             text = stringResource(id = R.string.title),
             onClick = { },
@@ -62,7 +62,7 @@ internal fun ListCellSingleSelectBasic() = TrendyolTheme {
 @Composable
 internal fun ListCellSingleSelectRich() = TrendyolTheme {
     Column {
-        BottomSheetSingleSelectItem(
+        KPBottomSheetSingleSelectItem(
             selected = false,
             text = stringResource(id = R.string.title),
             onClick = { },
@@ -70,14 +70,14 @@ internal fun ListCellSingleSelectRich() = TrendyolTheme {
             helperText = stringResource(id = R.string.helper_text),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetSingleSelectItem(
+        KPBottomSheetSingleSelectItem(
             selected = false,
             text = stringResource(id = R.string.title),
             onClick = { },
             description = stringResource(id = R.string.description),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetSingleSelectItem(
+        KPBottomSheetSingleSelectItem(
             selected = false,
             text = stringResource(id = R.string.title),
             onClick = { },
@@ -86,7 +86,7 @@ internal fun ListCellSingleSelectRich() = TrendyolTheme {
             helperText = stringResource(id = R.string.helper_text),
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetSingleSelectItem(
+        KPBottomSheetSingleSelectItem(
             selected = false,
             text = stringResource(id = R.string.title),
             onClick = { },
@@ -94,7 +94,7 @@ internal fun ListCellSingleSelectRich() = TrendyolTheme {
             isIconVisible = false,
             modifier = Modifier.padding(vertical = 12.dp),
         )
-        BottomSheetSingleSelectItem(
+        KPBottomSheetSingleSelectItem(
             selected = true,
             text = stringResource(id = R.string.title),
             onClick = { },

@@ -2,25 +2,25 @@ package com.trendyol.design.ui.component.toolbar
 
 import androidx.compose.runtime.Composable
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.icon.icons.fill.Trash
 import com.trendyol.design.core.icon.icons.outline.Back
-import com.trendyol.design.core.toolbar.Toolbar
-import com.trendyol.design.core.toolbar.TrendyolToolbarStyle
+import com.trendyol.design.core.toolbar.KPToolbar
+import com.trendyol.design.core.toolbar.KPToolbarStyle
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 @ShowkaseComposable(group = Group.TOOLBAR, name = Component.TOOLBAR_ICON_NONE, styleName = "Toolbar.Icon.None")
 @Composable
 internal fun Toolbar_Icon_None_Showkase() {
     TrendyolTheme {
-        Toolbar(
+        KPToolbar(
             title = "Title",
-            style = TrendyolToolbarStyle.Icon.None(
-                icon = { Icon(imageVector = Icons.Fill.Help, onClick = { }) },
+            style = KPToolbarStyle.Icon.None(
+                icon = { Icon(imageVector = KPIcons.Fill.Help, onClick = { }) },
             )
         )
     }
@@ -34,14 +34,14 @@ internal fun Toolbar_Icon_None_Showkase() {
 @Composable
 internal fun Toolbar_Icon_Text_Button_Showkase() {
     TrendyolTheme {
-        Toolbar(
+        KPToolbar(
             title = "Title",
-            style = TrendyolToolbarStyle.Icon.TextButton(
+            style = KPToolbarStyle.Icon.TextButton(
                 icon = {
                     Icon(
-                        imageVector = Icons.Outline.Back,
+                        imageVector = KPIcons.Outline.Back,
                         onClick = { },
-                        tint = TrendyolDesign.colors.colorOnSurfaceVariant3
+                        tint = KPDesign.colors.colorOnSurfaceVariant3
                     )
                 },
                 textButton = { Text(text = "CTA Label", onClick = { }) }
@@ -54,18 +54,18 @@ internal fun Toolbar_Icon_Text_Button_Showkase() {
 @Composable
 internal fun Toolbar_Icon_End_Icon_Showkase() {
     TrendyolTheme {
-        Toolbar(
+        KPToolbar(
             title = "Title",
-            style = TrendyolToolbarStyle.Icon.EndIcon(
+            style = KPToolbarStyle.Icon.EndIcon(
                 icon = {
                     Icon(
-                        imageVector = Icons.Outline.Back,
+                        imageVector = KPIcons.Outline.Back,
                         onClick = { },
-                        tint = TrendyolDesign.colors.colorOnSurfaceVariant3
+                        tint = KPDesign.colors.colorOnSurfaceVariant3
                     )
                 },
                 endIcon = {
-                    Icon(imageVector = Icons.Fill.Trash, onClick = { })
+                    Icon(imageVector = KPIcons.Fill.Trash, onClick = { })
                 }
             )
         )
@@ -80,18 +80,18 @@ internal fun Toolbar_Icon_End_Icon_Showkase() {
 @Composable
 internal fun Toolbar_Icon_End_Two_Icon_Showkase() {
     TrendyolTheme {
-        Toolbar(
+        KPToolbar(
             title = "Title",
-            style = TrendyolToolbarStyle.Icon.EndTwoIcons(
+            style = KPToolbarStyle.Icon.EndTwoIcons(
                 icon = {
                     Icon(
-                        imageVector = Icons.Outline.Back,
+                        imageVector = KPIcons.Outline.Back,
                         onClick = { },
-                        tint = TrendyolDesign.colors.colorOnSurfaceVariant3
+                        tint = KPDesign.colors.colorOnSurfaceVariant3
                     )
                 },
-                firstIcon = { Icon(imageVector = Icons.Fill.Help, onClick = { }) },
-                secondIcon = { Icon(imageVector = Icons.Fill.Trash, onClick = { }) }
+                firstIcon = { Icon(imageVector = KPIcons.Fill.Help, onClick = { }) },
+                secondIcon = { Icon(imageVector = KPIcons.Fill.Trash, onClick = { }) }
             )
         )
     }

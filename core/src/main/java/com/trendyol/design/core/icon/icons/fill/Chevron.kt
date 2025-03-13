@@ -20,6 +20,14 @@ private fun VectorPreview() {
     Icon(Icons.Outline.Chevron, TrendyolIconSize.XSmall)
 }
 
+@Deprecated(
+    message = "Use KPIcons.Outline.Chevron instead for consistent naming. " +
+        "This API will get removed in future releases.",
+    replaceWith = ReplaceWith(
+        expression = "KPIcons.Outline.Chevron",
+    ),
+    level = DeprecationLevel.WARNING
+)
 public val Icons.Outline.Chevron: ImageVector by lazy {
     ImageVector.Builder(
         name = "Chevron",

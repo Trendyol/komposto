@@ -38,16 +38,17 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.lerp
-import com.trendyol.design.core.text.Text
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.design.core.text.KPText
+import com.trendyol.theme.KPDesign
 import kotlin.math.floor
 import kotlin.math.max
 
 /**
- * This Composable function enhances Material Checkbox with content alignment between the check box and it's content (text or content composable).
+ * This Composable function enhances Material Checkbox with content alignment between the check box
+ * and it's content (text or content composable).
  */
 @Composable
-internal fun TrendyolTriStateCheckbox(
+internal fun KPTriStateCheckbox(
     style: CheckboxStyle,
     size: CheckboxSize,
     containerType: CheckboxContainerType,
@@ -56,7 +57,7 @@ internal fun TrendyolTriStateCheckbox(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-    colors: TrendyolCheckboxColors = TrendyolCheckboxDefaults.colors(),
+    colors: KPCheckboxColors = KPCheckboxDefaults.colors(),
     position: Alignment.Vertical = Alignment.CenterVertically,
 ) {
     val toggleableModifier = if (onClick != null) {
@@ -110,10 +111,10 @@ internal fun TrendyolTriStateCheckbox(
         when (containerType) {
             is CheckboxContainerType.Text -> {
                 Spacer(modifier = Modifier.width(8.dp))
-                Text(
+                KPText(
                     text = containerType.text,
                     style = size.textStyle,
-                    color = TrendyolDesign.colors.colorOnSurfaceVariant3
+                    color = KPDesign.colors.colorOnSurfaceVariant3
                 )
             }
 
@@ -133,7 +134,7 @@ private fun TrendyolCheckboxImpl(
     enabled: Boolean,
     value: ToggleableState,
     modifier: Modifier = Modifier,
-    colors: TrendyolCheckboxColors
+    colors: KPCheckboxColors
 ) {
     val transition = updateTransition(targetState = value, label = CHECKBOX_LABEL)
     val checkDrawFraction by transition.animateFloat(

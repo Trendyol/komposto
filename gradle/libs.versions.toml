@@ -1,4 +1,5 @@
 [versions]
+androidDocumentationPlugin = "1.9.20"
 androidx-compose-bom = '2024.02.01'
 test-rules = '1.5.0'
 shot = '6.1.0'
@@ -8,6 +9,7 @@ kotlinGradlePlugin = "1.9.24"
 composeCompiler = "1.5.14"
 
 [libraries]
+androidDocumentationPlugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version.ref = "androidDocumentationPlugin" }
 androidx-core = "androidx.core:core-ktx:1.12.0"
 androidx-activity-compose = "androidx.activity:activity-compose:1.8.2"
 androidx-lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
