@@ -6,18 +6,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.component.common.Component.TITLE
 import com.trendyol.design.ui.component.common.Group.TYPOGRAPHY
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 @ShowkaseComposable(group = TYPOGRAPHY, name = TITLE, styleName = "Title")
 @Composable
 internal fun B_Title() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.title,
+        style = KPDesign.typography.title,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -25,9 +25,9 @@ internal fun B_Title() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = TITLE, styleName = "Title.Bold")
 @Composable
 internal fun Title_Bold() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.titleBold,
+        style = KPDesign.typography.titleBold,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -35,9 +35,9 @@ internal fun Title_Bold() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = TITLE, styleName = "Title.Medium")
 @Composable
 internal fun Title_Medium() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.titleMedium,
+        style = KPDesign.typography.titleMedium,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -45,9 +45,9 @@ internal fun Title_Medium() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = TITLE, styleName = "Title.Medium.OneLine")
 @Composable
 internal fun Title_Medium_OneLine() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.titleMedium,
+        style = KPDesign.typography.titleMedium,
         maxLines = 1,
     )
 }

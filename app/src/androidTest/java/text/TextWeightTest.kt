@@ -1,8 +1,8 @@
 package text
 
 import androidx.compose.foundation.layout.Column
-import com.trendyol.design.core.text.Text
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.design.core.text.KPText
+import com.trendyol.theme.KPDesign
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -14,17 +14,17 @@ internal class TextWeightTest : DesignScreenshotTest() {
         DesignScreenshotTestContainer("TitleColorOnSurfaceVariant3 weights") {
             BoxWithHorizontalPadding {
                 Column {
-                    Text(
+                    KPText(
                         text = "Text",
-                        style = TrendyolDesign.typography.titleBoldColorOnSurfaceVariant3
+                        style = KPDesign.typography.titleBoldColorOnSurfaceVariant3
                     )
-                    Text(
+                    KPText(
                         text = "Text",
-                        style = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant3
+                        style = KPDesign.typography.titleMediumColorOnSurfaceVariant3
                     )
-                    Text(
+                    KPText(
                         text = "Text",
-                        style = TrendyolDesign.typography.titleColorOnSurfaceVariant3
+                        style = KPDesign.typography.titleColorOnSurfaceVariant3
                     )
                 }
             }
@@ -32,17 +32,17 @@ internal class TextWeightTest : DesignScreenshotTest() {
         DesignScreenshotTestContainer("OverLineColorOnSurfaceVariant3 weights") {
             BoxWithHorizontalPadding {
                 Column {
-                    Text(
+                    KPText(
                         text = "Text",
-                        style = TrendyolDesign.typography.overLineBoldColorOnSurfaceVariant3
+                        style = KPDesign.typography.overLineBoldColorOnSurfaceVariant3
                     )
-                    Text(
+                    KPText(
                         text = "Text",
-                        style = TrendyolDesign.typography.overLineMediumColorOnSurfaceVariant3
+                        style = KPDesign.typography.overLineMediumColorOnSurfaceVariant3
                     )
-                    Text(
+                    KPText(
                         text = "Text",
-                        style = TrendyolDesign.typography.overLineColorOnSurfaceVariant3
+                        style = KPDesign.typography.overLineColorOnSurfaceVariant3
                     )
                 }
             }

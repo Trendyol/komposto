@@ -3,7 +3,7 @@ package com.trendyol.design.core.countdowntimer
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 /**
  * Sealed interface `TrendyolCountdownTimerStyle` defines specific styles for the countdown timer
@@ -20,24 +20,24 @@ public sealed interface KPCountdownTimerStyle {
      */
     public data object Primary : CountdownTimerStyle {
         override val backgroundColor: Color
-            @Composable get() = TrendyolDesign.colors.colorSurface
+            @Composable get() = KPDesign.colors.colorSurface
 
-        override val separatorTextStyle: TextStyle
-            @Composable get() = TrendyolDesign.typography.titleBold
+        override val separatorTintColor: Color
+            @Composable get() = KPDesign.colors.colorSurface
 
         @Composable
         override fun textStyle(size: CountdownTimerSize): TextStyle {
             return when (size) {
                 is KPCountdownTimerSize.Large ->
-                    TrendyolDesign.typography.subtitleBoldColorOnSurfaceVariant3
+                    KPDesign.typography.subtitleBoldColorOnSurfaceVariant3
 
                 is KPCountdownTimerSize.Medium ->
-                    TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3
+                    KPDesign.typography.subtitleMediumColorOnSurfaceVariant3
 
                 is KPCountdownTimerSize.Small ->
-                    TrendyolDesign.typography.body1BoldColorOnSurfaceVariant3
+                    KPDesign.typography.body1BoldColorOnSurfaceVariant3
 
-                else -> TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3
+                else -> KPDesign.typography.subtitleMediumColorOnSurfaceVariant3
             }
         }
     }

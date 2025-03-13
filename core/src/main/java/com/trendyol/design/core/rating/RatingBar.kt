@@ -40,11 +40,125 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.drawable.toBitmap
 import com.trendyol.design.core.R
 import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Star
 import com.trendyol.design.core.preview.PreviewTheme
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.core.text.Text
+import com.trendyol.theme.KPDesign
 import com.trendyol.theme.TrendyolDesign
 import kotlin.math.floor
+
+/**
+ * A composable function that renders a rating bar with customizable styles and parameters.
+ *
+ * This [KPRatingBar] function provides a flexible way to display a rating with stars, optionally
+ * showing the rating value, a review count, and a camera icon. The stars can be customized in terms
+ * of size, spacing, and colors. The function uses a Canvas to draw the stars and supports vector
+ * images for the star icons.
+ *
+ * @param rating The current rating value to be displayed. It is a Float value representing
+ * the rating.
+ * @param size The size and style to be applied to the rating bar, defined by the [RatingBarSize]
+ * sealed interface.
+ * @param modifier The modifier to apply to the rating bar for layout adjustments and styling.
+ * @param itemCount The number of stars to be displayed in the rating bar.
+ * @param reviewCount An optional parameter to display the count of reviews as a String.
+ * @param showRating A Boolean indicating whether to show the rating value text.
+ * @param showCameraIcon A Boolean indicating whether to show a camera icon at the end of
+ * the rating bar.
+ * @param itemSize The size of each star in the rating bar.
+ * @param spaceBetween The space between each star in the rating bar.
+ * @param icon The resource of the image vector to use for the stars.
+ * @param emptyColor The color of the empty stars.
+ * @param filledColor The color of the filled stars.
+ * @param onRatingClick An optional function to rate, returns clicked star index plus one as Int.
+ */
+@Composable
+public fun KPRatingBar(
+    rating: Float,
+    size: RatingBarSize,
+    modifier: Modifier = Modifier,
+    itemCount: Int = 5,
+    reviewCount: String? = null,
+    showRating: Boolean = false,
+    showCameraIcon: Boolean = false,
+    itemSize: Dp = size.starIconSize,
+    spaceBetween: Dp = 2.dp,
+    icon: ImageVector = KPIcons.Fill.Star,
+    filledColor: Color = KPDesign.colors.colorStar,
+    emptyColor: Color = KPDesign.colors.colorBorder,
+    onRatingClick: ((rate: Int) -> Unit)? = null,
+) {
+
+    val vectorPainter = rememberVectorPainter(image = icon)
+    val spacePx: Float = with(LocalDensity.current) { spaceBetween.toPx() }
+    val totalWidth: Dp = remember { itemSize * itemCount + spaceBetween * (itemCount - 1) }
+
+    Row(
+        modifier = modifier,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        if (showRating) {
+            KPText(
+                modifier = Modifier.padding(end = 4.dp),
+                text = rating.toString(),
+                style = size.textSize,
+            )
+        }
+
+        Canvas(
+            modifier = Modifier
+                .mirror()
+                .size(width = totalWidth, height = itemSize)
+                .graphicsLayer(alpha = 0.99f)
+                .then(
+                    if (onRatingClick != null) {
+                        Modifier.pointerInput(Unit) {
+                            detectTapGestures { offset: Offset ->
+                                val clickedStarIndex = calculateStarIndex(
+                                    tapX = offset.x,
+                                    itemSize = itemSize.toPx(),
+                                    spacePx = spaceBetween.toPx(),
+                                    itemCount = itemCount,
+                                )
+
+                                onRatingClick(clickedStarIndex + 1)
+                            }
+                        }
+                    } else Modifier
+                )
+        ) {
+            drawRating(
+                itemCount = itemCount,
+                painter = vectorPainter,
+                rating = rating,
+                filledColor = filledColor,
+                emptyColor = emptyColor,
+                space = spacePx
+            )
+        }
+
+        reviewCount?.let { reviews ->
+            KPText(
+                modifier = Modifier.padding(start = 4.dp),
+                text = "($reviews)",
+                style = size.textSize,
+            )
+        }
+
+        if (showCameraIcon) {
+            Icon(
+                modifier = Modifier
+                    .padding(start = 6.dp)
+                    .size(size.cameraIconSize),
+                painter = adaptiveIconPainterResource(id = R.drawable.photo),
+                contentDescription = "Camera Icon",
+                tint = Color.Unspecified,
+            )
+        }
+    }
+}
 
 /**
  * A composable function that renders a rating bar with customizable styles and parameters.
@@ -72,6 +186,11 @@ import kotlin.math.floor
  * @param onRatingClick An optional function to rate, returns clicked star index plus one as Int.
  */
 @Composable
+@Deprecated(
+    message = "Use KPRatingBar instead for consistent naming. " +
+        "This API will get removed in future releases.",
+    level = DeprecationLevel.WARNING
+)
 public fun RatingBar(
     rating: Float,
     size: RatingBarSize,
@@ -147,9 +266,9 @@ public fun RatingBar(
         if (showCameraIcon) {
             Icon(
                 modifier = Modifier
-                    .padding(start = 4.dp)
+                    .padding(start = 6.dp)
                     .size(size.cameraIconSize),
-                painter = adaptiveIconPainterResource(id = R.drawable.medium),
+                painter = adaptiveIconPainterResource(id = R.drawable.photo),
                 contentDescription = "Camera Icon",
                 tint = Color.Unspecified,
             )
@@ -228,13 +347,13 @@ private fun Modifier.mirror(): Modifier {
 @Composable
 private fun RatingBarFullSmallPreview() {
     PreviewTheme {
-        RatingBar(
-            size = TrendyolRatingBarSize.Small,
+        KPRatingBar(
+            size = KPRatingBarSize.Small,
             rating = 3.5f,
             showRating = true,
             reviewCount = "277",
-            filledColor = TrendyolDesign.colors.colorStar,
-            emptyColor = TrendyolDesign.colors.colorBackground,
+            filledColor = KPDesign.colors.colorStar,
+            emptyColor = KPDesign.colors.colorBackground,
             spaceBetween = 2.dp,
             itemCount = 5,
             itemSize = 10.dp,
@@ -247,13 +366,13 @@ private fun RatingBarFullSmallPreview() {
 @Composable
 private fun RatingBarFullMediumPreview() {
     PreviewTheme {
-        RatingBar(
-            size = TrendyolRatingBarSize.Medium,
+        KPRatingBar(
+            size = KPRatingBarSize.Medium,
             rating = 3.5f,
             showRating = true,
             reviewCount = "277",
-            filledColor = TrendyolDesign.colors.colorStar,
-            emptyColor = TrendyolDesign.colors.colorBackground,
+            filledColor = KPDesign.colors.colorStar,
+            emptyColor = KPDesign.colors.colorBackground,
             spaceBetween = 2.dp,
             itemCount = 5,
             itemSize = 10.dp,
@@ -266,12 +385,12 @@ private fun RatingBarFullMediumPreview() {
 @Composable
 private fun RatingBarScoreSmallPreview() {
     PreviewTheme {
-        RatingBar(
-            size = TrendyolRatingBarSize.Small,
+        KPRatingBar(
+            size = KPRatingBarSize.Small,
             rating = 3.5f,
             showRating = true,
-            filledColor = TrendyolDesign.colors.colorStar,
-            emptyColor = TrendyolDesign.colors.colorBackground,
+            filledColor = KPDesign.colors.colorStar,
+            emptyColor = KPDesign.colors.colorBackground,
             spaceBetween = 2.dp,
             itemCount = 5,
             itemSize = 10.dp,
@@ -283,12 +402,12 @@ private fun RatingBarScoreSmallPreview() {
 @Composable
 private fun RatingBarScoreMediumPreview() {
     PreviewTheme {
-        RatingBar(
-            size = TrendyolRatingBarSize.Medium,
+        KPRatingBar(
+            size = KPRatingBarSize.Medium,
             rating = 3.5f,
             showRating = true,
-            filledColor = TrendyolDesign.colors.colorStar,
-            emptyColor = TrendyolDesign.colors.colorBackground,
+            filledColor = KPDesign.colors.colorStar,
+            emptyColor = KPDesign.colors.colorBackground,
             spaceBetween = 2.dp,
             itemCount = 5,
             itemSize = 10.dp,
@@ -300,13 +419,13 @@ private fun RatingBarScoreMediumPreview() {
 @Composable
 private fun RatingBarScoreReviewSmallPreview() {
     PreviewTheme {
-        RatingBar(
-            size = TrendyolRatingBarSize.Small,
+        KPRatingBar(
+            size = KPRatingBarSize.Small,
             rating = 3.5f,
             showRating = true,
             reviewCount = "277",
-            filledColor = TrendyolDesign.colors.colorStar,
-            emptyColor = TrendyolDesign.colors.colorBackground,
+            filledColor = KPDesign.colors.colorStar,
+            emptyColor = KPDesign.colors.colorBackground,
             spaceBetween = 2.dp,
             itemCount = 5,
             itemSize = 10.dp,
@@ -318,13 +437,13 @@ private fun RatingBarScoreReviewSmallPreview() {
 @Composable
 private fun RatingBarScoreReviewMediumPreview() {
     PreviewTheme {
-        RatingBar(
-            size = TrendyolRatingBarSize.Medium,
+        KPRatingBar(
+            size = KPRatingBarSize.Medium,
             rating = 3.5f,
             showRating = true,
             reviewCount = "277",
-            filledColor = TrendyolDesign.colors.colorStar,
-            emptyColor = TrendyolDesign.colors.colorBackground,
+            filledColor = KPDesign.colors.colorStar,
+            emptyColor = KPDesign.colors.colorBackground,
             spaceBetween = 2.dp,
             itemCount = 5,
             itemSize = 10.dp,
@@ -336,13 +455,13 @@ private fun RatingBarScoreReviewMediumPreview() {
 @Composable
 private fun RatingBarReviewWithCameraIconSmallPreview() {
     PreviewTheme {
-        RatingBar(
-            size = TrendyolRatingBarSize.Small,
+        KPRatingBar(
+            size = KPRatingBarSize.Small,
             rating = 3.5f,
             showCameraIcon = true,
             reviewCount = "277",
-            filledColor = TrendyolDesign.colors.colorStar,
-            emptyColor = TrendyolDesign.colors.colorBackground,
+            filledColor = KPDesign.colors.colorStar,
+            emptyColor = KPDesign.colors.colorBackground,
             spaceBetween = 2.dp,
             itemCount = 5,
             itemSize = 10.dp,
@@ -354,13 +473,13 @@ private fun RatingBarReviewWithCameraIconSmallPreview() {
 @Composable
 private fun RatingBarReviewWithCameraIconMediumPreview() {
     PreviewTheme {
-        RatingBar(
-            size = TrendyolRatingBarSize.Medium,
+        KPRatingBar(
+            size = KPRatingBarSize.Medium,
             rating = 3.5f,
             showCameraIcon = true,
             reviewCount = "277",
-            filledColor = TrendyolDesign.colors.colorStar,
-            emptyColor = TrendyolDesign.colors.colorBackground,
+            filledColor = KPDesign.colors.colorStar,
+            emptyColor = KPDesign.colors.colorBackground,
             spaceBetween = 2.dp,
             itemCount = 5,
             itemSize = 10.dp,

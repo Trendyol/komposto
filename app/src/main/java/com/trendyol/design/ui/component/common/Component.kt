@@ -88,4 +88,16 @@ object Component {
 
     const val PRICE_SINGLE = "Single Price"
     const val PRICE_DUAL = "Dual Price"
+
+    const val ALERT_DIALOG = "Native Alert Dialog"
+    const val SUCCESS_DIALOG = "Success Dialog"
+    const val ERROR_DIALOG = "Error Dialog"
+    const val GENERIC_DIALOG = "Generic Dialog"
+
+    const val INFO_BOX_LEFT_ICON = "Info Box Left Icon"
+    const val INFO_BOX_RIGHT_ICON = "Info Box Right Icon"
+    const val INFO_BOX_NO_ICON = "Info Box No Icon"
+
+    const val STANDARD_ICON_BUTTON = "Standard Icon Button"
+    const val CONTAINED_ICON_BUTTON = "Contained Icon Button"
 }

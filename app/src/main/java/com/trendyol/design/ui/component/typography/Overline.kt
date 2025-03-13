@@ -6,18 +6,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.component.common.Component.OVERLINE
 import com.trendyol.design.ui.component.common.Group.TYPOGRAPHY
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.theme.KPDesign
 
 @ShowkaseComposable(group = TYPOGRAPHY, name = OVERLINE, styleName = "Overline")
 @Composable
 internal fun F_Overline() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.overLine,
+        style = KPDesign.typography.overLine,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -25,9 +25,9 @@ internal fun F_Overline() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = OVERLINE, styleName = "Overline.Bold")
 @Composable
 internal fun Overline_Bold() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.overLineBold,
+        style = KPDesign.typography.overLineBold,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -35,9 +35,9 @@ internal fun Overline_Bold() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = OVERLINE, styleName = "Overline.Medium")
 @Composable
 internal fun Overline_Medium() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.overLineMedium,
+        style = KPDesign.typography.overLineMedium,
         maxLines = integerResource(id = R.integer.typography_max_line),
     )
 }
@@ -45,9 +45,9 @@ internal fun Overline_Medium() = TrendyolTheme {
 @ShowkaseComposable(group = TYPOGRAPHY, name = OVERLINE, styleName = "Overline.Medium.OneLine")
 @Composable
 internal fun Overline_Medium_OneLine() = TrendyolTheme {
-    Text(
+    KPText(
         text = LoremIpsum().values.joinToString(),
-        style = TrendyolDesign.typography.overLineMedium,
+        style = KPDesign.typography.overLineMedium,
         maxLines = 1,
     )
 }
