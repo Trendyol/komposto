@@ -5,7 +5,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
 import com.trendyol.design.core.icon.IconSize
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIconSize
 import kotlinx.parcelize.RawValue
 
 /**
@@ -26,7 +26,7 @@ import kotlinx.parcelize.RawValue
 @Stable
 public data class PriceModel(
     val icon: @RawValue ImageVector? = null,
-    val iconSize: @RawValue IconSize = TrendyolIconSize.XXSmall,
+    val iconSize: @RawValue IconSize = KPIconSize.XXSmall,
     val iconTint: @RawValue Color? = null,
     val upperInfoText: String? = null,
     val upperInfoTextStyle: @RawValue TextStyle? = null,

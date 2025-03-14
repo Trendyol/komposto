@@ -1,19 +1,17 @@
 package com.trendyol.design.ui.component.price
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.traceEventEnd
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.ui.theme.TrendyolTheme
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Basket
 import com.trendyol.design.core.icon.icons.fill.CampaignDownArrow
-import com.trendyol.design.core.price.Price
-import com.trendyol.design.core.price.TrendyolPriceStyle
-import com.trendyol.theme.TrendyolDesign
+import com.trendyol.design.core.price.KPPrice
+import com.trendyol.design.core.price.KPPriceStyle
+import com.trendyol.theme.KPDesign
 
 @ShowkaseComposable(
     group = Group.PRICE,
@@ -23,12 +21,12 @@ import com.trendyol.theme.TrendyolDesign
 @Composable
 internal fun Vertical_Dual_Price() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPrice(
+        KPPrice(
+            style = KPPriceStyle.DualPrice(
                 salePriceText = "999999.90 TL",
                 marketPriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorPrimary,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = true
             )
         )
@@ -43,12 +41,12 @@ internal fun Vertical_Dual_Price() {
 @Composable
 internal fun Horizontal_Dual_Price() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPrice(
+        KPPrice(
+            style = KPPriceStyle.DualPrice(
                 salePriceText = "999999.90 TL",
                 marketPriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorPrimary,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = false
             )
         )
@@ -63,14 +61,14 @@ internal fun Horizontal_Dual_Price() {
 @Composable
 internal fun Vertical_Dual_Price_With_Bottom_Info() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPriceWithBottomInfo(
+        KPPrice(
+            style = KPPriceStyle.DualPriceWithBottomInfo(
                 salePriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorPrimary,
                 bottomInfoText = "(99.90 TL / Kapsül)",
-                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorPrimary,
+                bottomInfoTextStyle = KPDesign.typography.body2ColorPrimary,
                 marketPriceText = "999999.90 TL",
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = true
             )
         )
@@ -85,14 +83,14 @@ internal fun Vertical_Dual_Price_With_Bottom_Info() {
 @Composable
 internal fun Horizontal_Dual_Price_With_Bottom_Info() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPriceWithBottomInfo(
+        KPPrice(
+            style = KPPriceStyle.DualPriceWithBottomInfo(
                 salePriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorPrimary,
                 bottomInfoText = "(99.90 TL / Kapsül)",
-                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorPrimary,
+                bottomInfoTextStyle = KPDesign.typography.body2ColorPrimary,
                 marketPriceText = "999999.90 TL",
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = false
             )
         )
@@ -107,17 +105,17 @@ internal fun Horizontal_Dual_Price_With_Bottom_Info() {
 @Composable
 internal fun Vertical_Dual_Price_With_Upper_Info_Basket() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPriceWithUpperInfo(
+        KPPrice(
+            style = KPPriceStyle.DualPriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorPrimary,
+                upperInfoTextStyle = KPDesign.typography.body2MediumColorPrimary,
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
-                icon = Icons.Fill.Basket,
-                iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolDesign.colors.colorPrimary,
+                icon = KPIcons.Fill.Basket,
+                iconSize = KPIconSize.XXSmall,
+                iconTint = KPDesign.colors.colorPrimary,
                 marketPriceText = "999999.90 TL",
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = true
             )
         )
@@ -132,17 +130,17 @@ internal fun Vertical_Dual_Price_With_Upper_Info_Basket() {
 @Composable
 internal fun Horizontal_Dual_Price_With_Upper_Info_Basket() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPriceWithUpperInfo(
+        KPPrice(
+            style = KPPriceStyle.DualPriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorPrimary,
+                upperInfoTextStyle = KPDesign.typography.body2MediumColorPrimary,
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
-                icon = Icons.Fill.Basket,
-                iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolDesign.colors.colorPrimary,
+                icon = KPIcons.Fill.Basket,
+                iconSize = KPIconSize.XXSmall,
+                iconTint = KPDesign.colors.colorPrimary,
                 marketPriceText = "999999.90 TL",
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = false
             )
         )
@@ -157,17 +155,17 @@ internal fun Horizontal_Dual_Price_With_Upper_Info_Basket() {
 @Composable
 internal fun Vertical_Dual_Price_With_Upper_Info_Lowest_Price_Campaign() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPriceWithUpperInfo(
+        KPPrice(
+            style = KPPriceStyle.DualPriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
-                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorWarning,
+                upperInfoTextStyle = KPDesign.typography.body2MediumColorWarning,
                 upperInfoText = "Son 30 Günün En Düşük Fiyatı",
-                icon = Icons.Fill.CampaignDownArrow,
-                iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolDesign.colors.colorWarning,
+                icon = KPIcons.Fill.CampaignDownArrow,
+                iconSize = KPIconSize.XXSmall,
+                iconTint = KPDesign.colors.colorWarning,
                 marketPriceText = "999999.90 TL",
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = true
             )
         )
@@ -182,17 +180,17 @@ internal fun Vertical_Dual_Price_With_Upper_Info_Lowest_Price_Campaign() {
 @Composable
 internal fun Horizontal_Dual_Price_With_Upper_Info_Lowest_Price_Campaign() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPriceWithUpperInfo(
+        KPPrice(
+            style = KPPriceStyle.DualPriceWithUpperInfo(
                 salePriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
-                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorWarning,
+                upperInfoTextStyle = KPDesign.typography.body2MediumColorWarning,
                 upperInfoText = "Son 30 Günün En Düşük Fiyatı",
-                icon = Icons.Fill.CampaignDownArrow,
-                iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolDesign.colors.colorWarning,
+                icon = KPIcons.Fill.CampaignDownArrow,
+                iconSize = KPIconSize.XXSmall,
+                iconTint = KPDesign.colors.colorWarning,
                 marketPriceText = "999999.90 TL",
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = false
             )
         )
@@ -207,19 +205,19 @@ internal fun Horizontal_Dual_Price_With_Upper_Info_Lowest_Price_Campaign() {
 @Composable
 internal fun Vertical_Dual_Price_With_Upper_And_Bottom_Info_Basket_Campaign() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPriceWithUpperAndBottomInfo(
+        KPPrice(
+            style = KPPriceStyle.DualPriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorPrimary,
+                upperInfoTextStyle = KPDesign.typography.body2MediumColorPrimary,
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
-                icon = Icons.Fill.Basket,
-                iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolDesign.colors.colorPrimary,
+                icon = KPIcons.Fill.Basket,
+                iconSize = KPIconSize.XXSmall,
+                iconTint = KPDesign.colors.colorPrimary,
                 bottomInfoText = "(99.90 TL / Kapsül)",
-                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorPrimary,
+                bottomInfoTextStyle = KPDesign.typography.body2ColorPrimary,
                 marketPriceText = "999999.90 TL",
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = true
             )
         )
@@ -234,19 +232,19 @@ internal fun Vertical_Dual_Price_With_Upper_And_Bottom_Info_Basket_Campaign() {
 @Composable
 internal fun Horizontal_Dual_Price_With_Upper_And_Bottom_Info_Basket_Campaign() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPriceWithUpperAndBottomInfo(
+        KPPrice(
+            style = KPPriceStyle.DualPriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorPrimary,
-                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorPrimary,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorPrimary,
+                upperInfoTextStyle = KPDesign.typography.body2MediumColorPrimary,
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
-                icon = Icons.Fill.Basket,
-                iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolDesign.colors.colorPrimary,
+                icon = KPIcons.Fill.Basket,
+                iconSize = KPIconSize.XXSmall,
+                iconTint = KPDesign.colors.colorPrimary,
                 bottomInfoText = "(99.90 TL / Kapsül)",
-                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorPrimary,
+                bottomInfoTextStyle = KPDesign.typography.body2ColorPrimary,
                 marketPriceText = "999999.90 TL",
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = false
             )
         )
@@ -261,19 +259,19 @@ internal fun Horizontal_Dual_Price_With_Upper_And_Bottom_Info_Basket_Campaign() 
 @Composable
 internal fun Vertical_Dual_Price_With_Upper_And_Bottom_Info_Lowest_Price_Campaign() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPriceWithUpperAndBottomInfo(
+        KPPrice(
+            style = KPPriceStyle.DualPriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
-                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorWarning,
+                upperInfoTextStyle = KPDesign.typography.body2MediumColorWarning,
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
-                iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolDesign.colors.colorWarning,
-                icon = Icons.Fill.CampaignDownArrow,
+                iconSize = KPIconSize.XXSmall,
+                iconTint = KPDesign.colors.colorWarning,
+                icon = KPIcons.Fill.CampaignDownArrow,
                 bottomInfoText = "(99.90 TL / Kapsül)",
-                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorWarning,
+                bottomInfoTextStyle = KPDesign.typography.body2ColorWarning,
                 marketPriceText = "999999.90 TL",
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = true
             )
         )
@@ -288,19 +286,19 @@ internal fun Vertical_Dual_Price_With_Upper_And_Bottom_Info_Lowest_Price_Campaig
 @Composable
 internal fun Horizontal_Dual_Price_With_Upper_And_Bottom_Info_Lowest_Price_Campaign() {
     TrendyolTheme {
-        Price(
-            style = TrendyolPriceStyle.DualPriceWithUpperAndBottomInfo(
+        KPPrice(
+            style = KPPriceStyle.DualPriceWithUpperAndBottomInfo(
                 salePriceText = "999999.90 TL",
-                salePriceTextStyle = TrendyolDesign.typography.subtitleMediumColorWarning,
-                upperInfoTextStyle = TrendyolDesign.typography.body2MediumColorWarning,
+                salePriceTextStyle = KPDesign.typography.subtitleMediumColorWarning,
+                upperInfoTextStyle = KPDesign.typography.body2MediumColorWarning,
                 upperInfoText = "9999 TL’ye 999 TL İndirim",
-                iconSize = TrendyolIconSize.XXSmall,
-                iconTint = TrendyolDesign.colors.colorWarning,
-                icon = Icons.Fill.CampaignDownArrow,
+                iconSize = KPIconSize.XXSmall,
+                iconTint = KPDesign.colors.colorWarning,
+                icon = KPIcons.Fill.CampaignDownArrow,
                 bottomInfoText = "(99.90 TL / Kapsül)",
-                bottomInfoTextStyle = TrendyolDesign.typography.body2ColorWarning,
+                bottomInfoTextStyle = KPDesign.typography.body2ColorWarning,
                 marketPriceText = "999999.90 TL",
-                marketPriceTextStyle = TrendyolDesign.typography.subtitleColorOnSurfaceVariant1,
+                marketPriceTextStyle = KPDesign.typography.subtitleColorOnSurfaceVariant1,
                 isPriceViewVertical = false
             )
         )
