@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.16.2] - 2025-03-14
+
+### Added
+- Added horizontally price view support to price API
+
 ## [0.16.1] - 2025-03-03
 
 ### Changed
@@ -84,11 +89,6 @@ next major version. :alert:
 ### Fixed
 
 - Fixed back icon RTL mirror issue.
-
-## [0.12.2] - 2024-09-18
-
-### Added
-- Added horizontally price view support to price API
 
 ## [0.12.2] - 2024-09-17
 
