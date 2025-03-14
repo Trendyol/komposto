@@ -15,6 +15,7 @@ object Group {
     const val RATING_BAR = "Rating Bar"
     const val TIMER = "Timer"
     const val BOX_BADGE = "Box Badge"
+    const val PRICE = "Price"
     const val DIALOG = "Dialog"
     const val INFO_BOX = "InfoBox"
     const val ICON_BUTTON = "Icon Button"

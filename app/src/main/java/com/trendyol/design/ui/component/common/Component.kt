@@ -86,6 +86,9 @@ object Component {
     const val BOX_BADGE_GROUP_2_ITEM = "2ItemsBoxBadgeGroup"
     const val BOX_BADGE_GROUP_1_ITEM = "1ItemsBoxBadgeGroup"
 
+    const val PRICE_SINGLE = "Single Price"
+    const val PRICE_DUAL = "Dual Price"
+
     const val ALERT_DIALOG = "Native Alert Dialog"
     const val SUCCESS_DIALOG = "Success Dialog"
     const val ERROR_DIALOG = "Error Dialog"

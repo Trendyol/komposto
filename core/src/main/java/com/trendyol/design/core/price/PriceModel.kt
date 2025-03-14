@@ -5,7 +5,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
 import com.trendyol.design.core.icon.IconSize
-import com.trendyol.design.core.icon.TrendyolIconSize
+import com.trendyol.design.core.icon.KPIconSize
 import kotlinx.parcelize.RawValue
 
 /**
@@ -21,11 +21,12 @@ import kotlinx.parcelize.RawValue
  * @param marketPriceTextStyle If you need a textStyle in your marketPriceText, you can set it in this parameter.
  * @param bottomInfoText If you need a bottomInfo like unit price, you can set it in this parameter.
  * @param bottomInfoTextStyle If you need a textStyle in your bottomInfoText, you can set it in this parameter.
+ * @param isPriceViewVertical If you want to get a vertically price view for dual price styles, you can set it as true in this parameter.This parameter will not be expected in single price styles that do not include market price.
  */
 @Stable
 public data class PriceModel(
     val icon: @RawValue ImageVector? = null,
-    val iconSize: @RawValue IconSize = TrendyolIconSize.XXSmall,
+    val iconSize: @RawValue IconSize = KPIconSize.XXSmall,
     val iconTint: @RawValue Color? = null,
     val upperInfoText: String? = null,
     val upperInfoTextStyle: @RawValue TextStyle? = null,
@@ -35,4 +36,5 @@ public data class PriceModel(
     val marketPriceTextStyle: @RawValue TextStyle? = null,
     val bottomInfoText: String? = null,
     val bottomInfoTextStyle: @RawValue TextStyle? = null,
+    val isPriceViewVertical: @RawValue Boolean = false,
 )
