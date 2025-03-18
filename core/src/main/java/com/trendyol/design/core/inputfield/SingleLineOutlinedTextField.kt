@@ -97,7 +97,8 @@ public fun KPSingleLineOutlinedTextField(
                         CheckTextFieldLayoutIds(
                             persistentSetOf(TrailingIconLayoutId, TrailingTextLayoutId),
                             isSingleChildRequired = true,
-                            errorMessage = "Trailing content should be instance of KPIcon or KPText"
+                            errorMessage = "Trailing content should be created using " +
+                                    "TextFieldScope.TrailingIcon or TextFieldScope.TrailingText"
                         ) {
                             trailingContent(TextFieldScope)
                         }
@@ -225,7 +226,7 @@ private fun SingleLineOutlinedTextFieldWithTrailingIconPreview() {
             value = "Arama yapın",
             onValueChange = {},
             trailingContent = {
-                TrailingIcon(
+                Icon(
                     imageVector = KPIcons.Fill.Search,
                     onClick = {},
                     size = KPIconSize.Small
@@ -246,7 +247,7 @@ private fun SingleLineOutlinedTextFieldWithTrailingTextPreview() {
             placeholder = "Kullanıcı Kimliği",
             onValueChange = {},
             trailingContent = {
-                TrailingText(
+                Text(
                     text = "Nasıl Alınır?",
                     style = KPDesign.typography.body1MediumColorOnSurfaceVariant2,
                     onClick = {}
@@ -268,7 +269,7 @@ private fun SingleLineOutlinedTextFieldWithErrorAndTrailingIconPreview() {
             isError = true,
             errorLabel = "Lütfen geçerli bir değer girin",
             trailingContent = {
-                TrailingIcon(
+                Icon(
                     imageVector = KPIcons.Fill.Cancel,
                     onClick = {},
                     size = KPIconSize.Small,
@@ -291,7 +292,7 @@ private fun SingleLineOutlinedTextFieldWithErrorAndTrailingTextPreview() {
             isError = true,
             errorLabel = "Lütfen geçerli bir değer girin",
             trailingContent = {
-                TrailingText(
+                Text(
                     text = "TL",
                     onClick = {},
                     style = KPDesign.typography.subtitleMediumColorWarning
@@ -312,7 +313,7 @@ private fun SingleLineOutlinedTextFieldDisabledWithTrailingIconPreview() {
             enabled = false,
             onValueChange = {},
             trailingContent = {
-                TrailingIcon(
+                Icon(
                     imageVector = KPIcons.Fill.Search,
                     onClick = {},
                     size = KPIconSize.Small,
@@ -334,7 +335,7 @@ private fun SingleLineOutlinedTextFieldDisabledWithTrailingTextPreview() {
             enabled = false,
             onValueChange = {},
             trailingContent = {
-                TrailingText(
+                Text(
                     text = "TL",
                     onClick = {},
                     style = KPDesign.typography.subtitleMediumColorOnSurfaceVariant2
@@ -355,7 +356,7 @@ private fun SingleLineOutlinedTextFieldWithLabelAndTrailingIconPreview() {
             label = "Label",
             onValueChange = {},
             trailingContent = {
-                TrailingIcon(
+                Icon(
                     imageVector = KPIcons.Fill.Search,
                     onClick = {},
                     size = KPIconSize.Small
@@ -376,7 +377,7 @@ private fun SingleLineOutlinedTextFieldWithLabelAndTrailingTextPreview() {
             label = "Label",
             onValueChange = {},
             trailingContent = {
-                TrailingText(
+                Text(
                     text = "TL",
                     onClick = {}
                 )
@@ -396,7 +397,7 @@ private fun SingleLineOutlinedTextFieldWithPlaceholderAndTrailingIconPreview() {
             placeholder = "Placeholder",
             onValueChange = {},
             trailingContent = {
-                TrailingIcon(
+                Icon(
                     imageVector = KPIcons.Fill.Search,
                     onClick = {},
                     size = KPIconSize.Small
@@ -417,7 +418,7 @@ private fun SingleLineOutlinedTextFieldWithPlaceholderAndTrailingTextPreview() {
             placeholder = "PlaceholderPlaceholderPlaceholdePlaceholderPlaceholderPlaceholde",
             onValueChange = {},
             trailingContent = {
-                TrailingText(
+                Text(
                     text = "TrailingTrailingTrailing",
                     style = KPDesign.typography.body1Medium,
                     onClick = {}

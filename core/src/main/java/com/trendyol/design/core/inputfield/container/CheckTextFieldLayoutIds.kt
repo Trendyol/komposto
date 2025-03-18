@@ -28,7 +28,7 @@ import kotlinx.collections.immutable.PersistentSet
  * ```
  */
 @Composable
-public fun CheckTextFieldLayoutIds(
+internal fun CheckTextFieldLayoutIds(
     layoutId: PersistentSet<Any>,
     isSingleChildRequired: Boolean = false,
     errorMessage: String = "Failed requirement.",
