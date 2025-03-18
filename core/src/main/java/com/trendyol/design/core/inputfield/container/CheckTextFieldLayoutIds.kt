@@ -3,6 +3,7 @@ package com.trendyol.design.core.inputfield.container
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.layoutId
+import kotlinx.collections.immutable.PersistentSet
 
 /**
  * A composable that validates the layoutId of its children.
@@ -28,7 +29,7 @@ import androidx.compose.ui.layout.layoutId
  */
 @Composable
 public fun CheckTextFieldLayoutIds(
-    layoutId: Set<Any>,
+    layoutId: PersistentSet<Any>,
     isSingleChildRequired: Boolean = false,
     errorMessage: String = "Failed requirement.",
     content: @Composable () -> Unit,

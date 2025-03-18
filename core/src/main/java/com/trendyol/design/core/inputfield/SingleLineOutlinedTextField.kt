@@ -26,6 +26,7 @@ import com.trendyol.design.core.text.KPText
 import com.trendyol.design.core.text.Text
 import com.trendyol.theme.KPDesign
 import com.trendyol.theme.TrendyolDesign
+import kotlinx.collections.immutable.persistentSetOf
 
 /**
  * Composable function to create a single-line text input field with an outlined style.
@@ -94,7 +95,7 @@ public fun KPSingleLineOutlinedTextField(
                         contentAlignment = Alignment.Center
                     ) {
                         CheckTextFieldLayoutIds(
-                            setOf(TrailingIconLayoutId, TrailingTextLayoutId),
+                            persistentSetOf(TrailingIconLayoutId, TrailingTextLayoutId),
                             isSingleChildRequired = true,
                             errorMessage = "Trailing content should be instance of KPIcon or KPText"
                         ) {
