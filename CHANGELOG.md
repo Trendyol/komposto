@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.16.3] - 2025-03-18
+
+### Added
+  - Added trailing container support to `KPSingleLineOutlinedTextField` with type-safe
+    `TrailingIcon` and `TrailingText` options
+  - TrailingIcon: Supports clickable icon with customizable size and tint
+  - TrailingText: Supports clickable text with single line and customizable style
+
 ## [0.16.2] - 2025-03-14
 
 ### Added
