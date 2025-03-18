@@ -18,7 +18,6 @@ import com.trendyol.design.core.icon.IconSize
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.text.KPText
-import com.trendyol.design.core.toolbar.KPToolbarDefaults
 import com.trendyol.theme.KPDesign
 
 @Stable
@@ -34,21 +33,21 @@ public object TextFieldScope {
      * clicks on the icon.
      * @param size  This parameter controls the size of the icon. It can be set to one of the
      * predefined IconSize enum values, such as [KPIconSize.Small] or [KPIconSize.Medium].
-     * Defaults to the value from [KPToolbarDefaults.IconSize].
+     * Defaults to the value from [KPIconSize.Small].
      */
     @Composable
-    public fun TrailingIcon(
+    public fun Icon(
         imageVector: ImageVector,
         modifier: Modifier = Modifier,
         onClick: () -> Unit,
-        size: IconSize = KPToolbarDefaults.IconSize,
+        size: IconSize = KPIconSize.Small,
         tint: Color = Color.Unspecified
     ) {
         Box(
             modifier
                 .layoutId(TrailingIconLayoutId)
                 .size(size = size.dp)
-                .clickable { onClick.invoke() },
+                .clickable(onClick = onClick),
         ) {
             KPIcon(
                 imageVector = imageVector,
@@ -70,7 +69,7 @@ public object TextFieldScope {
      * * @param onClick A lambda function that will be called when the user clicks on the text.
      */
     @Composable
-    public fun TrailingText(
+    public fun Text(
         text: String,
         modifier: Modifier = Modifier,
         style: TextStyle = KPDesign.typography.subtitleMedium,
@@ -80,7 +79,7 @@ public object TextFieldScope {
             text = text,
             modifier = modifier
                 .layoutId(TrailingTextLayoutId)
-                .clickable { onClick.invoke() },
+                .clickable(onClick = onClick),
             style = style,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
