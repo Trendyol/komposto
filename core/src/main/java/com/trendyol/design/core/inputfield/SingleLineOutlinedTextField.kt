@@ -145,7 +145,7 @@ public fun KPSingleLineOutlinedTextField(
 @Composable
 @Deprecated(
     message = "Use KPSingleLineOutlinedTextField instead for consistent naming. " +
-        "This API will get removed in future releases.",
+            "This API will get removed in future releases.",
     level = DeprecationLevel.WARNING
 )
 public fun SingleLineOutlinedTextField(
