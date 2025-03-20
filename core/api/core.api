@@ -1714,8 +1714,48 @@ public final class com/trendyol/design/core/inputfield/ComposableSingletons$Mult
 public final class com/trendyol/design/core/inputfield/ComposableSingletons$SingleLineOutlinedTextFieldKt {
 	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/ComposableSingletons$SingleLineOutlinedTextFieldKt;
 	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-10 Lkotlin/jvm/functions/Function3;
+	public static field lambda-11 Lkotlin/jvm/functions/Function2;
+	public static field lambda-12 Lkotlin/jvm/functions/Function3;
+	public static field lambda-13 Lkotlin/jvm/functions/Function2;
+	public static field lambda-14 Lkotlin/jvm/functions/Function3;
+	public static field lambda-15 Lkotlin/jvm/functions/Function2;
+	public static field lambda-16 Lkotlin/jvm/functions/Function3;
+	public static field lambda-17 Lkotlin/jvm/functions/Function2;
+	public static field lambda-18 Lkotlin/jvm/functions/Function3;
+	public static field lambda-19 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function3;
+	public static field lambda-20 Lkotlin/jvm/functions/Function3;
+	public static field lambda-21 Lkotlin/jvm/functions/Function2;
+	public static field lambda-3 Lkotlin/jvm/functions/Function2;
+	public static field lambda-4 Lkotlin/jvm/functions/Function3;
+	public static field lambda-5 Lkotlin/jvm/functions/Function2;
+	public static field lambda-6 Lkotlin/jvm/functions/Function3;
+	public static field lambda-7 Lkotlin/jvm/functions/Function2;
+	public static field lambda-8 Lkotlin/jvm/functions/Function3;
+	public static field lambda-9 Lkotlin/jvm/functions/Function2;
 	public fun <init> ()V
 	public final fun getLambda-1$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-10$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-11$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-12$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-13$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-14$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-15$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-16$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-17$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-18$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-19$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-20$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-21$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-3$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-4$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-5$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-6$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-7$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-8$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-9$core_release ()Lkotlin/jvm/functions/Function2;
 }
 
 public final class com/trendyol/design/core/inputfield/DropdownKt {
@@ -1797,7 +1837,7 @@ public abstract interface class com/trendyol/design/core/inputfield/OutlinedText
 }
 
 public final class com/trendyol/design/core/inputfield/SingleLineOutlinedTextFieldKt {
-	public static final fun KPSingleLineOutlinedTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
+	public static final fun KPSingleLineOutlinedTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;III)V
 	public static final fun SingleLineOutlinedTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 }
 
@@ -1859,6 +1899,13 @@ public final class com/trendyol/design/core/inputfield/TrendyolOutlinedTextField
 	public fun getOutlinedTextFieldColors (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material/TextFieldColors;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/trendyol/design/core/inputfield/container/TextFieldScope {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/container/TextFieldScope;
+	public final fun Icon-yrwZFoE (Landroidx/compose/ui/graphics/vector/ImageVector;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Lcom/trendyol/design/core/icon/IconSize;JLandroidx/compose/runtime/Composer;II)V
+	public final fun Text (Ljava/lang/String;Landroidx/compose/ui/Modifier;Landroidx/compose/ui/text/TextStyle;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class com/trendyol/design/core/inputfield/email/InputEmailFieldKt {
