@@ -47,6 +47,17 @@ build:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"'
       when: always
 
+androidTestCompile:
+  stage: build
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
+  script:
+    - gradle :app:compileDebugAndroidTestKotlin
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      when: always
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"'
+      when: always
+
 check:
   stage: check
   image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
