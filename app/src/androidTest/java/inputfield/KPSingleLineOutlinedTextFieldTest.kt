@@ -19,7 +19,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                     KPSingleLineOutlinedTextField(
                         style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
                         value = "asd",
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Outlined") {
@@ -27,7 +28,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                     KPSingleLineOutlinedTextField(
                         style = KPOutlinedTextFieldStyle.Outlined,
                         value = "asd",
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Filled") {
@@ -35,7 +37,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                     KPSingleLineOutlinedTextField(
                         style = KPOutlinedTextFieldStyle.Filled,
                         value = "asd",
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
         )
@@ -50,8 +53,9 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                     KPSingleLineOutlinedTextField(
                         style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
                         value = "",
-                        label = "label"
-                    ) { }
+                        label = "label",
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("FloatingLabelOutlined") {
@@ -60,7 +64,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
                         value = "asd",
                         label = "label",
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Outlined") {
@@ -69,7 +74,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         style = KPOutlinedTextFieldStyle.Outlined,
                         value = "asd",
                         label = "label",
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Filled") {
@@ -78,7 +84,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         style = KPOutlinedTextFieldStyle.Filled,
                         value = "asd",
                         label = "label",
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
         )
@@ -93,8 +100,9 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                     KPSingleLineOutlinedTextField(
                         style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
                         value = "",
-                        placeholder = "placeholder"
-                    ) { }
+                        placeholder = "placeholder",
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Outlined") {
@@ -103,7 +111,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         style = KPOutlinedTextFieldStyle.Outlined,
                         value = "",
                         placeholder = "placeholder",
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Filled") {
@@ -112,7 +121,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         style = KPOutlinedTextFieldStyle.Filled,
                         value = "",
                         placeholder = "placeholder",
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
         )
@@ -129,7 +139,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         value = "",
                         errorLabel = "errorLabel",
                         isError = true,
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("SmallError|Filled") {
@@ -139,7 +150,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         value = "",
                         errorLabel = "errorLabel",
                         isError = true,
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("LongError|Filled") {
@@ -149,7 +161,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         value = "",
                         errorLabel = LoremIpsum().values.joinToString(),
                         isError = true,
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
         )
@@ -165,7 +178,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         style = KPOutlinedTextFieldStyle.Outlined,
                         value = "",
                         enabled = true,
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("enabled=true|Filled") {
@@ -174,7 +188,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         style = KPOutlinedTextFieldStyle.Filled,
                         value = "asd",
                         enabled = true,
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
 
@@ -184,7 +199,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         style = KPOutlinedTextFieldStyle.Outlined,
                         value = "asd",
                         enabled = false,
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("enabled=false|Filled") {
@@ -193,7 +209,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         style = KPOutlinedTextFieldStyle.Filled,
                         value = "",
                         enabled = false,
-                    ) { }
+                        onValueChange = { },
+                    )
                 }
             },
         )
