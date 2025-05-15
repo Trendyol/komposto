@@ -1,31 +1,45 @@
 package com.trendyol.design
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.button.Button
-import com.trendyol.design.core.button.TrendyolButtonSize
-import com.trendyol.design.core.button.TrendyolButtonStyle
-import com.trendyol.design.core.text.Text
+import com.airbnb.android.showkase.models.Showkase
+import com.trendyol.design.core.button.KPButton
+import com.trendyol.design.core.button.KPButtonSize
+import com.trendyol.design.core.button.KPButtonStyle
+import com.trendyol.design.core.text.KPText
+import com.trendyol.design.di.getBrowserIntent
 import com.trendyol.design.ui.theme.TrendyolTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             TrendyolTheme {
-                Button(
-                    onClick = { /*TODO*/ },
-                    modifier = Modifier.padding(16.dp),
-                    style = TrendyolButtonStyle.Primary,
-                    size = TrendyolButtonSize.Small
-                ) {
-                    Text(text = "CTA Label")
+                Column {
+                    KPButton(
+                        onClick = {
+                            startActivity(Showkase.getBrowserIntent(context = this@MainActivity))
+                        },
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Large,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp)
+                    ) {
+                        KPText(text = "Navigate To Showkase")
+                    }
                 }
             }
+        }
+
+        if (savedInstanceState == null) {
+            startActivity(Showkase.getBrowserIntent(context = this))
         }
     }
 }

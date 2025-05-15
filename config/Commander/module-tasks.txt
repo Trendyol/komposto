@@ -1,0 +1,9 @@
+projectHealth projectHealth -Pdependency.analysis.autoapply=true
+detekt detekt
+detektBaseline detektBaseline
+detektAutoCorrect detekt --auto-correct
+assembleDebug assembleDebug
+checkUnitTestAndDetekt check
+checkUiTests connectedCheck
+buildRerunTask build --rerun-tasks
+clean clean

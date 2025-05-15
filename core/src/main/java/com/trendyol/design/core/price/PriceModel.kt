@@ -1,0 +1,40 @@
+package com.trendyol.design.core.price
+
+import androidx.compose.runtime.Stable
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.TextStyle
+import com.trendyol.design.core.icon.IconSize
+import com.trendyol.design.core.icon.KPIconSize
+import kotlinx.parcelize.RawValue
+
+/**
+ *
+ * @param icon If you need an icon in your campaign text, you can set it in this parameter.
+ * @param iconSize If you need an icon size in your campaign text, you can set it in this parameter.
+ * @param iconTint If you need an iconTint in your campaign text, you can set it in this parameter.
+ * @param upperInfoText If you need a upperInfo like campaign text, you can set it in this parameter.
+ * @param upperInfoTextStyle If you need a textStyle in your upperInfo text, you can set it in this parameter.
+ * @param salePriceText If you need a salePrice, you can set it in this parameter.
+ * @param salePriceTextStyle If you need a textStyle in your salePriceText, you can set it in this parameter.
+ * @param marketPriceText If you need a marketPrice, you can set it in this parameter.
+ * @param marketPriceTextStyle If you need a textStyle in your marketPriceText, you can set it in this parameter.
+ * @param bottomInfoText If you need a bottomInfo like unit price, you can set it in this parameter.
+ * @param bottomInfoTextStyle If you need a textStyle in your bottomInfoText, you can set it in this parameter.
+ * @param isPriceViewVertical If you want to get a vertically price view for dual price styles, you can set it as true in this parameter.This parameter will not be expected in single price styles that do not include market price.
+ */
+@Stable
+public data class PriceModel(
+    val icon: @RawValue ImageVector? = null,
+    val iconSize: @RawValue IconSize = KPIconSize.XXSmall,
+    val iconTint: @RawValue Color? = null,
+    val upperInfoText: String? = null,
+    val upperInfoTextStyle: @RawValue TextStyle? = null,
+    val salePriceText: String? = null,
+    val salePriceTextStyle: @RawValue TextStyle? = null,
+    val marketPriceText: String? = null,
+    val marketPriceTextStyle: @RawValue TextStyle? = null,
+    val bottomInfoText: String? = null,
+    val bottomInfoTextStyle: @RawValue TextStyle? = null,
+    val isPriceViewVertical: @RawValue Boolean = false,
+)

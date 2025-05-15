@@ -4,6 +4,9 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("io.gitlab.arturbosch.detekt")
+    id("maven-publish")
+    id("kotlin-parcelize")
+    id("org.jetbrains.dokka")
 }
 
 android {
@@ -11,7 +14,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 23
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -30,11 +33,39 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    kotlin {
+        explicitApi()
+    }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "Nexus"
+            url = uri("http://10.84.105.74/repository/maven-releases")
+            isAllowInsecureProtocol = true
+            credentials {
+                username = properties["NEXUS_USER"]?.toString() ?: System.getenv("NEXUS_USER")
+                password = properties["NEXUS_PASS"]?.toString() ?: System.getenv("NEXUS_PASS")
+            }
+        }
+    }
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.trendyol"
+            artifactId = "design-core"
+            version = publishedLibs.versions.design.get()
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
     }
 }
 
@@ -46,12 +77,16 @@ configure<DetektExtension> {
 
 dependencies {
 
-    api(project(":theme"))
+    api(projects.theme)
 
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.compose.material:material:1.5.1")
-    implementation("androidx.compose.ui:ui-tooling:1.5.1")
+    implementation(libs.androidx.core)
 
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0")
-    detektPlugins("io.nlopez.compose.rules:detekt:0.1.13")
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.compose.ui.util)
+    implementation(libs.kotlinXImmutableCollections)
+
+    detektPlugins(libs.detekt.formatting)
+    detektPlugins(libs.detekt.composeRules)
 }

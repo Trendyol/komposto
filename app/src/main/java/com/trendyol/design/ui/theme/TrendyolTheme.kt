@@ -3,20 +3,29 @@ package com.trendyol.design.ui.theme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import com.trendyol.theme.LocalTrendyolDesignTheme
-import com.trendyol.theme.TrendyolDesignFontFamily
-import com.trendyol.theme.TrendyolDesignTheme
-import com.trendyol.theme.TrendyolDesignTypography
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
+import com.trendyol.theme.KPDesignFontFamily
+import com.trendyol.theme.KPDesignTheme
+import com.trendyol.theme.KPDesignTypography
+import com.trendyol.theme.LocalKPDesignTheme
 
-private val trendyolDesignTheme = TrendyolDesignTheme(
-    colors = TrendyolColor.themeColor,
-    typography = TrendyolDesignTypography(),
-    fontFamily = TrendyolDesignFontFamily(
+private val KPDesignTheme = KPDesignTheme(
+    colors = KompostoColor.kpThemeColor,
+    typography = KPDesignTypography(),
+    fontFamily = KPDesignFontFamily(
         regular = Fonts.RobotoRegular,
         medium = Fonts.RobotoMedium,
-        semiBold = Fonts.RobotoSemiBold,
         bold = Fonts.RobotoBold,
     ),
+)
+
+private val KPDesignRTLTheme = KPDesignTheme.copy(
+    fontFamily = KPDesignFontFamily(
+        regular = Fonts.CairoRegular,
+        medium = Fonts.CairoMedium,
+        bold = Fonts.CairoBold
+    )
 )
 
 @Composable
@@ -24,10 +33,15 @@ fun TrendyolTheme(
     content: @Composable () -> Unit
 ) {
     MaterialTheme(
-        colors = TrendyolColor.materialColor
+        colors = KompostoColor.materialColor
     ) {
+        val kpTheme = if (LocalLayoutDirection.current == LayoutDirection.Ltr) {
+            KPDesignTheme
+        } else {
+            KPDesignRTLTheme
+        }
         CompositionLocalProvider(
-            LocalTrendyolDesignTheme provides trendyolDesignTheme
+            LocalKPDesignTheme provides kpTheme
         ) {
             content()
         }

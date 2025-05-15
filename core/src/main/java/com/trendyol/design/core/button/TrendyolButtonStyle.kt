@@ -1,10 +1,58 @@
 package com.trendyol.design.core.button
 
 import androidx.compose.runtime.Composable
+import com.trendyol.theme.KPDesign
 import com.trendyol.theme.TrendyolDesign
 
-sealed interface TrendyolButtonStyle {
-    data object Primary : ButtonStyle {
+public sealed interface KPButtonStyle : ButtonStyle {
+    public data object Primary : KPButtonStyle {
+        override val buttonColors: KPButtonColors
+            @Composable
+            get() = KPButtonDefaults.buttonColors(
+                backgroundColor = KPDesign.colors.colorPrimary,
+                contentColor = KPDesign.colors.colorOnPrimary,
+                disabledBackgroundColor = KPDesign.colors.colorOnSurfaceVariant1,
+                disabledContentColor = KPDesign.colors.colorOnPrimary,
+            )
+    }
+
+    public data object Secondary : KPButtonStyle {
+        override val buttonColors: KPButtonColors
+            @Composable
+            get() = KPButtonDefaults.buttonColors(
+                backgroundColor = KPDesign.colors.colorSurface,
+                contentColor = KPDesign.colors.colorPrimary,
+                borderColor = KPDesign.colors.colorPrimary,
+                disabledBackgroundColor = KPDesign.colors.colorSurface,
+                disabledContentColor = KPDesign.colors.colorOnSurfaceVariant1,
+                disabledBorderColor = KPDesign.colors.colorBorder,
+            )
+    }
+
+    public data object Tertiary : KPButtonStyle {
+        override val buttonColors: KPButtonColors
+            @Composable
+            get() = KPButtonDefaults.buttonColors(
+                backgroundColor = KPDesign.colors.colorSurface,
+                contentColor = KPDesign.colors.colorOnSurfaceVariant2,
+                borderColor = KPDesign.colors.colorBorder,
+                disabledBackgroundColor = KPDesign.colors.colorSurface,
+                disabledContentColor = KPDesign.colors.colorOnSurfaceVariant1,
+                disabledBorderColor = KPDesign.colors.colorBorder,
+            )
+    }
+}
+
+@Deprecated(
+    message = "Use KPButtonStyle instead for consistent naming. " +
+        "This API will get removed in future releases.",
+    replaceWith = ReplaceWith(
+        expression = "KPButtonStyle"
+    ),
+    level = DeprecationLevel.WARNING
+)
+public sealed interface TrendyolButtonStyle {
+    public data object Primary : ButtonStyle {
         override val buttonColors: TrendyolButtonColors
             @Composable
             get() = TrendyolButtonDefaults.buttonColors(
@@ -15,7 +63,7 @@ sealed interface TrendyolButtonStyle {
             )
     }
 
-    data object Secondary : ButtonStyle {
+    public data object Secondary : ButtonStyle {
         override val buttonColors: TrendyolButtonColors
             @Composable
             get() = TrendyolButtonDefaults.buttonColors(
@@ -28,7 +76,7 @@ sealed interface TrendyolButtonStyle {
             )
     }
 
-    data object Tertiary : ButtonStyle {
+    public data object Tertiary : ButtonStyle {
         override val buttonColors: TrendyolButtonColors
             @Composable
             get() = TrendyolButtonDefaults.buttonColors(

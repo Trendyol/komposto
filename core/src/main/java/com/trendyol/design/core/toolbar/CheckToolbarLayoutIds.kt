@@ -1,0 +1,25 @@
+package com.trendyol.design.core.toolbar
+
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.layout.layoutId
+
+@Composable
+public fun CheckToolbarLayoutIds(
+    layoutId: Any?,
+    isSingleChildRequired: Boolean = false,
+    errorMessage: String = "Failed requirement.",
+    content: @Composable () -> Unit,
+): Unit = Layout(content) { measurables, _ ->
+
+    if (isSingleChildRequired) {
+        val child = measurables.singleOrNull()
+            ?: error("Only a single child is allowed, was: ${measurables.size}")
+
+        require(child.layoutId == layoutId) { errorMessage }
+    } else {
+        require(measurables.all { child -> child.layoutId == layoutId }) { errorMessage }
+    }
+
+    layout(0, 0) {}
+}

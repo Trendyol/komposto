@@ -5,60 +5,74 @@ import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
 
-open class TrendyolDesignTypography {
+@Deprecated(
+    message = "Use KPDesignTypography instead for consistent naming. " +
+        "This API will get removed in future releases.",
+    replaceWith = ReplaceWith(
+        expression = "KPDesignTypography"
+    ),
+    level = DeprecationLevel.WARNING
+)
+public open class TrendyolDesignTypography {
 
     //region Header
     //region HeaderVariants
-    open val header: TextStyle
+    public open val header: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 20.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val headerColorOnSurfaceVariant1: TextStyle
+    public open val headerColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val headerColorOnSurfaceVariant3: TextStyle
+    public open val headerColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
+            fontSize = 20.sp,
+            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val headerColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val headerColorPrimary: TextStyle
+    public open val headerColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val headerColorOnPrimary: TextStyle
+    public open val headerColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val headerColorWarning: TextStyle
+    public open val headerColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val headerColorGreen: TextStyle
+    public open val headerColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val headerColorBlue: TextStyle
+    public open val headerColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
@@ -68,174 +82,127 @@ open class TrendyolDesignTypography {
 
     //endregion
     //region HeaderMediumVariants
-    open val headerMedium: TextStyle
+    public open val headerMedium: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 20.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val headerMediumColorOnSurfaceVariant1: TextStyle
+    public open val headerMediumColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val headerMediumColorOnSurfaceVariant3: TextStyle
+    public open val headerMediumColorOnSurfaceVariant2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 20.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
-        )
-    open val headerMediumColorPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 20.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorPrimary
-        )
-    open val headerMediumColorOnPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 20.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
-        )
-    open val headerMediumColorWarning: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 20.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorWarning
-        )
-    open val headerMediumColorGreen: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 20.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorGreen
-        )
-    open val headerMediumColorBlue: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 20.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorBlue
-        )
-
-    //endregion
-    //region HeaderSemiBoldVariants
-    open val headerSemiBold: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val headerSemiBoldColorOnSurfaceVariant1: TextStyle
+    public open val headerMediumColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 20.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
-        )
-    open val headerSemiBoldColorOnSurfaceVariant3: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val headerSemiBoldColorPrimary: TextStyle
+    public open val headerMediumColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val headerSemiBoldColorOnPrimary: TextStyle
+    public open val headerMediumColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val headerSemiBoldColorWarning: TextStyle
+    public open val headerMediumColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val headerSemiBoldColorGreen: TextStyle
+    public open val headerMediumColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val headerSemiBoldColorBlue: TextStyle
+    public open val headerMediumColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorBlue
         )
 
     //endregion
     //region HeaderBoldVariants
-    open val headerBold: TextStyle
+    public open val headerBold: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 20.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val headerBoldColorOnSurfaceVariant1: TextStyle
+    public open val headerBoldColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val headerBoldColorOnSurfaceVariant3: TextStyle
+    public open val headerBoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
+            fontSize = 20.sp,
+            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val headerBoldColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val headerBoldColorPrimary: TextStyle
+    public open val headerBoldColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val headerBoldColorOnPrimary: TextStyle
+    public open val headerBoldColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val headerBoldColorWarning: TextStyle
+    public open val headerBoldColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val headerBoldColorGreen: TextStyle
+    public open val headerBoldColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 20.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val headerBoldColorBlue: TextStyle
+    public open val headerBoldColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
@@ -247,56 +214,62 @@ open class TrendyolDesignTypography {
 
     //region Title
     //region TitleVariants
-    open val title: TextStyle
+    public open val title: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val titleColorOnSurfaceVariant1: TextStyle
+    public open val titleColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val titleColorOnSurfaceVariant3: TextStyle
+    public open val titleColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
+            fontSize = 16.sp,
+            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val titleColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val titleColorPrimary: TextStyle
+    public open val titleColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val titleColorOnPrimary: TextStyle
+    public open val titleColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val titleColorWarning: TextStyle
+    public open val titleColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val titleColorGreen: TextStyle
+    public open val titleColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val titleColorBlue: TextStyle
+    public open val titleColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
@@ -306,188 +279,127 @@ open class TrendyolDesignTypography {
 
     //endregion
     //region TitleMediumVariants
-    open val titleMedium: TextStyle
+    public open val titleMedium: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val titleMediumColorOnSurfaceVariant1: TextStyle
+    public open val titleMediumColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val titleMediumColorOnSurfaceVariant2: TextStyle
+    public open val titleMediumColorOnSurfaceVariant2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val titleMediumColorOnSurfaceVariant3: TextStyle
+    public open val titleMediumColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val titleMediumColorPrimary: TextStyle
+    public open val titleMediumColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val titleMediumColorOnPrimary: TextStyle
+    public open val titleMediumColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val titleMediumColorWarning: TextStyle
+    public open val titleMediumColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val titleMediumColorGreen: TextStyle
+    public open val titleMediumColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val titleMediumColorBlue: TextStyle
+    public open val titleMediumColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorBlue
-        )
-
-    //endregion
-    //region TitleSemiBoldVariants
-    open val titleSemiBold: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
-        )
-    open val titleSemiBoldColorOnSurfaceVariant1: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
-        )
-    open val titleSemiBoldColorOnSurfaceVariant2: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
-        )
-    open val titleSemiBoldColorOnSurfaceVariant3: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
-        )
-    open val titleSemiBoldColorPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorPrimary
-        )
-    open val titleSemiBoldColorOnPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
-        )
-    open val titleSemiBoldColorWarning: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorWarning
-        )
-    open val titleSemiBoldColorGreen: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorGreen
-        )
-    open val titleSemiBoldColorBlue: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorBlue
         )
 
     //endregion
     //region TitleBoldVariants
-    open val titleBold: TextStyle
+    public open val titleBold: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 16.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val titleBoldColorOnSurfaceVariant1: TextStyle
+    public open val titleBoldColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val titleBoldColorOnSurfaceVariant3: TextStyle
+    public open val titleBoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
+            fontSize = 16.sp,
+            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val titleBoldColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val titleBoldColorPrimary: TextStyle
+    public open val titleBoldColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val titleBoldColorOnPrimary: TextStyle
+    public open val titleBoldColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val titleBoldColorWarning: TextStyle
+    public open val titleBoldColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val titleBoldColorGreen: TextStyle
+    public open val titleBoldColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 16.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val titleBoldColorBlue: TextStyle
+    public open val titleBoldColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
@@ -499,63 +411,62 @@ open class TrendyolDesignTypography {
 
     //region Subtitle
     //region SubtitleVariants
-    open val subtitle: TextStyle
+    public open val subtitle: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val subtitleColorOnSurfaceVariant1: TextStyle
+    public open val subtitleColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val subtitleColorOnSurfaceVariant2: TextStyle
+    public open val subtitleColorOnSurfaceVariant2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val subtitleColorOnSurfaceVariant3: TextStyle
+    public open val subtitleColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val subtitleColorPrimary: TextStyle
+    public open val subtitleColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val subtitleColorOnPrimary: TextStyle
+    public open val subtitleColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val subtitleColorWarning: TextStyle
+    public open val subtitleColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val subtitleColorGreen: TextStyle
+    public open val subtitleColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val subtitleColorBlue: TextStyle
+    public open val subtitleColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
@@ -565,139 +476,78 @@ open class TrendyolDesignTypography {
 
     //endregion
     //region SubtitleMediumVariants
-    open val subtitleMedium: TextStyle
+    public open val subtitleMedium: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val subtitleMediumColorOnSurfaceVariant1: TextStyle
+    public open val subtitleMediumColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val subtitleMediumColorOnSurfaceVariant2: TextStyle
+    public open val subtitleMediumColorOnSurfaceVariant2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val subtitleMediumColorOnSurfaceVariant3: TextStyle
+    public open val subtitleMediumColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val subtitleMediumColorPrimary: TextStyle
+    public open val subtitleMediumColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val subtitleMediumColorOnPrimary: TextStyle
+    public open val subtitleMediumColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val subtitleMediumColorWarning: TextStyle
+    public open val subtitleMediumColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val subtitleMediumColorGreen: TextStyle
+    public open val subtitleMediumColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val subtitleMediumColorBlue: TextStyle
+    public open val subtitleMediumColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorBlue
-        )
-
-    //endregion
-    //region SubtitleSemiBoldVariants
-    open val subtitleSemiBold: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
-        )
-    open val subtitleSemiBoldColorOnSurfaceVariant1: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
-        )
-    open val subtitleSemiBoldColorOnSurfaceVariant3: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
-        )
-    open val subtitleSemiBoldColorPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorPrimary
-        )
-    open val subtitleSemiBoldColorOnPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
-        )
-    open val subtitleSemiBoldColorWarning: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorWarning
-        )
-    open val subtitleSemiBoldColorGreen: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorGreen
-        )
-    open val subtitleSemiBoldColorBlue: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorBlue
         )
 
     //endregion
     //region SubtitleBoldVariants
-    open val subtitleBold: TextStyle
+    public open val subtitleBold: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 14.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val subtitleBoldColorOnSurfaceVariant1: TextStyle
+    public open val subtitleBoldColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
@@ -705,7 +555,7 @@ open class TrendyolDesignTypography {
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
 
-    open val subtitleBoldColorOnSurfaceVariant2: TextStyle
+    public open val subtitleBoldColorOnSurfaceVariant2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
@@ -713,42 +563,42 @@ open class TrendyolDesignTypography {
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
 
-    open val subtitleBoldColorOnSurfaceVariant3: TextStyle
+    public open val subtitleBoldColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val subtitleBoldColorPrimary: TextStyle
+    public open val subtitleBoldColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val subtitleBoldColorOnPrimary: TextStyle
+    public open val subtitleBoldColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val subtitleBoldColorWarning: TextStyle
+    public open val subtitleBoldColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val subtitleBoldColorGreen: TextStyle
+    public open val subtitleBoldColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 14.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val subtitleBoldColorBlue: TextStyle
+    public open val subtitleBoldColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
@@ -760,63 +610,62 @@ open class TrendyolDesignTypography {
 
     //region Body1
     //region Body1Variants
-    open val body1: TextStyle
+    public open val body1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val body1ColorOnSurfaceVariant1: TextStyle
+    public open val body1ColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val body1ColorOnSurfaceVariant2: TextStyle
+    public open val body1ColorOnSurfaceVariant2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val body1ColorOnSurfaceVariant3: TextStyle
+    public open val body1ColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val body1ColorPrimary: TextStyle
+    public open val body1ColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val body1ColorOnPrimary: TextStyle
+    public open val body1ColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val body1ColorWarning: TextStyle
+    public open val body1ColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val body1ColorGreen: TextStyle
+    public open val body1ColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val body1ColorBlue: TextStyle
+    public open val body1ColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
@@ -826,181 +675,127 @@ open class TrendyolDesignTypography {
 
     //endregion
     //region Body1MediumVariants
-    open val body1Medium: TextStyle
+    public open val body1Medium: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val body1MediumColorOnSurfaceVariant1: TextStyle
+    public open val body1MediumColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val body1MediumColorOnSurfaceVariant2: TextStyle
+    public open val body1MediumColorOnSurfaceVariant2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val body1MediumColorOnSurfaceVariant3: TextStyle
+    public open val body1MediumColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val body1MediumColorPrimary: TextStyle
+    public open val body1MediumColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val body1MediumColorOnPrimary: TextStyle
+    public open val body1MediumColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val body1MediumColorWarning: TextStyle
+    public open val body1MediumColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val body1MediumColorGreen: TextStyle
+    public open val body1MediumColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val body1MediumColorBlue: TextStyle
+    public open val body1MediumColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorBlue
-        )
-
-    //endregion
-    //region Body1SemiBoldVariants
-    open val body1SemiBold: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
-        )
-    open val body1SemiBoldColorOnSurfaceVariant1: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
-        )
-    open val body1SemiBoldColorOnSurfaceVariant3: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
-        )
-    open val body1SemiBoldColorPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorPrimary
-        )
-    open val body1SemiBoldColorOnPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
-        )
-    open val body1SemiBoldColorWarning: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorWarning
-        )
-    open val body1SemiBoldColorGreen: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorGreen
-        )
-    open val body1SemiBoldColorBlue: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorBlue
         )
 
     //endregion
     //region Body1BoldVariants
-    open val body1Bold: TextStyle
+    public open val body1Bold: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 12.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val body1BoldColorOnSurfaceVariant1: TextStyle
+    public open val body1BoldColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val body1BoldColorOnSurfaceVariant3: TextStyle
+    public open val body1BoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
+            fontSize = 12.sp,
+            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val body1BoldColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val body1BoldColorPrimary: TextStyle
+    public open val body1BoldColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val body1BoldColorOnPrimary: TextStyle
+    public open val body1BoldColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val body1BoldColorWarning: TextStyle
+    public open val body1BoldColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val body1BoldColorGreen: TextStyle
+    public open val body1BoldColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 12.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val body1BoldColorBlue: TextStyle
+    public open val body1BoldColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
@@ -1012,14 +807,13 @@ open class TrendyolDesignTypography {
 
     //region Body2
     //region Body2Variants
-    open val body2: TextStyle
+    public open val body2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val body2ColorOnSurfaceVariant1: TextStyle
+    public open val body2ColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
@@ -1027,49 +821,49 @@ open class TrendyolDesignTypography {
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
 
-    open val body2ColorOnSurfaceVariant2: TextStyle
+    public open val body2ColorOnSurfaceVariant2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val body2ColorOnSurfaceVariant3: TextStyle
+    public open val body2ColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val body2ColorPrimary: TextStyle
+    public open val body2ColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val body2ColorOnPrimary: TextStyle
+    public open val body2ColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val body2ColorWarning: TextStyle
+    public open val body2ColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val body2ColorGreen: TextStyle
+    public open val body2ColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val body2ColorBlue: TextStyle
+    public open val body2ColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
@@ -1079,181 +873,127 @@ open class TrendyolDesignTypography {
 
     //endregion
     //region Body2MediumVariants
-    open val body2Medium: TextStyle
+    public open val body2Medium: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val body2MediumColorOnSurfaceVariant1: TextStyle
+    public open val body2MediumColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val body2MediumColorOnSurfaceVariant2: TextStyle
+    public open val body2MediumColorOnSurfaceVariant2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val body2MediumColorOnSurfaceVariant3: TextStyle
+    public open val body2MediumColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val body2MediumColorPrimary: TextStyle
+    public open val body2MediumColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val body2MediumColorOnPrimary: TextStyle
+    public open val body2MediumColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val body2MediumColorWarning: TextStyle
+    public open val body2MediumColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val body2MediumColorGreen: TextStyle
+    public open val body2MediumColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val body2MediumColorBlue: TextStyle
+    public open val body2MediumColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorBlue
-        )
-
-    //endregion
-    //region Body2SemiBoldVariants
-    open val body2SemiBold: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
-        )
-    open val body2SemiBoldColorOnSurfaceVariant1: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
-        )
-    open val body2SemiBoldColorOnSurfaceVariant3: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
-        )
-    open val body2SemiBoldColorPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorPrimary
-        )
-    open val body2SemiBoldColorOnPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
-        )
-    open val body2SemiBoldColorWarning: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorWarning
-        )
-    open val body2SemiBoldColorGreen: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorGreen
-        )
-    open val body2SemiBoldColorBlue: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorBlue
         )
 
     //endregion
     //region Body2BoldVariants
-    open val body2Bold: TextStyle
+    public open val body2Bold: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 10.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val body2BoldColorOnSurfaceVariant1: TextStyle
+    public open val body2BoldColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val body2BoldColorOnSurfaceVariant3: TextStyle
+    public open val body2BoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
+            fontSize = 10.sp,
+            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val body2BoldColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val body2BoldColorPrimary: TextStyle
+    public open val body2BoldColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val body2BoldColorOnPrimary: TextStyle
+    public open val body2BoldColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val body2BoldColorWarning: TextStyle
+    public open val body2BoldColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val body2BoldColorGreen: TextStyle
+    public open val body2BoldColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 10.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val body2BoldColorBlue: TextStyle
+    public open val body2BoldColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
@@ -1265,56 +1005,62 @@ open class TrendyolDesignTypography {
 
     //region OverLine
     //region OverLineVariants
-    open val overLine: TextStyle
+    public open val overLine: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 8.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val overLineColorOnSurfaceVariant1: TextStyle
+    public open val overLineColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val overLineColorOnSurfaceVariant3: TextStyle
+    public open val overLineColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
+            fontSize = 8.sp,
+            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val overLineColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val overLineColorPrimary: TextStyle
+    public open val overLineColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val overLineColorOnPrimary: TextStyle
+    public open val overLineColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val overLineColorWarning: TextStyle
+    public open val overLineColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val overLineColorGreen: TextStyle
+    public open val overLineColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val overLineColorBlue: TextStyle
+    public open val overLineColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.regular,
@@ -1324,179 +1070,1320 @@ open class TrendyolDesignTypography {
 
     //endregion
     //region OverLineMediumVariants
-    open val overLineMedium: TextStyle
+    public open val overLineMedium: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 8.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val overLineMediumColorOnSurfaceVariant1: TextStyle
+    public open val overLineMediumColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val overLineMediumColorOnSurfaceVariant3: TextStyle
+    public open val overLineMediumColorOnSurfaceVariant2: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 8.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
-        )
-    open val overLineMediumColorPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 8.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorPrimary
-        )
-    open val overLineMediumColorOnPrimary: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 8.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
-        )
-    open val overLineMediumColorWarning: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 8.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorWarning
-        )
-    open val overLineMediumColorGreen: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 8.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorGreen
-        )
-    open val overLineMediumColorBlue: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
-            fontSize = 8.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorBlue
-        )
-
-    //endregion
-    //region OverLineSemiBoldVariants
-    open val overLineSemiBold: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val overLineSemiBoldColorOnSurfaceVariant1: TextStyle
+    public open val overLineMediumColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
-            fontSize = 8.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
-        )
-    open val overLineSemiBoldColorOnSurfaceVariant3: TextStyle
-        @ReadOnlyComposable
-        @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val overLineSemiBoldColorPrimary: TextStyle
+    public open val overLineMediumColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val overLineSemiBoldColorOnPrimary: TextStyle
+    public open val overLineMediumColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val overLineSemiBoldColorWarning: TextStyle
+    public open val overLineMediumColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val overLineSemiBoldColorGreen: TextStyle
+    public open val overLineMediumColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val overLineSemiBoldColorBlue: TextStyle
+    public open val overLineMediumColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
-            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.semiBold,
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.medium,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorBlue
         )
 
     //endregion
     //region OverLineBoldVariants
-    open val overLineBold: TextStyle
+    public open val overLineBold: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 8.sp,
-            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
         )
-    open val overLineBoldColorOnSurfaceVariant1: TextStyle
+    public open val overLineBoldColorOnSurfaceVariant1: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant1
         )
-    open val overLineBoldColorOnSurfaceVariant3: TextStyle
+    public open val overLineBoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
+            fontSize = 8.sp,
+            color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val overLineBoldColorOnSurfaceVariant3: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnSurfaceVariant3
         )
-    open val overLineBoldColorPrimary: TextStyle
+    public open val overLineBoldColorPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorPrimary
         )
-    open val overLineBoldColorOnPrimary: TextStyle
+    public open val overLineBoldColorOnPrimary: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorOnPrimary
         )
-    open val overLineBoldColorWarning: TextStyle
+    public open val overLineBoldColorWarning: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorWarning
         )
-    open val overLineBoldColorGreen: TextStyle
+    public open val overLineBoldColorGreen: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorGreen
         )
-    open val overLineBoldColorBlue: TextStyle
+    public open val overLineBoldColorBlue: TextStyle
         @ReadOnlyComposable
         @Composable get() = TextStyle(
             fontFamily = LocalTrendyolDesignTheme.current.fontFamily.bold,
             fontSize = 8.sp,
             color = LocalTrendyolDesignTheme.current.colors.colorBlue
+        )
+    //endregion
+    //endregion
+}
+
+public open class KPDesignTypography {
+
+    //region Header
+    //region HeaderVariants
+    public open val header: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 20.sp,
+        )
+    public open val headerColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val headerColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val headerColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val headerColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val headerColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val headerColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val headerColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val headerColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region HeaderMediumVariants
+    public open val headerMedium: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 20.sp,
+        )
+    public open val headerMediumColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val headerMediumColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val headerMediumColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val headerMediumColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val headerMediumColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val headerMediumColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val headerMediumColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val headerMediumColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region HeaderBoldVariants
+    public open val headerBold: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 20.sp,
+        )
+    public open val headerBoldColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val headerBoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val headerBoldColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val headerBoldColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val headerBoldColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val headerBoldColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val headerBoldColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val headerBoldColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 20.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+    //endregion
+    //endregion
+
+    //region Title
+    //region TitleVariants
+    public open val title: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 16.sp,
+        )
+    public open val titleColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val titleColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val titleColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val titleColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val titleColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val titleColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val titleColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val titleColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region TitleMediumVariants
+    public open val titleMedium: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 16.sp,
+        )
+    public open val titleMediumColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val titleMediumColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val titleMediumColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val titleMediumColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val titleMediumColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val titleMediumColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val titleMediumColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val titleMediumColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region TitleBoldVariants
+    public open val titleBold: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 16.sp,
+        )
+    public open val titleBoldColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val titleBoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val titleBoldColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val titleBoldColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val titleBoldColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val titleBoldColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val titleBoldColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val titleBoldColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 16.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+    //endregion
+    //endregion
+
+    //region Subtitle
+    //region SubtitleVariants
+    public open val subtitle: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 14.sp,
+        )
+    public open val subtitleColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val subtitleColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val subtitleColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val subtitleColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val subtitleColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val subtitleColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val subtitleColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val subtitleColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region SubtitleMediumVariants
+    public open val subtitleMedium: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 14.sp,
+        )
+    public open val subtitleMediumColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val subtitleMediumColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val subtitleMediumColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val subtitleMediumColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val subtitleMediumColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val subtitleMediumColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val subtitleMediumColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val subtitleMediumColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region SubtitleBoldVariants
+    public open val subtitleBold: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 14.sp,
+        )
+    public open val subtitleBoldColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+
+    public open val subtitleBoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+
+    public open val subtitleBoldColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val subtitleBoldColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val subtitleBoldColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val subtitleBoldColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val subtitleBoldColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val subtitleBoldColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 14.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+    //endregion
+    //endregion
+
+    //region Body1
+    //region Body1Variants
+    public open val body1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 12.sp,
+        )
+    public open val body1ColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val body1ColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val body1ColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val body1ColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val body1ColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val body1ColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val body1ColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val body1ColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region Body1MediumVariants
+    public open val body1Medium: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 12.sp,
+        )
+    public open val body1MediumColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val body1MediumColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val body1MediumColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val body1MediumColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val body1MediumColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val body1MediumColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val body1MediumColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val body1MediumColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region Body1BoldVariants
+    public open val body1Bold: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 12.sp,
+        )
+    public open val body1BoldColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val body1BoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val body1BoldColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val body1BoldColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val body1BoldColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val body1BoldColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val body1BoldColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val body1BoldColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 12.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+    //endregion
+    //endregion
+
+    //region Body2
+    //region Body2Variants
+    public open val body2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 10.sp,
+        )
+    public open val body2ColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+
+    public open val body2ColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val body2ColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val body2ColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val body2ColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val body2ColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val body2ColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val body2ColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region Body2MediumVariants
+    public open val body2Medium: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 10.sp,
+        )
+    public open val body2MediumColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val body2MediumColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val body2MediumColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val body2MediumColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val body2MediumColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val body2MediumColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val body2MediumColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val body2MediumColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region Body2BoldVariants
+    public open val body2Bold: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 10.sp,
+        )
+    public open val body2BoldColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val body2BoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val body2BoldColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val body2BoldColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val body2BoldColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val body2BoldColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val body2BoldColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val body2BoldColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 10.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+    //endregion
+    //endregion
+
+    //region OverLine
+    //region OverLineVariants
+    public open val overLine: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 8.sp,
+        )
+    public open val overLineColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val overLineColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val overLineColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val overLineColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val overLineColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val overLineColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val overLineColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val overLineColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.regular,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region OverLineMediumVariants
+    public open val overLineMedium: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 8.sp,
+        )
+    public open val overLineMediumColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val overLineMediumColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val overLineMediumColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val overLineMediumColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val overLineMediumColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val overLineMediumColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val overLineMediumColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val overLineMediumColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.medium,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
+        )
+
+    //endregion
+    //region OverLineBoldVariants
+    public open val overLineBold: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 8.sp,
+        )
+    public open val overLineBoldColorOnSurfaceVariant1: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant1
+        )
+    public open val overLineBoldColorOnSurfaceVariant2: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant2
+        )
+    public open val overLineBoldColorOnSurfaceVariant3: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnSurfaceVariant3
+        )
+    public open val overLineBoldColorPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorPrimary
+        )
+    public open val overLineBoldColorOnPrimary: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorOnPrimary
+        )
+    public open val overLineBoldColorWarning: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorWarning
+        )
+    public open val overLineBoldColorGreen: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorGreen
+        )
+    public open val overLineBoldColorBlue: TextStyle
+        @ReadOnlyComposable
+        @Composable get() = TextStyle(
+            fontFamily = LocalKPDesignTheme.current.fontFamily.bold,
+            fontSize = 8.sp,
+            color = LocalKPDesignTheme.current.colors.colorBlue
         )
     //endregion
     //endregion
