@@ -1,0 +1,42 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:////PointingToDeclaration/core/[root]/index.html
+$dokka.location://StateWarningInfoDefault/com.trendyol.design.core.icon.KPIcons.Fill#/PointingToDeclaration/core/[root]/-state-warning-info-default.html
+$dokka.location://WarningInfoStateDefaultIcon/#/PointingToDeclaration/core/[root]/-warning-info-state-default-icon.html
+module:bottomsheet
+com.trendyol.design.bottomsheet
+com.trendyol.design.bottomsheet.header
+com.trendyol.design.bottomsheet.item
+module:core
+com.trendyol.design.core.badge.boxbadge
+com.trendyol.design.core.badge.boxbadge.model
+com.trendyol.design.core.button
+com.trendyol.design.core.checkbox
+com.trendyol.design.core.countdowntimer
+com.trendyol.design.core.dialog
+com.trendyol.design.core.icon
+com.trendyol.design.core.icon.icons.fill
+com.trendyol.design.core.icon.icons.outline
+com.trendyol.design.core.iconbutton
+com.trendyol.design.core.iconbutton.contained
+com.trendyol.design.core.iconbutton.standard
+com.trendyol.design.core.infobox
+com.trendyol.design.core.inputfield
+com.trendyol.design.core.inputfield.container
+com.trendyol.design.core.inputfield.email
+com.trendyol.design.core.inputfield.impl
+com.trendyol.design.core.inputfield.otp
+com.trendyol.design.core.inputfield.password
+com.trendyol.design.core.inputfield.phone
+com.trendyol.design.core.price
+com.trendyol.design.core.radiobutton
+com.trendyol.design.core.rating
+com.trendyol.design.core.search
+com.trendyol.design.core.statelayout
+com.trendyol.design.core.statelayout.states.loading
+com.trendyol.design.core.statelayout.states.warningInfo
+com.trendyol.design.core.text
+com.trendyol.design.core.toolbar
+com.trendyol.design.core.util
+module:theme
+com.trendyol.theme

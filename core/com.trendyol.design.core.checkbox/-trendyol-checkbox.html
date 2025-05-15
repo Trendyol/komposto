@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>TrendyolCheckbox</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            design
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":core:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageids="core::com.trendyol.design.core.checkbox//TrendyolCheckbox/#com.trendyol.design.core.checkbox.CheckboxStyle#com.trendyol.design.core.checkbox.CheckboxSize#com.trendyol.design.core.checkbox.CheckboxContainerType#kotlin.Boolean#kotlin.Function1[kotlin.Boolean,kotlin.Unit]?#androidx.compose.ui.Modifier#kotlin.Boolean#androidx.compose.foundation.interaction.MutableInteractionSource#androidx.compose.ui.Alignment.Vertical/PointingToDeclaration//-27209644">
+  <div class="breadcrumbs"><a href="../index.html">core</a><span class="delimiter">/</span><a href="index.html">com.trendyol.design.core.checkbox</a><span class="delimiter">/</span><span class="current">TrendyolCheckbox</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Trendyol</span><wbr><span><span>Checkbox</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="-trendyol-checkbox.html"><span class="token function"><strike>TrendyolCheckbox</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">style<span class="token operator">: </span><a href="-checkbox-style/index.html">CheckboxStyle</a><span class="token punctuation">, </span></span><span class="parameter ">size<span class="token operator">: </span><a href="-checkbox-size/index.html">CheckboxSize</a><span class="token punctuation">, </span></span><span class="parameter ">containerType<span class="token operator">: </span><a href="-checkbox-container-type/index.html">CheckboxContainerType</a><span class="token punctuation">, </span></span><span class="parameter ">checked<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">onCheckedChange<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">modifier<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier.html">Modifier</a><span class="token operator"> = </span>Modifier<span class="token punctuation">, </span></span><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">interactionSource<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/foundation/interaction/MutableInteractionSource.html">MutableInteractionSource</a><span class="token operator"> = </span>remember { MutableInteractionSource() }<span class="token punctuation">, </span></span><span class="parameter ">position<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/Alignment.Vertical.html">Alignment.Vertical</a><span class="token operator"> = </span>Alignment.CenterVertically</span></span><span class="token punctuation">)</span></div><div class="deprecation-content"><h3 class="">Deprecated</h3><p class="paragraph">Use KPCheckbox instead for consistent naming. This API will get removed in future releases.</p></div><p class="paragraph">This composable function representing a custom checkbox component designed for the Trendyol.</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":core:dokkaHtmlPartial/release" data-filterable-set=":core:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>style</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The style configuration for the checkbox, defining its appearance. See <a href="-trendyol-check-box-style/-primary/index.html">TrendyolCheckBoxStyle.Primary</a> and <a href="-trendyol-check-box-style/-secondary/index.html">TrendyolCheckBoxStyle.Secondary</a></p></div></div></div></div><div class="table-row" data-filterable-current=":core:dokkaHtmlPartial/release" data-filterable-set=":core:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>size</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The size configuration for the checkbox, determining its dimensions. See <a href="-trendyol-check-box-size/-medium/index.html">TrendyolCheckBoxSize.Medium</a>, <a href="-trendyol-check-box-size/-small/index.html">TrendyolCheckBoxSize.Small</a> and <a href="-trendyol-check-box-size/-x-small/index.html">TrendyolCheckBoxSize.XSmall</a></p></div></div></div></div><div class="table-row" data-filterable-current=":core:dokkaHtmlPartial/release" data-filterable-set=":core:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>container</span><wbr><span><span>Type</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The type of container in which the checkbox is placed. See <a href="-checkbox-container-type/-text/index.html">CheckboxContainerType.Text</a>, <a href="-checkbox-container-type/-content/index.html">CheckboxContainerType.Content</a> and <a href="-checkbox-container-type/-none/index.html">CheckboxContainerType.None</a></p></div></div></div></div><div class="table-row" data-filterable-current=":core:dokkaHtmlPartial/release" data-filterable-set=":core:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>checked</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The current checked state of the checkbox.</p></div></div></div></div><div class="table-row" data-filterable-current=":core:dokkaHtmlPartial/release" data-filterable-set=":core:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>on</span><wbr><span>Checked</span><wbr><span><span>Change</span></span></u></div></span></div><div><div class="title"><p class="paragraph">A callback function invoked when the checked state of the checkbox changes.     It receives a Boolean parameter indicating the new checked state.</p></div></div></div></div><div class="table-row" data-filterable-current=":core:dokkaHtmlPartial/release" data-filterable-set=":core:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>modifier</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Additional modifier for the layout of the checkbox.</p></div></div></div></div><div class="table-row" data-filterable-current=":core:dokkaHtmlPartial/release" data-filterable-set=":core:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>enabled</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Whether the checkbox is interactive and can be checked/unchecked by the user.</p></div></div></div></div><div class="table-row" data-filterable-current=":core:dokkaHtmlPartial/release" data-filterable-set=":core:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>interaction</span><wbr><span><span>Source</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The source of interactions for the checkbox, used for tracking user interactions.</p></div></div></div></div><div class="table-row" data-filterable-current=":core:dokkaHtmlPartial/release" data-filterable-set=":core:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>position</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The vertical alignment of the checkbox within its container.</p></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

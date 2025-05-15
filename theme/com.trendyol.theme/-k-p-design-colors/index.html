@@ -1,0 +1,513 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>KPDesignColors</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            design
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":theme:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="theme::com.trendyol.theme/KPDesignColors///PointingToDeclaration//-1306138820">
+  <div class="breadcrumbs"><a href="../../index.html">theme</a><span class="delimiter">/</span><a href="../index.html">com.trendyol.theme</a><span class="delimiter">/</span><span class="current">KPDesignColors</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>KPDesign</span><wbr><span><span>Colors</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">KPDesignColors</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">colorOnSurfaceVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnSurfaceVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorOnSurfaceVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnSurfaceVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorOnSurfaceVariant3<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnSurfaceVariant3<span class="token punctuation">, </span></span><span class="parameter ">colorPrimary<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPrimary<span class="token punctuation">, </span></span><span class="parameter ">colorPrimaryVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPrimaryVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorPrimaryVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPrimaryVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorOnPrimary<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnPrimary<span class="token punctuation">, </span></span><span class="parameter ">colorWarning<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorWarning<span class="token punctuation">, </span></span><span class="parameter ">colorWarningVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorWarningVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorWarningVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorWarningVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorGreen<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorGreen<span class="token punctuation">, </span></span><span class="parameter ">colorGreenVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorGreenVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorGreenVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorGreenVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorBlue<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBlue<span class="token punctuation">, </span></span><span class="parameter ">colorBlueVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBlueVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorBlueVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBlueVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorSurface<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorSurface<span class="token punctuation">, </span></span><span class="parameter ">colorBackground<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBackground<span class="token punctuation">, </span></span><span class="parameter ">colorBorder<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBorder<span class="token punctuation">, </span></span><span class="parameter ">colorTransparent<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorTransparent<span class="token punctuation">, </span></span><span class="parameter ">colorPink<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPink<span class="token punctuation">, </span></span><span class="parameter ">colorPinkVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPinkVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorPinkVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPinkVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorStar<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorStar<span class="token punctuation">, </span></span><span class="parameter ">colorStarVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorStarVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorStarVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorStarVariant2</span></span><span class="token punctuation">)</span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1550675709%2FConstructors%2F-1306138820" anchor-label="KPDesignColors" id="-1550675709%2FConstructors%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-k-p-design-colors.html"><span>KPDesign</span><wbr><span><span>Colors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1550675709%2FConstructors%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">colorOnSurfaceVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnSurfaceVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorOnSurfaceVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnSurfaceVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorOnSurfaceVariant3<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnSurfaceVariant3<span class="token punctuation">, </span></span><span class="parameter ">colorPrimary<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPrimary<span class="token punctuation">, </span></span><span class="parameter ">colorPrimaryVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPrimaryVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorPrimaryVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPrimaryVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorOnPrimary<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnPrimary<span class="token punctuation">, </span></span><span class="parameter ">colorWarning<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorWarning<span class="token punctuation">, </span></span><span class="parameter ">colorWarningVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorWarningVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorWarningVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorWarningVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorGreen<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorGreen<span class="token punctuation">, </span></span><span class="parameter ">colorGreenVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorGreenVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorGreenVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorGreenVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorBlue<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBlue<span class="token punctuation">, </span></span><span class="parameter ">colorBlueVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBlueVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorBlueVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBlueVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorSurface<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorSurface<span class="token punctuation">, </span></span><span class="parameter ">colorBackground<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBackground<span class="token punctuation">, </span></span><span class="parameter ">colorBorder<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBorder<span class="token punctuation">, </span></span><span class="parameter ">colorTransparent<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorTransparent<span class="token punctuation">, </span></span><span class="parameter ">colorPink<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPink<span class="token punctuation">, </span></span><span class="parameter ">colorPinkVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPinkVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorPinkVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPinkVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorStar<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorStar<span class="token punctuation">, </span></span><span class="parameter ">colorStarVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorStarVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorStarVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorStarVariant2</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="811880602%2FProperties%2F-1306138820" anchor-label="colorBackground" id="811880602%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-background.html"><span>color</span><wbr><span><span>Background</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="811880602%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-background.html">colorBackground</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1896837934%2FProperties%2F-1306138820" anchor-label="colorBlue" id="1896837934%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-blue.html"><span>color</span><wbr><span><span>Blue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1896837934%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-blue.html">colorBlue</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-38953150%2FProperties%2F-1306138820" anchor-label="colorBlueVariant1" id="-38953150%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-blue-variant1.html"><span>color</span><wbr><span>Blue</span><wbr><span><span>Variant1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-38953150%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-blue-variant1.html">colorBlueVariant1</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-7933343%2FProperties%2F-1306138820" anchor-label="colorBlueVariant2" id="-7933343%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-blue-variant2.html"><span>color</span><wbr><span>Blue</span><wbr><span><span>Variant2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-7933343%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-blue-variant2.html">colorBlueVariant2</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2023667492%2FProperties%2F-1306138820" anchor-label="colorBorder" id="-2023667492%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-border.html"><span>color</span><wbr><span><span>Border</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2023667492%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-border.html">colorBorder</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-215369489%2FProperties%2F-1306138820" anchor-label="colorGreen" id="-215369489%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-green.html"><span>color</span><wbr><span><span>Green</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-215369489%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-green.html">colorGreen</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-11889661%2FProperties%2F-1306138820" anchor-label="colorGreenVariant1" id="-11889661%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-green-variant1.html"><span>color</span><wbr><span>Green</span><wbr><span><span>Variant1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-11889661%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-green-variant1.html">colorGreenVariant1</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="19130146%2FProperties%2F-1306138820" anchor-label="colorGreenVariant2" id="19130146%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-green-variant2.html"><span>color</span><wbr><span>Green</span><wbr><span><span>Variant2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="19130146%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-green-variant2.html">colorGreenVariant2</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="855534159%2FProperties%2F-1306138820" anchor-label="colorOnPrimary" id="855534159%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-on-primary.html"><span>color</span><wbr><span>On</span><wbr><span><span>Primary</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="855534159%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-on-primary.html">colorOnPrimary</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1962489832%2FProperties%2F-1306138820" anchor-label="colorOnSurfaceVariant1" id="-1962489832%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-on-surface-variant1.html"><span>color</span><wbr><span>On</span><wbr><span>Surface</span><wbr><span><span>Variant1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1962489832%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-on-surface-variant1.html">colorOnSurfaceVariant1</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1931470025%2FProperties%2F-1306138820" anchor-label="colorOnSurfaceVariant2" id="-1931470025%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-on-surface-variant2.html"><span>color</span><wbr><span>On</span><wbr><span>Surface</span><wbr><span><span>Variant2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1931470025%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-on-surface-variant2.html">colorOnSurfaceVariant2</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1900450218%2FProperties%2F-1306138820" anchor-label="colorOnSurfaceVariant3" id="-1900450218%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-on-surface-variant3.html"><span>color</span><wbr><span>On</span><wbr><span>Surface</span><wbr><span><span>Variant3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1900450218%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-on-surface-variant3.html">colorOnSurfaceVariant3</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1524324754%2FProperties%2F-1306138820" anchor-label="colorPink" id="1524324754%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-pink.html"><span>color</span><wbr><span><span>Pink</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1524324754%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-pink.html">colorPink</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1391387046%2FProperties%2F-1306138820" anchor-label="colorPinkVariant1" id="1391387046%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-pink-variant1.html"><span>color</span><wbr><span>Pink</span><wbr><span><span>Variant1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1391387046%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-pink-variant1.html">colorPinkVariant1</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1422406853%2FProperties%2F-1306138820" anchor-label="colorPinkVariant2" id="1422406853%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-pink-variant2.html"><span>color</span><wbr><span>Pink</span><wbr><span><span>Variant2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1422406853%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-pink-variant2.html">colorPinkVariant2</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="689022352%2FProperties%2F-1306138820" anchor-label="colorPrimary" id="689022352%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-primary.html"><span>color</span><wbr><span><span>Primary</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="689022352%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-primary.html">colorPrimary</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1282388060%2FProperties%2F-1306138820" anchor-label="colorPrimaryVariant1" id="-1282388060%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-primary-variant1.html"><span>color</span><wbr><span>Primary</span><wbr><span><span>Variant1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1282388060%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-primary-variant1.html">colorPrimaryVariant1</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1251368253%2FProperties%2F-1306138820" anchor-label="colorPrimaryVariant2" id="-1251368253%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-primary-variant2.html"><span>color</span><wbr><span>Primary</span><wbr><span><span>Variant2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1251368253%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-primary-variant2.html">colorPrimaryVariant2</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1402586166%2FProperties%2F-1306138820" anchor-label="colorStar" id="1402586166%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-star.html"><span>color</span><wbr><span><span>Star</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1402586166%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-star.html">colorStar</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-8755126%2FProperties%2F-1306138820" anchor-label="colorStarVariant1" id="-8755126%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-star-variant1.html"><span>color</span><wbr><span>Star</span><wbr><span><span>Variant1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-8755126%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-star-variant1.html">colorStarVariant1</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="22264681%2FProperties%2F-1306138820" anchor-label="colorStarVariant2" id="22264681%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-star-variant2.html"><span>color</span><wbr><span>Star</span><wbr><span><span>Variant2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="22264681%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-star-variant2.html">colorStarVariant2</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1686441285%2FProperties%2F-1306138820" anchor-label="colorSurface" id="1686441285%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-surface.html"><span>color</span><wbr><span><span>Surface</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1686441285%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-surface.html">colorSurface</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1269146176%2FProperties%2F-1306138820" anchor-label="colorTransparent" id="-1269146176%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-transparent.html"><span>color</span><wbr><span><span>Transparent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1269146176%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-transparent.html">colorTransparent</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="776742198%2FProperties%2F-1306138820" anchor-label="colorWarning" id="776742198%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-warning.html"><span>color</span><wbr><span><span>Warning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="776742198%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-warning.html">colorWarning</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-163854006%2FProperties%2F-1306138820" anchor-label="colorWarningVariant1" id="-163854006%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-warning-variant1.html"><span>color</span><wbr><span>Warning</span><wbr><span><span>Variant1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-163854006%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-warning-variant1.html">colorWarningVariant1</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-132834199%2FProperties%2F-1306138820" anchor-label="colorWarningVariant2" id="-132834199%2FProperties%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-warning-variant2.html"><span>color</span><wbr><span>Warning</span><wbr><span><span>Variant2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-132834199%2FProperties%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="color-warning-variant2.html">colorWarningVariant2</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-893459035%2FFunctions%2F-1306138820" anchor-label="copy" id="-893459035%2FFunctions%2F-1306138820" data-filterable-set=":theme:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":theme:dokkaHtmlPartial/release" data-filterable-set=":theme:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="copy.html"><span><span>copy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-893459035%2FFunctions%2F-1306138820"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":theme:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="copy.html"><span class="token function">copy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">colorOnSurfaceVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnSurfaceVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorOnSurfaceVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnSurfaceVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorOnSurfaceVariant3<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnSurfaceVariant3<span class="token punctuation">, </span></span><span class="parameter ">colorPrimary<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPrimary<span class="token punctuation">, </span></span><span class="parameter ">colorPrimaryVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPrimaryVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorPrimaryVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPrimaryVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorOnPrimary<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorOnPrimary<span class="token punctuation">, </span></span><span class="parameter ">colorWarning<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorWarning<span class="token punctuation">, </span></span><span class="parameter ">colorWarningVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorWarningVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorWarningVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorWarningVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorGreen<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorGreen<span class="token punctuation">, </span></span><span class="parameter ">colorGreenVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorGreenVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorGreenVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorGreenVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorBlue<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBlue<span class="token punctuation">, </span></span><span class="parameter ">colorBlueVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBlueVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorBlueVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBlueVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorSurface<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorSurface<span class="token punctuation">, </span></span><span class="parameter ">colorBackground<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBackground<span class="token punctuation">, </span></span><span class="parameter ">colorBorder<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorBorder<span class="token punctuation">, </span></span><span class="parameter ">colorTransparent<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorTransparent<span class="token punctuation">, </span></span><span class="parameter ">colorPink<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPink<span class="token punctuation">, </span></span><span class="parameter ">colorPinkVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPinkVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorPinkVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorPinkVariant2<span class="token punctuation">, </span></span><span class="parameter ">colorStar<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorStar<span class="token punctuation">, </span></span><span class="parameter ">colorStarVariant1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorStarVariant1<span class="token punctuation">, </span></span><span class="parameter ">colorStarVariant2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>DefaultColors.colorStarVariant2</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">KPDesignColors</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
