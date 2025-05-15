@@ -1,6 +1,8 @@
 name: Dokka Documentation
 
 on:
+  push:
+    branches: ["main"]
 
 jobs:
   dokka:
@@ -8,6 +10,12 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            version_changed:
+              - 'gradle/published-libs.versions.toml'
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
