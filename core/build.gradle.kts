@@ -55,6 +55,14 @@ publishing {
                 password = properties["NEXUS_PASS"]?.toString() ?: System.getenv("NEXUS_PASS")
             }
         }
+        maven {
+            name = "GithubPackages"
+            url = uri("https://maven.pkg.github.com/Trendyol/design-android")
+            credentials {
+                username = System.getenv("GPR_USER")
+                password = System.getenv("GPR_API_KEY")
+            }
+        }
     }
     publications {
         register<MavenPublication>("release") {
