@@ -47,15 +47,6 @@ android {
 publishing {
     repositories {
         maven {
-            name = "Nexus"
-            url = uri("http://10.84.105.74/repository/maven-releases")
-            isAllowInsecureProtocol = true
-            credentials {
-                username = properties["NEXUS_USER"]?.toString() ?: System.getenv("NEXUS_USER")
-                password = properties["NEXUS_PASS"]?.toString() ?: System.getenv("NEXUS_PASS")
-            }
-        }
-        maven {
             name = "GithubPackages"
             url = uri("https://maven.pkg.github.com/Trendyol/design-android")
             credentials {
