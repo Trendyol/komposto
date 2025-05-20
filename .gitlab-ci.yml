@@ -38,7 +38,7 @@ cache:
 
 build:
   stage: build
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.13-jdk21-35.0.0-NA-34
   script:
     - gradle assemble
   rules:
@@ -49,7 +49,7 @@ build:
 
 androidTestCompile:
   stage: build
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.13-jdk21-35.0.0-NA-34
   script:
     - gradle :app:compileDebugAndroidTestKotlin
   rules:
@@ -60,7 +60,7 @@ androidTestCompile:
 
 check:
   stage: check
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.13-jdk21-35.0.0-NA-34
   script:
     - gradle check
   rules:
@@ -71,7 +71,7 @@ check:
 
 publish:
   stage: deploy
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.13-jdk21-35.0.0-NA-34
   script:
     - gradle publishReleasePublicationToNexusRepository
   rules:
@@ -97,7 +97,7 @@ setup:
 
 dokka:
   stage: deploy
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.8.0-jdk17-34.0.0-26.1.10909125-34-8f657213
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.13-jdk21-35.0.0-NA-34
   script:
     - gradle dokkaHtmlMultiModule
     - mkdir -p htmlMultiModule
@@ -137,7 +137,7 @@ announce:
 
 shot:
   stage: screenshot
-  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.10.0-jdk17-34.0.0-26.1.10909125-34-8df60147
+  image: registry.trendyol.com/mobile/mobile-all/android-all/platform-subgroup/image/android-sdk:8.13-jdk21-35.0.0-NA-34
   extends: .allocate_emulator
   script:
     - !reference [.allocate_emulator, script]
