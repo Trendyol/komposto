@@ -8,10 +8,6 @@ android {
     namespace = "com.trendyol.design.core"
 }
 
-publishing.publications.getByName<MavenPublication>("release") {
-    artifactId = "design-core"
-}
-
 dependencies {
 
     api(projects.theme)

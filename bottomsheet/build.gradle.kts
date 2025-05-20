@@ -7,10 +7,6 @@ android {
     namespace = "com.trendyol.design.bottomsheet"
 }
 
-publishing.publications.getByName<MavenPublication>("release") {
-    artifactId = "design-bottomsheet"
-}
-
 dependencies {
 
     api(projects.theme)
