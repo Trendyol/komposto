@@ -25,7 +25,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
-          arch: 'arm64-v8a'
+          arch: 'x86_64'
           profile: 'pixel_6'
           script: ./gradlew executeScreenshotTests
           
