@@ -7,10 +7,6 @@ android {
     namespace = "com.trendyol.theme"
 }
 
-publishing.publications.getByName<MavenPublication>("release") {
-    artifactId = "design-theme"
-}
-
 dependencies {
 
     implementation(libs.androidxCore)
