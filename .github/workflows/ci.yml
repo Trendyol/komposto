@@ -23,16 +23,16 @@ jobs:
           profile: 'pixel_6'
           script: ./gradlew executeScreenshotTests
           
-      - name: Upload Screenshot Test Results
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: screenshot-test-results
-          path: |
-            app/screenshots/debug/
-            app/build/tmp/shot/screenshot/
-            app/build/reports/shot/debug/verification/
-          retention-days: 1
+#      - name: Upload Screenshot Test Results
+#        if: failure()
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: screenshot-test-results
+#          path: |
+#            app/screenshots/debug/
+#            app/build/tmp/shot/screenshot/
+#            app/build/reports/shot/debug/verification/
+#          retention-days: 1
           
       - name: Send success message to Slack
         if: success()
