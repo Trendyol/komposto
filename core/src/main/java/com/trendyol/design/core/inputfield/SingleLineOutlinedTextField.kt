@@ -18,8 +18,8 @@ import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Cancel
 import com.trendyol.design.core.icon.icons.fill.Search
 import com.trendyol.design.core.inputfield.container.CheckTextFieldLayoutIds
-import com.trendyol.design.core.inputfield.container.TrailingIconLayoutId
 import com.trendyol.design.core.inputfield.container.TextFieldScope
+import com.trendyol.design.core.inputfield.container.TrailingIconLayoutId
 import com.trendyol.design.core.inputfield.container.TrailingTextLayoutId
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
@@ -98,7 +98,7 @@ public fun KPSingleLineOutlinedTextField(
                             persistentSetOf(TrailingIconLayoutId, TrailingTextLayoutId),
                             isSingleChildRequired = true,
                             errorMessage = "Trailing content should be created using " +
-                                    "TextFieldScope.TrailingIcon or TextFieldScope.TrailingText"
+                                "TextFieldScope.TrailingIcon or TextFieldScope.TrailingText"
                         ) {
                             trailingContent(TextFieldScope)
                         }
@@ -145,7 +145,7 @@ public fun KPSingleLineOutlinedTextField(
 @Composable
 @Deprecated(
     message = "Use KPSingleLineOutlinedTextField instead for consistent naming. " +
-            "This API will get removed in future releases.",
+        "This API will get removed in future releases.",
     level = DeprecationLevel.WARNING
 )
 public fun SingleLineOutlinedTextField(

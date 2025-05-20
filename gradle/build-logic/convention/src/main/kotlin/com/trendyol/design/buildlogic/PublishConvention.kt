@@ -1,0 +1,102 @@
+package com.trendyol.design.buildlogic
+
+import com.android.build.gradle.LibraryExtension
+import com.vanniktech.maven.publish.SonatypeHost
+import org.gradle.api.Plugin
+import org.gradle.api.Project
+import com.vanniktech.maven.publish.MavenPublishBaseExtension
+import org.gradle.api.artifacts.VersionCatalogsExtension
+import org.gradle.api.publish.PublishingExtension
+import org.gradle.api.publish.maven.MavenPublication
+import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.get
+import org.gradle.kotlin.dsl.getByType
+import org.gradle.kotlin.dsl.register
+import org.gradle.kotlin.dsl.repositories
+
+class PublishConvention : Plugin<Project> {
+    override fun apply(target: Project) = with(target) {
+        with(plugins) {
+            apply("com.vanniktech.maven.publish")
+            apply("org.jetbrains.dokka")
+        }
+
+        with(dependencies) {
+            add("detektPlugins", libs("detektFormatting"))
+            add("detektPlugins", libs("detektFormatting"))
+            add("dokkaPlugin", libs("dokkaDocumentationPlugin"))
+        }
+
+        group = "com.trendyol"
+        version = extensions
+            .getByType<VersionCatalogsExtension>()
+            .named("publishedLibs")
+            .findVersion("design")
+            .get()
+            .toString()
+
+        extensions.configure<MavenPublishBaseExtension>("mavenPublishing") {
+            publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+
+            pom {
+                name.set(project.name.replaceFirstChar { it.uppercase() })
+                description.set("Komposto Design System")
+                inceptionYear.set("2024")
+                url.set("https://github.com/Trendyol/komposto")
+
+                licenses {
+                    license {
+                        name.set("Apache-2.0 License")
+                        url.set("https://opensource.org/license/apache-2-0")
+                        distribution.set("https://opensource.org/license/apache-2-0")
+                    }
+                }
+                scm {
+                    url.set("https://github.com/Trendyol/komposto")
+                    connection.set("scm:git:https://github.com/Trendyol/komposto.git")
+                    developerConnection.set("scm:git:ssh://git@github.com:Trendyol/komposto.git")
+                }
+            }
+
+            signAllPublications()
+        }
+
+        configure<LibraryExtension> {
+            buildTypes {
+                release {
+                    isMinifyEnabled = false
+                    proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+                }
+            }
+        }
+
+        configure<PublishingExtension> {
+            repositories {
+                maven {
+                    name = "Nexus"
+                    url = uri("http://10.84.105.74/repository/maven-releases")
+                    isAllowInsecureProtocol = true
+                    credentials {
+                        username = properties["NEXUS_USER"]?.toString() ?: System.getenv("NEXUS_USER")
+                        password = properties["NEXUS_PASS"]?.toString() ?: System.getenv("NEXUS_PASS")
+                    }
+                }
+            }
+            publications {
+                register<MavenPublication>("release") {
+                    groupId = "com.trendyol"
+                    version = extensions
+                        .getByType<VersionCatalogsExtension>()
+                        .named("publishedLibs")
+                        .findVersion("design")
+                        .get()
+                        .toString()
+
+                    afterEvaluate {
+                        from(components["release"])
+                    }
+                }
+            }
+        }
+    }
+}
