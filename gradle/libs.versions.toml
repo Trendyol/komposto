@@ -1,42 +1,70 @@
 [versions]
-androidDocumentationPlugin = "1.9.20"
-androidx-compose-bom = '2024.02.01'
-test-rules = '1.5.0'
+dokkaDocumentationPlugin = "2.0.0"
+testRules = '1.6.1'
 shot = '6.1.0'
-coil = '2.6.0'
+coil = '2.7.0'
 showkaseVersion = "1.0.3"
-kotlinGradlePlugin = "1.9.24"
-composeCompiler = "1.5.14"
+agp = "8.9.3"
+gradleMavenPublishPlugin = "0.30.0"
+kotlin = "2.1.21"
+detekt = "1.23.8"
+detektComposeRules = "0.3.20"
+ksp = "2.1.21-2.0.1"
+binaryCompatibilityValidator = "0.17.0"
+androidxActivity = "1.10.1"
+androidxAppCompat = "1.7.0"
+androidxComposeBOM = '2025.05.00'
+androidxCore = "1.16.0"
+androidxFragment = "1.8.6"
+androidxLifecycle = "2.9.0"
+androidMaterial = "1.12.0"
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+binaryCompatibilityValidator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version.ref = "binaryCompatibilityValidator" }
+dokkaDocumentationPlugin = { id = "org.jetbrains.dokka", version.ref = "dokkaDocumentationPlugin" }
+shot = { id = "shot", version.ref = "shot" }
 
 [libraries]
-androidDocumentationPlugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version.ref = "androidDocumentationPlugin" }
-androidx-core = "androidx.core:core-ktx:1.12.0"
-androidx-activity-compose = "androidx.activity:activity-compose:1.8.2"
-androidx-lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
-androidx-fragment = "androidx.fragment:fragment-ktx:1.6.2"
-androidx-appCompat = "androidx.appcompat:appcompat:1.6.1"
-androidx-fragment-compose = "androidx.fragment:fragment-compose:1.8.2"
-android-material = "com.google.android.material:material:1.4.0"
-
-androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidx-compose-bom" }
-androidx-compose-material = { module = "androidx.compose.material:material" }
-androidx-compose-ui-googleFonts = { module = "androidx.compose.ui:ui-text-google-fonts" }
-androidx-compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
-androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
-androidx-compose-ui-ui = { module = "androidx.compose.ui:ui" }
-androidx-compose-ui-util = { module = "androidx.compose.ui:ui-util" }
-androidx-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
-androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
-showkase = { module = "com.airbnb.android:showkase", version.ref = "showkaseVersion" }
-showkaseProcessor = { module = "com.airbnb.android:showkase-processor", version.ref = "showkaseVersion" }
-kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
+gradleMavenPublishPlugin = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "gradleMavenPublishPlugin" }
+androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+detektGradlePlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+kspGradlePlugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
 
 kotlinXImmutableCollections = "org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7"
 
-detekt-formatting = "io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0"
-detekt-composeRules = "io.nlopez.compose.rules:detekt:0.1.13"
+androidxActivityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
+androidxAppCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidxAppCompat" }
+androidxCore = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+androidxFragmentCompose = { module = "androidx.fragment:fragment-compose", version.ref = "androidxFragment" }
+androidxLifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+androidMaterial = { module = "com.google.android.material:material", version.ref = "androidMaterial" }
 
+androidxComposeBOM = { module = "androidx.compose:compose-bom", version.ref = "androidxComposeBOM" }
+androidxComposeMaterial = { module = "androidx.compose.material:material" }
+androidxComposeUiGoogleFonts = { module = "androidx.compose.ui:ui-text-google-fonts" }
+androidxComposeUiGraphics = { module = "androidx.compose.ui:ui-graphics" }
+androidxComposeUiTooling = { module = "androidx.compose.ui:ui-tooling" }
+androidxComposeUiUi = { module = "androidx.compose.ui:ui" }
+androidxComposeUiUtil = { module = "androidx.compose.ui:ui-util" }
+androidxComposeMaterialIconsCore = { module = "androidx.compose.material:material-icons-core" }
 composeCoil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 
+showkase = { module = "com.airbnb.android:showkase", version.ref = "showkaseVersion" }
+showkaseProcessor = { module = "com.airbnb.android:showkase-processor", version.ref = "showkaseVersion" }
+
+detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+detektComposeRules = { module = "io.nlopez.compose.rules:detekt", version.ref = "detektComposeRules" }
+
+dokkaDocumentationPlugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version.ref = "dokkaDocumentationPlugin" }
+
 shot = { module = "com.karumi:shot", version.ref = "shot" }
-androidx-test-rules = { module = "androidx.test:rules", version.ref = "test-rules" }
+androidxComposeUiTestJunit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+androidxComposeUiTestManifest = { module = "androidx.compose.ui:ui-test-manifest" }
+androidxTestRules = { module = "androidx.test:rules", version.ref = "testRules" }
