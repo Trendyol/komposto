@@ -4,8 +4,7 @@
   <CurrentIssues>
     <ID>CyclomaticComplexMethod:TrendyolTextFieldImpl.kt$@OptIn(ExperimentalMaterialApi::class) @Composable internal fun KPCommonDecorationBox( type: KPTextFieldType, value: String, innerTextField: @Composable () -> Unit, visualTransformation: VisualTransformation, label: @Composable (() -> Unit)?, placeholder: @Composable (() -> Unit)? = null, leadingIcon: @Composable (() -> Unit)? = null, trailingIcon: @Composable (() -> Unit)? = null, singleLine: Boolean = false, enabled: Boolean = true, isError: Boolean = false, interactionSource: InteractionSource, contentPadding: PaddingValues, colors: TextFieldColors, labelInitialTextStyle: TextStyle = KPDesign.typography.subtitleMedium, labelEndTextStyle: TextStyle = KPDesign.typography.body2Medium, border: @Composable (() -> Unit)? = null )</ID>
     <ID>ForbiddenComment:TrendyolTextFieldImpl.kt$// TODO: DefaultErrorMessage</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.SingleLineOutlinedTextField.kt:101</ID>
-    <ID>Indentation:com.trendyol.design.core.inputfield.SingleLineOutlinedTextField.kt:148</ID>
+    <ID>FunctionTypeReferenceSpacing:DialogButtons.kt$DialogButtons$internal fun (@Composable DialogButtons.() -> Unit)?.takeOrNull(): (@Composable () -> Unit)?</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( height: Int, width: Int, leadingPlaceable: Placeable?, trailingPlaceable: Placeable?, textFieldPlaceable: Placeable, labelPlaceable: Placeable?, placeholderPlaceable: Placeable?, borderPlaceable: Placeable, animationProgress: Float, singleLine: Boolean, density: Float, layoutDirection: LayoutDirection, paddingValues: PaddingValues )</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( leadingPlaceableHeight: Int, trailingPlaceableHeight: Int, textFieldPlaceableHeight: Int, labelPlaceableHeight: Int, placeholderPlaceableHeight: Int, animationProgress: Float, constraints: Constraints, density: Float, paddingValues: PaddingValues )</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( leadingPlaceableWidth: Int, trailingPlaceableWidth: Int, textFieldPlaceableWidth: Int, labelPlaceableWidth: Int, placeholderPlaceableWidth: Int, animationProgress: Float, constraints: Constraints, density: Float, paddingValues: PaddingValues, )</ID>
@@ -25,6 +24,7 @@
     <ID>MatchingDeclarationName:TrendyolTextFieldImpl.kt$KPTextFieldType</ID>
     <ID>ModifierComposable:RatingBar.kt$mirror</ID>
     <ID>ModifierMissing:CheckToolbarLayoutIds.kt$CheckToolbarLayoutIds</ID>
+    <ID>ModifierNotUsedAtRoot:AlertDialog.kt$modifier = modifier .fillMaxWidth() .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 20.dp)</ID>
     <ID>ModifierWithoutDefault:TrendyolOutlinedTextFieldImpl.kt$modifier</ID>
     <ID>ModifierWithoutDefault:TrendyolTextField.kt$modifier</ID>
     <ID>TopLevelPropertyNaming:TrendyolOutlinedTextFieldImpl.kt$internal const val BorderId = "border"</ID>

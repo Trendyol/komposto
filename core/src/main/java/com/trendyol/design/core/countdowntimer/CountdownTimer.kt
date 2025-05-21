@@ -9,6 +9,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -47,6 +48,7 @@ public fun KPCountdownTimer(
     style: CountdownTimerStyle = KPCountdownTimerStyle.Primary,
     backgroundAlpha: Float = 1F,
 ) {
+    val latestOnTimerFinish by rememberUpdatedState(onTimerFinish)
     val state = rememberSaveable(endDate, saver = CountdownTimerState.Saver) {
         CountdownTimerState(endDate = endDate)
     }
@@ -56,7 +58,7 @@ public fun KPCountdownTimer(
     val isVisible by remember(state) { derivedStateOf { state.isVisible } }
 
     DisposableEffect(state) {
-        state.setOnTimerFinishListener(onTimerFinish)
+        state.setOnTimerFinishListener(latestOnTimerFinish)
         state.startTimer()
         onDispose { state.cancelTimer() }
     }
