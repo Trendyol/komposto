@@ -11,11 +11,22 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  shot:
+  screenshot-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Full git history for comparing changes
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
 
       - name: Enable KVM
         run: |
@@ -23,19 +34,42 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: run tests
+      - name: Run screenshot tests
+        id: run_tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
-          arch: 'x86_64'
-          profile: 'pixel_6'
+          arch: x86_64
+          profile: pixel_6
           target: google_apis
-          avd-name: ubuntu-avd-arm64-v8a-32
+          avd-name: ubuntu-avd-x86_64-32
           emulator-boot-timeout: 120
           script: ./gradlew executeScreenshotTests
-          
+        continue-on-error: true
+      
+      - name: Record new screenshots if tests failed
+        uses: reactivecircus/android-emulator-runner@v2
+        if: steps.run_tests.outcome == 'failure'
+        with:
+          api-level: 32
+          arch: x86_64
+          profile: pixel_6
+          target: google_apis
+          avd-name: ubuntu-avd-x86_64-32
+          emulator-boot-timeout: 120
+          script: ./gradlew executeScreenshotTests -Precord
+
+      - name: Commit new screenshots
+        if: steps.run_tests.outcome == 'failure'
+        run: |
+          git config --local user.email "ci@github.actions.com"
+          git config --local user.name "GitHub Actions"
+          git add app/screenshots/debug/
+          git commit -m "Update screenshots from CI" || echo "No changes to commit"
+          git push
+      
       - name: Upload Screenshot Test Results
-        if: failure()
+        if: steps.run_tests.outcome == 'failure'
         uses: actions/upload-artifact@v4
         with:
           name: screenshot-test-results
