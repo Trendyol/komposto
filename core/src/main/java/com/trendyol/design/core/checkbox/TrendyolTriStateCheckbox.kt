@@ -17,7 +17,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.selection.triStateToggleable
 import androidx.compose.material.minimumInteractiveComponentSize
-import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.getValue
@@ -67,7 +67,7 @@ internal fun KPTriStateCheckbox(
             enabled = enabled,
             role = Role.Checkbox,
             interactionSource = interactionSource,
-            indication = rememberRipple(
+            indication = ripple(
                 bounded = false,
                 radius = size.rippleRadius
             )
