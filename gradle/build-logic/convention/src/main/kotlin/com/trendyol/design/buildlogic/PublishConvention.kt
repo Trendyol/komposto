@@ -23,7 +23,7 @@ class PublishConvention : Plugin<Project> {
         }
 
         extensions.configure<MavenPublishBaseExtension>("mavenPublishing") {
-            publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+            publishToMavenCentral(SonatypeHost.S01)
 
             signAllPublications()
 
