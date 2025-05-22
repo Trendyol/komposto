@@ -5,9 +5,7 @@ import com.vanniktech.maven.publish.SonatypeHost
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import com.vanniktech.maven.publish.MavenPublishBaseExtension
-import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
-import org.gradle.kotlin.dsl.getByType
 
 class PublishConvention : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
@@ -30,12 +28,7 @@ class PublishConvention : Plugin<Project> {
             coordinates(
                 groupId = "com.trendyol",
                 artifactId = "design-${project.name}",
-                version = extensions
-                    .getByType<VersionCatalogsExtension>()
-                    .named("publishedLibs")
-                    .findVersion("design")
-                    .get()
-                    .toString()
+                version = getVersionFromEnv(),
             )
 
             pom {
@@ -74,6 +67,12 @@ class PublishConvention : Plugin<Project> {
                     proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
                 }
             }
+        }
+    }
+
+    private fun getVersionFromEnv(): String? {
+        return System.getenv("KOMPOSTO_RELEASE_VERSION")?.takeIf { it.isNotBlank() }?.also {
+            println("Using release version from environment: $it")
         }
     }
 }

@@ -107,23 +107,3 @@ jobs:
             app/build/tmp/shot/screenshot/
             app/build/reports/shot/debug/verification/
           retention-days: 1
-
-      - name: Send success message to Slack
-        if: success()
-        uses: slackapi/slack-github-action@v2.1.0
-        with:
-          method: chat.postMessage
-          token: ${{ secrets.SLACK_BOT_TOKEN }}
-          payload: |
-            channel: ${{ secrets.SLACK_DEV_CHANNEL_ID }}
-            text: "✅ Screenshot tests completed successfully! \nPipeline: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-
-      - name: Send failure message to Slack
-        if: failure()
-        uses: slackapi/slack-github-action@v2.1.0
-        with:
-          method: chat.postMessage
-          token: ${{ secrets.SLACK_BOT_TOKEN }}
-          payload: |
-            channel: ${{ secrets.SLACK_DEV_CHANNEL_ID }}
-            text: "❌ Screenshot tests failed! \nPipeline: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

@@ -4,3 +4,4 @@
 /build/
 /gradle/build-logic/convention/build
 /gradle/build-logic/.gradle
+.kotlin
