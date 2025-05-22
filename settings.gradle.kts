@@ -8,9 +8,6 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    versionCatalogs {
-        create("publishedLibs") { from(files("gradle/published-libs.versions.toml")) }
-    }
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
