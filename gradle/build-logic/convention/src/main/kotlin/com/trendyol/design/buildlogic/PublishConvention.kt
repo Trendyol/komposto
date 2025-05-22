@@ -26,8 +26,8 @@ class PublishConvention : Plugin<Project> {
             signAllPublications()
 
             coordinates(
-                groupId = "com.trendyol",
-                artifactId = "design-${project.name}",
+                groupId = "com.trendyol.design",
+                artifactId = project.name,
                 version = getVersionFromEnv(),
             )
 
