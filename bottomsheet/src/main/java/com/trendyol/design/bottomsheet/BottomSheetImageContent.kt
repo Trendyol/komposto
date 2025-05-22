@@ -135,7 +135,7 @@ private fun Modifier.setImageRatioIfNeeded(
     else {
         val width = configuration.screenWidthDp
         val height = (width * imageRatio).dp
-        then(size(width = width.dp, height = height))
+        then(Modifier.size(width = width.dp, height = height))
     }
 }
 
