@@ -53,9 +53,9 @@ class PublishConvention : Plugin<Project> {
                 }
                 developers {
                     developer {
-                        id = "komposto"
-                        name = "Komposto Team"
-                        url = "https://github.com/Trendyol"
+                        id.set("komposto")
+                        name.set("Komposto Team")
+                        url.set("https://github.com/Trendyol")
                     }
                 }
                 scm {

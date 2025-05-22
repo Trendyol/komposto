@@ -2,3 +2,5 @@
 /local.properties
 /.idea/
 /build/
+/gradle/build-logic/convention/build
+/gradle/build-logic/.gradle
