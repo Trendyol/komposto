@@ -7,6 +7,7 @@ import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 
+
 fun Project.configureAndroid() {
     android {
         compileSdkVersion(Configs.COMPILE_SDK)
