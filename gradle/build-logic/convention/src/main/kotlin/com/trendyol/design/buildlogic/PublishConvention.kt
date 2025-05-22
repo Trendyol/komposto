@@ -28,8 +28,8 @@ class PublishConvention : Plugin<Project> {
             signAllPublications()
 
             coordinates(
-                groupId = "com.trendyol.design",
-                artifactId = project.name,
+                groupId = "com.trendyol",
+                artifactId = "design-${project.name}",
                 version = extensions
                     .getByType<VersionCatalogsExtension>()
                     .named("publishedLibs")
@@ -60,8 +60,8 @@ class PublishConvention : Plugin<Project> {
                 }
                 scm {
                     url.set("https://github.com/Trendyol/design-android/")
-                    connection.set("scm:git:https://github.com/Trendyol/design-android.git")
-                    developerConnection.set("scm:git:ssh://git@github.com:Trendyol/design-android.git")
+                    connection.set("scm:git:git//github.com/Trendyol/design-android.git")
+                    developerConnection.set("scm:git:ssh://git@github.com/Trendyol/design-android.git")
                 }
             }
 
