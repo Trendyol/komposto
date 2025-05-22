@@ -25,6 +25,8 @@ class PublishConvention : Plugin<Project> {
         extensions.configure<MavenPublishBaseExtension>("mavenPublishing") {
             publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
 
+            signAllPublications()
+
             coordinates(
                 groupId = "com.trendyol.design",
                 artifactId = project.name,
@@ -49,14 +51,20 @@ class PublishConvention : Plugin<Project> {
                         distribution.set("https://opensource.org/license/apache-2-0")
                     }
                 }
+                developers {
+                    developer {
+                        id = "komposto"
+                        name = "Komposto Team"
+                        url = "https://github.com/Trendyol"
+                    }
+                }
                 scm {
-                    url.set("https://github.com/Trendyol/komposto")
-                    connection.set("scm:git:https://github.com/Trendyol/komposto.git")
-                    developerConnection.set("scm:git:ssh://git@github.com:Trendyol/komposto.git")
+                    url.set("https://github.com/Trendyol/design-android/")
+                    connection.set("scm:git:https://github.com/Trendyol/design-android.git")
+                    developerConnection.set("scm:git:ssh://git@github.com:Trendyol/design-android.git")
                 }
             }
 
-            signAllPublications()
         }
 
         configure<LibraryExtension> {
