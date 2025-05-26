@@ -5,9 +5,7 @@ import com.vanniktech.maven.publish.SonatypeHost
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import com.vanniktech.maven.publish.MavenPublishBaseExtension
-import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
-import org.gradle.kotlin.dsl.getByType
 
 class PublishConvention : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
@@ -23,17 +21,14 @@ class PublishConvention : Plugin<Project> {
         }
 
         extensions.configure<MavenPublishBaseExtension>("mavenPublishing") {
-            publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+            publishToMavenCentral(SonatypeHost.DEFAULT)
+
+            signAllPublications()
 
             coordinates(
                 groupId = "com.trendyol.design",
                 artifactId = project.name,
-                version = extensions
-                    .getByType<VersionCatalogsExtension>()
-                    .named("publishedLibs")
-                    .findVersion("design")
-                    .get()
-                    .toString()
+                version = getVersionFromEnv(),
             )
 
             pom {
@@ -49,14 +44,20 @@ class PublishConvention : Plugin<Project> {
                         distribution.set("https://opensource.org/license/apache-2-0")
                     }
                 }
+                developers {
+                    developer {
+                        id.set("komposto")
+                        name.set("Komposto Team")
+                        url.set("https://github.com/Trendyol")
+                    }
+                }
                 scm {
-                    url.set("https://github.com/Trendyol/komposto")
-                    connection.set("scm:git:https://github.com/Trendyol/komposto.git")
-                    developerConnection.set("scm:git:ssh://git@github.com:Trendyol/komposto.git")
+                    url.set("https://github.com/Trendyol/design-android/")
+                    connection.set("scm:git:git//github.com/Trendyol/design-android.git")
+                    developerConnection.set("scm:git:ssh://git@github.com/Trendyol/design-android.git")
                 }
             }
 
-            signAllPublications()
         }
 
         configure<LibraryExtension> {
@@ -66,6 +67,12 @@ class PublishConvention : Plugin<Project> {
                     proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
                 }
             }
+        }
+    }
+
+    private fun getVersionFromEnv(): String? {
+        return System.getenv("KOMPOSTO_RELEASE_VERSION")?.takeIf { it.isNotBlank() }?.also {
+            println("Using release version from environment: $it")
         }
     }
 }
