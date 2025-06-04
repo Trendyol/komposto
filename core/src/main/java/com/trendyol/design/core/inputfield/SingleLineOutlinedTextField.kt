@@ -98,7 +98,7 @@ public fun KPSingleLineOutlinedTextField(
                             persistentSetOf(TrailingIconLayoutId, TrailingTextLayoutId),
                             isSingleChildRequired = true,
                             errorMessage = "Trailing content should be created using " +
-                                    "TextFieldScope.TrailingIcon or TextFieldScope.TrailingText"
+                                "TextFieldScope.TrailingIcon or TextFieldScope.TrailingText"
                         ) {
                             trailingContent(TextFieldScope)
                         }
@@ -145,7 +145,7 @@ public fun KPSingleLineOutlinedTextField(
 @Composable
 @Deprecated(
     message = "Use KPSingleLineOutlinedTextField instead for consistent naming. " +
-            "This API will get removed in future releases.",
+        "This API will get removed in future releases.",
     level = DeprecationLevel.WARNING
 )
 public fun SingleLineOutlinedTextField(
