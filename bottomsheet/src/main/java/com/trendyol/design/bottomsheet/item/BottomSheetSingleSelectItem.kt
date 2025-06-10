@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.bottomsheet.item
 
 import androidx.compose.foundation.clickable
@@ -22,6 +24,7 @@ import com.trendyol.design.core.icon.icons.fill.Tick
 import com.trendyol.design.core.icon.icons.outline.Info
 import com.trendyol.design.core.text.Text
 import com.trendyol.design.bottomsheet.preview.PreviewTheme
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.KPIcons
@@ -43,6 +46,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param description An optional description text to be displayed below the label. Default is an empty string.
  * @param descriptionTextStyle A `TextStyle` for customizing the appearance of the description text. Default is `KPDesign.typography.body1ColorOnSurfaceVariant1`.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPBottomSheetSingleSelectItem(
     selected: Boolean,

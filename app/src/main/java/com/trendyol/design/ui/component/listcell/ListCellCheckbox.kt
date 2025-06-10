@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.ui.component.listcell
 
 import androidx.compose.foundation.layout.Column
@@ -10,6 +12,7 @@ import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
 import com.trendyol.design.bottomsheet.item.KPBottomSheetCheckboxItem
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.ui.component.common.Component.LIST_CELL_CHECKBOX_ITEM
 import com.trendyol.design.ui.component.common.Group.LIST_CELL
 import com.trendyol.design.ui.theme.TrendyolTheme

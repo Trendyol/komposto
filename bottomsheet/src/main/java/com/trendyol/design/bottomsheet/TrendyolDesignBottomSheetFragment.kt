@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import androidx.compose.runtime.Composable
 import androidx.fragment.compose.content
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 
 /**
  * An abstract class that represents a bottom sheet fragment with a Compose UI.
  * This class extends `BottomSheetDialogFragment` and provides a structure for implementing a Compose-based bottom sheet.
  */
+@ExperimentalKompostoApi
 public abstract class KPBottomSheetFragment : BottomSheetDialogFragment() {
 
     /**

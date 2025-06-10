@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.inputfield.otp
 
 import android.view.KeyEvent
@@ -34,6 +36,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
 import com.trendyol.design.core.text.Text
@@ -64,6 +67,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param interactionSource The interaction source for tracking focus and other interaction states.
  *                          This parameter is optional and defaults to a newly remembered instance of MutableInteractionSource.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPInputOTPField(
     style: InputOTPFieldStyle,

@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.statelayout.states.warningInfo
 
 import StateWarningInfoDefault
@@ -17,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.button.Button
 import com.trendyol.design.core.button.KPButton
 import com.trendyol.design.core.button.KPButtonSize
@@ -68,6 +71,7 @@ import com.trendyol.theme.TrendyolDesign
  * @see WarningInfoStateLayoutStyle
  * @see KPWarningInfoStateLayoutStyle
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPWarningInfoStateComposable(
     modifier: Modifier = Modifier,

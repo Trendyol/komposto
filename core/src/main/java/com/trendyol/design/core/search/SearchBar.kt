@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.search
 
 import androidx.compose.foundation.clickable
@@ -9,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.KPIcon
@@ -41,6 +44,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param placeholder the optional placeholder to be displayed when the search bar is in focus
  * and the input text is empty. Default is "Ürün Ara"
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPSearchBar(
     value: String,

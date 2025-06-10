@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.inputfield
 
 import androidx.compose.foundation.layout.Box
@@ -13,13 +15,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Cancel
 import com.trendyol.design.core.icon.icons.fill.Search
 import com.trendyol.design.core.inputfield.container.CheckTextFieldLayoutIds
-import com.trendyol.design.core.inputfield.container.TrailingIconLayoutId
 import com.trendyol.design.core.inputfield.container.TextFieldScope
+import com.trendyol.design.core.inputfield.container.TrailingIconLayoutId
 import com.trendyol.design.core.inputfield.container.TrailingTextLayoutId
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
@@ -46,6 +49,7 @@ import kotlinx.collections.immutable.persistentSetOf
  * @param trailingContent Optional trailing container that can be either a KPIcon or KPText.
  *                         The container will be placed at the end of the TextField.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPSingleLineOutlinedTextField(
     style: OutlinedTextFieldStyle,
@@ -98,7 +102,7 @@ public fun KPSingleLineOutlinedTextField(
                             persistentSetOf(TrailingIconLayoutId, TrailingTextLayoutId),
                             isSingleChildRequired = true,
                             errorMessage = "Trailing content should be created using " +
-                                    "TextFieldScope.TrailingIcon or TextFieldScope.TrailingText"
+                                "TextFieldScope.TrailingIcon or TextFieldScope.TrailingText"
                         ) {
                             trailingContent(TextFieldScope)
                         }
@@ -145,7 +149,7 @@ public fun KPSingleLineOutlinedTextField(
 @Composable
 @Deprecated(
     message = "Use KPSingleLineOutlinedTextField instead for consistent naming. " +
-            "This API will get removed in future releases.",
+        "This API will get removed in future releases.",
     level = DeprecationLevel.WARNING
 )
 public fun SingleLineOutlinedTextField(

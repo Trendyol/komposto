@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.KPDesign
 import com.trendyol.theme.TrendyolDesign
@@ -24,6 +25,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param indicatorColor Optional parameter to specify the color of the loading indicator. Defaults to the primary color.
  * @param indicatorStrokeWidth Optional parameter to specify the stroke width of the loading indicator. Defaults to 4dp.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPCircularLoadingIndicator(
     modifier: Modifier = Modifier,
@@ -77,6 +79,7 @@ public fun CircularLoadingIndicator(
     }
 }
 
+@OptIn(ExperimentalKompostoApi::class)
 @Preview(showSystemUi = true)
 @Composable
 private fun CircularLoadingIndicatorPreview() {
