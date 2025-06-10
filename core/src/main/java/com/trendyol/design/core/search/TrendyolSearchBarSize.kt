@@ -23,7 +23,7 @@ public sealed interface KPSearchBarSize {
     public data object Medium : SearchBarSize {
         override val barHeight: Dp
             @Composable
-            get() = 40.dp
+            get() = 36.dp
         override val trailingIconPadding: PaddingValues
             @Composable
             get() = PaddingValues(horizontal = 16.dp)
