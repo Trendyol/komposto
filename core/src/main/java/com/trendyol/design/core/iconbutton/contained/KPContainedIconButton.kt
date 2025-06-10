@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.iconbutton.contained
 
 import androidx.compose.foundation.background
@@ -18,6 +20,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.SaveSelected
@@ -41,6 +44,7 @@ import com.trendyol.theme.KPDesign
  * @param interactionSource The [MutableInteractionSource] to track interaction events. Defaults to a new instance.
  */
 @OptIn(ExperimentalMaterialApi::class)
+@ExperimentalKompostoApi
 @Composable
 public fun KPContainedIconButton(
     icon: ImageVector,
@@ -100,6 +104,7 @@ public fun KPContainedIconButton(
  * @param interactionSource The [MutableInteractionSource] to track interaction events. Defaults to a new instance.
  */
 @OptIn(ExperimentalMaterialApi::class)
+@ExperimentalKompostoApi
 @Composable
 public fun KPContainedIconToggleButton(
     checked: Boolean,

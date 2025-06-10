@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.dialog
 
 import androidx.compose.foundation.layout.Arrangement
@@ -16,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.dialog.DialogButtons.takeOrNull
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
@@ -39,6 +42,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param neutralButton Composable function for the neutral button. If null, no neutral button is shown.
  * @param onDismissRequest A lambda function that is called when the dialog is requested to be dismissed.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPAlertDialog(
     message: String,
@@ -106,6 +110,7 @@ public fun AlertDialog(
     }
 }
 
+@ExperimentalKompostoApi
 @Composable
 public fun KPAlertDialogContent(
     message: String,

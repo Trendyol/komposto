@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.ui.component.bottomsheet
 
 import androidx.compose.foundation.layout.Column
@@ -12,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
 import com.trendyol.design.bottomsheet.header.KPBottomSheetHeader
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.ui.component.common.Component.BOTTOM_SHEET_HEADER
 import com.trendyol.design.ui.component.common.Group.BOTTOM_SHEET
 import com.trendyol.design.ui.theme.TrendyolTheme

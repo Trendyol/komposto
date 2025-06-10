@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.dialog
 
 import androidx.compose.foundation.clickable
@@ -19,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.TrendyolIconSize
@@ -51,6 +54,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param onCloseClick Lambda function to be invoked when the close button is clicked. Defaults to an empty function.
  * @param onDismissRequest Lambda function to be called when the dialog is requested to be dismissed.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPGenericDialog(
     type: GenericDialogType,
@@ -133,6 +137,7 @@ public fun GenericDialog(
     }
 }
 
+@ExperimentalKompostoApi
 @Composable
 public fun KPGenericDialogContent(
     type: GenericDialogType,

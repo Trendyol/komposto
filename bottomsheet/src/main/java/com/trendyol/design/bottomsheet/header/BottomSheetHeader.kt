@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.bottomsheet.header
 
 import androidx.compose.foundation.background
@@ -25,6 +27,7 @@ import com.trendyol.design.core.icon.icons.fill.Chevron
 import com.trendyol.design.core.icon.icons.outline.Cancel
 import com.trendyol.design.core.text.Text
 import com.trendyol.design.bottomsheet.preview.PreviewTheme
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.KPIcons
@@ -45,6 +48,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param isBackIconVisible A boolean to determine the visibility of the back icon. Default is `false`.
  * @param verticalPadding A `PaddingValues` object to set the vertical padding of the header. Default is `PaddingValues(vertical = 12.dp)`.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPBottomSheetHeader(
     title: String,
