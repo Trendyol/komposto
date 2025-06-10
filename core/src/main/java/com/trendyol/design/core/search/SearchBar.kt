@@ -43,6 +43,7 @@ import com.trendyol.theme.TrendyolDesign
  * in different states. See [KPSearchBarStyle]
  * @param placeholder the optional placeholder to be displayed when the search bar is in focus
  * and the input text is empty. Default is "Ürün Ara"
+ * @param radius the radius to be applied to the search bar corners. Default is [KPSearchBarRadius.Small]
  */
 @ExperimentalKompostoApi
 @Composable
@@ -54,6 +55,7 @@ public fun KPSearchBar(
     modifier: Modifier = Modifier,
     colors: TextFieldColors = style.searchBarColors,
     placeholder: String? = SEARCH_BAR_PLACEHOLDER,
+    radius: KPSearchBarRadius = KPSearchBarRadius.Small,
 ) {
     KPOutlinedTextField(
         modifier = modifier,
@@ -92,7 +94,7 @@ public fun KPSearchBar(
         isFilled = style is KPSearchBarStyle.Filled,
         singleLine = true,
         minHeight = size.barHeight,
-        shape = RoundedCornerShape(8.dp),
+        shape = RoundedCornerShape(radius.value),
     )
 }
 
@@ -188,12 +190,42 @@ private fun SmallOutlineSearchBarPreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun LargeOutlineSearchBarPreview() {
+private fun SmallOutlineSearchBarLargeRadiusPreview() {
     PreviewTheme {
         KPSearchBar(
             modifier = Modifier.padding(8.dp),
             value = "",
             style = KPSearchBarStyle.Outline,
+            radius = KPSearchBarRadius.Large,
+            size = KPSearchBarSize.Small,
+            onValueChange = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MediumOutlineSearchBarPreview() {
+    PreviewTheme {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "",
+            style = KPSearchBarStyle.Outline,
+            size = KPSearchBarSize.Medium,
+            onValueChange = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MediumOutlineSearchBarLargeRadiusPreview() {
+    PreviewTheme {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "",
+            style = KPSearchBarStyle.Outline,
+            radius = KPSearchBarRadius.Large,
             size = KPSearchBarSize.Medium,
             onValueChange = {},
         )
@@ -216,12 +248,42 @@ private fun SmallFilledSearchBarPreview() {
 
 @Preview(showBackground = true)
 @Composable
-private fun LargeFilledSearchBarPreview() {
+private fun SmallFilledSearchBarLargeRadiusPreview() {
     PreviewTheme {
         KPSearchBar(
             modifier = Modifier.padding(8.dp),
             value = "",
             style = KPSearchBarStyle.Filled,
+            radius = KPSearchBarRadius.Large,
+            size = KPSearchBarSize.Small,
+            onValueChange = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MediumFilledSearchBarPreview() {
+    PreviewTheme {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "",
+            style = KPSearchBarStyle.Filled,
+            size = KPSearchBarSize.Medium,
+            onValueChange = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MediumFilledSearchBarLargeRadiusPreview() {
+    PreviewTheme {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "",
+            style = KPSearchBarStyle.Filled,
+            radius = KPSearchBarRadius.Large,
             size = KPSearchBarSize.Medium,
             onValueChange = {},
         )
