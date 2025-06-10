@@ -3,10 +3,14 @@ package com.trendyol.design.core.search
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.icon.Icon
@@ -41,6 +45,8 @@ import com.trendyol.theme.TrendyolDesign
  * @param placeholder the optional placeholder to be displayed when the search bar is in focus
  * and the input text is empty. Default is "Ürün Ara"
  * @param radius the radius to be applied to the search bar corners. Default is [KPSearchBarRadius.Small]
+ * @param keyboardOptions software keyboard options that contains configuration
+ * @param keyboardActions when the input service emits an IME action, the corresponding callback
  */
 @Composable
 public fun KPSearchBar(
@@ -52,6 +58,11 @@ public fun KPSearchBar(
     colors: TextFieldColors = style.searchBarColors,
     placeholder: String? = SEARCH_BAR_PLACEHOLDER,
     radius: KPSearchBarRadius = KPSearchBarRadius.Small,
+    keyboardOptions: KeyboardOptions = KeyboardOptions(
+        keyboardType = KeyboardType.Text,
+        imeAction = ImeAction.Search
+    ),
+    keyboardActions: KeyboardActions = KeyboardActions.Default,
 ) {
     KPOutlinedTextField(
         modifier = modifier,
@@ -91,6 +102,8 @@ public fun KPSearchBar(
         singleLine = true,
         minHeight = size.barHeight,
         shape = RoundedCornerShape(radius.value),
+        keyboardActions = keyboardActions,
+        keyboardOptions = keyboardOptions,
     )
 }
 
