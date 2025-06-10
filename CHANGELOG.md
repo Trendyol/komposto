@@ -8,6 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.16.5] - 2025-06-10
+
+### Added
+
+- Added keyboard action, keyboard options and interaction source support  to `KPSearchBar`
+
+### Changed
+
+- KPSearchBarSize.Medium changed to `36.dp` from `40.dp`
+
 ## [0.16.4] - 2025-06-03
 
 ### Added
