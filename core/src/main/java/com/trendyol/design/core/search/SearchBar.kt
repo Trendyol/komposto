@@ -41,6 +41,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param onValueChange the callback that is triggered when the input service updates values
  * in the search bar. An updated search bar value comes as a parameter of the callback
  * @param modifier a [Modifier] for this search bar
+ * @param onTrailingIconClicked the callback that is triggered when the trailing icon clicked
  * @param colors [TextFieldColors] that will be used to resolve color of the text and content
  * (including placeholder, leading and trailing icons, border) for this search bar
  * in different states. See [KPSearchBarStyle]
@@ -61,6 +62,7 @@ public fun KPSearchBar(
     size: SearchBarSize,
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
+    onTrailingIconClicked: (() -> Unit)? = null,
     colors: TextFieldColors = style.searchBarColors,
     placeholder: String? = SEARCH_BAR_PLACEHOLDER,
     radius: KPSearchBarRadius = KPSearchBarRadius.Small,
@@ -96,7 +98,10 @@ public fun KPSearchBar(
                 KPIcon(
                     modifier = Modifier
                         .padding(size.trailingIconPadding)
-                        .clickable { onValueChange(EMPTY) },
+                        .clickable {
+                            onValueChange(EMPTY)
+                            onTrailingIconClicked?.invoke()
+                        },
                     imageVector = KPIcons.Fill.Cancel,
                     size = KPIconSize.XSmall,
                     tint = Color.Unspecified
