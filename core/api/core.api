@@ -2896,7 +2896,7 @@ public final class com/trendyol/design/core/search/KPSearchBarStyle$Outline : co
 }
 
 public final class com/trendyol/design/core/search/SearchBarKt {
-	public static final fun KPSearchBar (Ljava/lang/String;Lcom/trendyol/design/core/search/SearchBarStyle;Lcom/trendyol/design/core/search/SearchBarSize;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Landroidx/compose/material/TextFieldColors;Ljava/lang/String;Lcom/trendyol/design/core/search/KPSearchBarRadius;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;III)V
+	public static final fun KPSearchBar (Ljava/lang/String;Lcom/trendyol/design/core/search/SearchBarStyle;Lcom/trendyol/design/core/search/SearchBarSize;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/material/TextFieldColors;Ljava/lang/String;Lcom/trendyol/design/core/search/KPSearchBarRadius;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;III)V
 	public static final fun SearchBar (Ljava/lang/String;Lcom/trendyol/design/core/search/SearchBarStyle;Lcom/trendyol/design/core/search/SearchBarSize;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Landroidx/compose/material/TextFieldColors;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
 }
 
