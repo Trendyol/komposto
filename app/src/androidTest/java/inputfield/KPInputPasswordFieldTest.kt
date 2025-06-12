@@ -1,6 +1,9 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package inputfield
 
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
 import com.trendyol.design.core.inputfield.password.KPInputPasswordField
 import core.BoxWithHorizontalPadding

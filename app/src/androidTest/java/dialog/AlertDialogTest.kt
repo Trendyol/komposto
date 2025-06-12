@@ -1,5 +1,8 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package dialog
 
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.dialog.DialogButtons
 import com.trendyol.design.core.dialog.KPAlertDialogContent
 import core.BoxWithHorizontalPadding

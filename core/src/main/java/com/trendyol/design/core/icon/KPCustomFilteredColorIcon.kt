@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.icon
 
 import androidx.compose.foundation.layout.Box
@@ -6,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.icons.fill.CircleIcon
 import com.trendyol.design.core.icon.icons.fill.InfoIcon
 
@@ -16,6 +19,7 @@ import com.trendyol.design.core.icon.icons.fill.InfoIcon
  * @param innerIcon You can set icon symbol in this parameter.
  * @param innerTint You can set innerIcon's tint in this parameter.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPCustomFilteredColorIcon(
     modifier: Modifier = Modifier,

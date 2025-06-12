@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.search
 
 import androidx.compose.foundation.clickable
@@ -15,6 +17,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.KPIcon
@@ -55,6 +58,7 @@ import com.trendyol.theme.TrendyolDesign
  * [MutableInteractionSource] if you want to observe interactions and customize the
  * appearance / behavior of this KPSearchBar in different interactions.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPSearchBar(
     value: String,

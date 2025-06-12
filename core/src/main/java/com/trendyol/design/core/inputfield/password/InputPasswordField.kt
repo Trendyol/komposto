@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.inputfield.password
 
 import androidx.compose.foundation.layout.Column
@@ -21,6 +23,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.R
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
@@ -60,6 +63,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param mask The character used to mask the password. This defaults to PASSWORD_MASK_CHAR.
  *             The mask is applied only when the password is hidden.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPInputPasswordField(
     style: OutlinedTextFieldStyle,
