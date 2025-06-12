@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.ui.component.bottomsheet
 
 import androidx.compose.foundation.BorderStroke
@@ -19,6 +21,7 @@ import com.trendyol.design.R
 import com.trendyol.design.bottomsheet.KPBottomSheetImageContent
 import com.trendyol.design.bottomsheet.KPBottomSheetListContent
 import com.trendyol.design.bottomsheet.KPBottomSheetSliderContent
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.text.KPText
 import com.trendyol.design.ui.component.common.Component.BOTTOM_SHEET_IMAGE
 import com.trendyol.design.ui.component.common.Component.BOTTOM_SHEET_LIST

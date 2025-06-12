@@ -20,6 +20,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.text.isDigitsOnly
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.inputfield.Dropdown
 import com.trendyol.design.core.inputfield.KPDropdown
 import com.trendyol.design.core.inputfield.KPDropdownStyle
@@ -53,6 +54,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param shape Shape of the only phone number input field.
  * @param maxPhoneNumberLength Maximum length allowed for the phone number.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPInputPhoneNumberField(
     countryCode: String,

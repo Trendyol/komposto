@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.statelayout.states.loading
 
 import androidx.annotation.FloatRange
@@ -12,6 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.tooling.preview.Preview
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.theme.KPDesign
 import com.trendyol.theme.TrendyolDesign
@@ -24,6 +27,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param progressState Optional parameter to specify the state of the loading progress. Defaults to INFINITIVE.
  * @param progressValue Optional parameter to specify the progress value (0.0 to 1.0). Defaults to 0.0.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPHorizontalLoadingIndicator(
     modifier: Modifier = Modifier,
