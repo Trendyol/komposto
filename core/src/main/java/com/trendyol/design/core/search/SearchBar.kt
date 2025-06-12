@@ -42,6 +42,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param size determines the size of the search bar.
  * It can be either [KPSearchBarSize.Small] or [KPSearchBarSize.Medium]
  * @param onValueChange the callback that is triggered when the input service updates values
+ * @param onTrailingIconClick the callback that is triggered when the trailing icon clicked
  * in the search bar. An updated search bar value comes as a parameter of the callback
  * @param modifier a [Modifier] for this search bar
  * @param colors [TextFieldColors] that will be used to resolve color of the text and content
@@ -64,6 +65,7 @@ public fun KPSearchBar(
     style: SearchBarStyle,
     size: SearchBarSize,
     onValueChange: (String) -> Unit,
+    onTrailingIconClick: () -> Unit,
     modifier: Modifier = Modifier,
     colors: TextFieldColors = style.searchBarColors,
     placeholder: String? = SEARCH_BAR_PLACEHOLDER,
@@ -100,7 +102,9 @@ public fun KPSearchBar(
                 KPIcon(
                     modifier = Modifier
                         .padding(size.trailingIconPadding)
-                        .clickable { onValueChange(EMPTY) },
+                        .clickable {
+                            onTrailingIconClick.invoke()
+                        },
                     imageVector = KPIcons.Fill.Cancel,
                     size = KPIconSize.XSmall,
                     tint = Color.Unspecified
@@ -205,6 +209,7 @@ private fun SmallOutlineSearchBarPreview() {
             style = KPSearchBarStyle.Outline,
             size = KPSearchBarSize.Small,
             onValueChange = {},
+            onTrailingIconClick = {},
         )
     }
 }
@@ -220,6 +225,7 @@ private fun SmallOutlineSearchBarLargeRadiusPreview() {
             radius = KPSearchBarRadius.Large,
             size = KPSearchBarSize.Small,
             onValueChange = {},
+            onTrailingIconClick = {},
         )
     }
 }
@@ -234,6 +240,7 @@ private fun MediumOutlineSearchBarPreview() {
             style = KPSearchBarStyle.Outline,
             size = KPSearchBarSize.Medium,
             onValueChange = {},
+            onTrailingIconClick = {},
         )
     }
 }
@@ -249,6 +256,7 @@ private fun MediumOutlineSearchBarLargeRadiusPreview() {
             radius = KPSearchBarRadius.Large,
             size = KPSearchBarSize.Medium,
             onValueChange = {},
+            onTrailingIconClick = {},
         )
     }
 }
@@ -263,6 +271,7 @@ private fun SmallFilledSearchBarPreview() {
             style = KPSearchBarStyle.Filled,
             size = KPSearchBarSize.Small,
             onValueChange = {},
+            onTrailingIconClick = {},
         )
     }
 }
@@ -278,6 +287,7 @@ private fun SmallFilledSearchBarLargeRadiusPreview() {
             radius = KPSearchBarRadius.Large,
             size = KPSearchBarSize.Small,
             onValueChange = {},
+            onTrailingIconClick = {},
         )
     }
 }
@@ -292,6 +302,7 @@ private fun MediumFilledSearchBarPreview() {
             style = KPSearchBarStyle.Filled,
             size = KPSearchBarSize.Medium,
             onValueChange = {},
+            onTrailingIconClick = {},
         )
     }
 }
@@ -307,6 +318,7 @@ private fun MediumFilledSearchBarLargeRadiusPreview() {
             radius = KPSearchBarRadius.Large,
             size = KPSearchBarSize.Medium,
             onValueChange = {},
+            onTrailingIconClick = {},
         )
     }
 }

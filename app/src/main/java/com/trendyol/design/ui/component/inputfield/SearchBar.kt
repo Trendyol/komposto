@@ -39,6 +39,9 @@ internal fun Input_Field_4_SearchBar_1_Default() = TrendyolTheme {
             size = KPSearchBarSize.Small,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -47,6 +50,9 @@ internal fun Input_Field_4_SearchBar_1_Default() = TrendyolTheme {
             size = KPSearchBarSize.Medium,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -55,6 +61,9 @@ internal fun Input_Field_4_SearchBar_1_Default() = TrendyolTheme {
             size = KPSearchBarSize.Small,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -63,6 +72,9 @@ internal fun Input_Field_4_SearchBar_1_Default() = TrendyolTheme {
             size = KPSearchBarSize.Medium,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
     }
@@ -84,6 +96,9 @@ internal fun Input_Field_4_SearchBar_2_Typed() = TrendyolTheme {
             size = KPSearchBarSize.Small,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -92,6 +107,9 @@ internal fun Input_Field_4_SearchBar_2_Typed() = TrendyolTheme {
             size = KPSearchBarSize.Small,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -100,6 +118,9 @@ internal fun Input_Field_4_SearchBar_2_Typed() = TrendyolTheme {
             size = KPSearchBarSize.Small,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -108,6 +129,9 @@ internal fun Input_Field_4_SearchBar_2_Typed() = TrendyolTheme {
             size = KPSearchBarSize.Medium,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
     }
@@ -131,7 +155,10 @@ internal fun Input_Field_4_SearchBar_3_Radius() = TrendyolTheme {
                 value = it
             },
             radius = KPSearchBarRadius.Small,
-            placeholder = "Small Radius (8dp)"
+            placeholder = "Small Radius (8dp)",
+            onTrailingIconClick = {
+                value = ""
+            }
         )
         KPSearchBar(
             value = value,
@@ -141,7 +168,10 @@ internal fun Input_Field_4_SearchBar_3_Radius() = TrendyolTheme {
                 value = it
             },
             radius = KPSearchBarRadius.Large,
-            placeholder = "Large Radius (18dp)"
+            placeholder = "Large Radius (18dp)",
+            onTrailingIconClick = {
+                value = ""
+            }
         )
         KPSearchBar(
             value = value,
@@ -151,7 +181,10 @@ internal fun Input_Field_4_SearchBar_3_Radius() = TrendyolTheme {
                 value = it
             },
             radius = KPSearchBarRadius.Small,
-            placeholder = "Filled Small"
+            placeholder = "Filled Small",
+            onTrailingIconClick = {
+                value = ""
+            }
         )
         KPSearchBar(
             value = value,
@@ -161,7 +194,10 @@ internal fun Input_Field_4_SearchBar_3_Radius() = TrendyolTheme {
                 value = it
             },
             radius = KPSearchBarRadius.Large,
-            placeholder = "Filled Large"
+            placeholder = "Filled Large",
+            onTrailingIconClick = {
+                value = ""
+            }
         )
     }
 }
