@@ -1,9 +1,12 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package bottomsheet.item
 
 import com.trendyol.design.bottomsheet.item.KPBottomSheetCheckboxItem
 import com.trendyol.design.bottomsheet.item.KPBottomSheetRadioItem
 import com.trendyol.design.bottomsheet.item.KPBottomSheetSingleSelectItem
 import com.trendyol.design.bottomsheet.item.KPBottomSheetStaticItem
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Bullet
 import com.trendyol.design.core.icon.icons.outline.Union

@@ -1,5 +1,8 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package statelayout.warninginfo
 
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.statelayout.State
 import com.trendyol.design.core.statelayout.KPStateComposeLayout

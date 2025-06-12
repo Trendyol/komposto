@@ -1,7 +1,10 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package dialog
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.ui.Modifier
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.dialog.DialogButtons
 import com.trendyol.design.core.dialog.KPGenericDialogContent
 import com.trendyol.design.core.dialog.KPGenericDialogType
