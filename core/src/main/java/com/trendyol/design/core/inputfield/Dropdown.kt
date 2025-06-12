@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.inputfield
 
 import androidx.compose.foundation.clickable
@@ -14,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.Icons
 import com.trendyol.design.core.icon.KPIcon
@@ -47,6 +50,7 @@ import com.trendyol.theme.TrendyolDesign
  *               these colors according to the desired visual appearance.
  * @param onClick Callback for when the dropdown is clicked.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPDropdown(
     style: DropdownStyle,

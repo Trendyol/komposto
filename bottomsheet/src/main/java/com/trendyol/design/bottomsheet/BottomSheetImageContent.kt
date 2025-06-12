@@ -25,6 +25,7 @@ import coil.request.ImageRequest
 import com.trendyol.design.bottomsheet.header.BottomSheetHeader
 import com.trendyol.design.bottomsheet.header.KPBottomSheetHeader
 import com.trendyol.design.bottomsheet.preview.PreviewTheme
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 
 /**
  * A composable function that creates a bottom sheet content layout with an image and a customizable header.
@@ -36,6 +37,7 @@ import com.trendyol.design.bottomsheet.preview.PreviewTheme
  * @param header A composable lambda for customizing the header content. Default is a `KPBottomSheetHeader` with the provided title and close icon click action.
  * @param outerPadding A `PaddingValues` object to set the padding around the image content. Default is `PaddingValues(horizontal = 16.dp, vertical = 12.dp)`.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPBottomSheetImageContent(
     title: String,
@@ -139,6 +141,7 @@ private fun Modifier.setImageRatioIfNeeded(
     }
 }
 
+@OptIn(ExperimentalKompostoApi::class)
 @Preview(showBackground = true)
 @Composable
 private fun Preview() = PreviewTheme {

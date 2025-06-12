@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.ui.component.statelayout.loading
 
 import androidx.compose.foundation.layout.Box
@@ -7,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.statelayout.states.loading.HorizontalProgressState
 import com.trendyol.design.core.statelayout.states.loading.KPCircularLoadingIndicator
 import com.trendyol.design.core.statelayout.states.loading.KPHorizontalLoadingIndicator
