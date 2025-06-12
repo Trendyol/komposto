@@ -12,7 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added a callback function to `KPSearchBar` that is triggered when clicked trailing icon
+- Added a callback function to `KPSearchBar` that is triggered when clicked trailing icon and
+  deleted default click behaviour from trailing icon 
 
 ## [0.16.6] - 2025-06-11
 
