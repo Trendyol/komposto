@@ -1,8 +1,11 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.ui.component.boxbadge
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.badge.boxbadge.KPBoxBadge
 import com.trendyol.design.core.badge.boxbadge.KPBoxBadgeType
 import com.trendyol.design.core.icon.KPIcons

@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package bottomsheet
 
 import androidx.compose.foundation.Image
@@ -15,6 +17,7 @@ import com.trendyol.design.bottomsheet.BottomSheetSliderContent
 import com.trendyol.design.bottomsheet.KPBottomSheetImageContent
 import com.trendyol.design.bottomsheet.KPBottomSheetListContent
 import com.trendyol.design.bottomsheet.KPBottomSheetSliderContent
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer

@@ -3,6 +3,7 @@ package com.trendyol.design.core.statelayout
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.statelayout.states.loading.CircularLoadingIndicator
 import com.trendyol.design.core.statelayout.states.loading.HorizontalLoadingIndicator
 import com.trendyol.design.core.statelayout.states.loading.KPCircularLoadingIndicator
@@ -46,6 +47,7 @@ import com.trendyol.design.core.statelayout.states.warningInfo.WarningInfoStateC
  * @see KPCircularLoadingIndicator
  * @see State
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPStateComposeLayout(
     modifier: Modifier = Modifier,
@@ -135,6 +137,7 @@ public fun StateComposeLayout(
  * @see KPHorizontalLoadingIndicator
  * @see State.ContentWithLoading
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPContentState(
     content: State.ContentWithLoading,

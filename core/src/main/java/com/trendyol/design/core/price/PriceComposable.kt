@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.price
 
 import androidx.compose.foundation.layout.Arrangement
@@ -13,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
@@ -32,6 +35,7 @@ import com.trendyol.theme.KPDesign
  * @param modifier Optional parameter to specify the modifier for this composable.
  * @param style PriceStyle configuration for the price view, specifying its appearance and behavior.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPPrice(
     style: PriceStyle,

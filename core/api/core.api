@@ -3,6 +3,9 @@ public final class WarningInfoStateDefaultIconKt {
 	public static final fun getWarningInfoStateDefaultIcon ()Landroidx/compose/ui/graphics/vector/ImageVector;
 }
 
+public abstract interface annotation class com/trendyol/design/core/annotation/ExperimentalKompostoApi : java/lang/annotation/Annotation {
+}
+
 public abstract interface class com/trendyol/design/core/badge/boxbadge/BoxBadge {
 	public abstract fun getBoxBackgroundColor (Landroidx/compose/runtime/Composer;I)J
 	public abstract fun getIcon ()Landroidx/compose/ui/graphics/vector/ImageVector;

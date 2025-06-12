@@ -1,6 +1,9 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package bottomsheet.header
 
 import com.trendyol.design.bottomsheet.header.KPBottomSheetHeader // Assuming KPBottomSheetHeader is the correct import
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer

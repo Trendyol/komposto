@@ -19,6 +19,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.inputfield.KPOutlinedTextField
 import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
 import com.trendyol.design.core.inputfield.TrendyolOutlinedTextFieldStyle
@@ -45,6 +46,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param interactionSource [MutableInteractionSource] representing the source of user interactions.
  * @param shape Shape of the input field.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPInputEmailField(
     email: String,

@@ -23,6 +23,7 @@ import com.trendyol.design.bottomsheet.header.BottomSheetHeader
 import com.trendyol.design.bottomsheet.header.KPBottomSheetHeader
 import com.trendyol.design.bottomsheet.item.KPBottomSheetStaticItem
 import com.trendyol.design.bottomsheet.preview.PreviewTheme
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Bullet
 import kotlinx.collections.immutable.PersistentList
@@ -41,6 +42,7 @@ import kotlinx.coroutines.flow.asStateFlow
  * @param modifier A `Modifier` for styling and layout customization. Default is `Modifier`.
  * @param header A composable lambda for customizing the header content. Default is a `KPBottomSheetHeader` with the provided title and close icon click action.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun <Item> KPBottomSheetListContent(
     title: String,
@@ -74,6 +76,7 @@ public fun <Item> KPBottomSheetListContent(
  * Top and Bottom paddings will work as item padding in order to make items disappear when user scrolls to enhance UX. Default is `PaddingValues(horizontal = 16.dp, vertical = 12.dp)`.
  * @param dividerContent A composable lambda to define the content for the divider between items. Default is a `Spacer` with a height of 12.dp.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun <Item> KPListContent(
     itemList: PersistentList<Item>,
@@ -194,6 +197,7 @@ public fun <Item> ListContent(
     }
 }
 
+@OptIn(ExperimentalKompostoApi::class)
 @Preview(showSystemUi = true)
 @Composable
 private fun Preview() = PreviewTheme {

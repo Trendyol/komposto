@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.bottomsheet.item
 
 import androidx.compose.foundation.layout.Column
@@ -23,6 +25,7 @@ import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.outline.Info
 import com.trendyol.design.core.text.Text
 import com.trendyol.design.bottomsheet.preview.PreviewTheme
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.checkbox.KPCheckboxStyle
 import com.trendyol.design.core.checkbox.KPCheckbox
 import com.trendyol.design.core.checkbox.KPCheckboxSize
@@ -46,6 +49,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param description An optional description text to be displayed below the label. Default is an empty string.
  * @param descriptionTextStyle A `TextStyle` for customizing the appearance of the description text. Default is `KPDesign.typography.body1ColorOnSurfaceVariant1`.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPBottomSheetCheckboxItem(
     checked: Boolean,
