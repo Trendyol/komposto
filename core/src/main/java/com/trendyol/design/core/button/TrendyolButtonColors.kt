@@ -33,19 +33,6 @@ public interface KPButtonColors : ButtonColors {
     public fun borderColor(enabled: Boolean): State<Color?>
 }
 
-@Deprecated(
-    message = "Use KPButtonColors instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    replaceWith = ReplaceWith(
-        expression = "KPButtonColors"
-    ),
-    level = DeprecationLevel.WARNING
-)
-public interface TrendyolButtonColors : ButtonColors, KPButtonColors {
-    @Composable
-    public override fun borderColor(enabled: Boolean): State<Color?>
-}
-
 internal class KPDefaultButtonColors(
     private val backgroundColor: Color,
     private val contentColor: Color,
@@ -53,7 +40,7 @@ internal class KPDefaultButtonColors(
     private val disabledBackgroundColor: Color,
     private val disabledContentColor: Color,
     private val disabledBorderColor: Color?,
-) : TrendyolButtonColors {
+) : KPButtonColors {
 
     @Composable
     override fun backgroundColor(enabled: Boolean): State<Color> {

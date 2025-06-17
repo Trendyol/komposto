@@ -11,52 +11,6 @@ import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
-@Deprecated(
-    message = "Use KPButtonDefaults instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    replaceWith = ReplaceWith(
-        expression = "KPButtonDefaults"
-    ),
-    level = DeprecationLevel.WARNING
-)
-public object TrendyolButtonDefaults {
-
-    @Composable
-    public fun elevation(
-        defaultElevation: Dp = 0.dp,
-        pressedElevation: Dp = 0.dp,
-        disabledElevation: Dp = 0.dp,
-        hoveredElevation: Dp = 4.dp,
-        focusedElevation: Dp = 4.dp,
-    ): ButtonElevation {
-        return ButtonDefaults.elevation(
-            defaultElevation = defaultElevation,
-            pressedElevation = pressedElevation,
-            disabledElevation = disabledElevation,
-            hoveredElevation = hoveredElevation,
-            focusedElevation = focusedElevation,
-        )
-    }
-
-    @Composable
-    public fun buttonColors(
-        backgroundColor: Color = MaterialTheme.colors.primary,
-        contentColor: Color = contentColorFor(backgroundColor),
-        borderColor: Color? = null,
-        disabledBackgroundColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.12f)
-            .compositeOver(MaterialTheme.colors.surface),
-        disabledContentColor: Color = MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled),
-        disabledBorderColor: Color? = null,
-    ): TrendyolButtonColors = KPDefaultButtonColors(
-        backgroundColor = backgroundColor,
-        contentColor = contentColor,
-        borderColor = borderColor,
-        disabledBackgroundColor = disabledBackgroundColor,
-        disabledContentColor = disabledContentColor,
-        disabledBorderColor = disabledBorderColor,
-    )
-}
-
 public object KPButtonDefaults {
 
     @Composable

@@ -11,9 +11,6 @@ import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.bottomsheet.BottomSheetImageContent
-import com.trendyol.design.bottomsheet.BottomSheetListContent
-import com.trendyol.design.bottomsheet.BottomSheetSliderContent
 import com.trendyol.design.bottomsheet.KPBottomSheetImageContent
 import com.trendyol.design.bottomsheet.KPBottomSheetListContent
 import com.trendyol.design.bottomsheet.KPBottomSheetSliderContent

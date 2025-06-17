@@ -20,7 +20,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
-import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.IconSize
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIcons
@@ -95,7 +94,7 @@ public fun KPCountdownTimer(
                     backgroundAlpha = backgroundAlpha,
                 )
                 Spacer(modifier = Modifier.width(size.verticalBoxPadding))
-                Icon(
+                KPIcon(
                     size = CustomIconSize,
                     imageVector = KPIcons.Fill.Colon,
                     contentDescription = KPIcons.Fill.Colon.name,
