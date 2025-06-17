@@ -3,6 +3,10 @@
   <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>CompositionLocalAllowlist:TrendyolDesignTheme.kt$LocalKPDesignTheme</ID>
-    <ID>CompositionLocalAllowlist:TrendyolDesignTheme.kt$LocalTrendyolDesignTheme</ID>
+    <ID>MatchingDeclarationName:TrendyolDesign.kt$KPDesign</ID>
+    <ID>MatchingDeclarationName:TrendyolDesignColors.kt$KPDesignColors</ID>
+    <ID>MatchingDeclarationName:TrendyolDesignFontFamily.kt$KPDesignFontFamily</ID>
+    <ID>MatchingDeclarationName:TrendyolDesignTheme.kt$KPDesignTheme</ID>
+    <ID>MatchingDeclarationName:TrendyolDesignTypography.kt$KPDesignTypography</ID>
   </CurrentIssues>
 </SmellBaseline>
