@@ -2,11 +2,6 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
-    <ID>CompositionLocalAllowlist:TrendyolDesignTheme.kt$LocalKPDesignTheme</ID>
-    <ID>MatchingDeclarationName:TrendyolDesign.kt$KPDesign</ID>
-    <ID>MatchingDeclarationName:TrendyolDesignColors.kt$KPDesignColors</ID>
-    <ID>MatchingDeclarationName:TrendyolDesignFontFamily.kt$KPDesignFontFamily</ID>
-    <ID>MatchingDeclarationName:TrendyolDesignTheme.kt$KPDesignTheme</ID>
-    <ID>MatchingDeclarationName:TrendyolDesignTypography.kt$KPDesignTypography</ID>
+    <ID>CompositionLocalAllowlist:KPDesignTheme.kt$LocalKPDesignTheme</ID>
   </CurrentIssues>
 </SmellBaseline>
