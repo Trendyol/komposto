@@ -4,13 +4,10 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
-import com.trendyol.design.core.statelayout.states.loading.CircularLoadingIndicator
-import com.trendyol.design.core.statelayout.states.loading.HorizontalLoadingIndicator
 import com.trendyol.design.core.statelayout.states.loading.KPCircularLoadingIndicator
 import com.trendyol.design.core.statelayout.states.loading.KPHorizontalLoadingIndicator
 import com.trendyol.design.core.statelayout.states.loading.LoadingType
 import com.trendyol.design.core.statelayout.states.warningInfo.KPWarningInfoStateComposable
-import com.trendyol.design.core.statelayout.states.warningInfo.WarningInfoStateComposable
 
 /**
  * A composable function that renders different layouts based on the given [State]. It supports displaying content,
@@ -76,40 +73,6 @@ public fun KPStateComposeLayout(
     }
 }
 
-@Composable
-@Deprecated(
-    message = "Use KPStateComposeLayout instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    level = DeprecationLevel.WARNING
-)
-public fun StateComposeLayout(
-    modifier: Modifier = Modifier,
-    state: State,
-    contentStateLayout: @Composable () -> Unit = {},
-    warningInfoStateLayout: @Composable (WarningInfoStateLayoutStyle) -> Unit =
-        { warningInfoStateLayoutStyle ->
-            WarningInfoStateComposable(
-                warningInfoStateLayoutStyle = warningInfoStateLayoutStyle,
-            )
-        },
-    loadingStateLayout: @Composable (message: String) -> Unit = { CircularLoadingIndicator() },
-) {
-
-    Box(modifier = modifier) {
-        when (state) {
-            is State.ContentWithLoading ->
-                ContentState(state, contentStateLayout)
-
-            is State.WarningInfo -> warningInfoStateLayout(
-                state.warningInfoStateLayoutStyle,
-            )
-
-            is State.Loading ->
-                loadingStateLayout(state.message.orEmpty())
-        }
-    }
-}
-
 /**
  * A composable function for displaying content along with an optional loading indicator. The type of loading
  * indicator is determined by the [State.ContentWithLoading.loadingType].
@@ -148,25 +111,6 @@ public fun KPContentState(
     when (content.loadingType) {
         LoadingType.Circular -> KPCircularLoadingIndicator()
         LoadingType.Progressive -> KPHorizontalLoadingIndicator()
-        else -> Unit
-    }
-}
-
-@Composable
-@Deprecated(
-    message = "Use KPContentState instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    level = DeprecationLevel.WARNING
-)
-public fun ContentState(
-    content: State.ContentWithLoading,
-    contentLayout: @Composable () -> Unit,
-) {
-    contentLayout()
-
-    when (content.loadingType) {
-        LoadingType.Circular -> CircularLoadingIndicator()
-        LoadingType.Progressive -> HorizontalLoadingIndicator()
         else -> Unit
     }
 }
