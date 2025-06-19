@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.preview.PreviewTheme
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.text.KPText
 import java.util.Locale
 
 /**
@@ -32,7 +32,7 @@ internal fun TimeBoxItem(
     backgroundAlpha: Float,
     modifier: Modifier = Modifier,
 ) {
-    Text(
+    KPText(
         modifier = modifier
             .wrapContentSize()
             .background(

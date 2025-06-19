@@ -2,7 +2,6 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
-    <ID>CompositionLocalAllowlist:TrendyolDesignTheme.kt$LocalKPDesignTheme</ID>
-    <ID>CompositionLocalAllowlist:TrendyolDesignTheme.kt$LocalTrendyolDesignTheme</ID>
+    <ID>CompositionLocalAllowlist:KPDesignTheme.kt$LocalKPDesignTheme</ID>
   </CurrentIssues>
 </SmellBaseline>

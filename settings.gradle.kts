@@ -5,6 +5,9 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven {
+            url = uri("https://apigwinternal.trendyol.com/tyc-nexus/repository/maven-public/")
+        }
     }
 }
 dependencyResolutionManagement {
@@ -15,6 +18,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri("https://apigwinternal.trendyol.com/tyc-nexus/repository/maven-public/")
+        }
     }
 }
 

@@ -29,36 +29,3 @@ public sealed interface KPSearchBarSize {
             get() = PaddingValues(horizontal = 16.dp)
     }
 }
-
-/**
- * The [TrendyolSearchBarSize] sealed interface defines the possible sizes for the search bar.
- * It includes two predefined sizes: [Small] and [Medium].
- */
-@Deprecated(
-    message = "Use KPSearchBarSize instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    replaceWith = ReplaceWith(
-        expression = "KPSearchBarSize"
-    ),
-    level = DeprecationLevel.WARNING
-)
-public sealed interface TrendyolSearchBarSize {
-
-    public data object Small : SearchBarSize {
-        override val barHeight: Dp
-            @Composable
-            get() = 32.dp
-        override val trailingIconPadding: PaddingValues
-            @Composable
-            get() = PaddingValues(horizontal = 16.dp)
-    }
-
-    public data object Medium : SearchBarSize {
-        override val barHeight: Dp
-            @Composable
-            get() = 40.dp
-        override val trailingIconPadding: PaddingValues
-            @Composable
-            get() = PaddingValues(horizontal = 16.dp)
-    }
-}
