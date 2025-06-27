@@ -1,10 +1,14 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package dialog
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.ui.Modifier
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.dialog.DialogButtons
 import com.trendyol.design.core.dialog.KPGenericDialogContent
 import com.trendyol.design.core.dialog.KPGenericDialogType
+import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.icons.outline.StateCaution
@@ -25,7 +29,7 @@ internal class GenericDialogTest : DesignScreenshotTest() {
                         displayCloseButton = false,
                         title = "Popup Title",
                         icon = {
-                            com.trendyol.design.core.icon.Icon(
+                            KPIcon(
                                 imageVector = KPIcons.Outline.StateCaution,
                                 size = KPIconSize.XXXLarge
                             )
@@ -55,7 +59,7 @@ internal class GenericDialogTest : DesignScreenshotTest() {
                         displayCloseButton = true,
                         title = "Popup Title",
                         icon = {
-                            com.trendyol.design.core.icon.Icon(
+                            KPIcon(
                                 imageVector = KPIcons.Outline.StateCaution,
                                 size = KPIconSize.XXXLarge
                             )
@@ -85,7 +89,7 @@ internal class GenericDialogTest : DesignScreenshotTest() {
                         displayCloseButton = false,
                         title = "Popup Title",
                         icon = {
-                            com.trendyol.design.core.icon.Icon(
+                            KPIcon(
                                 imageVector = KPIcons.Outline.StateCaution,
                                 size = KPIconSize.XXXLarge
                             )
@@ -122,7 +126,7 @@ internal class GenericDialogTest : DesignScreenshotTest() {
                         displayCloseButton = true,
                         title = "Popup Title",
                         icon = {
-                            com.trendyol.design.core.icon.Icon(
+                            KPIcon(
                                 imageVector = KPIcons.Outline.StateCaution,
                                 size = KPIconSize.XXXLarge
                             )
@@ -159,7 +163,7 @@ internal class GenericDialogTest : DesignScreenshotTest() {
                         displayCloseButton = false,
                         title = "Popup Title",
                         icon = {
-                            com.trendyol.design.core.icon.Icon(
+                            KPIcon(
                                 imageVector = KPIcons.Outline.StateCaution,
                                 size = KPIconSize.XXXLarge
                             )
@@ -182,7 +186,7 @@ internal class GenericDialogTest : DesignScreenshotTest() {
                         displayCloseButton = true,
                         title = "Popup Title",
                         icon = {
-                            com.trendyol.design.core.icon.Icon(
+                            KPIcon(
                                 imageVector = KPIcons.Outline.StateCaution,
                                 size = KPIconSize.XXXLarge
                             )

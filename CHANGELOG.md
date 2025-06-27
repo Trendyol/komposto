@@ -8,6 +8,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.17.0] - 2025-06-18
+
+### Removed
+
+- Removed deprecated APIs
+
+## [0.16.7] - 2025-06-12
+
+### Added
+
+- Added a callback function to `KPSearchBar` that is triggered when clicked trailing icon and
+  deleted default click behaviour from trailing icon 
+
+## [0.16.6] - 2025-06-11
+
+### Added
+
+- Added `ExperimentalKompostoApi` annotation
+- Added annotation for following APIs:
+  - `KPBottomSheetHeader`, `KPBottomSheetCheckboxItem`, `KPBottomSheetRadioItem`, `KPBottomSheetSingleSelectItem`, `KPBottomSheetStaticItem`, `KPBottomSheetImageContent`, `KPBottomSheetListContent`, `KPListContent`, `KPBottomSheetSliderContent`, `KPSliderContent`, `KPBottomSheetFragment`
+  - `KPBoxBadge`, `KPBoxBadgeGroup`
+  - `KPCountdownTimer`
+  - `KPAlertDialog`, `KPAlertDialogContent`, `KPGenericDialog`, `KPGenericDialogContent`
+  - `KPCustomFilteredColorIcon`, `KPContainedIconButton`, `KPContainedIconToggleButton`, `KPStandardIconButton`, `KPStandardIconToggleButton`
+  - `KPInfoBox`
+  - `KPInputEmailField`, `KPInputOTPField`, `KPInputPasswordField`, `KPInputPhoneNumberField`, `KPDropdown`, `KPMultiLineOutlineTextField`, `KPSingleLineOutlinedTextField`
+  - `KPPrice`
+  - `KPSearchBar`
+  - `KPCircularLoadingIndicator`, `KPHorizontalLoadingIndicator`, `KPWarningInfoStateComposable`, `KPStateComposeLayout`, `KPContentState`
+
+## [0.16.5] - 2025-06-10
+
+### Added
+
+- Added keyboard action, keyboard options and interaction source support  to `KPSearchBar`
+
+### Changed
+
+- KPSearchBarSize.Medium changed to `36.dp` from `40.dp`
+
+## [0.16.4] - 2025-06-03
+
+### Added
+
+- Added radius support to `KPSearchBar` with type-safe `KPSearchBarRadius.Small` and
+  `KPSearchBarRadius.Large` options
+- KPSearchBarRadius.Small: Representing `8.dp` radius
+- KPSearchBarRadius.Large: Representing `18.dp` radius
+
 ## [0.16.3] - 2025-03-18
 
 ### Added

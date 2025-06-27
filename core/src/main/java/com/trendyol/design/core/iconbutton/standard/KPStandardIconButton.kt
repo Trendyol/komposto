@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterialApi::class)
+@file:OptIn(ExperimentalMaterialApi::class, ExperimentalKompostoApi::class)
 
 package com.trendyol.design.core.iconbutton.standard
 
@@ -16,6 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Help
@@ -36,6 +37,7 @@ import com.trendyol.design.core.preview.PreviewTheme
  * Defaults to [IconButtonDefaults.buttonColors].
  * @param interactionSource The [MutableInteractionSource] to track interaction events. Defaults to a new instance.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPStandardIconButton(
     icon: ImageVector,
@@ -79,6 +81,7 @@ public fun KPStandardIconButton(
  * Defaults to [IconButtonDefaults.buttonColors].
  * @param interactionSource The [MutableInteractionSource] to track interaction events. Defaults to a new instance.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPStandardIconToggleButton(
     checked: Boolean,

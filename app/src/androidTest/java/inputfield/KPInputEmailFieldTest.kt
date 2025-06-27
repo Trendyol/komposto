@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package inputfield
 
 import androidx.compose.foundation.layout.Row
@@ -8,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.KPIcons

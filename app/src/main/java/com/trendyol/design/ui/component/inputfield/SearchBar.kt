@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.ui.component.inputfield
 
 import androidx.compose.foundation.layout.Arrangement
@@ -10,7 +12,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.search.KPSearchBar
+import com.trendyol.design.core.search.KPSearchBarRadius
 import com.trendyol.design.core.search.KPSearchBarSize
 import com.trendyol.design.core.search.KPSearchBarStyle
 import com.trendyol.design.ui.component.common.Component
@@ -35,6 +39,9 @@ internal fun Input_Field_4_SearchBar_1_Default() = TrendyolTheme {
             size = KPSearchBarSize.Small,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -43,6 +50,9 @@ internal fun Input_Field_4_SearchBar_1_Default() = TrendyolTheme {
             size = KPSearchBarSize.Medium,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -51,6 +61,9 @@ internal fun Input_Field_4_SearchBar_1_Default() = TrendyolTheme {
             size = KPSearchBarSize.Small,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -59,6 +72,9 @@ internal fun Input_Field_4_SearchBar_1_Default() = TrendyolTheme {
             size = KPSearchBarSize.Medium,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
     }
@@ -80,6 +96,9 @@ internal fun Input_Field_4_SearchBar_2_Typed() = TrendyolTheme {
             size = KPSearchBarSize.Small,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -88,6 +107,9 @@ internal fun Input_Field_4_SearchBar_2_Typed() = TrendyolTheme {
             size = KPSearchBarSize.Small,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -96,6 +118,9 @@ internal fun Input_Field_4_SearchBar_2_Typed() = TrendyolTheme {
             size = KPSearchBarSize.Small,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
             }
         )
         KPSearchBar(
@@ -104,6 +129,74 @@ internal fun Input_Field_4_SearchBar_2_Typed() = TrendyolTheme {
             size = KPSearchBarSize.Medium,
             onValueChange = {
                 value = it
+            },
+            onTrailingIconClick = {
+                value = ""
+            }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@ShowkaseComposable(
+    group = Group.INPUT_FIELD,
+    name = Component.INPUT_FIELD_SEARCH_BAR,
+    styleName = "3.Radius Options"
+)
+@Composable
+internal fun Input_Field_4_SearchBar_3_Radius() = TrendyolTheme {
+    var value by remember { mutableStateOf("") }
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        KPSearchBar(
+            value = value,
+            style = KPSearchBarStyle.Outline,
+            size = KPSearchBarSize.Medium,
+            onValueChange = {
+                value = it
+            },
+            radius = KPSearchBarRadius.Small,
+            placeholder = "Small Radius (8dp)",
+            onTrailingIconClick = {
+                value = ""
+            }
+        )
+        KPSearchBar(
+            value = value,
+            style = KPSearchBarStyle.Outline,
+            size = KPSearchBarSize.Medium,
+            onValueChange = {
+                value = it
+            },
+            radius = KPSearchBarRadius.Large,
+            placeholder = "Large Radius (18dp)",
+            onTrailingIconClick = {
+                value = ""
+            }
+        )
+        KPSearchBar(
+            value = value,
+            style = KPSearchBarStyle.Filled,
+            size = KPSearchBarSize.Medium,
+            onValueChange = {
+                value = it
+            },
+            radius = KPSearchBarRadius.Small,
+            placeholder = "Filled Small",
+            onTrailingIconClick = {
+                value = ""
+            }
+        )
+        KPSearchBar(
+            value = value,
+            style = KPSearchBarStyle.Filled,
+            size = KPSearchBarSize.Medium,
+            onValueChange = {
+                value = it
+            },
+            radius = KPSearchBarRadius.Large,
+            placeholder = "Filled Large",
+            onTrailingIconClick = {
+                value = ""
             }
         )
     }

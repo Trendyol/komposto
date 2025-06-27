@@ -1,6 +1,7 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.statelayout.states.warningInfo
 
-import StateWarningInfoDefault
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,23 +18,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.button.Button
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.button.KPButton
 import com.trendyol.design.core.button.KPButtonSize
 import com.trendyol.design.core.button.KPButtonStyle
-import com.trendyol.design.core.button.TrendyolButtonSize
-import com.trendyol.design.core.button.TrendyolButtonStyle
-import com.trendyol.design.core.icon.Icon
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.StateLayoutIconSize
+import com.trendyol.design.core.icon.icons.fill.StateWarningInfoDefault
 import com.trendyol.design.core.statelayout.WarningInfoStateLayoutStyle
-import com.trendyol.design.core.text.Text
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.statelayout.KPWarningInfoStateLayoutStyle
 import com.trendyol.design.core.text.KPText
 import com.trendyol.theme.KPDesign
-import com.trendyol.theme.TrendyolDesign
 
 /**
  * A composable function that displays a warning or informational state using a combination of icons, text,
@@ -68,6 +65,7 @@ import com.trendyol.theme.TrendyolDesign
  * @see WarningInfoStateLayoutStyle
  * @see KPWarningInfoStateLayoutStyle
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPWarningInfoStateComposable(
     modifier: Modifier = Modifier,
@@ -142,92 +140,6 @@ public fun KPWarningInfoStateComposable(
                 ) {
                     infoModel.buttonsInfoModel?.secondaryButtonText?.let {
                         KPText(text = it)
-                    }
-                }
-            }
-        }
-    }
-}
-
-@Composable
-@Deprecated(
-    message = "Use KPWarningInfoStateComposable instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    level = DeprecationLevel.WARNING
-)
-public fun WarningInfoStateComposable(
-    modifier: Modifier = Modifier,
-    warningInfoStateLayoutStyle: WarningInfoStateLayoutStyle,
-) {
-    val infoModel = warningInfoStateLayoutStyle.infoModel
-    val iconSize = infoModel.iconSize
-
-    Box(
-        modifier = modifier
-            .fillMaxSize()
-            .background(TrendyolDesign.colors.colorBackground),
-        contentAlignment = Alignment.Center,
-    ) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Surface(
-                modifier = Modifier
-                    .padding(bottom = 8.dp)
-                    .size(iconSize.dp),
-                shape = CircleShape,
-                elevation = 1.dp,
-            ) {
-                Icon(
-                    modifier = Modifier,
-                    imageVector = getIcon(infoModel.image),
-                    size = iconSize,
-                )
-            }
-            infoModel.title?.let {
-                Text(
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
-                    text = infoModel.title,
-                    style = TrendyolDesign.typography.titleMediumColorOnSurfaceVariant2,
-                    textAlign = infoModel.titleTextAlignment,
-                )
-            }
-            infoModel.description?.let {
-                Text(
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
-                    text = infoModel.description,
-                    style = TrendyolDesign.typography.body1MediumColorOnSurfaceVariant1,
-                    textAlign = infoModel.descriptionTextAlignment,
-                )
-            }
-            if (infoModel.buttonsInfoModel?.primaryButtonText.isNullOrEmpty().not()) {
-                Spacer(modifier = Modifier.size(28.dp))
-                Button(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp),
-                    onClick = infoModel.buttonsInfoModel?.primaryButtonClickListener ?: {},
-                    style = TrendyolButtonStyle.Primary,
-                    size = TrendyolButtonSize.Large
-                ) {
-                    infoModel.buttonsInfoModel?.primaryButtonText?.let {
-                        Text(text = it)
-                    }
-                }
-            }
-
-            if (infoModel.buttonsInfoModel?.secondaryButtonText.isNullOrEmpty().not()) {
-                Spacer(modifier = Modifier.size(16.dp))
-                Button(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp),
-                    onClick = infoModel.buttonsInfoModel?.secondaryButtonClickListener ?: {},
-                    style = TrendyolButtonStyle.Secondary,
-                    size = TrendyolButtonSize.Large
-                ) {
-                    infoModel.buttonsInfoModel?.secondaryButtonText?.let {
-                        Text(text = it)
                     }
                 }
             }

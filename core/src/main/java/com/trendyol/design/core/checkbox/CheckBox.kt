@@ -54,56 +54,6 @@ public fun KPCheckbox(
     )
 }
 
-/**
- * This composable function representing a custom checkbox component designed for the Trendyol.
- *
- * @param style The style configuration for the checkbox, defining its appearance.
- * See [TrendyolCheckBoxStyle.Primary] and [TrendyolCheckBoxStyle.Secondary]
- * @param size The size configuration for the checkbox, determining its dimensions.
- * See [TrendyolCheckBoxSize.Medium], [TrendyolCheckBoxSize.Small] and [TrendyolCheckBoxSize.XSmall]
- * @param containerType The type of container in which the checkbox is placed.
- * See [CheckboxContainerType.Text], [CheckboxContainerType.Content] and [CheckboxContainerType.None]
- * @param checked The current checked state of the checkbox.
- * @param onCheckedChange A callback function invoked when the checked state of the checkbox changes.
- *                        It receives a Boolean parameter indicating the new checked state.
- * @param modifier Additional modifier for the layout of the checkbox.
- * @param enabled Whether the checkbox is interactive and can be checked/unchecked by the user.
- * @param interactionSource The source of interactions for the checkbox, used for tracking user interactions.
- * @param position The vertical alignment of the checkbox within its container.
- */
-@Composable
-@Deprecated(
-    message = "Use KPCheckbox instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    level = DeprecationLevel.WARNING
-)
-public fun TrendyolCheckbox(
-    style: CheckboxStyle,
-    size: CheckboxSize,
-    containerType: CheckboxContainerType,
-    checked: Boolean,
-    onCheckedChange: ((Boolean) -> Unit)?,
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-    position: Alignment.Vertical = Alignment.CenterVertically,
-) {
-    KPTriStateCheckbox(
-        modifier = modifier,
-        style = style,
-        containerType = containerType,
-        size = size,
-        state = ToggleableState(checked),
-        onClick = if (onCheckedChange != null) {
-            { onCheckedChange(!checked) }
-        } else null,
-        interactionSource = interactionSource,
-        enabled = enabled,
-        colors = style.colors,
-        position = position,
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
 private fun TrendyolMediumCheckboxPreviewChecked() {

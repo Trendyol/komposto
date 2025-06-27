@@ -5,7 +5,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.trendyol.theme.KPDesign
-import com.trendyol.theme.TrendyolDesign
 
 public sealed interface KPButtonSize {
 
@@ -39,48 +38,5 @@ public sealed interface KPButtonSize {
         override val font: TextStyle
             @Composable
             get() = KPDesign.typography.body2Medium
-    }
-}
-
-@Deprecated(
-    message = "Use KPButtonSize instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    replaceWith = ReplaceWith(
-        expression = "KPButtonSize"
-    ),
-    level = DeprecationLevel.WARNING
-)
-public sealed interface TrendyolButtonSize {
-
-    public data object Large : ButtonSize {
-        override val contentPadding: PaddingValues
-            get() = PaddingValues(vertical = (10.5).dp, horizontal = 20.dp)
-        override val font: TextStyle
-            @Composable
-            get() = TrendyolDesign.typography.titleBold
-    }
-
-    public data object Medium : ButtonSize {
-        override val contentPadding: PaddingValues
-            get() = PaddingValues(vertical = 8.dp, horizontal = 10.dp)
-        override val font: TextStyle
-            @Composable
-            get() = TrendyolDesign.typography.body1Medium
-    }
-
-    public data object Small : ButtonSize {
-        override val contentPadding: PaddingValues
-            get() = PaddingValues(vertical = 5.dp, horizontal = 10.dp)
-        override val font: TextStyle
-            @Composable
-            get() = TrendyolDesign.typography.body1Medium
-    }
-
-    public data object XSmall : ButtonSize {
-        override val contentPadding: PaddingValues
-            get() = PaddingValues(vertical = 4.dp, horizontal = 10.dp)
-        override val font: TextStyle
-            @Composable
-            get() = TrendyolDesign.typography.body2Medium
     }
 }

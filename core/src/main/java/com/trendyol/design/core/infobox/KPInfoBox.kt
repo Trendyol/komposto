@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.infobox
 
 import androidx.compose.foundation.background
@@ -15,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPCustomFilteredColorIcon
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.CircleIcon
@@ -35,6 +38,7 @@ import com.trendyol.theme.KPDesign
  * @param showBorder A boolean value to enable border display. The default value is `false`.
  * @param showDashedBorder A boolean value to enable dashed border display. The default value is `false`.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPInfoBox(
     style: InfoBoxStyle,

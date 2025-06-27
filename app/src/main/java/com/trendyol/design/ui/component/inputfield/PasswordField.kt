@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.ui.component.inputfield
 
 import androidx.compose.foundation.layout.Column
@@ -9,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
 import com.trendyol.design.core.inputfield.password.KPInputPasswordField
 import com.trendyol.design.ui.component.common.Component

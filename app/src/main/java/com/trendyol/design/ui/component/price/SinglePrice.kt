@@ -1,7 +1,10 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.ui.component.price
 
 import androidx.compose.runtime.Composable
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.theme.KPDesign
 import com.trendyol.design.ui.theme.TrendyolTheme
 import com.trendyol.design.ui.component.common.Component

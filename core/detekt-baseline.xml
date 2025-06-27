@@ -4,7 +4,6 @@
   <CurrentIssues>
     <ID>CyclomaticComplexMethod:TrendyolTextFieldImpl.kt$@OptIn(ExperimentalMaterialApi::class) @Composable internal fun KPCommonDecorationBox( type: KPTextFieldType, value: String, innerTextField: @Composable () -> Unit, visualTransformation: VisualTransformation, label: @Composable (() -> Unit)?, placeholder: @Composable (() -> Unit)? = null, leadingIcon: @Composable (() -> Unit)? = null, trailingIcon: @Composable (() -> Unit)? = null, singleLine: Boolean = false, enabled: Boolean = true, isError: Boolean = false, interactionSource: InteractionSource, contentPadding: PaddingValues, colors: TextFieldColors, labelInitialTextStyle: TextStyle = KPDesign.typography.subtitleMedium, labelEndTextStyle: TextStyle = KPDesign.typography.body2Medium, border: @Composable (() -> Unit)? = null )</ID>
     <ID>ForbiddenComment:TrendyolTextFieldImpl.kt$// TODO: DefaultErrorMessage</ID>
-    <ID>FunctionTypeReferenceSpacing:DialogButtons.kt$DialogButtons$internal fun (@Composable DialogButtons.() -> Unit)?.takeOrNull(): (@Composable () -> Unit)?</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( height: Int, width: Int, leadingPlaceable: Placeable?, trailingPlaceable: Placeable?, textFieldPlaceable: Placeable, labelPlaceable: Placeable?, placeholderPlaceable: Placeable?, borderPlaceable: Placeable, animationProgress: Float, singleLine: Boolean, density: Float, layoutDirection: LayoutDirection, paddingValues: PaddingValues )</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( leadingPlaceableHeight: Int, trailingPlaceableHeight: Int, textFieldPlaceableHeight: Int, labelPlaceableHeight: Int, placeholderPlaceableHeight: Int, animationProgress: Float, constraints: Constraints, density: Float, paddingValues: PaddingValues )</ID>
     <ID>LongParameterList:TrendyolOutlinedTextFieldImpl.kt$( leadingPlaceableWidth: Int, trailingPlaceableWidth: Int, textFieldPlaceableWidth: Int, labelPlaceableWidth: Int, placeholderPlaceableWidth: Int, animationProgress: Float, constraints: Constraints, density: Float, paddingValues: PaddingValues, )</ID>
@@ -19,9 +18,31 @@
     <ID>LongParameterList:TrendyolTextFieldImpl.kt$TextFieldTransitionScope$( inputState: InputPhase, focusedTextStyleColor: Color, unfocusedTextStyleColor: Color, contentColor: @Composable (InputPhase) -> Color, showLabel: Boolean, content: @Composable ( labelProgress: Float, labelTextStyleColor: Color, labelContentColor: Color, placeholderOpacity: Float ) -> Unit )</ID>
     <ID>MagicNumber:TrendyolRadioButtonSize.kt$KPRadioButtonSize.Small$1.6</ID>
     <ID>MagicNumber:TrendyolRadioButtonSize.kt$KPRadioButtonSize.XSmall$1.2</ID>
-    <ID>MagicNumber:TrendyolRadioButtonSize.kt$TrendyolRadioButtonSize.Small$1.6</ID>
-    <ID>MagicNumber:TrendyolRadioButtonSize.kt$TrendyolRadioButtonSize.XSmall$1.2</ID>
+    <ID>MatchingDeclarationName:Icons.kt$KPIcons</ID>
+    <ID>MatchingDeclarationName:ToolbarDefaults.kt$KPToolbarDefaults</ID>
+    <ID>MatchingDeclarationName:TrendyolButtonDefaults.kt$KPButtonDefaults</ID>
+    <ID>MatchingDeclarationName:TrendyolButtonSize.kt$KPButtonSize</ID>
+    <ID>MatchingDeclarationName:TrendyolButtonStyle.kt$KPButtonStyle : ButtonStyle</ID>
+    <ID>MatchingDeclarationName:TrendyolCheckBoxSize.kt$KPCheckboxSize</ID>
+    <ID>MatchingDeclarationName:TrendyolCheckBoxStyle.kt$KPCheckboxStyle</ID>
+    <ID>MatchingDeclarationName:TrendyolCheckboxColors.kt$KPCheckboxColors</ID>
+    <ID>MatchingDeclarationName:TrendyolCheckboxDefaults.kt$KPCheckboxDefaults</ID>
+    <ID>MatchingDeclarationName:TrendyolDropdownStyle.kt$KPDropdownStyle : DropdownStyle</ID>
+    <ID>MatchingDeclarationName:TrendyolGenericDialogType.kt$KPGenericDialogType</ID>
+    <ID>MatchingDeclarationName:TrendyolIconSize.kt$KPIconSize</ID>
+    <ID>MatchingDeclarationName:TrendyolInputOTPFieldStyle.kt$KPInputOTPFieldStyle : InputOTPFieldStyle</ID>
+    <ID>MatchingDeclarationName:TrendyolOutlinedTextFieldStyle.kt$KPOutlinedTextFieldStyle : OutlinedTextFieldStyle</ID>
+    <ID>MatchingDeclarationName:TrendyolPriceStyle.kt$KPPriceStyle</ID>
+    <ID>MatchingDeclarationName:TrendyolRadioButtonContainerType.kt$KPRadioButtonContainerType</ID>
+    <ID>MatchingDeclarationName:TrendyolRadioButtonDefaults.kt$KPRadioButtonDefaults</ID>
+    <ID>MatchingDeclarationName:TrendyolRadioButtonSize.kt$KPRadioButtonSize : RadioButtonSize</ID>
+    <ID>MatchingDeclarationName:TrendyolRatingBarSize.kt$KPRatingBarSize : RatingBarSize</ID>
+    <ID>MatchingDeclarationName:TrendyolSearchBarSize.kt$KPSearchBarSize</ID>
+    <ID>MatchingDeclarationName:TrendyolSearchBarStyle.kt$KPSearchBarStyle : SearchBarStyle</ID>
+    <ID>MatchingDeclarationName:TrendyolTextDefaults.kt$KPTextDefaults</ID>
     <ID>MatchingDeclarationName:TrendyolTextFieldImpl.kt$KPTextFieldType</ID>
+    <ID>MatchingDeclarationName:TrendyolToolbarStyle.kt$KPToolbarStyle : ToolbarStyle</ID>
+    <ID>MatchingDeclarationName:TrendyolWarningInfoStateLayoutStyle.kt$KPWarningInfoStateLayoutStyle</ID>
     <ID>ModifierComposable:RatingBar.kt$mirror</ID>
     <ID>ModifierMissing:CheckToolbarLayoutIds.kt$CheckToolbarLayoutIds</ID>
     <ID>ModifierNotUsedAtRoot:AlertDialog.kt$modifier = modifier .fillMaxWidth() .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 20.dp)</ID>

@@ -1,5 +1,6 @@
 package statelayout.warninginfo
 
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.statelayout.State
 import com.trendyol.design.core.statelayout.KPStateComposeLayout
@@ -9,6 +10,7 @@ import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
 import org.junit.Test
 
+@OptIn(ExperimentalKompostoApi::class)
 internal class TwoButtonTests : DesignScreenshotTest() {
 
     private val title = "İçerik Bulunamadı"

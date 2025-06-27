@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.ui.component.statelayout.warninginfo
 
 import androidx.compose.foundation.layout.size
@@ -8,6 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.trendyol.design.R
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.StateLayoutIconSize
 import com.trendyol.design.core.statelayout.KPWarningInfoStateLayoutStyle
 import com.trendyol.design.core.statelayout.states.warningInfo.KPWarningInfoStateComposable

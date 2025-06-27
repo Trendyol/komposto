@@ -4,7 +4,7 @@ import androidx.compose.foundation.layout.Column
 import com.trendyol.design.core.radiobutton.KPRadioButton
 import com.trendyol.design.core.radiobutton.KPRadioButtonContainerType
 import com.trendyol.design.core.radiobutton.KPRadioButtonSize
-import com.trendyol.design.core.text.Text
+import com.trendyol.design.core.text.KPText
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -44,7 +44,7 @@ internal class RadioButtonTests : DesignScreenshotTest() {
                         selected = false,
                         containerType = KPRadioButtonContainerType.Content{
                             Column {
-                                Text(text)
+                                KPText(text)
                             }
                         },
                         size = KPRadioButtonSize.Medium,

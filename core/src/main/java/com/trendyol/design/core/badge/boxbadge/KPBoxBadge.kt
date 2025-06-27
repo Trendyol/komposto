@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.badge.boxbadge
 
 import androidx.compose.runtime.Composable
@@ -14,6 +16,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeAttributes
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIcons
@@ -30,6 +33,7 @@ import com.trendyol.theme.KPDesign
  * @param attributes Configuration options for the badge's appearance,
  * including size, padding, and text style.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPBoxBadge(
     badge: BoxBadge,

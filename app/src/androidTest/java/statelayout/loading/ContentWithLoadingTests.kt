@@ -1,5 +1,8 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package statelayout.loading
 
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.statelayout.State
 import com.trendyol.design.core.statelayout.KPStateComposeLayout
 import com.trendyol.design.core.statelayout.states.loading.LoadingType
