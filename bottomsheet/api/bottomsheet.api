@@ -14,31 +14,24 @@ public final class com/trendyol/design/bottomsheet/BottomSheetSliderContentKt {
 
 public final class com/trendyol/design/bottomsheet/ComposableSingletons$BottomSheetImageContentKt {
 	public static final field INSTANCE Lcom/trendyol/design/bottomsheet/ComposableSingletons$BottomSheetImageContentKt;
-	public static field lambda-1 Lkotlin/jvm/functions/Function2;
 	public fun <init> ()V
-	public final fun getLambda-1$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-62893904$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
 }
 
 public final class com/trendyol/design/bottomsheet/ComposableSingletons$BottomSheetListContentKt {
 	public static final field INSTANCE Lcom/trendyol/design/bottomsheet/ComposableSingletons$BottomSheetListContentKt;
-	public static field lambda-1 Lkotlin/jvm/functions/Function4;
-	public static field lambda-2 Lkotlin/jvm/functions/Function4;
-	public static field lambda-3 Lkotlin/jvm/functions/Function2;
 	public fun <init> ()V
-	public final fun getLambda-1$bottomsheet_release ()Lkotlin/jvm/functions/Function4;
-	public final fun getLambda-2$bottomsheet_release ()Lkotlin/jvm/functions/Function4;
-	public final fun getLambda-3$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1383900552$bottomsheet_release ()Lkotlin/jvm/functions/Function4;
+	public final fun getLambda$-1565732507$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$535171703$bottomsheet_release ()Lkotlin/jvm/functions/Function4;
 }
 
 public final class com/trendyol/design/bottomsheet/ComposableSingletons$BottomSheetSliderContentKt {
 	public static final field INSTANCE Lcom/trendyol/design/bottomsheet/ComposableSingletons$BottomSheetSliderContentKt;
-	public static field lambda-1 Lkotlin/jvm/functions/Function4;
-	public static field lambda-2 Lkotlin/jvm/functions/Function4;
-	public static field lambda-3 Lkotlin/jvm/functions/Function2;
 	public fun <init> ()V
-	public final fun getLambda-1$bottomsheet_release ()Lkotlin/jvm/functions/Function4;
-	public final fun getLambda-2$bottomsheet_release ()Lkotlin/jvm/functions/Function4;
-	public final fun getLambda-3$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-850576472$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1205634173$bottomsheet_release ()Lkotlin/jvm/functions/Function4;
+	public final fun getLambda$2069408920$bottomsheet_release ()Lkotlin/jvm/functions/Function4;
 }
 
 public abstract class com/trendyol/design/bottomsheet/KPBottomSheetFragment : com/google/android/material/bottomsheet/BottomSheetDialogFragment {
@@ -55,15 +48,11 @@ public final class com/trendyol/design/bottomsheet/header/BottomSheetHeaderKt {
 
 public final class com/trendyol/design/bottomsheet/header/ComposableSingletons$BottomSheetHeaderKt {
 	public static final field INSTANCE Lcom/trendyol/design/bottomsheet/header/ComposableSingletons$BottomSheetHeaderKt;
-	public static field lambda-1 Lkotlin/jvm/functions/Function2;
-	public static field lambda-2 Lkotlin/jvm/functions/Function2;
-	public static field lambda-3 Lkotlin/jvm/functions/Function2;
-	public static field lambda-4 Lkotlin/jvm/functions/Function2;
 	public fun <init> ()V
-	public final fun getLambda-1$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
-	public final fun getLambda-2$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
-	public final fun getLambda-3$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
-	public final fun getLambda-4$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-2049573431$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-409657079$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1504507754$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1540698409$bottomsheet_release ()Lkotlin/jvm/functions/Function2;
 }
 
 public final class com/trendyol/design/bottomsheet/item/BottomSheetCheckboxItemKt {
