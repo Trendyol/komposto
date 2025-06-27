@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.countdowntimer
 
 import androidx.compose.foundation.layout.Row
@@ -18,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.icon.Icon
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.IconSize
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIcons
@@ -39,6 +41,7 @@ import java.util.concurrent.TimeUnit
  * @param backgroundAlpha The alpha value for the background color, allowing control over the transparency of the time boxes. Defaults to `1F`.
  * @param onTimerFinish Registers a callback to be invoked when the timer finishes.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPCountdownTimer(
     size: CountdownTimerSize,
@@ -93,7 +96,7 @@ public fun KPCountdownTimer(
                     backgroundAlpha = backgroundAlpha,
                 )
                 Spacer(modifier = Modifier.width(size.verticalBoxPadding))
-                Icon(
+                KPIcon(
                     size = CustomIconSize,
                     imageVector = KPIcons.Fill.Colon,
                     contentDescription = KPIcons.Fill.Colon.name,

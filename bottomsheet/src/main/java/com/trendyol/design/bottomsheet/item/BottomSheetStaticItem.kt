@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.bottomsheet.item
 
 import androidx.compose.foundation.clickable
@@ -15,19 +17,15 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.trendyol.design.core.icon.Icon
-import com.trendyol.design.core.icon.Icons
-import com.trendyol.design.core.icon.TrendyolIconSize
 import com.trendyol.design.core.icon.icons.fill.Bullet
 import com.trendyol.design.core.icon.icons.outline.Union
-import com.trendyol.design.core.text.Text
 import com.trendyol.design.bottomsheet.preview.PreviewTheme
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.text.KPText
 import com.trendyol.theme.KPDesign
-import com.trendyol.theme.TrendyolDesign
 
 /**
  * A composable function that creates a static item with a text label, optional description, and optional icon for a bottom sheet.
@@ -41,6 +39,7 @@ import com.trendyol.theme.TrendyolDesign
  * @param description An optional description text to be displayed below the label. Default is an empty string.
  * @param descriptionTextStyle A `TextStyle` for customizing the appearance of the description text. Default is `KPDesign.typography.body1ColorOnSurfaceVariant1`.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPBottomSheetStaticItem(
     text: String,
@@ -74,66 +73,6 @@ public fun KPBottomSheetStaticItem(
             if (description.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(4.dp))
                 KPText(
-                    text = description,
-                    style = descriptionTextStyle,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-        }
-    }
-}
-
-/**
- * A composable function that creates a static item with a text label, optional description, and optional icon for a bottom sheet.
- *
- * @param text The text label to be displayed for the item.
- * @param onClick A lambda function to be invoked when the item is clicked.
- * @param modifier A `Modifier` for styling and layout customization. Default is `Modifier`.
- * @param icon An optional `ImageVector` for the icon to be displayed next to the text. Default is `null`.
- * @param iconPosition An `Alignment.Vertical` value to position the icon vertically. Default is `Alignment.CenterVertically`.
- * @param textStyle A `TextStyle` for customizing the appearance of the text label. Default is `TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3`.
- * @param description An optional description text to be displayed below the label. Default is an empty string.
- * @param descriptionTextStyle A `TextStyle` for customizing the appearance of the description text. Default is `TrendyolDesign.typography.body1ColorOnSurfaceVariant1`.
- */
-@Composable
-@Deprecated(
-    message = "Use KPBottomSheetStaticItem instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    level = DeprecationLevel.WARNING
-)
-public fun BottomSheetStaticItem(
-    text: String,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    icon: ImageVector? = null,
-    iconPosition: Alignment.Vertical = Alignment.CenterVertically,
-    textStyle: TextStyle = TrendyolDesign.typography.subtitleMediumColorOnSurfaceVariant3,
-    description: String = "",
-    descriptionTextStyle: TextStyle = TrendyolDesign.typography.body1ColorOnSurfaceVariant1,
-) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick),
-        verticalAlignment = iconPosition,
-    ) {
-        if (icon != null) {
-            Icon(imageVector = icon, size = TrendyolIconSize.XSmall)
-            if (icon != Icons.Fill.Bullet) {
-                Spacer(modifier = Modifier.width(4.dp))
-            }
-        }
-        Column {
-            Text(
-                text = text,
-                style = textStyle,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            if (description.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
                     text = description,
                     style = descriptionTextStyle,
                     maxLines = 1,

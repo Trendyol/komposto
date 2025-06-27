@@ -1,8 +1,9 @@
-<?xml version="1.0" ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <SmellBaseline>
-  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>MagicNumber:BottomSheetListContent.kt$30</ID>
     <ID>MagicNumber:BottomSheetSliderContent.kt$30</ID>
+    <ID>MatchingDeclarationName:TrendyolDesignBottomSheetFragment.kt$KPBottomSheetFragment : BottomSheetDialogFragment</ID>
   </CurrentIssues>
 </SmellBaseline>

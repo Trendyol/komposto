@@ -1,6 +1,6 @@
 package toolbar
 
-import com.trendyol.design.core.icon.Icons
+import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.icon.icons.fill.Trash
 import com.trendyol.design.core.toolbar.KPToolbar
@@ -24,10 +24,10 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarIconEndIcon",
                         style = KPToolbarStyle.Icon.EndIcon(
                             icon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
+                                Icon(imageVector = KPIcons.Fill.Trash, onClick = { })
                             },
                             endIcon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
+                                Icon(imageVector = KPIcons.Fill.Trash, onClick = { })
                             }
                         )
                     )
@@ -39,13 +39,13 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarIconEndTwoIcon",
                         style = KPToolbarStyle.Icon.EndTwoIcons(
                             icon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
+                                Icon(imageVector = KPIcons.Fill.Trash, onClick = { })
                             },
                             firstIcon = {
-                                Icon(imageVector = Icons.Fill.Help, onClick= { })
+                                Icon(imageVector = KPIcons.Fill.Help, onClick= { })
                             },
                             secondIcon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
+                                Icon(imageVector = KPIcons.Fill.Trash, onClick = { })
                             }
                         )
                     )
@@ -57,7 +57,7 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarIconNone",
                         style = KPToolbarStyle.Icon.None(
                             icon = {
-                                Icon(imageVector = Icons.Fill.Help, onClick = { })
+                                Icon(imageVector = KPIcons.Fill.Help, onClick = { })
                             }
                         )
                     )
@@ -69,7 +69,7 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarIconTextButton",
                         style = KPToolbarStyle.Icon.TextButton(
                             icon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
+                                Icon(imageVector = KPIcons.Fill.Trash, onClick = { })
                             },
                             textButton = {
                                 Text(text = toolbarText, onClick = { })
@@ -84,7 +84,7 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarEndIcon",
                         style = KPToolbarStyle.EndIcon(
                             endIcon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
+                                Icon(imageVector = KPIcons.Fill.Trash, onClick = { })
                             }
                         )
                     )
@@ -96,10 +96,10 @@ internal class ToolbarTests : DesignScreenshotTest() {
                         title = "ToolbarIconEndTwoIcon",
                         style = KPToolbarStyle.EndTwoIcons(
                             firstIcon = {
-                                Icon(imageVector = Icons.Fill.Help, onClick = { })
+                                Icon(imageVector = KPIcons.Fill.Help, onClick = { })
                             },
                             secondIcon = {
-                                Icon(imageVector = Icons.Fill.Trash, onClick = { })
+                                Icon(imageVector = KPIcons.Fill.Trash, onClick = { })
                             }
                         )
                     )

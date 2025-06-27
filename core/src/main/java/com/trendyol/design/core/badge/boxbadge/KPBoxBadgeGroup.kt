@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.badge.boxbadge
 
 import androidx.compose.foundation.layout.Arrangement
@@ -12,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.badge.boxbadge.model.BoxBadgeAttributes
 import com.trendyol.design.core.icon.KPIcons
 import com.trendyol.design.core.icon.icons.fill.Help
@@ -32,6 +35,7 @@ import kotlinx.collections.immutable.toPersistentList
  * @param itemAttributes Defines the styling attributes for badge items, including
  * properties like padding, icon size, and border radius, etc.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPBoxBadgeGroup(
     badges: PersistentList<BoxBadge>,

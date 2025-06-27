@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package inputfield
 
 import androidx.compose.runtime.LaunchedEffect
@@ -6,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.inputfield.otp.KPInputOTPField
 import com.trendyol.design.core.inputfield.otp.KPInputOTPFieldStyle
 import core.BoxWithHorizontalPadding

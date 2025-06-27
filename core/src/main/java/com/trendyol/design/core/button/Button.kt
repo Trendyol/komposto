@@ -19,7 +19,6 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.text.KPTextDefaults
-import com.trendyol.design.core.text.TrendyolTextDefaults
 
 /**
  * A customizable button component that wraps [androidx.compose.material.Button].
@@ -102,64 +101,6 @@ public fun KPButton(
                     color = style.buttonColors.contentColor(enabled = enabled).value,
                     letterSpacing = KPTextDefaults.letterSpacing,
                     platformStyle = KPTextDefaults.platformStyle,
-                )
-            ) {
-                content()
-            }
-        }
-    }
-}
-
-/**
- * Button wrapper around [androidx.compose.material.Button] with customized options. Decides colors and paddings
- * according to given [style] and [size] parameters.
- *
- * @param style ButtonStyle configuration for the button, specifying its appearance and behavior.
- * @param size ButtonSize configuration for the button, determining its dimensions.
- * @param enabled Determines if the button is clickable and changes design according to given [style] value.
- * Default is `true`.
- * @param elevation Determines elevation of button. Default is `0.dp`.
- */
-@OptIn(ExperimentalMaterialApi::class)
-@Composable
-@Deprecated(
-    message = "Use KPButton instead for consistent naming. " +
-        "This API will get removed in future releases.",
-    level = DeprecationLevel.WARNING
-)
-public fun Button(
-    onClick: () -> Unit,
-    style: ButtonStyle,
-    size: ButtonSize,
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-    elevation: ButtonElevation? = TrendyolButtonDefaults.elevation(),
-    shape: Shape = MaterialTheme.shapes.small,
-    border: BorderStroke? = style.getBorder(width = 1.dp, enabled = enabled),
-    colors: ButtonColors = style.buttonColors,
-    contentPadding: PaddingValues = size.contentPadding,
-    content: @Composable RowScope.() -> Unit,
-) {
-    CompositionLocalProvider(LocalMinimumInteractiveComponentEnforcement provides false) {
-        androidx.compose.material.Button(
-            onClick = onClick,
-            modifier = modifier.defaultMinSize(minHeight = size.minHeight),
-            enabled = enabled,
-            interactionSource = interactionSource,
-            elevation = elevation,
-            shape = shape,
-            border = border,
-            colors = colors,
-            contentPadding = contentPadding,
-        ) {
-            ProvideTextStyle(
-                value = TextStyle.Default.copy(
-                    fontFamily = size.font.fontFamily,
-                    fontSize = size.font.fontSize,
-                    color = style.buttonColors.contentColor(enabled = enabled).value,
-                    letterSpacing = TrendyolTextDefaults.letterSpacing,
-                    platformStyle = TrendyolTextDefaults.platformStyle,
                 )
             ) {
                 content()

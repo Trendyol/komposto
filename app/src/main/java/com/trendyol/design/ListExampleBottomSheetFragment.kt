@@ -1,9 +1,12 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design
 
 import androidx.compose.runtime.Composable
 import com.trendyol.design.bottomsheet.KPBottomSheetFragment
 import com.trendyol.design.bottomsheet.KPBottomSheetListContent
 import com.trendyol.design.bottomsheet.item.KPBottomSheetCheckboxItem
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.ui.theme.TrendyolTheme
 import kotlinx.collections.immutable.persistentListOf
 

@@ -1,6 +1,5 @@
 package com.trendyol.design.ui.component.icons.fill
 
-import StateWarningInfoDefault
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
@@ -32,6 +31,7 @@ import com.trendyol.design.core.icon.icons.fill.Star
 import com.trendyol.design.core.icon.icons.fill.StateOrder
 import com.trendyol.design.core.icon.icons.fill.StatePin
 import com.trendyol.design.core.icon.icons.fill.StateRefresh
+import com.trendyol.design.core.icon.icons.fill.StateWarningInfoDefault
 import com.trendyol.design.core.icon.icons.fill.Tick
 import com.trendyol.design.core.icon.icons.fill.Trash
 import com.trendyol.design.ui.theme.TrendyolTheme

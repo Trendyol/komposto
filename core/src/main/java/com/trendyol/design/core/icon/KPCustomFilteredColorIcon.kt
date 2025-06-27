@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.icon
 
 import androidx.compose.foundation.layout.Box
@@ -6,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
+import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.icons.fill.CircleIcon
 import com.trendyol.design.core.icon.icons.fill.InfoIcon
 
@@ -16,10 +19,11 @@ import com.trendyol.design.core.icon.icons.fill.InfoIcon
  * @param innerIcon You can set icon symbol in this parameter.
  * @param innerTint You can set innerIcon's tint in this parameter.
  */
+@ExperimentalKompostoApi
 @Composable
 public fun KPCustomFilteredColorIcon(
     modifier: Modifier = Modifier,
-    outerIcon: ImageVector = Icons.Fill.CircleIcon,
+    outerIcon: ImageVector = KPIcons.Fill.CircleIcon,
     outerTint: Color,
     innerIcon: ImageVector,
     innerTint: Color = Color.Unspecified,
@@ -27,15 +31,15 @@ public fun KPCustomFilteredColorIcon(
     Box(
         modifier = modifier
     ) {
-        Icon(
+        KPIcon(
             imageVector = outerIcon,
             tint = outerTint,
-            size = TrendyolIconSize.Small,
+            size = KPIconSize.Small,
         )
-        Icon(
+        KPIcon(
             imageVector = innerIcon,
             tint = innerTint,
-            size = TrendyolIconSize.Small,
+            size = KPIconSize.Small,
         )
     }
 }
@@ -45,7 +49,7 @@ public fun KPCustomFilteredColorIcon(
 private fun CustomFilteredColorIconPreview() {
     KPCustomFilteredColorIcon(
         outerTint = Color.Red,
-        innerIcon = Icons.Fill.InfoIcon,
+        innerIcon = KPIcons.Fill.InfoIcon,
         innerTint = Color.White
     )
 }
