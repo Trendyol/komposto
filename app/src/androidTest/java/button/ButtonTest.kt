@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.button.KPButton
@@ -16,6 +17,14 @@ import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
 import org.junit.Test
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.material.LocalContentColor
+import androidx.compose.foundation.layout.PaddingValues
+import com.trendyol.design.core.icon.KPIcon
+import com.trendyol.design.core.icon.KPIcons
+import com.trendyol.design.core.icon.KPIconSize
+import com.trendyol.design.core.icon.icons.fill.RunningOut
+import com.trendyol.theme.KPDesign
 
 internal class ButtonTest : DesignScreenshotTest() {
 
@@ -370,6 +379,515 @@ internal class ButtonTest : DesignScreenshotTest() {
                             size = KPButtonSize.Medium,
                             enabled = false
                         ) { KPText(text = buttonText) }
+                    }
+                }
+            },
+        )
+    )
+
+    @Test
+    fun iconWithTextTest() = runScreenShotTest(
+        testName = "iconWithTextTest",
+        contents = listOf(
+            DesignScreenshotTestContainer("Primary Large") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Large,
+                        contentPadding = PaddingValues(
+                            vertical = 3.5.dp,
+                            horizontal = 20.dp
+                        ),
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            KPText(
+                                text = "Top Text",
+                                style = KPDesign.typography.titleBold,
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                KPIcon(
+                                    imageVector = KPIcons.Fill.RunningOut,
+                                    size = KPIconSize.XXSmall,
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                KPText(
+                                    text = "Bottom Text",
+                                    style = KPDesign.typography.body2Medium
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+            DesignScreenshotTestContainer("Secondary Large") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Secondary,
+                        size = KPButtonSize.Large,
+                        contentPadding = PaddingValues(
+                            vertical = 3.5.dp,
+                            horizontal = 20.dp
+                        ),
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            KPText(
+                                text = "Top Text",
+                                style = KPDesign.typography.titleBold,
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                KPIcon(
+                                    imageVector = KPIcons.Fill.RunningOut,
+                                    size = KPIconSize.XXSmall,
+                                    tint = LocalContentColor.current,
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                KPText(
+                                    text = "Bottom Text",
+                                    style = KPDesign.typography.body2Medium
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+            DesignScreenshotTestContainer("Tertiary Large") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Tertiary,
+                        size = KPButtonSize.Large,
+                        contentPadding = PaddingValues(
+                            vertical = 3.5.dp,
+                            horizontal = 20.dp
+                        ),
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            KPText(
+                                text = "Top Text",
+                                style = KPDesign.typography.titleBold,
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                KPIcon(
+                                    imageVector = KPIcons.Fill.RunningOut,
+                                    size = KPIconSize.XXSmall,
+                                    tint = LocalContentColor.current,
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                KPText(
+                                    text = "Bottom Text",
+                                    style = KPDesign.typography.body2Medium
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+        )
+    )
+
+    @Test
+    fun iconWithTextMediumTest() = runScreenShotTest(
+        testName = "iconWithTextMediumTest",
+        contents = listOf(
+            DesignScreenshotTestContainer("Primary Medium") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Medium,
+                        contentPadding = PaddingValues(
+                            vertical = 3.5.dp,
+                            horizontal = 20.dp
+                        ),
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            KPText(
+                                text = "Top Text",
+                                style = KPDesign.typography.body1Bold
+                            )
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                KPIcon(
+                                    imageVector = KPIcons.Fill.RunningOut,
+                                    size = KPIconSize.XXSmall,
+                                    modifier = Modifier.width(10.dp),
+                                )
+                                Spacer(modifier = Modifier.width(1.dp))
+                                KPText(
+                                    text = "Bottom Text",
+                                    style = KPDesign.typography.overLineMedium
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+            DesignScreenshotTestContainer("Secondary Medium") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Secondary,
+                        size = KPButtonSize.Medium,
+                        contentPadding = PaddingValues(
+                            vertical = 3.5.dp,
+                            horizontal = 20.dp
+                        ),
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            KPText(
+                                text = "Top Text",
+                                style = KPDesign.typography.body1Bold
+                            )
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                KPIcon(
+                                    imageVector = KPIcons.Fill.RunningOut,
+                                    size = KPIconSize.XXSmall,
+                                    tint = LocalContentColor.current,
+                                    modifier = Modifier.width(10.dp),
+                                )
+                                Spacer(modifier = Modifier.width(1.dp))
+                                KPText(
+                                    text = "Bottom Text",
+                                    style = KPDesign.typography.overLineMedium
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+            DesignScreenshotTestContainer("Tertiary Medium") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Tertiary,
+                        size = KPButtonSize.Medium,
+                        contentPadding = PaddingValues(
+                            vertical = 3.5.dp,
+                            horizontal = 20.dp
+                        ),
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            KPText(
+                                text = "Top Text",
+                                style = KPDesign.typography.body1Bold
+                            )
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                KPIcon(
+                                    imageVector = KPIcons.Fill.RunningOut,
+                                    size = KPIconSize.XXSmall,
+                                    tint = LocalContentColor.current,
+                                    modifier = Modifier.width(10.dp),
+                                )
+                                Spacer(modifier = Modifier.width(1.dp))
+                                KPText(
+                                    text = "Bottom Text",
+                                    style = KPDesign.typography.overLineMedium
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+        )
+    )
+
+    @Test
+    fun disabledAllSizesTest() = runScreenShotTest(
+        testName = "disabledAllSizesTest",
+        contents = listOf(
+            DesignScreenshotTestContainer("Primary Disabled") {
+                BoxWithHorizontalPadding {
+                    Column {
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Primary,
+                            size = KPButtonSize.Large,
+                            enabled = false
+                        ) { KPText(text = "Large Disabled") }
+                        Spacer(modifier = Modifier.height(8.dp))
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Primary,
+                            size = KPButtonSize.Medium,
+                            enabled = false
+                        ) { KPText(text = "Medium Disabled") }
+                        Spacer(modifier = Modifier.height(8.dp))
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Primary,
+                            size = KPButtonSize.Small,
+                            enabled = false
+                        ) { KPText(text = "Small Disabled") }
+                        Spacer(modifier = Modifier.height(8.dp))
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Primary,
+                            size = KPButtonSize.XSmall,
+                            enabled = false
+                        ) { KPText(text = "XSmall Disabled") }
+                    }
+                }
+            },
+            DesignScreenshotTestContainer("Secondary Disabled") {
+                BoxWithHorizontalPadding {
+                    Column {
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Secondary,
+                            size = KPButtonSize.Large,
+                            enabled = false
+                        ) { KPText(text = "Large Disabled") }
+                        Spacer(modifier = Modifier.height(8.dp))
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Secondary,
+                            size = KPButtonSize.Medium,
+                            enabled = false
+                        ) { KPText(text = "Medium Disabled") }
+                        Spacer(modifier = Modifier.height(8.dp))
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Secondary,
+                            size = KPButtonSize.Small,
+                            enabled = false
+                        ) { KPText(text = "Small Disabled") }
+                        Spacer(modifier = Modifier.height(8.dp))
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Secondary,
+                            size = KPButtonSize.XSmall,
+                            enabled = false
+                        ) { KPText(text = "XSmall Disabled") }
+                    }
+                }
+            },
+            DesignScreenshotTestContainer("Tertiary Disabled") {
+                BoxWithHorizontalPadding {
+                    Column {
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Tertiary,
+                            size = KPButtonSize.Large,
+                            enabled = false
+                        ) { KPText(text = "Large Disabled") }
+                        Spacer(modifier = Modifier.height(8.dp))
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Tertiary,
+                            size = KPButtonSize.Medium,
+                            enabled = false
+                        ) { KPText(text = "Medium Disabled") }
+                        Spacer(modifier = Modifier.height(8.dp))
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Tertiary,
+                            size = KPButtonSize.Small,
+                            enabled = false
+                        ) { KPText(text = "Small Disabled") }
+                        Spacer(modifier = Modifier.height(8.dp))
+                        KPButton(
+                            onClick = { },
+                            style = KPButtonStyle.Tertiary,
+                            size = KPButtonSize.XSmall,
+                            enabled = false
+                        ) { KPText(text = "XSmall Disabled") }
+                    }
+                }
+            },
+        )
+    )
+
+    @Test
+    fun iconWithTextDisabledTest() = runScreenShotTest(
+        testName = "iconWithTextDisabledTest",
+        contents = listOf(
+            DesignScreenshotTestContainer("Primary Disabled") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Large,
+                        contentPadding = PaddingValues(
+                            vertical = 3.5.dp,
+                            horizontal = 20.dp
+                        ),
+                        enabled = false,
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            KPText(
+                                text = "Top Text",
+                                style = KPDesign.typography.titleBold,
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                KPIcon(
+                                    imageVector = KPIcons.Fill.RunningOut,
+                                    size = KPIconSize.XXSmall,
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                KPText(
+                                    text = "Bottom Text",
+                                    style = KPDesign.typography.body2Medium
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+            DesignScreenshotTestContainer("Secondary Disabled") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Secondary,
+                        size = KPButtonSize.Large,
+                        contentPadding = PaddingValues(
+                            vertical = 3.5.dp,
+                            horizontal = 20.dp
+                        ),
+                        enabled = false,
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            KPText(
+                                text = "Top Text",
+                                style = KPDesign.typography.titleBold,
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                KPIcon(
+                                    imageVector = KPIcons.Fill.RunningOut,
+                                    size = KPIconSize.XXSmall,
+                                    tint = LocalContentColor.current,
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                KPText(
+                                    text = "Bottom Text",
+                                    style = KPDesign.typography.body2Medium
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+            DesignScreenshotTestContainer("Tertiary Disabled") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Tertiary,
+                        size = KPButtonSize.Large,
+                        contentPadding = PaddingValues(
+                            vertical = 3.5.dp,
+                            horizontal = 20.dp
+                        ),
+                        enabled = false,
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            KPText(
+                                text = "Top Text",
+                                style = KPDesign.typography.titleBold,
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                KPIcon(
+                                    imageVector = KPIcons.Fill.RunningOut,
+                                    size = KPIconSize.XXSmall,
+                                    tint = LocalContentColor.current,
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                KPText(
+                                    text = "Bottom Text",
+                                    style = KPDesign.typography.body2Medium
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+        )
+    )
+
+    @Test
+    fun twoLineButtonAllStylesTest() = runScreenShotTest(
+        testName = "twoLineButtonAllStylesTest",
+        contents = listOf(
+            DesignScreenshotTestContainer("Primary Two Line") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Primary,
+                        size = KPButtonSize.Large,
+                    ) {
+                        KPText(
+                            text = "Long Title example\n is like that",
+                            textAlign = TextAlign.Center,
+                        )
+                    }
+                }
+            },
+            DesignScreenshotTestContainer("Secondary Two Line") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Secondary,
+                        size = KPButtonSize.Large,
+                    ) {
+                        KPText(
+                            text = "Long Title example\n is like that",
+                            textAlign = TextAlign.Center,
+                        )
+                    }
+                }
+            },
+            DesignScreenshotTestContainer("Tertiary Two Line") {
+                BoxWithHorizontalPadding {
+                    KPButton(
+                        onClick = { },
+                        style = KPButtonStyle.Tertiary,
+                        size = KPButtonSize.Large,
+                    ) {
+                        KPText(
+                            text = "Long Title example\n is like that",
+                            textAlign = TextAlign.Center,
+                        )
                     }
                 }
             },
