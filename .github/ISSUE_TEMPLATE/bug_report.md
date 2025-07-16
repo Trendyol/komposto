@@ -24,33 +24,18 @@ assignees: ''
 3.
 4.
 
-## Code Sample
-<!--- Please provide a minimal, complete, and verifiable code sample -->
-```kotlin
-@Composable
-fun YourComposable() {
-    // Your code here that demonstrates the issue
-}
-```
-
 ## Environment
 **Affected Component/Module:** 
-<!--- Which component is affected? (design-core, design-theme, bottom-sheet, etc.) -->
+<!--- Which component is affected? -->
 
 **Library Version:** 
-<!--- What version of Trendyol Design Android are you using? -->
+<!--- What version of Komposto are you using? -->
 
 **Android Version:** 
 <!--- e.g., Android 14 (API 34) -->
 
 **Device:** 
 <!--- e.g., Pixel 7, Samsung Galaxy S23, Emulator -->
-
-**Compose BOM Version:** 
-<!--- e.g., 2024.06.00 -->
-
-**Kotlin Version:** 
-<!--- e.g., 1.9.24 -->
 
 ## Issue Type
 <!--- Check all that apply -->
@@ -67,13 +52,6 @@ fun YourComposable() {
 
 ## Screenshots/Videos
 <!--- If applicable, add screenshots or videos to help explain the problem -->
-
-## Additional Context
-<!--- How has this issue affected you? What are you trying to accomplish? -->
-<!--- Include any other context about the problem here, such as: -->
-<!--- - Custom theme configuration -->
-<!--- - Proguard/R8 setup -->
-<!--- - Any workarounds you've tried -->
 
 ## Possible Solution
 <!--- Not obligatory, but suggest a fix/reason for the bug -->

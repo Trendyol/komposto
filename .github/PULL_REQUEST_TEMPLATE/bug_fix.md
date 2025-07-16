@@ -1,16 +1,13 @@
 ## 🐛 Bug Fix Description
 
-### What bug does this PR fix?
-<!--- Provide a clear and concise description of the bug being fixed -->
+## 📋 Related Issue
+<!--- What bug does this PR fix? Give a reference to issue number if exists -->
 
 ### Root Cause Analysis
 <!--- Explain what was causing the bug -->
 
 ### How was it fixed?
 <!--- Describe your solution and why you chose this approach -->
-
-## 📋 Related Issue
-Fixes #<!-- issue number -->
 
 ## 🧪 Testing
 
@@ -59,16 +56,6 @@ Fixes #<!-- issue number -->
 - [ ] This change introduces breaking changes
 - [ ] This change is backward compatible
 
-### Performance Impact
-<!--- Does this fix have any performance implications? -->
-- [ ] No performance impact
-- [ ] Performance improved
-- [ ] Minor performance cost (explain below)
-- [ ] Significant performance considerations (explain below)
-
-**Performance Details:**
-<!--- If applicable, explain performance implications -->
-
 ## 🔄 Migration Required
 <!--- Is any migration needed for consumers? -->
 - [ ] No migration required
@@ -85,23 +72,6 @@ Fixes #<!-- issue number -->
 
 **Screenshot Changes Explained:**
 <!--- Explain why screenshots changed -->
-
-## 🔗 Additional Context
-<!--- Add any other context about the PR here -->
-
-### Related PRs
-<!--- Link any related PRs -->
-
-### Follow-up Work
-<!--- Is there any follow-up work needed? -->
-
-## 🏁 Final Checklist
-- [ ] PR title follows conventional commit format
-- [ ] Code has been self-reviewed
-- [ ] Screenshots/videos added if applicable
-- [ ] Documentation updated if needed
-- [ ] Related issue is linked
-- [ ] Labels have been added
 
 ## 📝 Additional Notes
 <!--- Any additional information for reviewers -->

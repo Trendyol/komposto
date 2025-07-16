@@ -3,14 +3,8 @@
 ### What does this PR do?
 <!--- Provide a clear and concise description of what this PR accomplishes -->
 
-### Why is this change needed?
-<!--- Explain the motivation behind this change -->
-
-### How was it implemented?
-<!--- Describe your solution and why you chose this approach -->
-
 ## 📋 Related Issue
-<!--- Link related issues -->
+<!--- Link related issues if exists -->
 Closes #<!-- issue number -->
 Related to #<!-- issue number -->
 
@@ -51,29 +45,9 @@ Related to #<!-- issue number -->
 
 ## 🚀 Impact Assessment
 
-### Type of Change
-<!--- What type of change does this PR introduce? -->
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Performance improvement
-- [ ] Code refactoring (no functional changes)
-- [ ] Documentation update
-- [ ] Test improvements
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-
 ### Breaking Changes
 - [ ] This change introduces breaking changes
 - [ ] This change is backward compatible
-
-### Performance Impact
-<!--- Does this change have any performance implications? -->
-- [ ] No performance impact
-- [ ] Performance improved
-- [ ] Minor performance cost (explain below)
-- [ ] Significant performance considerations (explain below)
-
-**Performance Details:**
-<!--- If applicable, explain performance implications -->
 
 ## 🔄 Migration Required
 <!--- Is any migration needed for consumers? -->
@@ -91,20 +65,6 @@ Related to #<!-- issue number -->
 
 **Screenshot Changes Explained:**
 <!--- Explain why screenshots changed -->
-
-## 🔗 Additional Context
-<!--- Add any other context about the PR here -->
-
-### Follow-up Work
-<!--- Is there any follow-up work needed? -->
-
-## 🏁 Final Checklist
-- [ ] PR title follows conventional commit format
-- [ ] Code has been self-reviewed
-- [ ] Screenshots/videos added if applicable
-- [ ] Documentation updated if needed
-- [ ] Related issue is linked
-- [ ] Labels have been added
 
 ## 📝 Additional Notes
 <!--- Any additional information for reviewers -->
