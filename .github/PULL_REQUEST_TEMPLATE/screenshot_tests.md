@@ -7,7 +7,6 @@
 <!--- List the components or screens that are covered by these screenshot tests -->
 - [ ] Component 1
 - [ ] Component 2
-- [ ] Screen/Flow
 
 ### Test Scenarios Added
 <!--- What specific scenarios are being tested? -->
@@ -30,8 +29,6 @@ Related to #<!-- issue number -->
 
 ### Screenshot Test Coverage
 <!--- What variations were tested? -->
-- [ ] Light theme
-- [ ] Dark theme
 - [ ] Different screen densities (mdpi, hdpi, xhdpi, xxhdpi)
 - [ ] Different screen sizes (phone, tablet)
 - [ ] RTL layout
@@ -75,39 +72,6 @@ Related to #<!-- issue number -->
 - [ ] Improves coverage for existing component
 - [ ] Adds regression prevention for specific bug
 - [ ] Covers new component states/variations
-
-### Breaking Changes
-- [ ] This change introduces breaking changes to existing tests
-- [ ] This change is backward compatible
-
-### Performance Impact
-<!--- Does this change affect test execution time? -->
-- [ ] No impact on test execution time
-- [ ] Minor increase in test execution time
-- [ ] Significant increase in test execution time (explain below)
-
-**Performance Details:**
-<!--- If applicable, explain test performance implications -->
-
-## 🔗 Additional Context
-
-### Test Maintenance
-<!--- Information about maintaining these tests -->
-- [ ] Tests are stable and unlikely to be flaky
-- [ ] Clear documentation for updating tests when UI changes
-- [ ] Proper naming convention followed
-
-### Related PRs
-<!--- Link any related PRs -->
-
-### Follow-up Work
-<!--- Any follow-up screenshot test work needed? -->
-
-## 🏁 Final Checklist
-- [ ] PR title follows conventional commit format
-- [ ] All screenshot tests pass locally
-- [ ] Screenshots are properly organized
-- [ ] Labels have been added
 
 ## 📝 Additional Notes
 <!--- Any additional information for reviewers -->
