@@ -13,7 +13,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material.RadioButtonColors
-import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -64,7 +64,7 @@ public fun KPRadioButton(
                 enabled = enabled,
                 role = Role.RadioButton,
                 interactionSource = interactionSource,
-                indication = rememberRipple(
+                indication = ripple(
                     bounded = false,
                     radius = size.rippleRadius,
                 )
