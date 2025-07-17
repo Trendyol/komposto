@@ -11,9 +11,6 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    versionCatalogs {
-        create("publishedLibs") { from(files("gradle/published-libs.versions.toml")) }
-    }
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
@@ -29,3 +26,4 @@ include(":app")
 include(":core")
 include(":theme")
 include(":bottomsheet")
+includeBuild("gradle/build-logic")

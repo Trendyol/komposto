@@ -2,3 +2,6 @@
 /build/
 /local.properties
 /.idea/
+/gradle/build-logic/.gradle
+/gradle/build-logic/convention/build
+.kotlin
