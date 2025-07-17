@@ -23,7 +23,6 @@
 - [ ] Edge cases
 - [ ] Different Android versions
 - [ ] Different screen sizes/densities
-- [ ] Dark/Light themes
 - [ ] RTL layout support
 - [ ] Accessibility features
 
