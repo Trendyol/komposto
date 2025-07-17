@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.R
 import com.trendyol.design.bottomsheet.KPBottomSheetImageContent
 import com.trendyol.design.bottomsheet.KPBottomSheetListContent
 import com.trendyol.design.bottomsheet.KPBottomSheetSliderContent
@@ -25,11 +26,11 @@ internal class BottomSheetTest : DesignScreenshotTest() {
 
     private val headerTitle = "Title"
     val testItemList = persistentListOf(
-        com.trendyol.design.bottomsheet.R.drawable.image1,
-        com.trendyol.design.bottomsheet.R.drawable.image2,
-        com.trendyol.design.bottomsheet.R.drawable.image3,
-        com.trendyol.design.bottomsheet.R.drawable.image4,
-        com.trendyol.design.bottomsheet.R.drawable.image5
+        R.drawable.image1,
+        R.drawable.image2,
+        R.drawable.image3,
+        R.drawable.image4,
+        R.drawable.image5
     )
 
     @Test
