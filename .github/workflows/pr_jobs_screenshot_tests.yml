@@ -77,9 +77,9 @@ jobs:
           script: ./gradlew executeScreenshotTests
         continue-on-error: true
 
-      - name: Record new screenshots if tests failed
-        uses: reactivecircus/android-emulator-runner@v2
+      - name: Clear screenshots and record new ones
         if: steps.run_tests.outcome == 'failure'
+        uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
           arch: x86_64
@@ -90,7 +90,9 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: ./gradlew executeScreenshotTests -Precord
+          script: |
+            rm -rf app/screenshots/debug/
+            ./gradlew executeScreenshotTests -Precord
 
       - name: Commit new screenshots
         if: steps.run_tests.outcome == 'failure' && github.event_name == 'pull_request'

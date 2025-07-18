@@ -21,7 +21,7 @@ class PublishConvention : Plugin<Project> {
         }
 
         extensions.configure<MavenPublishBaseExtension>("mavenPublishing") {
-            publishToMavenCentral(SonatypeHost.DEFAULT)
+            publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
 
             signAllPublications()
 
@@ -52,9 +52,9 @@ class PublishConvention : Plugin<Project> {
                     }
                 }
                 scm {
-                    url.set("https://github.com/Trendyol/design-android/")
-                    connection.set("scm:git:git//github.com/Trendyol/design-android.git")
-                    developerConnection.set("scm:git:ssh://git@github.com/Trendyol/design-android.git")
+                    url.set("https://github.com/Trendyol/komposto/")
+                    connection.set("scm:git:git//github.com/Trendyol/komposto.git")
+                    developerConnection.set("scm:git:ssh://git@github.com/Trendyol/komposto.git")
                 }
             }
 
