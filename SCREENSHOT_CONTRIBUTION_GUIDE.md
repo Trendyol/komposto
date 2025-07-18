@@ -48,36 +48,35 @@ If possible, use assertions to verify that the screenshots you take match expect
 Scope of Rule Set Sample Test Code:
 kotlin
 
-```
+```kotlin
 @Test
 fun buttonStatesTest() {
-runScreenShotTest(
-testName = "Button_Disabled_SmallSize",
-contents = listOf(
-DesignScreenshotTestContainer("DisabledSmall") {
-Button(
-text = "Disabled",
-enabled = false,
-size = ButtonSize.Small,
-onClick = { }
-)
-},
-DesignScreenshotTestContainer("EnabledMedium") {
-Button(
-text = "Enabled",
-enabled = true,
-size = ButtonSize.Medium,
-onClick = { }
-)
-}
-)
-)
+    runScreenShotTest(
+        testName = "Button_Disabled_SmallSize",
+        contents = listOf(
+            DesignScreenshotTestContainer("DisabledSmall") {
+                Button(
+                    text = "Disabled",
+                    enabled = false,
+                    size = ButtonSize.Small,
+                    onClick = { }
+                )
+            },
+            DesignScreenshotTestContainer("EnabledMedium") {
+                Button(
+                    text = "Enabled",
+                    enabled = true,
+                    size = ButtonSize.Medium,
+                    onClick = { }
+                )
+            }
+        )
+    )
 }
 ```
 
 This rule set covers the basic points to be considered when writing screenshot tests for components and guides test writers.
 
 *Gradle Commands:*
-- **Recording/Updating screenshots:** ./gradlew executeScreenshotTests -Precord
-- **Screentshot Test Excecution:** ./gradlew executeScreenshotTests
-- **Test Execution for a specific test class:** ./gradlew executeScreenshotTests -Precord -Pandroid.testInstrumentationRunnerArguments.class=text.TextWeightTest
+- **Screenshot Test Execution:** ./gradlew executeScreenshotTests
+- **Test Execution for a specific test class:** ./gradlew executeScreenshotTests -Pandroid.testInstrumentationRunnerArguments.class=text.TextWeightTest
