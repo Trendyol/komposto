@@ -23,12 +23,15 @@ class PublishConvention : Plugin<Project> {
         extensions.configure<MavenPublishBaseExtension>("mavenPublishing") {
             publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
 
-            signAllPublications()
+            if (hasSigningKeys()) {
+                signAllPublications()
+            }
 
             coordinates(
                 groupId = "com.trendyol.design",
                 artifactId = project.name,
-                version = getVersionFromEnv(),
+                // Local development version: Change this for local testing
+                version = getVersionFromEnv() ?: "1.0.0-LOCAL-SNAPSHOT",
             )
 
             pom {
@@ -74,5 +77,15 @@ class PublishConvention : Plugin<Project> {
         return System.getenv("KOMPOSTO_RELEASE_VERSION")?.takeIf { it.isNotBlank() }?.also {
             println("Using release version from environment: $it")
         }
+    }
+
+    private fun hasSigningKeys(): Boolean {
+        val signingKeyId = System.getenv("ORG_GRADLE_PROJECT_signingInMemoryKeyId")
+        val signingKeyPassword = System.getenv("ORG_GRADLE_PROJECT_signingInMemoryKeyPassword")
+        val signingKey = System.getenv("ORG_GRADLE_PROJECT_signingInMemoryKey")
+        
+        return !signingKeyId.isNullOrBlank() && 
+               !signingKeyPassword.isNullOrBlank() && 
+               !signingKey.isNullOrBlank()
     }
 }
