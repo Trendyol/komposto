@@ -30,12 +30,12 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Generate Dokka Documentation
-        run: ./gradlew dokkaHtmlMultiModule
+        run: ./gradlew dokkaGenerate
 
       - name: Prepare Documentation for Pages
         run: |
           mkdir -p _site
-          cp -r build/dokka/htmlMultiModule/* _site/
+          cp -r build/dokka/html/* _site/
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
