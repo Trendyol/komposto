@@ -78,7 +78,6 @@ fun MyAppTheme(
 ```
 
 ### 2. Wrap Your App
-
 Apply your theme to your entire app:
 
 ```kotlin
