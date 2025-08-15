@@ -7,11 +7,6 @@ on:
         description: 'Slack thread timestamp (thread_ts) to send the APK to'
         required: true
         type: string
-      slack_channel_id:
-        description: 'Slack channel ID where the thread exists (optional, defaults to UAT channel)'
-        required: false
-        type: string
-
       message:
         description: 'Custom message to send with the APK'
         required: false
@@ -75,7 +70,6 @@ jobs:
       - name: Upload APK to Slack Thread
         uses: slackapi/slack-github-action@v2.1.1
         with:
-          errors: true
           method: files.uploadV2
           token: ${{ secrets.SLACK_BOT_TOKEN }}
           payload: |
@@ -86,7 +80,6 @@ jobs:
             initial_comment: |
               🚀 *Debug APK Build Complete*
               
-              📱 *File:* ${{ env.APK_NAME }}
               🔨 *Build Type:* debug
               🌿 *Branch:* ${{ env.BRANCH_NAME }}
               📝 *Commit:* ${{ env.COMMIT_SHA }} - ${{ env.COMMIT_MESSAGE }}
