@@ -73,13 +73,15 @@ jobs:
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
       - name: Upload APK to Slack Thread
-        uses: slackapi/slack-github-action@v2.1.0
+        uses: slackapi/slack-github-action@v2.1.1
         with:
-          method: files.upload
+          errors: true
+          method: files.uploadV2
           token: ${{ secrets.SLACK_BOT_TOKEN }}
           payload: |
-            channels: ${{ inputs.slack_channel_id || secrets.SLACK_UAT_CHANNEL_ID }}
+            channel_id: ${{ secrets.SLACK_UAT_CHANNEL_ID }}
             thread_ts: ${{ inputs.slack_thread_id }}
+            file: ${{ env.APK_PATH }}
             filename: ${{ env.APK_NAME }}
             initial_comment: |
               🚀 *Debug APK Build Complete*
@@ -89,7 +91,5 @@ jobs:
               🌿 *Branch:* ${{ env.BRANCH_NAME }}
               📝 *Commit:* ${{ env.COMMIT_SHA }} - ${{ env.COMMIT_MESSAGE }}
               👤 *Author:* ${{ env.COMMIT_AUTHOR }}
-              ⏰ *Built at:* $(date -u '+%Y-%m-%d %H:%M:%S UTC')
               
               ${{ inputs.message }}
-          file-path: ${{ env.APK_PATH }}

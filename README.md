@@ -1,7 +1,7 @@
 # Komposto Design System
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.trendyol.design/core.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.trendyol.design%22)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Maven Central](https://img.shields.io/maven-central/v/com.trendyol.design/core.svg?label=Maven%20Central)](https://search.maven.org/search?q=%22com.trendyol.design%22)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Trendyol/komposto/blob/main/LICENSE)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.1.21-blue.svg)](https://kotlinlang.org)
 [![Android](https://img.shields.io/badge/Android-5.0%2B-green.svg)](https://android.com)
 [![Compose](https://img.shields.io/badge/Compose-2025.05.00-brightgreen.svg)](https://developer.android.com/jetpack/compose)
@@ -28,13 +28,13 @@ Add the following dependencies to your `build.gradle.kts`:
 ```kotlin
 dependencies {
     // Core module (required)
-    implementation("com.trendyol.design:core:0.17.0")
+    implementation("com.trendyol.design:core:0.17.1")
     
     // Theme module (required)
-    implementation("com.trendyol.design:theme:0.17.0")
+    implementation("com.trendyol.design:theme:0.17.1")
     
     // Optional: Bottom sheet components
-    implementation("com.trendyol.design:bottomsheet:0.17.0")
+    implementation("com.trendyol.design:bottomsheet:0.17.1")
 }
 ```
 
@@ -197,7 +197,7 @@ Komposto includes comprehensive screenshot testing. Components are tested across
 
 - **Component Catalog**: Run the demo app to see all components in action
 - **Showkase Integration**: Browse components interactively
-- **API Documentation**: Generated KDoc documentation
+- **API Documentation**: [Dokka Documentation](https://trendyol.github.io/komposto/) - Generated KDoc documentation
 
 ## 🤝 Contributing
 
@@ -233,6 +233,7 @@ The included demo app showcases all components with Showkase integration:
 
 ## 🔗 Links
 
+- **Documentation**: [https://trendyol.github.io/komposto/](https://trendyol.github.io/komposto/) - API Documentation
 - **GitHub**: [https://github.com/Trendyol/komposto](https://github.com/Trendyol/komposto)
 - **Maven Central**: [https://search.maven.org/search?q=g:com.trendyol.design](https://search.maven.org/search?q=g:com.trendyol.design)
 - **Issues**: [https://github.com/Trendyol/komposto/issues](https://github.com/Trendyol/komposto/issues)

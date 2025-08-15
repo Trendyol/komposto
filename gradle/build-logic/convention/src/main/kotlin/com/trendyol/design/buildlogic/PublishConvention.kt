@@ -11,13 +11,12 @@ class PublishConvention : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
         with(plugins) {
             apply("com.vanniktech.maven.publish")
-            apply("org.jetbrains.dokka")
+            apply(pluginId("dokkaDocumentationPlugin"))
         }
 
         with(dependencies) {
             add("detektPlugins", libs("detektFormatting"))
             add("detektPlugins", libs("detektFormatting"))
-            add("dokkaPlugin", libs("dokkaDocumentationPlugin"))
         }
 
         extensions.configure<MavenPublishBaseExtension>("mavenPublishing") {

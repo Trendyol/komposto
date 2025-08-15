@@ -1,5 +1,5 @@
 [versions]
-dokkaDocumentationPlugin = "2.0.0"
+dokkaPlugin = "2.0.0"
 testRules = '1.6.1'
 shot = '6.1.0'
 coil = '2.7.0'
@@ -27,7 +27,7 @@ jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "k
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 binaryCompatibilityValidator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version.ref = "binaryCompatibilityValidator" }
-dokkaDocumentationPlugin = { id = "org.jetbrains.dokka", version.ref = "dokkaDocumentationPlugin" }
+dokkaDocumentationPlugin = { id = "org.jetbrains.dokka", version.ref = "dokkaPlugin" }
 shot = { id = "shot", version.ref = "shot" }
 
 [libraries]
@@ -62,7 +62,7 @@ showkaseProcessor = { module = "com.airbnb.android:showkase-processor", version.
 detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 detektComposeRules = { module = "io.nlopez.compose.rules:detekt", version.ref = "detektComposeRules" }
 
-dokkaDocumentationPlugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version.ref = "dokkaDocumentationPlugin" }
+dokkaDocumentationPlugin = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokkaPlugin" }
 
 shot = { module = "com.karumi:shot", version.ref = "shot" }
 androidxComposeUiTestJunit4 = { module = "androidx.compose.ui:ui-test-junit4" }
