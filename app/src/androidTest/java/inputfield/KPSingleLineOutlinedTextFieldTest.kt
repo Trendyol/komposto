@@ -2,6 +2,10 @@
 
 package inputfield
 
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.input.OffsetMapping
+import androidx.compose.ui.text.input.TransformedText
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.inputfield.KPSingleLineOutlinedTextField
@@ -12,6 +16,24 @@ import core.DesignScreenshotTestContainer
 import org.junit.Test
 
 class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
+
+    private val sampleText = "Sample text"
+    private val measurementText = "175"
+    
+    // Custom visual transformation that adds unit suffix
+    private class UnitVisualTransformation(private val unit: String) : VisualTransformation {
+        override fun filter(text: AnnotatedString): TransformedText {
+            val transformedText = if (text.text.isNotEmpty()) "${text.text} $unit" else text.text
+            return TransformedText(
+                AnnotatedString(transformedText),
+                object : OffsetMapping {
+                    override fun originalToTransformed(offset: Int): Int = offset
+                    override fun transformedToOriginal(offset: Int): Int = 
+                        minOf(offset, text.length)
+                }
+            )
+        }
+    }
 
     @Test
     fun kpSingleLineOutlinedTextFieldStyleTest() = runScreenShotTest(
@@ -212,6 +234,73 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         style = KPOutlinedTextFieldStyle.Filled,
                         value = "",
                         enabled = false,
+                        onValueChange = { },
+                    )
+                }
+            },
+        )
+    )
+
+    @Test
+    fun kpSingleLineOutlinedTextFieldVisualTransformationTest() = runScreenShotTest(
+        testName = "KPSingleLineOutlinedTextField VisualTransformation Test",
+        contents = listOf(
+            DesignScreenshotTestContainer("None|FloatingLabelOutlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
+                        value = sampleText,
+                        visualTransformation = VisualTransformation.None,
+                        onValueChange = { },
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("None|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        visualTransformation = VisualTransformation.None,
+                        onValueChange = { },
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("None|Filled") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Filled,
+                        value = sampleText,
+                        visualTransformation = VisualTransformation.None,
+                        onValueChange = { },
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("UnitCm|FloatingLabelOutlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
+                        value = measurementText,
+                        visualTransformation = UnitVisualTransformation("cm"),
+                        onValueChange = { },
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("UnitKg|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = "75",
+                        visualTransformation = UnitVisualTransformation("kg"),
+                        onValueChange = { },
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("UnitCm|Filled") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Filled,
+                        value = measurementText,
+                        visualTransformation = UnitVisualTransformation("cm"),
                         onValueChange = { },
                     )
                 }
