@@ -28,13 +28,13 @@ Add the following dependencies to your `build.gradle.kts`:
 ```kotlin
 dependencies {
     // Core module (required)
-    implementation("com.trendyol.design:core:0.17.1")
+    implementation("com.trendyol.design:core:latest")
     
     // Theme module (required)
-    implementation("com.trendyol.design:theme:0.17.1")
+    implementation("com.trendyol.design:theme:latest")
     
     // Optional: Bottom sheet components
-    implementation("com.trendyol.design:bottomsheet:0.17.1")
+    implementation("com.trendyol.design:bottomsheet:latest")
 }
 ```
 
