@@ -8,8 +8,12 @@ import androidx.compose.ui.text.input.TransformedText
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
+import com.trendyol.design.core.icon.KPIcons
+import com.trendyol.design.core.icon.icons.fill.Cancel
+import com.trendyol.design.core.icon.icons.fill.Search
 import com.trendyol.design.core.inputfield.KPSingleLineOutlinedTextField
 import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
+import com.trendyol.design.core.inputfield.container.TextFieldScope
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
@@ -19,6 +23,8 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
 
     private val sampleText = "Sample text"
     private val measurementText = "175"
+    private val shortTrailingText = "OK"
+    private val longTrailingText = "Really long trailing text for test"
     
     // Custom visual transformation that adds unit suffix
     private class UnitVisualTransformation(private val unit: String) : VisualTransformation {
@@ -302,6 +308,103 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         value = measurementText,
                         visualTransformation = UnitVisualTransformation("cm"),
                         onValueChange = { },
+                    )
+                }
+            },
+        )
+    )
+
+    @Test
+    fun kpSingleLineOutlinedTextFieldTrailingContentTest() = runScreenShotTest(
+        testName = "KPSingleLineOutlinedTextField TrailingContent Test",
+        contents = listOf(
+            DesignScreenshotTestContainer("ShortText|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Text(
+                                text = shortTrailingText,
+                                onClick = { }
+                            )
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("LongText|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Text(
+                                text = longTrailingText,
+                                onClick = { }
+                            )
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("LongText|Filled") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Filled,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Text(
+                                text = longTrailingText,
+                                onClick = { }
+                            )
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Icon|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Icon(
+                                imageVector = KPIcons.Fill.Search,
+                                onClick = { }
+                            )
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Icon|Filled") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Filled,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Icon(
+                                imageVector = KPIcons.Fill.Cancel,
+                                onClick = { }
+                            )
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("VeryLongTextFieldContent|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = "This is a very long text field content, so let's see how it behaves with trailing content",
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Text(
+                                text = longTrailingText,
+                                onClick = { }
+                            )
+                        }
                     )
                 }
             },

@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
@@ -112,7 +112,7 @@ public fun KPSingleLineOutlinedTextField(
                 {
                     Box(
                         modifier = Modifier
-                            .widthIn(max = 110.dp)
+                            .wrapContentWidth()
                             .padding(horizontal = 12.dp)
                             .heightIn(max = 44.dp),
                         contentAlignment = Alignment.Center
