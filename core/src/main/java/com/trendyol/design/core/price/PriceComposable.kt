@@ -58,7 +58,7 @@ public fun KPPrice(
             }
             if (model.upperInfoText.isNullOrBlank().not() && model.upperInfoTextStyle != null) {
                 KPText(
-                    text = model.upperInfoText!!,
+                    text = model.upperInfoText,
                     style = model.upperInfoTextStyle
                 )
             }
@@ -72,7 +72,7 @@ public fun KPPrice(
         if (model.bottomInfoText.isNullOrBlank().not() && model.bottomInfoTextStyle != null) {
             KPText(
                 modifier = Modifier.padding(top = 2.dp),
-                text = model.bottomInfoText!!,
+                text = model.bottomInfoText,
                 style = model.bottomInfoTextStyle
             )
         }
@@ -85,7 +85,7 @@ private fun VerticalPriceView(model: PriceModel) {
         if (model.marketPriceText.isNullOrBlank().not() && model.marketPriceTextStyle != null) {
             KPText(
                 modifier = Modifier.padding(top = 2.dp),
-                text = model.marketPriceText!!,
+                text = model.marketPriceText,
                 style = model.marketPriceTextStyle,
                 textDecoration = TextDecoration.LineThrough
             )
@@ -94,7 +94,7 @@ private fun VerticalPriceView(model: PriceModel) {
             KPText(
                 modifier = Modifier
                     .padding(top = 2.dp),
-                text = model.salePriceText!!,
+                text = model.salePriceText,
                 style = model.salePriceTextStyle,
             )
         }
@@ -107,7 +107,7 @@ private fun HorizontalPriceView(model: PriceModel) {
         if (model.marketPriceText.isNullOrBlank().not() && model.marketPriceTextStyle != null) {
             KPText(
                 modifier = Modifier.padding(top = 2.dp),
-                text = model.marketPriceText!!,
+                text = model.marketPriceText,
                 style = model.marketPriceTextStyle,
                 textDecoration = TextDecoration.LineThrough
             )
@@ -117,7 +117,7 @@ private fun HorizontalPriceView(model: PriceModel) {
             KPText(
                 modifier = Modifier
                     .padding(top = 2.dp),
-                text = model.salePriceText!!,
+                text = model.salePriceText,
                 style = model.salePriceTextStyle,
             )
         }
