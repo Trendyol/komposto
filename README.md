@@ -1,3 +1,5 @@
+
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Trendyol/komposto/badge)](https://scorecard.dev/viewer/?uri=github.com/Trendyol/komposto)
 # Komposto Design System
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.trendyol.design/core.svg?label=Maven%20Central)](https://search.maven.org/search?q=%22com.trendyol.design%22)
