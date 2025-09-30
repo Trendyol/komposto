@@ -4,6 +4,29 @@
 - Pixel 6
 - API 32
 
+## For External Contributors (Fork PRs)
+
+**Important:** Screenshots must always be generated on CI to ensure consistency across different platforms. Never generate screenshots locally!
+
+When your PR fails screenshot tests, you have two options:
+
+### Option 1: Automatic Update (Recommended)
+1. Go to the **Actions** tab in your fork repository
+2. Select **"Update Screenshots (For Forks)"** workflow
+3. Click **"Run workflow"** button
+4. Select your branch from the dropdown
+5. Click the green **"Run workflow"** button
+6. Wait for the workflow to complete (~5-10 minutes)
+7. Screenshots will be automatically committed to your branch
+8. Your PR will be updated automatically
+
+### Option 2: Manual Download
+1. Download the `screenshot-test-results` artifact from the failed workflow run
+2. Extract the `app/screenshots/debug/` folder to your local repository
+3. Commit and push the screenshots to your branch
+
+---
+
 We can consider the following items to create a rule set that guides those who will write a screenshot test of a new component. This set will be a step-by-step guide and guideline, so that even beginners can write component screenshot tests correctly and consistently.
 Android Screenshot Test Rule Set:
 ### 1. Follow Test Name Standards
