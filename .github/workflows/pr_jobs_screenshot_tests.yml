@@ -16,7 +16,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Full git history for comparing changes
-          ref: ${{ github.head_ref }}  # This checks out the PR source branch
           token: ${{ secrets.GITHUB_TOKEN }}  # Need a token with push permissions
 
       - name: Set up JDK
