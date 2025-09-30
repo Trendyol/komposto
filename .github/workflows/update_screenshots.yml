@@ -30,6 +30,7 @@ jobs:
           ref: ${{ github.event.inputs.branch || github.ref }}
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+          lfs: true  # Pull Git LFS files (screenshots are stored in LFS)
 
       - name: Set up JDK
         uses: actions/setup-java@v4

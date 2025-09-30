@@ -19,6 +19,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}  # Checkout the PR branch (not merge commit)
           repository: ${{ github.event.pull_request.head.repo.full_name }}  # Checkout from fork if needed
           token: ${{ secrets.GITHUB_TOKEN }}  # Need a token with push permissions
+          lfs: true  # Pull Git LFS files (screenshots are stored in LFS)
 
       - name: Set up JDK
         uses: actions/setup-java@v4
