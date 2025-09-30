@@ -14,7 +14,7 @@ permissions: read-all
 
 jobs:
   visibility-check:
-    # Bu job, deponun public/private olduğunu belirler
+    # This job determines whether the repo is public or private
     outputs:
       visibility: ${{ steps.drv.outputs.visibility }}
     runs-on: ubuntu-latest
