@@ -2,7 +2,6 @@
 
 package com.trendyol.design.core.inputfield.otp
 
-import android.view.KeyEvent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -18,6 +17,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Divider
 import androidx.compose.runtime.Composable
@@ -27,9 +27,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
@@ -64,6 +64,8 @@ import com.trendyol.theme.KPDesign
  *                  This message is shown only when the field is enabled and the errorText is not null.
  * @param interactionSource The interaction source for tracking focus and other interaction states.
  *                          This parameter is optional and defaults to a newly remembered instance of MutableInteractionSource.
+ * @param keyboardActions Defines the actions to be triggered by pressing the keyboard IME.
+ *                        This parameter is optional and default is to clear focus from input field.
  */
 @ExperimentalKompostoApi
 @Composable
@@ -77,6 +79,7 @@ public fun KPInputOTPField(
     hint: String? = null,
     errorText: String? = null,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+    keyboardActions: KeyboardActions? = null,
 ) {
     var otpTextValue by remember {
         mutableStateOf(TextFieldValue(text = otp, selection = TextRange(otp.length)))
@@ -87,18 +90,7 @@ public fun KPInputOTPField(
 
     Column(modifier = modifier.fillMaxWidth()) {
         BasicTextField(
-            modifier = Modifier
-                .fillMaxWidth()
-                .onKeyEvent { keyEvent ->
-                    if (keyEvent.nativeKeyEvent.keyCode == KeyEvent.KEYCODE_ENTER) {
-                        focusManager.clearFocus(force = true)
-                        onValueChange(otpTextValue.text)
-
-                        return@onKeyEvent true
-                    }
-
-                    false
-                },
+            modifier = Modifier.fillMaxWidth(),
             value = otpTextValue,
             onValueChange = { value ->
                 otpTextValue = value.copy(
@@ -106,7 +98,10 @@ public fun KPInputOTPField(
                     selection = TextRange(value.text.length)
                 )
             },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword, imeAction = ImeAction.Done),
+            keyboardActions = keyboardActions ?: KeyboardActions(
+                onDone = { focusManager.clearFocus(force = true) },
+            ),
             interactionSource = interactionSource,
             enabled = enabled,
             decorationBox = {
