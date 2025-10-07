@@ -2,16 +2,20 @@
 
 package com.trendyol.design.core.inputfield
 
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -37,12 +41,23 @@ import kotlinx.collections.immutable.persistentSetOf
  * @param value The initial value for the TextField.
  * @param modifier Modifier used to shape the TextField.
  * @param label The label text to display above the TextField.
+ * @param placeholder The placeholder text to display when the TextField is empty.
  * @param errorLabel The error message to display below the TextField when there is an error.
  * @param isError Indicates whether the TextField is in an error state.
  * @param enabled Determines if the TextField is enabled for interaction.
  * @param colors The colors configuration for the TextField. This parameter allows configuring
  *               the colors of the TextField component, including the text color, background color,
  *               and colors for different states (such as selected, focused, disabled, etc.).
+ * @param visualTransformation Transforms the visual representation of the input value.
+ *                            For example, you can use it to add unit suffixes like "cm" or "kg".
+ * @param keyboardActions Configuration of keyboard actions to be triggered when the input
+ *                       service emits an IME action. Actions specified here will be triggered
+ *                       in addition to the default actions performed by TextField.
+ * @param interactionSource The MutableInteractionSource representing the stream of
+ *                         Interactions for this TextField. You can create and pass in your own
+ *                         remembered MutableInteractionSource if you want to observe
+ *                         Interactions and customize the appearance / behavior of this TextField
+ *                         in different Interactions.
  * @param onValueChange Callback for when the value of the TextField changes.
  * @param trailingContent Optional trailing container that can be either a KPIcon or KPText.
  *                         The container will be placed at the end of the TextField.
@@ -59,6 +74,9 @@ public fun KPSingleLineOutlinedTextField(
     isError: Boolean = false,
     enabled: Boolean = true,
     colors: TextFieldColors = style.outlinedTextFieldColors,
+    visualTransformation: VisualTransformation = VisualTransformation.None,
+    keyboardActions: KeyboardActions = KeyboardActions.Default,
+    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     onValueChange: (String) -> Unit,
     trailingContent: (@Composable TextFieldScope.() -> Unit)? = null,
 ) {
@@ -87,11 +105,14 @@ public fun KPSingleLineOutlinedTextField(
             isFilled = style is KPOutlinedTextFieldStyle.Filled,
             enabled = enabled,
             singleLine = true,
+            visualTransformation = visualTransformation,
+            keyboardActions = keyboardActions,
+            interactionSource = interactionSource,
             trailingIcon = if (trailingContent != null) {
                 {
                     Box(
                         modifier = Modifier
-                            .widthIn(max = 110.dp)
+                            .wrapContentWidth()
                             .padding(horizontal = 12.dp)
                             .heightIn(max = 44.dp),
                         contentAlignment = Alignment.Center

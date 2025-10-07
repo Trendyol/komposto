@@ -1,0 +1,113 @@
+name: Update Screenshots (For Forks)
+
+# This workflow is designed for external contributors working in forks.
+# It allows you to manually trigger screenshot generation on CI, which will
+# automatically commit updated screenshots to your branch.
+#
+# Usage:
+# 1. Go to Actions tab in your fork
+# 2. Select "Update Screenshots (For Forks)" workflow
+# 3. Click "Run workflow"
+# 4. Select your branch and run
+# 5. Screenshots will be automatically committed to your branch
+# 6. Open/update your PR with the committed screenshots
+
+on:
+  workflow_dispatch:  # Manual trigger
+    inputs:
+      branch:
+        description: 'Branch to update screenshots on'
+        required: false
+        default: ''
+
+jobs:
+  update-screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch || github.ref }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          lfs: true  # Pull Git LFS files (screenshots are stored in LFS)
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Gradle cache
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: AVD cache
+        uses: actions/cache@v4
+        id: avd-cache
+        with:
+          path: |
+            ~/.android/avd/*
+            ~/.android/adb*
+          key: avd-32
+
+      - name: create AVD and generate snapshot for caching
+        if: steps.avd-cache.outputs.cache-hit != 'true'
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 32
+          arch: x86_64
+          profile: pixel_6
+          target: google_apis
+          avd-name: ubuntu-avd-x86_64-32
+          emulator-boot-timeout: 120
+          force-avd-creation: false
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: false
+          script: echo "Generated AVD snapshot for caching."
+
+      - name: Clear old screenshots
+        run: rm -rf app/screenshots/debug/
+
+      - name: Generate new screenshots
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 32
+          arch: x86_64
+          profile: pixel_6
+          target: google_apis
+          avd-name: ubuntu-avd-x86_64-32
+          emulator-boot-timeout: 120
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: ./gradlew executeScreenshotTests -Precord
+
+      - name: Commit and push screenshots
+        run: |
+          git config --local user.email "ci@github.actions.com"
+          git config --local user.name "GitHub Actions"
+          git add app/screenshots/debug/
+          if git diff --staged --quiet; then
+            echo "No screenshot changes detected"
+          else
+            git commit -m "Update screenshots from CI [skip ci]"
+            git push
+            echo "✅ Screenshots updated successfully!"
+          fi
+
+      - name: Upload screenshots as artifact (backup)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-screenshots
+          path: app/screenshots/debug/
+          retention-days: 7

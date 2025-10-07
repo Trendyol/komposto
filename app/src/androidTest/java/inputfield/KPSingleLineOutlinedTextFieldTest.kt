@@ -2,16 +2,44 @@
 
 package inputfield
 
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.input.OffsetMapping
+import androidx.compose.ui.text.input.TransformedText
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
+import com.trendyol.design.core.icon.KPIcons
+import com.trendyol.design.core.icon.icons.fill.Cancel
+import com.trendyol.design.core.icon.icons.fill.Search
 import com.trendyol.design.core.inputfield.KPSingleLineOutlinedTextField
 import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
+import com.trendyol.design.core.inputfield.container.TextFieldScope
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
 import org.junit.Test
 
 class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
+
+    private val sampleText = "Sample text"
+    private val measurementText = "175"
+    private val shortTrailingText = "OK"
+    private val longTrailingText = "Really long trailing text for test"
+    
+    // Custom visual transformation that adds unit suffix
+    private class UnitVisualTransformation(private val unit: String) : VisualTransformation {
+        override fun filter(text: AnnotatedString): TransformedText {
+            val transformedText = if (text.text.isNotEmpty()) "${text.text} $unit" else text.text
+            return TransformedText(
+                AnnotatedString(transformedText),
+                object : OffsetMapping {
+                    override fun originalToTransformed(offset: Int): Int = offset
+                    override fun transformedToOriginal(offset: Int): Int = 
+                        minOf(offset, text.length)
+                }
+            )
+        }
+    }
 
     @Test
     fun kpSingleLineOutlinedTextFieldStyleTest() = runScreenShotTest(
@@ -213,6 +241,170 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
                         value = "",
                         enabled = false,
                         onValueChange = { },
+                    )
+                }
+            },
+        )
+    )
+
+    @Test
+    fun kpSingleLineOutlinedTextFieldVisualTransformationTest() = runScreenShotTest(
+        testName = "KPSingleLineOutlinedTextField VisualTransformation Test",
+        contents = listOf(
+            DesignScreenshotTestContainer("None|FloatingLabelOutlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
+                        value = sampleText,
+                        visualTransformation = VisualTransformation.None,
+                        onValueChange = { },
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("None|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        visualTransformation = VisualTransformation.None,
+                        onValueChange = { },
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("None|Filled") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Filled,
+                        value = sampleText,
+                        visualTransformation = VisualTransformation.None,
+                        onValueChange = { },
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("UnitCm|FloatingLabelOutlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
+                        value = measurementText,
+                        visualTransformation = UnitVisualTransformation("cm"),
+                        onValueChange = { },
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("UnitKg|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = "75",
+                        visualTransformation = UnitVisualTransformation("kg"),
+                        onValueChange = { },
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("UnitCm|Filled") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Filled,
+                        value = measurementText,
+                        visualTransformation = UnitVisualTransformation("cm"),
+                        onValueChange = { },
+                    )
+                }
+            },
+        )
+    )
+
+    @Test
+    fun kpSingleLineOutlinedTextFieldTrailingContentTest() = runScreenShotTest(
+        testName = "KPSingleLineOutlinedTextField TrailingContent Test",
+        contents = listOf(
+            DesignScreenshotTestContainer("ShortText|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Text(
+                                text = shortTrailingText,
+                                onClick = { }
+                            )
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("LongText|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Text(
+                                text = longTrailingText,
+                                onClick = { }
+                            )
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("LongText|Filled") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Filled,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Text(
+                                text = longTrailingText,
+                                onClick = { }
+                            )
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Icon|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Icon(
+                                imageVector = KPIcons.Fill.Search,
+                                onClick = { }
+                            )
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Icon|Filled") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Filled,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Icon(
+                                imageVector = KPIcons.Fill.Cancel,
+                                onClick = { }
+                            )
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("VeryLongTextFieldContent|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = "This is a very long text field content, so let's see how it behaves with trailing content",
+                        onValueChange = { },
+                        trailingContent = {
+                            TextFieldScope.Text(
+                                text = longTrailingText,
+                                onClick = { }
+                            )
+                        }
                     )
                 }
             },

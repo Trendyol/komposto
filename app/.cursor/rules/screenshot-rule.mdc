@@ -1,0 +1,112 @@
+---
+description: screenshot test rule
+globs:
+alwaysApply: false
+---
+
+## Screenshot Test Writing Guidelines
+
+This project uses screenshot tests to ensure the visual consistency of Jetpack Compose components. Please adhere to the following rules and best practices when adding a new screenshot test or updating an existing one.
+
+### 1. Base Class and Structure
+
+- **Inheritance:** All screenshot test classes must inherit from the `DesignScreenshotTest` base class, defined in `core/DesignScreenshotTest.kt`. This base class provides the necessary infrastructure for running tests and managing screenshots.
+- **Test Annotation:** Each test method must be annotated with JUnit's `@Test` annotation.
+- **Test Runner:** Each test method must call the `runScreenShotTest` function. This function takes a list of test scenarios and generates a screenshot for each one.
+
+```kotlin
+internal class MyComponentTest : DesignScreenshotTest() {
+
+    @Test
+    fun myComponentVariantTest() = runScreenShotTest(
+        testName = "myComponentVariantTest",
+        contents = listOf(
+            // ... test scenarios
+        )
+    )
+}
+```
+
+### 2. Test Naming Conventions
+
+- **Class Names:** Test classes should be named after the component being tested, with a `Test` or `Tests` suffix (e.g., `DualPriceTest.kt`, `CheckboxTests.kt`).
+- **Method Names:** Test methods should clearly describe the feature or variation being tested. For example, if you are testing different sizes of a component, the method name could be `sizeTest`.
+- **`testName` Parameter:** The `testName` parameter passed to the `runScreenShotTest` function must be identical to the test method name. This ensures consistency in the naming of the generated screenshot files.
+
+### 3. Test Scenarios and Variations
+
+- **Scope:** Ensure you test all significant visual variations of a component (styles, sizes, states, etc.). Creating separate test methods for each variation makes the tests more modular and manageable.
+- **`DesignScreenshotTestContainer`:** Each test scenario (variation) must be wrapped in a `DesignScreenshotTestContainer`. This container allows you to add a descriptive label to each screenshot.
+  - **Labels:** The label you provide to the `DesignScreenshotTestContainer` should clearly identify the variation being tested (e.g., "Primary", "Large", "Checked & Disabled").
+
+```kotlin
+DesignScreenshotTestContainer("Primary - Large") {
+    // ... Composable content
+}
+```
+
+### 4. Composable Structure and Style
+
+- **`BoxWithHorizontalPadding`:** To ensure visual consistency and adequate spacing from the edges, wrap each test scenario with the `BoxWithHorizontalPadding` composable.
+- **Layout:** Use standard Jetpack Compose layout components like `Column` and `Row` for complex arrangements.
+- **Theme:** To ensure all components are styled correctly, place them inside the project's theme wrappers, such as `TrendyolTheme` or `KPDesign`.
+- **Imports:** Import the components under test from the project's `core` module, such as `com.trendyol.design.core.*`.
+
+### 5. Data and Text Management
+
+- **Constants:** Text or other constant values used in tests should be defined as `private val` at the top of the test class. This promotes consistency across tests and makes modifications easier.
+
+```kotlin
+internal class ButtonTest : DesignScreenshotTest() {
+    private val buttonText = "Click Me"
+    // ... tests
+}
+```
+
+### 6. Directory Structure
+
+- **Location:** Test files should be located under the `app/src/androidTest/java/` directory, in a directory structure that mirrors the package structure of the component being tested. For example, a test for a component in the `com.trendyol.design.core.price` package should reside in the `app/src/androidTest/java/price/` directory.
+
+By following these rules, you help keep the project's screenshot tests maintainable, readable, and consistent.
+
+By following these rules, you help keep the project's screenshot tests maintainable, readable, and consistent.
+
+### Running Screenshot Tests
+
+Screenshot tests are managed via Gradle tasks. There are two main steps for running the tests: recording baseline screenshots and verifying changes against them.
+
+**Step 1: Record Baseline Screenshots**
+
+If you are adding a new component test or making intentional visual changes to an existing component, you need to record a new set of baseline screenshots. These will serve as the "golden" reference for future tests.
+
+To record screenshots for a specific test class, run the following command:
+
+```bash
+./gradlew executeScreenshotTests -Precord -Pandroid.testInstrumentationRunnerArguments.class=<your.package.name>.<YourTestClass>
+```
+
+For example, to record screenshots for `SinglePriceTest`:
+
+```bash
+./gradlew executeScreenshotTests -Precord -Pandroid.testInstrumentationRunnerArguments.class=price.SinglePriceTest
+```
+
+This command will generate PNG files in the `app/screenshots/debug` directory. You should commit these new or updated screenshots to Git.
+
+**Step 2: Verify Against Baseline**
+
+After recording the baselines, or if you are running tests to check for regressions, you can run the verification task. This will take new screenshots and compare them pixel-by-pixel with the baseline versions.
+
+To run the verification for a specific test class:
+
+```bash
+./gradlew executeScreenshotTests -Pandroid.testInstrumentationRunnerArguments.class=<your.package.name>.<YourTestClass>
+```
+
+For example:
+
+```bash
+./gradlew executeScreenshotTests -Pandroid.testInstrumentationRunnerArguments.class=price.SinglePriceTest
+```
+
+If there are any visual differences, the test will fail, and a report will be generated showing the differences.
