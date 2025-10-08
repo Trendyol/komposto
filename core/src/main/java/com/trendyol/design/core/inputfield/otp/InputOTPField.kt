@@ -100,7 +100,10 @@ public fun KPInputOTPField(
             },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword, imeAction = ImeAction.Done),
             keyboardActions = keyboardActions ?: KeyboardActions(
-                onDone = { focusManager.clearFocus(force = true) },
+                onDone = {
+                    focusManager.clearFocus(force = true)
+                    onValueChange(otpTextValue.text)
+                },
             ),
             interactionSource = interactionSource,
             enabled = enabled,
