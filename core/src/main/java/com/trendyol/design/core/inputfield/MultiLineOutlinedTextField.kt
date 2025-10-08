@@ -10,9 +10,11 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -36,6 +38,11 @@ import com.trendyol.theme.KPDesign
  * @param colors The colors configuration for the TextField. This parameter allows configuring
  *               the colors of the TextField component, including the text color, background color,
  *               and colors for different states (such as selected, focused, disabled, etc.).
+ * @param visualTransformation Transforms the visual representation of the input value.
+ *                            For example, you can use it to add unit suffixes like "cm" or "kg".
+ * @param keyboardActions Configuration of keyboard actions to be triggered when the input
+ *                       service emits an IME action. Actions specified here will be triggered
+ *                       in addition to the default actions performed by TextField.
  * @param onValueChange Callback for when the value of the TextField changes.
  */
 @ExperimentalKompostoApi
@@ -51,6 +58,8 @@ public fun KPMultiLineOutlineTextField(
     isError: Boolean = false,
     enabled: Boolean = true,
     colors: TextFieldColors = style.outlinedTextFieldColors,
+    visualTransformation: VisualTransformation = VisualTransformation.None,
+    keyboardActions: KeyboardActions = KeyboardActions.Default,
     onValueChange: (String) -> Unit,
 ) {
     Column(modifier = modifier.width(IntrinsicSize.Max)) {
@@ -76,6 +85,8 @@ public fun KPMultiLineOutlineTextField(
             isFilled = style is KPOutlinedTextFieldStyle.Filled,
             enabled = enabled,
             singleLine = false,
+            visualTransformation = visualTransformation,
+            keyboardActions = keyboardActions,
             maxLines = 4,
             minLines = 4,
             contentPadding = PaddingValues(
