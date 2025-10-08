@@ -1426,7 +1426,7 @@ public final class com/trendyol/design/core/inputfield/otp/ComposableSingletons$
 }
 
 public final class com/trendyol/design/core/inputfield/otp/InputOTPFieldKt {
-	public static final fun KPInputOTPField (Lcom/trendyol/design/core/inputfield/otp/InputOTPFieldStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;IZLjava/lang/String;Ljava/lang/String;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
+	public static final fun KPInputOTPField (Lcom/trendyol/design/core/inputfield/otp/InputOTPFieldStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;IZLjava/lang/String;Ljava/lang/String;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/runtime/Composer;II)V
 }
 
 public abstract interface class com/trendyol/design/core/inputfield/otp/InputOTPFieldStyle {
@@ -1472,7 +1472,7 @@ public final class com/trendyol/design/core/inputfield/password/ComposableSingle
 }
 
 public final class com/trendyol/design/core/inputfield/password/InputPasswordFieldKt {
-	public static final fun KPInputPasswordField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZCLandroidx/compose/runtime/Composer;II)V
+	public static final fun KPInputPasswordField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZCLandroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class com/trendyol/design/core/inputfield/phone/InputPhoneNumberFieldKt {
