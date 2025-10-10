@@ -89,9 +89,7 @@ jobs:
             echo "Interaction tests exit code: $INTERACTION_EXIT_CODE"
             
             # Fail if either test suite failed
-            if [ $SCREENSHOT_EXIT_CODE -ne 0 ] || [ $INTERACTION_EXIT_CODE -ne 0 ]; then
-              exit 1
-            fi
+            if [ $SCREENSHOT_EXIT_CODE -ne 0 ] || [ $INTERACTION_EXIT_CODE -ne 0 ]; then exit 1; fi
         continue-on-error: true
 
       - name: Clear screenshots and record new ones
