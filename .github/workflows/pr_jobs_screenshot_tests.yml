@@ -77,19 +77,25 @@ jobs:
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
           script: |
+            bash <<'EOF'
             echo "Running screenshot tests..."
-            ./gradlew executeScreenshotTests
-            SCREENSHOT_EXIT_CODE=$?
+            ./gradlew executeScreenshotTests || SCREENSHOT_EXIT_CODE=$?
+            SCREENSHOT_EXIT_CODE=${SCREENSHOT_EXIT_CODE:-0}
             
             echo "Running interaction tests..."
-            ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.annotation=core.InteractionTest
-            INTERACTION_EXIT_CODE=$?
+            ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.annotation=core.InteractionTest || INTERACTION_EXIT_CODE=$?
+            INTERACTION_EXIT_CODE=${INTERACTION_EXIT_CODE:-0}
             
             echo "Screenshot tests exit code: $SCREENSHOT_EXIT_CODE"
             echo "Interaction tests exit code: $INTERACTION_EXIT_CODE"
             
-            # Fail if either test suite failed
-            if [ $SCREENSHOT_EXIT_CODE -ne 0 ] || [ $INTERACTION_EXIT_CODE -ne 0 ]; then exit 1; fi
+            if [ "$SCREENSHOT_EXIT_CODE" -ne 0 ] || [ "$INTERACTION_EXIT_CODE" -ne 0 ]; then
+              echo "Tests failed, exiting with code 1"
+              exit 1
+            fi
+            
+            echo "All tests passed!"
+            EOF
         continue-on-error: true
 
       - name: Clear screenshots and record new ones
