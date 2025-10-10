@@ -9,7 +9,49 @@ import com.trendyol.design.core.icon.icons.fill.StateOrder
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 
-@ShowkaseComposable(group = Group.ICON, name = Component.STATE_ORDER_ICON, styleName = "1.Fill.XXXLarge")
+@ShowkaseComposable(group = Group.ICON, name = Component.STATE_ORDER_ICON, styleName = "1.Fill.XXSmall")
+@Composable
+internal fun StateOrder_Fill_XXSmall() {
+    KPIcon(imageVector = KPIcons.Fill.StateOrder, size = KPIconSize.XXSmall)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.STATE_ORDER_ICON, styleName = "2.Fill.XSmall")
+@Composable
+internal fun StateOrder_Fill_XSmall() {
+    KPIcon(imageVector = KPIcons.Fill.StateOrder, size = KPIconSize.XSmall)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.STATE_ORDER_ICON, styleName = "3.Fill.Small")
+@Composable
+internal fun StateOrder_Fill_Small() {
+    KPIcon(imageVector = KPIcons.Fill.StateOrder, size = KPIconSize.Small)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.STATE_ORDER_ICON, styleName = "4.Fill.Medium")
+@Composable
+internal fun StateOrder_Fill_Medium() {
+    KPIcon(imageVector = KPIcons.Fill.StateOrder, size = KPIconSize.Medium)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.STATE_ORDER_ICON, styleName = "5.Fill.Large")
+@Composable
+internal fun StateOrder_Fill_Large() {
+    KPIcon(imageVector = KPIcons.Fill.StateOrder, size = KPIconSize.Large)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.STATE_ORDER_ICON, styleName = "6.Fill.XLarge")
+@Composable
+internal fun StateOrder_Fill_XLarge() {
+    KPIcon(imageVector = KPIcons.Fill.StateOrder, size = KPIconSize.XLarge)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.STATE_ORDER_ICON, styleName = "7.Fill.XXLarge")
+@Composable
+internal fun StateOrder_Fill_XXLarge() {
+    KPIcon(imageVector = KPIcons.Fill.StateOrder, size = KPIconSize.XXLarge)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.STATE_ORDER_ICON, styleName = "8.Fill.XXXLarge")
 @Composable
 internal fun StateOrder_Fill_XXXLarge() {
     KPIcon(imageVector = KPIcons.Fill.StateOrder, size = KPIconSize.XXXLarge)
