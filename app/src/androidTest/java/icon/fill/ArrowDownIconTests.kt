@@ -3,19 +3,18 @@ package icon.fill
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.KPIcons
-import com.trendyol.design.core.icon.icons.fill.StateRefresh
+import com.trendyol.design.core.icon.icons.fill.ArrowDown
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
 import org.junit.Test
 
-internal class StateRefreshIconTests: DesignScreenshotTest() {
-
+internal class ArrowDownIconTests : DesignScreenshotTest() {
     private val contents = listOf(
         DesignScreenshotTestContainer("XXSmall") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Fill.ArrowDown,
                     size = KPIconSize.XXSmall
                 )
             }
@@ -23,7 +22,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("XSmall") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Fill.ArrowDown,
                     size = KPIconSize.XSmall
                 )
             }
@@ -31,7 +30,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("Small") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Fill.ArrowDown,
                     size = KPIconSize.Small
                 )
             }
@@ -39,7 +38,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("Medium") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Fill.ArrowDown,
                     size = KPIconSize.Medium
                 )
             }
@@ -47,7 +46,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("Large") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Fill.ArrowDown,
                     size = KPIconSize.Large
                 )
             }
@@ -55,7 +54,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("XLarge") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Fill.ArrowDown,
                     size = KPIconSize.XLarge
                 )
             }
@@ -63,7 +62,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("XXLarge") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Fill.ArrowDown,
                     size = KPIconSize.XXLarge
                 )
             }
@@ -71,15 +70,16 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("XXXLarge") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Fill.ArrowDown,
                     size = KPIconSize.XXXLarge
                 )
             }
         }
     )
+
     @Test
-    fun stateRefreshIconTests() = runScreenShotTest(
-        testName = "State Refresh Icon Tests",
+    fun arrowDownIconTests() = runScreenShotTest(
+        testName = "Arrow Down Icon Tests",
         contents = contents
     )
 }

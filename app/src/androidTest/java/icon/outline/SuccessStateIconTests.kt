@@ -1,21 +1,20 @@
-package icon.fill
+package icon.outline
 
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
 import com.trendyol.design.core.icon.KPIcons
-import com.trendyol.design.core.icon.icons.fill.StateRefresh
+import com.trendyol.design.core.icon.icons.outline.SuccessState
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
 import core.DesignScreenshotTestContainer
 import org.junit.Test
 
-internal class StateRefreshIconTests: DesignScreenshotTest() {
-
+internal class SuccessStateIconTests : DesignScreenshotTest() {
     private val contents = listOf(
         DesignScreenshotTestContainer("XXSmall") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Outline.SuccessState,
                     size = KPIconSize.XXSmall
                 )
             }
@@ -23,7 +22,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("XSmall") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Outline.SuccessState,
                     size = KPIconSize.XSmall
                 )
             }
@@ -31,7 +30,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("Small") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Outline.SuccessState,
                     size = KPIconSize.Small
                 )
             }
@@ -39,7 +38,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("Medium") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Outline.SuccessState,
                     size = KPIconSize.Medium
                 )
             }
@@ -47,7 +46,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("Large") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Outline.SuccessState,
                     size = KPIconSize.Large
                 )
             }
@@ -55,7 +54,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("XLarge") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Outline.SuccessState,
                     size = KPIconSize.XLarge
                 )
             }
@@ -63,7 +62,7 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("XXLarge") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Outline.SuccessState,
                     size = KPIconSize.XXLarge
                 )
             }
@@ -71,15 +70,16 @@ internal class StateRefreshIconTests: DesignScreenshotTest() {
         DesignScreenshotTestContainer("XXXLarge") {
             BoxWithHorizontalPadding {
                 KPIcon(
-                    imageVector = KPIcons.Fill.StateRefresh,
+                    imageVector = KPIcons.Outline.SuccessState,
                     size = KPIconSize.XXXLarge
                 )
             }
         }
     )
+
     @Test
-    fun stateRefreshIconTests() = runScreenShotTest(
-        testName = "State Refresh Icon Tests",
+    fun successStateIconTests() = runScreenShotTest(
+        testName = "Success State Icon Tests",
         contents = contents
     )
 }
