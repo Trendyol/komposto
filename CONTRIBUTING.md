@@ -51,11 +51,11 @@ Thank you for your interest in contributing to Komposto, Trendyol's Android Desi
    ```
 4. Create a new branch:
    ```bash
-   git checkout -b fix/your-bug-fix
+   git checkout -b GH-issueId/your-bug-fix
    # or
-   git checkout -b improvement/your-improvement
+   git checkout -b GH-issueId/your-improvement
    # or
-   git checkout -b test/add-screenshot-tests
+   git checkout -b GH-issueId/add-screenshot-tests
    ```
 
 ## 📋 Contribution Process
