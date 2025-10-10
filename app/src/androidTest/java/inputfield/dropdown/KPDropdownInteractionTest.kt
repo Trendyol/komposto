@@ -20,11 +20,13 @@ import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.inputfield.KPDropdown
 import com.trendyol.design.core.inputfield.KPDropdownStyle
 import com.trendyol.design.ui.theme.TrendyolTheme
+import core.InteractionTest
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 
+@InteractionTest
 class KPDropdownInteractionTest {
 
     @get:Rule

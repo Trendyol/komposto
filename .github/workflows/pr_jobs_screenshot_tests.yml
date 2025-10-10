@@ -1,4 +1,4 @@
-name: Screenshot Test
+name: Screenshot & Interaction Tests
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  screenshot-tests:
+  screenshot-and-interaction-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -63,7 +63,7 @@ jobs:
           disable-animations: false
           script: echo "Generated AVD snapshot for caching."
 
-      - name: Run screenshot tests
+      - name: Run screenshot tests and interaction tests
         id: run_tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -76,7 +76,22 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: ./gradlew executeScreenshotTests
+          script: |
+            echo "Running screenshot tests..."
+            ./gradlew executeScreenshotTests
+            SCREENSHOT_EXIT_CODE=$?
+            
+            echo "Running interaction tests..."
+            ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.annotation=core.InteractionTest
+            INTERACTION_EXIT_CODE=$?
+            
+            echo "Screenshot tests exit code: $SCREENSHOT_EXIT_CODE"
+            echo "Interaction tests exit code: $INTERACTION_EXIT_CODE"
+            
+            # Fail if either test suite failed
+            if [ $SCREENSHOT_EXIT_CODE -ne 0 ] || [ $INTERACTION_EXIT_CODE -ne 0 ]; then
+              exit 1
+            fi
         continue-on-error: true
 
       - name: Clear screenshots and record new ones
@@ -137,4 +152,14 @@ jobs:
             app/screenshots/debug/
             app/build/tmp/shot/screenshot/
             app/build/reports/shot/debug/verification/
+          retention-days: 7
+
+      - name: Upload Interaction Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: interaction-test-results
+          path: |
+            app/build/outputs/androidTest-results/connected/
+            app/build/reports/androidTests/connected/
           retention-days: 7
