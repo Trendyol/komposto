@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalKompostoApi::class)
 
-package inputfield
+package inputfield.dropdown
 
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
@@ -21,24 +21,27 @@ class KPDropdownTest : DesignScreenshotTest() {
                 BoxWithHorizontalPadding {
                     KPDropdown(
                         style = KPDropdownStyle.FloatingLabelOutlined,
-                        value = "abc"
-                    ) { }
+                        value = "abc",
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Outlined") {
                 BoxWithHorizontalPadding {
                     KPDropdown(
                         style = KPDropdownStyle.Outlined,
-                        value = "abc"
-                    ) { }
+                        value = "abc",
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Filled") {
                 BoxWithHorizontalPadding {
                     KPDropdown(
                         style = KPDropdownStyle.Filled,
-                        value = "abc"
-                    ) { }
+                        value = "abc",
+                        onClick = { },
+                    )
                 }
             },
         )
@@ -54,7 +57,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.FloatingLabelOutlined,
                         value = "",
                         label = "label",
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("FloatingLabelOutlined") {
@@ -63,7 +67,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.FloatingLabelOutlined,
                         value = "abc",
                         label = "label",
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Outlined") {
@@ -72,7 +77,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.Outlined,
                         value = "abc",
                         label = "label",
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Filled") {
@@ -81,7 +87,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.Filled,
                         value = "abc",
                         label = "label",
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
         )
@@ -97,7 +104,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.FloatingLabelOutlined,
                         value = "",
                         placeholder = "placeholder",
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Outlined") {
@@ -106,7 +114,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.Outlined,
                         value = "",
                         placeholder = "placeholder",
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Filled") {
@@ -115,7 +124,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.Filled,
                         value = "",
                         placeholder = "placeholder",
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
         )
@@ -132,7 +142,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         value = "",
                         errorLabel = "errorLabel",
                         isError = true,
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("Outlined") {
@@ -142,7 +153,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         value = "",
                         errorLabel = "errorLabel",
                         isError = true,
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("SmallError|Filled") {
@@ -152,7 +164,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         value = "",
                         errorLabel = "errorLabel",
                         isError = true,
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("LongError|Filled") {
@@ -162,7 +175,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         value = "",
                         errorLabel = LoremIpsum().values.joinToString(),
                         isError = true,
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
         )
@@ -178,7 +192,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.Outlined,
                         value = "",
                         enabled = true,
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("enabled=true|Filled") {
@@ -187,7 +202,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.Filled,
                         value = "123",
                         enabled = true,
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("enabled=false|Outlined") {
@@ -196,7 +212,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.Outlined,
                         value = "123",
                         enabled = false,
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
             DesignScreenshotTestContainer("enabled=false|Filled") {
@@ -205,7 +222,8 @@ class KPDropdownTest : DesignScreenshotTest() {
                         style = KPDropdownStyle.Filled,
                         value = "",
                         enabled = false,
-                    ) { }
+                        onClick = { },
+                    )
                 }
             },
         )
