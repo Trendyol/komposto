@@ -20,13 +20,18 @@ import com.trendyol.design.core.icon.icons.fill.Colon
 import com.trendyol.design.core.icon.icons.fill.Coupon
 import com.trendyol.design.core.icon.icons.fill.Credit
 import com.trendyol.design.core.icon.icons.fill.Delivery
+import com.trendyol.design.core.icon.icons.fill.FavoriteSelected
 import com.trendyol.design.core.icon.icons.fill.FenomenGradient
 import com.trendyol.design.core.icon.icons.fill.Help
 import com.trendyol.design.core.icon.icons.fill.InfoIcon
+import com.trendyol.design.core.icon.icons.fill.PauseButton
 import com.trendyol.design.core.icon.icons.fill.Percentage
+import com.trendyol.design.core.icon.icons.fill.PlayButton
 import com.trendyol.design.core.icon.icons.fill.PlayGradient
 import com.trendyol.design.core.icon.icons.fill.RunningOut
+import com.trendyol.design.core.icon.icons.fill.SaveSelected
 import com.trendyol.design.core.icon.icons.fill.Search
+import com.trendyol.design.core.icon.icons.fill.Share
 import com.trendyol.design.core.icon.icons.fill.Star
 import com.trendyol.design.core.icon.icons.fill.StateOrder
 import com.trendyol.design.core.icon.icons.fill.StatePin
@@ -51,13 +56,18 @@ private class TrendyolIconParameterProvider : PreviewParameterProvider<ImageVect
             KPIcons.Fill.Coupon,
             KPIcons.Fill.Credit,
             KPIcons.Fill.Delivery,
+            KPIcons.Fill.FavoriteSelected,
             KPIcons.Fill.FenomenGradient,
             KPIcons.Fill.Help,
             KPIcons.Fill.InfoIcon,
+            KPIcons.Fill.PauseButton,
             KPIcons.Fill.Percentage,
+            KPIcons.Fill.PlayButton,
             KPIcons.Fill.PlayGradient,
             KPIcons.Fill.RunningOut,
+            KPIcons.Fill.SaveSelected,
             KPIcons.Fill.Search,
+            KPIcons.Fill.Share,
             KPIcons.Fill.Star,
             KPIcons.Fill.StateOrder,
             KPIcons.Fill.StatePin,

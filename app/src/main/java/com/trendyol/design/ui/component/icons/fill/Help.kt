@@ -38,3 +38,21 @@ internal fun Help_Fill_Medium() {
 internal fun Help_Fill_Large() {
     KPIcon(imageVector = KPIcons.Fill.Help, size = KPIconSize.Large)
 }
+
+@ShowkaseComposable(group = Group.ICON, name = Component.HELP_ICON, styleName = "6.Fill.XLarge")
+@Composable
+internal fun Help_Fill_XLarge() {
+    KPIcon(imageVector = KPIcons.Fill.Help, size = KPIconSize.XLarge)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.HELP_ICON, styleName = "7.Fill.XXLarge")
+@Composable
+internal fun Help_Fill_XXLarge() {
+    KPIcon(imageVector = KPIcons.Fill.Help, size = KPIconSize.XXLarge)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.HELP_ICON, styleName = "8.Fill.XXXLarge")
+@Composable
+internal fun Help_Fill_XXXLarge() {
+    KPIcon(imageVector = KPIcons.Fill.Help, size = KPIconSize.XXXLarge)
+}

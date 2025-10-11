@@ -38,3 +38,21 @@ internal fun Back_Outline_Medium() {
 internal fun Back_Outline_Large() {
     KPIcon(imageVector = KPIcons.Outline.Back, size = KPIconSize.Large)
 }
+
+@ShowkaseComposable(group = Group.ICON, name = Component.BACK_ICON, styleName = "6.Outline.XLarge")
+@Composable
+internal fun Back_Outline_XLarge() {
+    KPIcon(imageVector = KPIcons.Outline.Back, size = KPIconSize.XLarge)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.BACK_ICON, styleName = "7.Outline.XXLarge")
+@Composable
+internal fun Back_Outline_XXLarge() {
+    KPIcon(imageVector = KPIcons.Outline.Back, size = KPIconSize.XXLarge)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.BACK_ICON, styleName = "8.Outline.XXXLarge")
+@Composable
+internal fun Back_Outline_XXXLarge() {
+    KPIcon(imageVector = KPIcons.Outline.Back, size = KPIconSize.XXXLarge)
+}

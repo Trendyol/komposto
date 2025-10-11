@@ -38,3 +38,21 @@ internal fun Cancel_Outline_Medium() {
 internal fun Cancel_Outline_Large() {
     KPIcon(imageVector = KPIcons.Outline.Cancel, size = KPIconSize.Large)
 }
+
+@ShowkaseComposable(group = Group.ICON, name = Component.CANCEL_ICON, styleName = "6.Outline.XLarge")
+@Composable
+internal fun Cancel_Outline_XLarge() {
+    KPIcon(imageVector = KPIcons.Outline.Cancel, size = KPIconSize.XLarge)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.CANCEL_ICON, styleName = "7.Outline.XXLarge")
+@Composable
+internal fun Cancel_Outline_XXLarge() {
+    KPIcon(imageVector = KPIcons.Outline.Cancel, size = KPIconSize.XXLarge)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.CANCEL_ICON, styleName = "8.Outline.XXXLarge")
+@Composable
+internal fun Cancel_Outline_XXXLarge() {
+    KPIcon(imageVector = KPIcons.Outline.Cancel, size = KPIconSize.XXXLarge)
+}

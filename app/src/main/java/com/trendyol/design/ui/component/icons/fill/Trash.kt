@@ -38,3 +38,21 @@ internal fun Trash_Fill_Medium() {
 internal fun Trash_Fill_Large() {
     KPIcon(imageVector = KPIcons.Fill.Trash, size = KPIconSize.Large)
 }
+
+@ShowkaseComposable(group = Group.ICON, name = Component.TRASH_ICON, styleName = "6.Fill.XLarge")
+@Composable
+internal fun Trash_Fill_XLarge() {
+    KPIcon(imageVector = KPIcons.Fill.Trash, size = KPIconSize.XLarge)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.TRASH_ICON, styleName = "7.Fill.XXLarge")
+@Composable
+internal fun Trash_Fill_XXLarge() {
+    KPIcon(imageVector = KPIcons.Fill.Trash, size = KPIconSize.XXLarge)
+}
+
+@ShowkaseComposable(group = Group.ICON, name = Component.TRASH_ICON, styleName = "8.Fill.XXXLarge")
+@Composable
+internal fun Trash_Fill_XXXLarge() {
+    KPIcon(imageVector = KPIcons.Fill.Trash, size = KPIconSize.XXXLarge)
+}

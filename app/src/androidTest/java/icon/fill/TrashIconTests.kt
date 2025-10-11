@@ -11,27 +11,11 @@ import org.junit.Test
 
 internal class TrashIconTests : DesignScreenshotTest() {
     private val contents = listOf(
-        DesignScreenshotTestContainer("Large") {
+        DesignScreenshotTestContainer("XXSmall") {
             BoxWithHorizontalPadding {
                 KPIcon(
                     imageVector = KPIcons.Fill.Trash,
-                    size = KPIconSize.Large
-                )
-            }
-        },
-        DesignScreenshotTestContainer("Medium") {
-            BoxWithHorizontalPadding {
-                KPIcon(
-                    imageVector = KPIcons.Fill.Trash,
-                    size = KPIconSize.Medium
-                )
-            }
-        },
-        DesignScreenshotTestContainer("Small") {
-            BoxWithHorizontalPadding {
-                KPIcon(
-                    imageVector = KPIcons.Fill.Trash,
-                    size = KPIconSize.Small
+                    size = KPIconSize.XXSmall
                 )
             }
         },
@@ -43,11 +27,51 @@ internal class TrashIconTests : DesignScreenshotTest() {
                 )
             }
         },
-        DesignScreenshotTestContainer("XXSmall") {
+        DesignScreenshotTestContainer("Small") {
             BoxWithHorizontalPadding {
                 KPIcon(
                     imageVector = KPIcons.Fill.Trash,
-                    size = KPIconSize.XXSmall
+                    size = KPIconSize.Small
+                )
+            }
+        },
+        DesignScreenshotTestContainer("Medium") {
+            BoxWithHorizontalPadding {
+                KPIcon(
+                    imageVector = KPIcons.Fill.Trash,
+                    size = KPIconSize.Medium
+                )
+            }
+        },
+        DesignScreenshotTestContainer("Large") {
+            BoxWithHorizontalPadding {
+                KPIcon(
+                    imageVector = KPIcons.Fill.Trash,
+                    size = KPIconSize.Large
+                )
+            }
+        },
+        DesignScreenshotTestContainer("XLarge") {
+            BoxWithHorizontalPadding {
+                KPIcon(
+                    imageVector = KPIcons.Fill.Trash,
+                    size = KPIconSize.XLarge
+                )
+            }
+        },
+        DesignScreenshotTestContainer("XXLarge") {
+            BoxWithHorizontalPadding {
+                KPIcon(
+                    imageVector = KPIcons.Fill.Trash,
+                    size = KPIconSize.XXLarge
+                )
+            }
+        },
+        DesignScreenshotTestContainer("XXXLarge") {
+            BoxWithHorizontalPadding {
+                KPIcon(
+                    imageVector = KPIcons.Fill.Trash,
+                    size = KPIconSize.XXXLarge
                 )
             }
         }
