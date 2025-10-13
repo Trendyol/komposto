@@ -1318,7 +1318,7 @@ public final class com/trendyol/design/core/inputfield/ComposableSingletons$Sing
 }
 
 public final class com/trendyol/design/core/inputfield/DropdownKt {
-	public static final fun KPDropdown (Lcom/trendyol/design/core/inputfield/DropdownStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;III)V
+	public static final fun KPDropdown (Lcom/trendyol/design/core/inputfield/DropdownStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
 public abstract interface class com/trendyol/design/core/inputfield/DropdownStyle {
@@ -1386,7 +1386,7 @@ public final class com/trendyol/design/core/inputfield/KPOutlinedTextFieldStyle$
 }
 
 public final class com/trendyol/design/core/inputfield/MultiLineOutlinedTextFieldKt {
-	public static final fun KPMultiLineOutlineTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Landroidx/compose/ui/text/input/VisualTransformation;Landroidx/compose/foundation/text/KeyboardActions;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;III)V
+	public static final fun KPMultiLineOutlineTextField (Lcom/trendyol/design/core/inputfield/OutlinedTextFieldStyle;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroidx/compose/material/TextFieldColors;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;III)V
 }
 
 public abstract interface class com/trendyol/design/core/inputfield/OutlinedTextFieldStyle {

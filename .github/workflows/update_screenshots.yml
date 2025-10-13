@@ -8,12 +8,17 @@ name: Update Screenshots (For Forks)
 # 1. Go to Actions tab in your fork
 # 2. Select "Update Screenshots (For Forks)" workflow
 # 3. Click "Run workflow"
-# 4. Select your branch from the "Use workflow from" dropdown
-# 5. Screenshots will be automatically committed to the selected branch
+# 4. Select your branch and run
+# 5. Screenshots will be automatically committed to your branch
 # 6. Open/update your PR with the committed screenshots
 
 on:
   workflow_dispatch:  # Manual trigger
+    inputs:
+      branch:
+        description: 'Branch to update screenshots on'
+        required: false
+        default: ''
 
 jobs:
   update-screenshots:
@@ -22,7 +27,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
+          ref: ${{ github.event.inputs.branch || github.ref }}
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
           lfs: true  # Pull Git LFS files (screenshots are stored in LFS)
