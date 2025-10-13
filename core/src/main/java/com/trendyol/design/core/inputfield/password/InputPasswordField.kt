@@ -26,9 +26,9 @@ import com.trendyol.design.core.R
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIcon
 import com.trendyol.design.core.icon.KPIconSize
-import com.trendyol.design.core.inputfield.OutlinedTextFieldStyle
 import com.trendyol.design.core.inputfield.KPOutlinedTextField
 import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
+import com.trendyol.design.core.inputfield.OutlinedTextFieldStyle
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
 import com.trendyol.theme.KPDesign
@@ -57,6 +57,8 @@ import com.trendyol.theme.KPDesign
  *                This parameter defaults to true.
  * @param mask The character used to mask the password. This defaults to PASSWORD_MASK_CHAR.
  *             The mask is applied only when the password is hidden.
+ * @param keyboardActions Defines the actions to be triggered by pressing the keyboard IME.
+ *                        This parameter is optional and default is to clear focus from input field.
  */
 @ExperimentalKompostoApi
 @Composable
@@ -69,7 +71,8 @@ public fun KPInputPasswordField(
     label: String? = null,
     errorText: String? = null,
     enabled: Boolean = true,
-    mask: Char = PASSWORD_MASK_CHAR
+    mask: Char = PASSWORD_MASK_CHAR,
+    keyboardActions: KeyboardActions? = null,
 ) {
     var text by remember { mutableStateOf(password) }
     var checked by remember { mutableStateOf(false) }
@@ -97,7 +100,9 @@ public fun KPInputPasswordField(
                 PasswordVisualTransformation(mask = mask)
             },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-            keyboardActions = KeyboardActions(onDone = { focusManager.clearFocus(force = true) }),
+            keyboardActions = keyboardActions ?: KeyboardActions(
+                onDone = { focusManager.clearFocus(force = true) }
+            ),
             trailingIcon = {
                 IconToggleButton(
                     checked = checked,
