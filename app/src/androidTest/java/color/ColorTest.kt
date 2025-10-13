@@ -197,7 +197,7 @@ internal class ColorTest : DesignScreenshotTest() {
     private fun ColorSwatch(
         name: String,
         color: Color,
-        textColor: Color = Color.White
+        textColor: Color = Color.Black
     ) {
         Column {
             Box(
