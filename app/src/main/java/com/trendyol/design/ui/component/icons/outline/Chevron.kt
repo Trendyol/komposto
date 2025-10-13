@@ -56,5 +56,3 @@ internal fun Chevron_Outline_XXLarge() {
 internal fun Chevron_Outline_XXXLarge() {
     KPIcon(imageVector = KPIcons.Outline.Chevron, size = KPIconSize.XXXLarge)
 }
-
-
