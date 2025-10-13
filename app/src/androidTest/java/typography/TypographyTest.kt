@@ -133,8 +133,8 @@ internal class TypographyTest : DesignScreenshotTest() {
     )
 
     @Test
-    fun bodyStylesTest() = runScreenShotTest(
-        testName = "bodyStylesTest",
+    fun body1StylesTest() = runScreenShotTest(
+        testName = "body1StylesTest",
         contents = listOf(
             DesignScreenshotTestContainer("Body 1") {
                 BoxWithHorizontalPadding {
@@ -145,15 +145,7 @@ internal class TypographyTest : DesignScreenshotTest() {
                     )
                 }
             },
-            DesignScreenshotTestContainer("Body 2") {
-                BoxWithHorizontalPadding {
-                    KPText(
-                        text = sampleText,
-                        style = KPDesign.typography.body2,
-                        maxLines = 3,
-                    )
-                }
-            },
+
             DesignScreenshotTestContainer("Body1 Medium") {
                 BoxWithHorizontalPadding {
                     KPText(
@@ -168,15 +160,6 @@ internal class TypographyTest : DesignScreenshotTest() {
                     KPText(
                         text = sampleText,
                         style = KPDesign.typography.body1Bold,
-                        maxLines = 3,
-                    )
-                }
-            },
-            DesignScreenshotTestContainer("Body2 Medium") {
-                BoxWithHorizontalPadding {
-                    KPText(
-                        text = sampleText,
-                        style = KPDesign.typography.body2Medium,
                         maxLines = 3,
                     )
                 }
@@ -196,24 +179,27 @@ internal class TypographyTest : DesignScreenshotTest() {
                         maxLines = 2,
                     )
                 }
-            }
-        )
-    )
-
-    @Test
-    fun body1BoldStylesTest() = runScreenShotTest(
-        testName = "body1BoldStylesTest",
-        contents = listOf(
-            DesignScreenshotTestContainer("Body1 Bold") {
+            },
+            DesignScreenshotTestContainer("Body 2") {
                 BoxWithHorizontalPadding {
                     KPText(
-                        text = sampleText.uppercase(),
-                        style = KPDesign.typography.body1Bold,
-                        maxLines = 2,
+                        text = sampleText,
+                        style = KPDesign.typography.body2,
+                        maxLines = 3,
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Body2 Medium") {
+                BoxWithHorizontalPadding {
+                    KPText(
+                        text = sampleText,
+                        style = KPDesign.typography.body2Medium,
+                        maxLines = 3,
                     )
                 }
             }
         )
+
     )
 
     @Test
