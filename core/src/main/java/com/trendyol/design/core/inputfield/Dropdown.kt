@@ -2,15 +2,12 @@
 
 package com.trendyol.design.core.inputfield
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
@@ -33,6 +30,7 @@ import com.trendyol.theme.KPDesign
  *              the visibility of the label, and other style properties. For example, the styles defined within
  *              [KPDropdownStyle] represent the customized dropdown styles.
  * @param value The currently selected value in the dropdown.
+ * @param onClick Callback for when the dropdown is clicked.
  * @param modifier Modifier to apply to the Dropdown.
  * @param label The label text to display above the dropdown.
  * @param placeholder Optional placeholder text displayed when the dropdown is not selected.
@@ -43,13 +41,14 @@ import com.trendyol.theme.KPDesign
  *               dropdown component, including the text color, background color, and colors for different states
  *               (such as selected, focused, disabled, etc.). TextFieldColors provides the means to customize
  *               these colors according to the desired visual appearance.
- * @param onClick Callback for when the dropdown is clicked.
+ * @param interactionSource The interaction source for the dropdown. Click handles are managed from this interactionSource.
  */
 @ExperimentalKompostoApi
 @Composable
 public fun KPDropdown(
     style: DropdownStyle,
     value: String,
+    onClick: () -> Unit,
     modifier: Modifier = Modifier,
     label: String? = null,
     placeholder: String? = null,
@@ -57,20 +56,12 @@ public fun KPDropdown(
     isError: Boolean = false,
     enabled: Boolean = true,
     colors: TextFieldColors = style.outlinedTextFieldColors,
-    onClick: () -> Unit,
+    interactionSource: MutableInteractionSource = KPDropdownDefaults.interactionSource(onClick = onClick),
 ) {
-    val interactionSource = remember { MutableInteractionSource() }
-
-    if (interactionSource.collectIsPressedAsState().value) onClick.invoke()
-
     Column(modifier = modifier) {
         KPOutlinedTextField(
             modifier = Modifier
-                .fillMaxWidth()
-                .clickable(
-                    enabled = enabled,
-                    onClick = onClick,
-                ),
+                .fillMaxWidth(),
             value = value,
             label = if (!label.isNullOrBlank()) {
                 {
