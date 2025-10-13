@@ -63,8 +63,8 @@ jobs:
           disable-animations: false
           script: echo "Generated AVD snapshot for caching."
 
-      - name: Run screenshot tests and interaction tests
-        id: run_tests
+      - name: Run screenshot tests
+        id: run_screenshot_tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
@@ -76,30 +76,26 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: |
-            bash <<'EOF'
-            echo "Running screenshot tests..."
-            ./gradlew executeScreenshotTests || SCREENSHOT_EXIT_CODE=$?
-            SCREENSHOT_EXIT_CODE=${SCREENSHOT_EXIT_CODE:-0}
-            
-            echo "Running interaction tests..."
-            ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.annotation=core.InteractionTest || INTERACTION_EXIT_CODE=$?
-            INTERACTION_EXIT_CODE=${INTERACTION_EXIT_CODE:-0}
-            
-            echo "Screenshot tests exit code: $SCREENSHOT_EXIT_CODE"
-            echo "Interaction tests exit code: $INTERACTION_EXIT_CODE"
-            
-            if [ "$SCREENSHOT_EXIT_CODE" -ne 0 ] || [ "$INTERACTION_EXIT_CODE" -ne 0 ]; then
-              echo "Tests failed, exiting with code 1"
-              exit 1
-            fi
-            
-            echo "All tests passed!"
-            EOF
+          script: ./gradlew executeScreenshotTests
         continue-on-error: true
 
+      - name: Run interaction tests
+        id: run_interaction_tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 32
+          arch: x86_64
+          profile: pixel_6
+          target: google_apis
+          avd-name: ubuntu-avd-x86_64-32
+          emulator-boot-timeout: 120
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.annotation=core.InteractionTest
+
       - name: Clear screenshots and record new ones
-        if: steps.run_tests.outcome == 'failure'
+        if: steps.run_screenshot_tests.outcome == 'failure'
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
@@ -116,7 +112,7 @@ jobs:
             ./gradlew executeScreenshotTests -Precord
 
       - name: Commit new screenshots
-        if: steps.run_tests.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository
+        if: steps.run_screenshot_tests.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository
         run: |
           git config --local user.email "ci@github.actions.com"
           git config --local user.name "GitHub Actions"
@@ -125,7 +121,7 @@ jobs:
           git push
 
       - name: Comment on fork PR about screenshots
-        if: steps.run_tests.outcome == 'failure' && github.event.pull_request.head.repo.full_name != github.repository
+        if: steps.run_screenshot_tests.outcome == 'failure' && github.event.pull_request.head.repo.full_name != github.repository
         uses: actions/github-script@v7
         with:
           script: |
@@ -148,7 +144,7 @@ jobs:
             })
 
       - name: Upload Screenshot Test Results
-        if: steps.run_tests.outcome == 'failure'
+        if: steps.run_screenshot_tests.outcome == 'failure'
         uses: actions/upload-artifact@v4
         with:
           name: screenshot-test-results
