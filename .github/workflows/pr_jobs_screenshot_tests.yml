@@ -1,4 +1,4 @@
-name: Screenshot Test
+name: Screenshot & Interaction Tests
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  screenshot-tests:
+  screenshot-and-interaction-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -64,7 +64,7 @@ jobs:
           script: echo "Generated AVD snapshot for caching."
 
       - name: Run screenshot tests
-        id: run_tests
+        id: run_screenshot_tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
@@ -79,8 +79,23 @@ jobs:
           script: ./gradlew executeScreenshotTests
         continue-on-error: true
 
+      - name: Run interaction tests
+        id: run_interaction_tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 32
+          arch: x86_64
+          profile: pixel_6
+          target: google_apis
+          avd-name: ubuntu-avd-x86_64-32
+          emulator-boot-timeout: 120
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.annotation=core.InteractionTest
+
       - name: Clear screenshots and record new ones
-        if: steps.run_tests.outcome == 'failure'
+        if: steps.run_screenshot_tests.outcome == 'failure'
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
@@ -97,7 +112,7 @@ jobs:
             ./gradlew executeScreenshotTests -Precord
 
       - name: Commit new screenshots
-        if: steps.run_tests.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository
+        if: steps.run_screenshot_tests.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository
         run: |
           git config --local user.email "ci@github.actions.com"
           git config --local user.name "GitHub Actions"
@@ -106,7 +121,7 @@ jobs:
           git push
 
       - name: Comment on fork PR about screenshots
-        if: steps.run_tests.outcome == 'failure' && github.event.pull_request.head.repo.full_name != github.repository
+        if: steps.run_screenshot_tests.outcome == 'failure' && github.event.pull_request.head.repo.full_name != github.repository
         uses: actions/github-script@v7
         with:
           script: |
@@ -129,7 +144,7 @@ jobs:
             })
 
       - name: Upload Screenshot Test Results
-        if: steps.run_tests.outcome == 'failure'
+        if: steps.run_screenshot_tests.outcome == 'failure'
         uses: actions/upload-artifact@v4
         with:
           name: screenshot-test-results
@@ -137,4 +152,14 @@ jobs:
             app/screenshots/debug/
             app/build/tmp/shot/screenshot/
             app/build/reports/shot/debug/verification/
+          retention-days: 7
+
+      - name: Upload Interaction Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: interaction-test-results
+          path: |
+            app/build/outputs/androidTest-results/connected/
+            app/build/reports/androidTests/connected/
           retention-days: 7
