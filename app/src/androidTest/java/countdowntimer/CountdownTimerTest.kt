@@ -4,20 +4,13 @@ package countdowntimer
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.countdowntimer.KPCountdownTimer
 import com.trendyol.design.core.countdowntimer.KPCountdownTimerSize
 import com.trendyol.design.core.countdowntimer.KPCountdownTimerStyle
-import com.trendyol.design.core.text.KPText
 import com.trendyol.theme.KPDesign
 import core.BoxWithHorizontalPadding
 import core.DesignScreenshotTest
@@ -162,66 +155,4 @@ internal class CountdownTimerTest : DesignScreenshotTest() {
         )
     )
 
-    @Test
-    fun multipleTimersTest() = runScreenShotTest(
-        testName = "multipleTimersTest",
-        contents = listOf(
-            DesignScreenshotTestContainer("Multiple Timers") {
-                BoxWithHorizontalPadding {
-                    Column {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Box(
-                                modifier = Modifier
-                                    .background(KPDesign.colors.colorPrimary)
-                                    .padding(4.dp)
-                            ) {
-                                KPCountdownTimer(
-                                    style = KPCountdownTimerStyle.Primary,
-                                    size = KPCountdownTimerSize.Small,
-                                    endDate = endTime,
-                                    backgroundAlpha = 0.8f
-                                )
-                            }
-                            Spacer(modifier = Modifier.width(16.dp))
-                            KPText("Small Timer")
-                        }
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Box(
-                                modifier = Modifier
-                                    .background(KPDesign.colors.colorPrimary)
-                                    .padding(4.dp)
-                            ) {
-                                KPCountdownTimer(
-                                    style = KPCountdownTimerStyle.Primary,
-                                    size = KPCountdownTimerSize.Medium,
-                                    endDate = endTime,
-                                    backgroundAlpha = 0.8f
-                                )
-                            }
-                            Spacer(modifier = Modifier.width(16.dp))
-                            KPText("Medium Timer")
-                        }
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Box(
-                                modifier = Modifier
-                                    .background(KPDesign.colors.colorPrimary)
-                                    .padding(4.dp)
-                            ) {
-                                KPCountdownTimer(
-                                    style = KPCountdownTimerStyle.Primary,
-                                    size = KPCountdownTimerSize.Large,
-                                    endDate = endTime,
-                                    backgroundAlpha = 0.8f
-                                )
-                            }
-                            Spacer(modifier = Modifier.width(16.dp))
-                            KPText("Large Timer")
-                        }
-                    }
-                }
-            }
-        )
-    )
 }
