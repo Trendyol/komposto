@@ -275,7 +275,14 @@ internal class ListCellTest : DesignScreenshotTest() {
                         modifier = Modifier.padding(vertical = 12.dp),
                     )
                 }
-            },
+            }
+        )
+    )
+
+    @Test
+    fun staticItemBulletTest() = runScreenShotTest(
+        testName = "staticItemBulletTest",
+        contents = listOf(
             DesignScreenshotTestContainer("Bullet Icon - Top Position") {
                 BoxWithHorizontalPadding {
                     KPBottomSheetStaticItem(
