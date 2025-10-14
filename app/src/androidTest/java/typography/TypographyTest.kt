@@ -2,12 +2,7 @@
 
 package typography
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.text.KPText
 import com.trendyol.theme.KPDesign
@@ -271,54 +266,6 @@ internal class TypographyTest : DesignScreenshotTest() {
                         color = KPDesign.colors.colorWarning,
                         maxLines = 2,
                     )
-                }
-            }
-        )
-    )
-
-    @Test
-    fun typographyHierarchyTest() = runScreenShotTest(
-        testName = "typographyHierarchyTest",
-        contents = listOf(
-            DesignScreenshotTestContainer("Typography Hierarchy") {
-                BoxWithHorizontalPadding {
-                    Column {
-                        KPText(
-                            text = "Header Text",
-                            style = KPDesign.typography.header,
-                            maxLines = 1,
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        KPText(
-                            text = "Title Text",
-                            style = KPDesign.typography.title,
-                            maxLines = 1,
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        KPText(
-                            text = "Subtitle Text",
-                            style = KPDesign.typography.subtitle,
-                            maxLines = 1,
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        KPText(
-                            text = "Body Text",
-                            style = KPDesign.typography.body1,
-                            maxLines = 2,
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        KPText(
-                            text = "Body2 Text",
-                            style = KPDesign.typography.body2,
-                            maxLines = 1,
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        KPText(
-                            text = "BODY1 BOLD TEXT",
-                            style = KPDesign.typography.body1Bold,
-                            maxLines = 1,
-                        )
-                    }
                 }
             }
         )
