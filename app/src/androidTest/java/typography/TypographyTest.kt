@@ -15,6 +15,7 @@ internal class TypographyTest : DesignScreenshotTest() {
 
     private val sampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     private val longText = "This is a very long text that should demonstrate how the typography handles multiple lines and text wrapping in different scenarios."
+    private val longTextMaxLines = "This is a very long text that should demonstrate how the \n typography handles  \n multiple lines and text wrapping in different scenarios."
 
     @Test
     fun headerStylesTest() = runScreenShotTest(
@@ -296,7 +297,7 @@ internal class TypographyTest : DesignScreenshotTest() {
             DesignScreenshotTestContainer("Three Lines") {
                 BoxWithHorizontalPadding {
                     KPText(
-                        text = longText,
+                        text = longTextMaxLines,
                         style = KPDesign.typography.body1,
                         maxLines = 3,
                     )
