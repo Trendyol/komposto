@@ -240,7 +240,6 @@ The included demo app showcases all components with Showkase integration:
 - **GitHub**: [https://github.com/Trendyol/komposto](https://github.com/Trendyol/komposto)
 - **Maven Central**: [https://search.maven.org/search?q=g:com.trendyol.design](https://search.maven.org/search?q=g:com.trendyol.design)
 - **Issues**: [https://github.com/Trendyol/komposto/issues](https://github.com/Trendyol/komposto/issues)
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
 ## 📄 License
 
