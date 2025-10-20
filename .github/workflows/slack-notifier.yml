@@ -18,7 +18,7 @@ jobs:
           token: ${{ secrets.SLACK_BOT_TOKEN }}
           payload: |
             {
-              "channel": "${{ secrets.SLACK_COMMAND_TEST_CHANNEL_ID }}",
+              "channel": "${{ secrets.SLACK_DEV_CHANNEL_ID }}",
               "text": ":bell: *New Issue Opened*\n*Title:* ${{ github.event.issue.title }}\n*Author:* ${{ github.event.issue.user.login }}\n*Link:* ${{ github.event.issue.html_url }}"
             }
 
@@ -38,7 +38,7 @@ jobs:
           token: ${{ secrets.SLACK_BOT_TOKEN }}
           payload: |
             {
-              "channel": "${{ secrets.SLACK_COMMAND_TEST_CHANNEL_ID }}",
+              "channel": "${{ secrets.SLACK_DEV_CHANNEL_ID }}",
               "text": ":rocket: *New Pull Request Opened*\n*Title:* ${{ github.event.pull_request.title }}\n*Author:* ${{ github.event.pull_request.user.login }}\n*Link:* ${{ github.event.pull_request.html_url }}\n*Reviewers:* ${{ steps.reviewers.outputs.usernames }}",
               "metadata": {
                 "event_type": "komposto_pr_opened",
