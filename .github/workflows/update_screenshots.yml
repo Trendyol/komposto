@@ -94,7 +94,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No screenshot changes detected"
           else
-            git commit -m "Update screenshots from CI [skip ci]"
+            git commit -m "Update screenshots from CI"
             git push
             echo "✅ Screenshots updated successfully!"
           fi
