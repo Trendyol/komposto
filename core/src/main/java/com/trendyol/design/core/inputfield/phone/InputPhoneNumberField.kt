@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.inputfield.phone
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -11,13 +13,17 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.core.text.isDigitsOnly
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
@@ -25,6 +31,7 @@ import com.trendyol.design.core.inputfield.KPDropdown
 import com.trendyol.design.core.inputfield.KPDropdownStyle
 import com.trendyol.design.core.inputfield.KPOutlinedTextField
 import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
 import com.trendyol.theme.KPDesign
 
@@ -134,4 +141,60 @@ public fun KPInputPhoneNumberField(
 
 internal fun String.digitsOnly(): String {
     return Regex("[^0-9]").replace(this, "")
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun InputPhoneNumberFieldRTLPreview() {
+    PreviewTheme {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            KPInputPhoneNumberField(
+                modifier = Modifier.padding(16.dp),
+                countryCode = "+٩٦٦",
+                number = "٥١٢٣٤٥٦٧٨٩",
+                onCountryCodeClick = { },
+                onValueChange = { },
+                countryCodeLabel = "الرمز",
+                numberLabel = "الهاتف"
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DisabledInputPhoneNumberFieldRTLPreview() {
+    PreviewTheme {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            KPInputPhoneNumberField(
+                modifier = Modifier.padding(16.dp),
+                countryCode = "+٩٦٦",
+                number = "٥١٢٣٤٥٦٧٨٩",
+                onCountryCodeClick = { },
+                onValueChange = { },
+                countryCodeLabel = "الرمز",
+                numberLabel = "الهاتف",
+                enabled = false
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ErrorInputPhoneNumberFieldRTLPreview() {
+    PreviewTheme {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            KPInputPhoneNumberField(
+                modifier = Modifier.padding(16.dp),
+                countryCode = "+٩٦٦",
+                number = "٥١٢٣٤٥٦٧٨٩",
+                onCountryCodeClick = { },
+                onValueChange = { },
+                countryCodeLabel = "الرمز",
+                numberLabel = "الهاتف",
+                error = "رقم الهاتف غير صحيح"
+            )
+        }
+    }
 }

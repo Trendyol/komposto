@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.inputfield.email
 
 import androidx.compose.foundation.interaction.FocusInteraction
@@ -12,16 +14,21 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.inputfield.KPOutlinedTextField
 import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
 import com.trendyol.theme.KPDesign
 
@@ -116,6 +123,53 @@ public fun KPInputEmailField(
                     .fillMaxWidth(),
                 text = error,
                 style = KPDesign.typography.body1ColorWarning,
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun InputEmailFieldRTLPreview() {
+    PreviewTheme {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            KPInputEmailField(
+                modifier = Modifier.padding(16.dp),
+                email = "komposto@trendyol.com",
+                onValueChange = { },
+                label = { KPText(text = "البريد الإلكتروني") },
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DisabledInputEmailFieldRTLPreview() {
+    PreviewTheme {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            KPInputEmailField(
+                modifier = Modifier.padding(16.dp),
+                email = "komposto@trendyol.com",
+                onValueChange = { },
+                label = { KPText(text = "البريد الإلكتروني") },
+                enabled = false
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ErrorInputEmailFieldRTLPreview() {
+    PreviewTheme {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            KPInputEmailField(
+                modifier = Modifier.padding(16.dp),
+                email = "komposto-trendyol.com",
+                onValueChange = { },
+                label = { KPText(text = "البريد الإلكتروني") },
+                error = "البريد الإلكتروني غير صحيح"
             )
         }
     }
