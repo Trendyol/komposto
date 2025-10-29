@@ -3,8 +3,10 @@ package com.trendyol.design.core.radiobutton
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
@@ -12,16 +14,22 @@ import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.RadioButtonColors
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.drawscope.Fill
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
 import com.trendyol.theme.KPDesign
 
@@ -111,6 +119,92 @@ public fun KPRadioButton(
                 Spacer(modifier = Modifier.width(8.dp))
                 containerType.content()
             }
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun RadioButtonWithTextRTLPreview() {
+    PreviewTheme {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            KPRadioButton(
+                selected = false,
+                containerType = KPRadioButtonContainerType.Text("تحديد الخيار"),
+                size = KPRadioButtonSize.Medium,
+                onClick = { },
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun RadioButtonWithTextRTLPreviewSelected() {
+    PreviewTheme {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            KPRadioButton(
+                selected = true,
+                containerType = KPRadioButtonContainerType.Text("تحديد الخيار"),
+                size = KPRadioButtonSize.Medium,
+                onClick = { },
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun RadioButtonWithContentRTLPreview() {
+    PreviewTheme {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            KPRadioButton(
+                selected = false,
+                containerType = KPRadioButtonContainerType.Content {
+                    Column(
+                        modifier = Modifier
+                            .padding(2.dp)
+                            .border(
+                                width = 1.dp,
+                                color = KPDesign.colors.colorBorder,
+                                shape = RoundedCornerShape(4.dp)
+                            )
+                            .padding(8.dp)
+                    ) {
+                        KPText(text = "تحديد الخيار")
+                    }
+                },
+                size = KPRadioButtonSize.Medium,
+                onClick = { },
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun RadioButtonWithContentRTLPreviewSelected() {
+    PreviewTheme {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            KPRadioButton(
+                selected = true,
+                containerType = KPRadioButtonContainerType.Content {
+                    Column(
+                        modifier = Modifier
+                            .padding(2.dp)
+                            .border(
+                                width = 1.dp,
+                                color = KPDesign.colors.colorBorder,
+                                shape = RoundedCornerShape(4.dp)
+                            )
+                            .padding(8.dp)
+                    ) {
+                        KPText(text = "تحديد الخيار")
+                    }
+                },
+                size = KPRadioButtonSize.Medium,
+                onClick = { },
+            )
         }
     }
 }
