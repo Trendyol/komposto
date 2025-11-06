@@ -3,6 +3,9 @@ name: Pull Request Jobs
 on:
   pull_request:
     branches: [ "main" ]
+    paths-ignore:
+      - '.github/**'
+      - '**.md'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}

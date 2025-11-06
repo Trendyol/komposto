@@ -3,6 +3,9 @@ name: Screenshot & Interaction Tests
 on:
   pull_request:
     branches: [ "main" ]
+    paths-ignore:
+      - '.github/**'
+      - '**.md'
 
 permissions:
   contents: read

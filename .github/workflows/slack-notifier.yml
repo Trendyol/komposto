@@ -1,0 +1,50 @@
+name: Slack Notifier
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Slack notification for Issue
+        if: github.event_name == 'issues'
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            {
+              "channel": "${{ secrets.SLACK_DEV_CHANNEL_ID }}",
+              "text": ":bell: *New Issue Opened*\n*Title:* ${{ github.event.issue.title }}\n*Author:* ${{ github.event.issue.user.login }}\n*Link:* ${{ github.event.issue.html_url }}"
+            }
+
+      - name: Extract reviewer usernames
+        if: github.event_name == 'pull_request'
+        id: reviewers
+        run: |
+          REVIEWERS=$(echo '${{ toJson(github.event.pull_request.requested_reviewers) }}' | jq -r 'map(.login) | join(",")')
+          echo "usernames=$REVIEWERS" >> $GITHUB_OUTPUT
+          echo "Reviewers: $REVIEWERS"
+
+      - name: Send Slack notification for PR
+        if: github.event_name == 'pull_request'
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            {
+              "channel": "${{ secrets.SLACK_DEV_CHANNEL_ID }}",
+              "text": ":rocket: *New Pull Request Opened*\n*Title:* ${{ github.event.pull_request.title }}\n*Author:* ${{ github.event.pull_request.user.login }}\n*Link:* ${{ github.event.pull_request.html_url }}\n*Reviewers:* ${{ steps.reviewers.outputs.usernames }}",
+              "metadata": {
+                "event_type": "komposto_pr_opened",
+                "event_payload": {
+                  "reviewer_usernames": "${{ steps.reviewers.outputs.usernames }}"
+                }
+              }
+            }
+
