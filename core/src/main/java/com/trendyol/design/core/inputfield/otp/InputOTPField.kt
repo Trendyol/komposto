@@ -21,7 +21,6 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Divider
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -29,7 +28,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -291,46 +289,40 @@ private fun ErrorFilledInputOTPFieldPreview() {
 @Preview(showBackground = true)
 @Composable
 private fun OutlineInputOTPFieldRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInputOTPField(
-                modifier = Modifier.padding(16.dp),
-                style = KPInputOTPFieldStyle.Outline,
-                otp = "",
-                onValueChange = { }
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = KPInputOTPFieldStyle.Outline,
+            otp = "",
+            onValueChange = { }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun FilledInputOTPFieldRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInputOTPField(
-                modifier = Modifier.padding(16.dp),
-                style = KPInputOTPFieldStyle.Filled,
-                otp = "١٢٣٤٥٦",
-                onValueChange = { }
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = KPInputOTPFieldStyle.Filled,
+            otp = "١٢٣٤٥٦",
+            onValueChange = { }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun ErrorInputOTPFieldRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInputOTPField(
-                modifier = Modifier.padding(16.dp),
-                style = KPInputOTPFieldStyle.Outline,
-                otp = "٤٥٦",
-                errorText = "حدث خطأ غير متوقع",
-                onValueChange = { }
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = KPInputOTPFieldStyle.Outline,
+            otp = "٤٥٦",
+            errorText = "حدث خطأ غير متوقع",
+            onValueChange = { }
+        )
     }
 }
 

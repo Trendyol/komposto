@@ -6,10 +6,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.ProvideTextStyle
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
@@ -118,124 +116,108 @@ public fun KPToolbar(
 @Preview(showBackground = true)
 @Composable
 private fun KPToolbarNoneRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPToolbar(
-                title = "عنوان",
-                style = KPToolbarStyle.None
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPToolbar(
+            title = "عنوان",
+            style = KPToolbarStyle.None
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun KPToolbarTextButtonRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPToolbar(
-                title = "عنوان",
-                style = KPToolbarStyle.TextButton(
-                    textButton = { Text(text = "تسمية", onClick = { }) }
-                )
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPToolbar(
+            title = "عنوان",
+            style = KPToolbarStyle.TextButton(
+                textButton = { Text(text = "تسمية", onClick = { }) }
             )
-        }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun KPToolbarEndIconRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPToolbar(
-                title = "عنوان",
-                style = KPToolbarStyle.EndIcon(
-                    endIcon = {
-                        Icon(imageVector = KPIcons.Fill.Trash, onClick = { })
-                    }
-                )
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPToolbar(
+            title = "عنوان",
+            style = KPToolbarStyle.EndIcon(
+                endIcon = {
+                    Icon(imageVector = KPIcons.Fill.Trash, onClick = { })
+                }
             )
-        }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun KPToolbarEndTwoIconsRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPToolbar(
-                title = "عنوان",
-                style = KPToolbarStyle.EndTwoIcons(
-                    firstIcon = { Icon(imageVector = KPIcons.Fill.Help, onClick = { }) },
-                    secondIcon = { Icon(imageVector = KPIcons.Fill.Trash, onClick = { }) }
-                )
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPToolbar(
+            title = "عنوان",
+            style = KPToolbarStyle.EndTwoIcons(
+                firstIcon = { Icon(imageVector = KPIcons.Fill.Help, onClick = { }) },
+                secondIcon = { Icon(imageVector = KPIcons.Fill.Trash, onClick = { }) }
             )
-        }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun KPToolbarIconNoneRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPToolbar(
-                title = "عنوان",
-                style = KPToolbarStyle.Icon.None(
-                    icon = { Icon(imageVector = KPIcons.Fill.Share, onClick = { }) }
-                )
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPToolbar(
+            title = "عنوان",
+            style = KPToolbarStyle.Icon.None(
+                icon = { Icon(imageVector = KPIcons.Fill.Share, onClick = { }) }
             )
-        }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun KPToolbarIconTextButtonRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPToolbar(
-                title = "عنوان",
-                style = KPToolbarStyle.Icon.TextButton(
-                    icon = { Icon(imageVector = KPIcons.Fill.Share, onClick = { }) },
-                    textButton = { Text(text = "تسمية", onClick = { }) }
-                )
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPToolbar(
+            title = "عنوان",
+            style = KPToolbarStyle.Icon.TextButton(
+                icon = { Icon(imageVector = KPIcons.Fill.Share, onClick = { }) },
+                textButton = { Text(text = "تسمية", onClick = { }) }
             )
-        }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun KPToolbarIconEndIconRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPToolbar(
-                title = "عنوان",
-                style = KPToolbarStyle.Icon.EndIcon(
-                    icon = { Icon(imageVector = KPIcons.Fill.Share, onClick = { }) },
-                    endIcon = { Icon(imageVector = KPIcons.Fill.Trash, onClick = { }) }
-                )
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPToolbar(
+            title = "عنوان",
+            style = KPToolbarStyle.Icon.EndIcon(
+                icon = { Icon(imageVector = KPIcons.Fill.Share, onClick = { }) },
+                endIcon = { Icon(imageVector = KPIcons.Fill.Trash, onClick = { }) }
             )
-        }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun KPToolbarIconEndTwoIconsRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPToolbar(
-                title = "عنوان",
-                style = KPToolbarStyle.Icon.EndTwoIcons(
-                    icon = { Icon(imageVector = KPIcons.Fill.Share, onClick = { }) },
-                    firstIcon = { Icon(imageVector = KPIcons.Fill.Help, onClick = { }) },
-                    secondIcon = { Icon(imageVector = KPIcons.Fill.Trash, onClick = { }) }
-                )
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPToolbar(
+            title = "عنوان",
+            style = KPToolbarStyle.Icon.EndTwoIcons(
+                icon = { Icon(imageVector = KPIcons.Fill.Share, onClick = { }) },
+                firstIcon = { Icon(imageVector = KPIcons.Fill.Help, onClick = { }) },
+                secondIcon = { Icon(imageVector = KPIcons.Fill.Trash, onClick = { }) }
             )
-        }
+        )
     }
 }

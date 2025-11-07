@@ -15,7 +15,6 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
@@ -335,57 +334,49 @@ private fun PinkInfoBoxLeftIconPreview() {
 @Preview(showBackground = true)
 @Composable
 private fun OrangeInfoBoxLeftIconRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInfoBox(
-                style = KPInfoBoxStyle.Orange,
-                text = "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ",
-                iconPosition = Arrangement.Start,
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInfoBox(
+            style = KPInfoBoxStyle.Orange,
+            text = "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ",
+            iconPosition = Arrangement.Start,
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun OrangeInfoBoxRightIconRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInfoBox(
-                style = KPInfoBoxStyle.Orange,
-                text = "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ",
-                iconPosition = Arrangement.End,
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInfoBox(
+            style = KPInfoBoxStyle.Orange,
+            text = "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ",
+            iconPosition = Arrangement.End,
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun BlueInfoBoxLeftIconWithBorderRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInfoBox(
-                style = KPInfoBoxStyle.Blue,
-                text = "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ",
-                iconPosition = Arrangement.Start,
-                showBorder = true
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInfoBox(
+            style = KPInfoBoxStyle.Blue,
+            text = "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ",
+            iconPosition = Arrangement.Start,
+            showBorder = true
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun BlueInfoBoxLeftIconWithDashedBorderRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInfoBox(
-                style = KPInfoBoxStyle.Blue,
-                text = "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ",
-                iconPosition = Arrangement.Start,
-                showDashedBorder = true
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInfoBox(
+            style = KPInfoBoxStyle.Blue,
+            text = "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ",
+            iconPosition = Arrangement.Start,
+            showDashedBorder = true
+        )
     }
 }

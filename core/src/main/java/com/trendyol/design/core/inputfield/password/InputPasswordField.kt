@@ -9,7 +9,6 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.IconToggleButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -17,7 +16,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -188,47 +186,41 @@ private fun ErrorInputPasswordFieldPreview() {
 @Preview(showBackground = true)
 @Composable
 private fun InputPasswordFieldRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInputPasswordField(
-                modifier = Modifier.padding(16.dp),
-                style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
-                password = "كلمة السر",
-                onValueChange = { }
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputPasswordField(
+            modifier = Modifier.padding(16.dp),
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
+            password = "كلمة السر",
+            onValueChange = { }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun DisabledInputPasswordFieldRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInputPasswordField(
-                modifier = Modifier.padding(16.dp),
-                style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
-                password = "كلمة السر",
-                enabled = false,
-                onValueChange = { }
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputPasswordField(
+            modifier = Modifier.padding(16.dp),
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
+            password = "كلمة السر",
+            enabled = false,
+            onValueChange = { }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun ErrorInputPasswordFieldRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInputPasswordField(
-                modifier = Modifier.padding(16.dp),
-                style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
-                password = "كلمة السر",
-                errorText = "حدث خطأ غير متوقع",
-                onValueChange = { }
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputPasswordField(
+            modifier = Modifier.padding(16.dp),
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
+            password = "كلمة السر",
+            errorText = "حدث خطأ غير متوقع",
+            onValueChange = { }
+        )
     }
 }
 

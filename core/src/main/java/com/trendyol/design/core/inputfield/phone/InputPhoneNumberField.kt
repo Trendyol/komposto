@@ -13,12 +13,10 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
@@ -146,55 +144,49 @@ internal fun String.digitsOnly(): String {
 @Preview(showBackground = true)
 @Composable
 private fun InputPhoneNumberFieldRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInputPhoneNumberField(
-                modifier = Modifier.padding(16.dp),
-                countryCode = "+٩٦٦",
-                number = "٥١٢٣٤٥٦٧٨٩",
-                onCountryCodeClick = { },
-                onValueChange = { },
-                countryCodeLabel = "الرمز",
-                numberLabel = "الهاتف"
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputPhoneNumberField(
+            modifier = Modifier.padding(16.dp),
+            countryCode = "+٩٦٦",
+            number = "٥١٢٣٤٥٦٧٨٩",
+            onCountryCodeClick = { },
+            onValueChange = { },
+            countryCodeLabel = "الرمز",
+            numberLabel = "الهاتف"
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun DisabledInputPhoneNumberFieldRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInputPhoneNumberField(
-                modifier = Modifier.padding(16.dp),
-                countryCode = "+٩٦٦",
-                number = "٥١٢٣٤٥٦٧٨٩",
-                onCountryCodeClick = { },
-                onValueChange = { },
-                countryCodeLabel = "الرمز",
-                numberLabel = "الهاتف",
-                enabled = false
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputPhoneNumberField(
+            modifier = Modifier.padding(16.dp),
+            countryCode = "+٩٦٦",
+            number = "٥١٢٣٤٥٦٧٨٩",
+            onCountryCodeClick = { },
+            onValueChange = { },
+            countryCodeLabel = "الرمز",
+            numberLabel = "الهاتف",
+            enabled = false
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun ErrorInputPhoneNumberFieldRTLPreview() {
-    PreviewTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            KPInputPhoneNumberField(
-                modifier = Modifier.padding(16.dp),
-                countryCode = "+٩٦٦",
-                number = "٥١٢٣٤٥٦٧٨٩",
-                onCountryCodeClick = { },
-                onValueChange = { },
-                countryCodeLabel = "الرمز",
-                numberLabel = "الهاتف",
-                error = "رقم الهاتف غير صحيح"
-            )
-        }
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputPhoneNumberField(
+            modifier = Modifier.padding(16.dp),
+            countryCode = "+٩٦٦",
+            number = "٥١٢٣٤٥٦٧٨٩",
+            onCountryCodeClick = { },
+            onValueChange = { },
+            countryCodeLabel = "الرمز",
+            numberLabel = "الهاتف",
+            error = "رقم الهاتف غير صحيح"
+        )
     }
 }
