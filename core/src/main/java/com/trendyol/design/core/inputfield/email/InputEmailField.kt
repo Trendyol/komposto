@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKompostoApi::class)
+
 package com.trendyol.design.core.inputfield.email
 
 import androidx.compose.foundation.interaction.FocusInteraction
@@ -18,10 +20,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.inputfield.KPOutlinedTextField
 import com.trendyol.design.core.inputfield.KPOutlinedTextFieldStyle
+import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
 import com.trendyol.theme.KPDesign
 
@@ -118,5 +123,46 @@ public fun KPInputEmailField(
                 style = KPDesign.typography.body1ColorWarning,
             )
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun InputEmailFieldRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputEmailField(
+            modifier = Modifier.padding(16.dp),
+            email = "komposto@trendyol.com",
+            onValueChange = { },
+            label = { KPText(text = "البريد الإلكتروني") },
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DisabledInputEmailFieldRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputEmailField(
+            modifier = Modifier.padding(16.dp),
+            email = "komposto@trendyol.com",
+            onValueChange = { },
+            label = { KPText(text = "البريد الإلكتروني") },
+            enabled = false
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ErrorInputEmailFieldRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputEmailField(
+            modifier = Modifier.padding(16.dp),
+            email = "komposto-trendyol.com",
+            onValueChange = { },
+            label = { KPText(text = "البريد الإلكتروني") },
+            error = "البريد الإلكتروني غير صحيح"
+        )
     }
 }

@@ -21,6 +21,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.R
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
@@ -177,6 +178,47 @@ private fun ErrorInputPasswordFieldPreview() {
             style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
             password = "1234567",
             errorText = "Unexpected error occured.",
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun InputPasswordFieldRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputPasswordField(
+            modifier = Modifier.padding(16.dp),
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
+            password = "كلمة السر",
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DisabledInputPasswordFieldRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputPasswordField(
+            modifier = Modifier.padding(16.dp),
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
+            password = "كلمة السر",
+            enabled = false,
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ErrorInputPasswordFieldRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputPasswordField(
+            modifier = Modifier.padding(16.dp),
+            style = KPOutlinedTextFieldStyle.FloatingLabelOutlined,
+            password = "كلمة السر",
+            errorText = "حدث خطأ غير متوقع",
             onValueChange = { }
         )
     }

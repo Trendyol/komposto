@@ -7,6 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import com.trendyol.design.core.preview.PreviewTheme
 
 /**
@@ -179,6 +180,34 @@ private fun TrendyolXSmallCheckboxPreviewDisabled() {
             checked = true,
             onCheckedChange = { },
             enabled = false
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun TrendyolMediumCheckboxWithTextRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.Medium,
+            containerType = CheckboxContainerType.Text("تحديد الخيار"),
+            checked = false,
+            onCheckedChange = { },
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun TrendyolMediumCheckboxWithTextRTLPreviewChecked() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPCheckbox(
+            style = KPCheckboxStyle.Primary,
+            size = KPCheckboxSize.Medium,
+            containerType = CheckboxContainerType.Text("تحديد الخيار"),
+            checked = true,
+            onCheckedChange = { },
         )
     }
 }
