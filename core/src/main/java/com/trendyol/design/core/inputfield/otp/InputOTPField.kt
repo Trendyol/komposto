@@ -35,6 +35,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.preview.PreviewTheme
@@ -280,6 +281,46 @@ private fun ErrorFilledInputOTPFieldPreview() {
             style = KPInputOTPFieldStyle.Filled,
             otp = "123",
             errorText = "Unexpected error occurred.",
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun OutlineInputOTPFieldRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = KPInputOTPFieldStyle.Outline,
+            otp = "",
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun FilledInputOTPFieldRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = KPInputOTPFieldStyle.Filled,
+            otp = "١٢٣٤٥٦",
+            onValueChange = { }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ErrorInputOTPFieldRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPInputOTPField(
+            modifier = Modifier.padding(16.dp),
+            style = KPInputOTPFieldStyle.Outline,
+            otp = "٤٥٦",
+            errorText = "حدث خطأ غير متوقع",
             onValueChange = { }
         )
     }

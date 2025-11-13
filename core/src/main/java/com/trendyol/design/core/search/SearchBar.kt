@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.icon.KPIcon
@@ -238,6 +239,134 @@ private fun MediumFilledSearchBarLargeRadiusPreview() {
             style = KPSearchBarStyle.Filled,
             radius = KPSearchBarRadius.Large,
             size = KPSearchBarSize.Medium,
+            onValueChange = {},
+            onTrailingIconClick = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun SmallOutlineSearchBarRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "",
+            style = KPSearchBarStyle.Outline,
+            size = KPSearchBarSize.Small,
+            placeholder = "بحث",
+            onValueChange = {},
+            onTrailingIconClick = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun SmallOutlineSearchBarWithTextRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "بحث",
+            style = KPSearchBarStyle.Outline,
+            size = KPSearchBarSize.Small,
+            placeholder = "بحث",
+            onValueChange = {},
+            onTrailingIconClick = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MediumOutlineSearchBarRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "",
+            style = KPSearchBarStyle.Outline,
+            size = KPSearchBarSize.Medium,
+            placeholder = "بحث",
+            onValueChange = {},
+            onTrailingIconClick = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MediumOutlineSearchBarWithTextRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "بحث",
+            style = KPSearchBarStyle.Outline,
+            size = KPSearchBarSize.Medium,
+            placeholder = "بحث",
+            onValueChange = {},
+            onTrailingIconClick = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun SmallFilledSearchBarRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "",
+            style = KPSearchBarStyle.Filled,
+            size = KPSearchBarSize.Small,
+            placeholder = "بحث",
+            onValueChange = {},
+            onTrailingIconClick = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun SmallFilledSearchBarWithTextRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "بحث",
+            style = KPSearchBarStyle.Filled,
+            size = KPSearchBarSize.Small,
+            placeholder = "بحث",
+            onValueChange = {},
+            onTrailingIconClick = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MediumFilledSearchBarRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "",
+            style = KPSearchBarStyle.Filled,
+            size = KPSearchBarSize.Medium,
+            placeholder = "بحث",
+            onValueChange = {},
+            onTrailingIconClick = {},
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MediumFilledSearchBarWithTextRTLPreview() {
+    PreviewTheme(layoutDirection = LayoutDirection.Rtl) {
+        KPSearchBar(
+            modifier = Modifier.padding(8.dp),
+            value = "بحث",
+            style = KPSearchBarStyle.Filled,
+            size = KPSearchBarSize.Medium,
+            placeholder = "بحث",
             onValueChange = {},
             onTrailingIconClick = {},
         )
