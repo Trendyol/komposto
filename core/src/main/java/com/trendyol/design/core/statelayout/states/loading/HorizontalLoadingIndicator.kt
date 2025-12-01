@@ -16,7 +16,6 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.tooling.preview.Preview
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.preview.PreviewTheme
-import com.trendyol.theme.KPDesign
 
 /**
  * Composable function for displaying a horizontal loading indicator.
@@ -25,6 +24,8 @@ import com.trendyol.theme.KPDesign
  * @param modifier Optional parameter to specify the modifier for this composable.
  * @param progressState Optional parameter to specify the state of the loading progress. Defaults to INFINITIVE.
  * @param progressValue Optional parameter to specify the progress value (0.0 to 1.0). Defaults to 0.0.
+ * @param loadingIndicatorStyle Style configuration for the loading indicator colors.
+ * Defaults to [KPLoadingIndicatorStyle].
  */
 @ExperimentalKompostoApi
 @Composable
@@ -32,8 +33,8 @@ public fun KPHorizontalLoadingIndicator(
     modifier: Modifier = Modifier,
     progressState: HorizontalProgressState = HorizontalProgressState.INFINITIVE,
     @FloatRange(0.0, 1.0) progressValue: Float = 0.0F,
+    loadingIndicatorStyle: LoadingIndicatorStyle = KPLoadingIndicatorStyle,
 ) {
-
     val progress by remember { mutableFloatStateOf(progressValue) }
     val progressModifier: Modifier = modifier.fillMaxWidth()
 
@@ -45,16 +46,16 @@ public fun KPHorizontalLoadingIndicator(
     if (progressState == HorizontalProgressState.INFINITIVE) {
         LinearProgressIndicator(
             modifier = progressModifier,
-            backgroundColor = KPDesign.colors.colorBackground,
-            color = KPDesign.colors.colorPrimary,
+            backgroundColor = loadingIndicatorStyle.backgroundColor,
+            color = loadingIndicatorStyle.indicatorColor,
             strokeCap = StrokeCap.Round
         )
     } else {
         LinearProgressIndicator(
             modifier = progressModifier,
             progress = animatedProgress,
-            backgroundColor = KPDesign.colors.colorBackground,
-            color = KPDesign.colors.colorPrimary,
+            backgroundColor = loadingIndicatorStyle.backgroundColor,
+            color = loadingIndicatorStyle.indicatorColor,
             strokeCap = StrokeCap.Round
         )
     }

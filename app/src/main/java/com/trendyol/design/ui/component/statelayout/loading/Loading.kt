@@ -16,7 +16,6 @@ import com.trendyol.design.core.statelayout.states.loading.KPHorizontalLoadingIn
 import com.trendyol.design.ui.component.common.Component
 import com.trendyol.design.ui.component.common.Group
 import com.trendyol.design.ui.theme.TrendyolTheme
-import com.trendyol.theme.KPDesign
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
@@ -29,8 +28,6 @@ internal fun StateLayout_Circular_Loading() {
     TrendyolTheme {
         KPCircularLoadingIndicator(
             modifier = Modifier.size(400.dp),
-            indicatorColor = KPDesign.colors.colorPrimary,
-            indicatorStrokeWidth = 4.dp
         )
     }
 }

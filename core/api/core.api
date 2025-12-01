@@ -2086,9 +2086,9 @@ public final class com/trendyol/design/core/statelayout/ButtonsInfoModel$Creator
 public final class com/trendyol/design/core/statelayout/ComposableSingletons$StateComposeLayoutKt {
 	public static final field INSTANCE Lcom/trendyol/design/core/statelayout/ComposableSingletons$StateComposeLayoutKt;
 	public fun <init> ()V
-	public final fun getLambda$1262156222$core_release ()Lkotlin/jvm/functions/Function2;
-	public final fun getLambda$1448807664$core_release ()Lkotlin/jvm/functions/Function3;
-	public final fun getLambda$313082437$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-1880614765$core_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$465043276$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$988266750$core_release ()Lkotlin/jvm/functions/Function3;
 }
 
 public final class com/trendyol/design/core/statelayout/InfoModel : android/os/Parcelable {
@@ -2414,8 +2414,8 @@ public final class com/trendyol/design/core/statelayout/State$WarningInfo$Creato
 }
 
 public final class com/trendyol/design/core/statelayout/StateComposeLayoutKt {
-	public static final fun KPContentState (Lcom/trendyol/design/core/statelayout/State$ContentWithLoading;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;I)V
-	public static final fun KPStateComposeLayout (Landroidx/compose/ui/Modifier;Lcom/trendyol/design/core/statelayout/State;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun KPContentState (Lcom/trendyol/design/core/statelayout/State$ContentWithLoading;Lkotlin/jvm/functions/Function2;Lcom/trendyol/design/core/statelayout/states/loading/LoadingIndicatorStyle;Landroidx/compose/runtime/Composer;II)V
+	public static final fun KPStateComposeLayout (Landroidx/compose/ui/Modifier;Lcom/trendyol/design/core/statelayout/State;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lcom/trendyol/design/core/statelayout/states/loading/LoadingIndicatorStyle;Landroidx/compose/runtime/Composer;II)V
 }
 
 public abstract interface class com/trendyol/design/core/statelayout/WarningInfoStateLayoutStyle {
@@ -2423,7 +2423,7 @@ public abstract interface class com/trendyol/design/core/statelayout/WarningInfo
 }
 
 public final class com/trendyol/design/core/statelayout/states/loading/CircularLoadingIndicatorKt {
-	public static final fun KPCircularLoadingIndicator-aM-cp0Q (Landroidx/compose/ui/Modifier;JFLandroidx/compose/runtime/Composer;II)V
+	public static final fun KPCircularLoadingIndicator (Landroidx/compose/ui/Modifier;Lcom/trendyol/design/core/statelayout/states/loading/LoadingIndicatorStyle;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class com/trendyol/design/core/statelayout/states/loading/ComposableSingletons$CircularLoadingIndicatorKt {
@@ -2440,7 +2440,7 @@ public final class com/trendyol/design/core/statelayout/states/loading/Composabl
 }
 
 public final class com/trendyol/design/core/statelayout/states/loading/HorizontalLoadingIndicatorKt {
-	public static final fun KPHorizontalLoadingIndicator (Landroidx/compose/ui/Modifier;Lcom/trendyol/design/core/statelayout/states/loading/HorizontalProgressState;FLandroidx/compose/runtime/Composer;II)V
+	public static final fun KPHorizontalLoadingIndicator (Landroidx/compose/ui/Modifier;Lcom/trendyol/design/core/statelayout/states/loading/HorizontalProgressState;FLcom/trendyol/design/core/statelayout/states/loading/LoadingIndicatorStyle;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class com/trendyol/design/core/statelayout/states/loading/HorizontalProgressState : java/lang/Enum {
@@ -2449,6 +2449,23 @@ public final class com/trendyol/design/core/statelayout/states/loading/Horizonta
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lcom/trendyol/design/core/statelayout/states/loading/HorizontalProgressState;
 	public static fun values ()[Lcom/trendyol/design/core/statelayout/states/loading/HorizontalProgressState;
+}
+
+public final class com/trendyol/design/core/statelayout/states/loading/KPLoadingIndicatorStyle : com/trendyol/design/core/statelayout/states/loading/LoadingIndicatorStyle {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/trendyol/design/core/statelayout/states/loading/KPLoadingIndicatorStyle;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getBackgroundColor (Landroidx/compose/runtime/Composer;I)J
+	public fun getIndicatorColor (Landroidx/compose/runtime/Composer;I)J
+	public fun getStrokeWidth (Landroidx/compose/runtime/Composer;I)F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/trendyol/design/core/statelayout/states/loading/LoadingIndicatorStyle {
+	public abstract fun getBackgroundColor (Landroidx/compose/runtime/Composer;I)J
+	public abstract fun getIndicatorColor (Landroidx/compose/runtime/Composer;I)J
+	public abstract fun getStrokeWidth (Landroidx/compose/runtime/Composer;I)F
 }
 
 public final class com/trendyol/design/core/statelayout/states/loading/LoadingType : java/lang/Enum {
