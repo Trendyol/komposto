@@ -6,6 +6,8 @@ import androidx.compose.ui.Modifier
 import com.trendyol.design.core.annotation.ExperimentalKompostoApi
 import com.trendyol.design.core.statelayout.states.loading.KPCircularLoadingIndicator
 import com.trendyol.design.core.statelayout.states.loading.KPHorizontalLoadingIndicator
+import com.trendyol.design.core.statelayout.states.loading.KPLoadingIndicatorStyle
+import com.trendyol.design.core.statelayout.states.loading.LoadingIndicatorStyle
 import com.trendyol.design.core.statelayout.states.loading.LoadingType
 import com.trendyol.design.core.statelayout.states.warningInfo.KPWarningInfoStateComposable
 
@@ -23,6 +25,8 @@ import com.trendyol.design.core.statelayout.states.warningInfo.KPWarningInfoStat
  * By default, it uses [KPWarningInfoStateComposable].
  * @param loadingStateLayout A composable lambda for rendering a loading state. By default, it displays a
  * circular loading indicator using [KPCircularLoadingIndicator].
+ * @param loadingIndicatorStyle Style configuration for loading indicators shown in [State.ContentWithLoading].
+ * Default is [KPLoadingIndicatorStyle].
  *
  * ### Supported States
  * - **ContentWithLoading**: Displays content with an optional loading indicator.
@@ -42,6 +46,7 @@ import com.trendyol.design.core.statelayout.states.warningInfo.KPWarningInfoStat
  *
  * @see KPWarningInfoStateComposable
  * @see KPCircularLoadingIndicator
+ * @see KPLoadingIndicatorStyle
  * @see State
  */
 @ExperimentalKompostoApi
@@ -57,11 +62,16 @@ public fun KPStateComposeLayout(
             )
         },
     loadingStateLayout: @Composable (message: String) -> Unit = { KPCircularLoadingIndicator() },
+    loadingIndicatorStyle: LoadingIndicatorStyle = KPLoadingIndicatorStyle,
 ) {
     Box(modifier = modifier) {
         when (state) {
             is State.ContentWithLoading ->
-                KPContentState(state, contentStateLayout)
+                KPContentState(
+                    content = state,
+                    contentLayout = contentStateLayout,
+                    loadingIndicatorStyle = loadingIndicatorStyle,
+                )
 
             is State.WarningInfo -> warningInfoStateLayout(
                 state.warningInfoStateLayoutStyle,
@@ -79,6 +89,8 @@ public fun KPStateComposeLayout(
  *
  * @param content The [State.ContentWithLoading] instance containing the content and loading type.
  * @param contentLayout A composable lambda for rendering the content.
+ * @param loadingIndicatorStyle Style configuration for the loading indicators.
+ * Default is [KPLoadingIndicatorStyle].
  *
  * ### Supported Loading Types
  * - **Circular**: Displays a circular loading indicator using [KPCircularLoadingIndicator].
@@ -98,6 +110,7 @@ public fun KPStateComposeLayout(
  *
  * @see KPCircularLoadingIndicator
  * @see KPHorizontalLoadingIndicator
+ * @see KPLoadingIndicatorStyle
  * @see State.ContentWithLoading
  */
 @ExperimentalKompostoApi
@@ -105,12 +118,17 @@ public fun KPStateComposeLayout(
 public fun KPContentState(
     content: State.ContentWithLoading,
     contentLayout: @Composable () -> Unit,
+    loadingIndicatorStyle: LoadingIndicatorStyle = KPLoadingIndicatorStyle,
 ) {
     contentLayout()
 
     when (content.loadingType) {
-        LoadingType.Circular -> KPCircularLoadingIndicator()
-        LoadingType.Progressive -> KPHorizontalLoadingIndicator()
+        LoadingType.Circular -> KPCircularLoadingIndicator(
+            loadingIndicatorStyle = loadingIndicatorStyle,
+        )
+        LoadingType.Progressive -> KPHorizontalLoadingIndicator(
+            loadingIndicatorStyle = loadingIndicatorStyle,
+        )
         else -> Unit
     }
 }
