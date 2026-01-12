@@ -50,8 +50,7 @@ import com.trendyol.theme.KPDesign
  *              This includes properties like background color, border color, text color, etc.
  * @param otp The initial OTP value to be displayed in the input field.
  *            This value initializes the internal state of the component.
- * @param onValueChange A callback function invoked whenever the OTP value changes.
- *                      This function receives the updated OTP as a parameter.
+ * @param onValueChange A callback function invoked whenever the OTP value changes (triggered on each character input).
  * @param modifier Modifier to apply to the root container of the input field.
  *                 This parameter is optional and defaults to an empty Modifier.
  * @param otpLength The length of the OTP input. This parameter defaults to `DEFAULT_OTP_LENGTH`.
@@ -94,16 +93,17 @@ public fun KPInputOTPField(
             modifier = Modifier.fillMaxWidth(),
             value = otpTextValue,
             onValueChange = { value ->
+                if (value.text.length > otpLength) return@BasicTextField
                 otpTextValue = value.copy(
                     text = value.text.trim(),
                     selection = TextRange(value.text.length)
                 )
+                onValueChange(value.text)
             },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword, imeAction = ImeAction.Done),
             keyboardActions = keyboardActions ?: KeyboardActions(
                 onDone = {
                     focusManager.clearFocus(force = true)
-                    onValueChange(otpTextValue.text)
                 },
             ),
             interactionSource = interactionSource,
