@@ -1446,7 +1446,7 @@ public final class com/trendyol/design/core/inputfield/otp/ComposableSingletons$
 }
 
 public final class com/trendyol/design/core/inputfield/otp/InputOTPFieldKt {
-	public static final fun KPInputOTPField (Lcom/trendyol/design/core/inputfield/otp/InputOTPFieldStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;IZLjava/lang/String;Ljava/lang/String;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/runtime/Composer;III)V
+	public static final fun KPInputOTPField (Lcom/trendyol/design/core/inputfield/otp/InputOTPFieldStyle;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;IZLjava/lang/String;Ljava/lang/String;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/runtime/Composer;II)V
 }
 
 public abstract interface class com/trendyol/design/core/inputfield/otp/InputOTPFieldStyle {
