@@ -54,6 +54,8 @@ import com.trendyol.theme.KPDesign
  *                      This function receives the updated OTP as a parameter.
  * @param modifier Modifier to apply to the root container of the input field.
  *                 This parameter is optional and defaults to an empty Modifier.
+ * @param onNewInput A callback function invoked whenever a new value changes.
+ *                      This function receives the updated characters as a parameter.
  * @param otpLength The length of the OTP input. This parameter defaults to `DEFAULT_OTP_LENGTH`.
  *                  The input field will only accept this many characters.
  * @param enabled A boolean flag indicating whether the input field is enabled or disabled.
@@ -75,6 +77,7 @@ public fun KPInputOTPField(
     otp: String,
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
+    onNewInput: ((String) -> Unit)? = null,
     otpLength: Int = DEFAULT_OTP_LENGTH,
     enabled: Boolean = true,
     hint: String? = null,
@@ -94,10 +97,12 @@ public fun KPInputOTPField(
             modifier = Modifier.fillMaxWidth(),
             value = otpTextValue,
             onValueChange = { value ->
+                if (value.text.length > otpLength) return@BasicTextField
                 otpTextValue = value.copy(
                     text = value.text.trim(),
                     selection = TextRange(value.text.length)
                 )
+                onNewInput?.invoke(value.text)
             },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword, imeAction = ImeAction.Done),
             keyboardActions = keyboardActions ?: KeyboardActions(

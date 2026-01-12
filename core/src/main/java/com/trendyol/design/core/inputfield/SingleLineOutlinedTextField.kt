@@ -10,11 +10,13 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -53,6 +55,8 @@ import kotlinx.collections.immutable.persistentSetOf
  * @param keyboardActions Configuration of keyboard actions to be triggered when the input
  *                       service emits an IME action. Actions specified here will be triggered
  *                       in addition to the default actions performed by TextField.
+ * @param keyboardOptions Software keyboard options that contains configuration such as
+ *                       KeyboardType and ImeAction. Defaults to KeyboardType.Password.
  * @param interactionSource The MutableInteractionSource representing the stream of
  *                         Interactions for this TextField. You can create and pass in your own
  *                         remembered MutableInteractionSource if you want to observe
@@ -75,6 +79,7 @@ public fun KPSingleLineOutlinedTextField(
     enabled: Boolean = true,
     colors: TextFieldColors = style.outlinedTextFieldColors,
     visualTransformation: VisualTransformation = VisualTransformation.None,
+    keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
     keyboardActions: KeyboardActions = KeyboardActions.Default,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     onValueChange: (String) -> Unit,
@@ -106,6 +111,7 @@ public fun KPSingleLineOutlinedTextField(
             enabled = enabled,
             singleLine = true,
             visualTransformation = visualTransformation,
+            keyboardOptions = keyboardOptions,
             keyboardActions = keyboardActions,
             interactionSource = interactionSource,
             trailingIcon = if (trailingContent != null) {
