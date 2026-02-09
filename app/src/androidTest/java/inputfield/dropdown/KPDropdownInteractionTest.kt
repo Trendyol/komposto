@@ -95,10 +95,10 @@ class KPDropdownInteractionTest {
     }
 
     @Test
-    fun dropdown_pressAndDrag_triggersOnClickOnce() {
+    fun dropdown_pressAndDrag_doesNotTriggerOnClick() {
         // Arrange
         var clickCount = 0
-        
+
         composeTestRule.setContent {
             TrendyolTheme {
                 Box(modifier = Modifier.fillMaxSize()) {
@@ -123,9 +123,41 @@ class KPDropdownInteractionTest {
         // Give it time to process the interaction
         composeTestRule.waitForIdle()
 
-        // Assert - Dragging triggers Cancel event, which should trigger onClick once
-        // This is expected behavior for a dropdown - any press completion should open it
-        assertEquals("Press and drag should trigger onClick once (via Cancel)", 1, clickCount)
+        // Assert - tryAwaitRelease() returns false when dragged,
+        // so onClick should NOT be triggered
+        assertEquals("Press and drag should NOT trigger onClick", 0, clickCount)
+    }
+
+    @Test
+    fun dropdown_scrollGesture_doesNotTriggerOnClick() {
+        // Arrange - This is the main bug scenario
+        var clickCount = 0
+
+        composeTestRule.setContent {
+            TrendyolTheme {
+                Box(modifier = Modifier.fillMaxSize()) {
+                    KPDropdown(
+                        modifier = Modifier.testTag("dropdown"),
+                        style = KPDropdownStyle.Filled,
+                        value = "Test Value",
+                        onClick = { clickCount++ }
+                    )
+                }
+            }
+        }
+
+        // Act - Simulate scroll gesture (press, move vertically, release)
+        composeTestRule.onNodeWithTag("dropdown")
+            .performTouchInput {
+                down(center)
+                moveBy(delta = Offset(0f, 200f))  // Vertical scroll motion
+                up()
+            }
+
+        composeTestRule.waitForIdle()
+
+        // Assert - Scroll should NOT trigger onClick (this was the bug!)
+        assertEquals("Scroll gesture should NOT trigger onClick", 0, clickCount)
     }
 
     @Test

@@ -2,14 +2,19 @@
 
 package com.trendyol.design.core.inputfield
 
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.PressInteraction
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.TextFieldColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -41,7 +46,8 @@ import com.trendyol.theme.KPDesign
  *               dropdown component, including the text color, background color, and colors for different states
  *               (such as selected, focused, disabled, etc.). TextFieldColors provides the means to customize
  *               these colors according to the desired visual appearance.
- * @param interactionSource The interaction source for the dropdown. Click handles are managed from this interactionSource.
+ * @param interactionSource The interaction source for the dropdown. Press interactions are emitted
+ *                          for visual feedback states (pressed, etc.). Click handling uses gesture detection internally.
  */
 @ExperimentalKompostoApi
 @Composable
@@ -56,53 +62,75 @@ public fun KPDropdown(
     isError: Boolean = false,
     enabled: Boolean = true,
     colors: TextFieldColors = style.outlinedTextFieldColors,
-    interactionSource: MutableInteractionSource = KPDropdownDefaults.interactionSource(onClick = onClick),
+    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
     Column(modifier = modifier) {
-        KPOutlinedTextField(
-            modifier = Modifier
-                .fillMaxWidth(),
-            value = value,
-            label = if (!label.isNullOrBlank()) {
-                {
-                    KPText(
-                        text = label,
-                        overflow = TextOverflow.Ellipsis,
-                        softWrap = false,
+        Box(modifier = Modifier.fillMaxWidth()) {
+            KPOutlinedTextField(
+                modifier = Modifier.fillMaxWidth(),
+                value = value,
+                label = if (!label.isNullOrBlank()) {
+                    {
+                        KPText(
+                            text = label,
+                            overflow = TextOverflow.Ellipsis,
+                            softWrap = false,
+                        )
+                    }
+                } else null,
+                placeholder = if (!placeholder.isNullOrBlank()) {
+                    {
+                        KPText(
+                            text = placeholder,
+                            style = KPDesign.typography.subtitleMedium,
+                        )
+                    }
+                } else null,
+                interactionSource = interactionSource,
+                onValueChange = {},
+                colors = colors,
+                isError = isError,
+                isFilled = style is KPDropdownStyle.Filled,
+                enabled = enabled,
+                singleLine = true,
+                readOnly = true,
+                trailingIcon = {
+                    KPIcon(
+                        modifier = Modifier.padding(
+                            top = 16.dp,
+                            bottom = 16.dp,
+                            start = 8.dp,
+                            end = 12.dp
+                        ),
+                        imageVector = KPIcons.Fill.ArrowDown,
+                        size = KPIconSize.XXSmall,
+                        tint = if (!enabled && style is KPDropdownStyle.Filled)
+                            KPDesign.colors.colorBorder else Color.Unspecified
                     )
                 }
-            } else null,
-            placeholder = if (!placeholder.isNullOrBlank()) {
-                {
-                    KPText(
-                        text = placeholder,
-                        style = KPDesign.typography.subtitleMedium,
-                    )
-                }
-            } else null,
-            interactionSource = interactionSource,
-            onValueChange = {},
-            colors = colors,
-            isError = isError,
-            isFilled = style is KPDropdownStyle.Filled,
-            enabled = enabled,
-            singleLine = true,
-            readOnly = true,
-            trailingIcon = {
-                KPIcon(
-                    modifier = Modifier.padding(
-                        top = 16.dp,
-                        bottom = 16.dp,
-                        start = 8.dp,
-                        end = 12.dp
-                    ),
-                    imageVector = KPIcons.Fill.ArrowDown,
-                    size = KPIconSize.XXSmall,
-                    tint = if (!enabled && style is KPDropdownStyle.Filled)
-                        KPDesign.colors.colorBorder else Color.Unspecified
-                )
-            }
-        )
+            )
+            Box(
+                modifier = Modifier
+                    .matchParentSize()
+                    .pointerInput(enabled, interactionSource) {
+                        if (!enabled) return@pointerInput
+                        detectTapGestures(
+                            onPress = { offset ->
+                                val press = PressInteraction.Press(offset)
+                                interactionSource.emit(press)
+
+                                val released = tryAwaitRelease()
+                                if (released) {
+                                    interactionSource.emit(PressInteraction.Release(press))
+                                    onClick()
+                                } else {
+                                    interactionSource.emit(PressInteraction.Cancel(press))
+                                }
+                            }
+                        )
+                    }
+            )
+        }
 
         if (enabled && isError && !errorLabel.isNullOrBlank()) {
             KPText(
