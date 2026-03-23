@@ -6,5 +6,5 @@ import java.util.Locale
 
 public val LocalCountdownTimerLocale: ProvidableCompositionLocal<Locale> =
     staticCompositionLocalOf {
-        error("CompositionLocal LocalAppResources not present")
+        error("CompositionLocal LocalCountdownTimerLocale not present")
     }
