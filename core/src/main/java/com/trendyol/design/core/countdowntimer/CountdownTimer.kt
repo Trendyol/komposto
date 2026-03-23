@@ -94,7 +94,7 @@ public fun KPCountdownTimer(
                     style = style,
                     size = size,
                     time = minutes,
-                    backgroundAlpha = backgroundAlpha
+                    backgroundAlpha = backgroundAlpha,
                 )
                 Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 KPIcon(
@@ -108,7 +108,7 @@ public fun KPCountdownTimer(
                     style = style,
                     size = size,
                     time = seconds,
-                    backgroundAlpha = backgroundAlpha
+                    backgroundAlpha = backgroundAlpha,
                 )
             }
         }
