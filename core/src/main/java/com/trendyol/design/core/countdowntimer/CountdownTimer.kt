@@ -41,7 +41,6 @@ import java.util.concurrent.TimeUnit
  * @param modifier A `Modifier` used to adjust the layout or behavior of the composable. Defaults to `Modifier`.
  * @param backgroundAlpha The alpha value for the background color, allowing control over the transparency of the time boxes. Defaults to `1F`.
  * @param onTimerFinish Registers a callback to be invoked when the timer finishes.
- * @param locale Used for formatting the number characters on time boxes.
  */
 @ExperimentalKompostoApi
 @Composable
@@ -52,7 +51,6 @@ public fun KPCountdownTimer(
     onTimerFinish: () -> Unit = {},
     style: CountdownTimerStyle = KPCountdownTimerStyle.Primary,
     backgroundAlpha: Float = 1F,
-    locale: Locale = Locale.getDefault(),
 ) {
     val latestOnTimerFinish by rememberUpdatedState(onTimerFinish)
     val state = rememberSaveable(endDate, saver = CountdownTimerState.Saver) {
@@ -83,7 +81,6 @@ public fun KPCountdownTimer(
                     size = size,
                     time = hours,
                     backgroundAlpha = backgroundAlpha,
-                    locale = locale,
                 )
                 Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 KPIcon(
@@ -97,8 +94,7 @@ public fun KPCountdownTimer(
                     style = style,
                     size = size,
                     time = minutes,
-                    backgroundAlpha = backgroundAlpha,
-                    locale = locale,
+                    backgroundAlpha = backgroundAlpha
                 )
                 Spacer(modifier = Modifier.width(size.verticalBoxPadding))
                 KPIcon(
@@ -112,8 +108,7 @@ public fun KPCountdownTimer(
                     style = style,
                     size = size,
                     time = seconds,
-                    backgroundAlpha = backgroundAlpha,
-                    locale = locale,
+                    backgroundAlpha = backgroundAlpha
                 )
             }
         }
@@ -166,12 +161,15 @@ private fun CountDownTimerSmallPreview() {
 @Composable
 private fun CountDownTimerRTLPreview() {
     PreviewTheme {
-        KPCountdownTimer(
-            style = KPCountdownTimerStyle.Primary,
-            size = KPCountdownTimerSize.Large,
-            endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
-            locale = Locale("ar", "SA")
-        )
+        CompositionLocalProvider(
+            LocalCountdownTimerLocale provides Locale("ar", "SA")
+        ) {
+            KPCountdownTimer(
+                style = KPCountdownTimerStyle.Primary,
+                size = KPCountdownTimerSize.Large,
+                endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
+            )
+        }
     }
 }
 
@@ -179,12 +177,15 @@ private fun CountDownTimerRTLPreview() {
 @Composable
 private fun CountDownTimerRTLPreviewLocaleEN() {
     PreviewTheme {
-        KPCountdownTimer(
-            style = KPCountdownTimerStyle.Primary,
-            size = KPCountdownTimerSize.Large,
-            endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
-            locale = Locale.ENGLISH
-        )
+        CompositionLocalProvider(
+            LocalCountdownTimerLocale provides Locale.ENGLISH
+        ) {
+            KPCountdownTimer(
+                style = KPCountdownTimerStyle.Primary,
+                size = KPCountdownTimerSize.Large,
+                endDate = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(PREVIEW_DURATION),
+            )
+        }
     }
 }
 
