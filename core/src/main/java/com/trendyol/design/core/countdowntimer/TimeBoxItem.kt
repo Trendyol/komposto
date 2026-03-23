@@ -31,6 +31,7 @@ internal fun TimeBoxItem(
     time: Long,
     backgroundAlpha: Float,
     modifier: Modifier = Modifier,
+    locale: Locale
 ) {
     KPText(
         modifier = modifier
@@ -43,7 +44,7 @@ internal fun TimeBoxItem(
                 horizontal = size.horizontalPadding,
                 vertical = size.verticalPadding
             ),
-        text = String.format(Locale.getDefault(), TIME_FORMAT, time),
+        text = String.format(locale, TIME_FORMAT, time),
         style = style.textStyle(size = size),
         maxLines = 1
     )
@@ -61,6 +62,7 @@ internal fun TimeRowItemLargePreview() {
             time = 24,
             backgroundAlpha = .5F,
             modifier = Modifier.width(24.dp),
+            locale = Locale.getDefault()
         )
     }
 }
@@ -75,6 +77,7 @@ internal fun TimeRowItemMediumPreview() {
             modifier = Modifier.width(24.dp),
             time = 24,
             backgroundAlpha = .5F,
+            locale = Locale.getDefault()
         )
     }
 }
@@ -89,6 +92,22 @@ internal fun TimeRowItemSmallPreview() {
             modifier = Modifier.width(24.dp),
             time = 24,
             backgroundAlpha = .5F,
+            locale = Locale.getDefault()
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+internal fun TimeRowItemSmallPreviewLocaleEN() {
+    PreviewTheme {
+        TimeBoxItem(
+            style = KPCountdownTimerStyle.Primary,
+            size = KPCountdownTimerSize.Small,
+            modifier = Modifier.width(24.dp),
+            time = 24,
+            backgroundAlpha = .5F,
+            locale = Locale.ENGLISH
         )
     }
 }
