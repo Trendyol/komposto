@@ -9,11 +9,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
+import com.trendyol.design.core.countdowntimer.LocalCountdownTimerLocale
 import com.trendyol.theme.KPDesignColors
 import com.trendyol.theme.KPDesignFontFamily
 import com.trendyol.theme.KPDesignTheme
 import com.trendyol.theme.KPDesignTypography
 import com.trendyol.theme.LocalKPDesignTheme
+import java.util.Locale
 
 @Composable
 internal fun PreviewTheme(
@@ -33,7 +35,8 @@ internal fun PreviewTheme(
     ) {
         CompositionLocalProvider(
             LocalKPDesignTheme provides kompostoDesignTheme,
-            LocalLayoutDirection provides layoutDirection
+            LocalLayoutDirection provides layoutDirection,
+            LocalCountdownTimerLocale provides Locale.getDefault(),
         ) {
             content()
         }

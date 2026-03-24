@@ -11,7 +11,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trendyol.design.core.preview.PreviewTheme
 import com.trendyol.design.core.text.KPText
-import java.util.Locale
 
 /**
  * A composable function that displays a single time unit (hours, minutes, or seconds) in a countdown timer.
@@ -43,7 +42,7 @@ internal fun TimeBoxItem(
                 horizontal = size.horizontalPadding,
                 vertical = size.verticalPadding
             ),
-        text = String.format(Locale.getDefault(), TIME_FORMAT, time),
+        text = String.format(LocalCountdownTimerLocale.current, TIME_FORMAT, time),
         style = style.textStyle(size = size),
         maxLines = 1
     )
@@ -82,6 +81,20 @@ internal fun TimeRowItemMediumPreview() {
 @Preview(showBackground = true)
 @Composable
 internal fun TimeRowItemSmallPreview() {
+    PreviewTheme {
+        TimeBoxItem(
+            style = KPCountdownTimerStyle.Primary,
+            size = KPCountdownTimerSize.Small,
+            modifier = Modifier.width(24.dp),
+            time = 24,
+            backgroundAlpha = .5F,
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+internal fun TimeRowItemSmallPreviewLocaleEN() {
     PreviewTheme {
         TimeBoxItem(
             style = KPCountdownTimerStyle.Primary,

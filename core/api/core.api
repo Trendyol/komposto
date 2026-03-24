@@ -539,10 +539,13 @@ public final class com/trendyol/design/core/checkbox/KPCheckboxStyle$Secondary :
 public final class com/trendyol/design/core/countdowntimer/ComposableSingletons$CountdownTimerKt {
 	public static final field INSTANCE Lcom/trendyol/design/core/countdowntimer/ComposableSingletons$CountdownTimerKt;
 	public fun <init> ()V
+	public final fun getLambda$-1133343395$core_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda$-379746191$core_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda$-535711503$core_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda$-902687520$core_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda$1046211133$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$203856288$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$837732509$core_release ()Lkotlin/jvm/functions/Function2;
 }
 
 public final class com/trendyol/design/core/countdowntimer/ComposableSingletons$TimeBoxItemKt {
@@ -551,10 +554,15 @@ public final class com/trendyol/design/core/countdowntimer/ComposableSingletons$
 	public final fun getLambda$-1146917574$core_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda$-311854230$core_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda$-647128186$core_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1879021981$core_release ()Lkotlin/jvm/functions/Function2;
 }
 
 public final class com/trendyol/design/core/countdowntimer/CountdownTimerKt {
 	public static final fun KPCountdownTimer (Lcom/trendyol/design/core/countdowntimer/CountdownTimerSize;JLandroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Lcom/trendyol/design/core/countdowntimer/CountdownTimerStyle;FLandroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/trendyol/design/core/countdowntimer/CountdownTimerLocaleProvidersKt {
+	public static final fun getLocalCountdownTimerLocale ()Landroidx/compose/runtime/ProvidableCompositionLocal;
 }
 
 public abstract interface class com/trendyol/design/core/countdowntimer/CountdownTimerSize {

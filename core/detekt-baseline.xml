@@ -2,6 +2,7 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
+    <ID>CompositionLocalAllowlist:CountdownTimerLocaleProviders.kt$LocalCountdownTimerLocale</ID>
     <ID>CyclomaticComplexMethod:TrendyolTextFieldImpl.kt$@OptIn(ExperimentalMaterialApi::class) @Composable internal fun KPCommonDecorationBox( type: KPTextFieldType, value: String, innerTextField: @Composable () -> Unit, visualTransformation: VisualTransformation, label: @Composable (() -> Unit)?, placeholder: @Composable (() -> Unit)? = null, leadingIcon: @Composable (() -> Unit)? = null, trailingIcon: @Composable (() -> Unit)? = null, singleLine: Boolean = false, enabled: Boolean = true, isError: Boolean = false, interactionSource: InteractionSource, contentPadding: PaddingValues, colors: TextFieldColors, labelInitialTextStyle: TextStyle = KPDesign.typography.subtitleMedium, labelEndTextStyle: TextStyle = KPDesign.typography.body2Medium, border: @Composable (() -> Unit)? = null )</ID>
     <ID>ForbiddenComment:TrendyolTextFieldImpl.kt$// TODO: DefaultErrorMessage</ID>
     <ID>FunctionTypeReferenceSpacing:DialogButtons.kt$DialogButtons$internal fun (@Composable DialogButtons.() -> Unit)?.takeOrNull(): (@Composable () -> Unit)?</ID>
