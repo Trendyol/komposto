@@ -5,10 +5,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
+import com.trendyol.design.core.countdowntimer.LocalCountdownTimerLocale
 import com.trendyol.theme.KPDesignFontFamily
 import com.trendyol.theme.KPDesignTheme
 import com.trendyol.theme.KPDesignTypography
 import com.trendyol.theme.LocalKPDesignTheme
+import java.util.Locale
 
 private val KPDesignTheme = KPDesignTheme(
     colors = KompostoColor.kpThemeColor,
@@ -41,7 +43,8 @@ fun TrendyolTheme(
             KPDesignRTLTheme
         }
         CompositionLocalProvider(
-            LocalKPDesignTheme provides kpTheme
+            LocalKPDesignTheme provides kpTheme,
+            LocalCountdownTimerLocale provides Locale.getDefault(),
         ) {
             content()
         }
