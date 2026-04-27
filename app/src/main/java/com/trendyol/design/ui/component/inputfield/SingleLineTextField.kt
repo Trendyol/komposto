@@ -2,6 +2,7 @@
 
 package com.trendyol.design.ui.component.inputfield
 
+import androidx.compose.animation.ContentTransform
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -37,6 +38,27 @@ import com.trendyol.design.ui.theme.TrendyolTheme
 private const val LABEL = "Label"
 private const val WRITE_HERE = "Write here"
 private const val MIN_WIDTH = 280
+private const val FADE_DURATION_MS = 1000
+private const val SLIDE_DURATION_MS = 800
+private const val SCALE_DURATION_MS = 800
+
+private fun horizontalSlideTransition(forward: Boolean): ContentTransform {
+    val enterOffset: (Int) -> Int = if (forward) ({ it }) else ({ -it })
+    val exitOffset: (Int) -> Int = if (forward) ({ -it }) else ({ it })
+    val enterTransition = slideInHorizontally(animationSpec = tween(SLIDE_DURATION_MS), initialOffsetX = enterOffset) +
+        fadeIn(animationSpec = tween(SLIDE_DURATION_MS))
+    val exitTransition = slideOutHorizontally(animationSpec = tween(SLIDE_DURATION_MS), targetOffsetX = exitOffset) +
+        fadeOut(animationSpec = tween(SLIDE_DURATION_MS))
+    return enterTransition togetherWith exitTransition
+}
+
+private fun scaleAndFadeTransition(): ContentTransform {
+    val enterTransition = scaleIn(animationSpec = tween(SCALE_DURATION_MS)) +
+        fadeIn(animationSpec = tween(SCALE_DURATION_MS))
+    val exitTransition = scaleOut(animationSpec = tween(SCALE_DURATION_MS)) +
+        fadeOut(animationSpec = tween(SCALE_DURATION_MS))
+    return enterTransition togetherWith exitTransition
+}
 
 @Preview(showBackground = true)
 @ShowkaseComposable(
@@ -231,8 +253,8 @@ internal fun Input_Field_1_SingleLine_5_AnimatedTrailing() = TrendyolTheme {
                 AnimatedContent(
                     targetState = query1.isNotEmpty(),
                     transitionSpec = {
-                        fadeIn(animationSpec = tween(durationMillis = 1000)) togetherWith
-                            fadeOut(animationSpec = tween(durationMillis = 1000))
+                        fadeIn(animationSpec = tween(durationMillis = FADE_DURATION_MS)) togetherWith
+                            fadeOut(animationSpec = tween(durationMillis = FADE_DURATION_MS))
                     },
                     label = "fade",
                 ) { hasQuery ->
@@ -320,21 +342,7 @@ internal fun Input_Field_1_SingleLine_5_AnimatedTrailing() = TrendyolTheme {
             trailingContent = {
                 AnimatedContent(
                     targetState = query4.isNotEmpty(),
-                    transitionSpec = {
-                        if (targetState) {
-                            // Forward: The icon enters from the right, old exits to the left.
-                            (slideInHorizontally(animationSpec = tween(800)) { it } +
-                                fadeIn(animationSpec = tween(800))) togetherWith
-                                (slideOutHorizontally(animationSpec = tween(800)) { -it } +
-                                    fadeOut(animationSpec = tween(800)))
-                        } else {
-                            // Backward: The icon enters from the left, old exits to the right.
-                            (slideInHorizontally(animationSpec = tween(800)) { -it } +
-                                fadeIn(animationSpec = tween(800))) togetherWith
-                                (slideOutHorizontally(animationSpec = tween(800)) { it } +
-                                    fadeOut(animationSpec = tween(800)))
-                        }
-                    },
+                    transitionSpec = { horizontalSlideTransition(forward = targetState) },
                     label = "slide",
                 ) { hasQuery ->
                     if (hasQuery) {
@@ -367,12 +375,7 @@ internal fun Input_Field_1_SingleLine_5_AnimatedTrailing() = TrendyolTheme {
             trailingContent = {
                 AnimatedContent(
                     targetState = query5.isNotEmpty(),
-                    transitionSpec = {
-                        (scaleIn(animationSpec = tween(800)) +
-                            fadeIn(animationSpec = tween(800))) togetherWith
-                            (scaleOut(animationSpec = tween(800)) +
-                                fadeOut(animationSpec = tween(800)))
-                    },
+                    transitionSpec = { scaleAndFadeTransition() },
                     label = "scale",
                 ) { hasQuery ->
                     if (hasQuery) {

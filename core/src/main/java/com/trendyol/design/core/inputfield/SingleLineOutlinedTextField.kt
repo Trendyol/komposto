@@ -132,8 +132,8 @@ public fun KPSingleLineOutlinedTextField(
                             ),
                             isSingleChildRequired = true,
                             errorMessage = "Trailing content should be created using " +
-                                    "TextFieldScope.Icon, TextFieldScope.Text, " +
-                                    "or TextFieldScope.AnimatedContent"
+                                "TextFieldScope.Icon, TextFieldScope.Text, " +
+                                "or TextFieldScope.AnimatedContent"
                         ) {
                             trailingContent(TextFieldScope)
                         }

@@ -100,8 +100,25 @@ public object TextFieldScope {
      *
      * The [content] lambda is invoked with [TextFieldScope] as its receiver,
      * so callers naturally use the scope's elements (`Icon(...)`, `Text(...)`).
-     * Children may be omitted entirely (e.g. an `if` without an `else` branch)
-     * — empty states are valid and will simply render nothing for that target.
+     * Children may be omitted entirely (e.g. an `if` without an `else` branch);
+     * empty states are valid and will simply render nothing for that target.
+     *
+     * @param targetState The state value driving the transition. When it
+     * changes, [content] is recomposed for the new state and the transition
+     * runs from the previous state.
+     * @param modifier The [Modifier] to be applied to the wrapper. The required
+     * `layoutId` for the trailing slot is appended internally.
+     * @param transitionSpec Describes the enter / exit animation between
+     * adjacent target states. Defaults to a simple cross-fade.
+     * @param contentAlignment Alignment of the content within the wrapper while
+     * incoming and outgoing children overlap during the transition. Defaults to
+     * [Alignment.Center].
+     * @param label Diagnostic label forwarded to the underlying
+     * `androidx.compose.animation.AnimatedContent`; appears in animation
+     * tooling.
+     * @param content Composable lambda invoked with the current [targetState].
+     * Only [TextFieldScope.Icon] / [TextFieldScope.Text] are accepted; any
+     * other content fails validation at runtime.
      */
     @Composable
     public fun <T> AnimatedContent(
@@ -123,7 +140,7 @@ public object TextFieldScope {
                 layoutId = persistentSetOf(TrailingIconLayoutId, TrailingTextLayoutId),
                 isSingleChildRequired = false,
                 errorMessage = "AnimatedContent should only contain TextFieldScope.Icon " +
-                        "or TextFieldScope.Text elements",
+                    "or TextFieldScope.Text elements",
             ) {
                 TextFieldScope.content(state)
             }
