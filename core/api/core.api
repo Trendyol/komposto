@@ -1414,6 +1414,7 @@ public final class com/trendyol/design/core/inputfield/SingleLineOutlinedTextFie
 public final class com/trendyol/design/core/inputfield/container/TextFieldScope {
 	public static final field $stable I
 	public static final field INSTANCE Lcom/trendyol/design/core/inputfield/container/TextFieldScope;
+	public final fun AnimatedContent (Ljava/lang/Object;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Alignment;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function4;Landroidx/compose/runtime/Composer;II)V
 	public final fun Icon-yrwZFoE (Landroidx/compose/ui/graphics/vector/ImageVector;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Lcom/trendyol/design/core/icon/IconSize;JLandroidx/compose/runtime/Composer;II)V
 	public final fun Text (Ljava/lang/String;Landroidx/compose/ui/Modifier;Landroidx/compose/ui/text/TextStyle;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }

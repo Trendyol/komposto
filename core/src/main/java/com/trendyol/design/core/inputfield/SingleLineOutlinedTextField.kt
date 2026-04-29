@@ -28,6 +28,7 @@ import com.trendyol.design.core.icon.icons.fill.Cancel
 import com.trendyol.design.core.icon.icons.fill.Search
 import com.trendyol.design.core.inputfield.container.CheckTextFieldLayoutIds
 import com.trendyol.design.core.inputfield.container.TextFieldScope
+import com.trendyol.design.core.inputfield.container.TrailingAnimatedContentLayoutId
 import com.trendyol.design.core.inputfield.container.TrailingIconLayoutId
 import com.trendyol.design.core.inputfield.container.TrailingTextLayoutId
 import com.trendyol.design.core.preview.PreviewTheme
@@ -124,10 +125,15 @@ public fun KPSingleLineOutlinedTextField(
                         contentAlignment = Alignment.Center
                     ) {
                         CheckTextFieldLayoutIds(
-                            persistentSetOf(TrailingIconLayoutId, TrailingTextLayoutId),
+                            layoutId = persistentSetOf(
+                                TrailingIconLayoutId,
+                                TrailingTextLayoutId,
+                                TrailingAnimatedContentLayoutId,
+                            ),
                             isSingleChildRequired = true,
                             errorMessage = "Trailing content should be created using " +
-                                "TextFieldScope.TrailingIcon or TextFieldScope.TrailingText"
+                                "TextFieldScope.Icon, TextFieldScope.Text, " +
+                                "or TextFieldScope.AnimatedContent"
                         ) {
                             trailingContent(TextFieldScope)
                         }
