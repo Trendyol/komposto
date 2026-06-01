@@ -410,4 +410,97 @@ class KPSingleLineOutlinedTextFieldTest : DesignScreenshotTest() {
             },
         )
     )
+
+    @Test
+    fun kpSingleLineOutlinedTextFieldAnimatedTrailingContentTest() = runScreenShotTest(
+        testName = "KPSingleLineOutlinedTextField AnimatedTrailingContent Test",
+        contents = listOf(
+            DesignScreenshotTestContainer("Empty|IconSwap|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = "",
+                        onValueChange = { },
+                        trailingContent = {
+                            AnimatedContent(targetState = false) { hasQuery ->
+                                if (hasQuery) {
+                                    Icon(imageVector = KPIcons.Fill.Cancel, onClick = { })
+                                } else {
+                                    Icon(imageVector = KPIcons.Fill.Search, onClick = { })
+                                }
+                            }
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Filled|IconSwap|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            AnimatedContent(targetState = true) { hasQuery ->
+                                if (hasQuery) {
+                                    Icon(imageVector = KPIcons.Fill.Cancel, onClick = { })
+                                } else {
+                                    Icon(imageVector = KPIcons.Fill.Search, onClick = { })
+                                }
+                            }
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Empty|EmptyElse|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = "",
+                        onValueChange = { },
+                        trailingContent = {
+                            AnimatedContent(targetState = false) { hasQuery ->
+                                if (hasQuery) {
+                                    Icon(imageVector = KPIcons.Fill.Cancel, onClick = { })
+                                }
+                            }
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Filled|EmptyElse|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            AnimatedContent(targetState = true) { hasQuery ->
+                                if (hasQuery) {
+                                    Icon(imageVector = KPIcons.Fill.Cancel, onClick = { })
+                                }
+                            }
+                        }
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Filled|IconTextMix|Outlined") {
+                BoxWithHorizontalPadding {
+                    KPSingleLineOutlinedTextField(
+                        style = KPOutlinedTextFieldStyle.Outlined,
+                        value = sampleText,
+                        onValueChange = { },
+                        trailingContent = {
+                            AnimatedContent(targetState = true) { hasQuery ->
+                                if (hasQuery) {
+                                    Text(text = shortTrailingText, onClick = { })
+                                } else {
+                                    Icon(imageVector = KPIcons.Fill.Search, onClick = { })
+                                }
+                            }
+                        }
+                    )
+                }
+            },
+        )
+    )
 }
