@@ -9,10 +9,49 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.takeOrElse
 import androidx.compose.ui.state.ToggleableState
 import com.trendyol.theme.KPDesign
 
 public object KPCheckboxDefaults {
+
+    @Composable
+    public fun primaryColors(
+        uncheckedBoxColor: Color = Color.Unspecified,
+    ): KPCheckboxColors {
+        val checkedColor = KPDesign.colors.colorPrimary
+        return colors(
+            checkedColor = checkedColor,
+            uncheckedColor = KPDesign.colors.colorOnSurfaceVariant1,
+            checkmarkColor = KPDesign.colors.colorSurface,
+            disabledCheckmarkColor = KPDesign.colors.colorSurface,
+            disabledColor = KPDesign.colors.colorOnSurfaceVariant1,
+            checkBoxColor = KPDesign.colors.colorPrimary,
+            uncheckedBoxColor = uncheckedBoxColor.takeOrElse { checkedColor.copy(alpha = 0f) },
+            disabledBoxColor = KPDesign.colors.colorOnSurfaceVariant1,
+            disabledIndeterminateColor = KPDesign.colors.colorPrimary.copy(
+                alpha = ContentAlpha.disabled
+            ),
+        )
+    }
+
+    @Composable
+    public fun secondaryColors(): KPCheckboxColors {
+        val checkedColor = KPDesign.colors.colorPrimary
+        return colors(
+            checkedColor = checkedColor,
+            uncheckedColor = KPDesign.colors.colorBorder,
+            checkmarkColor = KPDesign.colors.colorPrimary,
+            disabledCheckmarkColor = KPDesign.colors.colorOnSurfaceVariant1,
+            disabledColor = KPDesign.colors.colorOnSurfaceVariant1,
+            checkBoxColor = KPDesign.colors.colorSurface,
+            uncheckedBoxColor = checkedColor.copy(alpha = 0f),
+            disabledBoxColor = KPDesign.colors.colorSurface,
+            disabledIndeterminateColor = KPDesign.colors.colorPrimary.copy(
+                alpha = ContentAlpha.disabled
+            ),
+        )
+    }
 
     @Composable
     public fun colors(
@@ -22,6 +61,7 @@ public object KPCheckboxDefaults {
         disabledCheckmarkColor: Color = KPDesign.colors.colorSurface,
         disabledColor: Color = KPDesign.colors.colorBorder,
         checkBoxColor: Color = KPDesign.colors.colorPrimary,
+        uncheckedBoxColor: Color = checkedColor.copy(alpha = 0f),
         disabledBoxColor: Color = KPDesign.colors.colorOnSurfaceVariant1,
         disabledUnselectedBorderColor: Color = KPDesign.colors.colorBorder,
         disabledIndeterminateColor: Color = checkedColor.copy(alpha = ContentAlpha.disabled)
@@ -33,6 +73,7 @@ public object KPCheckboxDefaults {
             disabledCheckmarkColor,
             disabledColor,
             checkBoxColor,
+            uncheckedBoxColor,
             disabledBoxColor,
             disabledUnselectedBorderColor,
             disabledIndeterminateColor,
@@ -43,7 +84,7 @@ public object KPCheckboxDefaults {
                 disabledCheckmarkColor = disabledCheckmarkColor,
                 checkedCheckmarkColor = checkmarkColor,
                 uncheckedCheckmarkColor = checkmarkColor.copy(alpha = 0f),
-                uncheckedBoxColor = checkedColor.copy(alpha = 0f),
+                uncheckedBoxColor = uncheckedBoxColor,
                 disabledCheckedBoxColor = disabledBoxColor,
                 disabledUncheckedBoxColor = disabledColor.copy(alpha = 0f),
                 disabledIndeterminateBoxColor = disabledIndeterminateColor,
