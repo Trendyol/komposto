@@ -217,7 +217,7 @@ internal class CheckboxTests : DesignScreenshotTest() {
             DesignScreenshotTestContainer("Custom Unchecked Box Color") {
                 BoxWithHorizontalPadding {
                     KPCheckbox(
-                        style = KPCheckboxStyle.primary(uncheckedBoxColor = Color.DarkGray),
+                        style = KPCheckboxStyle.primary(uncheckedBoxColor = Color.LightGray),
                         size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Text(text),
                         checked = false,
@@ -228,7 +228,7 @@ internal class CheckboxTests : DesignScreenshotTest() {
             DesignScreenshotTestContainer("Custom Unchecked Box Color Checked") {
                 BoxWithHorizontalPadding {
                     KPCheckbox(
-                        style = KPCheckboxStyle.primary(uncheckedBoxColor = Color.DarkGray),
+                        style = KPCheckboxStyle.primary(uncheckedBoxColor = Color.LightGray),
                         size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Text(text),
                         checked = true,
