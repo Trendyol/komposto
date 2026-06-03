@@ -18,34 +18,59 @@ jobs:
       contents: write
       pull-requests: write
     steps:
+      - name: Generate App Token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.CI_APP_ID }}
+          private-key: ${{ secrets.CI_APP_PRIVATE_KEY }}
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
           lfs: true
 
+      - name: Check if triggered by CI screenshot commit
+        id: skip-check
+        run: |
+          LATEST_MSG=$(git log -1 --pretty=format:'%s')
+          IS_SAME_REPO=${{ github.event.pull_request.head.repo.full_name == github.repository }}
+
+          if [[ "$LATEST_MSG" == "Update screenshots from CI" && "$IS_SAME_REPO" == "true" ]]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "Skipping - triggered by CI screenshot update"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Set up JDK
+        if: steps.skip-check.outputs.skip != 'true'
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
 
       - name: Setup Android SDK
+        if: steps.skip-check.outputs.skip != 'true'
         uses: android-actions/setup-android@v3
 
       - name: Enable KVM
+        if: steps.skip-check.outputs.skip != 'true'
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
       - name: Gradle cache
+        if: steps.skip-check.outputs.skip != 'true'
         uses: gradle/actions/setup-gradle@v4
 
       - name: AVD cache
+        if: steps.skip-check.outputs.skip != 'true'
         uses: actions/cache@v4
         id: avd-cache
         with:
@@ -55,7 +80,7 @@ jobs:
           key: avd-32
 
       - name: create AVD and generate snapshot for caching
-        if: steps.avd-cache.outputs.cache-hit != 'true'
+        if: steps.skip-check.outputs.skip != 'true' && steps.avd-cache.outputs.cache-hit != 'true'
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
@@ -69,7 +94,8 @@ jobs:
           disable-animations: false
           script: echo "Generated AVD snapshot for caching."
 
-      - name: Record screenshots
+      - name: Record screenshots (same repo)
+        if: steps.skip-check.outputs.skip != 'true' && github.event.pull_request.head.repo.full_name == github.repository
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
@@ -85,7 +111,23 @@ jobs:
             rm -rf app/screenshots/debug/
             ./gradlew executeScreenshotTests -Precord
 
+      - name: Verify screenshots (fork)
+        if: steps.skip-check.outputs.skip != 'true' && github.event.pull_request.head.repo.full_name != github.repository
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 32
+          arch: x86_64
+          profile: pixel_6
+          target: google_apis
+          avd-name: ubuntu-avd-x86_64-32
+          emulator-boot-timeout: 120
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: ./gradlew executeScreenshotTests
+
       - name: Run interaction tests
+        if: steps.skip-check.outputs.skip != 'true'
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
@@ -100,7 +142,7 @@ jobs:
           script: ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.annotation=core.InteractionTest
 
       - name: Commit updated screenshots
-        if: github.event.pull_request.head.repo.full_name == github.repository
+        if: steps.skip-check.outputs.skip != 'true' && github.event.pull_request.head.repo.full_name == github.repository
         run: |
           git config --local user.email "ci@github.actions.com"
           git config --local user.name "GitHub Actions"
@@ -114,7 +156,7 @@ jobs:
           fi
 
       - name: Upload Screenshot Results
-        if: always()
+        if: always() && steps.skip-check.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: screenshot-test-results
@@ -125,7 +167,7 @@ jobs:
           retention-days: 7
 
       - name: Upload Interaction Test Results
-        if: always()
+        if: always() && steps.skip-check.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: interaction-test-results
