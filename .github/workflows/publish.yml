@@ -78,20 +78,29 @@ jobs:
     runs-on: ubuntu-latest
     needs: [deploy-docs, publish]
     steps:
-      - name: Get Release Info
-        id: release-info
+      - name: Build Slack payload
         run: |
           RELEASE_INFO=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases/${{ github.event.release.id }}")
 
-          RELEASE_TAG=$(echo "$RELEASE_INFO" | jq -r '.tag_name')
-          RELEASE_DATE=$(echo "$RELEASE_INFO" | jq -r '.published_at' | cut -d'T' -f1)
-          RELEASE_BODY=$(echo "$RELEASE_INFO" | jq -r '.body')
+          RELEASE_TAG=$(printf '%s' "$RELEASE_INFO" | jq -r '.tag_name')
+          RELEASE_DATE=$(printf '%s' "$RELEASE_INFO" | jq -r '.published_at' | cut -d'T' -f1)
+          RELEASE_BODY=$(printf '%s' "$RELEASE_INFO" | jq -r '.body // empty')
 
-          echo "RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_ENV
-          echo "RELEASE_DATE=$RELEASE_DATE" >> $GITHUB_ENV
-          echo "RELEASE_BODY<<EOF" >> $GITHUB_ENV
-          echo "$RELEASE_BODY" >> $GITHUB_ENV
+          PAYLOAD=$(jq -n \
+            --arg channel "${{ secrets.SLACK_ANNOUNCEMENT_CHANNEL_ID }}" \
+            --arg tag "$RELEASE_TAG" \
+            --arg date "$RELEASE_DATE" \
+            --arg body "$RELEASE_BODY" \
+            --arg url "${{ github.event.release.html_url }}" \
+            '{
+              channel: $channel,
+              text: "Komposto new version deployed. :checkmark:\n[\($tag)] - \($date)\n\($body)\n\nFor more details: \($url)"
+            }')
+
+          echo "SLACK_PAYLOAD<<EOF" >> $GITHUB_ENV
+          printf '%s' "$PAYLOAD" >> $GITHUB_ENV
+          echo "" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
       - name: Send detailed message to Slack
@@ -100,11 +109,4 @@ jobs:
         with:
           method: chat.postMessage
           token: ${{ secrets.SLACK_BOT_TOKEN }}
-          payload: |
-            channel: ${{ secrets.SLACK_ANNOUNCEMENT_CHANNEL_ID }}
-            text: |
-              Komposto new version deployed. :checkmark:
-              [${{ env.RELEASE_TAG }}] - ${{ env.RELEASE_DATE }}
-              ${{ env.RELEASE_BODY }}
-
-              For more details: ${{ github.event.release.html_url }}
+          payload: ${{ env.SLACK_PAYLOAD }}

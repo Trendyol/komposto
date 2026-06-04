@@ -18,34 +18,59 @@ jobs:
       contents: write
       pull-requests: write
     steps:
+      - name: Generate App Token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ secrets.CI_APP_ID }}
+          private-key: ${{ secrets.CI_APP_PRIVATE_KEY }}
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Full git history for comparing changes
-          ref: ${{ github.event.pull_request.head.ref }}  # Checkout the PR branch (not merge commit)
-          repository: ${{ github.event.pull_request.head.repo.full_name }}  # Checkout from fork if needed
-          token: ${{ secrets.GITHUB_TOKEN }}  # Need a token with push permissions
-          lfs: true  # Pull Git LFS files (screenshots are stored in LFS)
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ steps.app-token.outputs.token }}
+          lfs: true
+
+      - name: Check if triggered by CI screenshot commit
+        id: skip-check
+        run: |
+          LATEST_MSG=$(git log -1 --pretty=format:'%s')
+          IS_SAME_REPO=${{ github.event.pull_request.head.repo.full_name == github.repository }}
+
+          if [[ "$LATEST_MSG" == "Update screenshots from CI" && "$IS_SAME_REPO" == "true" ]]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "Skipping - triggered by CI screenshot update"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Set up JDK
+        if: steps.skip-check.outputs.skip != 'true'
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
 
       - name: Setup Android SDK
+        if: steps.skip-check.outputs.skip != 'true'
         uses: android-actions/setup-android@v3
 
       - name: Enable KVM
+        if: steps.skip-check.outputs.skip != 'true'
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
       - name: Gradle cache
+        if: steps.skip-check.outputs.skip != 'true'
         uses: gradle/actions/setup-gradle@v4
 
       - name: AVD cache
+        if: steps.skip-check.outputs.skip != 'true'
         uses: actions/cache@v4
         id: avd-cache
         with:
@@ -55,7 +80,7 @@ jobs:
           key: avd-32
 
       - name: create AVD and generate snapshot for caching
-        if: steps.avd-cache.outputs.cache-hit != 'true'
+        if: steps.skip-check.outputs.skip != 'true' && steps.avd-cache.outputs.cache-hit != 'true'
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
@@ -69,39 +94,8 @@ jobs:
           disable-animations: false
           script: echo "Generated AVD snapshot for caching."
 
-      - name: Run screenshot tests
-        id: run_screenshot_tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 32
-          arch: x86_64
-          profile: pixel_6
-          target: google_apis
-          avd-name: ubuntu-avd-x86_64-32
-          emulator-boot-timeout: 120
-          force-avd-creation: false
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: true
-          script: ./gradlew executeScreenshotTests
-        continue-on-error: true
-
-      - name: Run interaction tests
-        id: run_interaction_tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 32
-          arch: x86_64
-          profile: pixel_6
-          target: google_apis
-          avd-name: ubuntu-avd-x86_64-32
-          emulator-boot-timeout: 120
-          force-avd-creation: false
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: true
-          script: ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.annotation=core.InteractionTest
-
-      - name: Clear screenshots and record new ones
-        if: steps.run_screenshot_tests.outcome == 'failure'
+      - name: Record screenshots (same repo)
+        if: steps.skip-check.outputs.skip != 'true' && github.event.pull_request.head.repo.full_name == github.repository
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
@@ -117,40 +111,52 @@ jobs:
             rm -rf app/screenshots/debug/
             ./gradlew executeScreenshotTests -Precord
 
-      - name: Commit new screenshots
-        if: steps.run_screenshot_tests.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository
+      - name: Verify screenshots (fork)
+        if: steps.skip-check.outputs.skip != 'true' && github.event.pull_request.head.repo.full_name != github.repository
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 32
+          arch: x86_64
+          profile: pixel_6
+          target: google_apis
+          avd-name: ubuntu-avd-x86_64-32
+          emulator-boot-timeout: 120
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: ./gradlew executeScreenshotTests
+
+      - name: Run interaction tests
+        if: steps.skip-check.outputs.skip != 'true'
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 32
+          arch: x86_64
+          profile: pixel_6
+          target: google_apis
+          avd-name: ubuntu-avd-x86_64-32
+          emulator-boot-timeout: 120
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.annotation=core.InteractionTest
+
+      - name: Commit updated screenshots
+        if: steps.skip-check.outputs.skip != 'true' && github.event.pull_request.head.repo.full_name == github.repository
         run: |
           git config --local user.email "ci@github.actions.com"
           git config --local user.name "GitHub Actions"
           git add app/screenshots/debug/
-          git commit -m "Update screenshots from CI" || echo "No changes to commit"
-          git push
+          if git diff --staged --quiet; then
+            echo "No screenshot changes detected"
+          else
+            git commit -m "Update screenshots from CI"
+            git push
+            echo "Screenshots updated and pushed"
+          fi
 
-      - name: Comment on fork PR about screenshots
-        if: steps.run_screenshot_tests.outcome == 'failure' && github.event.pull_request.head.repo.full_name != github.repository
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '📸 Screenshot tests detected differences!\n\n' +
-                    '## Option 1: Update screenshots automatically in your fork (Recommended)\n' +
-                    '1. Go to the **Actions** tab in your fork\n' +
-                    '2. Select **"Update Screenshots (For Forks)"** workflow\n' +
-                    '3. Click **"Run workflow"** and select your branch (`' + context.payload.pull_request.head.ref + '`)\n' +
-                    '4. Wait for the workflow to complete - screenshots will be committed automatically\n' +
-                    '5. Your PR will be updated with the new screenshots\n\n' +
-                    '## Option 2: Manual download\n' +
-                    '1. Download the `screenshot-test-results` artifact from this workflow run\n' +
-                    '2. Extract `app/screenshots/debug/` to your local repository\n' +
-                    '3. Commit and push the updated screenshots\n\n' +
-                    '**Note:** Screenshots must be generated on CI to ensure consistency across different platforms.'
-            })
-
-      - name: Upload Screenshot Test Results
-        if: steps.run_screenshot_tests.outcome == 'failure'
+      - name: Upload Screenshot Results
+        if: always() && steps.skip-check.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: screenshot-test-results
@@ -161,7 +167,7 @@ jobs:
           retention-days: 7
 
       - name: Upload Interaction Test Results
-        if: always()
+        if: always() && steps.skip-check.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: interaction-test-results

@@ -1,6 +1,7 @@
 package checkbox;
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.ui.graphics.Color
 import com.trendyol.design.core.checkbox.CheckboxContainerType
 import com.trendyol.design.core.checkbox.KPCheckbox
 import com.trendyol.design.core.checkbox.KPCheckboxSize
@@ -191,6 +192,46 @@ internal class CheckboxTests : DesignScreenshotTest() {
                         size = KPCheckboxSize.Medium,
                         containerType = CheckboxContainerType.Text(text),
                         checked = false,
+                        onCheckedChange = {}
+                    )
+                }
+            }
+        )
+    )
+
+    @Test
+    fun uncheckedBoxColorTest() = runScreenShotTest(
+        testName = "uncheckedBoxColorTest",
+        contents = listOf(
+            DesignScreenshotTestContainer("Default Unchecked") {
+                BoxWithHorizontalPadding {
+                    KPCheckbox(
+                        style = KPCheckboxStyle.Primary,
+                        size = KPCheckboxSize.Medium,
+                        containerType = CheckboxContainerType.Text(text),
+                        checked = false,
+                        onCheckedChange = {}
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Custom Unchecked Box Color") {
+                BoxWithHorizontalPadding {
+                    KPCheckbox(
+                        style = KPCheckboxStyle.primary(uncheckedBoxColor = Color.LightGray),
+                        size = KPCheckboxSize.Medium,
+                        containerType = CheckboxContainerType.Text(text),
+                        checked = false,
+                        onCheckedChange = {}
+                    )
+                }
+            },
+            DesignScreenshotTestContainer("Custom Unchecked Box Color Checked") {
+                BoxWithHorizontalPadding {
+                    KPCheckbox(
+                        style = KPCheckboxStyle.primary(uncheckedBoxColor = Color.LightGray),
+                        size = KPCheckboxSize.Medium,
+                        containerType = CheckboxContainerType.Text(text),
+                        checked = true,
                         onCheckedChange = {}
                     )
                 }
