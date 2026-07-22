@@ -68,7 +68,7 @@ jobs:
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
       - name: Upload APK to Slack Thread
-        uses: slackapi/slack-github-action@v2.1.1
+        uses: slackapi/slack-github-action@v4.0.0
         with:
           method: files.uploadV2
           token: ${{ secrets.SLACK_BOT_TOKEN }}
