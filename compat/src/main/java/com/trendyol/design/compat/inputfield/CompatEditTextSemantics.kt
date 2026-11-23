@@ -21,8 +21,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.LifecycleOwner
 import com.trendyol.design.compat.view.safePost
 
@@ -43,7 +41,6 @@ internal fun AppCompatEditText.showSoftInputIfAble(lifecycleOwner: LifecycleOwne
     if (keyListener == null) return
     safePost(lifecycleOwner) {
         if (hasFocus().not()) return@safePost
-        ViewCompat.getWindowInsetsController(this)?.show(WindowInsetsCompat.Type.ime())
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
         imm?.showSoftInput(this, 0)
     }
